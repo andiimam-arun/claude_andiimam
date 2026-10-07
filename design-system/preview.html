@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design System Preview</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Source+Serif+4:wght@600&display=swap">
+<link rel="stylesheet" href="components.css">
+<style>main{max-width:880px;margin:0 auto;padding:var(--space-xl) var(--space-md);display:grid;gap:var(--space-xl)}
+.row{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:center}.sw{width:88px}.sw i{display:block;height:48px;border-radius:var(--radius-sm);border:1px solid var(--color-border)}
+.sw span{font:var(--text-xs) var(--font-mono)}.bar{background:var(--color-primary);height:12px;border-radius:2px}</style></head><body><main>
+<header><h1>Design System</h1><p>Tokens extracted from a public design-prompt repo; gaps filled and marked.</p></header>
+<section><h2>Color</h2><div class="row" id="colors"></div></section>
+<section><h2>Type</h2><p style="font-size:var(--text-5xl);font-family:var(--font-display);margin:0">48 Display</p><p style="font-size:var(--text-2xl)">24 · Body sans for reading</p><p style="font-size:var(--text-sm)">14 · Small supporting text</p></section>
+<section><h2>Spacing</h2><div id="space"></div></section>
+<section><h2>Components</h2><div class="row"><button class="btn btn-primary">Primary</button><button class="btn btn-secondary">Secondary</button><button class="btn btn-primary" disabled>Disabled</button></div>
+<div class="row" style="margin-top:var(--space-lg);align-items:stretch"><div class="card" style="flex:1 1 240px"><h3>Card</h3><p>Border and subtle shadow.</p></div>
+<div class="field" style="flex:1 1 240px"><label for="e">Email</label><input id="e" aria-invalid="true" value="not-an-email" aria-describedby="e-err"><span class="error" id="e-err">Email address is invalid</span></div></div>
+<p class="callout" data-tone="warning" style="margin-top:var(--space-lg)"><strong>Warning:</strong> left border is reserved for semantic emphasis.</p>
+<div class="placeholder" style="height:96px;margin-top:var(--space-md)">image placeholder</div></section>
+<script>
+const C=["bg","surface","text","text-muted","primary","primary-dark","primary-light","accent","success","warning","error","info"];
+colors.innerHTML=C.map(n=>`<div class="sw"><i style="background:var(--color-${n})"></i><span>${n}</span></div>`).join("");
+space.innerHTML=["xs:4","sm:8","md:16","lg:24","xl:40","2xl:64"].map(s=>{const[n,v]=s.split(":");return `<div class="row" style="gap:var(--space-md);margin-bottom:var(--space-sm)"><span style="width:48px;font:var(--text-xs) var(--font-mono)">${n} ${v}</span><div class="bar" style="width:${v}px"></div></div>`}).join("");
+</script></main></body></html>

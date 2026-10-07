@@ -1,0 +1,98 @@
+/*
+ * Design tokens.
+ * [SRC]  = value stated in Trystan-SA/claude-design-system-prompt (claude/system-prompt.md)
+ * [FILL] = not defined by the source; chosen here as a deliberate decision. Change freely.
+ */
+:root {
+  /* Surfaces & text — [SRC] ch.6: subtly toned white/black, never pure #fff on #000 */
+  --color-bg:       #FAFAFA;
+  --color-text:     #1A1A1A;
+  --color-surface:  #FFFFFF;   /* [FILL] card surface sits above bg */
+  --color-border:   #E5E7EB;   /* [FILL] = gray-200 */
+  --color-text-muted: #4B5563; /* [FILL] = gray-600, 7.2:1 on bg */
+
+  /* Brand — [FILL] source leaves --primary/--accent as "#..." */
+  --color-primary:       oklch(50% 0.15 250);  /* oklch recipe is [SRC]: same L/C, vary hue */
+  --color-primary-dark:  oklch(40% 0.15 250);
+  --color-primary-light: oklch(92% 0.04 250);
+  --color-accent:        oklch(50% 0.15 200);
+  --color-on-primary:    #FFFFFF;
+
+  /* Semantic — [SRC] */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error:   #DC2626;
+  --color-info:    #3B82F6;
+
+  /* Neutrals — [SRC] 50, 100, 900; the rest [FILL] on the same (Tailwind gray) ramp */
+  --gray-50:  #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+
+  /* Spacing — [SRC] */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  /* Type scale — [SRC] */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+  --text-3xl:  30px;
+  --text-4xl:  36px;
+  --text-5xl:  48px;
+
+  /* Families — [FILL] source says "pick with intent; avoid Inter/Roboto/Arial as silent defaults"
+     and max 2 families. Serif display + sans body (the source's own suggested pairing). */
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans:    "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --weight-regular: 400;   /* [FILL] */
+  --weight-semibold: 600;
+  --leading-tight:  1.15;  /* [FILL] */
+  --leading-normal: 1.5;
+  --leading-loose:  1.7;
+
+  /* Radii & shadow — [FILL] names are [SRC] (ch.14), values are not */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 8px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 12px 24px rgb(0 0 0 / 0.10);
+
+  /* Motion — [SRC] 0.2–0.3s ease */
+  --duration-fast: 0.2s;
+  --duration-base: 0.3s;
+  --ease: ease;
+
+  /* Interaction — [SRC] */
+  --hit-target-min: 44px;
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-offset: 2px;
+}
+
+/* Base — [SRC] focus ring must never be removed; reduced motion respected */
+:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
