@@ -1,0 +1,39 @@
+tag_id,nama_id,name_en,klaster,definisi,n_trg
+A01,Tanaman pangan & hortikultura,Food crops & horticulture,Agro,"Padi, jagung, sayur, buah, anggrek, pemuliaan tanaman",7
+A02,Perkebunan,Plantation crops,Agro,"Kakao, kopi, kelapa sawit, tanaman tahunan",3
+A03,Perlindungan tanaman (hama & penyakit),Plant protection,Agro,"Hama, penyakit, biokontrol, patogen tanaman",8
+A04,"Tanah, lahan & pertanian presisi","Soil, land & precision agriculture",Agro,"Fisika/kualitas tanah, lahan suboptimal, geospasial, pertanian presisi",7
+A05,Peternakan,Livestock,Agro,"Ternak, pakan, susu, genetik ternak, unggas",12
+A06,Perikanan & akuakultur,Fisheries & aquaculture,Agro,"Budidaya, perikanan tangkap, penyakit ikan, udang, kepiting, rumput laut",10
+A07,Ekosistem pesisir & laut,Coastal & marine ecosystems,Agro,"Terumbu karang, lamun, mangrove, konservasi laut, tata ruang laut, sampah laut",18
+A08,Kehutanan & konservasi biodiversitas,Forestry & biodiversity conservation,Agro,"Hutan, DAS, satwa liar, hasil hutan bukan kayu, ekowisata hutan",9
+A09,Teknologi & pengolahan pangan,Food technology & processing,Agro,"Pengolahan, pascapanen, pangan fungsional, fermentasi, kemasan",11
+A10,Sosial-ekonomi & kelembagaan pertanian,Agricultural socio-economics & institutions,Agro,"Rantai nilai, kelembagaan petani, agribisnis, modal sosial",6
+B01,"Ekonomi, bisnis & manajemen","Economics, business & management",Sosial,"Pemasaran, SDM, rantai pasok, model bisnis, UMKM, ekonomi pembangunan",15
+B02,"Akuntansi, keuangan & tata kelola","Accounting, finance & governance",Sosial,"Akuntansi, audit, pelaporan, anggaran publik, tata kelola korporasi, ekonomi syariah",13
+B03,Hukum,Law,Sosial,"Hukum pidana, bisnis, agraria/pesisir, lingkungan, hak anak/disabilitas",10
+B04,"Pemerintahan, politik & kebijakan publik","Governance, politics & public policy",Sosial,"Demokrasi, organisasi publik, kebijakan lingkungan, tata kelola maritim",9
+B05,"Media, komunikasi & masyarakat digital","Media, communication & digital society",Sosial,"Komunikasi, media digital, perilaku sosial",4
+B06,"Antropologi, masyarakat & pembangunan komunitas","Anthropology, society & community development",Sosial,"Antropologi maritim/bisnis, masyarakat pesisir, migrasi, konflik sumber daya",7
+B07,Disabilitas & inklusi sosial,Disability & social inclusion,Sosial,"Disabilitas, kelompok rentan, gender",5
+B08,"Bahasa, sastra & budaya","Language, literature & culture",Sosial,"Linguistik, sastra, pembelajaran bahasa, budaya lokal, naskah, arkeologi",17
+C01,Matematika & statistika,Mathematics & statistics,Sains-Teknik,"Aljabar, analisis, teori graf, pemodelan stokastik, statistika",8
+C02,Sains data & kecerdasan buatan,Data science & AI,Sains-Teknik,"AI, pembelajaran mesin, data mining, pengolahan multimedia",6
+C03,"Material, fisika & nanoteknologi","Materials, physics & nanotechnology",Sains-Teknik,"Material fungsional, nanokomposit, semikonduktor, fisika medis, material ringan",11
+C04,Kimia & bahan alam,Chemistry & natural products,Sains-Teknik,"Kimia bahan alam laut, sintesis obat, kimia medisinal, metabolomik",8
+C05,Energi terbarukan & transisi energi,Renewable energy & energy transition,Sains-Teknik,"Hidrogen hijau, surya, energi laut, efisiensi energi, sistem tenaga, limbah ke energi",10
+C06,"Struktur, geoteknik & kebencanaan","Structural, geotechnical & disaster resilience",Sains-Teknik,"Struktur tahan gempa, geoteknik, banjir, longsor, likuifaksi, bencana global",12
+C07,"Transportasi, kota & permukiman","Transport, urban & settlement",Sains-Teknik,"Transportasi, bandara, permukiman, kota tangguh, arsitektur dan bangunan",8
+C08,"Lingkungan, persampahan & polusi","Environment, waste & pollution",Sains-Teknik,"Persampahan, kebisingan, kualitas udara, ekotoksikologi, dampak lingkungan",8
+C09,"Iklim, geosains & sumber daya bumi","Climate, geoscience & earth resources",Sains-Teknik,"Pemodelan iklim, paleoenvironment, sumber daya mineral",6
+C10,"Robotika, elektronika & sistem siber","Robotics, electronics & cyber systems",Sains-Teknik,"Mekatronika, robotika, IoT, siber, kapal pintar",7
+D01,"Penyakit menular, vaksin & resistensi","Infectious disease, vaccines & resistance",Kesehatan,"TB, malaria, pneumonia, superbug, mikrobioma, entomologi kesehatan",9
+D02,Kanker & onkologi,Cancer & oncology,Kesehatan,"Tumor tulang, imuno-onkologi, keperawatan onkologi, pencegahan kanker",4
+D03,"Kesehatan ibu, anak & gizi","Maternal, child health & nutrition",Kesehatan,"Neonatal, gizi ibu dan anak, obesitas anak, kohort kelahiran, stunting",9
+D04,Penyakit tidak menular & metabolik,Non-communicable & metabolic disease,Kesehatan,"Kardiovaskular, metabolik, ginjal, diabetes, pencernaan, penuaan sehat",11
+D05,"Kesehatan lingkungan, K3 & iklim",Environmental & occupational health,Kesehatan,"K3, toksikologi lingkungan, air bersih, dampak iklim pada kesehatan",9
+D06,Epidemiologi & sistem kesehatan,Epidemiology & health systems,Kesehatan,"Epidemiologi spasial/sosial, pemodelan kesehatan, manajemen RS, mutu layanan",8
+D07,Kedokteran gigi & kesehatan mulut,Dentistry & oral health,Kesehatan,"Periodonsia, bedah mulut, kedokteran gigi regeneratif/forensik/geriatri",13
+D08,Keperawatan & kesehatan jiwa,Nursing & mental health,Kesehatan,"Keperawatan holistik, kesehatan jiwa, manajemen nyeri dan luka",10
+D09,"Farmasi, obat & bahan alam","Pharmacy, drugs & natural products",Kesehatan,"Penemuan obat bahan alam, sistem penghantaran obat, keamanan obat",7
+D10,Biomedis & kedokteran regeneratif,Biomedicine & regenerative medicine,Kesehatan,"Regenerasi tulang, neurogenetika, imunologi, biodental",7
