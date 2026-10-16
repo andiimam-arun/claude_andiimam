@@ -36,7 +36,8 @@ FACULTY_CLUSTER = {
 SECTIONS = {  # subhalaman -> nama keluaran
     "articles": "publikasi", "books": "buku", "patens": "paten", "research-project": "proyek",
 }
-ROLE_WORDS = {"leader", "lecturers", "external collaborators", "researchers", "students"}
+ROLE_WORDS = {"leader", "lecturers", "lecturer", "external collaborators", "external collaborator",
+              "researchers", "researcher", "students", "student"}
 
 _lock = threading.Lock()
 _last = [0.0]
@@ -145,6 +146,28 @@ def parse_items(s):
         res.append(dict(role=role, fields=fields, links=links,
                         name=clean(h3.group(1)) if h3 else "", p=clean(p.group(1)) if p else "",
                         texts=texts))
+    return res or parse_static_team(s)
+
+
+def parse_static_team(s):
+    """Tata letak statis Elementor (icon-box) tanpa JetEngine: nama h3, keahlian p, ikon sosial."""
+    res, role = [], ""
+    tok = re.compile(r'<h2[^>]*>([^<]+)</h2>|<div class="elementor-(?:icon|image)-box-wrapper">')
+    pos = [(m.start(), m) for m in tok.finditer(s)]
+    for i, (st, m) in enumerate(pos):
+        if m.group(1) is not None:
+            if m.group(1).strip().lower() in ROLE_WORDS:
+                role = m.group(1).strip()
+            continue
+        end = pos[i + 1][0] if i + 1 < len(pos) else len(s)
+        chunk = s[st:end]
+        h3 = re.search(r"<h3[^>]*>(.*?)</h3>", chunk, re.S)
+        p = re.search(r"<p[^>]*>(.*?)</p>", chunk, re.S)
+        if not h3:
+            continue
+        links = [html.unescape(x) for x in re.findall(r'<a[^>]+href="([^"#][^"]*)"', chunk)]
+        res.append(dict(role=role, fields=[], links=links, name=clean(h3.group(1)),
+                        p=clean(p.group(1)) if p else "", texts=[]))
     return res
 
 
