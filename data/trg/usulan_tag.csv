@@ -6,15 +6,17 @@ entomology,Entomology,7,3,Entomology
 phytopathology,Phytopathology,6,4,Phytopathology
 agronomy,Agronomy,6,2,Agronomy
 fixed point theory,Fixed point theory,6,2,Fixed point theory
-fish taxonomy,Fish Taxonomy,5,2,Fish Taxonomy
-criminal law,Criminal Law,5,2,Criminal Law
+fish taxonomy,Fish Taxonomy,5,3,Fish Taxonomy
+criminal law,Criminal Law,5,3,Criminal Law
 parasitology veterinary,Veterinary Parasitology,5,3,Veterinary Parasitology
 epidemiologist,Epidemiologist,5,1,Epidemiologist
 breeding plant,Plant Breeding,4,2,Plant Breeding
 breeding rice,Rice Breeding,4,1,Rice Breeding
 animal nutrition,Animal Nutrition,4,5,Animal Nutrition | Animal Nutrition Science
+scholar,Scholar,4,2,Scholar
 literature,Literature,4,3,Literature | literature
 analysis traffic urban,Urban Traffic Analysis,4,1,Urban Traffic Analysis
+homepage,Homepage,4,2,Homepage
 nursing,Nursing Science,4,2,Nursing Science
 microbiology,Microbiology,3,2,Microbiology
 biotechnology,Biotechnology,3,6,Biotechnology
@@ -23,6 +25,7 @@ biotechnology plant,Plant Biotechnology,3,2,Plant Biotechnology | Plant biotechn
 ecophysiology plant,Plant Ecophysiology,3,3,Plant Ecophysiology
 agrotecnology,Agrotecnology,3,1,Agrotecnology
 forestry social,Social Forestry,3,1,Social Forestry
+sinta,SINTA,3,2,SINTA
 analysis mathematical,Mathematical analysis,3,3,Mathematical analysis
 analysis functional,Functional Analysis,3,2,Functional Analysis
 geochemistry,Geochemistry,3,2,Geochemistry
@@ -45,7 +48,12 @@ animal feed program study technology,Animal Feed Technology Study Program,2,2,An
 health public veterinary,Veterinary Public Health,2,2,Veterinary Public Health
 state united,United State,2,1,United State
 ggerg team,GGERG Team,2,2,GGERG Team
+living mapping marine resource,Mapping of Living Marine Resources,2,2,Mapping of Living Marine Resources | Marine Living Resource Mapping
+genetic population,Population Genetics,2,3,Population Genetics
+center environmental research smithsonian,Smithsonian Environmental Research Center,2,1,Smithsonian Environmental Research Center
 fishing gear technology,Fishing Gear Technology,2,1,Fishing Gear Technology
+development,Development,2,2,Development | development
+researchgate,researchgate,2,2,researchgate
 stilistika,Stilistika,2,1,Stilistika
 community,and Communities,2,1,and Communities
 analysis analysis fourier functional,Functional Analysis and Fourier Analysis,2,3,Functional Analysis and Fourier Analysis
@@ -61,6 +69,7 @@ assistant research,Research Assistant,2,1,Research Assistant
 clinical nutrition,Clinical Nutrition,2,3,Clinical Nutrition
 chronic disease,Chronic Disease,2,2,Chronic Disease | and Chronic disease
 germany kiel univ,The Univ. of Kiel Germany),2,1,The Univ. of Kiel Germany)
+clinical nutrition resident,Clinical Nutrition Resident,2,1,Clinical Nutrition Resident
 internal medicine,Internal Medicine,2,1,Internal Medicine | Internal medicine
 biology molecular,Molecular Biology,2,4,Molecular Biology
 reproduction veterinary,Veterinary Reproduction,2,1,Veterinary Reproduction
@@ -68,6 +77,8 @@ microbiology veterinary,Veterinary Microbiology,2,1,Veterinary Microbiology
 pathology veterinary,Veterinary Pathology,2,1,Veterinary Pathology
 radiology surgery veterinary,Veterinary Surgery and Radiology,2,1,Veterinary Surgery and Radiology
 anatomy veterinary,Veterinary Anatomy,2,1,Veterinary Anatomy
+coordination participant,participant coordination,2,1,participant coordination | and participant coordination
+field operation,and field operations,2,1,and field operations | field operations
 assessment ehra environmental health risk,Environmental Health Risk Assessment (EHRA),2,2,Environmental Health Risk Assessment (EHRA) | and environmental health risk assessment (EHRA)
 environment,Environment,2,2,Environment
 environmental health,Environmental Health,2,2,Environmental Health
@@ -233,9 +244,35 @@ manhattan,Manhattan,1,1,Manhattan
 dinajpur,Dinajpur,1,1,Dinajpur
 bangladesh,Bangladesh,1,1,Bangladesh
 kendari,Kendari,1,1,Kendari
-fishery remote sensing,Fisheries Remote Sensing,1,3,Fisheries Remote Sensing | Remote Sensing for Fisheries
-ecotoxicology marine,Marine ecotoxicology,1,3,Marine ecotoxicology
-modeling oceanographic,Oceanographic Modeling,1,2,Oceanographic Modeling
+fishery material,Fisheries Materials,1,2,Fisheries Materials
+aquetox,AquEtox,1,1,AquEtox
+coral ecology reef,Coral Reef Ecology,1,4,Coral Reef Ecology
+coral ecology marine reef,Marine ecology and coral reef,1,4,Marine ecology and coral reef
+change climate,Climate change,1,2,Climate change
+conservation marine,marine conservation,1,2,marine conservation
+fishery remote sensing,Fisheries Remote Sensing,1,4,Fisheries Remote Sensing | Remote Sensing for Fisheries
+ecotoxicology marine,Marine ecotoxicology,1,4,Marine ecotoxicology
+ecotoxicology marine pollution,Marine Pollution and Ecotoxicology,1,1,Marine Pollution and Ecotoxicology
+geo marine spatial,Marine Geo-Spatial,1,2,Marine Geo-Spatial
+environmental geotechnical,Environmental Geotechnical,1,1,Environmental Geotechnical
+hydrodynamic marine oceanography physical,Physical Oceanography and Marine Hydrodynamics,1,3,Physical Oceanography and Marine Hydrodynamics
+modeling oceanographic,Oceanographic Modeling,1,3,Oceanographic Modeling
+coral disease marine microbiology,Marine Microbiology and Coral Diseases,1,1,Marine Microbiology and Coral Diseases
+aquatic biodiversity resource taxonomy,Biodiversity and Taxonomy of Aquatic Resources,1,1,Biodiversity and Taxonomy of Aquatic Resources
+diversity genetic,Genetic Diversity,1,2,Genetic Diversity
+marine pollution,Marine Pollution,1,1,Marine Pollution
+economic fishery marine socio,Marine and Fisheries Socio-Economic,1,1,Marine and Fisheries Socio-Economic
+engineering environmental pollutant,Pollutant and Environmental Engineering,1,3,Pollutant and Environmental Engineering
+applied marine microbiology,Applied Marine Microbiology,1,1,Applied Marine Microbiology
+bioprospecting marine,Marine Bioprospecting,1,3,Marine Bioprospecting
+aquatic ecotoxicology plastic pollution,Aquatic Ecotoxicology and Plastic Pollution,1,1,Aquatic Ecotoxicology and Plastic Pollution
+environmental hydraulic hydrology,Hydrology and Environmental Hydraulics,1,1,Hydrology and Environmental Hydraulics
+data reporting,data reporting,1,1,data reporting
+bahtiar hendriyadi,Hendriyadi Bahtiar,1,1,Hendriyadi Bahtiar
+muhlis,Muhlis,1,1,Muhlis
+amalia ramadhan,Amalia Ramadhan,1,1,Amalia Ramadhan
+edwin kevin kondo,Edwin Kevin Kondo,1,1,Edwin Kevin Kondo
+environmental institure marine technology,Institure of Marine and Environmental Technology,1,1,Institure of Marine and Environmental Technology
 fishery oceanography,Fisheries Oceanography,1,1,Fisheries Oceanography
 engineering fishing vessel,Fishing vessel engineering,1,1,Fishing vessel engineering
 fishery marine,Marine Fisheries,1,1,Marine Fisheries
@@ -244,11 +281,7 @@ assessment management stock,Stock assessment and management,1,1,Stock assessment
 prediction spatial tuna,spatial prediction of tunas,1,1,spatial prediction of tunas
 based ecology ecosystem fishery management resource,Fisheries resource ecology and ecosystem-based management,1,1,Fisheries resource ecology and ecosystem-based management
 fishery gis,Fisheries GIS,1,1,Fisheries GIS
-geo marine spatial,Marine Geo-Spatial,1,1,Marine Geo-Spatial
-coral ecology reef,Coral Reef Ecology,1,3,Coral Reef Ecology
-coral ecology marine reef,Marine ecology and coral reef,1,3,Marine ecology and coral reef
 marine remote sensing,Marine Remote Sensing,1,1,Marine Remote Sensing
-living mapping marine resource,Marine Living Resource Mapping,1,1,Marine Living Resource Mapping
 planning regional,Regional planning,1,1,Regional planning
 earth,Earth Science,1,1,Earth Science
 fishery marine remote sensing,Marine Fisheries Remote Sensing,1,1,Marine Fisheries Remote Sensing
@@ -256,9 +289,6 @@ economic fishery socio,Fisheries Socio-Economics,1,2,Fisheries Socio-Economics
 budidaya laut,Budidaya Laut,1,1,Budidaya Laut
 biology fishery management,Fisheries Biology and Management,1,2,Fisheries Biology and Management
 biology fishery,Fisheries Biology,1,2,Fisheries Biology
-change climate,Climate change,1,1,Climate change
-conservation marine,marine conservation,1,1,marine conservation
-diversity genetic,Genetic Diversity,1,1,Genetic Diversity
 aquaculture,Aquaculture,1,1,Aquaculture
 analyst aquaculture,Aquaculture Analyst,1,1,Aquaculture Analyst
 fishing technology,Fishing Technology,1,1,Fishing Technology
@@ -290,7 +320,6 @@ ekologi serangga taksonomi,Taksonomi dan Ekologi Serangga,1,1,Taksonomi dan Ekol
 bee honey soliter,Soliter Honey Bee,1,1,Soliter Honey Bee
 genetic molecular,Molecular Genetics,1,1,Molecular Genetics
 phylogenetic,Phylogenetics,1,1,Phylogenetics
-genetic population,Population Genetics,1,1,Population Genetics
 malacologist,Malacologist,1,1,Malacologist
 environment forestry laboratorium,Forestry & Environment Laboratorium,1,1,Forestry & Environment Laboratorium
 forest inventory,Forest Inventory,1,1,Forest Inventory
@@ -370,10 +399,9 @@ jakarta,Jakarta,1,1,Jakarta
 communication digital program study,Digital Communication Study Program,1,1,Digital Communication Study Program
 thailand,Thailand,1,1,Thailand
 development inclusive,Inclusive Development,1,1,Inclusive Development
-development,Development,1,1,Development
-health law,Health Law,1,2,Health Law
-agama islam majene majene negeri sekolah tinggi,Sekolah Tinggi Agama Islam Negeri Majene: Majene,1,1,Sekolah Tinggi Agama Islam Negeri Majene: Majene
-sulawesi west,West Sulawesi,1,1,West Sulawesi
+health law,Health Law,1,3,Health Law
+agama islam majene majene negeri sekolah tinggi,Sekolah Tinggi Agama Islam Negeri Majene: Majene,1,2,Sekolah Tinggi Agama Islam Negeri Majene: Majene
+sulawesi west,West Sulawesi,1,2,West Sulawesi
 banking crime,Banking Crime,1,2,Banking Crime
 laundering money,Money Laundering,1,2,Money Laundering
 asset recovery,Asset Recovery,1,2,Asset Recovery
@@ -389,6 +417,11 @@ semantik,Semantik,1,1,Semantik
 sosiolinguistik,Sosiolinguistik,1,1,Sosiolinguistik
 psikolinguistik,Psikolinguistik,1,1,Psikolinguistik
 bone la museum pawawoi,Museum La Pawawoi Bone,1,1,Museum La Pawawoi Bone
+computation material,Computation Materials,1,1,Computation Materials
+material shielding,Shielding Materials,1,1,Shielding Materials
+biocomposite material,Biocomposite Materials,1,1,Biocomposite Materials
+bioceramic material,Bioceramic Materials,1,1,Bioceramic Materials
+bioplastic,Bioplastics,1,1,Bioplastics
 archeology,Archeology,1,2,Archeology
 at disease infectious medicine stanford univ,Medicine (Infectious Disease) at Stanford Univ,1,1,Medicine (Infectious Disease) at Stanford Univ
 fort manage rotterdam site,manage the Fort Rotterdam Site,1,1,manage the Fort Rotterdam Site
@@ -460,6 +493,18 @@ analysis multimedia,Multimedia Analysis,1,1,Multimedia Analysis
 intelligence system,Intelligence System,1,1,Intelligence System
 analytic data,Data Analytics,1,1,Data Analytics
 analysis computing intellegent,Intellegent Computing and Analysis,1,1,Intellegent Computing and Analysis
+sensor system,Sensor System,1,1,Sensor System
+distribution electrical power,Electrical Power Distribution,1,1,Electrical Power Distribution
+economic electrical engineering installation technology,Electrical Installation Technology and Engineering Economics,1,1,Electrical Installation Technology and Engineering Economics
+industrial management,Industrial Management,1,1,Industrial Management
+engineering power system,Power System Engineering,1,2,Power System Engineering
+power quality,Power Quality,1,2,Power Quality
+energy sustainable,Sustainable Energy,1,2,Sustainable Energy
+efficiency energy energy technology,Energy Technology and Energy Efficiency,1,1,Energy Technology and Energy Efficiency
+energy management,Energy Management,1,1,Energy Management
+energy renewable,Renewable Energy,1,1,Renewable Energy
+power solar,and Solar Power,1,1,and Solar Power
+energy storage,Energy Storage,1,1,Energy Storage
 lightweight manufactur material,Lightweight Material Manufactur,1,5,Lightweight Material Manufactur
 lightweight manufacture material,Lightweight Material Manufacture,1,5,Lightweight Material Manufacture
 bmkg,BMKG,1,1,BMKG
@@ -502,7 +547,6 @@ cardiovascular physiology,Physiology (Cardiovascular),1,1,Physiology (Cardiovasc
 pharmacology physiology,Physiology and Pharmacology,1,1,Physiology and Pharmacology
 clinical nutrition specialist,Specialist of Clinical Nutrition Science,1,1,Specialist of Clinical Nutrition Science
 clinical email microbiology specialist,Specialist of Clinical Microbiology Email,1,1,Specialist of Clinical Microbiology Email
-homepage,Homepage,1,1,Homepage
 mit,(MIT,1,1,(MIT
 malaya univ,(Univ. of Malaya,1,1,(Univ. of Malaya
 nephrology,Nephrology,1,1,Nephrology
@@ -525,6 +569,18 @@ biomedicine expert,Expert in Biomedicine,1,2,Expert in Biomedicine
 food medicine,and Food Medicine,1,2,and Food Medicine
 change climate environmental health,Environmental Health and Climate Change,1,2,Environmental Health and Climate Change
 engineering machine,Machine Engineering,1,1,Machine Engineering
+cohort study,cohort studies,1,1,cohort studies
+assessment factor health population risk,and risk factor assessments in population health,1,1,and risk factor assessments in population health
+a assistant dedicated field group is najwati our research,Najwati is a dedicated field assistant in our research group,1,1,Najwati is a dedicated field assistant in our research group
+collection contributing data to,contributing to data collection,1,1,contributing to data collection
+engagement participant,participant engagement,1,1,participant engagement
+a disease foundation strong surveillance with,with a strong foundation in disease surveillance,1,1,with a strong foundation in disease surveillance
+analysis data,data analysis,1,1,data analysis
+factor risk,risk factors,1,1,risk factors
+contributing epidemiological our study success to,contributing to the success of our epidemiological studies,1,1,contributing to the success of our epidemiological studies
+ade,Ade,1,1,Ade
+collection contribute data she to,she contributes to data collection,1,1,she contributes to data collection
+initiative our research success supporting,supporting the success of our research initiatives,1,1,supporting the success of our research initiatives
 clean supply water,clean water supply,1,2,clean water supply
 amdal,and AMDAL,1,2,and AMDAL
 environmental health quality,Environmental Health Quality,1,2,Environmental Health Quality
@@ -549,7 +605,10 @@ disease injury related work,Work-Related Diseases and Injuries,1,2,Work-Related 
 leader,Leader,1,1,Leader
 child maternal nutrition,Maternal and Child Nutrition,1,1,Maternal and Child Nutrition
 health intervention nutrition public,Intervention of Public Health Nutrition,1,1,Intervention of Public Health Nutrition
+engineering safety,Safety Engineering,1,1,Safety Engineering
 biology moleculer,Moleculer Biology,1,1,Moleculer Biology
+orcid,ORCID,1,1,ORCID
+linkedin,linkedin,1,1,linkedin
 epidemiology genetic social,Epidemiology Social and Genetics,1,1,Epidemiology Social and Genetics
 epidemiology health public,Epidemiology and Public Health,1,1,Epidemiology and Public Health
 control rat vector,Vector and Rat Control,1,1,Vector and Rat Control
@@ -565,6 +624,8 @@ ambassador global sustainability,Global Ambassadors of Sustainability,1,1,Global
 biomaterial pharmaceutical,Pharmaceutical Biomaterial,1,2,Pharmaceutical Biomaterial
 advanced manufacturing,Advanced Manufacturing,1,2,Advanced Manufacturing
 diagnosis transdermal,Transdermal Diagnosis,1,2,Transdermal Diagnosis
+a design focus on primary with,with a primary focus on the design,1,1,with a primary focus on the design
+compound novel pharmaceutical synthesis,and synthesis of novel pharmaceutical compounds,1,1,and synthesis of novel pharmaceutical compounds
 delivery dermal drug trandermal,Dermal and Trandermal Drug Delivery,1,2,Dermal and Trandermal Drug Delivery
 delivery intradermal system transdermal,Transdermal and Intradermal Delivery System,1,2,Transdermal and Intradermal Delivery System
 pharmacognosy,Pharmacognosy,1,1,Pharmacognosy

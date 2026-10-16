@@ -146,7 +146,7 @@ def parse_items(s):
         res.append(dict(role=role, fields=fields, links=links,
                         name=clean(h3.group(1)) if h3 else "", p=clean(p.group(1)) if p else "",
                         texts=texts))
-    return res or parse_static_team(s)
+    return res or parse_static_team(s) or parse_linkinbio(s)
 
 
 def parse_static_team(s):
@@ -161,13 +161,31 @@ def parse_static_team(s):
             continue
         end = pos[i + 1][0] if i + 1 < len(pos) else len(s)
         chunk = s[st:end]
-        h3 = re.search(r"<h3[^>]*>(.*?)</h3>", chunk, re.S)
-        p = re.search(r"<p[^>]*>(.*?)</p>", chunk, re.S)
+        h3 = re.search(r'<(h\d|div|span)[^>]*class="[^"]*-box-title[^"]*"[^>]*>(.*?)</\1>', chunk, re.S) \
+            or re.search(r"<h3[^>]*>(.*?)</h3>", chunk, re.S)
+        p = re.search(r'<(p|div)[^>]*class="[^"]*-box-description[^"]*"[^>]*>(.*?)</\1>', chunk, re.S) \
+            or re.search(r"<p[^>]*>(.*?)</p>", chunk, re.S)
         if not h3:
             continue
         links = [html.unescape(x) for x in re.findall(r'<a[^>]+href="([^"#][^"]*)"', chunk)]
-        res.append(dict(role=role, fields=[], links=links, name=clean(h3.group(1)),
-                        p=clean(p.group(1)) if p else "", texts=[]))
+        res.append(dict(role=role, fields=[], links=links, name=clean(h3.group(h3.lastindex)),
+                        p=clean(p.group(p.lastindex)) if p else "", texts=[]))
+    return res
+
+
+def parse_linkinbio(s):
+    """Widget Elementor 'link in bio': nama (heading), peran (title), keahlian (description), tautan ID."""
+    res = []
+    parts = re.split(r'<div class="e-link-in-bio__bio"', s)[1:]
+    for chunk in parts:
+        h = re.search(r'e-link-in-bio__heading[^>]*>(.*?)</h2>', chunk, re.S)
+        t = re.search(r'e-link-in-bio__title[^>]*>(.*?)</h3>', chunk, re.S)
+        d = re.search(r'e-link-in-bio__description[^>]*>(.*?)</p>', chunk, re.S)
+        if not h:
+            continue
+        links = [html.unescape(x) for x in re.findall(r'<a[^>]+href="([^"#][^"]*)"', chunk[:6000])]
+        res.append(dict(role=clean(t.group(1)) if t else "", fields=[], links=links, name=clean(h.group(1)),
+                        p=clean(d.group(1)) if d else "", texts=[]))
     return res
 
 

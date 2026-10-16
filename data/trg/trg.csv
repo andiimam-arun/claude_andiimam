@@ -2,7 +2,7 @@ klaster,fakultas,slug,nama,url,deskripsi,n_peneliti,n_publikasi,n_buku,n_paten,n
 Agro Complex,Faculty of Agriculture,agribac,Agricultural Bacteriology Research Group,https://trg.unhas.ac.id/agribac/,,36,25,13,18,6
 Agro Complex,Faculty of Agriculture,cocoa-rg,Cocoa Research Group,https://trg.unhas.ac.id/cocoa-rg/,,14,44,2,2,15
 Agro Complex,Faculty of Agriculture,futropicrops,Future-Fit Tropical Food Crops Research Group,https://trg.unhas.ac.id/futropicrops/,,37,21,3,0,16
-Agro Complex,Faculty of Agriculture,geosus,Geospatial For Sustainable Land Use,https://trg.unhas.ac.id/geosus/,,11,9,1,2,5
+Agro Complex,Faculty of Agriculture,geosus,Geospatial For Sustainable Land Use,https://trg.unhas.ac.id/geosus/,,14,9,4,2,5
 Agro Complex,Faculty of Agriculture,hortibb,Horticultural Breeding and Biotechnology Research Group,https://trg.unhas.ac.id/hortibb/,,13,48,3,2,29
 Agro Complex,Faculty of Agriculture,imppd,Integrated Pest Disease Management,https://trg.unhas.ac.id/imppd/,,5,5,3,3,3
 Agro Complex,Faculty of Agriculture,oilpalm,Oil Palm Research Group,https://trg.unhas.ac.id/oilpalm/,,16,3,3,2,6
@@ -33,17 +33,17 @@ Agro Complex,Faculty of Animal Husbandry,pored-rg,Poultry Breeding Research Grou
 Agro Complex,Faculty of Animal Husbandry,feedtech,Feed Technology and Industry Research Group,https://trg.unhas.ac.id/feedtech/,,26,46,5,3,0
 Agro Complex,Faculty of Animal Husbandry,beefpro,Beef Cattle Productivity Research Group,https://trg.unhas.ac.id/beefpro/,,5,1,1,1,1
 Agro Complex,Faculty of Marine & Fisheries,albiorg,Algal Biotechnology Research Group,https://trg.unhas.ac.id/albiorg/,,21,16,1,2,5
-Agro Complex,Faculty of Marine & Fisheries,acuetox,Aquatic Ecotoxicology,https://trg.unhas.ac.id/acuetox/,,0,0,4,0,15
+Agro Complex,Faculty of Marine & Fisheries,acuetox,Aquatic Ecotoxicology,https://trg.unhas.ac.id/acuetox/,,12,0,4,0,15
 Agro Complex,Faculty of Marine & Fisheries,ambioc,Aquatic Macrofaunal Biodiversity and Conservation,https://trg.unhas.ac.id/ambioc/,,19,11,5,1,13
-Agro Complex,Faculty of Marine & Fisheries,c3rg,Climate Change and Coastal Resilience Research Group,https://trg.unhas.ac.id/c3rg/,,0,13,0,0,0
+Agro Complex,Faculty of Marine & Fisheries,c3rg,Climate Change and Coastal Resilience Research Group,https://trg.unhas.ac.id/c3rg/,,11,13,0,0,0
 Agro Complex,Faculty of Marine & Fisheries,cores,Coral Reef Rehabilitation and Sustainability Research Group,https://trg.unhas.ac.id/cores/,,0,27,1,0,0
 Agro Complex,Faculty of Marine & Fisheries,fisher-g,Fish and Shellfish Diseases,https://trg.unhas.ac.id/fisher-g/,,7,7,1,1,7
 Agro Complex,Faculty of Marine & Fisheries,fiterg,Fishing Technology Research Group,https://trg.unhas.ac.id/fiterg/,,5,27,4,2,4
-Agro Complex,Faculty of Marine & Fisheries,mprg,Marine Plastic Research Group,https://trg.unhas.ac.id/mprg/,,0,0,2,0,3
+Agro Complex,Faculty of Marine & Fisheries,mprg,Marine Plastic Research Group,https://trg.unhas.ac.id/mprg/,,14,0,2,0,3
 Agro Complex,Faculty of Marine & Fisheries,multitrophic,Multitrophic Research Group,https://trg.unhas.ac.id/multitrophic/,,0,18,4,2,22
 Agro Complex,Faculty of Marine & Fisheries,ncprg,Natural Coastal Protection Research Group,https://trg.unhas.ac.id/ncprg/,,8,3,3,1,5
-Agro Complex,Faculty of Marine & Fisheries,sesreg,Seagrass Restoration & Ecosystem Services Research Group,https://trg.unhas.ac.id/sesreg/,,0,40,6,2,7
-Agro Complex,Faculty of Marine & Fisheries,tropicrab,Tropical Crab Research Group,https://trg.unhas.ac.id/tropicrab/,,0,0,3,3,0
+Agro Complex,Faculty of Marine & Fisheries,sesreg,Seagrass Restoration & Ecosystem Services Research Group,https://trg.unhas.ac.id/sesreg/,,7,40,6,2,7
+Agro Complex,Faculty of Marine & Fisheries,tropicrab,Tropical Crab Research Group,https://trg.unhas.ac.id/tropicrab/,,32,0,3,3,0
 Agro Complex,Faculty of Marine & Fisheries,tfed,Tuna Fisheries and Economic Development Research Group,https://trg.unhas.ac.id/tfed/,,14,37,5,3,13
 Agro Complex,Faculty of Marine & Fisheries,marsplan,Marine Spatial Planning Research Group,https://trg.unhas.ac.id/marsplan/,,13,11,4,2,7
 Agro Complex,Faculty of Marine & Fisheries,lsfa-trg,Lobster Sustainable Fisheries and Aquaculture Research Group,https://trg.unhas.ac.id/lsfa-trg/,,14,36,6,3,6
@@ -61,7 +61,7 @@ Agro Complex,Faculty of Forestry,ddrg,Deforestation and Degradation Research Gro
 Agro Complex,Faculty of Forestry,biomass,Biomass Research Group,https://trg.unhas.ac.id/biomass/,,15,0,2,0,4
 Agro Complex,Faculty of Forestry,ecofor,Ecotourism and Forest Biodiversity Research Group,https://trg.unhas.ac.id/ecofor/,,8,10,2,2,3
 Agro Complex,Faculty of Forestry,tredic,Tropical Ecology and Biodiversity Conservation Research Group,https://trg.unhas.ac.id/tredic/,,0,32,2,0,10
-Agro Complex,Faculty of Agricultural Technology,advfood,Advanced Food Processing Research Group,https://trg.unhas.ac.id/advfood/,,1,9,2,2,3
+Agro Complex,Faculty of Agricultural Technology,advfood,Advanced Food Processing Research Group,https://trg.unhas.ac.id/advfood/,,3,9,2,2,3
 Agro Complex,Faculty of Agricultural Technology,coffee-rg,Coffee Research Group,https://trg.unhas.ac.id/coffee-rg/,,0,0,0,0,0
 Agro Complex,Faculty of Agricultural Technology,ethnicfood,Ethnic Food Research Group,https://trg.unhas.ac.id/ethnicfood/,,1,28,4,0,4
 Agro Complex,Faculty of Agricultural Technology,fone-rg,Food Nutritional Enrichment Research Group,https://trg.unhas.ac.id/fone-rg/,,10,10,3,2,8
@@ -113,9 +113,9 @@ Social Science,Faculty of Social & Political Sciences,dims-rg,Digital Media and 
 Social Science,Faculty of Social & Political Sciences,ctrg,Counter Terrorism Research Group,https://trg.unhas.ac.id/ctrg/,,12,16,7,1,9
 Social Science,Faculty of Social & Political Sciences,mhsrg,Migration and Human Security,https://trg.unhas.ac.id/mhsrg/,,13,30,0,0,0
 Social Science,Faculty of Law,coastallaw,Agrarian and Coastal Law Research Group,https://trg.unhas.ac.id/coastallaw/,,7,0,0,0,0
-Social Science,Faculty of Law,criminological,Criminological Justice Research Group,https://trg.unhas.ac.id/criminological/,,0,4,1,0,0
-Social Science,Faculty of Law,rg2,Regulation and Governance Research Group,https://trg.unhas.ac.id/rg2/,,1,4,2,2,1
-Social Science,Faculty of Law,wasmalaw,Waste Management Law Research Group,https://trg.unhas.ac.id/wasmalaw/,,1,16,11,3,4
+Social Science,Faculty of Law,criminological,Criminological Justice Research Group,https://trg.unhas.ac.id/criminological/,,4,4,1,0,0
+Social Science,Faculty of Law,rg2,Regulation and Governance Research Group,https://trg.unhas.ac.id/rg2/,,3,4,2,2,1
+Social Science,Faculty of Law,wasmalaw,Waste Management Law Research Group,https://trg.unhas.ac.id/wasmalaw/,,12,16,11,3,4
 Social Science,Faculty of Law,seaj,Sociolegal and Environmental Justice Research Group,https://trg.unhas.ac.id/seaj/,,8,2,4,0,2
 Social Science,Faculty of Law,victory,Victim Rights Protection and Recovery Research Group,https://trg.unhas.ac.id/victory/,,13,43,13,0,15
 Social Science,Faculty of Law,constitution,Constitutional Convention and Democracy Research Group,https://trg.unhas.ac.id/constitution/,,6,3,1,0,0
@@ -125,14 +125,14 @@ Social Science,Faculty of Law,dlp-rg,Disability Law and Policy Research Group,ht
 Social Science,Faculty of Cultural Sciences,cul-tor,Cultural Tourism Research Group,https://trg.unhas.ac.id/cul-tor/,,10,94,1,2,27
 Social Science,Faculty of Cultural Sciences,arabicedtech,Digital Arabic Learning Research Group,https://trg.unhas.ac.id/arabicedtech/,,0,0,0,0,0
 Social Science,Faculty of Cultural Sciences,flcrg,French Linguistics and Culture Research Group,https://trg.unhas.ac.id/flcrg/,,9,5,2,0,5
-Social Science,Faculty of Cultural Sciences,locwis,Local Culture and Wisdom Research Group,https://trg.unhas.ac.id/locwis/,,0,5,30,1,4
+Social Science,Faculty of Cultural Sciences,locwis,Local Culture and Wisdom Research Group,https://trg.unhas.ac.id/locwis/,,2,5,30,1,4
 Social Science,Faculty of Cultural Sciences,prepodyreg,Prehistoric Population Dynamics Research Group,https://trg.unhas.ac.id/prepodyreg/,,3,0,0,0,1
 Social Science,Faculty of Cultural Sciences,psyling,Psycholinguistics Research Group,https://trg.unhas.ac.id/psyling/,,12,25,6,10,3
 Social Science,Faculty of Cultural Sciences,mcrg,Manuscript and Culture Research Group,https://trg.unhas.ac.id/mcrg/,,34,18,14,3,14
 Social Science,Faculty of Cultural Sciences,ethno,Ethno-Literature Research Group,https://trg.unhas.ac.id/ethno/,,8,4,5,5,7
-Science and Engineering,Faculty of Mathematics & Natural Science,algebra,Algebra Research Group,https://trg.unhas.ac.id/algebra/,,1,2,2,0,1
+Science and Engineering,Faculty of Mathematics & Natural Science,algebra,Algebra Research Group,https://trg.unhas.ac.id/algebra/,,11,2,2,0,1
 Science and Engineering,Faculty of Mathematics & Natural Science,biochar,Biochar For Environmental Sustainability,https://trg.unhas.ac.id/biochar/,,0,34,7,2,25
-Science and Engineering,Faculty of Mathematics & Natural Science,bionanocomposite,Bionanocomposite Research Group,https://trg.unhas.ac.id/bionanocomposite/,,0,111,4,7,9
+Science and Engineering,Faculty of Mathematics & Natural Science,bionanocomposite,Bionanocomposite Research Group,https://trg.unhas.ac.id/bionanocomposite/,,14,111,4,7,9
 Science and Engineering,Faculty of Mathematics & Natural Science,climatebmd,Climate Based Modeling For Decisions,https://trg.unhas.ac.id/climatebmd/,,8,25,3,0,3
 Science and Engineering,Faculty of Mathematics & Natural Science,datascienceai,Data Science and Artificial Intelligence Research Group,https://trg.unhas.ac.id/datascienceai/,,0,32,3,0,15
 Science and Engineering,Faculty of Mathematics & Natural Science,fprg,Fixed Point Research Group,https://trg.unhas.ac.id/fprg/,,9,6,0,0,5
@@ -166,7 +166,7 @@ Science and Engineering,Faculty of Engineering,aerodyn,Applied Aerodynamic Resea
 Science and Engineering,Faculty of Engineering,dis-intel,Distributed Intelligence Research Group,https://trg.unhas.ac.id/dis-intel/,,10,21,0,1,10
 Science and Engineering,Faculty of Engineering,wte,Waste to Energy Research Group,https://trg.unhas.ac.id/wte/,,28,8,1,0,4
 Science and Engineering,Faculty of Engineering,cyberiot,Cyber Resilience and Internet of Things Research Group,https://trg.unhas.ac.id/cyberiot/,,24,51,1,1,6
-Science and Engineering,Faculty of Engineering,energy-e-conser,Energy Efficiency and Conservation Research Group,https://trg.unhas.ac.id/energy-e-conser/,,0,22,1,0,2
+Science and Engineering,Faculty of Engineering,energy-e-conser,Energy Efficiency and Conservation Research Group,https://trg.unhas.ac.id/energy-e-conser/,,8,22,1,0,2
 Science and Engineering,Faculty of Engineering,smprg,Sustainable Metallurgical Process Research Group,https://trg.unhas.ac.id/smprg/,,11,27,0,3,4
 Science and Engineering,Faculty of Engineering,house-sett,Housing and Settlement Research Group,https://trg.unhas.ac.id/house-sett/,,16,0,0,0,0
 Science and Engineering,Faculty of Engineering,build-acoustics,Building Acoustics Research Group,https://trg.unhas.ac.id/build-acoustics/,,15,26,2,0,4
@@ -196,7 +196,7 @@ Medical and Health Science,Faculty of Medicine,bstt-rg,Bone & Soft Tissue Tumor 
 Medical and Health Science,Faculty of Medicine,boneregeneration,Bone Regeneration Research Group,https://trg.unhas.ac.id/boneregeneration/,,5,17,3,2,3
 Medical and Health Science,Faculty of Medicine,malvecsis,Malaria and Vector Resistance Research Group,https://trg.unhas.ac.id/malvecsis/,,16,32,3,3,19
 Medical and Health Science,Faculty of Medicine,most-rg,Metabolism and Oxidative Stress Research Group,https://trg.unhas.ac.id/most-rg/,,13,31,2,3,14
-Medical and Health Science,Faculty of Medicine,thecore,Microbiome Therapeutic Research Group,https://trg.unhas.ac.id/thecore/,,11,1,1,1,1
+Medical and Health Science,Faculty of Medicine,thecore,Microbiome Therapeutic Research Group,https://trg.unhas.ac.id/thecore/,,16,1,1,1,1
 Medical and Health Science,Faculty of Medicine,renalnutrition,Nephro and Nutrition Research Group,https://trg.unhas.ac.id/renalnutrition/,,13,23,3,3,3
 Medical and Health Science,Faculty of Medicine,neurogenetics,Neurogenetics Research Group,https://trg.unhas.ac.id/neurogenetics/,,10,6,0,0,4
 Medical and Health Science,Faculty of Medicine,addis,Infectious Animal Disease Dynamic Research Group,https://trg.unhas.ac.id/addis/,,22,14,2,6,8
@@ -219,7 +219,7 @@ Medical and Health Science,Faculty of Dentistry,rdrg,Regenerative Dentistry Rese
 Medical and Health Science,Faculty of Dentistry,oraclefrg,Orofacial Cleft Research Group,https://trg.unhas.ac.id/oraclefrg/,,14,1,0,0,2
 Medical and Health Science,Faculty of Dentistry,geriatricdentistry,Geriatric Dentistry Research Group,https://trg.unhas.ac.id/geriatricdentistry/,,0,2,0,0,2
 Medical and Health Science,Faculty of Dentistry,dfd-rg,Digital Forensic Dentistry Research Group,https://trg.unhas.ac.id/dfd-rg/,,5,20,6,1,8
-Medical and Health Science,Faculty of Public Health,bcqlrg,Birth Cohort and Quality of Life Research Group,https://trg.unhas.ac.id/bcqlrg/,,0,3,2,3,1
+Medical and Health Science,Faculty of Public Health,bcqlrg,Birth Cohort and Quality of Life Research Group,https://trg.unhas.ac.id/bcqlrg/,,8,3,2,3,1
 Medical and Health Science,Faculty of Public Health,coastaldw,Coastal Domestic Water Research Group,https://trg.unhas.ac.id/coastaldw/,,15,13,5,1,11
 Medical and Health Science,Faculty of Public Health,eiarg,Environmental Impact Assessment Research Group,https://trg.unhas.ac.id/eiarg/,,9,19,4,2,4
 Medical and Health Science,Faculty of Public Health,etoxh,Environmental Toxicology and Health Reseach Group,https://trg.unhas.ac.id/etoxh/,,20,7,0,0,7
@@ -230,26 +230,26 @@ Medical and Health Science,Faculty of Public Health,ihmrg,Integrated Health Mode
 Medical and Health Science,Faculty of Public Health,icchealth,Intersectionality of Climate Crisis and Health,https://trg.unhas.ac.id/icchealth/,,26,5,4,0,6
 Medical and Health Science,Faculty of Public Health,mc-nutrition,Mother and Child Nutrition Research Group,https://trg.unhas.ac.id/mc-nutrition/,,29,0,5,0,36
 Medical and Health Science,Faculty of Public Health,nutritionmdp,Nutrition For Metabolic Disease Prevention Research Group,https://trg.unhas.ac.id/nutritionmdp/,,14,0,2,0,14
-Medical and Health Science,Faculty of Public Health,ohsav,Occupational Health and Safety Aviation,https://trg.unhas.ac.id/ohsav/,,0,0,10,0,6
+Medical and Health Science,Faculty of Public Health,ohsav,Occupational Health and Safety Aviation,https://trg.unhas.ac.id/ohsav/,,3,0,10,0,6
 Medical and Health Science,Faculty of Public Health,press-ncd,Prevention Strategies For Ncd Research Group,https://trg.unhas.ac.id/press-ncd/,,9,29,11,0,6
-Medical and Health Science,Faculty of Public Health,ph-entomology,Public Health Entomology Research Group,https://trg.unhas.ac.id/ph-entomology/,,0,7,3,2,4
+Medical and Health Science,Faculty of Public Health,ph-entomology,Public Health Entomology Research Group,https://trg.unhas.ac.id/ph-entomology/,,7,7,3,2,4
 Medical and Health Science,Faculty of Public Health,se-ncd,Social Epidemiology of Non-Communicable-Disease Research Group,https://trg.unhas.ac.id/se-ncd/,,16,20,5,12,3
-Medical and Health Science,Faculty of Public Health,urbhealth,Urban Health and Healthy Cities Research Group,https://trg.unhas.ac.id/urbhealth/,,0,17,13,10,7
+Medical and Health Science,Faculty of Public Health,urbhealth,Urban Health and Healthy Cities Research Group,https://trg.unhas.ac.id/urbhealth/,,3,17,13,10,7
 Medical and Health Science,Faculty of Public Health,workfasma,Workplace Fatigue and Stress Management Research Group,https://trg.unhas.ac.id/workfasma/,,8,4,4,0,3
 Medical and Health Science,Faculty of Public Health,nutriepi,Nutritional Epidemiology Research Group,https://trg.unhas.ac.id/nutriepi/,,5,8,5,0,2
 Medical and Health Science,Faculty of Public Health,ecohealth,Environmental contamination and Health Risk Research Group,https://trg.unhas.ac.id/ecohealth/,,4,4,2,2,3
 Medical and Health Science,Faculty of Public Health,ocnrg,Obesity and Child Nutrition Research Group,https://trg.unhas.ac.id/ocnrg/,,13,8,4,4,9
 Medical and Health Science,Faculty of Pharmacy,dreams,Drug Efficacy and Medication Safety Research Group,https://trg.unhas.ac.id/dreams/,,21,28,2,2,18
-Medical and Health Science,Faculty of Pharmacy,drugsyn,Drug Synthesis Research Group,https://trg.unhas.ac.id/drugsyn/,,0,0,1,1,5
-Medical and Health Science,Faculty of Pharmacy,marinenutraceutical,Marine Nutraceutical and Cosmeceutical Research Group,https://trg.unhas.ac.id/marinenutraceutical/,,0,8,1,2,0
+Medical and Health Science,Faculty of Pharmacy,drugsyn,Drug Synthesis Research Group,https://trg.unhas.ac.id/drugsyn/,,4,0,1,1,5
+Medical and Health Science,Faculty of Pharmacy,marinenutraceutical,Marine Nutraceutical and Cosmeceutical Research Group,https://trg.unhas.ac.id/marinenutraceutical/,,0,8,3,2,0
 Medical and Health Science,Faculty of Pharmacy,natural-drug,Natural Product Drug Discovery Research Group,https://trg.unhas.ac.id/natural-drug/,,14,19,1,3,5
 Medical and Health Science,Faculty of Pharmacy,ufrg,Unhas Fly Research Group,https://trg.unhas.ac.id/ufrg/,,3,110,6,0,28
 Medical and Health Science,Faculty of Pharmacy,dtdds,Transdermal and Transmucosal Drug Delivery Research Group,https://trg.unhas.ac.id/dtdds/,,19,50,0,0,9
 Medical and Health Science,Faculty of Pharmacy,cbmc,Chemical Biology and Medicinal Chemistry Research Group,https://trg.unhas.ac.id/cbmc/,,13,17,0,0,0
 Medical and Health Science,Faculty of Pharmacy,mnprg,Metabolomics and Natural Products Research Group,https://trg.unhas.ac.id/mnprg/,,9,15,1,2,8
 Medical and Health Science,Faculty of Pharmacy,PharmaEpid,Pharmacoepidemiology Research Group,https://trg.unhas.ac.id/PharmaEpid/,,26,0,1,0,0
-Medical and Health Science,Faculty of Nursing,indofootcare,Diabetic Foot Care Research Group,https://trg.unhas.ac.id/indofootcare/,,0,0,0,1,9
-Medical and Health Science,Faculty of Nursing,eaging,Enhancement Healthy Aging,https://trg.unhas.ac.id/eaging/,,7,37,1,0,0
+Medical and Health Science,Faculty of Nursing,indofootcare,Diabetic Foot Care Research Group,https://trg.unhas.ac.id/indofootcare/,,12,0,0,1,9
+Medical and Health Science,Faculty of Nursing,eaging,Enhancement Healthy Aging,https://trg.unhas.ac.id/eaging/,,10,37,1,0,0
 Medical and Health Science,Faculty of Nursing,hncd-rg,Holistic Nursing For Chronic Diseases Research Group,https://trg.unhas.ac.id/hncd-rg/,,23,16,11,11,13
 Medical and Health Science,Faculty of Nursing,mhvp,Mental Health In Vulnerable Populations Research Group,https://trg.unhas.ac.id/mhvp/,,12,12,5,0,11
 Medical and Health Science,Faculty of Nursing,neuro-onc,Neuro-Oncology Nursing Researh Group,https://trg.unhas.ac.id/neuro-onc/,,8,18,2,3,8
