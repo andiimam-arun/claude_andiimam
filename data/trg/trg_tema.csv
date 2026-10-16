@@ -1,0 +1,266 @@
+slug,fakultas,klaster,tema
+agribac,Faculty of Agriculture,Agro Complex,Agricultural Bacteriology
+cocoa-rg,Faculty of Agriculture,Agro Complex,Cocoa
+futropicrops,Faculty of Agriculture,Agro Complex,Future-Fit Tropical Food Crops
+geosus,Faculty of Agriculture,Agro Complex,Geospatial For Sustainable Land Use
+hortibb,Faculty of Agriculture,Agro Complex,Horticultural Breeding and Biotechnology
+imppd,Faculty of Agriculture,Agro Complex,Integrated Pest Disease Management
+oilpalm,Faculty of Agriculture,Agro Complex,Oil Palm
+csva,Faculty of Agriculture,Agro Complex,Precision Agriculture
+safos,Faculty of Agriculture,Agro Complex,Sago For Food Security
+sophymicro,Faculty of Agriculture,Agro Complex,Soil Physics and Micromorphology
+torcg,Faculty of Agriculture,Agro Complex,Tropical Orchids and Horticulture
+socialcap,Faculty of Agriculture,Agro Complex,Social Capital
+sop-land,Faculty of Agriculture,Agro Complex,Sub-optimal Land Agriculture
+sqlm-rg,Faculty of Agriculture,Agro Complex,Soil Quality and Land Management
+corn-rg,Faculty of Agriculture,Agro Complex,Corn
+rice-rg,Faculty of Agriculture,Agro Complex,Rice
+food-crops,Faculty of Agriculture,Agro Complex,Food Crops Value Chain
+aisrg,Faculty of Agriculture,Agro Complex,Agricultural Institution Strengthening
+pbnp,Faculty of Agriculture,Agro Complex,Biocontrol and Natural Plant Product
+amrg,Faculty of Agriculture,Agro Complex,Agricultural Mycology
+p-rg,Faculty of Agriculture,Agro Complex,Phytophthora
+bione-rg,Faculty of Agriculture,Agro Complex,Biopesticides and Natural Enemies
+idlfrg,Faculty of Animal Husbandry,Agro Complex,Institutional Development of Livestock Farmers
+llgr-rg,Faculty of Animal Husbandry,Agro Complex,Research Group of Local Livestock Genetic Resources
+slfs,Faculty of Animal Husbandry,Agro Complex,Smallholder Livestock Farming System
+odfrg,Faculty of Animal Husbandry,Agro Complex,Organic Dairy Farming
+nutrifeed,Faculty of Animal Husbandry,Agro Complex,Poultry Nutrition and Feed
+livagri,Faculty of Animal Husbandry,Agro Complex,Livestock Agribusiness
+lolw,Faculty of Animal Husbandry,Agro Complex,Leather and Other Livestock Waste
+abdes,Faculty of Animal Husbandry,Agro Complex,"Equine Breeding, Development, & Sustainability"
+pored-rg,Faculty of Animal Husbandry,Agro Complex,Poultry Breeding
+feedtech,Faculty of Animal Husbandry,Agro Complex,Feed Technology and Industry
+beefpro,Faculty of Animal Husbandry,Agro Complex,Beef Cattle Productivity
+albiorg,Faculty of Marine & Fisheries,Agro Complex,Algal Biotechnology
+acuetox,Faculty of Marine & Fisheries,Agro Complex,Aquatic Ecotoxicology
+ambioc,Faculty of Marine & Fisheries,Agro Complex,Aquatic Macrofaunal Biodiversity and Conservation
+c3rg,Faculty of Marine & Fisheries,Agro Complex,Climate Change and Coastal Resilience
+cores,Faculty of Marine & Fisheries,Agro Complex,Coral Reef Rehabilitation and Sustainability
+fisher-g,Faculty of Marine & Fisheries,Agro Complex,Fish and Shellfish Diseases
+fiterg,Faculty of Marine & Fisheries,Agro Complex,Fishing Technology
+mprg,Faculty of Marine & Fisheries,Agro Complex,Marine Plastic
+multitrophic,Faculty of Marine & Fisheries,Agro Complex,Multitrophic
+ncprg,Faculty of Marine & Fisheries,Agro Complex,Natural Coastal Protection
+sesreg,Faculty of Marine & Fisheries,Agro Complex,Seagrass Restoration & Ecosystem Services
+tropicrab,Faculty of Marine & Fisheries,Agro Complex,Tropical Crab
+tfed,Faculty of Marine & Fisheries,Agro Complex,Tuna Fisheries and Economic Development
+marsplan,Faculty of Marine & Fisheries,Agro Complex,Marine Spatial Planning
+lsfa-trg,Faculty of Marine & Fisheries,Agro Complex,Lobster Sustainable Fisheries and Aquaculture
+shrimpfarming,Faculty of Marine & Fisheries,Agro Complex,Shrimp Farming
+bite-fish,Faculty of Marine & Fisheries,Agro Complex,Biogeography and taxonomy Endemic Fishes
+invaquatic,Faculty of Marine & Fisheries,Agro Complex,Aquatic Invasive Alien Species
+tila-techrg,Faculty of Marine & Fisheries,Agro Complex,Nile Tilapia
+forestsociety,Faculty of Forestry,Agro Complex,Forest and Society
+secrg,Faculty of Forestry,Agro Complex,Forest Hydrology and Watershed Managment
+karstbios,Faculty of Forestry,Agro Complex,Karst Bioprospecting and Society
+nifodi,Faculty of Forestry,Agro Complex,Non-timber Forest Product Diversification
+wildev,Faculty of Forestry,Agro Complex,Wildlife Ecology and Conservation
+termite,Faculty of Forestry,Agro Complex,Termite
+ddrg,Faculty of Forestry,Agro Complex,Deforestation and Degradation
+biomass,Faculty of Forestry,Agro Complex,Biomass
+ecofor,Faculty of Forestry,Agro Complex,Ecotourism and Forest Biodiversity
+tredic,Faculty of Forestry,Agro Complex,Tropical Ecology and Biodiversity Conservation
+advfood,Faculty of Agricultural Technology,Agro Complex,Advanced Food Processing
+coffee-rg,Faculty of Agricultural Technology,Agro Complex,Coffee
+ethnicfood,Faculty of Agricultural Technology,Agro Complex,Ethnic Food
+fone-rg,Faculty of Agricultural Technology,Agro Complex,Food Nutritional Enrichment
+respobio,Faculty of Agricultural Technology,Agro Complex,Research Group For Post-Harvest Technology and Biotechnology
+postharvest-me,Faculty of Agricultural Technology,Agro Complex,Postharvest Metabo-Engineering
+ffbi,Faculty of Agricultural Technology,Agro Complex,Fermented Food and Beverage Innovation
+ffoodtech,Faculty of Agricultural Technology,Agro Complex,Functional Food Technology
+proagritech,Faculty of Agricultural Technology,Agro Complex,Appropriate Agricultural Technology
+swcerg,Faculty of Agricultural Technology,Agro Complex,Soil and Water Conservation Engineering
+biofoodpack,Faculty of Agricultural Technology,Agro Complex,Bio-based Food Packaging
+islamicfrg,Faculty of Economics & Business,Social Science,Islamic Economics and Finance
+marketingbhvr,Faculty of Economics & Business,Social Science,Marketing and Behavioral
+fsarg,Faculty of Economics & Business,Social Science,Financial Statement Analysis
+ppm,Faculty of Economics & Business,Social Science,Production Performance Management
+apm,Faculty of Economics & Business,Social Science,Accounting and Public Management
+sbm,Faculty of Economics & Business,Social Science,Strategic Business Model
+supplychain-m,Faculty of Economics & Business,Social Science,Supply Chain Management
+mdrg,Faculty of Economics & Business,Social Science,Market Dynamics Research Group (MDRG)
+sca,Faculty of Economics & Business,Social Science,Research Group on Sustainability and Critical Accounting
+hrm,Faculty of Economics & Business,Social Science,Human Resource Management and Behavioral
+res-economics,Faculty of Economics & Business,Social Science,Resource Economics
+pbudget,Faculty of Economics & Business,Social Science,Public Budgeting
+straac,Faculty of Economics & Business,Social Science,Sustainability Transparency Accountability
+emccrg,Faculty of Economics & Business,Social Science,Emerging Markets Cross-Cultural
+corporate-gover,Faculty of Economics & Business,Social Science,Corporate Governance
+finra,Faculty of Economics & Business,Social Science,Financial Reporting and Accountability
+smes,Faculty of Economics & Business,Social Science,Small and Medium Enterprise
+dege-rg,Faculty of Economics & Business,Social Science,Development Economics and Gender
+bus-trans,Faculty of Economics & Business,Social Science,Business Transformation
+farg,Faculty of Economics & Business,Social Science,Forensic Accounting
+corpaudit,Faculty of Economics & Business,Social Science,Corporate Auditing
+msbd,Faculty of Economics & Business,Social Science,Microfinance and Small Business Development
+nms-rg,Faculty of Economics & Business,Social Science,Non-market Strategy
+ais-rg,Faculty of Economics & Business,Social Science,Accounting Information System
+depadis,Faculty of Social & Political Sciences,Social Science,Democracy and Participation In Diverse Society
+mediacom,Faculty of Social & Political Sciences,Social Science,Media and Communication
+cnrm,Faculty of Social & Political Sciences,Social Science,Conflict and Natural Resources Management
+cpcd,Faculty of Social & Political Sciences,Social Science,"Peace, Conflict, and Democracy"
+adaptivepublic-orga,Faculty of Social & Political Sciences,Social Science,Adaptive Public Organization
+mgsd,Faculty of Social & Political Sciences,Social Science,Maritime Governance and Sustainable Development
+govmo-soc,Faculty of Social & Political Sciences,Social Science,Government Modernization and Social Change
+empogo,Faculty of Social & Political Sciences,Social Science,Environmental Policy and Governance
+marg,Faculty of Social & Political Sciences,Social Science,Maritime Anthropology
+busan,Faculty of Social & Political Sciences,Social Science,Business Anthropology
+core,Faculty of Social & Political Sciences,Social Science,Coastal Community Development
+drg,Faculty of Social & Political Sciences,Social Science,Disability
+posbrg,Faculty of Social & Political Sciences,Social Science,Public Opinion and Social Behavior Riserearch Group
+dims-rg,Faculty of Social & Political Sciences,Social Science,Digital Media and Society
+ctrg,Faculty of Social & Political Sciences,Social Science,Counter Terrorism
+mhsrg,Faculty of Social & Political Sciences,Social Science,Migration and Human Security
+coastallaw,Faculty of Law,Social Science,Agrarian and Coastal Law
+criminological,Faculty of Law,Social Science,Criminological Justice
+rg2,Faculty of Law,Social Science,Regulation and Governance
+wasmalaw,Faculty of Law,Social Science,Waste Management Law
+seaj,Faculty of Law,Social Science,Sociolegal and Environmental Justice
+victory,Faculty of Law,Social Science,Victim Rights Protection and Recovery
+constitution,Faculty of Law,Social Science,Constitutional Convention and Democracy
+lcpr-rg,Faculty of Law,Social Science,Legal Protection of Children's Rights
+bl-rg,Faculty of Law,Social Science,Business Law
+dlp-rg,Faculty of Law,Social Science,Disability Law and Policy
+cul-tor,Faculty of Cultural Sciences,Social Science,Cultural Tourism
+arabicedtech,Faculty of Cultural Sciences,Social Science,Digital Arabic Learning
+flcrg,Faculty of Cultural Sciences,Social Science,French Linguistics and Culture
+locwis,Faculty of Cultural Sciences,Social Science,Local Culture and Wisdom
+prepodyreg,Faculty of Cultural Sciences,Social Science,Prehistoric Population Dynamics
+psyling,Faculty of Cultural Sciences,Social Science,Psycholinguistics
+mcrg,Faculty of Cultural Sciences,Social Science,Manuscript and Culture
+ethno,Faculty of Cultural Sciences,Social Science,Ethno-Literature
+algebra,Faculty of Mathematics & Natural Science,Science and Engineering,Algebra
+biochar,Faculty of Mathematics & Natural Science,Science and Engineering,Biochar For Environmental Sustainability
+bionanocomposite,Faculty of Mathematics & Natural Science,Science and Engineering,Bionanocomposite
+climatebmd,Faculty of Mathematics & Natural Science,Science and Engineering,Climate Based Modeling For Decisions
+datascienceai,Faculty of Mathematics & Natural Science,Science and Engineering,Data Science and Artificial Intelligence
+fprg,Faculty of Mathematics & Natural Science,Science and Engineering,Fixed Point
+functionallygm,Faculty of Mathematics & Natural Science,Science and Engineering,Functionally Graded Materials
+graphtheory,Faculty of Mathematics & Natural Science,Science and Engineering,Graph Theory
+marine-natural,Faculty of Mathematics & Natural Science,Science and Engineering,Marine Natural Product Chemistry
+dynapop-maths,Faculty of Mathematics & Natural Science,Science and Engineering,Mathematical Models In Dynamical Population
+mpr,Faculty of Mathematics & Natural Science,Science and Engineering,Medical Physics
+ngenergy,Faculty of Mathematics & Natural Science,Science and Engineering,Nanogenerator Materials For Energy Harvesting
+polychem,Faculty of Mathematics & Natural Science,Science and Engineering,Polymer Chemistry
+qft-rg,Faculty of Mathematics & Natural Science,Science and Engineering,Quaternion Fourier Transform
+stochastic,Faculty of Mathematics & Natural Science,Science and Engineering,Stochastic Modeling
+glohamod,Faculty of Mathematics & Natural Science,Science and Engineering,Global Hazard Modelling
+asds,Faculty of Mathematics & Natural Science,Science and Engineering,Applied Statistics and Data Science
+f-analysis,Faculty of Mathematics & Natural Science,Science and Engineering,Functional Analysis
+msm-rg,Faculty of Mathematics & Natural Science,Science and Engineering,Multifunctional Semiconductor Materials
+afdays,Faculty of Engineering,Science and Engineering,Advanced Facade and Daylighting Systems
+afmrg,Faculty of Engineering,Science and Engineering,Advanced Functional Materials
+aimp,Faculty of Engineering,Science and Engineering,Artificial Intelligence and Multimedia Processing
+ermrg,Faculty of Engineering,Science and Engineering,Earth Resources Management
+fderg,Faculty of Engineering,Science and Engineering,Fluid Dynamics and Energy
+ggerg,Faculty of Engineering,Science and Engineering,Geotechnical and Geoenvironmental
+ropt,Faculty of Engineering,Science and Engineering,Resilience of Urban Public Transport
+sssn,Faculty of Engineering,Science and Engineering,Smart Ship and Safe Navigation
+se-engineering,Faculty of Engineering,Science and Engineering,Structural and Earthquake Engineering
+smsrg,Faculty of Engineering,Science and Engineering,Structural Maintenance and Strengthening
+swm-rg,Faculty of Engineering,Science and Engineering,Solid Waste Management
+mrcrg,Faculty of Engineering,Science and Engineering,Mechatronic and Robotic Control
+rene,Faculty of Engineering,Science and Engineering,Renewable Energy
+aerodyn,Faculty of Engineering,Science and Engineering,Applied Aerodynamic
+dis-intel,Faculty of Engineering,Science and Engineering,Distributed Intelligence
+wte,Faculty of Engineering,Science and Engineering,Waste to Energy
+cyberiot,Faculty of Engineering,Science and Engineering,Cyber Resilience and Internet of Things
+energy-e-conser,Faculty of Engineering,Science and Engineering,Energy Efficiency and Conservation
+smprg,Faculty of Engineering,Science and Engineering,Sustainable Metallurgical Process
+house-sett,Faculty of Engineering,Science and Engineering,Housing and Settlement
+build-acoustics,Faculty of Engineering,Science and Engineering,Building Acoustics
+prg,Faculty of Engineering,Science and Engineering,Paleoenvironmental
+cdm,Faculty of Engineering,Science and Engineering,Computing and Data Mining
+nap,Faculty of Engineering,Science and Engineering,Noise and Air Pollution
+ammd,Faculty of Engineering,Science and Engineering,Applied Mechanics and Mechanical Design
+lightweight-mat,Faculty of Engineering,Science and Engineering,Lightweight Material
+coastal-sr,Faculty of Engineering,Science and Engineering,Coastal Settlement Resilience
+flowliqtion,Faculty of Engineering,Science and Engineering,Flowslide and Liquefaction
+powersystems,Faculty of Engineering,Science and Engineering,Power Systems
+hes,Faculty of Engineering,Science and Engineering,Health and Safety Engineering
+fdmrg,Faculty of Engineering,Science and Engineering,Flood Disaster Management
+float-struc,Faculty of Engineering,Science and Engineering,Floating Structure
+psrg,Faculty of Engineering,Science and Engineering,Piping System
+tnaq-rg,Faculty of Engineering,Science and Engineering,Transportation and Air Quality
+oeceng,Faculty of Engineering,Science and Engineering,Ocean Energy and Coastal Engineering
+naftech,Faculty of Engineering,Science and Engineering,Natural Fiber Technology
+ait,Faculty of Engineering,Science and Engineering,Applied Intelligent Technologies
+hvit-rg,Faculty of Engineering,Science and Engineering,High Voltage and Insulation Technology
+cegorg,Faculty of Engineering,Science and Engineering,Clean Energy and Grid Optimization
+eletrans,Faculty of Engineering,Science and Engineering,Electrical Energy Transition
+crem,Faculty of Engineering,Science and Engineering,Critical and Rare-Earth Metals
+bisa,Faculty of Medicine,Medical and Health Science,Biofilm Infection and Superbug
+biovax,Faculty of Medicine,Medical and Health Science,Biovax TB
+bstt-rg,Faculty of Medicine,Medical and Health Science,Bone & Soft Tissue Tumor Reseach Group
+boneregeneration,Faculty of Medicine,Medical and Health Science,Bone Regeneration
+malvecsis,Faculty of Medicine,Medical and Health Science,Malaria and Vector Resistance
+most-rg,Faculty of Medicine,Medical and Health Science,Metabolism and Oxidative Stress
+thecore,Faculty of Medicine,Medical and Health Science,Microbiome Therapeutic
+renalnutrition,Faculty of Medicine,Medical and Health Science,Nephro and Nutrition
+neurogenetics,Faculty of Medicine,Medical and Health Science,Neurogenetics
+addis,Faculty of Medicine,Medical and Health Science,Infectious Animal Disease Dynamic
+neocare,Faculty of Medicine,Medical and Health Science,Neonatal Care
+stepmic,Faculty of Medicine,Medical and Health Science,Spatial Epidemiology and Syndemic
+aphreg,Faculty of Medicine,Medical and Health Science,Animal Production and Health
+mvrg,Faculty of Medicine,Medical and Health Science,Malaria Vaccine
+iorg,Faculty of Medicine,Medical and Health Science,Immuno-Oncology
+dhrg,Faculty of Medicine,Medical and Health Science,Digestive Health
+pneumonia,Faculty of Medicine,Medical and Health Science,Pneumonia
+cava-rg,Faculty of Medicine,Medical and Health Science,Cardiovascular
+medi-edu,Faculty of Medicine,Medical and Health Science,Medical Education
+aio-rg,Faculty of Dentistry,Medical and Health Science,Advanced Imaging of Oromaxillofacial
+idea,Faculty of Dentistry,Medical and Health Science,Immersive Development For Engaging Advancements
+ohcirg,Faculty of Dentistry,Medical and Health Science,One Health For Costal and Island
+biodental-engineering,Faculty of Dentistry,Medical and Health Science,Biodental Engineering
+adhentisrg,Faculty of Dentistry,Medical and Health Science,Adhesive Dentistry
+periodontal,Faculty of Dentistry,Medical and Health Science,Periodontal
+rdrg,Faculty of Dentistry,Medical and Health Science,Regenerative Dentistry
+oraclefrg,Faculty of Dentistry,Medical and Health Science,Orofacial Cleft
+geriatricdentistry,Faculty of Dentistry,Medical and Health Science,Geriatric Dentistry
+dfd-rg,Faculty of Dentistry,Medical and Health Science,Digital Forensic Dentistry
+bcqlrg,Faculty of Public Health,Medical and Health Science,Birth Cohort and Quality of Life
+coastaldw,Faculty of Public Health,Medical and Health Science,Coastal Domestic Water
+eiarg,Faculty of Public Health,Medical and Health Science,Environmental Impact Assessment
+etoxh,Faculty of Public Health,Medical and Health Science,Environmental Toxicology and Health Reseach Group
+food4nd,Faculty of Public Health,Medical and Health Science,Functional Food For Nutritional Deficiency
+hospbiz,Faculty of Public Health,Medical and Health Science,Hospital Business Development
+isoshrg,Faculty of Public Health,Medical and Health Science,Informal-Sector Occupational Safety and Health
+ihmrg,Faculty of Public Health,Medical and Health Science,Integrated Health Modelling
+icchealth,Faculty of Public Health,Medical and Health Science,Intersectionality of Climate Crisis and Health
+mc-nutrition,Faculty of Public Health,Medical and Health Science,Mother and Child Nutrition
+nutritionmdp,Faculty of Public Health,Medical and Health Science,Nutrition For Metabolic Disease Prevention
+ohsav,Faculty of Public Health,Medical and Health Science,Occupational Health and Safety Aviation
+press-ncd,Faculty of Public Health,Medical and Health Science,Prevention Strategies For Ncd
+ph-entomology,Faculty of Public Health,Medical and Health Science,Public Health Entomology
+se-ncd,Faculty of Public Health,Medical and Health Science,Social Epidemiology of Non-Communicable-Disease
+urbhealth,Faculty of Public Health,Medical and Health Science,Urban Health and Healthy Cities
+workfasma,Faculty of Public Health,Medical and Health Science,Workplace Fatigue and Stress Management
+nutriepi,Faculty of Public Health,Medical and Health Science,Nutritional Epidemiology
+ecohealth,Faculty of Public Health,Medical and Health Science,Environmental contamination and Health Risk
+ocnrg,Faculty of Public Health,Medical and Health Science,Obesity and Child Nutrition
+dreams,Faculty of Pharmacy,Medical and Health Science,Drug Efficacy and Medication Safety
+drugsyn,Faculty of Pharmacy,Medical and Health Science,Drug Synthesis
+marinenutraceutical,Faculty of Pharmacy,Medical and Health Science,Marine Nutraceutical and Cosmeceutical
+natural-drug,Faculty of Pharmacy,Medical and Health Science,Natural Product Drug Discovery
+ufrg,Faculty of Pharmacy,Medical and Health Science,Unhas Fly
+dtdds,Faculty of Pharmacy,Medical and Health Science,Transdermal and Transmucosal Drug Delivery
+cbmc,Faculty of Pharmacy,Medical and Health Science,Chemical Biology and Medicinal Chemistry
+mnprg,Faculty of Pharmacy,Medical and Health Science,Metabolomics and Natural Products
+PharmaEpid,Faculty of Pharmacy,Medical and Health Science,Pharmacoepidemiology
+indofootcare,Faculty of Nursing,Medical and Health Science,Diabetic Foot Care
+eaging,Faculty of Nursing,Medical and Health Science,Enhancement Healthy Aging
+hncd-rg,Faculty of Nursing,Medical and Health Science,Holistic Nursing For Chronic Diseases
+mhvp,Faculty of Nursing,Medical and Health Science,Mental Health In Vulnerable Populations
+neuro-onc,Faculty of Nursing,Medical and Health Science,Neuro-Oncology Nursing Researh Group
+nmhealthcare,Faculty of Nursing,Medical and Health Science,Nursing Management & Healthcare Quality
+pednrg,Faculty of Nursing,Medical and Health Science,Pediatric Nursing
+v-mat,Faculty of Nursing,Medical and Health Science,Vulnerable Maternity Nursing
+nnrg,Faculty of Nursing,Medical and Health Science,Neonatal Nursing
+pmn-rg,Faculty of Nursing,Medical and Health Science,Pain Management Nursing
+mwm-rg,Faculty of Nursing,Medical and Health Science,Malignant and Wound Management
+fortrebgen,Faculty of Vocational,Vocational,Forest Tree Breeding and Genomics
+blu-eco,School of Postgraduate,Multidisciplinary,Blue Economics
+urbinfrastructur-r,School of Postgraduate,Multidisciplinary,Urban Infrastructure Resilience
+fis-rg,School of Postgraduate,Multidisciplinary,Forensic & Investigative Sciences
+womenhealth-con,School of Postgraduate,Multidisciplinary,Women\'s Health Concern
