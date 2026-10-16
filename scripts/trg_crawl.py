@@ -215,7 +215,10 @@ LABEL = re.compile(r"^\s*(Expertise|Institution|Keahlian|Institusi)\s*:?\s*", re
 
 def team_row(slug, it):
     """Dua tata letak: (a) p berisi keahlian; (b) field terpisah keahlian, institusi."""
-    vals = it["fields"] if len(it["fields"]) >= 1 else ([it["p"]] + it["texts"] if it["p"] else it["texts"])
+    if it["p"]:  # tata letak umum: <p> berisi keahlian, field dinamis berisi institusi
+        vals = [it["p"]] + it["fields"]
+    else:
+        vals = it["fields"] if it["fields"] else it["texts"]
     vals = [LABEL.sub("", EXPERTISE_NOISE.sub("", v)).strip() for v in vals]
     vals = [v for v in vals if v and v.lower() not in ("expertise:", "institution:")]
     expertise = vals[0] if vals else ""

@@ -1,22 +1,16 @@
 klaster,fakultas,slug,nama,n_peneliti,pct_keahlian,pct_punya_ID,n_publikasi,n_buku,n_paten,n_proyek,masalah
-Agro Complex,Faculty of Animal Husbandry,slfs,Smallholder Livestock Farming System Research Group,7,0,14,0,2,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
+Agro Complex,Faculty of Animal Husbandry,slfs,Smallholder Livestock Farming System Research Group,7,29,14,0,2,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,eletrans,Electrical Energy Transition Research Group,5,0,0,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
-Science and Engineering,Faculty of Engineering,house-sett,Housing and Settlement Research Group,16,6,0,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,house-sett,Housing and Settlement Research Group,16,44,0,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
 Social Science,Faculty of Law,coastallaw,Agrarian and Coastal Law Research Group,7,0,0,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,tropicrab,Tropical Crab Research Group,32,19,0,0,3,3,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Social & Political Sciences,busan,Business Anthropology Research Group,12,8,17,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Agricultural Technology,biofoodpack,Bio-based Food Packaging Research Group,7,0,57,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%
 Agro Complex,Faculty of Agricultural Technology,coffee-rg,Coffee Research Group,0,0,0,0,0,0,0,halaman_tim_404;tanpa_publikasi;tanpa_proyek
-Agro Complex,Faculty of Agricultural Technology,ffoodtech,Functional Food Technology Research Group,26,0,69,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%
 Agro Complex,Faculty of Animal Husbandry,pored-rg,Poultry Breeding Research Group,10,30,0,0,0,0,1,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
 Social Science,Faculty of Cultural Sciences,arabicedtech,Digital Arabic Learning Research Group,0,0,0,0,0,0,0,halaman_tim_404;tanpa_publikasi;tanpa_proyek
 Social Science,Faculty of Cultural Sciences,prepodyreg,Prehistoric Population Dynamics Research Group,3,0,0,0,0,0,1,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Dentistry,idea,Immersive Development For Engaging Advancements,2,0,0,0,0,0,3,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
 Social Science,Faculty of Economics & Business,ais-rg,Accounting Information System Research Group,34,15,3,32,6,7,0,tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,corpaudit,Corporate Auditing Research Group,7,0,29,0,6,0,1,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,ppm,Production Performance Management Research Group,8,0,0,0,2,0,8,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,pbudget,Public Budgeting Research Group,6,0,50,0,5,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%
-Science and Engineering,Faculty of Engineering,aerodyn,Applied Aerodynamic Research Group,10,0,20,0,1,0,1,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,aerodyn,Applied Aerodynamic Research Group,10,40,20,0,1,0,1,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,aimp,Artificial Intelligence and Multimedia Processing,0,0,0,0,0,0,0,halaman_tim_404;tanpa_publikasi;tanpa_proyek
 Science and Engineering,Faculty of Engineering,fdmrg,Flood Disaster Management Research Group,5,0,0,11,0,0,0,tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,fderg,Fluid Dynamics and Energy Research Group,12,8,42,0,0,2,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%
@@ -26,123 +20,98 @@ Social Science,Faculty of Law,constitution,Constitutional Convention and Democra
 Social Science,Faculty of Law,criminological,Criminological Justice Research Group,4,0,0,4,1,0,0,tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,acuetox,Aquatic Ecotoxicology,12,42,0,0,4,0,15,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,invaquatic,Aquatic Invasive Alien Species Research Group,10,0,0,4,4,0,0,tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Pharmacy,cbmc,Chemical Biology and Medicinal Chemistry Research Group,13,15,0,17,0,0,0,tanpa_proyek;keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Pharmacy,drugsyn,Drug Synthesis Research Group,4,25,0,0,1,1,5,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,mc-nutrition,Mother and Child Nutrition Research Group,29,24,3,0,5,0,36,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Public Health,nutritionmdp,Nutrition For Metabolic Disease Prevention Research Group,14,7,29,0,2,0,14,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Social & Political Sciences,empogo,Environmental Policy and Governance Research Group,9,0,89,0,0,0,0,tanpa_publikasi;tanpa_proyek;keahlian_<50%
-Agro Complex,Faculty of Agricultural Technology,ffbi,Fermented Food and Beverage Innovation Research Group,11,45,18,24,5,3,14,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Agricultural Technology,fone-rg,Food Nutritional Enrichment Research Group,10,0,0,10,3,2,8,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Agriculture,aisrg,Agricultural Institution Strengthening Research Group,12,0,100,37,12,2,0,tanpa_proyek;keahlian_<50%
-Agro Complex,Faculty of Agriculture,cocoa-rg,Cocoa Research Group,14,7,0,44,2,2,15,keahlian_<50%;ID_peneliti_<30%
+Medical and Health Science,Faculty of Public Health,nutritionmdp,Nutrition For Metabolic Disease Prevention Research Group,14,36,29,0,2,0,14,tanpa_publikasi;keahlian_<50%;ID_peneliti_<30%
+Social Science,Faculty of Social & Political Sciences,busan,Business Anthropology Research Group,12,58,17,0,0,0,0,tanpa_publikasi;tanpa_proyek;ID_peneliti_<30%
+Agro Complex,Faculty of Agricultural Technology,biofoodpack,Bio-based Food Packaging Research Group,7,57,57,0,0,0,0,tanpa_publikasi;tanpa_proyek
+Agro Complex,Faculty of Agricultural Technology,ffoodtech,Functional Food Technology Research Group,26,69,69,0,0,0,0,tanpa_publikasi;tanpa_proyek
 Agro Complex,Faculty of Agriculture,food-crops,Food Crops Value Chain Research Group,0,0,0,39,9,3,0,tim_tidak_terbaca_(tata_letak_lain_atau_kosong);tanpa_proyek
-Agro Complex,Faculty of Agriculture,p-rg,Phytophthora Research Group,18,6,0,9,4,10,12,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Agriculture,safos,Sago For Food Security,17,12,0,8,1,0,31,keahlian_<50%;ID_peneliti_<30%
 Agro Complex,Faculty of Animal Husbandry,feedtech,Feed Technology and Industry Research Group,26,100,0,46,5,3,0,tanpa_proyek;ID_peneliti_<30%
-Agro Complex,Faculty of Animal Husbandry,lolw,Leather and Other Livestock Waste Research Group,19,5,37,0,5,0,19,tanpa_publikasi;keahlian_<50%
-Agro Complex,Faculty of Animal Husbandry,llgr-rg,Research Group of Local Livestock Genetic Resources,20,15,75,19,1,3,0,tanpa_proyek;keahlian_<50%
 Social Science,Faculty of Cultural Sciences,flcrg,French Linguistics and Culture Research Group,9,11,0,5,2,0,5,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Dentistry,aio-rg,Advanced Imaging of Oromaxillofacial Research Group,2,0,0,19,0,0,2,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Dentistry,biodental-engineering,Biodental Engineering Research Group,14,14,14,36,1,2,4,keahlian_<50%;ID_peneliti_<30%
+Medical and Health Science,Faculty of Dentistry,biodental-engineering,Biodental Engineering Research Group,14,36,14,36,1,2,4,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Dentistry,oraclefrg,Orofacial Cleft Research Group,14,0,0,1,0,0,2,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,emccrg,Emerging Markets Cross-Cultural Research Group,10,10,0,5,4,4,3,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,fsarg,Financial Statement Analysis Research Group,11,9,0,17,7,5,15,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,farg,Forensic Accounting Research Group,8,12,25,17,3,3,11,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,hrm,Human Resource Management and Behavioral Research Group,8,0,0,48,3,2,45,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,mdrg,Market Dynamics Research Group (MDRG),10,0,40,0,8,0,9,tanpa_publikasi;keahlian_<50%
-Social Science,Faculty of Economics & Business,msbd,Microfinance and Small Business Development Research Group,16,0,6,8,6,3,6,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,smes,Small and Medium Enterprise Research Group,11,0,9,11,11,2,11,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Economics & Business,sbm,Strategic Business Model Research Group,9,0,89,0,2,0,5,tanpa_publikasi;keahlian_<50%
-Social Science,Faculty of Economics & Business,supplychain-m,Supply Chain Management Research Group,7,14,86,0,3,0,8,tanpa_publikasi;keahlian_<50%
-Social Science,Faculty of Economics & Business,straac,Sustainability Transparency Accountability Research Group,6,0,100,0,6,0,15,tanpa_publikasi;keahlian_<50%
+Social Science,Faculty of Economics & Business,corpaudit,Corporate Auditing Research Group,7,86,29,0,6,0,1,tanpa_publikasi;ID_peneliti_<30%
+Social Science,Faculty of Economics & Business,mdrg,Market Dynamics Research Group (MDRG),10,10,40,0,8,0,9,tanpa_publikasi;keahlian_<50%
+Social Science,Faculty of Economics & Business,ppm,Production Performance Management Research Group,8,88,0,0,2,0,8,tanpa_publikasi;ID_peneliti_<30%
+Social Science,Faculty of Economics & Business,pbudget,Public Budgeting Research Group,6,50,50,0,5,0,0,tanpa_publikasi;tanpa_proyek
 Science and Engineering,Faculty of Engineering,ait,Applied Intelligent Technologies Research Group,8,0,50,18,3,0,0,tanpa_proyek;keahlian_<50%
 Science and Engineering,Faculty of Engineering,ammd,Applied Mechanics and Mechanical Design Research Group,3,0,0,13,5,1,16,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,coastal-sr,Coastal Settlement Resilience Research Group,3,0,0,55,6,0,33,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,cdm,Computing and Data Mining Research Group,0,0,0,0,0,0,8,halaman_tim_404;tanpa_publikasi
-Science and Engineering,Faculty of Engineering,flowliqtion,Flowslide and Liquefaction Research Group,17,6,0,11,2,0,2,keahlian_<50%;ID_peneliti_<30%
-Science and Engineering,Faculty of Engineering,ggerg,Geotechnical and Geoenvironmental Research Group,14,7,0,9,3,3,4,keahlian_<50%;ID_peneliti_<30%
-Science and Engineering,Faculty of Engineering,hes,Health and Safety Engineering Research Group,5,0,0,8,0,1,1,keahlian_<50%;ID_peneliti_<30%
-Science and Engineering,Faculty of Engineering,prg,Paleoenvironmental Research Group,15,13,0,37,2,0,12,keahlian_<50%;ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,ggerg,Geotechnical and Geoenvironmental Research Group,14,43,0,9,3,3,4,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,rene,Renewable Energy Research Group,25,20,8,18,1,1,5,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,se-engineering,Structural and Earthquake Engineering Research Group,10,0,20,1,1,1,1,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Forestry,biomass,Biomass Research Group,15,20,67,0,2,0,4,tanpa_publikasi;keahlian_<50%
-Agro Complex,Faculty of Forestry,ddrg,Deforestation and Degradation Research Group,22,32,0,41,4,2,7,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Forestry,karstbios,Karst Bioprospecting and Society Research Group,5,20,20,16,2,2,13,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Forestry,nifodi,Non-timber Forest Product Diversification Research Group,13,0,0,13,6,0,3,keahlian_<50%;ID_peneliti_<30%
 Social Science,Faculty of Law,dlp-rg,Disability Law and Policy Research Group,15,93,20,4,0,0,0,tanpa_proyek;ID_peneliti_<30%
 Social Science,Faculty of Law,seaj,Sociolegal and Environmental Justice Research Group,8,0,0,2,4,0,2,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Law,victory,Victim Rights Protection and Recovery Research Group,13,8,0,43,13,0,15,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Marine & Fisheries,ambioc,Aquatic Macrofaunal Biodiversity and Conservation,19,0,0,11,5,1,13,keahlian_<50%;ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,c3rg,Climate Change and Coastal Resilience Research Group,11,100,0,13,0,0,0,tanpa_proyek;ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,cores,Coral Reef Rehabilitation and Sustainability Research Group,0,0,0,27,1,0,0,tim_tidak_terbaca_(tata_letak_lain_atau_kosong);tanpa_proyek
 Agro Complex,Faculty of Marine & Fisheries,fisher-g,Fish and Shellfish Diseases,7,14,0,7,1,1,7,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Marine & Fisheries,fiterg,Fishing Technology Research Group,5,0,0,27,4,2,4,keahlian_<50%;ID_peneliti_<30%
-Agro Complex,Faculty of Marine & Fisheries,ncprg,Natural Coastal Protection Research Group,8,0,0,3,3,1,5,keahlian_<50%;ID_peneliti_<30%
+Agro Complex,Faculty of Marine & Fisheries,ncprg,Natural Coastal Protection Research Group,8,25,0,3,3,1,5,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Mathematics & Natural Science,algebra,Algebra Research Group,11,45,0,2,2,0,1,keahlian_<50%;ID_peneliti_<30%
-Science and Engineering,Faculty of Mathematics & Natural Science,asds,Applied Statistics and Data Science  Research Group,21,0,29,19,3,2,26,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Mathematics & Natural Science,climatebmd,Climate Based Modeling For Decisions,8,25,0,25,3,0,3,keahlian_<50%;ID_peneliti_<30%
 Science and Engineering,Faculty of Mathematics & Natural Science,polychem,Polymer Chemistry Research Group,0,0,0,0,0,0,8,tim_tidak_terbaca_(tata_letak_lain_atau_kosong);tanpa_publikasi
 Science and Engineering,Faculty of Mathematics & Natural Science,qft-rg,Quaternion Fourier Transform Research Group,8,38,0,25,1,1,3,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,bstt-rg,Bone & Soft Tissue Tumor Reseach Group,3,0,0,2,0,0,2,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Medicine,boneregeneration,Bone Regeneration Research Group,5,0,0,17,3,2,3,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,cava-rg,Cardiovascular Research Group,10,10,0,1,1,1,1,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Medicine,dhrg,Digestive Health Research Group,5,20,0,10,2,3,1,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Medicine,mvrg,Malaria Vaccine Research Group,11,0,0,4,0,0,2,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Medicine,neocare,Neonatal Care Research Group,10,0,0,11,0,0,1,keahlian_<50%;ID_peneliti_<30%
+Medical and Health Science,Faculty of Medicine,mvrg,Malaria Vaccine Research Group,11,36,0,4,0,0,2,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,neurogenetics,Neurogenetics Research Group,10,0,0,6,0,0,4,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Medicine,pneumonia,Pneumonia Research Group,9,22,22,9,3,5,1,keahlian_<50%;ID_peneliti_<30%
+Medical and Health Science,Faculty of Medicine,pneumonia,Pneumonia Research Group,9,44,22,9,3,5,1,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Nursing,indofootcare,Diabetic Foot Care Research Group,12,100,0,0,0,1,9,tanpa_publikasi;ID_peneliti_<30%
 Medical and Health Science,Faculty of Nursing,eaging,Enhancement Healthy Aging,10,40,30,37,1,0,0,tanpa_proyek;keahlian_<50%
+Medical and Health Science,Faculty of Pharmacy,cbmc,Chemical Biology and Medicinal Chemistry Research Group,13,54,0,17,0,0,0,tanpa_proyek;ID_peneliti_<30%
 Medical and Health Science,Faculty of Pharmacy,marinenutraceutical,Marine Nutraceutical and Cosmeceutical Research Group,0,0,0,8,3,2,0,tim_tidak_terbaca_(tata_letak_lain_atau_kosong);tanpa_proyek
-Medical and Health Science,Faculty of Pharmacy,mnprg,Metabolomics and Natural Products Research Group,9,0,0,15,1,2,8,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Pharmacy,PharmaEpid,Pharmacoepidemiology Research Group,26,65,38,0,1,0,0,tanpa_publikasi;tanpa_proyek
+Medical and Health Science,Faculty of Pharmacy,PharmaEpid,Pharmacoepidemiology Research Group,26,100,38,0,1,0,0,tanpa_publikasi;tanpa_proyek
 Medical and Health Science,Faculty of Public Health,food4nd,Functional Food For Nutritional Deficiency Research Group,10,80,0,0,2,4,9,tanpa_publikasi;ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,icchealth,Intersectionality of Climate Crisis and Health,26,12,0,5,4,0,6,keahlian_<50%;ID_peneliti_<30%
-Medical and Health Science,Faculty of Public Health,nutriepi,Nutritional Epidemiology Research Group,5,0,20,8,5,0,2,keahlian_<50%;ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,ohsav,Occupational Health and Safety Aviation,3,100,0,0,10,0,6,tanpa_publikasi;ID_peneliti_<30%
-Social Science,Faculty of Social & Political Sciences,adaptivepublic-orga,Adaptive Public Organization Research Group,15,0,0,5,0,0,3,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Social & Political Sciences,depadis,Democracy and Participation In Diverse Society Research Group,10,0,0,8,1,0,10,keahlian_<50%;ID_peneliti_<30%
-Social Science,Faculty of Social & Political Sciences,mgsd,Maritime Governance and Sustainable Development Research Group,10,10,40,0,2,0,5,tanpa_publikasi;keahlian_<50%
+Social Science,Faculty of Social & Political Sciences,empogo,Environmental Policy and Governance Research Group,9,100,89,0,0,0,0,tanpa_publikasi;tanpa_proyek
 Agro Complex,Faculty of Agricultural Technology,advfood,Advanced Food Processing Research Group,3,100,0,9,2,2,3,ID_peneliti_<30%
 Agro Complex,Faculty of Agricultural Technology,proagritech,Appropriate Agricultural Technology Research Group,15,100,27,8,2,17,12,ID_peneliti_<30%
 Agro Complex,Faculty of Agricultural Technology,ethnicfood,Ethnic Food Research Group,1,100,0,28,4,0,4,ID_peneliti_<30%
+Agro Complex,Faculty of Agricultural Technology,ffbi,Fermented Food and Beverage Innovation Research Group,11,64,18,24,5,3,14,ID_peneliti_<30%
+Agro Complex,Faculty of Agricultural Technology,fone-rg,Food Nutritional Enrichment Research Group,10,100,0,10,3,2,8,ID_peneliti_<30%
 Agro Complex,Faculty of Agricultural Technology,postharvest-me,Postharvest Metabo-Engineering Research Group,0,0,0,14,4,0,15,halaman_tim_404
 Agro Complex,Faculty of Agricultural Technology,respobio,Research Group For Post-Harvest Technology and Biotechnology,6,100,0,29,2,2,14,ID_peneliti_<30%
 Agro Complex,Faculty of Agricultural Technology,swcerg,Soil and Water Conservation Engineering Research Group,7,71,0,4,3,2,6,ID_peneliti_<30%
 Agro Complex,Faculty of Agriculture,agribac,Agricultural Bacteriology Research Group,36,56,17,25,13,18,6,ID_peneliti_<30%
-Agro Complex,Faculty of Agriculture,amrg,Agricultural Mycology Research Group,28,29,93,80,6,13,20,keahlian_<50%
+Agro Complex,Faculty of Agriculture,aisrg,Agricultural Institution Strengthening Research Group,12,75,100,37,12,2,0,tanpa_proyek
 Agro Complex,Faculty of Agriculture,pbnp,Biocontrol and Natural Plant Product Research Group,10,0,60,27,5,5,9,keahlian_<50%
+Agro Complex,Faculty of Agriculture,cocoa-rg,Cocoa Research Group,14,100,0,44,2,2,15,ID_peneliti_<30%
 Agro Complex,Faculty of Agriculture,corn-rg,Corn Research Group,28,0,36,18,4,16,22,keahlian_<50%
 Agro Complex,Faculty of Agriculture,futropicrops,Future-Fit Tropical Food Crops Research Group,37,97,0,21,3,0,16,ID_peneliti_<30%
 Agro Complex,Faculty of Agriculture,geosus,Geospatial For Sustainable Land Use,14,100,0,9,4,2,5,ID_peneliti_<30%
-Agro Complex,Faculty of Agriculture,hortibb,Horticultural Breeding and Biotechnology Research Group,13,8,77,48,3,2,29,keahlian_<50%
 Agro Complex,Faculty of Agriculture,imppd,Integrated Pest Disease Management,5,80,20,5,3,3,3,ID_peneliti_<30%
-Agro Complex,Faculty of Agriculture,oilpalm,Oil Palm Research Group,16,0,88,3,3,2,6,keahlian_<50%
-Agro Complex,Faculty of Agriculture,csva,Precision Agriculture Research Group,19,5,53,20,0,0,30,keahlian_<50%
+Agro Complex,Faculty of Agriculture,p-rg,Phytophthora Research Group,18,100,0,9,4,10,12,ID_peneliti_<30%
+Agro Complex,Faculty of Agriculture,safos,Sago For Food Security,17,88,0,8,1,0,31,ID_peneliti_<30%
 Agro Complex,Faculty of Agriculture,sophymicro,Soil Physics and Micromorphology Research Group,0,0,0,15,5,3,5,halaman_tim_404
 Agro Complex,Faculty of Agriculture,sqlm-rg,Soil Quality and Land Management Research Group,14,93,0,3,1,1,2,ID_peneliti_<30%
 Agro Complex,Faculty of Agriculture,sop-land,Sub-optimal Land Agriculture Research Group,21,95,43,17,2,0,0,tanpa_proyek
 Agro Complex,Faculty of Animal Husbandry,beefpro,Beef Cattle Productivity Research Group,5,40,40,1,1,1,1,keahlian_<50%
 Agro Complex,Faculty of Animal Husbandry,abdes,"Equine Breeding, Development, & Sustainability Research Group",13,8,85,8,1,1,10,keahlian_<50%
-Agro Complex,Faculty of Animal Husbandry,odfrg,Organic Dairy Farming Research Group,20,5,60,17,3,3,16,keahlian_<50%
-Social Science,Faculty of Cultural Sciences,cul-tor,Cultural Tourism Research Group,10,0,60,94,1,2,27,keahlian_<50%
+Agro Complex,Faculty of Animal Husbandry,lolw,Leather and Other Livestock Waste Research Group,19,84,37,0,5,0,19,tanpa_publikasi
+Agro Complex,Faculty of Animal Husbandry,llgr-rg,Research Group of Local Livestock Genetic Resources,20,100,75,19,1,3,0,tanpa_proyek
 Social Science,Faculty of Cultural Sciences,locwis,Local Culture and Wisdom Research Group,2,100,0,5,30,1,4,ID_peneliti_<30%
-Social Science,Faculty of Cultural Sciences,mcrg,Manuscript and Culture Research Group,34,32,74,18,14,3,14,keahlian_<50%
-Medical and Health Science,Faculty of Dentistry,adhentisrg,Adhesive Dentistry Research Group,9,0,56,15,2,7,7,keahlian_<50%
 Medical and Health Science,Faculty of Dentistry,dfd-rg,Digital Forensic Dentistry Research Group,5,100,0,20,6,1,8,ID_peneliti_<30%
 Medical and Health Science,Faculty of Dentistry,geriatricdentistry,Geriatric Dentistry Research Group,0,0,0,2,0,0,2,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Medical and Health Science,Faculty of Dentistry,periodontal,Periodontal Research Group,6,0,50,14,1,4,5,keahlian_<50%
 Medical and Health Science,Faculty of Dentistry,rdrg,Regenerative Dentistry Research Group,11,0,36,3,2,2,4,keahlian_<50%
-Social Science,Faculty of Economics & Business,apm,Accounting and Public Management Research Group,17,12,53,63,9,4,15,keahlian_<50%
 Social Science,Faculty of Economics & Business,bus-trans,Business Transformation Research Group,10,0,70,19,4,2,7,keahlian_<50%
 Social Science,Faculty of Economics & Business,corporate-gover,Corporate Governance Research Group,0,0,0,81,6,6,52,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
-Social Science,Faculty of Economics & Business,dege-rg,Development Economics and Gender Research Group,10,0,40,10,7,3,11,keahlian_<50%
-Social Science,Faculty of Economics & Business,finra,Financial Reporting and Accountability Research Group,22,9,86,14,3,11,15,keahlian_<50%
+Social Science,Faculty of Economics & Business,dege-rg,Development Economics and Gender Research Group,10,10,40,10,7,3,11,keahlian_<50%
+Social Science,Faculty of Economics & Business,emccrg,Emerging Markets Cross-Cultural Research Group,10,100,0,5,4,4,3,ID_peneliti_<30%
+Social Science,Faculty of Economics & Business,fsarg,Financial Statement Analysis Research Group,11,100,0,17,7,5,15,ID_peneliti_<30%
+Social Science,Faculty of Economics & Business,farg,Forensic Accounting Research Group,8,100,25,17,3,3,11,ID_peneliti_<30%
+Social Science,Faculty of Economics & Business,hrm,Human Resource Management and Behavioral Research Group,8,88,0,48,3,2,45,ID_peneliti_<30%
 Social Science,Faculty of Economics & Business,islamicfrg,Islamic Economics and Finance Research Group,0,0,0,12,0,0,13,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
-Social Science,Faculty of Economics & Business,marketingbhvr,Marketing and Behavioral Research Group,10,30,40,8,7,9,3,keahlian_<50%
-Social Science,Faculty of Economics & Business,nms-rg,Non-market Strategy Research Group,8,25,38,3,1,1,1,keahlian_<50%
-Social Science,Faculty of Economics & Business,sca,Research Group on Sustainability and Critical Accounting,15,7,73,13,3,3,4,keahlian_<50%
+Social Science,Faculty of Economics & Business,marketingbhvr,Marketing and Behavioral Research Group,10,40,40,8,7,9,3,keahlian_<50%
+Social Science,Faculty of Economics & Business,msbd,Microfinance and Small Business Development Research Group,16,56,6,8,6,3,6,ID_peneliti_<30%
 Social Science,Faculty of Economics & Business,res-economics,Resource Economics Research Group,28,0,54,12,4,3,13,keahlian_<50%
+Social Science,Faculty of Economics & Business,smes,Small and Medium Enterprise Research Group,11,100,9,11,11,2,11,ID_peneliti_<30%
+Social Science,Faculty of Economics & Business,sbm,Strategic Business Model Research Group,9,100,89,0,2,0,5,tanpa_publikasi
+Social Science,Faculty of Economics & Business,supplychain-m,Supply Chain Management Research Group,7,100,86,0,3,0,8,tanpa_publikasi
+Social Science,Faculty of Economics & Business,straac,Sustainability Transparency Accountability Research Group,6,100,100,0,6,0,15,tanpa_publikasi
 Science and Engineering,Faculty of Engineering,afdays,Advanced Facade and Daylighting Systems,6,100,0,13,0,0,8,ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,afmrg,Advanced Functional Materials Research Group,0,0,0,76,1,11,17,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Science and Engineering,Faculty of Engineering,build-acoustics,Building Acoustics Research Group,15,53,27,26,2,0,4,ID_peneliti_<30%
@@ -152,30 +121,37 @@ Science and Engineering,Faculty of Engineering,cyberiot,Cyber Resilience and Int
 Science and Engineering,Faculty of Engineering,dis-intel,Distributed Intelligence Research Group,10,100,0,21,0,1,10,ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,ermrg,Earth Resources Management Research Group,33,85,18,6,4,0,9,ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,energy-e-conser,Energy Efficiency and Conservation Research Group,8,100,0,22,1,0,2,ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,flowliqtion,Flowslide and Liquefaction Research Group,17,88,0,11,2,0,2,ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,hes,Health and Safety Engineering Research Group,5,80,0,8,0,1,1,ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,lightweight-mat,Lightweight Material Research Group,11,100,36,13,0,2,0,tanpa_proyek
 Science and Engineering,Faculty of Engineering,naftech,Natural Fiber Technology Research Group,7,0,71,20,1,5,5,keahlian_<50%
-Science and Engineering,Faculty of Engineering,nap,Noise and Air Pollution Research Group,12,0,75,11,1,2,6,keahlian_<50%
-Science and Engineering,Faculty of Engineering,oeceng,Ocean Energy and Coastal Engineering Research Group,12,50,8,7,1,1,9,ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,oeceng,Ocean Energy and Coastal Engineering Research Group,12,100,8,7,1,1,9,ID_peneliti_<30%
+Science and Engineering,Faculty of Engineering,prg,Paleoenvironmental Research Group,15,53,0,37,2,0,12,ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,ropt,Resilience of Urban Public Transport Research Group,18,89,0,14,4,1,6,ID_peneliti_<30%
 Science and Engineering,Faculty of Engineering,swm-rg,Solid Waste Management Research Group,16,69,50,0,1,1,2,tanpa_publikasi
 Science and Engineering,Faculty of Engineering,smsrg,Structural Maintenance and Strengthening Research Group,0,0,0,39,6,4,18,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Science and Engineering,Faculty of Engineering,smprg,Sustainable Metallurgical Process Research Group,11,9,64,27,0,3,4,keahlian_<50%
-Science and Engineering,Faculty of Engineering,tnaq-rg,Transportation and Air Quality  Research Group,33,6,30,37,4,9,25,keahlian_<50%
 Science and Engineering,Faculty of Engineering,wte,Waste to Energy Research Group,28,93,0,8,1,0,4,ID_peneliti_<30%
+Agro Complex,Faculty of Forestry,biomass,Biomass Research Group,15,67,67,0,2,0,4,tanpa_publikasi
+Agro Complex,Faculty of Forestry,ddrg,Deforestation and Degradation Research Group,22,55,0,41,4,2,7,ID_peneliti_<30%
 Agro Complex,Faculty of Forestry,ecofor,Ecotourism and Forest Biodiversity Research Group,8,12,62,10,2,2,3,keahlian_<50%
 Agro Complex,Faculty of Forestry,secrg,Forest Hydrology and Watershed Managment Research Group,0,0,0,14,2,3,4,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Agro Complex,Faculty of Forestry,forestsociety,Forest and Society Research Group,32,94,62,18,0,0,0,tanpa_proyek
+Agro Complex,Faculty of Forestry,karstbios,Karst Bioprospecting and Society Research Group,5,100,20,16,2,2,13,ID_peneliti_<30%
+Agro Complex,Faculty of Forestry,nifodi,Non-timber Forest Product Diversification Research Group,13,92,0,13,6,0,3,ID_peneliti_<30%
 Agro Complex,Faculty of Forestry,termite,Termite Research Group,15,100,20,7,2,1,25,ID_peneliti_<30%
 Agro Complex,Faculty of Forestry,tredic,Tropical Ecology and Biodiversity Conservation Research Group,0,0,0,32,2,0,10,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Social Science,Faculty of Law,bl-rg,Business Law Research Group,0,0,0,10,1,0,1,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Social Science,Faculty of Law,rg2,Regulation and Governance Research Group,3,100,0,4,2,2,1,ID_peneliti_<30%
+Social Science,Faculty of Law,victory,Victim Rights Protection and Recovery Research Group,13,100,0,43,13,0,15,ID_peneliti_<30%
 Social Science,Faculty of Law,wasmalaw,Waste Management Law Research Group,12,100,25,16,11,3,4,ID_peneliti_<30%
-Agro Complex,Faculty of Marine & Fisheries,albiorg,Algal Biotechnology Research Group,21,10,52,16,1,2,5,keahlian_<50%
+Agro Complex,Faculty of Marine & Fisheries,ambioc,Aquatic Macrofaunal Biodiversity and Conservation,19,58,0,11,5,1,13,ID_peneliti_<30%
+Agro Complex,Faculty of Marine & Fisheries,fiterg,Fishing Technology Research Group,5,100,0,27,4,2,4,ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,mprg,Marine Plastic Research Group,14,100,86,0,2,0,3,tanpa_publikasi
 Agro Complex,Faculty of Marine & Fisheries,multitrophic,Multitrophic Research Group,0,0,0,18,4,2,22,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Agro Complex,Faculty of Marine & Fisheries,tila-techrg,Nile Tilapia Research Group,12,83,8,2,0,0,8,ID_peneliti_<30%
 Agro Complex,Faculty of Marine & Fisheries,sesreg,Seagrass Restoration & Ecosystem Services Research Group,7,71,0,40,6,2,7,ID_peneliti_<30%
-Agro Complex,Faculty of Marine & Fisheries,shrimpfarming,Shrimp Farming Research Group,10,0,70,3,3,4,3,keahlian_<50%
+Science and Engineering,Faculty of Mathematics & Natural Science,asds,Applied Statistics and Data Science  Research Group,21,81,29,19,3,2,26,ID_peneliti_<30%
 Science and Engineering,Faculty of Mathematics & Natural Science,biochar,Biochar For Environmental Sustainability,0,0,0,34,7,2,25,halaman_tim_404
 Science and Engineering,Faculty of Mathematics & Natural Science,bionanocomposite,Bionanocomposite Research Group,14,100,0,111,4,7,9,ID_peneliti_<30%
 Science and Engineering,Faculty of Mathematics & Natural Science,datascienceai,Data Science and Artificial Intelligence Research Group,0,0,0,32,3,0,15,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
@@ -183,40 +159,40 @@ Science and Engineering,Faculty of Mathematics & Natural Science,fprg,Fixed Poin
 Science and Engineering,Faculty of Mathematics & Natural Science,functionallygm,Functionally Graded Materials Research Group,0,0,0,32,3,3,10,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Science and Engineering,Faculty of Mathematics & Natural Science,glohamod,Global Hazard Modelling Research Group,15,0,87,14,1,0,9,keahlian_<50%
 Science and Engineering,Faculty of Mathematics & Natural Science,graphtheory,Graph Theory Research Group,0,0,0,24,2,2,12,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
-Science and Engineering,Faculty of Mathematics & Natural Science,marine-natural,Marine Natural Product Chemistry Research Group,19,11,63,6,3,3,1,keahlian_<50%
+Science and Engineering,Faculty of Mathematics & Natural Science,marine-natural,Marine Natural Product Chemistry Research Group,19,16,63,6,3,3,1,keahlian_<50%
 Science and Engineering,Faculty of Mathematics & Natural Science,dynapop-maths,Mathematical Models In Dynamical Population,0,0,0,36,3,0,7,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Science and Engineering,Faculty of Mathematics & Natural Science,mpr,Medical Physics Research Group,0,0,0,14,1,0,3,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Science and Engineering,Faculty of Mathematics & Natural Science,ngenergy,Nanogenerator Materials For Energy Harvesting Research Group,0,0,0,5,2,0,11,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Science and Engineering,Faculty of Mathematics & Natural Science,stochastic,Stochastic Modeling Research Group,3,100,0,82,4,0,24,ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,aphreg,Animal Production and Health Research Group,19,0,58,25,2,3,10,keahlian_<50%
 Medical and Health Science,Faculty of Medicine,bisa,Biofilm Infection and Superbug Research Group,0,0,0,23,1,3,4,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
-Medical and Health Science,Faculty of Medicine,biovax,Biovax TB Research Group,22,5,32,58,4,2,8,keahlian_<50%
-Medical and Health Science,Faculty of Medicine,iorg,Immuno-Oncology Research Group,13,15,31,10,3,1,4,keahlian_<50%
+Medical and Health Science,Faculty of Medicine,biovax,Biovax TB Research Group,22,9,32,58,4,2,8,keahlian_<50%
+Medical and Health Science,Faculty of Medicine,boneregeneration,Bone Regeneration Research Group,5,100,0,17,3,2,3,ID_peneliti_<30%
+Medical and Health Science,Faculty of Medicine,dhrg,Digestive Health Research Group,5,100,0,10,2,3,1,ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,medi-edu,Medical Education Research Group,11,100,0,16,2,0,8,ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,thecore,Microbiome Therapeutic Research Group,16,75,0,1,1,1,1,ID_peneliti_<30%
+Medical and Health Science,Faculty of Medicine,neocare,Neonatal Care Research Group,10,100,0,11,0,0,1,ID_peneliti_<30%
 Medical and Health Science,Faculty of Medicine,renalnutrition,Nephro and Nutrition Research Group,13,38,31,23,3,3,3,keahlian_<50%
 Medical and Health Science,Faculty of Medicine,stepmic,Spatial Epidemiology and Syndemic Research Group,18,44,44,7,0,1,5,keahlian_<50%
-Medical and Health Science,Faculty of Nursing,hncd-rg,Holistic Nursing For Chronic Diseases Research Group,23,17,87,16,11,11,13,keahlian_<50%
-Medical and Health Science,Faculty of Nursing,mhvp,Mental Health In Vulnerable Populations Research Group,12,8,83,12,5,0,11,keahlian_<50%
-Medical and Health Science,Faculty of Nursing,nnrg,Neonatal Nursing Research Group,18,11,72,40,15,16,15,keahlian_<50%
 Medical and Health Science,Faculty of Nursing,nmhealthcare,Nursing Management & Healthcare Quality Research Group,0,0,0,69,4,29,27,tim_tidak_terbaca_(tata_letak_lain_atau_kosong)
 Medical and Health Science,Faculty of Nursing,pmn-rg,Pain Management Nursing,19,16,89,11,0,0,36,keahlian_<50%
 Medical and Health Science,Faculty of Nursing,v-mat,Vulnerable Maternity Nursing Research Group,12,50,42,15,2,0,0,tanpa_proyek
-Medical and Health Science,Faculty of Pharmacy,dreams,Drug Efficacy and Medication Safety Research Group,21,0,43,28,2,2,18,keahlian_<50%
+Medical and Health Science,Faculty of Pharmacy,mnprg,Metabolomics and Natural Products Research Group,9,78,0,15,1,2,8,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,bcqlrg,Birth Cohort and Quality of Life Research Group,8,100,0,3,2,3,1,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,eiarg,Environmental Impact Assessment Research Group,9,56,0,19,4,2,4,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,etoxh,Environmental Toxicology and Health Reseach Group,20,85,0,7,0,0,7,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,ecohealth,Environmental contamination and Health Risk Research Group,4,100,0,4,2,2,3,ID_peneliti_<30%
-Medical and Health Science,Faculty of Public Health,hospbiz,Hospital Business Development Research Group,8,0,88,14,0,8,7,keahlian_<50%
 Medical and Health Science,Faculty of Public Health,isoshrg,Informal-Sector Occupational Safety and Health Research Group,10,60,0,7,2,1,8,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,ihmrg,Integrated Health Modelling Research Group,9,100,11,59,3,2,9,ID_peneliti_<30%
+Medical and Health Science,Faculty of Public Health,nutriepi,Nutritional Epidemiology Research Group,5,60,20,8,5,0,2,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,press-ncd,Prevention Strategies For Ncd Research Group,9,100,0,29,11,0,6,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,urbhealth,Urban Health and Healthy Cities Research Group,3,100,0,17,13,10,7,ID_peneliti_<30%
 Medical and Health Science,Faculty of Public Health,workfasma,Workplace Fatigue and Stress Management Research Group,8,100,0,4,4,0,3,ID_peneliti_<30%
+Social Science,Faculty of Social & Political Sciences,adaptivepublic-orga,Adaptive Public Organization Research Group,15,73,0,5,0,0,3,ID_peneliti_<30%
+Social Science,Faculty of Social & Political Sciences,depadis,Democracy and Participation In Diverse Society Research Group,10,100,0,8,1,0,10,ID_peneliti_<30%
 Social Science,Faculty of Social & Political Sciences,dims-rg,Digital Media and Society Research Group,11,64,45,13,4,4,0,tanpa_proyek
-Social Science,Faculty of Social & Political Sciences,drg,Disability Research Group,12,0,50,1,2,0,5,keahlian_<50%
-Social Science,Faculty of Social & Political Sciences,govmo-soc,Government Modernization and Social Change Research Group,10,0,70,11,3,1,9,keahlian_<50%
-Social Science,Faculty of Social & Political Sciences,marg,Maritime Anthropology Research Group,21,19,57,21,9,4,4,keahlian_<50%
+Social Science,Faculty of Social & Political Sciences,drg,Disability Research Group,12,8,50,1,2,0,5,keahlian_<50%
+Social Science,Faculty of Social & Political Sciences,mgsd,Maritime Governance and Sustainable Development Research Group,10,80,40,0,2,0,5,tanpa_publikasi
 Social Science,Faculty of Social & Political Sciences,mediacom,Media and Communication Research Group,8,62,12,4,3,1,2,ID_peneliti_<30%
 Social Science,Faculty of Social & Political Sciences,mhsrg,Migration and Human Security,13,100,31,30,0,0,0,tanpa_proyek
 Social Science,Faculty of Social & Political Sciences,cpcd,"Peace, Conflict, and Democracy Research Group",19,95,47,20,1,1,0,tanpa_proyek
@@ -225,42 +201,66 @@ Vocational,Faculty of Vocational,fortrebgen,Forest Tree Breeding and Genomics Re
 Multidisciplinary,School of Postgraduate,blu-eco,Blue Economics Research Group,16,0,31,47,7,0,13,keahlian_<50%
 Multidisciplinary,School of Postgraduate,fis-rg,Forensic & Investigative Sciences Research Group,9,100,0,76,19,5,6,ID_peneliti_<30%
 Multidisciplinary,School of Postgraduate,urbinfrastructur-r,Urban Infrastructure Resilience Research Group,10,100,10,35,3,2,1,ID_peneliti_<30%
-Multidisciplinary,School of Postgraduate,womenhealth-con,Women\'s Health Concern Research Group,19,0,42,139,0,9,16,keahlian_<50%
+Agro Complex,Faculty of Agriculture,amrg,Agricultural Mycology Research Group,28,100,93,80,6,13,20,
 Agro Complex,Faculty of Agriculture,bione-rg,Biopesticides and Natural Enemies Research Group,16,100,62,73,8,3,8,
+Agro Complex,Faculty of Agriculture,hortibb,Horticultural Breeding and Biotechnology Research Group,13,100,77,48,3,2,29,
+Agro Complex,Faculty of Agriculture,oilpalm,Oil Palm Research Group,16,100,88,3,3,2,6,
+Agro Complex,Faculty of Agriculture,csva,Precision Agriculture Research Group,19,53,53,20,0,0,30,
 Agro Complex,Faculty of Agriculture,rice-rg,Rice Research Group,26,100,65,13,4,0,15,
 Agro Complex,Faculty of Agriculture,socialcap,Social Capital Research Group,16,88,31,11,4,1,7,
 Agro Complex,Faculty of Agriculture,torcg,Tropical Orchids and Horticulture Research Group,16,100,75,27,3,0,11,
 Agro Complex,Faculty of Animal Husbandry,idlfrg,Institutional Development of Livestock Farmers Research Group,9,100,67,17,10,8,19,
 Agro Complex,Faculty of Animal Husbandry,livagri,Livestock Agribusiness Research Group,6,100,100,8,4,5,3,
+Agro Complex,Faculty of Animal Husbandry,odfrg,Organic Dairy Farming Research Group,20,100,60,17,3,3,16,
 Agro Complex,Faculty of Animal Husbandry,nutrifeed,Poultry Nutrition and Feed Research Group,25,100,56,51,3,5,19,
+Social Science,Faculty of Cultural Sciences,cul-tor,Cultural Tourism Research Group,10,80,60,94,1,2,27,
 Social Science,Faculty of Cultural Sciences,ethno,Ethno-Literature Research Group,8,50,50,4,5,5,7,
+Social Science,Faculty of Cultural Sciences,mcrg,Manuscript and Culture Research Group,34,100,74,18,14,3,14,
 Social Science,Faculty of Cultural Sciences,psyling,Psycholinguistics Research Group,12,100,42,25,6,10,3,
+Medical and Health Science,Faculty of Dentistry,adhentisrg,Adhesive Dentistry Research Group,9,56,56,15,2,7,7,
 Medical and Health Science,Faculty of Dentistry,ohcirg,One Health For Costal and Island Research Group,13,100,85,6,6,2,7,
+Social Science,Faculty of Economics & Business,apm,Accounting and Public Management Research Group,17,100,53,63,9,4,15,
+Social Science,Faculty of Economics & Business,finra,Financial Reporting and Accountability Research Group,22,91,86,14,3,11,15,
+Social Science,Faculty of Economics & Business,nms-rg,Non-market Strategy Research Group,8,62,38,3,1,1,1,
+Social Science,Faculty of Economics & Business,sca,Research Group on Sustainability and Critical Accounting,15,100,73,13,3,3,4,
 Science and Engineering,Faculty of Engineering,float-struc,Floating Structure Research Group,18,50,33,24,1,2,4,
 Science and Engineering,Faculty of Engineering,hvit-rg,High Voltage and Insulation Technology Research Group,6,100,100,4,0,0,1,
 Science and Engineering,Faculty of Engineering,mrcrg,Mechatronic and Robotic Control Research Group,6,67,50,6,0,4,5,
+Science and Engineering,Faculty of Engineering,nap,Noise and Air Pollution Research Group,12,100,75,11,1,2,6,
 Science and Engineering,Faculty of Engineering,powersystems,Power Systems Research Group,13,100,54,86,6,7,13,
+Science and Engineering,Faculty of Engineering,tnaq-rg,Transportation and Air Quality  Research Group,33,100,30,37,4,9,25,
 Agro Complex,Faculty of Forestry,wildev,Wildlife Ecology and Conservation Research Group,19,100,74,16,2,5,14,
 Social Science,Faculty of Law,lcpr-rg,Legal Protection of Children's Rights Research Group,8,100,62,20,1,0,9,
+Agro Complex,Faculty of Marine & Fisheries,albiorg,Algal Biotechnology Research Group,21,67,52,16,1,2,5,
 Agro Complex,Faculty of Marine & Fisheries,bite-fish,Biogeography and taxonomy Endemic Fishes Research Group,7,100,57,30,5,2,5,
 Agro Complex,Faculty of Marine & Fisheries,lsfa-trg,Lobster Sustainable Fisheries and Aquaculture Research Group,14,79,57,36,6,3,6,
 Agro Complex,Faculty of Marine & Fisheries,marsplan,Marine Spatial Planning Research Group,13,92,77,11,4,2,7,
+Agro Complex,Faculty of Marine & Fisheries,shrimpfarming,Shrimp Farming Research Group,10,100,70,3,3,4,3,
 Agro Complex,Faculty of Marine & Fisheries,tfed,Tuna Fisheries and Economic Development Research Group,14,100,57,37,5,3,13,
 Science and Engineering,Faculty of Mathematics & Natural Science,f-analysis,Functional Analysis Research Group,15,100,67,18,2,0,11,
 Science and Engineering,Faculty of Mathematics & Natural Science,msm-rg,Multifunctional Semiconductor Materials Research Group,9,100,100,6,4,0,10,
+Medical and Health Science,Faculty of Medicine,iorg,Immuno-Oncology Research Group,13,92,31,10,3,1,4,
 Medical and Health Science,Faculty of Medicine,addis,Infectious Animal Disease Dynamic Research Group,22,100,100,14,2,6,8,
 Medical and Health Science,Faculty of Medicine,malvecsis,Malaria and Vector Resistance Research Group,16,50,38,32,3,3,19,
 Medical and Health Science,Faculty of Medicine,most-rg,Metabolism and Oxidative Stress Research Group,13,100,92,31,2,3,14,
-Medical and Health Science,Faculty of Nursing,mwm-rg,Malignant and Wound Management Research Group,9,78,44,6,1,1,9,
+Medical and Health Science,Faculty of Nursing,hncd-rg,Holistic Nursing For Chronic Diseases Research Group,23,78,87,16,11,11,13,
+Medical and Health Science,Faculty of Nursing,mwm-rg,Malignant and Wound Management Research Group,9,89,44,6,1,1,9,
+Medical and Health Science,Faculty of Nursing,mhvp,Mental Health In Vulnerable Populations Research Group,12,83,83,12,5,0,11,
+Medical and Health Science,Faculty of Nursing,nnrg,Neonatal Nursing Research Group,18,89,72,40,15,16,15,
 Medical and Health Science,Faculty of Nursing,neuro-onc,Neuro-Oncology Nursing Researh Group,8,100,62,18,2,3,8,
 Medical and Health Science,Faculty of Nursing,pednrg,Pediatric Nursing Research Group,16,100,75,57,16,15,10,
+Medical and Health Science,Faculty of Pharmacy,dreams,Drug Efficacy and Medication Safety Research Group,21,76,43,28,2,2,18,
 Medical and Health Science,Faculty of Pharmacy,natural-drug,Natural Product Drug Discovery Research Group,14,100,57,19,1,3,5,
 Medical and Health Science,Faculty of Pharmacy,dtdds,Transdermal and Transmucosal Drug Delivery Research Group,19,84,42,50,0,0,9,
 Medical and Health Science,Faculty of Pharmacy,ufrg,Unhas Fly Research Group,3,100,33,110,6,0,28,
 Medical and Health Science,Faculty of Public Health,coastaldw,Coastal Domestic Water Research Group,15,100,40,13,5,1,11,
+Medical and Health Science,Faculty of Public Health,hospbiz,Hospital Business Development Research Group,8,100,88,14,0,8,7,
 Medical and Health Science,Faculty of Public Health,ocnrg,Obesity and Child Nutrition Research Group,13,100,54,8,4,4,9,
 Medical and Health Science,Faculty of Public Health,ph-entomology,Public Health Entomology Research Group,7,100,71,7,3,2,4,
 Medical and Health Science,Faculty of Public Health,se-ncd,Social Epidemiology of Non-Communicable-Disease Research Group,16,100,75,20,5,12,3,
 Social Science,Faculty of Social & Political Sciences,core,Coastal Community Development Research Group,8,100,50,7,8,5,3,
 Social Science,Faculty of Social & Political Sciences,cnrm,Conflict and Natural Resources Management Research Group,8,88,50,9,4,0,9,
 Social Science,Faculty of Social & Political Sciences,ctrg,Counter Terrorism Research Group,12,92,58,16,7,1,9,
+Social Science,Faculty of Social & Political Sciences,govmo-soc,Government Modernization and Social Change Research Group,10,90,70,11,3,1,9,
+Social Science,Faculty of Social & Political Sciences,marg,Maritime Anthropology Research Group,21,95,57,21,9,4,4,
+Multidisciplinary,School of Postgraduate,womenhealth-con,Women\'s Health Concern Research Group,19,100,42,139,0,9,16,
