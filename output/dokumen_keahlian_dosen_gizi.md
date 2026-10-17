@@ -19,7 +19,7 @@
 3. **Produksi sangat terkonsentrasi.** Koefisien Gini jumlah dokumen per dosen 0,60; tiga dosen dengan dokumen terbanyak menyumbang 58% dari seluruh kredit publikasi. Pada skenario terburuk, satu orang yang sama terlibat di 39% dokumen.
 4. **Bidang kuat dan tipis.** Bidang terbesar: gizi ibu hamil, ASI dan 1000 HPK; pangan lokal dan formulasi; stunting dan gizi balita. Bidang tipis: kebijakan dan sistem, mikrobiota dan biomarker, serta ketahanan pangan dan keberlanjutan. Terapi gizi medik rumah sakit hampir tidak muncul dalam keluaran.
 5. **Dampak dan jangkauan terbatas.** Median sitasi per dokumen 1; 35% dokumen belum bersitasi. Kolaborasi dengan afiliasi luar negeri 8% dokumen.
-6. **Thematic Research Group (TRG).** Lima TRG tercatat dalam daftar. Lingkup, keanggotaan, dan publikasi relevan masing-masing belum dapat diverifikasi karena halaman TRG tidak dapat diakses dari lingkungan analisis; bagian ini ditandai belum lengkap.
+6. **Thematic Research Group (TRG).** Lima TRG: tiga berbukti kuat menurut rubrik (MC-Nutrition, Food4ND, NutriMDP), satu sedang (OCN-RG), dan satu awal tanpa dokumen yang cocok dengan lingkup tertulisnya (FFCP). Tidak ada TRG yang mencakup kebijakan dan sistem, terapi gizi medik rumah sakit, atau ketahanan pangan dan keberlanjutan.
 
 **Rekomendasi inti**
 
@@ -52,7 +52,7 @@
 4. Klasifikasi bidang berbasis kamus kata kunci belum divalidasi manual untuk kamus versi ini. Pada kamus versi sebelumnya, pemeriksaan 30 dokumen acak menunjukkan sekitar 80% sesuai.
 5. Sitasi bergantung pada tanggal ekspor dan tidak dinormalisasi per bidang atau umur dokumen.
 6. Nama negara diparse dari teks afiliasi; sebagian afiliasi tanpa nama negara telah dikoreksi (Lampiran A).
-7. Informasi TRG tidak dapat diverifikasi (halaman tidak dapat diakses); bagian I.5 hanya memuat yang diberikan pengguna.
+7. Informasi TRG berasal dari halaman publik (diakses 17 Oktober 2026), memuat sebagian teks placeholder dan templat, dan tidak diverifikasi ke pengelolanya; relevansi publikasi per TRG memakai kamus kata kunci (Lampiran A.3) yang bersifat perkiraan.
 8. Gelar spesialis (mis. Sp. GK) dibaca dari foto profil yang diberikan pengguna, bukan dari sumber lain.
 
 ## 3. Gambaran publikasi departemen
@@ -131,27 +131,67 @@ Dokumen yang tidak masuk bidang manapun: 89 (21%). Contoh topik di luar kamus: k
 
 ## 5. Thematic Research Group (TRG)
 
-**Status bagian ini: belum lengkap.** Lima halaman TRG pada trg.unhas.ac.id tidak dapat diakses dari lingkungan analisis (akses ditolak atau layanan tidak tersedia). Karena itu nama lengkap, lingkup riset, keanggotaan, dan luaran masing-masing TRG tidak diverifikasi dan tidak ditebak. Yang dimuat hanya yang diberikan pengguna.
+Sumber: halaman publik trg.unhas.ac.id (beranda, tim, proyek, dan artikel) untuk lima TRG, diakses 17 Oktober 2026. Isi halaman diperlakukan sebagai klaim TRG sendiri dan tidak diverifikasi ke pengelolanya. Publikasi relevan dihitung dari data Scopus departemen dengan kamus kata kunci per TRG (Lampiran A.3).
 
-| TRG (tautan) | Dosen terkait (sesuai daftar pengguna; peran belum terverifikasi) | Lingkup | Anggota lain | Publikasi relevan | Kekuatan bukti |
-|---|---|---|---|---|---|
-| https://trg.unhas.ac.id/mc-nutrition/ | Veni Hadju | [perlu diisi] | [perlu diisi] | belum dapat dihitung | belum dinilai |
-| https://trg.unhas.ac.id/ffcp/ | Citrakesumasari | [perlu diisi] | [perlu diisi] | belum dapat dihitung | belum dinilai |
-| https://trg.unhas.ac.id/food4nd/ | Aminuddin Syam | [perlu diisi] | [perlu diisi] | belum dapat dihitung | belum dinilai |
-| https://trg.unhas.ac.id/nutritionmdp/ | Nurhaedar Jafar | [perlu diisi] | [perlu diisi] | belum dapat dihitung | belum dinilai |
-| https://trg.unhas.ac.id/ocnrg/ | Andi Imam Arundhana | [perlu diisi] | [perlu diisi] | belum dapat dihitung | belum dinilai |
+### 5.1 Lima TRG dan anggota
 
-**Rubrik kekuatan bukti (usulan, akan dipakai setelah lingkup TRG diketahui)**
+| TRG | Ketua | Anggota dosen Ilmu Gizi | Anggota lain (menurut halaman TRG) | Lingkup tertulis |
+|---|---|---|---|---|
+| [Mother and Child Nutrition Research Group (MC-Nutrition)](https://trg.unhas.ac.id/mc-nutrition/) | Veni Hadju | Abdul Salam, Hasan Basri | 4 anggota lain (departemen tidak tercantum), 2 kolaborator eksternal, 6 mahasiswa doktoral | Gizi ibu dan anak di wilayah pesisir dan kepulauan: suplemen lokal Moringa oleifera untuk remaja putri, prakonsepsi, ibu hamil dan menyusui, determinan sosial malnutrisi, dan pendampingan kader. |
+| [Functional Food and Cancer Prevention Research Group (FFCP)](https://trg.unhas.ac.id/ffcp/) | Citrakesumasari | Ulfah Najamuddin | 1 anggota lain (afiliasi tidak tercantum), 1 kolaborator eksternal, mahasiswa | Pangan fungsional dan pencegahan kanker; misi tertulis: terapi kanker berbasis kompleks BAMLET (alfa-laktalbumin dan asam oleat) dengan kurkumin pada sel kanker paru dan serviks. |
+| [Functional Food for Nutritional Deficiency Research Group (Food4ND)](https://trg.unhas.ac.id/food4nd/) | Aminuddin Syam | Andi Imam Arundhana, Ulfah Najamuddin | 2 kolaborator eksternal, 6 mahasiswa (S2 dan S3) | Pangan fungsional untuk defisiensi gizi dalam konteks beban malnutrisi ganda: kapsul biji labu kuning (ibu hamil KEK, pasien TB), mi daun labu dan rumput laut untuk anemia remaja putri, camilan biji labu untuk defisiensi zink. |
+| [Nutrition for Metabolic Disease Prevention Research Group (NutriMDP)](https://trg.unhas.ac.id/nutritionmdp/) | Nurhaedar Jafar | Irmayanti, Aminuddin Syam, Healthy Hidayanti, Anna Khuzaimah | 1 kolaborator eksternal, 1 peneliti dari institusi lain, 8 mahasiswa | Peran pangan dalam pencegahan penyakit metabolik (diabetes, obesitas, hipertensi, sindrom metabolik): sukun, biji labu, kayu manis, kunyit, kelor-jahe; intervensi mHealth aktivitas fisik. |
+| [Obesity and Child Nutrition Research Group (OCN-RG)](https://trg.unhas.ac.id/ocnrg/) | Andi Imam Arundhana | Rahayu Indriasari, Laksmi Trisasmita | 2 dosen dari departemen lain (administrasi publik; promosi kesehatan), 2 kolaborator eksternal dari luar negeri, 7 mahasiswa | Pencegahan obesitas anak (0–12 tahun) dengan platform terpadu: mikrobiom usus, epidemiologi gizi, intervensi berbasis sekolah dan keluarga, riset implementasi (kerangka I-GROW RIGHT). |
 
-| Tingkat | Kriteria (semuanya berlaku) |
-|---|---|
-| Kuat | ≥10 dokumen relevan dalam lima tahun terakhir; ≥3 anggota dengan ≥2 dokumen relevan; ≥1 dokumen relevan dengan penulis pertama anggota TRG sejak 2023; ≥1 kolaborator di luar departemen |
-| Sedang | 5–9 dokumen relevan; ≥2 anggota dengan ≥2 dokumen relevan; ≥1 dokumen dengan penulis pertama anggota sejak 2023 |
-| Awal | <5 dokumen relevan atau hanya satu anggota yang aktif pada lingkup itu |
+### 5.2 Publikasi relevan dan kekuatan bukti
 
-**Cara TRG dipertimbangkan setelah lingkupnya diketahui.** (1) Setiap TRG dipetakan ke bidang di I.4 dan ke empat divisi yang telah disepakati; (2) publikasi relevan dihitung dari kamus kata kunci yang disepakati bersama lingkup TRG; (3) keanggotaan TRG dibandingkan dengan sebaran dosen aktif per bidang untuk melihat TRG yang bergantung pada satu atau dua orang; (4) celah di I.6 dikoreksi bila TRG ternyata sudah menutup bidang tipis.
+Dokumen relevan = dokumen Scopus 2022–2026 (lima tahun terakhir) yang memuat istilah lingkup TRG pada judul atau kata kunci penulis dan melibatkan sedikitnya satu anggota dosen Ilmu Gizi TRG itu.
 
-**Yang diperlukan dari pengguna.** Salin teks tiap halaman TRG (nama lengkap, lingkup, daftar anggota, luaran) atau unggah tangkapan layarnya.
+| TRG | Dokumen relevan 2022–2026 | Anggota Ilmu Gizi (termasuk ketua) dengan ≥2 dokumen relevan | Dokumen relevan berpenulis pertama anggota TRG sejak 2023 | Kolaborator eksternal tercantum | Kekuatan bukti |
+|---|---:|---|---:|---|---|
+| MC-Nutrition | 61 | 3 dari 3 | 3 | Ya | **Kuat** |
+| FFCP | 0 | 0 dari 2 | 0 | Ya | **Awal** |
+| Food4ND | 24 | 3 dari 3 | 3 | Ya | **Kuat** |
+| NutriMDP | 23 | 3 dari 5 | 2 | Ya | **Kuat** |
+| OCN-RG | 6 | 2 dari 3 | 2 | Ya | **Sedang** |
+
+**Rubrik kekuatan bukti (usulan).** *Kuat*: ≥10 dokumen relevan 2022–2026; ≥3 anggota Ilmu Gizi dengan ≥2 dokumen relevan; ≥1 dokumen relevan dengan penulis pertama anggota sejak 2023; ≥1 kolaborator eksternal tercantum. *Sedang*: ≥5 dokumen relevan; ≥2 anggota dengan ≥2 dokumen; ≥1 penulis pertama anggota sejak 2023. *Awal*: selainnya.
+
+### 5.3 Catatan atas bukti dan isi halaman
+
+- **MC-Nutrition**: bukti kuat dan paling luas; seluruh tiga anggota Ilmu Gizi aktif. Anggota lain pada halaman tidak terlihat di data ini karena tidak tercakup dalam daftar ID dosen yang dianalisis.
+- **FFCP**: tidak ada dokumen Scopus (2017–2026) dari anggota Ilmu Gizi yang sesuai lingkup tertulisnya (kompleks BAMLET, kurkumin, sel kanker paru dan serviks). Artikel dan proyek yang tercantum di halaman TRG (mis. stunting, inovasi edukasi berbasis budaya, minyak zaitun, biji labu dan asam urat) berbeda dari lingkup itu. Sebagian teks halaman masih placeholder ("Lorem ipsum", "Tambahkan deskripsi"). Ini dapat berarti TRG baru, atau lingkup tertulis belum menggambarkan kegiatannya.
+- **Food4ND**: bukti kuat pada pangan fungsional untuk defisiensi (kapsul biji labu, mi daun labu dan rumput laut). Misi dan tujuan tertulis pada halaman "About" membahas pengelolaan perikanan kepiting berkelanjutan, yang tampak sisa templat dan tidak sesuai lingkup gizi; teks itu tidak dipakai dalam analisis.
+- **NutriMDP**: bukti kuat pada penyakit metabolik; kedalaman keanggotaan tidak merata (lihat kolom ≥2 dokumen). Kamus relevansi memuat istilah umum (diabetes, obesitas, hipertensi) sehingga sebagian dokumen juga relevan dengan TRG lain.
+- **OCN-RG**: bukti sedang. Pilar mikrobiom usus baru muncul pada dokumen 2026 dan jumlahnya sedikit; kolaborator eksternal (kesehatan masyarakat gizi dan mikrobiologi) sudah tercantum.
+
+### 5.4 Keterkaitan TRG, bidang, dan divisi
+
+Pemetaan usulan; keputusan penempatan ada pada departemen.
+
+| TRG | Bidang terkait (I.4) | Divisi yang paling dekat |
+|---|---|---|
+| MC-Nutrition | Gizi ibu hamil, ASI dan 1000 HPK; stunting; anemia dan remaja putri; pangan lokal | Gizi Masyarakat dan Daur Kehidupan |
+| FFCP | Pangan lokal dan fungsional (lingkup kanker belum terbukti) | Pangan dan Pangan Fungsional; Gizi Klinik |
+| Food4ND | Pangan lokal, formulasi dan fungsional; anemia; gizi ibu hamil | Pangan dan Pangan Fungsional; Gizi Masyarakat |
+| NutriMDP | Obesitas, PTM dan gizi klinik; pangan fungsional | Gizi Klinik dan Penyakit Metabolik |
+| OCN-RG | Obesitas anak; lingkungan pangan dan sekolah; mikrobiota | Gizi Masyarakat; Sekolah, Perilaku dan Kebijakan; lini mikrobiota |
+
+**Bidang yang tidak dicakup TRG mana pun:** kebijakan, lintas sektor dan sistem; terapi gizi medik berbasis rumah sakit; ketahanan pangan dan keberlanjutan. Mikrobiota hanya dicakup sebagian (satu TRG, bukti awal).
+
+### 5.5 Keanggotaan dan kepemimpinan
+
+- Lima TRG dipimpin lima dosen Ilmu Gizi yang berbeda.
+- 13 dari 20 dosen Ilmu Gizi tercantum di setidaknya satu TRG; 7 tidak tercantum di kelima TRG.
+- Tiga dosen tercantum di dua TRG; TRG yang beririsan keanggotaannya (FFCP dengan Food4ND; Food4ND dengan NutriMDP dan OCN-RG) berisiko berbagi kapasitas yang sama.
+- Kedalaman keanggotaan tidak merata pada sebagian TRG: jumlah anggota Ilmu Gizi dengan dokumen relevan lebih kecil daripada jumlah anggota yang tercantum (5.2).
+
+### 5.6 Cara TRG dipertimbangkan dalam roadmap
+
+1. Pemetaan TRG ke bidang dan divisi (5.4) dipakai sebagai masukan, bukan pengganti klaster divisi yang telah disepakati.
+2. TRG dengan bukti kuat menjadi jangkar program payung divisi terkait; TRG dengan bukti awal diberi indikator baseline sebelum dijadikan dasar target.
+3. Bidang yang tidak dicakup TRG (5.4) menjadi kandidat TRG atau lini baru.
+4. Anggota TRG yang belum menunjukkan dokumen relevan diberi tahap konsolidasi (satu studi dengan penulis pertama sendiri); rincian ada di profil individu (Bagian II).
 
 ## 6. Celah, risiko ketergantungan pada satu orang, dan rekomendasi
 
@@ -162,6 +202,7 @@ Dokumen yang tidak masuk bidang manapun: 89 (21%). Contoh topik di luar kamus: k
 - **Ketahanan pangan dan keberlanjutan** praktis belum ada rekam jejak (tiga dokumen yang sesuai).
 - **Mikrobiota dan biomarker** baru dimulai; bukti masih awal dan kamusnya sempit.
 - **Kepemimpinan**: porsi penulis pertama dari departemen rendah; sejumlah dosen berkembang hanya tampil sebagai koautor.
+- **Cakupan TRG**: kebijakan dan sistem, terapi gizi medik rumah sakit, serta ketahanan pangan dan keberlanjutan tidak dicakup TRG mana pun.
 - **Kualitas sumber** tidak dapat dinilai karena kuartil belum diverifikasi.
 
 ### 6.2 Risiko ketergantungan pada satu orang
@@ -189,7 +230,7 @@ Pola ini berarti sekitar dua per lima dokumen departemen melibatkan satu simpul 
 | Kembangkan kebijakan, mikrobiota, serta ketahanan pangan dan keberlanjutan sebagai lini | Bidang tipis (<50 dokumen) | Baseline dan kriteria naik menjadi divisi, mis. dokumen dan dosen terlibat dalam dua tahun |
 | Verifikasi kuartil sumber dan lengkapi ID Scopus | Kuartil tidak ada; dua dosen tanpa ID | Baseline kuartil 2026 |
 | Turunkan ketergantungan pada beberapa simpul | Gini dan skenario terburuk di I.6.2 | Pemimpin muda di tiap program payung |
-| Lengkapi bagian TRG | Halaman TRG tidak dapat diakses | Teks halaman TRG |
+| Selaraskan klaim TRG dengan bukti dan rapikan halaman TRG; tetapkan TRG atau lini untuk bidang yang tidak dicakup | FFCP tanpa dokumen sesuai lingkup; halaman Food4ND bermisi templat; tiga bidang tanpa TRG | Daftar TRG yang diperbarui; kriteria TRG aktif |
 
 ## Lampiran A. Audit data dan kamus keyword
 
@@ -235,6 +276,22 @@ Pencocokan tidak peka huruf besar-kecil pada judul dan kata kunci penulis; satu 
 
 **Catatan kamus.** Istilah luas (mis. *program*, *birth*, *school*, *application*) dapat menimbulkan positif palsu; istilah sempit dapat melewatkan dokumen. Validasi manual atas sampel acak per bidang direkomendasikan sebelum angka dipakai untuk keputusan formal.
 
+### A.3 Kamus relevansi per TRG
+
+Dipakai hanya untuk menghitung dokumen relevan pada I.5.2; pencocokan pada judul dan kata kunci penulis.
+
+| TRG | Istilah |
+|---|---|
+| MC-Nutrition | maternal; pregnan; lactat; breastfe; preconcept; moringa; stunt; wasting; under-five; toddler; adolescent girl; anemi; anaemi; chronic energy; infant; child growth; cadre; posyandu; royal jelly |
+| FFCP | cancer; tumor; tumour; carcinoma; bamlet; curcumin; apoptosis; cytotox; anticancer; neoplas |
+| Food4ND | functional (food; drink); fortif; pumpkin; moringa; micronutrient; zinc; iron; anemi; anaemi; noodle; snack; supplement; capsule; chronic energy; tuberculosis; nutritional deficiency; tempeh; cookie; flour; biscuit |
+| NutriMDP | metabolic syndrome; diabet; prediabet; hypertens; obes; blood pressure; lipid; cholesterol; glucose; breadfruit; cinnamon; turmeric; artocarpus; herbal; mhealth; mobile health; ultra-processed; dyslipid; triglycerid |
+| OCN-RG | obes; overweight; microbio; gut; school feeding; school-based; sugary; sugar-sweetened; screen time; food environment; diet quality; childhood; schoolchildren; school children; school-age |
+
+### A.4 Catatan akses halaman TRG
+
+Halaman TRG pada awalnya tidak terjangkau dari lingkungan analisis. Setelah domain diizinkan, koneksi berhasil tetapi server TRG hanya mengirim sertifikat daun tanpa sertifikat perantara, sehingga verifikasi sertifikat gagal. Sertifikat perantara resmi (GlobalSign RSA OV SSL CA 2018) diambil dari alamat penerbit yang tercantum dalam sertifikat, dirantai ke akar GlobalSign Root CA R3 yang dipercaya sistem, dan dipakai hanya untuk permintaan ke domain ini. Verifikasi TLS tidak dinonaktifkan. Pengelola situs disarankan memperbaiki rantai sertifikat server agar pengunjung tidak mengalami peringatan serupa.
+
 <div style="page-break-before: always"></div>
 
 # BAGIAN II. PROFIL INDIVIDU DOSEN
@@ -278,7 +335,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57208671878
 - **Klaster divisi:** Gizi Masyarakat (utama); Gizi Klinik (sekunder); Pangan (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** MC-Nutrition (anggota)
 - **Publikasi Scopus 2017–2026:** 40 dokumen; 26 pada 2023–2026; 5 sebagai penulis pertama; jenis: Article 33, Review 4, Conference paper 2, Editorial 1
 - **Bidang utama (dokumen):** Gizi ibu hamil, ASI & 1000 HPK (16); Pangan lokal, formulasi & pangan fungsional (13); Stunting, wasting & gizi balita (8)
 - **Kata kunci penulis teratas:** stunting, hypertension, pregnant women, maternal nutrition, pregnancy, elderly
@@ -291,7 +348,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57189846867
 - **Klaster divisi:** Gizi Masyarakat (utama); Pangan (utama)
-- **TRG:** https://trg.unhas.ac.id/food4nd/ (menurut daftar pengguna; peran belum terverifikasi)
+- **TRG:** Food4ND (ketua); NutriMDP (anggota)
 - **Publikasi Scopus 2017–2026:** 89 dokumen; 41 pada 2023–2026; 7 sebagai penulis pertama; jenis: Article 80, Review 7, Editorial 1, Conference paper 1
 - **Bidang utama (dokumen):** Pangan lokal, formulasi & pangan fungsional (23); Obesitas, PTM & gizi klinik (18); Stunting, wasting & gizi balita (15)
 - **Kata kunci penulis teratas:** stunting, knowledge, nutritional status, pregnant women, hemoglobin, quality
@@ -304,7 +361,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57189491378
 - **Klaster divisi:** Gizi Masyarakat (berkembang)
-- **TRG:** https://trg.unhas.ac.id/ocnrg/ (menurut daftar pengguna; peran belum terverifikasi)
+- **TRG:** Food4ND (anggota); OCN-RG (ketua)
 - **Publikasi Scopus 2017–2026:** 41 dokumen; 7 pada 2023–2026; 7 sebagai penulis pertama; jenis: Article 40, Review 1
 - **Bidang utama (dokumen):** Gizi ibu hamil, ASI & 1000 HPK (15); Anemia & gizi remaja putri (11); Pangan lokal, formulasi & pangan fungsional (9)
 - **Kata kunci penulis teratas:** pregnant women, indonesia, stunting, obesity, anaemia, moringa oleifera
@@ -317,7 +374,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** belum ada
 - **Klaster divisi:** belum ditetapkan (data tidak tersedia)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** tidak dapat dihitung
 - **Bidang utama:** tidak dapat ditentukan
 - **Kekuatan:** belum dapat dinilai dari data
@@ -329,7 +386,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 59318713700
 - **Klaster divisi:** Gizi Klinik (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** NutriMDP (anggota)
 - **Publikasi Scopus 2017–2026:** 20 dokumen; 18 pada 2023–2026; 0 sebagai penulis pertama; jenis: Article 19, Book chapter 1
 - **Bidang utama (dokumen):** Gizi ibu hamil, ASI & 1000 HPK (8); Anemia & gizi remaja putri (4); Pangan lokal, formulasi & pangan fungsional (4)
 - **Kata kunci penulis teratas:** anemia, micronutrients, lipid metabolism, denture therapy, tooth loss, adolescent
@@ -342,7 +399,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57189493487
 - **Klaster divisi:** Gizi Klinik (utama)
-- **TRG:** https://trg.unhas.ac.id/ffcp/ (menurut daftar pengguna; peran belum terverifikasi)
+- **TRG:** FFCP (ketua)
 - **Publikasi Scopus 2017–2026:** 39 dokumen; 20 pada 2023–2026; 8 sebagai penulis pertama; jenis: Article 36, Conference paper 2, Review 1
 - **Bidang utama (dokumen):** Gizi ibu hamil, ASI & 1000 HPK (14); Anemia & gizi remaja putri (11); Stunting, wasting & gizi balita (8)
 - **Kata kunci penulis teratas:** knowledge, nutritional status, anemia, lipid profile, breastfeeding, adolescent girls
@@ -355,7 +412,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57194577553
 - **Klaster divisi:** Gizi Klinik (utama)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** 11 dokumen; 1 pada 2023–2026; 1 sebagai penulis pertama; jenis: Article 10, Review 1
 - **Bidang utama (dokumen):** Obesitas, PTM & gizi klinik (4); Lingkungan pangan, sekolah & edukasi/digital (4); Stunting, wasting & gizi balita (3)
 - **Kata kunci penulis teratas:** tuberculosis, malnutrition, adolescent, gender, nutrition, school
@@ -368,7 +425,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57217188041
 - **Klaster divisi:** Gizi Masyarakat (berkembang); Pangan (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** MC-Nutrition (anggota)
 - **Publikasi Scopus 2017–2026:** 9 dokumen; 5 pada 2023–2026; 5 sebagai penulis pertama; jenis: Article 9
 - **Bidang utama (dokumen):** Stunting, wasting & gizi balita (6); Gizi ibu hamil, ASI & 1000 HPK (6); Pangan lokal, formulasi & pangan fungsional (5)
 - **Kata kunci penulis teratas:** stunting, pregnant women, stunted, moringa leaves, preschool child development, moringa extract
@@ -381,7 +438,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57211550964
 - **Klaster divisi:** Pangan (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** NutriMDP (anggota)
 - **Publikasi Scopus 2017–2026:** 11 dokumen; 4 pada 2023–2026; 0 sebagai penulis pertama; jenis: Article 11
 - **Bidang utama (dokumen):** Anemia & gizi remaja putri (3); Gizi ibu hamil, ASI & 1000 HPK (3); Pangan lokal, formulasi & pangan fungsional (3)
 - **Kata kunci penulis teratas:** anemia, nutrition, adolescent girl, hemoglobin level, kognitif, physical fitness
@@ -394,7 +451,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57224528212
 - **Klaster divisi:** Sekolah dan Kebijakan (utama)
-- **TRG:** tidak ada informasi
+- **TRG:** NutriMDP (anggota)
 - **Publikasi Scopus 2017–2026:** 2 dokumen; 2 pada 2023–2026; 0 sebagai penulis pertama; jenis: Article 1, Conference paper 1
 - **Bidang utama (dokumen):** Anemia & gizi remaja putri (1); Lingkungan pangan, sekolah & edukasi/digital (1)
 - **Kata kunci penulis teratas:** barrier, enabler, ifa supplementation intake, social cognitive theory, design science research methodology, digitalization
@@ -407,7 +464,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57217310769
 - **Klaster divisi:** Sekolah dan Kebijakan (utama); Pangan (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** OCN-RG (anggota)
 - **Publikasi Scopus 2017–2026:** 4 dokumen; 3 pada 2023–2026; 2 sebagai penulis pertama; jenis: Article 4
 - **Bidang utama (dokumen):** Stunting, wasting & gizi balita (2); Anemia & gizi remaja putri (1); Gizi ibu hamil, ASI & 1000 HPK (1)
 - **Kata kunci penulis teratas:** stunting, chronic energy deficiency, fortified cookies, foxtail millet, mackerel flour, maternal nutrition
@@ -420,7 +477,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57217175142
 - **Klaster divisi:** Gizi Masyarakat (berkembang); Sekolah dan Kebijakan (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** 6 dokumen; 2 pada 2023–2026; 2 sebagai penulis pertama; jenis: Article 5, Review 1
 - **Bidang utama (dokumen):** Anemia & gizi remaja putri (3); Stunting, wasting & gizi balita (2); Gizi ibu hamil, ASI & 1000 HPK (2)
 - **Kata kunci penulis teratas:** adolescents, adolescent, body image, low-mid income, weight-control, anemia
@@ -433,7 +490,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57199699117
 - **Klaster divisi:** Gizi Klinik (utama)
-- **TRG:** https://trg.unhas.ac.id/nutritionmdp/ (menurut daftar pengguna; peran belum terverifikasi)
+- **TRG:** NutriMDP (ketua)
 - **Publikasi Scopus 2017–2026:** 95 dokumen; 46 pada 2023–2026; 8 sebagai penulis pertama; jenis: Article 81, Review 7, Conference paper 6, Editorial 1
 - **Bidang utama (dokumen):** Obesitas, PTM & gizi klinik (33); Gizi ibu hamil, ASI & 1000 HPK (20); Lingkungan pangan, sekolah & edukasi/digital (19)
 - **Kata kunci penulis teratas:** metabolic syndrome, obesity, knowledge, pregnant women, diabetes mellitus, prediabetes
@@ -446,7 +503,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 59655524200
 - **Klaster divisi:** Sekolah dan Kebijakan (utama); Gizi Masyarakat (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** 3 dokumen; 3 pada 2023–2026; 1 sebagai penulis pertama; jenis: Article 3
 - **Bidang utama (dokumen):** Anemia & gizi remaja putri (2); Lingkungan pangan, sekolah & edukasi/digital (1)
 - **Kata kunci penulis teratas:** adolescent, anemia, diet, female, residence characteristics, barrier
@@ -459,7 +516,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57203151676
 - **Klaster divisi:** Gizi Masyarakat (utama); Sekolah dan Kebijakan (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** OCN-RG (anggota)
 - **Publikasi Scopus 2017–2026:** 49 dokumen; 24 pada 2023–2026; 5 sebagai penulis pertama; jenis: Article 45, Review 3, Book chapter 1
 - **Bidang utama (dokumen):** Anemia & gizi remaja putri (18); Gizi ibu hamil, ASI & 1000 HPK (16); Stunting, wasting & gizi balita (9)
 - **Kata kunci penulis teratas:** anemia, adolescents, knowledge, adolescent girls, chronic energy deficiency, nutritional status
@@ -472,7 +529,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57217187345
 - **Klaster divisi:** Gizi Masyarakat (berkembang)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** 5 dokumen; 2 pada 2023–2026; 3 sebagai penulis pertama; jenis: Article 5
 - **Bidang utama (dokumen):** Gizi ibu hamil, ASI & 1000 HPK (3); Anemia & gizi remaja putri (2); Stunting, wasting & gizi balita (2)
 - **Kata kunci penulis teratas:** multiple micronutrient supplementation, pregnant women, adolescents, inadequate intake, small island, wasting
@@ -485,7 +542,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** belum ada
 - **Klaster divisi:** belum ditetapkan (data tidak tersedia)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** tidak dapat dihitung
 - **Bidang utama:** tidak dapat ditentukan
 - **Kekuatan:** belum dapat dinilai dari data
@@ -497,7 +554,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57444198400
 - **Klaster divisi:** Sekolah dan Kebijakan (utama); Gizi Klinik (sekunder)
-- **TRG:** tidak ada informasi
+- **TRG:** tidak tercantum di kelima TRG
 - **Publikasi Scopus 2017–2026:** 2 dokumen; 1 pada 2023–2026; 0 sebagai penulis pertama; jenis: Article 2
 - **Bidang utama (dokumen):** Lingkungan pangan, sekolah & edukasi/digital (2); Pangan lokal, formulasi & pangan fungsional (1); Obesitas, PTM & gizi klinik (1)
 - **Kata kunci penulis teratas:** adolescents, health promotion school, healthy eating, school food environment, urban, hypercholesterolemia
@@ -510,7 +567,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 57202689248
 - **Klaster divisi:** Pangan (utama)
-- **TRG:** tidak ada informasi
+- **TRG:** FFCP (anggota); Food4ND (anggota)
 - **Publikasi Scopus 2017–2026:** 11 dokumen; 7 pada 2023–2026; 3 sebagai penulis pertama; jenis: Article 11
 - **Bidang utama (dokumen):** Pangan lokal, formulasi & pangan fungsional (8); Obesitas, PTM & gizi klinik (4); Mikrobiota & biomarker (3)
 - **Kata kunci penulis teratas:** soluble protein, adolescents, behavior, breakfast, education, indonesia
@@ -523,7 +580,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 
 - **ID Scopus:** 8684558700
 - **Klaster divisi:** Gizi Masyarakat (utama)
-- **TRG:** https://trg.unhas.ac.id/mc-nutrition/ (menurut daftar pengguna; peran belum terverifikasi)
+- **TRG:** MC-Nutrition (ketua)
 - **Publikasi Scopus 2017–2026:** 162 dokumen; 69 pada 2023–2026; 4 sebagai penulis pertama; jenis: Article 139, Review 17, Conference paper 6
 - **Bidang utama (dokumen):** Gizi ibu hamil, ASI & 1000 HPK (68); Pangan lokal, formulasi & pangan fungsional (46); Anemia & gizi remaja putri (41)
 - **Kata kunci penulis teratas:** moringa oleifera, stunting, pregnant women, anemia, nutritional status, malnutrition
