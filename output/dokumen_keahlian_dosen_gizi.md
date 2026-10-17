@@ -367,8 +367,8 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 - **Kata kunci penulis teratas:** pregnant women, indonesia, stunting, obesity, anaemia, moringa oleifera
 - **Kekuatan:** Penulis pertama 7 dari 41 dokumen. 14 dokumen bersama Veni Hadju, tetapi garis ibu hamil (7), stunting, anemia, obesitas sudah terbentuk. Studi kohort populasi tentang faktor stunting pada bayi 6 bulan (2023, 17 sitasi) dan studi lipid, serat larut, puasa intermiten (2026).
 - **Celah:** Produksi turun dari 14 dokumen (2020) menjadi 0–3 per tahun pada 2021–2026; sebagian dokumen 2020 terbit di sumber yang muncul sebagai ledakan (Enfermeria Clinica, 6 dokumen). Garis riset belum terfokus: suplementasi kehamilan, obesitas anak, lipid, air minum.
-- **Arah roadmap:** 2026–2027: Pilih satu poros penghubung. Data Scopus belum memuat riset mikrobiota ibu–bayi; jika itu agenda doktoral atau utama Anda, jadikan itu poros dan sebutkan terbuka di roadmap. 2028–2029: Perluas dari kohort ke analisis mekanisme (mikrobiota dyad ibu–bayi dan pertumbuhan).
-- **Catatan data:** Profil ini disusun dari data Scopus saja; sesuaikan dengan agenda riset yang sebenarnya.
+- **Arah roadmap:** 2026–2027: Pilih satu poros penghubung. Data Scopus belum memuat riset mikrobiota ibu–bayi; jika itu agenda doktoral atau agenda utama dosen yang bersangkutan, jadikan itu poros dan nyatakan secara terbuka di roadmap. 2028–2029: Perluas dari kohort ke analisis mekanisme (mikrobiota dyad ibu–bayi dan pertumbuhan).
+- **Catatan data:** Profil ini disusun dari data Scopus saja; perlu disesuaikan dengan agenda riset yang sebenarnya.
 
 ### Andi Tenri Ayu Rahman, S.Gz., M.Sc., Dietisien
 
@@ -444,7 +444,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 - **Kata kunci penulis teratas:** anemia, nutrition, adolescent girl, hemoglobin level, kognitif, physical fitness
 - **Kekuatan:** Garis anemia remaja putri (3) dengan luaran fungsional yang jarang: kebugaran dan skor kognitif (2024). Formulasi kue pangan lokal dengan profil gizi dan uji sensori (2025).
 - **Celah:** Penulis pertama 0 dari 11; 5 dokumen bersama Veni Hadju. Hanya 4 dokumen pada 2023–2026.
-- **Arah roadmap:** 2026–2027: Jadikan 'anemia remaja dan fungsi kognitif/kebugaran' sebagai garis khas; satu artikel per tahun dengan Anda sebagai penulis pertama. 2028–2029: Uji intervensi sekolah dengan luaran Hb, kebugaran dan kognisi; kerja sama dengan Rahayu Indriasari.
+- **Arah roadmap:** 2026–2027: Jadikan 'anemia remaja dan fungsi kognitif/kebugaran' sebagai garis khas; satu artikel per tahun dengan dosen yang bersangkutan sebagai penulis pertama. 2028–2029: Uji intervensi sekolah dengan luaran Hb, kebugaran dan kognisi; kerja sama dengan Rahayu Indriasari.
 - **Catatan data:** Data tipis (11 dokumen).
 
 ### Irmayanti, S.Gz., M.PH.
@@ -560,7 +560,7 @@ Format seragam, urutan abjad (bukan berdasarkan produktivitas).
 - **Kata kunci penulis teratas:** adolescents, health promotion school, healthy eating, school food environment, urban, hypercholesterolemia
 - **Kekuatan:** Dua dokumen yang berbeda: minyak dedak padi pada hiperkolesterolemia (2021) dan lingkungan pangan sekolah perkotaan (2025).
 - **Celah:** Hanya 2 dokumen; tidak ada penulis pertama.
-- **Arah roadmap:** 2026–2027: Pilih lingkungan pangan sekolah perkotaan sebagai garis utama dan mulai satu studi dengan Anda sebagai penulis pertama. 2028–2029: Studi intervensi lingkungan pangan sekolah (kantin, kebijakan) bersama Laksmi Trisasmita dan Nurzakiah.
+- **Arah roadmap:** 2026–2027: Pilih lingkungan pangan sekolah perkotaan sebagai garis utama dan mulai satu studi dengan dosen yang bersangkutan sebagai penulis pertama. 2028–2029: Studi intervensi lingkungan pangan sekolah (kantin, kebijakan) bersama Laksmi Trisasmita dan Nurzakiah.
 - **Catatan data:** Data sangat tipis (2 dokumen); profil belum dapat diandalkan.
 
 ### Ulfah Najamuddin, S.Si., M.Kes.
