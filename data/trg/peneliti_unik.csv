@@ -3,7 +3,7 @@ P00001,Prof. Dr. Sc. Agr. Ir. Baharuddin,sc agr ir baharuddin,3,agribac;amrg;mul
 P00002,"Prof. Dr. Tutik Kuswinanti, M.Sc.",tutik kuswinanti,4,amrg;agribac;bione-rg;corn-rg,Agro Complex,Leader;Lecturer,Mycology | Phytopathology | Biological Control | Biotechnology,55792741300,0009-0005-1202-3853,6015408,https://scholar.google.com/citations?hl=en&user=VSYoEykAAAAJ,id,Leader,Agricultural Mycology,amrg
 P00003,"Prof. Dr. Ir. Muh. Jayadi, M.P.",muhammad jayadi,5,agribac;futropicrops;geosus;rice-rg;sop-land,Agro Complex,Lecturer;Researcher,Soil Fertility | soil scienceSoil Fertility | Soil fertility | Soil Science,57126469300,,6013090,https://scholar.google.co.id/citations?user=r4mVOv4AAAAJ&hl=en,id,Lecturer,,
 P00004,"Prof. Dr. Ir. Fachirah Ulfa, M.P.",fachirah ulfa,2,agribac;torcg,Agro Complex,Lecturer,Horticulture,,0000-0002-1736-9563,,https://scholar.google.com/citations?hl=en&user=wa9YzCAAAAAJ,nama,Lecturer,,
-P00005,"Muhammad Junaid, S.P., M.P., Ph.D.",muhammad junaid,5,agribac;amrg;cocoa-rg;imppd;p-rg,Agro Complex,Lecturer,Phytopathology | plant-microbe interactions | IoT for plant protection | Plant patology | Plant-microbe Interaction IoT for Plant Protection | Agricultural Sciences | Plant Pathology | Plant Pest Science | Microbiology | Biological Control of Plant Diseases | Agricultural Mycology,54795337200,0000-0002-7116-5887,6038586,https://scholar.google.com/citations?hl=en&user=21YHQhEAAAAJ,id,Lecturer,,
+P00005,"Muhammad Junaid, S.P., M.P., Ph.D.",muhammad junaid,5,p-rg;agribac;amrg;cocoa-rg;imppd,Agro Complex,Leader;Lecturer,Phytopathology | plant-microbe interactions | IoT for plant protection | Plant patology | Plant-microbe Interaction IoT for Plant Protection | Agricultural Sciences | Plant Pathology | Plant Pest Science | Microbiology | Biological Control of Plant Diseases | Agricultural Mycology,54795337200,0000-0002-7116-5887,6038586,https://scholar.google.com/citations?hl=en&user=21YHQhEAAAAJ,id,Leader,Phytophthora,p-rg
 P00006,"Asman, S.P., M.P., Ph.D.",asman,1,agribac,Agro Complex,Lecturer,,,,,,tunggal,Lecturer,,
 P00007,"Nur Mujahidin, S.P., M.Si.",nur mujahidin,1,agribac,Agro Complex,Lecturer,Bacteriology,,,,,tunggal,Lecturer,,
 P00008,"Prof. Dr. Zaraswati Dwyana Zainuddin, M.Si",zaraswati dwyana zainuddin,2,agribac;nutrifeed,Agro Complex,Lecturer,Microbiology,58793481800,0000-0001-5002-237X,,https://scholar.google.com/citations?user=AkKUApcAAAAJ&hl=en,id,Lecturer,,
@@ -259,7 +259,7 @@ P00257,Awulyani Sumardi,awulyani sumardi,1,food-crops,Agro Complex,Student,,,,,,
 P00258,A. Riani Tri Utari,a riani tri utari,1,food-crops,Agro Complex,Student,,,,,,tunggal,Student,,
 P00259,A. Dian Mustika Sari,a dian mustika sari,1,food-crops,Agro Complex,Student,,,,,,tunggal,Student,,
 P00260,Asdiana Anugrah,asdiana anugrah,1,food-crops,Agro Complex,Student,FCVC Team,,,,,tunggal,Student,,
-P00261,"Prof. Dr. Ir. Sitti Bulkis, M.S.",sitti bulkis,1,aisrg,Agro Complex,,,57202444377,0000-0002-9207-9953,6005362,https://scholar.google.com/citations?user=F5gjflsAAAAJ&hl=en%20,tunggal,,,
+P00261,"Prof. Dr. Ir. Sitti Bulkis, M.S.",sitti bulkis,1,aisrg,Agro Complex,Leader,,57202444377,0000-0002-9207-9953,6005362,https://scholar.google.com/citations?user=F5gjflsAAAAJ&hl=en%20,tunggal,Leader,Agricultural Institution Strengthening,aisrg
 P00262,"Andi Emelda, S.P., M.Si.",andi emelda,1,aisrg,Agro Complex,Lecturer,,,0009-0004-5988-0708,6991111,https://scholar.google.com/citations?user=oWADA3IAAAAJ&hl,tunggal,Lecturer,,
 P00263,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",muhammad ridwan,1,aisrg,Agro Complex,Lecturer,,57217207630,0000-0001-5453-6052,6990837,https://scholar.google.com/citations?user=wlzipIAAAAAJ&hl=en,tunggal,Lecturer,,
 P00264,"Ir. A. Amrullah, M.Si",a amrullah,1,aisrg,Agro Complex,Lecturer,Socio-economics of agriculture,57202443313,0000-0002-4633-8520,6014348,https://scholar.google.com/citations?user=tiHNtncAAAAJ&hl,tunggal,Lecturer,,
@@ -270,7 +270,7 @@ P00268,Andi Aulia Fadillah,andi aulia fadillah,1,aisrg,Agro Complex,Researcher,A
 P00269,Rasdiana Mudatsir,rasdiana mudatsir,1,aisrg,Agro Complex,Student,s and Food Security,,0000-0001-5242-4962,6198141,https://scholar.google.com/citations?user=KntaOEoAAAAJ&hl=id&oi=ao,tunggal,Student,,
 P00270,Wulandari,wulandari,1,aisrg,Agro Complex,Student,socio-economic,,0009-0009-3958-0173,,https://scholar.google.com/citations?hl=id&user=ZuhJ3YgAAAAJ,tunggal,Student,,
 P00271,"Dr. Ir. Sulaeha Thamrin, S.P., M.Si",sulaeha thamrin,1,pbnp,Agro Complex,Lecturer,,,,,,tunggal,Lecturer,,
-P00272,"Prof. Dr. Gemini Alam, M.Si., Apt",gemini alam,4,mnprg;nutrifeed;ohcirg;pbnp,Agro Complex;Medical and Health Science,Lecturer,Pharmacognosy and Phytochemistry | Phytochemistry | Natural Product Chemistry | Metabolomics,6507286881,0000-0003-3712-8457,,https://scholar.google.com/citations?hl=en&user=78uLTWwAAAAJ,id,Lecturer,,
+P00272,"Prof. Dr. apt. Gemini Alam, M.Si",gemini alam,4,mnprg;nutrifeed;ohcirg;pbnp,Agro Complex;Medical and Health Science,Leader;Lecturer,Pharmacognosy and Phytochemistry | Phytochemistry | Natural Product Chemistry | Metabolomics,6507286881,0000-0003-3712-8457,,https://scholar.google.com/citations?hl=en&user=78uLTWwAAAAJ,id,Leader,Metabolomics and Natural Products,mnprg
 P00273,Shinichi Tebayashi,shinichi tebayashi,1,pbnp,Agro Complex,External Collaborator,,36878928200,0000-0001-8640-8872,,,tunggal,External Collaborator,,
 P00274,"Andi Dzul Arsyi Ainun, S.P",andi dzul arsyi ainun,1,pbnp,Agro Complex,Student,,,,,,tunggal,Student,,
 P00275,Alfian Nur Nabilla,alfian nur nabilla,1,pbnp,Agro Complex,Student,,,,,,tunggal,Student,,
@@ -455,7 +455,7 @@ P00453,"drh. Kusmandari Indah Prahesti, M.Si",drh kusmandari indah prahesti,1,po
 P00454,Febrina Angriani Majid,febrina angriani majid,1,pored-rg,Agro Complex,Student,,,,,,tunggal,Student,,
 P00455,Yousif Altaher Edress Mohammed,yousif altaher edress mohammed,1,pored-rg,Agro Complex,Student,Utilizing the advantages of local poultry | feed technology | disease resistance | and other traits | all while retaining their core strengths,,,,,tunggal,Student,,
 P00456,"Dr. Ir. Hikmah M Ali, S.Pt, M.Si, IPU, ASEAN Eng",hikmah m ali,1,feedtech,Agro Complex,Lecturer,,,,,,tunggal,Lecturer,,
-P00457,"Dr. Eng. Ir. Ilham Bakri, S.T., M.Sc., IPM, ASEAN Eng.",eng ir ilham bakri,2,feedtech;hes,Agro Complex;Science and Engineering,Lecturer,Ergonomics and Occupational Safety,50460964800,,,https://scholar.google.com/citations?user=_u_OXdUAAAAJ&hl=id&oi=ao,nama,Lecturer,,
+P00457,"Dr. Eng. Ir. Ilham Bakri, S.T., M.Sc., IPM",eng ir ilham bakri,2,hes;feedtech,Agro Complex;Science and Engineering,Leader;Lecturer,Ergonomics and Occupational Safety,50460964800,,,https://scholar.google.com/citations?user=_u_OXdUAAAAJ&hl=id&oi=ao,nama,Leader,Health and Safety Engineering,hes
 P00458,"Achmad Ragil Ponco Nugroho, S.Pt., M.Si",achmad ragil ponco nugroho,1,feedtech,Agro Complex,External Collaborator,Charoen Pokphand Group Co | Ltd | South Sulawesi,,,,,tunggal,External Collaborator,,
 P00459,Assoc. Prof. Dr. Eric Lim Teik Chung,eric lim teik chung,1,feedtech,Agro Complex,External Collaborator,,,,,,tunggal,External Collaborator,,
 P00460,Prof. Dr. Ahrar Khan,ahrar khan,1,feedtech,Agro Complex,External Collaborator,Weifang | China,,,,,tunggal,External Collaborator,,
@@ -593,7 +593,7 @@ P00591,"Risal Aprianto, S.Pi., M.Si.",risal aprianto,1,multitrophic,Agro Complex
 P00592,Dedy Muhammad Iqbal,dedy muhammad iqbal,1,multitrophic,Agro Complex,Student,,,,,,tunggal,Student,,
 P00593,Dewi Bestari,dewi bestari,1,multitrophic,Agro Complex,Student,,,,,,tunggal,Student,,
 P00594,Putri Yuni Rahmani,putri yuni rahmani,1,multitrophic,Agro Complex,Student,,,,,,tunggal,Student,,
-P00595,"Prof. Dr. Mahatma Lanuru, ST, M.Sc",mahatma lanuru,1,ncprg,Agro Complex,,,,,,,tunggal,,,
+P00595,"Prof. Dr. Mahatma Lanuru, ST, M.Sc",mahatma lanuru,1,ncprg,Agro Complex,Leader,,,,,,tunggal,Leader,Natural Coastal Protection,ncprg
 P00596,"Dr. Eng Achmad Yasir Baeda, ST.,MT.",eng achmad yasir baeda,1,ncprg,Agro Complex,Lecturer,in 2010. His main research topics are coastal oceanography | coastal protection design | ocean coastal Hazard Mitigation,,,,,tunggal,Lecturer,,
 P00597,"Prof. Dr. Ir. Mardiana E. Fachri, MS.",mardiana e fachri,1,ncprg,Agro Complex,Lecturer,,,,,,tunggal,Lecturer,,
 P00598,"Prof. Dr. Amran Saru, ST., M.Si.",amran saru,1,ncprg,Agro Complex,Lecturer,,,,,,tunggal,Lecturer,,
@@ -779,7 +779,7 @@ P00777,Diah Muflihah,diah muflihah,1,multifor,Agro Complex,,,,,,,tunggal,,,
 P00778,Michel O'brien Ridwan Jr,michel o brien ridwan jr,1,multifor,Agro Complex,,,,,,,tunggal,,,
 P00779,Ardian Halis S.Hut,ardian halis s hut,1,multifor,Agro Complex,,,,,,,tunggal,,,
 P00780,Fernando Da Silva,fernando da silva,2,biomass;multifor,Agro Complex,Student,,,,,,nama,Student,,
-P00781,"Dr. Ir. Baharuddin, MP",baharuddin,1,nifodi,Agro Complex,,Utilization of Non-Timber Forest Products,,,,https://scholar.google.co.id/citations?user=jJiKNlkAAAAJ&hl=id,tunggal,,,
+P00781,"Dr. Ir. Baharuddin, MP",baharuddin,1,nifodi,Agro Complex,Leader,Utilization of Non-Timber Forest Products,,,,https://scholar.google.co.id/citations?user=jJiKNlkAAAAJ&hl=id,tunggal,Leader,Non-timber Forest Product Diversification,nifodi
 P00782,"Andi Prastiyo, S.Hut., M.Hut.",andi prastiyo,1,nifodi,Agro Complex,Lecturer,Management of Honey Bees and Beneficial Insects,,,,,tunggal,Lecturer,,
 P00783,Ira Taskirawati S.Hut. M.Sc. Ph.D.,ira taskirawati s hut m sc ph d,1,nifodi,Agro Complex,Lecturer,Forest Product Technology,,,,,nama,Lecturer,,
 P00784,Dr. Putu Supadma Putra S.Hut,putu supadma putra s hut,1,nifodi,Agro Complex,Lecturer,Forest Ecology,,,,,tunggal,Lecturer,,
@@ -825,7 +825,7 @@ P00823,"Giselawati Putri, S.Hut., M.Hut",giselawati putri,1,termite,Agro Complex
 P00824,Ahmad Fauzan,ahmad fauzan,1,termite,Agro Complex,Student,,,,,,tunggal,Student,,
 P00825,Nur Muhammad Mu’adz Mustafa,nur muhammad mu adz mustafa,1,termite,Agro Complex,Student,,,,,,tunggal,Student,,
 P00826,Riska Febrianti,riska febrianti,1,termite,Agro Complex,Student,Termite-RG,,,,,tunggal,Student,,
-P00827,"Prof. Dr. Ir. Syamsu Rijal, S.Hut., M.Si., IPU",syamsu rijal,1,ddrg,Agro Complex,,Forest Planning,,,,https://scholar.google.co.id/citations?hl=en&user=9ugevBYAAAAJ,tunggal,,,
+P00827,"Prof. Dr. Ir. Syamsu Rijal, S.Hut., M.Si., IPU",syamsu rijal,1,ddrg,Agro Complex,Leader,Forest Planning,,,,https://scholar.google.co.id/citations?hl=en&user=9ugevBYAAAAJ,tunggal,Leader,Deforestation and Degradation,ddrg
 P00828,"Prof. Dr. Ir. Daud Malamassam, M.Agr",daud malamassam,1,ddrg,Agro Complex,Lecturer,Forest Inventory,,,,,tunggal,Lecturer,,
 P00829,"Dr. Ir. Roland A. Barkey, M.Sc",roland a barkey,1,ddrg,Agro Complex,Lecturer,Forestry Planning for Regional Development,,,,,tunggal,Lecturer,,
 P00830,"Chairil A., S.Hut., M.Hut",chairil a,1,ddrg,Agro Complex,Lecturer,Remote sensing of Forestry and environmental,,,,,tunggal,Lecturer,,
@@ -933,7 +933,7 @@ P00931,REZA ARIANTO SULTAN,reza arianto sultan,1,biofoodpack,Agro Complex,Resear
 P00932,Ahmad Azhari Arif,ahmad azhari arif,1,biofoodpack,Agro Complex,Student,Food Science & Technology,,,,,tunggal,Student,,
 P00933,Firadillah Tsani Arif,firadillah tsani arif,1,biofoodpack,Agro Complex,Student,Food Science & Technology,,,,,tunggal,Student,,
 P00934,Universitas Hasanuddin,universitas hasanuddin,1,islamicfrg,Social Science,Leader,Prof. Dr. Abdul Hamid Habbe | M.Si,57192201122,0000-0002-9727-3499,,https://scholar.google.co.id/citations?user=-zLX0XgAAAAJ&hl=en&oi=ao,tunggal,Leader,Islamic Economics and Finance,islamicfrg
-P00935,"Dr. Darwis Said, Ak., MSA., CSRA",darwis said,2,islamicfrg;sca,Social Science,Lecturer,Environmental Accounting,57222329927,0000-0001-5843-6884,6028021,https://scholar.google.com/citations?hl=en&user=lIei2tcAAAAJ,nama,Lecturer,,
+P00935,"Dr. Darwis Said, Ak., MSA., CSRA",darwis said,2,sca;islamicfrg,Social Science,Leader;Lecturer,Environmental Accounting,57222329927,0000-0001-5843-6884,6028021,https://scholar.google.com/citations?hl=en&user=lIei2tcAAAAJ,nama,Leader,Research Group on Sustainability and Critical Accounting,sca
 P00936,"Hermita Arif, CIFP., M.Com",hermita arif,2,islamicfrg;sca,Social Science,Lecturer,Islamic Social Finance | Personal Finance | Islamic Accounting,57208670038,0000-0001-5104-9355,6747858,https://scholar.google.com/citations?hl=en&user=uTqnkrYAAAAJ,nama,Lecturer,,
 P00937,Prof. Yusuf Karbhari,yusuf karbhari,1,islamicfrg,Social Science,Lecturer,,6507935561,,,https://scholar.google.com/citations?user=1H_Yq8wAAAAJ&hl=en%20,tunggal,Lecturer,,
 P00938,"Faisal Abdullah, Ph.D",faisal abdullah,3,ais-rg;apm;islamicfrg,Social Science,External Collaborator;Lecturer,Financial Accounting,,,,,nama,Lecturer,,
@@ -947,7 +947,7 @@ P00945,Andi Nur Sakinah,andi nur sakinah,1,islamicfrg,Social Science,Student,,,,
 P00946,Anisatun Humayra,anisatun humayra,1,islamicfrg,Social Science,Student,,,,,,tunggal,Student,,
 P00947,Widyantono Arif,widyantono arif,1,islamicfrg,Social Science,Student,,,,,,tunggal,Student,,
 P00948,Socials Media,socials media,2,islamicfrg;smsrg,Science and Engineering;Social Science,Student,inclusivity | and ethical practices in economics and finance | aligning with the maqasid ash-shariah | SMSRG Team,,,,,nama,Student,,
-P00949,Prof. Dr. Indrianty Sudirman,indrianty sudirman,1,marketingbhvr,Social Science,,,,,,,tunggal,,,
+P00949,Prof. Dr. Indrianty Sudirman,indrianty sudirman,1,marketingbhvr,Social Science,Leader,,,,,,tunggal,Leader,Marketing and Behavioral,marketingbhvr
 P00950,"Elvita Bellani, S.Psi., M.Sc",elvita bellani,2,cpcd;marketingbhvr,Social Science,Leader;Lecturer,Behavioral Economics,57209396077,,,https://scholar.google.co.id/citations?hl=id&user=IoQ9Ho0AAAAJ,nama,Leader,"Peace, Conflict, and Democracy",cpcd
 P00951,"Umi Pratiwi Rimayanti, S.Kep., Ns., MN., Ph.D",umi pratiwi rimayanti,4,hncd-rg;marketingbhvr;mdrg;mwm-rg,Medical and Health Science;Social Science,Lecturer;Researcher,Medical Surgical Nursing: Palliative,57212373818,0000-0002-2761-4403,https://sinta.kemdikbud.go.id/profile,,id,Lecturer,,
 P00952,Prof Aghavni Grigor Hakoyban,aghavni grigor hakoyban,1,marketingbhvr,Social Science,External Collaborator,,,,,,tunggal,External Collaborator,,
@@ -973,7 +973,7 @@ P00971,Prof.Dr. Hatane Samuel,hatane samuel,1,ppm,Social Science,Researcher,Mark
 P00972,"Dr.Muhammad Ilham Wardhana., SE.,MMktMgt",muhammad ilham wardhana,1,ppm,Social Science,Researcher,,,,,,tunggal,Researcher,,
 P00973,Danil Adi Putra,danil adi putra,1,ppm,Social Science,Student,Marketing Management,,,,,tunggal,Student,,
 P00974,Andi Nabila Tenri Lala,andi nabila tenri lala,1,ppm,Social Science,Student,Marketing Management,,,,,tunggal,Student,,
-P00975,"Prof. Dr. Mediaty, SE., M.Si., Ak, CA, CWM.",mediaty,1,apm,Social Science,,Public Management Accounting,57192190531,0000-0003-3314-4900,,,tunggal,,,
+P00975,"Prof. Dr. Mediaty, SE., M.Si., Ak, CA, CWM.",mediaty,1,apm,Social Science,Leader,Public Management Accounting,57192190531,0000-0003-3314-4900,,,tunggal,Leader,Accounting and Public Management,apm
 P00976,"Asharin Juwita Purisamya, S.E., M.Si., ACPA.",asharin juwita purisamya,3,ais-rg;apm;finra,Social Science,Lecturer;Researcher,Accounting and Finance | Financial Accounting | Sustainability Accounting,,0000-0002-9037-756X,6736159,,id,Lecturer,,
 P00977,"Dr. Rahmawati HS, SE, M. Si, Ak, CA, ASEAN CPA",rahmawati hs,3,apm;farg;finra,Social Science,Lecturer,Accounting | Financial Accounting | Government Accounting,57226838208,0000-0002-1457-7914,6661679,,id,Lecturer,,
 P00978,"Prof. Dr. Grace T. Pontoh, SE., M. Si, Ak., CA.",grace t pontoh,1,apm,Social Science,Lecturer,Accounting Information System,57201193981,0000-0001-6672-5408,,,tunggal,Lecturer,,
@@ -1301,7 +1301,7 @@ P01299,"Novy N.R.A. Mokobombang, S.T., Ms.T.M., Ph.D",novy n r a mokobombang,1,d
 P01300,"Dr.Ing.Ir. Venny Veronica Natalia ST., MT",ing ir venny veronica natalia,1,drg,Social Science,Lecturer,,57210944664,,,https://scholar.google.co.id/citations?hl=id&user=LQHOt3MAAAAJ,tunggal,Lecturer,,
 P01301,"Icha Musywirah Hamka, S.Sos.,M.Si",icha musywirah hamka,1,drg,Social Science,Lecturer,,,0009-0001-4163-1744,,https://scholar.google.com/citations?hl=id&user=KZ9hH-EAAAAJ,tunggal,Lecturer,,
 P01302,"Ahmad Faizuddin, S.Pd.I, M.Ed., PhD",ahmad faizuddin,1,drg,Social Science,External Collaborator,,57200140000,,,,tunggal,External Collaborator,,
-P01303,"Sudirman Nasir, S.Ked., MWH., Ph.D",sudirman nasir,2,drg;icchealth,Medical and Health Science;Social Science,Researcher,Leader,24341795900,0000-0002-9735-1178,,https://scholar.google.com/citations?user=DKTG-esAAAAJ&hl=id&oi=ao,nama,Researcher,,
+P01303,Sudirman Nasir,sudirman nasir,2,icchealth;drg,Medical and Health Science;Social Science,Leader;Researcher,Leader,24341795900,0000-0002-9735-1178,,https://scholar.google.com/citations?user=DKTG-esAAAAJ&hl=id&oi=ao,nama,Leader,Intersectionality of Climate Crisis and Health,icchealth
 P01304,Ida Arianti Said,ida arianti said,1,drg,Social Science,Student,,,,,,tunggal,Student,,
 P01305,Muh. Ilham,muhammad ilham,1,drg,Social Science,Student,,,,,,tunggal,Student,,
 P01306,Hasbullah,hasbullah,1,drg,Social Science,Student,,,,,,tunggal,Student,,
@@ -1378,7 +1378,7 @@ P01376,Josse Charmario Wara Angi,josse charmario wara angi,1,wasmalaw,Social Sci
 P01377,Asriyani,asriyani,1,wasmalaw,Social Science,,,,,,,tunggal,,,
 P01378,Waode Intan Kurniawati,waode intan kurniawati,1,wasmalaw,Social Science,,,,,,,tunggal,,,
 P01379,Prof. Dr. Ahmad Masum,ahmad masum,1,wasmalaw,Social Science,,,,,,,tunggal,,,
-P01380,"Prof. Dr. Irwansyah, S.H., M.H.",irwansyah,1,seaj,Social Science,,,57222996669,,,,tunggal,,,
+P01380,"Prof. Dr. Irwansyah, S.H., M.H.",irwansyah,1,seaj,Social Science,Leader,,57222996669,,,,tunggal,Leader,Sociolegal and Environmental Justice,seaj
 P01381,"Dr. Romi Librayanto, S.H., M.H.",romi librayanto,1,seaj,Social Science,Lecturer,,,,,,tunggal,Lecturer,,
 P01382,"Dr. Zulkifli Aspan, S.H., M.H",zulkifli aspan,1,seaj,Social Science,Lecturer,,,,,,tunggal,Lecturer,,
 P01383,"Prof. Marius Olivier, LL.M, Ph.D",marius olivier,1,seaj,Social Science,External Collaborator,,,,,,tunggal,External Collaborator,,
@@ -1938,7 +1938,7 @@ P01936,"Prof. Dr. Ir. Idawarni Asmal, MT (NIP. 196507011994032001)",idawarni asm
 P01937,Andi Luthfia Amalya,andi luthfia amalya,1,coastal-sr,Science and Engineering,Student,,,,,,tunggal,Student,,
 P01938,Ismah Qosimah,ismah qosimah,1,coastal-sr,Science and Engineering,Student,,,,,,tunggal,Student,,
 P01939,Andi Muhammad Ikhsan,andi muhammad ikhsan,1,coastal-sr,Science and Engineering,Student,,,,,,tunggal,Student,,
-P01940,"Dr. Eng. Ardy Arsyad, ST, M.Eng.Sc",eng ardy arsyad,1,flowliqtion,Science and Engineering,,Earthquake Geotechnical Engineering | Seismic Induced Liquefaction | Landslide Mitigation | and Artificial Inteligence for Geotechnical Engineering,52163103400,0000-0002-9513-6386,5990034,,tunggal,,,
+P01940,"Dr. Eng. Ardy Arsyad, ST, M.Eng.Sc",eng ardy arsyad,1,flowliqtion,Science and Engineering,Leader,Earthquake Geotechnical Engineering | Seismic Induced Liquefaction | Landslide Mitigation | and Artificial Inteligence for Geotechnical Engineering,52163103400,0000-0002-9513-6386,5990034,,tunggal,Leader,Flowslide and Liquefaction,flowliqtion
 P01941,Professor. Mitsu Okamura,mitsu okamura,1,flowliqtion,Science and Engineering,External Collaborator,Soil Liquefaction | Liquefactuion Countermeasure | Aseismic Design,,,,,tunggal,External Collaborator,,
 P01942,Professor. Hemanta Hazarika,hemanta hazarika,1,flowliqtion,Science and Engineering,External Collaborator,Geotechnical Earthquake Engineering,,,,,tunggal,External Collaborator,,
 P01943,Dr. Kohei Ono,kohei ono,1,flowliqtion,Science and Engineering,External Collaborator,Geotechnical Earthquake Engineering,,,,,tunggal,External Collaborator,,
@@ -2317,7 +2317,7 @@ P02315,"Prof. Dr. Nurlindah Hamrun, drg., M.Kes.",nurlindah hamrun,2,periodontal
 P02316,Yasir Dilshad Siddiqui,yasir dilshad siddiqui,1,periodontal,Medical and Health Science,External Collaborator,,57207764715,0000-0003-0395-0098,,,tunggal,External Collaborator,,
 P02317,Joyce Srinovita,joyce srinovita,1,periodontal,Medical and Health Science,Student,,,,,,tunggal,Student,,
 P02318,Yoko Fitriansyah,yoko fitriansyah,1,periodontal,Medical and Health Science,Student,the group aims to provide affordable,,,,,tunggal,Student,,
-P02319,"Prof. Dr. Asmawati, drg., M.Kes., PBO",asmawati,1,rdrg,Medical and Health Science,,Oral Biology,57197844600,0000-0002-1478-8914,6022593,,tunggal,,,
+P02319,"Prof. Dr. Asmawati, drg., M.Kes., PBO",asmawati,1,rdrg,Medical and Health Science,Leader,Oral Biology,57197844600,0000-0002-1478-8914,6022593,,tunggal,Leader,Regenerative Dentistry,rdrg
 P02320,"Prof. Dr. Bahruddin Thalib, drg., M.Kes., Sp.Pros ., Subsp., PKIKG (K).",bahruddin thalib,1,rdrg,Medical and Health Science,Lecturer,,57197847295,0000-0001-5868-3113,6023566,,tunggal,Lecturer,,
 P02321,"Rafikah Hasyim, drg., M. Biomed.",rafikah hasyim,1,rdrg,Medical and Health Science,Lecturer,,57197845985,,6015347,,tunggal,Lecturer,,
 P02322,"Al\' Qarama Mahardhika Thalib, drg., MARS.",al qarama mahardhika thalib,1,rdrg,Medical and Health Science,Lecturer,,57217080888,,6760832,,tunggal,Lecturer,,
@@ -2418,7 +2418,7 @@ P02416,Zaitun Khaerunnisa Sahril,zaitun khaerunnisa sahril,1,food4nd,Medical and
 P02417,Besse Nurul Fadillah,besse nurul fadillah,1,food4nd,Medical and Health Science,Student,,,,,,tunggal,Student,,
 P02418,Rima Finarshy,rima finarshy,1,food4nd,Medical and Health Science,Student,,,,,,tunggal,Student,,
 P02419,Yanto,yanto,1,food4nd,Medical and Health Science,Student,,,,,,tunggal,Student,,
-P02420,"Dr. Syahrir A. Pasinringi, MS",syahrir a pasinringi,1,hospbiz,Medical and Health Science,,,57203958764,0000-0001-5947-2596,6667189,,tunggal,,,
+P02420,"Dr. Syahrir A. Pasinringi, MS",syahrir a pasinringi,1,hospbiz,Medical and Health Science,Leader,,57203958764,0000-0001-5947-2596,6667189,,tunggal,Leader,Hospital Business Development,hospbiz
 P02421,"Dr. Nurmalasari, SKM.,M.Kes.,MA",nurmalasari,1,hospbiz,Medical and Health Science,Lecturer,,57219318889,,6767214,,tunggal,Lecturer,,
 P02422,"Dr. Rini Angraeni, S.KM.,M.Kes",rini angraeni,1,hospbiz,Medical and Health Science,Lecturer,,57207825772,,6679711,,tunggal,Lecturer,,
 P02423,"Dr. Irwandy, SKM., MSc.PH., M.Kes",irwandy,1,hospbiz,Medical and Health Science,Lecturer,,57215690878,,6197955,,tunggal,Lecturer,,
@@ -2545,7 +2545,7 @@ P02543,"Prof. Irniza Rasdi, BSc, Ph.D",irniza rasdi,1,workfasma,Medical and Heal
 P02544,Made Ermayani,made ermayani,1,workfasma,Medical and Health Science,,,,,,,tunggal,,,
 P02545,Rezki Ramadani,rezki ramadani,1,workfasma,Medical and Health Science,,,,,,,tunggal,,,
 P02546,Nurul Ainun Fauzia,nurul ainun fauzia,1,workfasma,Medical and Health Science,,,,,,,tunggal,,,
-P02547,Prof. Dr. drg. A. Zulkifli Abdullah M.Kes,a zulkifli abdullah m kes,1,nutriepi,Medical and Health Science,,Epidemiogy,,,,,tunggal,,,
+P02547,Prof. Dr. drg. A. Zulkifli Abdullah M.Kes,a zulkifli abdullah m kes,1,nutriepi,Medical and Health Science,Leader,Epidemiogy,,,,,tunggal,Leader,Nutritional Epidemiology,nutriepi
 P02548,"Rahayu Indriasari, SKM., MPHCN., Ph.D",rahayu indriasari,2,nutriepi;ocnrg,Medical and Health Science,Lecturer,,57203151676,0000-0002-0348-2338,6012699,,nama,Lecturer,,
 P02549,"Prof. Malina Osman, MD, MComm. Health",malina osman,1,nutriepi,Medical and Health Science,External Collaborator,,,,,,tunggal,External Collaborator,,
 P02550,Wahyuni,wahyuni,1,nutriepi,Medical and Health Science,Student,,,,,,tunggal,Student,,

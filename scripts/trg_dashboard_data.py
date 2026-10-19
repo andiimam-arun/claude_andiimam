@@ -78,7 +78,7 @@ else:
     meta_extra = {}
 import datetime
 json.dump({"dibuat": datetime.date.today().isoformat(), "sumber": "Halaman publik trg.unhas.ac.id", "n_trg": len(tr), "n_peneliti": len(pen),
-           "n_ketua": sum(1 for p in pen if p["ketua_di"]), "n_artikel": sum(t["n_publikasi"] for t in tr), **meta_extra},
+           "n_ketua": sum(1 for p in pen if p["ketua_di"]), "n_trg_ketua": sum(1 for t in tr if t["ketua"]), "n_artikel": sum(t["n_publikasi"] for t in tr), **meta_extra},
           open(f"{O}/meta.json", "w", encoding="utf-8"), ensure_ascii=False)
 for name, rows in (("peneliti", pen), ("trg", tr), ("tag", tg)):
     json.dump(rows, open(f"{O}/{name}.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

@@ -331,6 +331,23 @@ def team_row(slug, it):
              ids["sinta"], ids["scholar"]], ids["email"])
 
 
+LEAD_DESC = re.compile(r"^\s*(team\s+|group\s+)?(leader|ketua|chair(man|person)?)\b", re.I)
+INFERRED = []   # (slug, nama, dasar): ketua yang disimpulkan, bukan berlabel "Leader" di halaman TRG
+
+
+def infer_leader(slug, rows):
+    """Bila tidak ada baris 'Leader': (1) keterangan keahlian/afiliasi berbunyi 'Leader/Ketua/Chairman ...';
+    (2) tepat satu baris tanpa peran dan paling awal di daftar (blok ketua sebelum judul peran pertama)."""
+    if not rows or any(r[1] == "Leader" for r in rows):
+        return
+    for r in rows:
+        if r[1] in ("", "Lecturer", "Researcher", "Member") and (LEAD_DESC.search(r[3] or "") or LEAD_DESC.search(r[4] or "")):
+            r[1] = "Leader"; INFERRED.append((slug, r[2], "keterangan menyebut ketua")); return
+    blank = [r for r in rows if not r[1]]
+    if len(blank) == 1 and rows[0] is blank[0] and len(rows) >= 3:
+        blank[0][1] = "Leader"; INFERRED.append((slug, blank[0][2], "satu-satunya anggota tanpa peran, paling atas di daftar"))
+
+
 def crawl_trg(f, t):
     log, rows = [], {"peneliti": [], "kontak": [], "publikasi": [], "buku": [], "paten": [], "proyek": []}
     if not t["url"]:  # TRG tanpa halaman: tidak ada yang bisa dibaca
@@ -365,6 +382,7 @@ def crawl_trg(f, t):
                 rows[key].append([t["slug"], fl[0], fl[1], fl[2], year, link])
             else:
                 rows[key].append([t["slug"], json.dumps(it["fields"], ensure_ascii=False), link])
+    infer_leader(t["slug"], rows["peneliti"])
     t["n_peneliti"] = len(rows["peneliti"])
     t["n_publikasi"] = len(rows["publikasi"])
     t["n_buku"] = len(rows["buku"])
@@ -424,6 +442,7 @@ def main():
     write(f"{a.out}/publikasi.csv", ["trg_slug", "judul", "penulis", "sumber", "tahun", "url"], allrows["publikasi"])
     for k in ("buku", "paten", "proyek"):
         write(f"{a.out}/{k}.csv", ["trg_slug", "fields_json", "url"], allrows[k])
+    write(f"{a.out}/ketua_diduga.csv", ["trg_slug", "nama", "dasar_dugaan"], sorted(INFERRED))
     write(f"{a.out}/crawl_log.csv", ["trg_slug", "bagian", "halaman", "status_http"], alllog)
     print("selesai:", {k: len(v) for k, v in allrows.items()})
 

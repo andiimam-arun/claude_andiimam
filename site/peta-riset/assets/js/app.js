@@ -10,7 +10,7 @@
       skip: "Lewati ke konten", back: "Kembali ke GloRI", eyebrow: "Global Research Institute · Universitas Hasanuddin",
       title: "Peta Riset Unhas", lede: "Temukan peneliti dan kelompok riset tematik (TRG) Universitas Hasanuddin berdasarkan nama, keahlian, dan tema riset.",
       searchLabel: "Cari ahli", searchPh: "Cari nama, keahlian, atau TRG: kakao, malaria, hukum pidana", searchBtn: "Cari",
-      kTrg: "TRG", kPeople: "Peneliti", kLead: "Ketua TRG", kPapers: "Artikel tercatat",
+      kTrg: "TRG", kPeople: "Peneliti", kLead: "TRG dengan ketua terbaca", kPapers: "Artikel tercatat",
       tabSearch: "Cari ahli", tabTheme: "Peta tema", tabTrg: "Daftar TRG", loading: "Memuat data…",
       fKlaster: "Klaster", fTema: "Tema", fLead: "Hanya ketua TRG", fId: "Punya ID peneliti", reset: "Atur ulang",
       allKlaster: "Semua klaster", allTema: "Semua tema", themeHead: "Peneliti menurut tema",
@@ -35,7 +35,7 @@
       skip: "Skip to content", back: "Back to GloRI", eyebrow: "Global Research Institute · Hasanuddin University",
       title: "Unhas Research Map", lede: "Find researchers and Thematic Research Groups (TRGs) at Hasanuddin University by name, expertise, and research theme.",
       searchLabel: "Find an expert", searchPh: "Search name, expertise, or TRG: cocoa, malaria, criminal law", searchBtn: "Search",
-      kTrg: "TRGs", kPeople: "Researchers", kLead: "TRG leaders", kPapers: "Recorded articles",
+      kTrg: "TRGs", kPeople: "Researchers", kLead: "TRGs with a leader listed", kPapers: "Recorded articles",
       tabSearch: "Find experts", tabTheme: "Theme map", tabTrg: "TRG directory", loading: "Loading data…",
       fKlaster: "Cluster", fTema: "Theme", fLead: "TRG leaders only", fId: "Has researcher ID", reset: "Reset",
       allKlaster: "All clusters", allTema: "All themes", themeHead: "Researchers by theme",
@@ -135,7 +135,7 @@
   function kpis() {
     var m = D.meta; if (!m.n_trg) return;
     $("#k-trg").textContent = fmt(m.n_trg); $("#k-people").textContent = fmt(m.n_peneliti);
-    $("#k-lead").textContent = fmt(m.n_ketua); $("#k-papers").textContent = fmt(m.n_artikel);
+    $("#k-lead").textContent = fmt(m.n_trg_ketua != null ? m.n_trg_ketua : m.n_ketua) + " / " + fmt(m.n_trg); $("#k-papers").textContent = fmt(m.n_artikel);
   }
 
   /* ---------- filter dropdown ---------- */
