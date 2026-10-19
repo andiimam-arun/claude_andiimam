@@ -1,15 +1,102 @@
 nama_norm,alasan,n_baris,trg_slugs
 abdul salam,nama_saja_lintas_klaster,2,hes; mc-nutrition
-andi alfian zainuddin,ID_berbeda_nama_sama,5,malvecsis; neocare; ohcirg; pneumonia; renalnutrition
+abu bakar ~ abu bakar tawali,nama_mirip_2kata_ketua,5,biofoodpack; ethnicfood; ffoodtech
+abu bakar ~ abu bakar tawali,nama_mirip_2kata_ketua,5,biofoodpack; ethnicfood; ffoodtech
+ahmad faizal ~ ahmad faizal abdul razis,nama_mirip_2kata_ketua,1,marsplan; mc-nutrition; mprg
+ahmad faizal ~ ahmad faizal abdul razis,nama_mirip_2kata_ketua,1,marsplan; mc-nutrition; mprg
+alwi ~ alwi,nama_mirip_2kata_ketua,1,adaptivepublic-orga; mgsd
+alwi ~ alwi,nama_mirip_2kata_ketua,1,adaptivepublic-orga; mgsd
+alwi ~ alwi,nama_mirip_2kata_ketua,1,adaptivepublic-orga; mgsd
+alwi ~ alwi,nama_mirip_2kata_ketua,1,adaptivepublic-orga; mgsd
+andi alfian zainuddin,ID_berbeda_nama_sama,6,malvecsis; neocare; ohcirg; pneumonia; renalnutrition; stepmic
+andi dian permana,ID_berbeda_nama_sama,3,dtdds; marinenutraceutical; natural-drug
 andi iqra pradipta natsir,ID_berbeda_nama_sama,2,bus-trans; finra
-gemini alam,ID_berbeda_nama_sama,3,nutrifeed; ohcirg; pbnp
+andi nur faidah rahman ~ andi nur,nama_mirip_2kata_ketua,1,fone-rg; mediacom
+andi nur faidah rahman ~ andi nur,nama_mirip_2kata_ketua,1,fone-rg; mediacom
+bualkar abdullah,ID_berbeda_nama_sama,2,bionanocomposite; msm-rg
+budimawan ~ budimawan,nama_mirip_2kata_ketua,3,bite-fish; invaquatic; lsfa-trg; srcrg
+budimawan ~ budimawan,nama_mirip_2kata_ketua,3,bite-fish; invaquatic; lsfa-trg; srcrg
+dody dharmawan trijuno ~ dody dharmawan,nama_mirip_2kata_ketua,2,shrimpfarming; tila-techrg
+dody dharmawan trijuno ~ dody dharmawan,nama_mirip_2kata_ketua,2,shrimpfarming; tila-techrg
+evi aprianti,nama_saja_lintas_klaster,2,sri; urbinfrastructur-r
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,ammd; lightweight-mat
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,ammd; lightweight-mat
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,ammd; lightweight-mat
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,ammd; lightweight-mat
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,ammd; naftech
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,ammd; naftech
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,lightweight-mat; mrcrg
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,lightweight-mat; mrcrg
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,lightweight-mat; mrcrg
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,lightweight-mat; mrcrg
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,mrcrg; naftech
+fauzan ~ fauzan,nama_mirip_2kata_ketua,1,mrcrg; naftech
+gemini alam,ID_berbeda_nama_sama,4,mnprg; nutrifeed; ohcirg; pbnp
+hasanuddin thahir,ID_berbeda_nama_sama,2,dfd-rg; ohcirg
+hasbi ~ hasbi,nama_mirip_2kata_ketua,1,abdes; beefpro
+hasbi ~ hasbi,nama_mirip_2kata_ketua,1,abdes; beefpro
 hedi kuswanto,nama_saja_lintas_klaster,2,asds; stepmic
 ifayanti ridwan saleh,ID_berbeda_nama_sama,5,csva; hortibb; oilpalm; sop-land
 ilham alimuddin,nama_saja_lintas_klaster,2,climatebmd; icchealth
-muh farid bdr,ID_berbeda_nama_sama,3,csva; oilpalm; rice-rg
+itji diana daud,ID_berbeda_nama_sama,3,amrg; bione-rg
+muhammad akbar,nama_saja_lintas_klaster,2,dims-rg; neurogenetics
+muhammad akbar ~ muhammad akbar ardiputra,nama_mirip_2kata_ketua,1,biovax; dims-rg; neurogenetics
+muhammad akbar ~ muhammad akbar ardiputra,nama_mirip_2kata_ketua,1,biovax; dims-rg; neurogenetics
+muhammad akbar ~ muhammad akbar hamzah,nama_mirip_2kata_ketua,1,albiorg; dims-rg; neurogenetics
+muhammad akbar ~ muhammad akbar hamzah,nama_mirip_2kata_ketua,1,albiorg; dims-rg; neurogenetics
+muhammad akbar ~ muhammad akbar rhamdhani,nama_mirip_2kata_ketua,3,crem; dims-rg; ermrg; neurogenetics; smprg
+muhammad akbar ~ muhammad akbar rhamdhani,nama_mirip_2kata_ketua,3,crem; dims-rg; ermrg; neurogenetics; smprg
+muhammad akbar ~ muhammad akbar walenna,nama_mirip_2kata_ketua,1,dims-rg; ggerg; neurogenetics
+muhammad akbar ~ muhammad akbar walenna,nama_mirip_2kata_ketua,1,dims-rg; ggerg; neurogenetics
+muhammad farid bdr,ID_berbeda_nama_sama,4,csva; hortibb; oilpalm; rice-rg
+muhammad hasyim,ID_berbeda_nama_sama,2,cul-tor; locwis
+muhammad ihsan andi dagong,ID_berbeda_nama_sama,3,dgrg; llgr-rg; pored-rg
+muhammad irfan said ~ muhammad irfan,nama_mirip_2kata_ketua,1,albiorg; lolw
+muhammad irfan said ~ muhammad irfan,nama_mirip_2kata_ketua,1,albiorg; lolw
+muhammad nur ~ muhammad nur nasyrah,nama_mirip_2kata_ketua,1,bionanocomposite; f-analysis; fprg; mcrg; qft-rg
+muhammad nur ~ muhammad nur nasyrah,nama_mirip_2kata_ketua,1,bionanocomposite; f-analysis; fprg; mcrg; qft-rg
+muhammad ridwan,ID_berbeda_nama_sama,3,aisrg; cpcd; nutrifeed
+muhammad ridwan ~ muhammad ridwan,nama_mirip_2kata_ketua,1,aisrg; cpcd
+muhammad ridwan ~ muhammad ridwan,nama_mirip_2kata_ketua,1,aisrg; cpcd
+muhammad ridwan ~ muhammad ridwan,nama_mirip_2kata_ketua,1,cpcd; nutrifeed
+muhammad ridwan ~ muhammad ridwan,nama_mirip_2kata_ketua,1,cpcd; nutrifeed
+muhammad ridwan ~ muhammad ridwan manulusi,nama_mirip_2kata_ketua,1,cpcd; res-economics
+muhammad ridwan ~ muhammad ridwan manulusi,nama_mirip_2kata_ketua,1,cpcd; res-economics
+nasaruddin ~ nasaruddin,nama_mirip_2kata_ketua,1,cocoa-rg; csva; oilpalm
+nasaruddin ~ nasaruddin,nama_mirip_2kata_ketua,1,cocoa-rg; csva; oilpalm
 novy n r a mokobombang,ID_berbeda_nama_sama,3,cyberiot; drg
+nur isdah idris,nama_saja_lintas_klaster,2,icchealth; mhsrg
+nurhayati ~ nurhayati,nama_mirip_2kata_ketua,1,most-rg; psyling
+nurhayati ~ nurhayati,nama_mirip_2kata_ketua,1,most-rg; psyling
+nurlindah hamrun,ID_berbeda_nama_sama,3,biodental-engineering; periodontal; rdrg
 nurul masyiah rani harusi,ID_berbeda_nama_sama,4,mprg; nap; tnaq-rg
+rahmatia ~ rahmatia,nama_mirip_2kata_ketua,1,ctrg; res-economics
+rahmatia ~ rahmatia,nama_mirip_2kata_ketua,1,ctrg; res-economics
 randi kurniawan,nama_saja_lintas_klaster,2,dege-rg; geosus
 rer nat zainal,ID_berbeda_nama_sama,3,biofoodpack; ffoodtech
-salman samir,nama_saja_lintas_klaster,2,geosus; icchealth
+ridwan ~ ridwan,nama_mirip_2kata_ketua,1,indofootcare; press-ncd
+ridwan ~ ridwan,nama_mirip_2kata_ketua,1,indofootcare; press-ncd
+ridwan ~ ridwan,nama_mirip_2kata_ketua,1,multifor; press-ncd
+ridwan ~ ridwan,nama_mirip_2kata_ketua,1,multifor; press-ncd
+rismaneswati ~ rismaneswati,nama_mirip_2kata_ketua,1,geosus; sop-land
+rismaneswati ~ rismaneswati,nama_mirip_2kata_ketua,1,geosus; sop-land
+rismaneswati ~ rismaneswati,nama_mirip_2kata_ketua,1,sop-land
+rismaneswati ~ rismaneswati,nama_mirip_2kata_ketua,1,sop-land
+salman samir,nama_saja_lintas_klaster,3,geosus; icchealth; islamicfrg
+sawedi muhammad ~ sawedi muhammad s,nama_mirip_2kata_ketua,1,cnrm; ermrg; fdmrg; safos
+sawedi muhammad ~ sawedi muhammad s,nama_mirip_2kata_ketua,1,cnrm; ermrg; fdmrg; safos
+seniwati ~ seniwati,nama_mirip_2kata_ketua,1,ctrg; hrm
+seniwati ~ seniwati,nama_mirip_2kata_ketua,1,ctrg; hrm
 shinta werorilangi,ID_berbeda_nama_sama,3,acuetox; marsplan; mprg
+shinta werorilangi ~ shinta werorilangi,nama_mirip_2kata_ketua,1,acuetox; mprg
+shinta werorilangi ~ shinta werorilangi,nama_mirip_2kata_ketua,1,acuetox; mprg
+socials media,nama_saja_lintas_klaster,2,islamicfrg; smsrg
+stang ~ stang,nama_mirip_2kata_ketua,1,ihmrg
+stang ~ stang,nama_mirip_2kata_ketua,1,ihmrg
+suni hariati ~ suni hariati s kep,nama_mirip_2kata_ketua,1,neocare; nnrg; v-mat
+suni hariati ~ suni hariati s kep,nama_mirip_2kata_ketua,1,neocare; nnrg; v-mat
+syahidah ~ syahidah,nama_mirip_2kata_ketua,1,biomass; nifodi
+syahidah ~ syahidah,nama_mirip_2kata_ketua,1,biomass; nifodi
+wahyuddin ~ wahyuddin,nama_mirip_2kata_ketua,2,cul-tor; flcrg
+wahyuddin ~ wahyuddin,nama_mirip_2kata_ketua,2,cul-tor; flcrg
+zyahrul ramadan,ID_berbeda_nama_sama,2,dgrg; odfrg

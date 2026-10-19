@@ -22,6 +22,7 @@ amrg,Faculty of Agriculture,Agro Complex,Agricultural Mycology
 p-rg,Faculty of Agriculture,Agro Complex,Phytophthora
 bione-rg,Faculty of Agriculture,Agro Complex,Biopesticides and Natural Enemies
 idlfrg,Faculty of Animal Husbandry,Agro Complex,Institutional Development of Livestock Farmers
+milkd,Faculty of Animal Husbandry,Agro Complex,Milk and Diary Products
 llgr-rg,Faculty of Animal Husbandry,Agro Complex,Research Group of Local Livestock Genetic Resources
 slfs,Faculty of Animal Husbandry,Agro Complex,Smallholder Livestock Farming System
 odfrg,Faculty of Animal Husbandry,Agro Complex,Organic Dairy Farming
@@ -32,6 +33,7 @@ abdes,Faculty of Animal Husbandry,Agro Complex,"Equine Breeding, Development, & 
 pored-rg,Faculty of Animal Husbandry,Agro Complex,Poultry Breeding
 feedtech,Faculty of Animal Husbandry,Agro Complex,Feed Technology and Industry
 beefpro,Faculty of Animal Husbandry,Agro Complex,Beef Cattle Productivity
+dgrg,Faculty of Animal Husbandry,Agro Complex,Dairy Goat
 albiorg,Faculty of Marine & Fisheries,Agro Complex,Algal Biotechnology
 acuetox,Faculty of Marine & Fisheries,Agro Complex,Aquatic Ecotoxicology
 ambioc,Faculty of Marine & Fisheries,Agro Complex,Aquatic Macrofaunal Biodiversity and Conservation
@@ -43,6 +45,7 @@ mprg,Faculty of Marine & Fisheries,Agro Complex,Marine Plastic
 multitrophic,Faculty of Marine & Fisheries,Agro Complex,Multitrophic
 ncprg,Faculty of Marine & Fisheries,Agro Complex,Natural Coastal Protection
 sesreg,Faculty of Marine & Fisheries,Agro Complex,Seagrass Restoration & Ecosystem Services
+srcrg,Faculty of Marine & Fisheries,Agro Complex,Shark and Ray Conservation
 tropicrab,Faculty of Marine & Fisheries,Agro Complex,Tropical Crab
 tfed,Faculty of Marine & Fisheries,Agro Complex,Tuna Fisheries and Economic Development
 marsplan,Faculty of Marine & Fisheries,Agro Complex,Marine Spatial Planning
@@ -54,6 +57,7 @@ tila-techrg,Faculty of Marine & Fisheries,Agro Complex,Nile Tilapia
 forestsociety,Faculty of Forestry,Agro Complex,Forest and Society
 secrg,Faculty of Forestry,Agro Complex,Forest Hydrology and Watershed Managment
 karstbios,Faculty of Forestry,Agro Complex,Karst Bioprospecting and Society
+multifor,Faculty of Forestry,Agro Complex,Multiple-Use Forest Management Reserach Group
 nifodi,Faculty of Forestry,Agro Complex,Non-timber Forest Product Diversification
 wildev,Faculty of Forestry,Agro Complex,Wildlife Ecology and Conservation
 termite,Faculty of Forestry,Agro Complex,Termite
@@ -130,6 +134,7 @@ prepodyreg,Faculty of Cultural Sciences,Social Science,Prehistoric Population Dy
 psyling,Faculty of Cultural Sciences,Social Science,Psycholinguistics
 mcrg,Faculty of Cultural Sciences,Social Science,Manuscript and Culture
 ethno,Faculty of Cultural Sciences,Social Science,Ethno-Literature
+englishlanguage-rg,Faculty of Cultural Sciences,Social Science,English Language and Learning
 algebra,Faculty of Mathematics & Natural Science,Science and Engineering,Algebra
 biochar,Faculty of Mathematics & Natural Science,Science and Engineering,Biochar For Environmental Sustainability
 bionanocomposite,Faculty of Mathematics & Natural Science,Science and Engineering,Bionanocomposite
@@ -151,14 +156,17 @@ f-analysis,Faculty of Mathematics & Natural Science,Science and Engineering,Func
 msm-rg,Faculty of Mathematics & Natural Science,Science and Engineering,Multifunctional Semiconductor Materials
 afdays,Faculty of Engineering,Science and Engineering,Advanced Facade and Daylighting Systems
 afmrg,Faculty of Engineering,Science and Engineering,Advanced Functional Materials
+airporteng,Faculty of Engineering,Science and Engineering,Airport Engineering and Multimodal Transportation
 aimp,Faculty of Engineering,Science and Engineering,Artificial Intelligence and Multimedia Processing
 ermrg,Faculty of Engineering,Science and Engineering,Earth Resources Management
 fderg,Faculty of Engineering,Science and Engineering,Fluid Dynamics and Energy
 ggerg,Faculty of Engineering,Science and Engineering,Geotechnical and Geoenvironmental
+tanpa-halaman-green-hydrogen-energy-technology-researc,Faculty of Engineering,Science and Engineering,Green Hydrogen Energy Technology
 ropt,Faculty of Engineering,Science and Engineering,Resilience of Urban Public Transport
 sssn,Faculty of Engineering,Science and Engineering,Smart Ship and Safe Navigation
 se-engineering,Faculty of Engineering,Science and Engineering,Structural and Earthquake Engineering
 smsrg,Faculty of Engineering,Science and Engineering,Structural Maintenance and Strengthening
+sri,Faculty of Engineering,Science and Engineering,Sustainable and Resilient Infrastructure
 swm-rg,Faculty of Engineering,Science and Engineering,Solid Waste Management
 mrcrg,Faculty of Engineering,Science and Engineering,Mechatronic and Robotic Control
 rene,Faculty of Engineering,Science and Engineering,Renewable Energy
@@ -172,6 +180,7 @@ house-sett,Faculty of Engineering,Science and Engineering,Housing and Settlement
 build-acoustics,Faculty of Engineering,Science and Engineering,Building Acoustics
 prg,Faculty of Engineering,Science and Engineering,Paleoenvironmental
 cdm,Faculty of Engineering,Science and Engineering,Computing and Data Mining
+tanpa-halaman-ai-robotics-research-group,Faculty of Engineering,Science and Engineering,AI Robotics
 nap,Faculty of Engineering,Science and Engineering,Noise and Air Pollution
 ammd,Faculty of Engineering,Science and Engineering,Applied Mechanics and Mechanical Design
 lightweight-mat,Faculty of Engineering,Science and Engineering,Lightweight Material
@@ -208,6 +217,7 @@ iorg,Faculty of Medicine,Medical and Health Science,Immuno-Oncology
 dhrg,Faculty of Medicine,Medical and Health Science,Digestive Health
 pneumonia,Faculty of Medicine,Medical and Health Science,Pneumonia
 cava-rg,Faculty of Medicine,Medical and Health Science,Cardiovascular
+ioprg,Faculty of Medicine,Medical and Health Science,Industrial and Organizational Psychology
 medi-edu,Faculty of Medicine,Medical and Health Science,Medical Education
 aio-rg,Faculty of Dentistry,Medical and Health Science,Advanced Imaging of Oromaxillofacial
 idea,Faculty of Dentistry,Medical and Health Science,Immersive Development For Engaging Advancements
@@ -219,6 +229,7 @@ rdrg,Faculty of Dentistry,Medical and Health Science,Regenerative Dentistry
 oraclefrg,Faculty of Dentistry,Medical and Health Science,Orofacial Cleft
 geriatricdentistry,Faculty of Dentistry,Medical and Health Science,Geriatric Dentistry
 dfd-rg,Faculty of Dentistry,Medical and Health Science,Digital Forensic Dentistry
+oralmicrobiome-rg,Faculty of Dentistry,Medical and Health Science,Oral Microbiome Research
 bcqlrg,Faculty of Public Health,Medical and Health Science,Birth Cohort and Quality of Life
 coastaldw,Faculty of Public Health,Medical and Health Science,Coastal Domestic Water
 eiarg,Faculty of Public Health,Medical and Health Science,Environmental Impact Assessment
@@ -238,6 +249,7 @@ urbhealth,Faculty of Public Health,Medical and Health Science,Urban Health and H
 workfasma,Faculty of Public Health,Medical and Health Science,Workplace Fatigue and Stress Management
 nutriepi,Faculty of Public Health,Medical and Health Science,Nutritional Epidemiology
 ecohealth,Faculty of Public Health,Medical and Health Science,Environmental contamination and Health Risk
+ffoodtech-2,Faculty of Public Health,Medical and Health Science,Functional Food and Cancer Prevention
 ocnrg,Faculty of Public Health,Medical and Health Science,Obesity and Child Nutrition
 dreams,Faculty of Pharmacy,Medical and Health Science,Drug Efficacy and Medication Safety
 drugsyn,Faculty of Pharmacy,Medical and Health Science,Drug Synthesis

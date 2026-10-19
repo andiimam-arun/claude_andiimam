@@ -25,6 +25,9 @@ DEGREES = {"sp", "spd", "msi", "mp", "mt", "st", "se", "sh", "mh", "ssi", "skm",
            "sos", "mpa", "msp", "sant", "spi", "spk", "mscpt", "dds", "spdgig", "sppd", "kic", "ap", "bsc", "bs", "dm"}
 
 
+ABBR = {"muh": "muhammad", "mhd": "muhammad", "moh": "mohammad", "abd": "abdul"}
+
+
 def norm_name(n):
     n = n.replace("​", " ").lower()
     n = re.sub(r"[^\w\s,.\-]", " ", n)
@@ -35,6 +38,7 @@ def norm_name(n):
         toks.pop(0)
     while toks and toks[-1] in DEGREES:
         toks.pop()
+    toks = [ABBR.get(t, t) for t in toks]
     out = []
     for t in toks:                            # "asman asman" -> "asman"
         if not out or out[-1] != t:
@@ -88,6 +92,50 @@ for key, ids in byname.items():
         if len(clusters) > 1 and not hasid:
             review.append([key, "nama_saja_lintas_klaster", len(ids), "; ".join(sorted({pen[i]["trg_slug"] for i in ids}))])
 
+# ---------- KETUA DULU: tempelkan varian nama ke baris ketua TRG ----------
+IDCOLS = ("orcid", "sinta_id", "scopus_id")
+is_leader = lambda i: pen[i]["peran"].strip().lower() == "leader"
+def cluster_map():
+    g = C.defaultdict(list)
+    for i in range(len(pen)):
+        g[find(i)].append(i)
+    return g
+def ids_of(ix, col):
+    return {pen[i][col].strip() for i in ix if pen[i][col].strip()}
+def tokens_of(ix):
+    return {tuple(pen[i]["_key"].split()) for i in ix if pen[i]["_key"]}
+def compatible(a, b):
+    """a, b: tuple token nama. Sama, atau yang pendek adalah awalan (urut) dari yang panjang."""
+    if a == b: return True
+    s_, l_ = (a, b) if len(a) <= len(b) else (b, a)
+    return len(s_) >= 2 and l_[:len(s_)] == s_
+fuzzy_attached = 0
+for _ in range(2):                          # dua putaran agar rantai gabungan stabil
+    g = cluster_map()
+    leader_roots = [r for r, ix in g.items() if any(is_leader(i) for i in ix)]
+    for lr in leader_roots:
+        lix = g[lr]
+        if find(lr) != lr and find(lix[0]) != find(lr):
+            continue
+        lt = tokens_of([i for i in lix if is_leader(i)])
+        for r2, ix2 in list(cluster_map().items()):
+            if find(r2) == find(lr):
+                continue
+            if any(is_leader(i) for i in ix2):      # dua ketua berbeda tidak digabung otomatis
+                continue
+            if any(ids_of(lix, c) and ids_of(ix2, c) and not (ids_of(lix, c) & ids_of(ix2, c)) for c in IDCOLS):
+                continue
+            tt = tokens_of(ix2)
+            hit = [(a, b) for a in lt for b in tt if compatible(a, b)]
+            if not hit:
+                continue
+            shortest = min(min(len(a), len(b)) for a, b in hit)
+            if shortest >= 3:
+                union(lix[0], ix2[0]); fuzzy_attached += 1
+            else:
+                review.append([" ".join(hit[0][0]) + " ~ " + " ".join(hit[0][1]), "nama_mirip_2kata_ketua", len(ix2),
+                               "; ".join(sorted({pen[i]["trg_slug"] for i in lix + ix2}))])
+
 # ---------- bersihkan keahlian -> tag ----------
 EMAIL = re.compile(r"\S+@\S+")
 BAD = re.compile(r"universit|institut|faculty|fakultas|department|departemen|hospital|school|college|lecturer|student|degree|"
@@ -138,7 +186,8 @@ rows, ptag, tagstat = [], [], C.defaultdict(lambda: dict(variants=C.Counter(), p
 for n, (root, ids) in enumerate(sorted(groups.items(), key=lambda kv: kv[1][0]), 1):
     pid = f"P{n:05d}"
     ps = [pen[i] for i in ids]
-    best = max(ps, key=lambda p: len(p["nama"]))["nama"]
+    lead_rows = [p for p in ps if p["peran"].strip().lower() == "leader"]
+    best = max(lead_rows or ps, key=lambda p: len(p["nama"]))["nama"]   # nama kanonik: dari baris ketua bila ada
     by_id = any(len(idx.get((c, p[c].strip()), [])) > 1 for p in ps for c in ("orcid", "sinta_id", "scopus_id") if p[c].strip())
     first = lambda c: next((p[c] for p in ps if p[c].strip()), "")
     tags = []
@@ -158,14 +207,18 @@ for n, (root, ids) in enumerate(sorted(groups.items(), key=lambda kv: kv[1][0]),
         if tagkey(t):
             tagstat[tagkey(t)]["variants"][t] += 1
     roles = sorted({p["peran"].title() for p in ps if p["peran"]})
-    trgs = sorted({p["trg_slug"] for p in ps})
+    order = ["Leader", "Lecturer", "Researcher", "Member", "External Collaborator", "Student"]
+    top = next((r for r in order if r.lower() in {x.lower() for x in roles}), roles[0] if roles else "")
+    lead_slugs = sorted({p["trg_slug"] for p in lead_rows})
+    trgs = lead_slugs + sorted({p["trg_slug"] for p in ps} - set(lead_slugs))   # TRG yang dipimpin didahulukan
+    ketua_di = " · ".join(re.sub(r" Research Group$", "", tinfo[x]["nama"]).strip() for x in lead_slugs)
     klas = sorted({tinfo[s]["klaster"] for s in trgs})
     rows.append([pid, best, norm_name(best), len(trgs), ";".join(trgs), ";".join(klas), ";".join(roles),
                  " | ".join(dict.fromkeys(t for t in tags)), first("scopus_id"), first("orcid"), first("sinta_id"),
-                 first("scholar_url"), "id" if by_id else ("nama" if len(ps) > 1 else "tunggal")])
+                 first("scholar_url"), "id" if by_id else ("nama" if len(ps) > 1 else "tunggal"), top, ketua_di, ";".join(lead_slugs)])
 
 hdr = ["peneliti_id", "nama", "nama_norm", "n_trg", "trg_slugs", "klaster", "peran", "keahlian_bersih",
-       "scopus_id", "orcid", "sinta_id", "scholar_url", "dasar_penggabungan"]
+       "scopus_id", "orcid", "sinta_id", "scholar_url", "dasar_penggabungan", "peran_tertinggi", "ketua_di", "ketua_slugs"]
 def write(f, h, r):
     with open(f"{D}/{f}", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh); w.writerow(h); w.writerows(r)
@@ -208,8 +261,8 @@ for t in trg:
     top = [(" ".join(k), c) for k, c in bi.most_common(6) if c >= 2] + [(k, c) for k, c in uni.most_common(8) if c >= 3]
     kw.append([t["slug"], t["nama"], len(titles[t["slug"]]), " | ".join(f"{k} ({c})" for k, c in top[:10])])
 write("trg_kata_kunci.csv", ["slug", "nama", "n_judul", "kata_kunci_dari_judul"], kw)
-print("baris peneliti", len(pen), "-> orang unik", len(rows))
-print(C.Counter(r[-1] for r in rows))
+print("baris peneliti", len(pen), "-> orang unik", len(rows), "| ketua:", sum(1 for r in rows if r[-1]), "| varian nama ditempel ke ketua:", fuzzy_attached)
+print(C.Counter(r[12] for r in rows))
 print("tag unik", len(tr), "| tag dipakai >=2 peneliti:", sum(1 for r in tr if r[2] >= 2), "| >=5:", sum(1 for r in tr if r[2] >= 5))
 print("review", len(review), C.Counter(r[1] for r in review))
 print("peneliti dgn >=1 tag", len({p for p, _ in ptag}))

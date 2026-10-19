@@ -175,6 +175,8 @@ def build(t, path):
     r0 = 4 + len(rows) + 1
     put(wp, f"A{r0}", "Yang paling perlu dilengkapi", f_bold, border=False)
     need = []
+    if "tanpa_halaman_situs" in masalah:
+        need.append("TRG ini belum punya halaman sendiri di situs TRG. Mohon isi seluruh formulir, termasuk daftar anggota.")
     if "halaman_tim_404" in masalah or "tim_tidak_terbaca_(tata_letak_lain_atau_kosong)" in masalah:
         need.append("Daftar anggota tim belum terbaca dari situs. Mohon isi lengkap di lembar Anggota.")
     if "keahlian_<50%" in masalah:

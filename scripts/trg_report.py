@@ -15,7 +15,8 @@ for t in trg:
     pct = lambda c: round(100 * sum(1 for p in ps if p[c].strip()) / n) if n else 0
     idpct = round(100 * sum(1 for p in ps if p["scopus_id"] or p["orcid"] or p["sinta_id"]) / n) if n else 0
     flags = []
-    if st.get((t["slug"], "ourteam")) == "404": flags.append("halaman_tim_404")
+    if t.get("catatan") in ("tanpa_halaman", "situs_dipakai_bersama"): flags.append("tanpa_halaman_situs")
+    elif st.get((t["slug"], "ourteam")) == "404": flags.append("halaman_tim_404")
     elif n == 0: flags.append("tim_tidak_terbaca_(tata_letak_lain_atau_kosong)")
     if t["n_publikasi"] == "0": flags.append("tanpa_publikasi")
     if t["n_proyek"] == "0": flags.append("tanpa_proyek")
