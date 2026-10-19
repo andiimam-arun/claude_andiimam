@@ -66,12 +66,39 @@
       <label class="check"><input type="checkbox" id="f-id"> <span data-i="fId">Punya ID peneliti</span></label>
       <button type="button" class="ghost" id="f-reset" data-i="reset">Atur ulang</button>
     </div>
+    <p class="kwchip" id="kwchip" hidden></p>
     <p class="count" id="count" aria-live="polite"></p>
     <ul class="cards" id="cards"></ul>
     <button type="button" class="more" id="more" hidden></button>
   </section>
 
   <section id="tema" class="panel" role="tabpanel" aria-labelledby="tab-tema" hidden>
+    <div class="card-block">
+      <h2 data-i="spotHead">Bidang riset terbanyak</h2>
+      <p class="muted" data-i="spotNote">Lima tema dengan artikel terbanyak yang tercatat di halaman TRG. Ini ukuran aktivitas riset yang tercatat, bukan mutu atau dampak.</p>
+      <ol class="spot" id="spot"></ol>
+    </div>
+
+    <div class="card-block">
+      <h2 data-i="netHead">Jaringan tema</h2>
+      <p class="muted" data-i="netNote">Setiap bulatan adalah satu tema; makin besar berarti makin banyak artikel. Garis menghubungkan tema yang dikerjakan oleh peneliti yang sama; makin tebal berarti makin banyak peneliti bersama. Klik bulatan untuk melihat detail.</p>
+      <div class="net-tools">
+        <label class="field"><span data-i="netMin">Tampilkan hubungan dari</span>
+          <select id="net-min"><option value="3">≥ 3</option><option value="5">≥ 5</option><option value="8">≥ 8</option><option value="12">≥ 12</option></select></label>
+        <div class="legend" id="legend-net"></div>
+      </div>
+      <div class="net-wrap">
+        <svg id="net" viewBox="0 0 1000 640" role="img" aria-labelledby="net-title"><title id="net-title">Jaringan tema riset</title></svg>
+        <aside class="net-detail" id="net-detail" aria-live="polite"></aside>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <h2 data-i="cloudHead">Kata kunci riset</h2>
+      <p class="muted" data-i="cloudNote">Kata yang sering muncul pada judul artikel TRG, sudah disaring dari kata umum. Ukuran menunjukkan jumlah artikel yang memuat kata itu. Klik sebuah kata untuk melihat TRG dan penelitinya.</p>
+      <div class="cloud" id="cloud" role="list"></div>
+    </div>
+
     <div class="card-block">
       <h2 data-i="themeHead">Peneliti menurut tema</h2>
       <p class="muted" data-i="themeNote">Klik sebuah tema untuk melihat para penelitinya. Satu peneliti bisa masuk beberapa tema, jadi totalnya melebihi jumlah peneliti unik.</p>

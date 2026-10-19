@@ -14,7 +14,7 @@ Tampilan mengikuti palet GloRI (navy `#1b2a5e`, merah `#c8102e`, emas `#c9973f`;
 | `assets/js/config.js` | Pengaturan: tautan GloRI, email koreksi, bahasa awal |
 | `assets/img/logo-glori.png` | Logo (disalin dari situs dummy; ganti dengan berkas resmi) |
 | `data/peta-data.js` | Semua data dalam satu berkas JavaScript (dipakai halaman, termasuk saat dibuka dari berkas) |
-| `data/*.json` | Data yang sama dalam JSON: `peneliti`, `trg`, `tag`, `meta` |
+| `data/*.json` | Data yang sama dalam JSON: `peneliti`, `trg`, `tag`, `meta`, `insights` |
 
 ## Memasang di situs Laravel GloRI
 
@@ -40,6 +40,7 @@ Data dibuat dari halaman publik trg.unhas.ac.id oleh skrip di repositori:
 python3 scripts/trg_crawl.py --out data/trg --cache CACHE_DIR
 python3 scripts/trg_dedup_tags.py && python3 scripts/trg_tag_tier1.py && python3 scripts/trg_report.py
 python3 scripts/trg_dashboard_data.py site/peta-riset/data --tanpa-mahasiswa
+python3 scripts/trg_insights.py   # jaringan tema, kata kunci, statistik artikel; juga membuat ulang peta-data.js
 ```
 
 Lalu ganti folder `data/` di server (`peta-data.js` dan berkas JSON dibuat bersamaan). Data bersifat salinan per tanggal (`meta.json`), bukan data hidup.
@@ -60,7 +61,21 @@ Lalu ganti folder `data/` di server (`peta-data.js` dan berkas JSON dibuat bersa
 
 **`trg.json`**: `slug`, `nama`, `fakultas`, `klaster`, `tag_ids`, `ketua`, `n_peneliti`, `n_publikasi`, `n_buku`, `n_paten`, `n_proyek`, `url`, `masalah`.
 **`tag.json`**: 38 tema Tingkat 1 (draf): `tag_id`, `nama` (ID), `name_en`, `klaster`, `n_trg`, `n_peneliti`, `n_publikasi`.
-**`meta.json`**: tanggal pembuatan dan angka ringkasan.
+**`meta.json`**: tanggal pembuatan dan angka ringkasan (`n_artikel` = artikel unik).
+**`insights.json`** (dibuat `scripts/trg_insights.py`): `tema` (artikel unik per tema), `edges` (`[tema_a, tema_b, jumlah peneliti bersama]`, minimal 3),
+`keywords` (kata kunci riset: `t` istilah, `id` padanan Indonesia, `n` jumlah artikel, `n_trg`, `klaster` dominan, `slugs` TRG terkait, `tema`).
+
+## Jaringan tema dan awan kata kunci
+
+- **Ukuran = jumlah artikel unik yang tercatat di halaman TRG** (judul dinormalkan; artikel yang sama di beberapa TRG dihitung sekali).
+  Ini ukuran aktivitas riset tercatat, bukan mutu atau dampak, dan tidak boleh dibaca sebagai peringkat keunggulan.
+- **Tren per tahun sengaja tidak ditampilkan.** Halaman TRG baru terisi sejak program TRG berjalan, sehingga artikel terbaru tercatat jauh lebih
+  lengkap daripada yang lama dan "pertumbuhan" akan menyesatkan.
+- **Garis jaringan** = jumlah peneliti yang sama di dua tema. Tema peneliti diwarisi dari TRG, bukan dari keahlian pribadi.
+- **Kata kunci disaring dengan daftar kata umum** (`STOP` di `scripts/trg_insights.py`, mis. "regency", "city", "characteristics").
+  Tambahkan kata ke daftar itu bila ada istilah umum yang masih lolos, lalu jalankan ulang skrip.
+- Awan kata berupa tombol HTML biasa (bukan kanvas), jadi dapat dibaca pembaca layar dan dipakai dengan papan ketik.
+
 
 ## Integrasi database (tahap berikut)
 
