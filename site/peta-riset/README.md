@@ -13,7 +13,8 @@ Tampilan mengikuti palet GloRI (navy `#1b2a5e`, merah `#c8102e`, emas `#c9973f`;
 | `assets/js/app.js` | Logika pencarian, tampilan, bahasa |
 | `assets/js/config.js` | Pengaturan: tautan GloRI, email koreksi, bahasa awal |
 | `assets/img/logo-glori.png` | Logo (disalin dari situs dummy; ganti dengan berkas resmi) |
-| `data/*.json` | Data: `peneliti`, `trg`, `tag`, `meta` |
+| `data/peta-data.js` | Semua data dalam satu berkas JavaScript (dipakai halaman, termasuk saat dibuka dari berkas) |
+| `data/*.json` | Data yang sama dalam JSON: `peneliti`, `trg`, `tag`, `meta` |
 
 ## Memasang di situs Laravel GloRI
 
@@ -26,7 +27,8 @@ Tampilan mengikuti palet GloRI (navy `#1b2a5e`, merah `#c8102e`, emas `#c9973f`;
    `?embed=1` menyembunyikan bilah atas dan catatan kaki. Parameter lain: `lang=id|en`, `tab=cari|tema|trg`, `q=kata+kunci`.
 4. Isi `assets/js/config.js` (email koreksi, tautan beranda).
 
-Halaman harus dibuka lewat server web, bukan langsung dari berkas (`file://`), karena data dimuat dengan `fetch`.
+Halaman juga bisa dibuka langsung dengan klik ganda `index.html` (tanpa server): data tertanam di `data/peta-data.js`.
+Berkas JSON di `data/` tetap disertakan sebagai kontrak data dan untuk integrasi database.
 Bila situs memakai Content-Security-Policy, izinkan `fonts.googleapis.com` dan `fonts.gstatic.com`, atau unggah Jost dan Roboto
 ke folder sendiri dan ganti baris `<link>` font di `index.html`.
 
@@ -40,7 +42,7 @@ python3 scripts/trg_dedup_tags.py && python3 scripts/trg_tag_tier1.py && python3
 python3 scripts/trg_dashboard_data.py site/peta-riset/data --tanpa-mahasiswa
 ```
 
-Lalu ganti folder `data/` di server. Data bersifat salinan per tanggal (`meta.json`), bukan data hidup.
+Lalu ganti folder `data/` di server (`peta-data.js` dan berkas JSON dibuat bersamaan). Data bersifat salinan per tanggal (`meta.json`), bukan data hidup.
 
 ## Kamus data
 
@@ -63,7 +65,7 @@ Lalu ganti folder `data/` di server. Data bersifat salinan per tanggal (`meta.js
 ## Integrasi database (tahap berikut)
 
 Bila data dipindah ke database Laravel, cukup sediakan endpoint JSON dengan bentuk yang sama dan ubah fungsi `load()` di `app.js`
-(`fetch("data/" + name + ".json")`) agar memanggil endpoint itu. Antarmuka tidak perlu diubah.
+(`loadAll()`, yang memakai `window.PETA_DATA` bila ada dan `fetch` JSON bila tidak) agar memanggil endpoint itu, dan hapus tag `<script src="data/peta-data.js">`. Antarmuka tidak perlu diubah.
 
 ## Catatan kualitas data
 

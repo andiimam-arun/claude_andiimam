@@ -83,3 +83,12 @@ json.dump({"dibuat": datetime.date.today().isoformat(), "sumber": "Halaman publi
 for name, rows in (("peneliti", pen), ("trg", tr), ("tag", tg)):
     json.dump(rows, open(f"{O}/{name}.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print(name, len(rows), os.path.getsize(f"{O}/{name}.json"))
+
+# versi satu berkas JS agar halaman dapat dibuka langsung dari berkas (file://) tanpa server web
+if "--tanpa-mahasiswa" in sys.argv:
+    bundle = {n: json.load(open(f"{O}/{n}.json", encoding="utf-8")) for n in ("peneliti", "trg", "tag", "meta")}
+    with open(f"{O}/peta-data.js", "w", encoding="utf-8") as fh:
+        fh.write("/* dibuat oleh scripts/trg_dashboard_data.py; jangan disunting manual */\nwindow.PETA_DATA = ")
+        json.dump(bundle, fh, ensure_ascii=False, separators=(",", ":"))
+        fh.write(";\n")
+    print("peta-data.js", os.path.getsize(f"{O}/peta-data.js"))

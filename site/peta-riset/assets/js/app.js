@@ -23,7 +23,7 @@
       trgShowing: function (a) { return a + " TRG"; }, noLeader: "Ketua belum terbaca dari situs", moreChips: function (n) { return "+" + n + " lainnya"; },
       source: function (d, u) { return "Sumber: halaman publik " + u + ", dikumpulkan " + d + "."; },
       contact: function (e) { return "Koreksi data: " + e; }, contactNone: "Untuk koreksi data, hubungi pengelola GloRI.",
-      loadErr: "Data tidak dapat dimuat. Buka halaman ini lewat server web (bukan langsung dari berkas) dan pastikan folder data/ ada."
+      loadErr: "Data tidak dapat dimuat. Pastikan folder data/ (berisi peta-data.js dan berkas JSON) ada di samping index.html."
     },
     en: {
       skip: "Skip to content", back: "Back to GloRI", eyebrow: "Global Research Institute · Hasanuddin University",
@@ -42,7 +42,7 @@
       trgShowing: function (a) { return a + " TRGs"; }, noLeader: "Leader not yet read from the site", moreChips: function (n) { return "+" + n + " more"; },
       source: function (d, u) { return "Source: public pages of " + u + ", collected " + d + "."; },
       contact: function (e) { return "Data corrections: " + e; }, contactNone: "For data corrections, contact the GloRI administrators.",
-      loadErr: "Data could not be loaded. Open this page through a web server (not directly from a file) and make sure the data/ folder exists."
+      loadErr: "Data could not be loaded. Make sure the data/ folder (containing peta-data.js and the JSON files) sits next to index.html."
     }
   };
   var KLASTER_EN = { "Agro": "Agro", "Sosial": "Social Sciences", "Sains-Teknik": "Science & Engineering", "Kesehatan": "Health", "Vokasi": "Vocational", "Multidisiplin": "Multidisciplinary" };
@@ -283,9 +283,15 @@
   }
 
   function load(name) { return fetch("data/" + name + ".json").then(function (r) { if (!r.ok) throw new Error(name + " " + r.status); return r.json(); }); }
+  // Data tertanam (data/peta-data.js) dipakai lebih dulu agar halaman bisa dibuka langsung dari berkas; bila tidak ada, ambil JSON lewat server.
+  function loadAll() {
+    var B = window.PETA_DATA;
+    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta]);
+    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta")]);
+  }
 
   readUrl(); applyI18n(); bind(); show(S.tab);
-  Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta")]).then(function (r) {
+  loadAll().then(function (r) {
     D.people = r[0]; D.trg = r[1]; D.tag = r[2]; D.meta = r[3];
     D.tag.forEach(function (g) { tagById[g.tag_id] = g; }); D.trg.forEach(function (g) { trgBySlug[g.slug] = g; });
     buildIndex(); $("#loadmsg").hidden = true; renderAll();
