@@ -35,7 +35,7 @@ for u in unik:
     if u["scopus_id"]: ids.append("Scopus " + u["scopus_id"])
     if u["orcid"]: ids.append("ORCID " + u["orcid"])
     peran = dedupe([ROLE.get(r.strip().lower(), r.strip()) for r in u["peran"].split(";")])
-    pen.append(dict(id=u["peneliti_id"], nama=u["nama"], peran=" · ".join(peran),
+    pen.append(dict(id=u["peneliti_id"], nama=u["nama"], peran=" · ".join(peran), ketua_di=u["ketua_di"],
         trg=" · ".join(short(tinfo[s]["nama"]) for s in slugs), trg_n=len(slugs),
         klaster=" · ".join(sorted({KL.get(tinfo[s]["klaster"], tinfo[s]["klaster"]) for s in slugs})),
         tag_ids=";".join(tids), tag=" · ".join(tname[t] for t in tids),

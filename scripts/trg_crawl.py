@@ -39,6 +39,25 @@ SECTIONS = {  # subhalaman -> nama keluaran
 ROLE_WORDS = {"leader", "lecturers", "lecturer", "external collaborators", "external collaborator",
               "researchers", "researcher", "students", "student"}
 
+ROLE_RX = [(re.compile(r"^(group\s+)?leader(\s+group|\s+of\b.*|s)?$|^ketua\b|^head of", re.I), "Leader"),
+           (re.compile(r"supervising|lecturer|dosen", re.I), "Lecturer"),
+           (re.compile(r"external|partner|collaborator|mitra", re.I), "External collaborator"),
+           (re.compile(r"researcher|peneliti", re.I), "Researcher"),
+           (re.compile(r"student|mahasiswa", re.I), "Student"),
+           (re.compile(r"^members?$|^team members?$", re.I), "Member")]
+
+
+def role_of(text):
+    """Judul bagian tim -> peran baku (Leader/Lecturer/...), atau None bila bukan judul peran."""
+    t = re.sub(r"\s+", " ", text).strip()
+    if not t or len(t) > 45:
+        return None
+    for rx, name in ROLE_RX:
+        if rx.search(t):
+            return name
+    return None
+
+
 _lock = threading.Lock()
 _last = [0.0]
 
@@ -147,6 +166,7 @@ def parse_home(s):
     return out
 
 
+AFF = re.compile(r"universit|institut|faculty|fakultas|department|departemen|school|politeknik|college|hospital|rumah sakit", re.I)
 ITEM_SPLIT = re.compile(r'<div class="jet-listing-grid__item ')
 
 
@@ -155,23 +175,34 @@ def parse_items(s):
     s = strip_noise(s)
     res, role = [], ""
     tok = re.compile(r'<h2[^>]*>([^<]+)</h2>|<div class="jet-listing-grid__item ')
-    pos = [(m.start(), m) for m in tok.finditer(s)]
+    pos = []
+    for m in tok.finditer(s):
+        if m.group(1) is not None and not role_of(m.group(1)):
+            continue  # h2 bukan judul peran: bagian dari item (nama ketua sering berupa h2)
+        pos.append((m.start(), m))
     for i, (st, m) in enumerate(pos):
         if m.group(1) is not None:
-            t = m.group(1).strip()
-            if t.lower() in ROLE_WORDS:
-                role = t
+            role = role_of(m.group(1))
             continue
         end = pos[i + 1][0] if i + 1 < len(pos) else len(s)
         chunk = s[st:end]
         fields = [clean(x) for x in re.findall(r'jet-listing-dynamic-field__content"\s*>(.*?)</div>', chunk, re.S)]
         links = [html.unescape(x) for x in re.findall(r'<a[^>]+href="([^"]+)"', chunk)]
         h3 = re.search(r"<h3[^>]*>(.*?)</h3>", chunk, re.S)
+        h2 = None if h3 else re.search(r"<h2[^>]*>(.*?)</h2>", chunk, re.S)
         p = re.search(r"<p[^>]*>(.*?)</p>", chunk, re.S)
-        rest = re.sub(r"(?s)<(h3|p)[^>]*>.*?</\1>", "", chunk)
+        rest = re.sub(r"(?s)<(h2|h3|p)[^>]*>.*?</\1>", "", chunk)
         texts = [clean(x) for x in re.findall(r">([^<>]+)<", rest) if clean(x)]
+        ptxt = clean(p.group(1)) if p else ""
+        if h2 and not fields:  # tata letak ketua: nama h2, lalu h4-h6 berisi afiliasi dan keahlian
+            hs = [clean(x) for x in re.findall(r"<h[456][^>]*>(.*?)</h[456]>", chunk, re.S)]
+            hs = [x for x in hs if x]
+            aff = [x for x in hs if AFF.search(x)]
+            exp = [x for x in hs if not AFF.search(x)]
+            fields = aff[:1]
+            ptxt = ptxt or "; ".join(exp)
         res.append(dict(role=role, fields=fields, links=links,
-                        name=clean(h3.group(1)) if h3 else "", p=clean(p.group(1)) if p else "",
+                        name=clean(h3.group(1)) if h3 else (clean(h2.group(1)) if h2 else ""), p=ptxt,
                         texts=texts))
     return res or parse_static_team(s) or parse_linkinbio(s)
 
@@ -183,8 +214,8 @@ def parse_static_team(s):
     pos = [(m.start(), m) for m in tok.finditer(s)]
     for i, (st, m) in enumerate(pos):
         if m.group(1) is not None:
-            if m.group(1).strip().lower() in ROLE_WORDS:
-                role = m.group(1).strip()
+            if role_of(m.group(1)):
+                role = role_of(m.group(1))
             continue
         end = pos[i + 1][0] if i + 1 < len(pos) else len(s)
         chunk = s[st:end]
@@ -221,6 +252,30 @@ def total_pages(s):
     return max(pages) if pages else 1
 
 
+STOP_HEAD = re.compile(r"our team|meet our team|we work together|about|important links|useful links|contact|social|information|"
+                       r"section title|home|publication|activities|research|news|partners?$|bridging|footer|menu|search", re.I)
+
+
+def leader_from_headings(s):
+    """Cadangan bila ketua tak terbaca oleh parser item: heading nama di bawah judul peran 'Leader'."""
+    s = strip_noise(s)
+    heads = [(m.start(), clean(m.group(2))) for m in re.finditer(r"<(h[1-6])[^>]*>(.*?)</\1>", s, re.S)]
+    for k, (pos, text) in enumerate(heads):
+        if role_of(text) != "Leader":
+            continue
+        for _, cand in heads[k + 1:k + 4]:
+            if role_of(cand) or STOP_HEAD.search(cand) or len(cand) > 80 or len(cand.split()) < 2:
+                if role_of(cand):
+                    break
+                continue
+            if AFF.search(cand) or re.search(r"\b(leader|professor at|assistant|lecturer)\b", cand, re.I):
+                continue
+            seg = s[pos:pos + 6000]
+            links = [html.unescape(x) for x in re.findall(r'<a[^>]+href="([^"#][^"]*)"', seg)][:8]
+            return [dict(role="Leader", fields=[], links=links, name=cand, p="", texts=[])]
+    return []
+
+
 def fetch_section(f, slug, sub, log, base=None):
     url = f"{base or BASE + '/' + slug}/{sub}/"
     st, body = f.get(url)
@@ -228,6 +283,14 @@ def fetch_section(f, slug, sub, log, base=None):
     if st != 200:
         return []
     items = parse_items(body)
+    if sub == "ourteam" and not any(it["role"] == "Leader" for it in items):
+        lead = leader_from_headings(body)
+        if lead:
+            same = [it for it in items if it["name"].lower() == lead[0]["name"].lower()]
+            if same:
+                same[0]["role"] = "Leader"
+            else:
+                items = lead + items
     for n in range(2, min(total_pages(body), 60) + 1):
         st, b = f.get(f"{url}?jsf=jet-engine&pagenum={n}")
         log.append((slug, sub, n, st))
