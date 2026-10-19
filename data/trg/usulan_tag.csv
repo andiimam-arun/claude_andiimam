@@ -12,10 +12,11 @@ criminal law,Criminal Law,10,3,Criminal Law
 microbiology,Microbiology,9,11,Microbiology
 anthropology,Anthropology,9,3,Anthropology
 phytopathology,Phytopathology,8,6,Phytopathology
-bacteriology,Bacteriology,8,2,Bacteriology
+bacteriology,Bacteriology,8,3,Bacteriology
 breeding plant,Plant Breeding,8,6,Plant Breeding | Plant breeding
 air pollution,Air Pollution,8,3,Air Pollution
 policy public,Public Policy,8,6,Public Policy
+remote sensing,Remote Sensing,7,7,Remote Sensing | and Remote Sensing
 accounting environmental,Environmental Accounting,7,5,Environmental Accounting
 food technology,Food Technology,7,5,Food Technology | Technology in food | Food Science & Technology | Food science and Technology
 coastal engineering,Coastal Engineering,7,2,Coastal Engineering
@@ -23,15 +24,14 @@ nursing,Nursing Science,7,7,Nursing Science | Nursing
 health mental nursing,Mental health nursing,7,1,Mental health nursing | Mental Health Nursing
 biology molecular,Molecular Biology,6,8,Molecular Biology
 engineering water,Water Engineering,6,2,Water Engineering | Water Science Engineering
+financial management,Financial Management,6,7,Financial Management
 management marketing,Marketing Management,6,8,Marketing Management
-financial management,Financial Management,6,6,Financial Management
 accounting management,Management Accounting,6,6,Management Accounting
 development economic,Economic Development,6,6,Economic Development | Development economics | Development Economics
 fixed point theory,Fixed point theory,6,2,Fixed point theory
 data,Data Science,6,1,Data Science
 clinical pharmacy,Clinical Pharmacy,6,5,Clinical Pharmacy | Clinical pharmacy
 pathology plant,Plant Pathology,5,5,Plant Pathology | Plant pathology
-remote sensing,Remote Sensing,5,6,Remote Sensing | and Remote Sensing
 ecology,Ecology,5,4,Ecology
 animal nutrition,Animal Nutrition,5,6,Animal Nutrition | ANIMAL NUTRITION | Animal Nutrition Science
 cattle dairy,Dairy Cattle,5,1,Dairy Cattle
@@ -46,10 +46,10 @@ pathology,Pathology,4,2,Pathology
 ecophysiology plant,Plant Ecophysiology,4,6,Plant Ecophysiology
 plant protection,Plant Protection,4,2,Plant Protection | Plant protection
 breeding rice,Rice Breeding,4,1,Rice Breeding
-ecology forest,Forest Ecology,4,3,Forest Ecology
+ecology forest,Forest Ecology,4,4,Forest Ecology
 anatomical pathology,Anatomical Pathology,4,4,Anatomical Pathology
-fish taxonomy,Fish Taxonomy,4,3,Fish Taxonomy
-management strategic,Strategic Management,4,7,Strategic Management
+fish taxonomy,Fish Taxonomy,4,4,Fish Taxonomy
+management strategic,Strategic Management,4,8,Strategic Management
 behaviour organizational,Organizational Behaviour,4,2,Organizational Behaviour
 accounting public sector,Public Sector Accounting,4,3,Public Sector Accounting
 auditing,Auditing,4,4,Auditing
@@ -64,6 +64,7 @@ immunology,Immunology,4,6,Immunology | immunology
 neonatology,Neonatology,4,2,Neonatology
 phytochemistry,Phytochemistry,4,4,Phytochemistry
 digestive surgery,Digestive Surgery,4,2,Digestive Surgery
+researcher,Researchers,4,1,Researchers
 biotechnology breeding plant,Plant Breeding and Biotechnology,3,6,Plant Breeding and Biotechnology
 physiology plant,Plant Physiology,3,3,Plant Physiology
 engineering food,Food Engineering,3,3,Food Engineering | food engineering | Food engineering
@@ -113,6 +114,7 @@ environmental,‪Environmental Science‬,2,3,‪Environmental Science‬ | Envi
 biodiversity soil,Soil Biodiversity,2,1,Soil Biodiversity
 agriculture commodity economic socio value,Socio Economic Value of Agriculture Commodities,2,3,Socio Economic Value of Agriculture Commodities
 development sociology,Sociology of Development,2,4,Sociology of Development
+sociology,Sociology,2,5,Sociology
 evaluation land survey,Survey and Land Evaluation,2,1,Survey and Land Evaluation
 pest product stored,Stored-Product Pest,2,2,Stored-Product Pest | Stored-Product Pests
 plant production,Plant Production,2,2,Plant Production | Plant production
@@ -133,7 +135,8 @@ biology cell molecular,Cell and Molecular Biology,2,2,Cell and Molecular Biology
 animal physiology,Animal Physiology,2,3,Animal Physiology
 biology reproductive,Reproductive Biology,2,3,Reproductive Biology
 animal breeding genetic,Animal Breeding and Genetics,2,1,Animal Breeding and Genetics
-dairy feed,Dairy Feed,2,1,Dairy Feed | Dairy Feed Science
+dairy feed,Dairy Feed,2,2,Dairy Feed | Dairy Feed Science
+south sulawesi,South Sulawesi,2,3,South Sulawesi
 additive feed,Feed additive,2,1,Feed additive | Feed Additive
 animal feed,Animal Feed,2,2,Animal Feed
 animal feed program study technology,Animal Feed Technology Study Program,2,2,Animal Feed Technology Study Program
@@ -144,17 +147,21 @@ state united,United State,2,1,United State
 food functional,Functional Food,2,1,Functional Food
 food processing,Food processing,2,3,Food processing | Food Processing
 sustainability,Sustainability,2,2,Sustainability
+change climate,Climate change,2,3,Climate change | Climate Change
 ggerg team,GGERG Team,2,2,GGERG Team
 fishery oceanography,Fisheries Oceanography,2,2,Fisheries Oceanography
-biology marine,Marine biology,2,2,Marine biology | Marine Biology
+biology marine,Marine Biology,2,3,Marine Biology | Marine biology
 living mapping marine resource,Mapping of Living Marine Resources,2,2,Mapping of Living Marine Resources | Marine Living Resource Mapping
 environmental geotechnical,Environmental Geotechnical,2,3,Environmental Geotechnical
-genetic population,Population Genetics,2,3,Population Genetics
+genetic population,Population Genetics,2,4,Population Genetics
+biology ray shark,Shark and Ray Biology,2,4,Shark and Ray Biology
 center environmental research smithsonian,Smithsonian Environmental Research Center,2,1,Smithsonian Environmental Research Center
 planning regional,Regional planning,2,2,Regional planning | Regional Planning
 aquaculture,Aquaculture,2,2,Aquaculture
 fishing gear technology,Fishing Gear Technology,2,1,Fishing Gear Technology
 gender,Gender,2,2,Gender
+forest landscape management,Forest Landscape Management,2,2,Forest Landscape Management
+business digital,and Digital Business,2,4,and Digital Business | Digital Business
 forest product technology,Forest Product Technology,2,2,Forest Product Technology
 forest non product timber utilization,Utilization of Non-Timber Forest Products,2,1,Utilization of Non-Timber Forest Products
 ecotourism,Ecotourism,2,3,Ecotourism
@@ -203,6 +210,7 @@ geology,Geology,2,1,Geology
 geology petroleum,Petroleum Geology,2,2,Petroleum Geology
 oceanography,Oceanography,2,2,Oceanography
 rg smp team,SMP-RG Team,2,3,SMP-RG Team
+environment,Environment,2,3,Environment
 architecture,Architecture,2,5,Architecture
 housing planning settlement,Housing and Settlement Planning,2,1,Housing and Settlement Planning
 environmental transportation,Environmental Transportation,2,3,Environmental Transportation
@@ -227,10 +235,10 @@ radiology surgery veterinary,Veterinary Surgery and Radiology,2,1,Veterinary Sur
 anatomy veterinary,Veterinary Anatomy,2,1,Veterinary Anatomy
 cancer colorectal,colorectal cancer,2,2,colorectal cancer
 pulmonology,Pulmonology,2,1,Pulmonology
+accademy rabdan,Rabdan Accademy,2,1,Rabdan Accademy
 coordination participant,participant coordination,2,1,participant coordination | and participant coordination
 field operation,and field operations,2,1,and field operations | field operations
 assessment ehra environmental health risk,Environmental Health Risk Assessment (EHRA),2,2,Environmental Health Risk Assessment (EHRA) | and environmental health risk assessment (EHRA)
-environment,Environment,2,2,Environment
 environmental health,Environmental Health,2,2,Environmental Health
 health occupational,Occupational Health,2,3,Occupational Health
 collaboration external,External Collaboration,2,1,External Collaboration
@@ -364,7 +372,6 @@ darmawan dr ir prof salman,Prof. Dr. Ir. Darmawan Salman,1,3,Prof. Dr. Ir. Darma
 adaptation based change climate community,community-based climate change adaptation,1,3,community-based climate change adaptation
 children food need special technology,Food Technology for Special Needs Children,1,1,Food Technology for Special Needs Children
 community conflict development sociology,Sociology of Conflict and Community Development,1,3,Sociology of Conflict and Community Development
-sociology,Sociology,1,3,Sociology
 propagation vitro,In Vitro Propagation,1,1,In Vitro Propagation
 olericulture,Olericulture,1,1,Olericulture
 horticulture microbe,Horticulture Microbes,1,1,Horticulture Microbes
@@ -416,6 +423,7 @@ disease soilborne,Soilborne Disease,1,2,Soilborne Disease
 oomycete pathogenic plant,Plant Pathogenic Oomycetes,1,2,Plant Pathogenic Oomycetes
 genetic pathogen plant population,Plant Pathogen Population Genetics,1,2,Plant Pathogen Population Genetics
 biological conservation control enemy natural,Biological Control and Conservation of Natural Enemies,1,1,Biological Control and Conservation of Natural Enemies
+forest non product timber,Non-Timber Forest Products,1,2,Non-Timber Forest Products
 plant,Plant science,1,1,Plant science
 conservation forest,Forest Conservation,1,1,Forest Conservation
 invasive specy,Invasive species,1,1,Invasive species
@@ -438,6 +446,8 @@ cattle consultant integrated oil palm system,Consultant (Integrated Cattle-Oil P
 feasibility study,Feasibility Study,1,1,Feasibility Study
 agribusine,Agribusines,1,1,Agribusines
 idlf rg team,IDLF-RG Team,1,1,IDLF-RG Team
+cnica nacional t universidad,Universidad Técnica Nacional,1,1,Universidad Técnica Nacional
+costa rica,Costa Rica,1,1,Costa Rica
 china ilri,ILRI-China,1,1,ILRI-China
 animal reproduction,Animal Reproduction,1,1,Animal Reproduction
 biotechnology reproduction,Biotechnology Reproduction,1,1,Biotechnology Reproduction
@@ -461,7 +471,7 @@ dynamic,dynamics,1,1,dynamics
 succession,succession,1,1,succession
 etc,etc,1,1,etc
 dairy production,Dairy Production,1,1,Dairy Production
-dairy nutrition physiology,Nutrition and Physiology in Dairy Science,1,1,Nutrition and Physiology in Dairy Science
+dairy nutrition physiology,Nutrition and Physiology in Dairy Science,1,2,Nutrition and Physiology in Dairy Science
 dairy farming system,Dairy Farming System,1,1,Dairy Farming System
 analytical material measurement,Materials and Analytical Measurement,1,4,Materials and Analytical Measurement
 environmental toxicology,Environmental Toxicology,1,4,Environmental Toxicology
@@ -482,13 +492,13 @@ other trait,and other traits,1,1,and other traits
 all core retaining strength their while,all while retaining their core strengths,1,1,all while retaining their core strengths
 charoen co group pokphand,Charoen Pokphand Group Co,1,1,Charoen Pokphand Group Co
 ltd,Ltd,1,1,Ltd
-south sulawesi,South Sulawesi,1,1,South Sulawesi
 weifang,Weifang,1,1,Weifang
 china,China,1,1,China
 manhattan,Manhattan,1,1,Manhattan
 dinajpur,Dinajpur,1,1,Dinajpur
 bangladesh,Bangladesh,1,1,Bangladesh
 kendari,Kendari,1,1,Kendari
+dairy farm management operation,Management of Dairy Farm Operations,1,1,Management of Dairy Farm Operations
 animal aquatic nutrition,Aquatic Animal Nutrition,1,1,Aquatic Animal Nutrition
 aquaculture fish nutrition,Fish Nutrition and Aquaculture,1,1,Fish Nutrition and Aquaculture
 fish nutritionfish,fish nutritionfish,1,1,fish nutritionfish
@@ -518,26 +528,28 @@ governance marine,Marine Governance,1,1,Marine Governance
 interdisciplinary,Interdisciplinary Science,1,1,Interdisciplinary Science
 ecological modelling network social,Social-Ecological Network Modelling,1,1,Social-Ecological Network Modelling
 expert genetic,Expert in Genetics,1,3,Expert in Genetics
-coral ecology reef,Coral Reef Ecology,1,4,Coral Reef Ecology
-coral ecology marine reef,Marine ecology and coral reef,1,4,Marine ecology and coral reef
-change climate,Climate change,1,2,Climate change
+ecology marine,Marine Ecology,1,5,Marine Ecology
+coral ecology reef,Coral Reef Ecology,1,5,Coral Reef Ecology
+coral ecology marine reef,Marine ecology and coral reef,1,5,Marine ecology and coral reef
 dynamic fishery population,Fisheries Population Dynamics,1,1,Fisheries Population Dynamics
 fishery remote sensing,Fisheries Remote Sensing,1,4,Fisheries Remote Sensing | Remote Sensing for Fisheries
 ecotoxicology marine,Marine ecotoxicology,1,4,Marine ecotoxicology
 capture fishery information management system,Capture Fisheries Management Information System,1,1,Capture Fisheries Management Information System
 ecotoxicology marine pollution,Marine Pollution and Ecotoxicology,1,1,Marine Pollution and Ecotoxicology
 geo marine spatial,Marine Geo-Spatial,1,2,Marine Geo-Spatial
-hydrodynamic marine oceanography physical,Physical Oceanography and Marine Hydrodynamics,1,3,Physical Oceanography and Marine Hydrodynamics
-hydrodynamic marine oceanographic physical,Physical Oceanographic and Marine Hydrodynamics,1,3,Physical Oceanographic and Marine Hydrodynamics
-modeling oceanographic,Oceanographic Modeling,1,3,Oceanographic Modeling
+hydrodynamic marine oceanography physical,Physical Oceanography and Marine Hydrodynamics,1,4,Physical Oceanography and Marine Hydrodynamics
+hydrodynamic marine oceanographic physical,Physical Oceanographic and Marine Hydrodynamics,1,4,Physical Oceanographic and Marine Hydrodynamics
+oseanografi phisical,Phisical Oseanografi,1,4,Phisical Oseanografi
+modeling oceanographic,Oceanographic Modeling,1,4,Oceanographic Modeling
 coral disease marine microbiology,Marine Microbiology and Coral Diseases,1,1,Marine Microbiology and Coral Diseases
 aquatic biodiversity resource taxonomy,Biodiversity and Taxonomy of Aquatic Resources,1,1,Biodiversity and Taxonomy of Aquatic Resources
-diversity genetic,Genetic Diversity,1,2,Genetic Diversity
+genetic marine,Marine Genetic,1,3,Marine Genetic
+diversity genetic,Genetic Diversity,1,3,Genetic Diversity
 marine pollution,Marine Pollution,1,1,Marine Pollution
 economic fishery marine socio,Marine and Fisheries Socio-Economic,1,1,Marine and Fisheries Socio-Economic
 engineering environmental pollutant,Pollutant and Environmental Engineering,1,3,Pollutant and Environmental Engineering
 applied marine microbiology,Applied Marine Microbiology,1,1,Applied Marine Microbiology
-bioprospecting marine,Marine Bioprospecting,1,3,Marine Bioprospecting
+bioprospecting marine,Marine Bioprospecting,1,4,Marine Bioprospecting
 aquatic ecotoxicology plastic pollution,Aquatic Ecotoxicology and Plastic Pollution,1,1,Aquatic Ecotoxicology and Plastic Pollution
 environmental hydraulic hydrology,Hydrology and Environmental Hydraulics,1,1,Hydrology and Environmental Hydraulics
 2010 are coastal his main oceanography research topic,in 2010. His main research topics are coastal oceanography,1,1,in 2010. His main research topics are coastal oceanography
@@ -548,6 +560,12 @@ bahtiar hendriyadi,Hendriyadi Bahtiar,1,1,Hendriyadi Bahtiar
 muhlis,Muhlis,1,1,Muhlis
 amalia ramadhan,Amalia Ramadhan,1,1,Amalia Ramadhan
 edwin kevin kondo,Edwin Kevin Kondo,1,1,Edwin Kevin Kondo
+ecology seagrass,Seagrass Ecology,1,1,Seagrass Ecology
+biology fishery,Fisheries Biology,1,3,Fisheries Biology
+biology fishery management,Fisheries Biology and Management,1,3,Fisheries Biology and Management
+ichtiology marine,Marine Ichtiology,1,2,Marine Ichtiology
+marine plankton,Marine Plankton,1,1,Marine Plankton
+biodiversity marine,Marine Biodiversity,1,1,Marine Biodiversity
 environmental institure marine technology,Institure of Marine and Environmental Technology,1,1,Institure of Marine and Environmental Technology
 engineering fishing vessel,Fishing vessel engineering,1,1,Fishing vessel engineering
 fishery marine,Marine Fisheries,1,1,Marine Fisheries
@@ -561,8 +579,6 @@ earth,Earth Science,1,1,Earth Science
 fishery marine remote sensing,Marine Fisheries Remote Sensing,1,1,Marine Fisheries Remote Sensing
 economic fishery socio,Fisheries Socio-Economics,1,2,Fisheries Socio-Economics
 budidaya laut,Budidaya Laut,1,1,Budidaya Laut
-biology fishery management,Fisheries Biology and Management,1,2,Fisheries Biology and Management
-biology fishery,Fisheries Biology,1,2,Fisheries Biology
 analyst aquaculture,Aquaculture Analyst,1,1,Aquaculture Analyst
 fishing technology,Fishing Technology,1,1,Fishing Technology
 hatchery management shrimp,Hatchery Management of Shrimp,1,1,Hatchery Management of Shrimp
@@ -593,6 +609,23 @@ fungi,fungi,1,1,fungi
 truffle,truffles,1,1,truffles
 phytophatology,Phytophatology,1,1,Phytophatology
 karstbiosociety team,KARSTBIOSOCIETY Team,1,1,KARSTBIOSOCIETY Team
+forest management,Forest Management,1,1,Forest Management
+economic forestry,Economic Forestry,1,1,Economic Forestry
+forest policy,Forest Policy,1,1,Forest Policy
+biology conservation ecology forest,Forest Ecology and Conservation Biology,1,2,Forest Ecology and Conservation Biology
+agroforestry,Agroforestry,1,1,Agroforestry
+engineering forest harvesting region,Forest Harvesting Region Engineering,1,1,Forest Harvesting Region Engineering
+entrepreneurship forestry,Forestry Entrepreneurship,1,1,Forestry Entrepreneurship
+forest marketing product,Marketing of Forest Products,1,1,Marketing of Forest Products
+geographic information management system watershed,Geographic Information System and Watershed Management,1,1,Geographic Information System and Watershed Management
+political sosialogy,Political Sosialogy,1,2,Political Sosialogy
+forest management multiple use,Multiple-use Forest Management,1,1,Multiple-use Forest Management
+economic forestry social,Social Economic Forestry,1,1,Social Economic Forestry
+silviculture,Silviculture,1,1,Silviculture
+agroforestry forest restoration,Agroforestry and Forest Restoration,1,1,Agroforestry and Forest Restoration
+information management system,Management Information System,1,3,Management Information System
+goverment policy,Goverment Policy,1,1,Goverment Policy
+environmental forestry social sociology,Environmental Sociology and Social Forestry,1,1,Environmental Sociology and Social Forestry
 bees beneficial honey insect management,Management of Honey Bees and Beneficial Insects,1,1,Management of Honey Bees and Beneficial Insects
 cutting engineered tool,Engineered Cutting Tool,1,2,Engineered Cutting Tool
 computer control machine numerical,Computer Numerical Control Machine,1,2,Computer Numerical Control Machine
@@ -630,7 +663,6 @@ environmental forestry remote sensing,Remote sensing of Forestry and environment
 biogeography,Biogeography,1,1,Biogeography
 geographic information modelling spatial system,Geographic information system & Spatial Modelling,1,1,Geographic information system & Spatial Modelling
 geoinformatic gis remote sensing technology,Geoinformatic Technology - Remote Sensing and GIS,1,1,Geoinformatic Technology - Remote Sensing and GIS
-forest landscape management,Forest Landscape Management,1,1,Forest Landscape Management
 geographic information system,Geographic Information System,1,1,Geographic Information System
 forest inventory remote sensing,Forest Inventory and Remote Sensing,1,1,Forest Inventory and Remote Sensing
 modelling remote sensing spatial,Remote Sensing and Spatial Modelling,1,1,Remote Sensing and Spatial Modelling
@@ -699,12 +731,10 @@ culture organizational,Organizational Culture,1,2,Organizational Culture
 corporate financial management,Corporate Financial Management,1,1,Corporate Financial Management
 accounting finance,Accounting and Finance,1,3,Accounting and Finance
 accounting government,Government Accounting,1,3,Government Accounting
-political sosialogy,Political Sosialogy,1,1,Political Sosialogy
 accounting information system,Accounting Information System,1,1,Accounting Information System
 accounting assurance sustainability sustainability,Sustainability Accounting and Sustainability Assurance,1,2,Sustainability Accounting and Sustainability Assurance
 accounting blue,Blue Accounting,1,1,Blue Accounting
 accounting corporate governance,Accounting and Corporate Governance,1,1,Accounting and Corporate Governance
-business digital,Digital Business,1,1,Digital Business
 economic pembangunan perencanaan,Ekonomi Pembangunan dan Perencanaan,1,3,Ekonomi Pembangunan dan Perencanaan
 economic islam,Ekonomi Islam,1,3,Ekonomi Islam
 economic publik,Ekonomi Publik,1,3,Ekonomi Publik
@@ -729,7 +759,7 @@ ai complex modelling system,Complex Systems Modelling & AI,1,2,Complex Systems M
 accounting behavioral,Behavioral Accounting,1,1,Behavioral Accounting
 accounting critical,Critical Accounting,1,1,Critical Accounting
 accounting environmental waste,Environmental (Waste) Accounting,1,1,Environmental (Waste) Accounting
-human resource,Human Resources,1,1,Human Resources
+human resource,Human Resources,1,2,Human Resources
 entrepreneurship tourism,Tourism and Entrepreneurship,1,1,Tourism and Entrepreneurship
 economic resource,Resource Economics,1,1,Resource Economics
 environmental sustainability,Environmental sustainability,1,2,Environmental sustainability
@@ -793,7 +823,7 @@ politic religious security study,Security Studies & Religious Politics,1,1,Secur
 psicology social,Social Psicology,1,1,Social Psicology
 disaster governance,Disaster Governance,1,2,Disaster Governance
 agrarian rural sociology,Rural and Agrarian Sociology,1,1,Rural and Agrarian Sociology
-asset engineering human infrastructure management security,Infrastructure Asset Management & Human Security Engineering,1,1,Infrastructure Asset Management & Human Security Engineering
+asset engineering human infrastructure management security,Infrastructure Asset Management & Human Security Engineering,1,2,Infrastructure Asset Management & Human Security Engineering
 comparative politic,Comparative Politics,1,1,Comparative Politics
 comparative democratization,Comparative Democratization,1,1,Comparative Democratization
 collective violence,Collective Violence,1,1,Collective Violence
@@ -989,6 +1019,19 @@ engineering web,Web Engineering,1,2,Web Engineering
 animation,Animation,1,2,Animation
 ical,ICAL,1,1,ICAL
 arduino implemented mega microcontroller on,implemented on Arduino Mega microcontroller,1,1,implemented on Arduino Mega microcontroller
+civil engineering geodesy,Civil Engineering and Geodesy,1,1,Civil Engineering and Geodesy
+building,Building,1,2,Building
+construction,Construction,1,2,Construction
+management waste,Waste Management,1,2,Waste Management
+geographic gis information system,Geographic Information System (GIS),1,1,Geographic Information System (GIS)
+engineering geospatial,Geospatial Engineering,1,1,Geospatial Engineering
+engineering resource water,Water Resources Engineering,1,1,Water Resources Engineering
+hydraulic structure,Hydraulic Structure,1,1,Hydraulic Structure
+model numerical,Numerical Model,1,1,Numerical Model
+modelling water,Water Modelling,1,1,Water Modelling
+seismogeodesy,Seismogeodesy,1,1,Seismogeodesy
+geodesy,Geodesy,1,1,Geodesy
+geomatic,Geomatics,1,1,Geomatics
 management sanitation waste,( Sanitation and Waste Management ),1,1,( Sanitation and Waste Management )
 group research,Research Group,1,1,Research Group
 leader mrcrg,Leader of MRCRG,1,1,Leader of MRCRG
@@ -1323,9 +1366,6 @@ are cancer lung,are: lung cancer,1,1,are: lung cancer
 breast cancer,breast cancer,1,1,breast cancer
 cancer prostate,prostate cancer,1,1,prostate cancer
 cancer stomach,and stomach cancer,1,1,and stomach cancer
-building,Building,1,1,Building
-construction,Construction,1,1,Construction
-management waste,Waste Management,1,1,Waste Management
 resource water,Water Resources,1,1,Water Resources
 coastal resilience settlement,Coastal Settlement Resilience,1,1,Coastal Settlement Resilience
 criminologist legal professional,Legal Professional and Criminologist,1,1,Legal Professional and Criminologist

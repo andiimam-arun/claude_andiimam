@@ -13,7 +13,7 @@ KL = {"Agro Complex": "Agro", "Social Science": "Sosial", "Science and Engineeri
 ROLE = {"leader": "Leader", "lecturers": "Lecturer", "lecturer": "Lecturer", "researchers": "Researcher",
         "researcher": "Researcher", "students": "Student", "student": "Student",
         "external collaborators": "External collaborator", "external collaborator": "External collaborator"}
-MASALAH = {"halaman_tim_404": "Halaman tim tidak ada", "tim_tidak_terbaca_(tata_letak_lain_atau_kosong)": "Tim tidak terbaca",
+MASALAH = {"tanpa_halaman_situs": "Belum punya halaman TRG", "halaman_tim_404": "Halaman tim tidak ada", "tim_tidak_terbaca_(tata_letak_lain_atau_kosong)": "Tim tidak terbaca",
            "tanpa_publikasi": "Tanpa publikasi", "tanpa_proyek": "Tanpa proyek", "keahlian_<50%": "Keahlian <50%",
            "ID_peneliti_<30%": "ID peneliti <30%"}
 short = lambda n: n.replace(" Research Group", "").strip()

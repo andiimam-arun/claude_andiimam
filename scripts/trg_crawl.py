@@ -100,23 +100,50 @@ def strip_noise(s):
 
 
 def parse_home(s):
-    """Urut dokumen: judul fakultas (accordion) dan tautan TRG (h6)."""
-    out, faculty, seen = [], "", set()
+    """Urut dokumen: judul fakultas (accordion) dan semua entri TRG bernomor (h6), dengan atau tanpa tautan.
+
+    Tautan bisa http atau https, bisa menunjuk subhalaman (mis. /sri/wp-admin), situs lain
+    (airporteng.mmt.unhas.ac.id), atau tidak ada sama sekali (TRG belum punya halaman).
+    """
+    out, faculty, seen = [], "", {}
     pat = re.compile(
         r'e-n-accordion-item-title-text">\s*([^<]+?)\s*</div>'
-        r'|<h6[^>]*><a href="(https://trg\.unhas\.ac\.id/[^"]+)">([^<]+)</a>')
+        r'|<h6[^>]*>(.*?)</h6>', re.S)
     for m in pat.finditer(s):
         if m.group(1):
             faculty = html.unescape(m.group(1)).strip()
-        else:
-            url = m.group(2).rstrip("/")
-            slug = url.replace(BASE + "/", "")
-            if slug in seen or "/" in slug:
-                continue
-            seen.add(slug)
-            name = re.sub(r"^\s*\d+\.\s*", "", html.unescape(m.group(3))).strip()
-            out.append(dict(cluster=FACULTY_CLUSTER.get(faculty, ""), faculty=faculty,
-                            slug=slug, name=name, url=url + "/"))
+            continue
+        inner = m.group(2)
+        text = html.unescape(re.sub(r"<[^>]+>", "", inner)).strip()
+        mm = re.match(r"^\s*\d+\.\s*(.+)$", text)
+        if not mm:
+            continue
+        name = re.sub(r"\s+", " ", mm.group(1)).strip()
+        href = re.search(r'href="([^"]+)"', inner)
+        href = html.unescape(href.group(1)).strip() if href else ""
+        slug, url, note = "", "", ""
+        if href:
+            hm = re.match(r"^https?://([^/]+)/?([^/?#]*)", href)
+            host, first = (hm.group(1), hm.group(2)) if hm else ("", "")
+            if host == "trg.unhas.ac.id" and first:
+                slug, url = first, f"{BASE}/{first}/"
+            elif host and host != "trg.unhas.ac.id":
+                slug, url, note = host.split(".")[0], f"https://{host}/", "situs_eksternal"
+        key = (faculty, name.lower())
+        if key in seen:                       # entri ganda dalam fakultas yang sama
+            if url and not out[seen[key]]["url"]:
+                out[seen[key]].update(slug=slug, url=url, note=note)
+            continue
+        if not slug:
+            slug = "tanpa-halaman-" + re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")[:40]
+            note = "tanpa_halaman"
+        base_slug, n = slug, 2
+        while any(o["slug"] == slug for o in out):   # dua TRG berbagi satu situs: yang kedua tidak dibaca ulang
+            slug, n = f"{base_slug}-{n}", n + 1
+            note, url = "situs_dipakai_bersama", ""
+        seen[key] = len(out)
+        out.append(dict(cluster=FACULTY_CLUSTER.get(faculty, ""), faculty=faculty, slug=slug, name=name,
+                        url=url, note=note, site_slug=base_slug))
     return out
 
 
@@ -194,8 +221,8 @@ def total_pages(s):
     return max(pages) if pages else 1
 
 
-def fetch_section(f, slug, sub, log):
-    url = f"{BASE}/{slug}/{sub}/"
+def fetch_section(f, slug, sub, log, base=None):
+    url = f"{base or BASE + '/' + slug}/{sub}/"
     st, body = f.get(url)
     log.append((slug, sub, 1, st))
     if st != 200:
@@ -243,6 +270,13 @@ def team_row(slug, it):
 
 def crawl_trg(f, t):
     log, rows = [], {"peneliti": [], "kontak": [], "publikasi": [], "buku": [], "paten": [], "proyek": []}
+    if not t["url"]:  # TRG tanpa halaman: tidak ada yang bisa dibaca
+        for k in ("n_peneliti", "n_publikasi", "n_buku", "n_paten", "n_proyek"):
+            t[k] = 0
+        t["description"] = ""
+        log.append((t["slug"], "home", 0, "tanpa_halaman"))
+        return t, rows, log
+    site = t["url"].rstrip("/")
     st, main = f.get(t["url"])
     log.append((t["slug"], "home", 1, st))
     desc = ""
@@ -250,7 +284,7 @@ def crawl_trg(f, t):
         m = re.search(r'(?:property="og:description"|name="description") content="([^"]*)"', main)
         desc = html.unescape(m.group(1)).strip() if m else ""
     t["description"] = desc
-    for it in fetch_section(f, t["slug"], "ourteam", log):
+    for it in fetch_section(f, t["slug"], "ourteam", log, site):
         if not it["name"]:
             continue
         row, mail = team_row(t["slug"], it)
@@ -258,7 +292,7 @@ def crawl_trg(f, t):
         if mail:
             rows["kontak"].append([t["slug"], it["name"], mail])
     for sub, key in SECTIONS.items():
-        for it in fetch_section(f, t["slug"], sub, log):
+        for it in fetch_section(f, t["slug"], sub, log, site):
             fl = it["fields"] + [""] * 4
             link = next((l for l in it["links"] if l.startswith("http")), "")
             if key == "publikasi":
@@ -316,12 +350,12 @@ def main():
     meta = []
     for t, rows, log in results:
         meta.append([t["cluster"], t["faculty"], t["slug"], t["name"], t["url"], t["description"],
-                     t["n_peneliti"], t["n_publikasi"], t["n_buku"], t["n_paten"], t["n_proyek"]])
+                     t["n_peneliti"], t["n_publikasi"], t["n_buku"], t["n_paten"], t["n_proyek"], t["note"]])
         for k in allrows:
             allrows[k] += rows[k]
         alllog += log
     write(f"{a.out}/trg.csv", ["klaster", "fakultas", "slug", "nama", "url", "deskripsi",
-                               "n_peneliti", "n_publikasi", "n_buku", "n_paten", "n_proyek"], meta)
+                               "n_peneliti", "n_publikasi", "n_buku", "n_paten", "n_proyek", "catatan"], meta)
     write(f"{a.out}/peneliti.csv", ["trg_slug", "peran", "nama", "keahlian", "afiliasi", "scopus_id", "orcid", "sinta_id", "scholar_url"], allrows["peneliti"])
     write(f"{a.out}/kontak_peneliti.csv", ["trg_slug", "nama", "email"], allrows["kontak"])
     write(f"{a.out}/publikasi.csv", ["trg_slug", "judul", "penulis", "sumber", "tahun", "url"], allrows["publikasi"])
