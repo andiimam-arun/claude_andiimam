@@ -67,6 +67,19 @@ for name, fn, w in [("Peneliti unik", "peneliti_unik", {"nama": 40, "trg_slugs":
     if fn == "peneliti_unik":
         rows = [{k: v for k, v in r.items() if k != "scholar_url"} for r in rows]
     sheet(wb, name, rows, w, first); first = False
+lead = {}
+for u in R("peneliti_unik"):
+    for sl in [x for x in u["ketua_slugs"].split(";") if x]:
+        lead.setdefault(sl, []).append(u)
+rows = []
+for t in R("trg"):
+    ls = lead.get(t["slug"], [])
+    rows.append({"slug": t["slug"], "TRG": t["nama"], "fakultas": t["fakultas"],
+                 "ketua": " | ".join(u["nama"] for u in ls) or "(belum terbaca dari situs)",
+                 "peneliti_id": " | ".join(u["peneliti_id"] for u in ls),
+                 "juga_anggota_di": " | ".join(x for u in ls for x in u["trg_slugs"].split(";") if x and x != t["slug"]),
+                 "sinta_id": " | ".join(u["sinta_id"] for u in ls if u["sinta_id"]), "scopus_id": " | ".join(u["scopus_id"] for u in ls if u["scopus_id"])})
+sheet(wb, "Ketua TRG", rows, {"TRG": 52, "fakultas": 34, "ketua": 60, "juga_anggota_di": 40})
 wb.save(f"{P}/Data_Peta_Riset.xlsx")
 open(f"{P}/BACA_DULU.txt", "w", encoding="utf-8").write("""Paket Peta Riset Unhas (data publik trg.unhas.ac.id)
 
