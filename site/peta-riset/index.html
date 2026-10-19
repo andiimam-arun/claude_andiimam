@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peta Riset Unhas | GloRI Universitas Hasanuddin</title>
+<meta name="description" content="Temukan ahli dan kelompok riset tematik (TRG) Universitas Hasanuddin berdasarkan nama, keahlian, dan tema.">
+<link rel="icon" type="image/png" href="assets/img/logo-glori.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/peta.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip">Lewati ke konten</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" id="brand-link" href="https://glori.unhas.ac.id/">
+      <img src="assets/img/logo-glori.png" alt="GloRI Universitas Hasanuddin" width="72" height="53">
+    </a>
+    <div class="topbar-right">
+      <a class="back" id="back-link" href="https://glori.unhas.ac.id/" data-i="back">Kembali ke GloRI</a>
+      <div class="lang" role="group" aria-label="Bahasa / Language">
+        <button type="button" data-lang="id" aria-pressed="true">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow" data-i="eyebrow">Global Research Institute · Universitas Hasanuddin</p>
+    <h1 data-i="title">Peta Riset Unhas</h1>
+    <p class="lede" data-i="lede">Temukan peneliti dan kelompok riset tematik (TRG) Universitas Hasanuddin berdasarkan nama, keahlian, dan tema riset.</p>
+    <form class="hero-search" id="hero-form" role="search">
+      <label class="sr" for="q" data-i="searchLabel">Cari ahli</label>
+      <input id="q" type="search" autocomplete="off" data-i-ph="searchPh" placeholder="Cari nama, keahlian, atau TRG: kakao, malaria, hukum pidana">
+      <button type="submit" data-i="searchBtn">Cari</button>
+    </form>
+    <dl class="kpis" id="kpis" aria-live="polite">
+      <div><dt data-i="kTrg">TRG</dt><dd id="k-trg">—</dd></div>
+      <div><dt data-i="kPeople">Peneliti</dt><dd id="k-people">—</dd></div>
+      <div><dt data-i="kLead">Ketua TRG</dt><dd id="k-lead">—</dd></div>
+      <div><dt data-i="kPapers">Artikel tercatat</dt><dd id="k-papers">—</dd></div>
+    </dl>
+  </div>
+</section>
+
+<main id="main" class="wrap">
+  <div class="tabs" role="tablist" aria-label="Tampilan">
+    <button class="tab" role="tab" id="tab-cari" data-tab="cari" aria-selected="true" aria-controls="cari" data-i="tabSearch">Cari ahli</button>
+    <button class="tab" role="tab" id="tab-tema" data-tab="tema" aria-selected="false" aria-controls="tema" data-i="tabTheme">Peta tema</button>
+    <button class="tab" role="tab" id="tab-trg" data-tab="trg" aria-selected="false" aria-controls="trg" data-i="tabTrg">Daftar TRG</button>
+  </div>
+
+  <div id="loadmsg" class="notice" role="status" data-i="loading">Memuat data…</div>
+  <div id="errmsg" class="notice err" role="alert" hidden></div>
+
+  <section id="cari" class="panel" role="tabpanel" aria-labelledby="tab-cari">
+    <div class="filters">
+      <label class="field"><span data-i="fKlaster">Klaster</span><select id="f-klaster"></select></label>
+      <label class="field grow"><span data-i="fTema">Tema</span><select id="f-tema"></select></label>
+      <label class="check"><input type="checkbox" id="f-lead"> <span data-i="fLead">Hanya ketua TRG</span></label>
+      <label class="check"><input type="checkbox" id="f-id"> <span data-i="fId">Punya ID peneliti</span></label>
+      <button type="button" class="ghost" id="f-reset" data-i="reset">Atur ulang</button>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ul class="cards" id="cards"></ul>
+    <button type="button" class="more" id="more" hidden></button>
+  </section>
+
+  <section id="tema" class="panel" role="tabpanel" aria-labelledby="tab-tema" hidden>
+    <div class="card-block">
+      <h2 data-i="themeHead">Peneliti menurut tema</h2>
+      <p class="muted" data-i="themeNote">Klik sebuah tema untuk melihat para penelitinya. Satu peneliti bisa masuk beberapa tema, jadi totalnya melebihi jumlah peneliti unik.</p>
+      <div class="legend" id="legend"></div>
+      <div class="bars" id="bars"></div>
+    </div>
+  </section>
+
+  <section id="trg" class="panel" role="tabpanel" aria-labelledby="tab-trg" hidden>
+    <div class="filters">
+      <label class="field grow"><span data-i="fTrg">Cari TRG</span><input id="t-q" type="search" autocomplete="off"></label>
+      <label class="field"><span data-i="fKlaster">Klaster</span><select id="t-klaster"></select></label>
+      <label class="field"><span data-i="fSort">Urutkan</span>
+        <select id="t-sort"><option value="nama" data-i="sName">Nama</option><option value="n_peneliti" data-i="sPeople">Jumlah peneliti</option><option value="n_publikasi" data-i="sPapers">Jumlah artikel</option></select></label>
+    </div>
+    <p class="count" id="t-count" aria-live="polite"></p>
+    <ul class="trg-list" id="trg-list"></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p id="foot-src"></p>
+    <p class="muted" data-i="disclaimer">Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.</p>
+    <p class="muted" id="foot-contact"></p>
+  </div>
+</footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
