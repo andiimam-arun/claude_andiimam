@@ -24,35 +24,35 @@ for r in pub:
 ART_PER = C.Counter(s for v in arts.values() for s in v)
 INA = re.compile(r"indonesia|universitas|institut\b|politeknik|unhas|hasanuddin|makassar|brin|bogor|bandung|jakarta|surabaya|yogya|manado|sulawesi|kementerian|stikes|uin\b|ipb|itb|ugm|unm\b|unpad|undip|unair|bone|gowa|palu|kendari|ambon|mataram|papua|aceh|medan|padang|riau|pontianak|banjarmasin|malang|semarang|udayana", re.I)
 
-# Kandidat: aturan kata kunci pada nama TRG (kelompok buatan saya; satu TRG boleh masuk beberapa kandidat)
-# (nama, regex, bentuk_disarankan, pusat_unggulan_terkait, catatan)
+# Kandidat: aturan kata UTUH pada nama TRG (kelompok buatan analis; satu TRG boleh masuk beberapa kandidat; daftar anggota lengkap ada di lembar masing-masing)
+# (nama, regex_masuk, regex_keluar, bentuk_disarankan, pusat_unggulan_terkait, catatan)
 CAND = [
- ("Kemaritiman, pesisir & perikanan", r"coastal|marine|coral|seagrass|mangrove|fisher|aquacult|shrimp|crab|lobster|tuna|shark|seaweed|algal|\bfish|blue econom|maritime|ocean|tilapia|aquatic|multitrophic|invasive alien|natural coastal|smart ship",
+ ("Kemaritiman, pesisir & perikanan", r"\b(coastal|marine|coral|seagrass|mangrove|fisher(y|ies)|aquacultur\w*|shrimp|crab|lobster|tuna|shark|seaweed|algal|fish(es)?|blue econom\w*|maritime|ocean|tilapia|aquatic|multitrophic|invasive alien|smart ship)\b", r"cancer|nutraceutical",
   "Institut (calon utama)", "Wallacea Research Center", "Paling lintas fakultas dan paling khas kawasan (Wallacea, Segitiga Terumbu Karang). Konsolidasikan dengan pusat yang sudah ada, jangan membuat unit baru yang menyaingi."),
- ("Penyakit tropis, infeksi & vaksin", r"tuberculosis|biovax|malaria|pneumonia|biofilm|superbug|microbiome|vector|infectious|vaccine|syndemic|public health entomology|unhas fly|animal disease",
-  "Pusat riset/institut kompak", "(belum ada)", "Kecil tetapi padat: artikel per peneliti tertinggi dan mitra luar negeri nyata. Belum punya Pusat Unggulan."),
- ("Ketahanan pangan & pertanian tropis", r"rice|corn|food crop|sago|cocoa|coffee|oil palm|horticult|orchid|agricultur|soil|pest|phytophthora|mycolog|bacteriolog|biocontrol|biopesticide|post-?harvest|food|feed|livestock|dairy|poultry|beef|goat|equine|sub-optimal|land use|agro|taro|fermented|ethnic food",
+ ("Penyakit tropis, infeksi & vaksin", r"\b(tuberculosis|biovax|malaria|pneumonia|biofilm|superbug|microbiome|vector|infectious|vaccine|syndemic|entomology|unhas fly|infection|immuno\w*)\b", r"dental|oral",
+  "Pusat riset/institut kompak", "(belum ada)", "Kecil tetapi padat: artikel per peneliti tinggi dan mitra luar negeri nyata. Belum punya Pusat Unggulan."),
+ ("Ketahanan pangan & pertanian tropis", r"\b(rice|corn|food crops?|sago|cocoa|coffee|oil palm|horticult\w*|orchids?|agricultur\w*|soil|pest|phytophthora|mycolog\w*|bacteriolog\w*|biocontrol|biopesticides?|post-?harvest|food|feed|livestock|dairy|poultry|beef|goat|equine|sub-optimal land|land use|agro|taro|fermented|ethnic food|cattle|forest tree breeding)\b", r"cancer|nutritional deficiency|nutrition for|functional food for|legal|law\b|financial|accounting|waste",
   "Konsorsium, lalu pecah jadi 2-3 sub-konsorsium", "(belum ada)", "Terbesar tetapi terlalu luas untuk satu institut. Usul sub-konsorsium: perkebunan (kakao, kopi, sawit, sagu), tanaman pangan-hortikultura, peternakan."),
- ("Gizi, ibu-anak & penyakit tidak menular", r"nutrition|obesity|child|maternal|mother|neonat|birth cohort|ncd|non-communicable|diabetic|metabolism|nephro|cardiovascular|digestive|healthy aging|geriatric|pediatric|midwif",
-  "Konsorsium (bisa naik jadi pusat)", "(belum ada)", "Catatan: Anda sendiri ketua salah satu TRG di kelompok ini, jadi nilai penilaian ini sebaiknya diperiksa pihak lain."),
- ("Tata kelola, perdamaian & kebijakan publik", r"peace|conflict|democracy|terror|migration|human security|governance|public organization|policy|constitution|government|public opinion|disab|criminolog|victim|legal protection|regulation|sociolegal|agrarian",
+ ("Gizi, ibu-anak & penyakit tidak menular", r"\b(nutrition\w*|obesity|child|children|maternal|mother|neonat\w*|birth cohort|ncd|non-communicable|diabetic|metabolism|nephro|cardiovascular|digestive|healthy aging|geriatric|pediatric|midwif\w*|women)\b", r"poultry|feed|animal|livestock|legal|rights|law\b",
+  "Konsorsium (bisa naik jadi pusat)", "(belum ada)", "Catatan: penyusun permintaan ini memimpin salah satu TRG di kelompok ini, sehingga penilaiannya sebaiknya diperiksa pihak lain."),
+ ("Tata kelola, perdamaian & kebijakan publik", r"\b(peace|conflict|democracy|terror\w*|migration|human security|public organization|government|public opinion|disabilit\w*|criminolog\w*|victim|legal protection|sociolegal|constitution\w*|regulation|policy|agrarian|media)\b", r"accounting|financial|corporate",
   "Perkuat Pusat Unggulan yang ada", "Pusat Perdamaian Global & Penyelesaian Konflik", "Ketua TRG paling banyak dan paling terhubung. Cocok menjadi lengan riset pusat yang sudah ada."),
- ("Kebencanaan & infrastruktur tangguh", r"earthquake|flood|flowslide|liquefaction|hazard|resilien|structural|geotechn|infrastructure|settlement|floating|piping|airport|transport|hydrology|watershed|climate based",
+ ("Kebencanaan & infrastruktur tangguh", r"\b(earthquake|flood|flowslide|liquefaction|hazard|structural|geotechn\w*|infrastructure|settlement|floating|piping|airport|transportation?|hydrology|watershed|housing|urban public transport)\b", r"cyber",
   "Konsorsium", "(belum ada)", "Keterhubungan antar-TRG dan kelengkapan ID peneliti rendah; mulai dari konsorsium, bukan institut."),
- ("Energi, material maju & mineral kritis", r"energy|hydrogen|renewable|power system|grid|waste to energy|solar|nanogenerator|semiconductor|material|nano|polymer|biochar|metallurg|rare-earth|rare earth|insulation|high voltage|graded|lightweight|fiber",
+ ("Energi, material maju & mineral kritis", r"\b(energy|hydrogen|renewable|power systems?|grid|waste to energy|solar|nanogenerator|semiconductor|materials?|nano\w*|polymer|biochar|metallurg\w*|rare-earth|high voltage|graded|lightweight|fiber|composite)\b", r"food|health",
   "Perkuat Pusat Unggulan yang ada", "ASEAN-Indonesia-China CoE Metallurgy & Marine Resources", "Dua TRG logam kritis dan metalurgi berbagi peneliti paling banyak (10 orang). Gunakan sebagai inti."),
- ("Ekonomi, bisnis & akuntansi", r"account|audit|financ|econom|market|business|supply chain|sme\b|small and medium|human resource|strategic|corporate|budget|microfinance|accountab|transparen|forensic accounting|islamic",
+ ("Ekonomi, bisnis & akuntansi", r"\b(account\w*|audit\w*|financ\w*|econom\w*|marketing|business|supply chain|small and medium|human resource|strategic|corporate|budget\w*|microfinance|transparency|forensic accounting|islamic|market)\b", r"blue econom|coastal|fisher|tuna",
   "Konsorsium", "(belum ada)", "Banyak TRG dan peneliti, tetapi satu rumpun fakultas; hasil riset lebih cocok sebagai layanan kajian ke pemerintah dan industri."),
- ("Bahan alam, farmasi & biomedis", r"natural product|drug|pharma|nutraceutical|cosmeceutical|metabolomic|bone|regenerat|dental|dentistry|oral|periodont|medicinal|transdermal|tumor|cancer|oncolog",
+ ("Bahan alam, farmasi & biomedis", r"\b(natural products?|drug|pharma\w*|nutraceutical|cosmeceutical|metabolomic\w*|bone|regenerat\w*|dental|dentistry|periodont\w*|medicinal|transdermal|tumor|cancer|oncolog\w*|oral|orofacial|biodental)\b", r"behavioral|human resource",
   "Konsorsium", "(belum ada)", "Tersebar di 8 fakultas dengan keterhubungan rendah; perlu pengikat tema yang jelas."),
 ]
 
 
 def build():
     rows = []
-    for name, rx, form, centre, note in CAND:
-        rg = re.compile(rx, re.I)
-        slugs = sorted((s for s, t in trg.items() if rg.search(t["nama"])), key=lambda s: -ART_PER[s])
+    for name, rx, ex, form, centre, note in CAND:
+        rg, rx_ex = re.compile(rx, re.I), re.compile(ex, re.I)
+        slugs = sorted((s for s, t in trg.items() if rg.search(t["nama"]) and not rx_ex.search(t["nama"])), key=lambda s: -ART_PER[s])
         rows.append((name, form, centre, note, slugs))
     return rows
 
