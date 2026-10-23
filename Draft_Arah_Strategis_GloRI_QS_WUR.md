@@ -18,7 +18,7 @@
 - Hubungan KPI dengan indikator QS dinilai dengan skala kualitatif: **Kuat**, **Sedang**, **Lemah**, atau **Tidak ada**. Dampak KPI terhadap skor QS tidak dihitung secara kuantitatif karena tidak ada data yang mendukung hubungan sebab-akibat itu.
 - Jika suatu strategi tidak punya KPI di cascading, strategi itu ditandai **Non-KPI** dan tidak dipaksakan ke KPI yang ada. Strategi Non-KPI dapat mendukung KPI unit lain.
 - Peringkat dan bobot QS berasal dari pencarian web dan belum diverifikasi ke dokumen resmi QS. Bagian Lampiran D memuat daftar verifikasi.
-- **DMP:** dokumen ini memakai nama "DMP" (Direktorat Manajemen Publikasi). Pencarian hanya menemukan Pusat Manajemen Publikasi (PMC) dengan fungsi pembinaan publikasi dan jurnal; apakah DMP adalah PMC yang sudah diubah namanya belum dapat dipastikan. [ISI: tugas dan fungsi DMP]
+- **DMP:** Direktorat Manajemen Publikasi, yang pada 2026 berubah status dari Pusat Manajemen Publikasi (PMC) menjadi direktorat (konfirmasi dari pimpinan GloRI). Fungsi PMC yang diketahui dari peraturan organisasi 2023 meliputi pembinaan publikasi dan jurnal internal serta pelatihan penulisan. Tugas dan fungsi DMP setelah menjadi direktorat belum diperoleh dan mungkin lebih luas. [ISI: tugas dan fungsi DMP terbaru]
 
 ## Ringkasan eksekutif
 
@@ -29,7 +29,7 @@
 5. **GloRI adalah penggerak, bukan satu-satunya penghasil.** Target GloRI hanya 3,8% dari target 500 joint publication universitas dan 22,5% dari target 40 riset konsorsium (jika target itu memang untuk 2027). Sisanya bergantung pada fakultas.
 6. **Hal yang tidak dapat diselesaikan GloRI:** data FTE, Employer Reputation, Employment Outcomes, Faculty Student Ratio, dan International Student Ratio berada di unit lain, tetapi menentukan hasil peringkat.
 7. **Keterlambatan dampak:** kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit beberapa tahun kemudian, sehingga target peringkat 2027 tidak dapat dipertanggungjawabkan kepada GloRI. [Kemungkinan Besar]
-8. **Pembagian dengan DMP:** dataset publikasi, audit afiliasi Scopus, dan pelatihan penulisan umum sebaiknya dimiliki DMP. GloRI memakai data itu dan memiliki klausul afiliasi di kontrak mitra, penandaan acknowledgment, serta engagement dengan akademisi. Program P3, P5, dan P12 berisiko tumpang tindih dengan DMP. [ISI: konfirmasi mandat DMP]
+8. **Pembagian dengan DMP:** dataset publikasi, audit afiliasi Scopus, dan pelatihan penulisan umum sebaiknya dimiliki DMP. GloRI memakai data itu dan memiliki klausul afiliasi di kontrak mitra, penandaan acknowledgment, serta engagement dengan akademisi. Program P3, P5, dan P12 berisiko tumpang tindih dengan DMP. [ISI: tugas dan fungsi DMP terbaru]
 
 ---
 
@@ -282,7 +282,7 @@ Perubahan dari matriks strategi sebelumnya: prioritas International Faculty Rati
 
 ### 5.5 Pembagian peran dengan DMP
 
-Pembagian ini adalah usulan; mandat DMP belum dikonfirmasi. [ISI: tugas dan fungsi DMP] Prinsipnya: satu pemilik untuk setiap data, GloRI memakai data DMP dan tidak membangun yang sama.
+Pembagian ini adalah usulan. DMP adalah PMC yang berubah menjadi direktorat pada 2026, dan fungsi PMC sebelumnya (pembinaan publikasi, jurnal internal, pelatihan penulisan) menjadi dasar anggapan di bawah. Tugas dan fungsi DMP yang terbaru belum diperoleh, sehingga pembagian perlu dicocokkan dengannya. [ISI: tugas dan fungsi DMP terbaru] Prinsipnya: satu pemilik untuk setiap data, GloRI memakai data DMP dan tidak membangun yang sama.
 
 | Pekerjaan | DMP | GloRI | Risiko overlap |
 |---|---|---|---|
@@ -456,7 +456,7 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 4 | Menyepakati kontribusi target joint publication dan konsorsium per fakultas | Dekan |
 | 5 | Menyetujui perubahan P2 (penapisan mutu), P3 (output joint research), dan P4 (ukuran dosen Unhas) | Pimpinan GloRI |
 | 6 | Menyelesaikan ketidakkonsistenan data cascading pada 3.4 | Tim perencanaan |
-| 7 | Menetapkan pembagian peran GloRI dan DMP (5.5) dan mengonfirmasi mandat DMP | Rektor, Direktur DMP, Direktur Eksekutif GloRI |
+| 7 | Menetapkan pembagian peran GloRI dan DMP (5.5) dengan mencocokkannya pada tugas dan fungsi DMP terbaru | Rektor, Direktur DMP, Direktur Eksekutif GloRI |
 
 ### 8.3 Jalur menuju Renstra GloRI 2026-2030
 
@@ -491,7 +491,7 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 14 | SK pusat riset di bawah GloRI | Status 9 pusat | [ISI] | GloRI |
 | 15 | Realisasi KPI 2026 dan baseline 2025 | Evaluasi | [ISI] | Perencanaan |
 | 16 | Pagu anggaran 2027 | Anggaran | [ISI] | Keuangan |
-| 17 | Tugas dan fungsi DMP (dan PMC jika berbeda) | Pembagian peran 5.5 | [ISI] | DMP |
+| 17 | Tugas dan fungsi DMP terbaru (setelah perubahan dari PMC menjadi direktorat pada 2026) | Pembagian peran 5.5 | [ISI] | DMP |
 | 18 | Dashboard publikasi dan sitasi DMP (jika ada) | Menghindari duplikasi dengan P3 dan P12 | [ISI] | DMP |
 
 ### Lampiran B. Rincian kegiatan 2027 (44 kegiatan)
