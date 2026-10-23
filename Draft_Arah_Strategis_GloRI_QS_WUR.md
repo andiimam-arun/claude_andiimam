@@ -486,7 +486,7 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 9 | SOP fellow/visiting scholar dan kontrak kinerja | Program P4 | [ISI] | GloRI |
 | 10 | Pedoman insentif proposal dan penapisan mutu | Program P2 | [ISI] | GloRI |
 | 11 | Kebijakan etika sitasi dan publikasi | Risiko integritas | [ISI] | LPPM |
-| 12 | Data Scopus/SciVal: publikasi, joint publication, FWCI | Baseline U1 sampai U4 | [ISI] | Perpustakaan |
+| 12 | Data Scopus/SciVal: publikasi, joint publication, FWCI | Baseline U1 sampai U4, U7 | [ISI] | DMP |
 | 13 | Daftar MoU dan kerja sama aktif beserta status | KPI-126 (penyebut) | [ISI] | Kantor kerja sama |
 | 14 | SK pusat riset di bawah GloRI | Status 9 pusat | [ISI] | GloRI |
 | 15 | Realisasi KPI 2026 dan baseline 2025 | Evaluasi | [ISI] | Perencanaan |
