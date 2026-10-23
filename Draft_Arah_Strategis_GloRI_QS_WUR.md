@@ -4,11 +4,12 @@
 
 | | |
 |---|---|
-| Status | **DRAFT 0.1 untuk diskusi**, bukan dokumen resmi |
+| Status | **DRAFT 0.2 untuk pembahasan dengan Direktur Eksekutif GloRI**, bukan dokumen resmi |
 | Tanggal | 23 Oktober 2026 |
 | Penyusun | [ISI: nama tim penyusun GloRI] |
 | Pembaca sasaran | Pimpinan universitas, pimpinan fakultas, dan pemangku kepentingan terkait |
 | Sumber data internal | Cascading KPI GloRI (5 KPI, 2026-2030); Cascading Program GloRI 2027 (13 program, usulan anggaran Rp3 miliar) |
+| Perubahan dari 0.1 | Ukuran dampak, afiliasi Scopus, dan engagement akademisi dirinci (Bagian 4.3); pembagian peran dengan DMP ditambahkan (Bagian 5.5); pemilik afiliasi Scopus diganti dari LPPM/Perpustakaan menjadi DMP; usulan KPI bertambah menjadi U1 sampai U10 |
 
 ## Cara membaca dokumen ini
 
@@ -17,6 +18,7 @@
 - Hubungan KPI dengan indikator QS dinilai dengan skala kualitatif: **Kuat**, **Sedang**, **Lemah**, atau **Tidak ada**. Dampak KPI terhadap skor QS tidak dihitung secara kuantitatif karena tidak ada data yang mendukung hubungan sebab-akibat itu.
 - Jika suatu strategi tidak punya KPI di cascading, strategi itu ditandai **Non-KPI** dan tidak dipaksakan ke KPI yang ada. Strategi Non-KPI dapat mendukung KPI unit lain.
 - Peringkat dan bobot QS berasal dari pencarian web dan belum diverifikasi ke dokumen resmi QS. Bagian Lampiran D memuat daftar verifikasi.
+- **DMP:** dokumen ini memakai nama "DMP" (Direktorat Manajemen Publikasi). Pencarian hanya menemukan Pusat Manajemen Publikasi (PMC) dengan fungsi pembinaan publikasi dan jurnal; apakah DMP adalah PMC yang sudah diubah namanya belum dapat dipastikan. [ISI: tugas dan fungsi DMP]
 
 ## Ringkasan eksekutif
 
@@ -27,6 +29,7 @@
 5. **GloRI adalah penggerak, bukan satu-satunya penghasil.** Target GloRI hanya 3,8% dari target 500 joint publication universitas dan 22,5% dari target 40 riset konsorsium (jika target itu memang untuk 2027). Sisanya bergantung pada fakultas.
 6. **Hal yang tidak dapat diselesaikan GloRI:** data FTE, Employer Reputation, Employment Outcomes, Faculty Student Ratio, dan International Student Ratio berada di unit lain, tetapi menentukan hasil peringkat.
 7. **Keterlambatan dampak:** kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit beberapa tahun kemudian, sehingga target peringkat 2027 tidak dapat dipertanggungjawabkan kepada GloRI. [Kemungkinan Besar]
+8. **Pembagian dengan DMP:** dataset publikasi, audit afiliasi Scopus, dan pelatihan penulisan umum sebaiknya dimiliki DMP. GloRI memakai data itu dan memiliki klausul afiliasi di kontrak mitra, penandaan acknowledgment, serta engagement dengan akademisi. Program P3, P5, dan P12 berisiko tumpang tindih dengan DMP. [ISI: konfirmasi mandat DMP]
 
 ---
 
@@ -208,16 +211,33 @@ Dari sekitar 65% bobot yang relevan bagi GloRI, hanya 5% (IRN) yang memiliki KPI
 
 ### 4.3 Usulan KPI atau output tambahan
 
-Ini usulan, bukan KPI resmi. Target diisi setelah baseline tersedia. Jika KPI baru ditambahkan, bobot KPI yang ada (saat ini rata 20%) perlu disusun ulang agar totalnya tetap 100%.
+Ini usulan, bukan KPI resmi. Target diisi setelah baseline tersedia. Jika KPI baru ditambahkan, bobot KPI yang ada (saat ini rata 20%) perlu disusun ulang agar totalnya tetap 100%. Seluruh ukuran berada di tingkat institusi; tidak ada target sitasi atau h-index per orang.
 
-| No | Usulan | Indikator QS | Rumus / ukuran | Baseline | Target 2027 | Pemilik data |
-|---|---|---|---|---|---|---|
-| U1 | Persentase joint publication di jurnal Q1/Q2 | Citations per Faculty | Jumlah joint publication Q1/Q2 dibagi total joint publication | [ISI] | [ISI] | GloRI, Perpustakaan |
-| U2 | Field-Weighted Citation Impact joint publication (tingkat institusi) | Citations per Faculty | FWCI joint publication GloRI di SciVal | [ISI] | [ISI] | Perpustakaan/LPPM |
-| U3 | Jumlah negara dan institusi mitra dengan ko-publikasi Scopus | International Research Network | Jumlah negara dan institusi unik dalam publikasi 3 tahun terakhir | [ISI] | [ISI] | GloRI |
-| U4 | Persentase paper dosen Unhas dengan afiliasi baku dan benar di Scopus | Citations per Faculty; IRN | Paper terhubung ke afiliasi Unhas dibagi total paper | [ISI] | [ISI] | LPPM/Perpustakaan; GloRI mendukung |
-| U5 | Jumlah akademisi mitra internasional terdaftar sebagai kontak survei QS melalui jalur resmi | Academic Reputation | Kontak yang diserahkan; wajib mengikuti aturan QS dan tidak meminta suara | [ISI] | [ISI] | GloRI, Humas |
-| U6 | Peneliti/dosen asing yang memenuhi definisi QS | International Faculty Ratio | FTE sesuai definisi QS | [ISI] | [ISI] | SDM; GloRI mendukung |
+**A. Ukuran dampak**
+
+| No | Usulan | Indikator QS | Rumus / ukuran | Sumber | Baseline | Target 2027 | Pemilik data | Peran GloRI |
+|---|---|---|---|---|---|---|---|---|
+| U1 | Persentase joint publication di jurnal Q1/Q2 | Citations per Faculty | Joint publication Q1/Q2 dibagi total joint publication | Scopus/SciVal | [ISI] | [ISI] | DMP | Melaporkan subset kolaborasi internasional |
+| U2 | Field-Weighted Citation Impact (FWCI) joint publication | Citations per Faculty | FWCI rata-rata set joint publication; 1,0 setara rata-rata dunia [Pasti] | SciVal | [ISI] | [ISI] | DMP | Menganalisis subset |
+| U7 | Persentase joint publication di 10% sitasi teratas | Citations per Faculty | Output pada persentil sitasi teratas dibagi total joint publication | SciVal | [ISI] | [ISI] | DMP | Menganalisis subset |
+| U8 | Persentase luaran yang didukung GloRI yang memuat kode acknowledgment dan afiliasi Unhas yang benar | Citations per Faculty; IRN | Luaran bertanda kode (misal "GloRI-2027-P5") dengan afiliasi benar dibagi total luaran yang didukung | Pernyataan acknowledgment; Scopus | [ISI] | [ISI] | **GloRI** | Memiliki |
+
+**B. Afiliasi Scopus dan jaringan**
+
+| No | Usulan | Indikator QS | Rumus / ukuran | Sumber | Baseline | Target 2027 | Pemilik data | Peran GloRI |
+|---|---|---|---|---|---|---|---|---|
+| U3 | Jumlah negara dan institusi mitra dengan ko-publikasi Scopus | International Research Network | Jumlah negara dan institusi unik dalam publikasi 3 tahun terakhir | Scopus/SciVal | [ISI] | [ISI] | DMP menyediakan data; GloRI menganalisis | Memiliki analisis |
+| U4 | Persentase paper dosen Unhas dengan afiliasi baku dan benar di Scopus | Citations per Faculty; IRN | Paper terhubung ke afiliasi Unhas dibagi total paper dosen | Scopus | [ISI] | [ISI] | DMP | Mendukung (klausul mitra) |
+
+**C. Engagement dengan akademisi dan data lain**
+
+| No | Usulan | Indikator QS | Rumus / ukuran | Sumber | Baseline | Target 2027 | Pemilik data | Peran GloRI |
+|---|---|---|---|---|---|---|---|---|
+| U5 | Jumlah kontak akademisi mitra yang diserahkan ke QS melalui jalur resmi | Academic Reputation | Kontak nyata yang diserahkan; wajib mengikuti aturan QS dan tidak meminta suara | Daftar kontak GloRI | [ISI] | [ISI] | GloRI, Humas | Memiliki |
+| U9 | Jumlah akademisi internasional unik yang terlibat, dan yang terlibat dua kali atau lebih | Academic Reputation | Akademisi dengan interaksi tercatat (forum, webinar bersama, usulan ko-penulis, kunjungan); bukan jumlah kehadiran | Catatan kegiatan GloRI | [ISI] | [ISI] | GloRI | Memiliki |
+| U10 | Peran editorial dan keynote peneliti Unhas pada jurnal dan konferensi internasional bidang unggulan | Academic Reputation | Jumlah peran per tahun | Data peneliti; DMP untuk jurnal | [ISI] | [ISI] | GloRI/DMP | Memiliki sebagian |
+| U6 | Peneliti/dosen asing yang memenuhi definisi QS | International Faculty Ratio | FTE sesuai definisi QS | Data SDM | [ISI] | [ISI] | SDM | Mendukung |
+
 
 ---
 
@@ -238,7 +258,7 @@ Ini usulan, bukan KPI resmi. Target diisi setelah baseline tersedia. Jika KPI ba
 | S2 | Kolaborasi riset yang berkelanjutan: konsorsium, joint lab, mitra universitas Top 100/200 | International Research Network (5%); Citations per Faculty | IRN menilai kolaborasi yang berkelanjutan, bukan sekadar MoU [Menebak]; kolaborasi aktif menjadi sumber joint publication | 2.3.1, 2.3.2 | KPI | 1 |
 | S3 | Pendanaan riset internasional sebagai penggerak kolaborasi berkelanjutan | Tidak langsung (IRN dan CpF lewat riset yang didanai) | QS tidak menilai pendapatan riset secara langsung [Kemungkinan Besar]; pendanaan memungkinkan kolaborasi bertahan | 2.3.1 | KPI | 2 |
 | S4 | Keterlibatan dengan akademisi global: forum, kuliah tamu, peran editorial, kontak mitra untuk survei QS melalui jalur resmi | Academic Reputation (30%) | Indikator terbesar dan berbasis survei akademisi; keterlihatan di kalangan akademisi luar negeri adalah satu-satunya tuas yang bisa digerakkan GloRI | 2.3.4 (forum); 2.4.4 (target peringkat); belum ada KPI engagement | KPI parsial | 2 |
-| S5 | Konsolidasi afiliasi Scopus dan data kolaborasi | Citations per Faculty; IRN | Sitasi dan kolaborasi yang tidak terhubung ke afiliasi Unhas tidak dihitung; perbaikannya murah dan cepat [Kemungkinan Besar] | Tidak ada (usul U4) | **Non-KPI**; mendukung LPPM/Perpustakaan | 1 |
+| S5 | Konsolidasi afiliasi Scopus dan data kolaborasi (DMP: audit dan koreksi; GloRI: klausul afiliasi di kontrak mitra, penandaan acknowledgment, dan pengecekan luaran GloRI) | Citations per Faculty; IRN | Sitasi dan kolaborasi yang tidak terhubung ke afiliasi Unhas tidak dihitung; perbaikannya murah dan cepat [Kemungkinan Besar] | Tidak ada (usul U4, U8) | **Non-KPI**; mendukung DMP (usulan U4, U8) | 1 |
 | S6 | Fellow dan visiting scholar sebagai penghubung publikasi dan proposal bersama | IRN; Citations per Faculty; International Faculty (marginal) | Efek pada International Faculty Ratio kemungkinan kecil karena kunjungan singkat [Menebak]; manfaat utama pada output bersama | 4.1.1 (ketidaksesuaian ukuran; lihat 6.4) | KPI parsial | 2 |
 | S7 | Riset terkait SDG dan kebijakan | Sustainability (5%) | Bobot kecil; peran pendukung [Menebak] | 5.3.3 (policy brief tidak sama dengan pendapatan non-DIPA) | **Non-KPI** untuk QS | 3 |
 
@@ -252,12 +272,36 @@ Perubahan dari matriks strategi sebelumnya: prioritas International Faculty Rati
 | Employer Reputation dan Employment Outcomes | 20% | Alumni, karier, kerja sama | Tidak terjangkau riset |
 | International Student Ratio dan Diversity | 5% (+0%) | Kantor internasional, akademik | Tidak terjangkau riset |
 | Sustainability (tata kelola, ESG) | 5% | Tim keberlanjutan, perencanaan | GloRI hanya mendukung dari sisi riset |
+| Dataset publikasi, audit afiliasi Scopus, pelatihan penulisan umum | Menyentuh Citations per Faculty (20%) | DMP | GloRI memakai datanya dan tidak membangun sendiri; lihat 5.5 |
 
 ### 5.4 Risiko integritas
 
 - Insentif yang dibayarkan per proposal terkirim (P2) dapat mendorong kuantitas di atas kualitas. Lihat 6.4.
 - Fellow yang diminta menghasilkan "output publikasi" harus diukur dari publikasi yang bermutu, bukan dari jumlah sitasi.
 - Pengisian kontak survei QS harus mengikuti aturan QS dan tidak boleh meminta suara. [Menebak] mekanisme resminya; cek panduan QS.
+
+### 5.5 Pembagian peran dengan DMP
+
+Pembagian ini adalah usulan; mandat DMP belum dikonfirmasi. [ISI: tugas dan fungsi DMP] Prinsipnya: satu pemilik untuk setiap data, GloRI memakai data DMP dan tidak membangun yang sama.
+
+| Pekerjaan | DMP | GloRI | Risiko overlap |
+|---|---|---|---|
+| Dataset induk publikasi dan sitasi Unhas | Memiliki | Menggunakan | Tinggi jika GloRI membangun sendiri |
+| Audit dan koreksi afiliasi Scopus; format baku afiliasi; penggabungan profil penulis | Memiliki | Mendukung | Tinggi |
+| Klausul afiliasi pada kontrak fellow (P4) dan perjanjian kerja sama (MoU, joint lab) | - | Memiliki | Rendah |
+| Penandaan kode acknowledgment pada luaran yang didukung GloRI | - | Memiliki | Rendah |
+| Pengecekan triwulan afiliasi luaran kolaborasi GloRI | Menyediakan data | Memiliki | Rendah |
+| Pelatihan penulisan umum | Memiliki | - | Sedang |
+| Pendampingan publikasi bersama internasional (P5) | Sebagian | Memiliki | Sedang |
+| Dashboard publikasi dan sitasi | Memiliki (jika ada) [ISI] | Menambah lapisan kolaborasi (mitra, MoU, hibah) | Tinggi; P3 dan P12 sudah memuat dashboard |
+| Engagement dengan akademisi dan forum | - | Memiliki | Rendah |
+| Peran editorial dan jurnal internal | Memiliki (jurnal) | Memiliki (peran peneliti di jurnal internasional) | Sedang |
+
+Mekanisme koordinasi yang diusulkan:
+1. DMP menyerahkan dataset induk kepada GloRI tiap triwulan; GloRI menurunkan subset joint publication internasional dari dataset itu.
+2. Satu dashboard publikasi dan sitasi (milik DMP); GloRI menambahkan lapisan kolaborasi di atasnya.
+3. Rapat koordinasi triwulan GloRI dan DMP untuk koreksi afiliasi dan evaluasi luaran yang didukung GloRI.
+4. Pelatihan penulisan umum memakai program DMP; coaching clinic GloRI (P5) dibatasi pada joint publication internasional.
 
 ---
 
@@ -319,8 +363,8 @@ Implikasinya bagi fakultas: GloRI berperan sebagai penggerak dan fasilitator, bu
 | 2 | P2 | Rp300 juta (50% anggaran P2) berupa insentif per proposal terkirim (30 proposal, rata-rata Rp10 juta). Insentif atas pengiriman, bukan kelolosan atau mutu, berisiko mendorong kuantitas | Bayar bertahap dan kaitkan dengan penilaian mutu, keselarasan dengan skema hibah, dan dukungan mitra |
 | 3 | P2 | Target proposal Rp200 miliar dari 30 proposal berarti rata-rata Rp6,7 miliar per proposal. Win rate 30% dan target dana eksternal Rp60 miliar belum didukung data GloRI (tertulis [Menebak] pada file) | Uji terhadap skema hibah sasaran dan data historis; [ISI: win rate historis] |
 | 4 | P4 | Output (10 fellow asing yang dibiayai) berbeda dengan indikator 4.1.1 (persen dosen Unhas yang mengikuti skema rekognisi internasional). Kapasitas anggaran 10 fellow adalah 0,5 dari minimum KPI bahan Malino (20 sampai 30 fellow) | Rancang ulang agar fellow dipasangkan dengan dosen Unhas dan hitung persen dosen yang terlibat; atau gunakan indikator lain; [ISI: keputusan jumlah fellow] |
-| 5 | P5 | Satu butir kegiatan senilai Rp250 juta (4 coaching clinic, 40 paper disubmit) tanpa rincian biaya, jadwal klinik, atau kriteria mutu; target rasional publikasi Q1/Q2 hanya 19 | Rinci per klinik, tetapkan kriteria jurnal sasaran, dan hubungkan dengan U1 dan U2 |
-| 6 | P3, P12 | Rp200 juta (67% anggaran P3) untuk pengembangan dashboard global research, sementara P12 juga memelihara dashboard yang sama (Rp30 juta). Output P3 berupa dokumentasi webinar dan pemetaan, bukan agenda joint research dengan 10 mitra | Gabungkan dashboard ke satu program; ubah output P3 menjadi dokumen agenda joint research dan surat komitmen mitra |
+| 5 | P5 | Satu butir kegiatan senilai Rp250 juta (4 coaching clinic, 40 paper disubmit) tanpa rincian biaya, jadwal klinik, atau kriteria mutu; target rasional publikasi Q1/Q2 hanya 19 | Rinci per klinik, tetapkan kriteria jurnal sasaran, dan hubungkan dengan U1 dan U2; batasi pada joint publication internasional dan koordinasikan dengan pelatihan penulisan DMP agar tidak tumpang tindih |
+| 6 | P3, P12 | Rp200 juta (67% anggaran P3) untuk pengembangan dashboard global research, sementara P12 juga memelihara dashboard yang sama (Rp30 juta). Output P3 berupa dokumentasi webinar dan pemetaan, bukan agenda joint research dengan 10 mitra | Gabungkan dashboard ke satu program; pastikan tidak menduplikasi dashboard publikasi DMP (jika ada) dan GloRI hanya menambah lapisan kolaborasi; ubah output P3 menjadi dokumen agenda joint research dan surat komitmen mitra |
 | 7 | P1 | Output berupa rencana kerja dan laporan capaian pusat-pusat yang ada; hubungan dengan lima flagship research cluster belum tampak. Kegiatan "Rumah Budaya Indonesia Fujian Normal University" (output: kantor Unhas) belum jelas kaitannya dengan QS | Pastikan tiap kegiatan punya output riset terukur dan justifikasi QS; [ISI: daftar 5 cluster dan bidang unggulan] |
 | 8 | P6 | Daftar 9 pusat/institut sebagian belum berstatus resmi (Sustainability Institute: MoU masih negosiasi); target konsorsium 9 hanya satu konsorsium per pusat | [ISI: status tiap pusat] |
 | 9 | P13 | Dua butir kegiatan (webinar dan guest lecture, masing-masing Rp100 juta) tanpa jadwal, PIC, atau luaran; dua butir lain masih placeholder | [ISI: jadwal, PIC, dan luaran] |
@@ -336,16 +380,20 @@ Biaya dan PIC diisi setelah pagu resmi diketahui. Banyak aktivitas berbiaya rend
 
 | Kode | Strategi | Aktivitas usulan | Waktu | Luaran | PIC | Biaya | KPI/usulan terkait |
 |---|---|---|---|---|---|---|---|
-| A1 | S5 | Audit afiliasi Scopus Unhas: bandingkan ID afiliasi dengan string pencarian, identifikasi varian nama dan afiliasi rumah sakit pendidikan | Q1 2027 (30 hari) | Laporan baseline dan daftar varian | [ISI: LPPM/Perpustakaan] | [ISI] | U4 |
-| A2 | S5 | Pengajuan koreksi afiliasi dan penggabungan profil penulis; kewajiban ORCID | Q1-Q2 2027 | Profil terkoreksi | [ISI] | [ISI] | U4 |
-| A3 | S5 | Format afiliasi baku untuk seluruh publikasi dan kegiatan GloRI | Q1 2027 | Panduan 1 halaman | [ISI] | [ISI] | U4 |
-| A4 | S1 | Baseline joint publication dan peta mitra dari Scopus/SciVal | Q1 2027 | Dokumen baseline | [ISI] | [ISI] | U1, U2, U3 |
+| A1 | S5 | Audit afiliasi Scopus Unhas: bandingkan ID afiliasi dengan string pencarian, identifikasi varian nama dan afiliasi rumah sakit pendidikan | Q1 2027 (30 hari) | Laporan baseline dan daftar varian | [ISI: DMP] | [ISI] | U4 |
+| A2 | S5 | Pengajuan koreksi afiliasi dan penggabungan profil penulis; kewajiban ORCID | Q1-Q2 2027 | Profil terkoreksi | [ISI: DMP] | [ISI] | U4 |
+| A3 | S5 | Format afiliasi baku untuk seluruh publikasi dan kegiatan GloRI | Q1 2027 | Panduan 1 halaman | [ISI: DMP] | [ISI] | U4 |
+| A4 | S1 | Baseline joint publication dan peta mitra dari Scopus/SciVal | Q1 2027 | Dokumen baseline | [ISI: DMP menyediakan data; GloRI menganalisis subset] | [ISI] | U1, U2, U3, U7 |
 | A5 | S4 | Peta akademisi global per bidang unggulan sebagai mitra dan penerima undangan forum | Q1-Q2 2027 | Daftar kontak | [ISI] | [ISI] | U5 |
 | A6 | S4 | Penyerahan kontak akademisi mitra ke QS melalui jalur resmi, sesuai aturan QS | Sesuai jadwal QS [ISI] | Kontak terdaftar | [ISI] | [ISI] | U5 |
 | A7 | S4 | Peran editorial, keynote, dan kehadiran peneliti Unhas di konferensi internasional pada bidang unggulan | Sepanjang 2027 | Daftar peran dan kehadiran | [ISI] | [ISI] | 2.3.4 |
 | A8 | S2 | Perjanjian kolaborasi riset tertulis dengan mitra Top 100/200: agenda, sumber dana, dan luaran | Sepanjang 2027 | Dokumen agenda joint research | [ISI] | [ISI] | 2.3.1 |
 | A9 | S3 | Penapisan mutu proposal sebelum insentif dibayar; kaitkan dengan skema hibah | Q1 2027 | Kriteria dan formulir | [ISI] | [ISI] | 2.3.1 |
 | A10 | S7 | Dokumentasi riset Unhas terkait SDG untuk QS Sustainability | Q2 2027 | Database riset SDG | [ISI: tim keberlanjutan] | [ISI] | Non-KPI |
+| A11 | S5 | Klausul afiliasi Unhas baku pada kontrak fellow (P4) dan perjanjian kerja sama (MoU, joint lab) | Q1 2027 | Templat klausul | [ISI: GloRI] | [ISI] | U4, U8 |
+| A12 | S5 | Kode acknowledgment untuk tiap program GloRI (misal "GloRI-2027-P5") | Q1 2027 | Daftar kode dan panduan penulisan | [ISI: GloRI] | [ISI] | U8 |
+| A13 | S5 | Pengecekan triwulan afiliasi luaran kolaborasi GloRI, dengan data dari DMP | Tiap triwulan | Laporan koreksi | [ISI: GloRI dengan DMP] | [ISI] | U8 |
+| A14 | S4 | Tindak lanjut untuk tiap pembicara forum: webinar bersama, usulan ko-penulis, atau undangan kunjungan; catat di basis data kontak | Sepanjang 2027 | Basis data akademisi terlibat | [ISI: GloRI] | [ISI] | U9 |
 
 ### 6.6 Rangkuman evaluasi
 
@@ -403,11 +451,12 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | No | Keputusan | Kepada |
 |---|---|---|
 | 1 | Menyetujui pemisahan target peringkat QS (universitas) dan KPI output GloRI | Rektor, WR terkait |
-| 2 | Menyetujui penambahan KPI dampak dan afiliasi (usul U1 sampai U6) dan pengaturan ulang bobot | Rektor, LPPM |
+| 2 | Menyetujui penambahan KPI dampak dan afiliasi (usul U1 sampai U10) dan pengaturan ulang bobot | Rektor, LPPM |
 | 3 | Menetapkan pemilik data FTE dan data QS di tingkat universitas | Rektor, WR |
 | 4 | Menyepakati kontribusi target joint publication dan konsorsium per fakultas | Dekan |
 | 5 | Menyetujui perubahan P2 (penapisan mutu), P3 (output joint research), dan P4 (ukuran dosen Unhas) | Pimpinan GloRI |
 | 6 | Menyelesaikan ketidakkonsistenan data cascading pada 3.4 | Tim perencanaan |
+| 7 | Menetapkan pembagian peran GloRI dan DMP (5.5) dan mengonfirmasi mandat DMP | Rektor, Direktur DMP, Direktur Eksekutif GloRI |
 
 ### 8.3 Jalur menuju Renstra GloRI 2026-2030
 
@@ -442,6 +491,8 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 14 | SK pusat riset di bawah GloRI | Status 9 pusat | [ISI] | GloRI |
 | 15 | Realisasi KPI 2026 dan baseline 2025 | Evaluasi | [ISI] | Perencanaan |
 | 16 | Pagu anggaran 2027 | Anggaran | [ISI] | Keuangan |
+| 17 | Tugas dan fungsi DMP (dan PMC jika berbeda) | Pembagian peran 5.5 | [ISI] | DMP |
+| 18 | Dashboard publikasi dan sitasi DMP (jika ada) | Menghindari duplikasi dengan P3 dan P12 | [ISI] | DMP |
 
 ### Lampiran B. Rincian kegiatan 2027 (44 kegiatan)
 
@@ -498,13 +549,14 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 2. Definisi indikator dari panduan metodologi QS dan bobot edisi terbaru (Bagian 2).
 3. Realisasi KPI 2026 dan baseline 2025 (Bagian 3).
 4. Tahun target konsorsium, satuan 2.3.2 dan 2.3.4, kode Renstra P7, P9, P11, P12 (Bagian 3.4).
-5. Baseline dan target usulan U1 sampai U6 (Bagian 4.3).
+5. Baseline dan target usulan U1 sampai U10 (Bagian 4.3).
 6. Pembagian target per fakultas (Bagian 6.3).
 7. PIC, jadwal, dan luaran kegiatan yang kosong (Bagian 6.4 dan Lampiran B).
 8. Pagu anggaran 2027 dan win rate historis (Bagian 6.4).
 9. Daftar lima flagship cluster dan status pusat (Bagian 6.4).
-10. Jadwal dan biaya aktivitas usulan A1 sampai A10 (Bagian 6.5).
+10. Jadwal dan biaya aktivitas usulan A1 sampai A14 (Bagian 6.5).
 11. Jadwal Renstra GloRI 2026-2030 (Bagian 8.3).
+12. Tugas dan fungsi DMP serta ada tidaknya dashboard publikasi DMP (Bagian 5.5 dan Lampiran A).
 
 ### Lampiran D. Sumber dan verifikasi
 
