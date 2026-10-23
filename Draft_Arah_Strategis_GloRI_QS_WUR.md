@@ -4,12 +4,12 @@
 
 | | |
 |---|---|
-| Status | **DRAFT 0.2 untuk pembahasan dengan Direktur Eksekutif GloRI**, bukan dokumen resmi |
+| Status | **DRAFT 0.3 untuk pembahasan dengan Direktur Eksekutif GloRI**, bukan dokumen resmi |
 | Tanggal | 23 Oktober 2026 |
 | Penyusun | [ISI: nama tim penyusun GloRI] |
 | Pembaca sasaran | Pimpinan universitas, pimpinan fakultas, dan pemangku kepentingan terkait |
-| Sumber data internal | Cascading KPI GloRI (5 KPI, 2026-2030); Cascading Program GloRI 2027 (13 program, usulan anggaran Rp3 miliar) |
-| Perubahan dari 0.1 | Ukuran dampak, afiliasi Scopus, dan engagement akademisi dirinci (Bagian 4.3); pembagian peran dengan DMP ditambahkan (Bagian 5.5); pemilik afiliasi Scopus diganti dari LPPM/Perpustakaan menjadi DMP; usulan KPI bertambah menjadi U1 sampai U10 |
+| Sumber data internal | Cascading KPI GloRI (5 KPI, 2026-2030); Cascading Program GloRI 2027 v2 dengan Summary Renstra-KPI (13 program, **pagu disetujui Rp1 miliar**, didistribusi dari usulan awal Rp3 miliar) |
+| Perubahan dari 0.2 | Seluruh angka anggaran dan kegiatan disesuaikan dengan cascading 2027 v2 (pagu Rp1 miliar); pemetaan program ke lima KPI dimasukkan (3.3); ketidakkonsistenan data diperbarui (3.5); distribusi anggaran ke KPI dan QS (4.4); temuan evaluasi diperbarui (6.4); opsi prioritisasi dengan pagu Rp1 miliar ditambahkan (6.7) |
 
 ## Cara membaca dokumen ini
 
@@ -18,18 +18,20 @@
 - Hubungan KPI dengan indikator QS dinilai dengan skala kualitatif: **Kuat**, **Sedang**, **Lemah**, atau **Tidak ada**. Dampak KPI terhadap skor QS tidak dihitung secara kuantitatif karena tidak ada data yang mendukung hubungan sebab-akibat itu.
 - Jika suatu strategi tidak punya KPI di cascading, strategi itu ditandai **Non-KPI** dan tidak dipaksakan ke KPI yang ada. Strategi Non-KPI dapat mendukung KPI unit lain.
 - Peringkat dan bobot QS berasal dari pencarian web dan belum diverifikasi ke dokumen resmi QS. Bagian Lampiran D memuat daftar verifikasi.
+- **Anggaran:** pagu yang disetujui untuk GloRI 2027 adalah Rp1 miliar. Berdasarkan file v2, angka per program didistribusikan dari usulan awal Rp3 miliar secara hampir proporsional (dengan satu pengecualian, lihat 3.5). Seluruh angka rupiah di dokumen ini memakai pagu Rp1 miliar kecuali dinyatakan lain.
 - **DMP:** Direktorat Manajemen Publikasi, yang pada 2026 berubah status dari Pusat Manajemen Publikasi (PMC) menjadi direktorat (konfirmasi dari pimpinan GloRI). Fungsi PMC yang diketahui dari peraturan organisasi 2023 meliputi pembinaan publikasi dan jurnal internal serta pelatihan penulisan. Tugas dan fungsi DMP setelah menjadi direktorat belum diperoleh dan mungkin lebih luas. [ISI: tugas dan fungsi DMP terbaru]
 
 ## Ringkasan eksekutif
 
 1. **Posisi Unhas:** peringkat QS terbaru belum dapat dipastikan. Sumber sekunder menyebut 951 untuk edisi 2026 dan pita 851-900 untuk edisi 2027, sedangkan Renstra menargetkan 721-730 pada 2027. [ISI: peringkat resmi dan skor per indikator]
 2. **Struktur QS:** 45% bobot berasal dari survei reputasi, 25% dari data bibliometrik dan hasil lulusan, 25% dari data institusi, dan 5% dari keberlanjutan. Indikator yang paling sesuai fungsi GloRI adalah Citations per Faculty (20%) dan International Research Network (5%), ditambah Academic Reputation (30%) secara tidak langsung.
-3. **Kesejajaran dengan cascading:** program 2027 sejalan dengan International Research Network. Sebaliknya, Citations per Faculty dan Academic Reputation, yang bobotnya 50%, hanya tersentuh sebagian dan belum punya KPI dampak atau reputasi.
-4. **Alokasi anggaran:** sekitar 50% anggaran 2027 menopang kolaborasi dan fellow (indikator berbobot 5%), sedangkan Citations per Faculty dan Academic Reputation menerima sekitar 17%. Ini dapat dibenarkan jika kolaborasi dipakai sebagai jalan menuju sitasi, tetapi logika itu belum tertulis dan belum diukur.
-5. **GloRI adalah penggerak, bukan satu-satunya penghasil.** Target GloRI hanya 3,8% dari target 500 joint publication universitas dan 22,5% dari target 40 riset konsorsium (jika target itu memang untuk 2027). Sisanya bergantung pada fakultas.
-6. **Hal yang tidak dapat diselesaikan GloRI:** data FTE, Employer Reputation, Employment Outcomes, Faculty Student Ratio, dan International Student Ratio berada di unit lain, tetapi menentukan hasil peringkat.
-7. **Keterlambatan dampak:** kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit beberapa tahun kemudian, sehingga target peringkat 2027 tidak dapat dipertanggungjawabkan kepada GloRI. [Kemungkinan Besar]
-8. **Pembagian dengan DMP:** dataset publikasi, audit afiliasi Scopus, dan pelatihan penulisan umum sebaiknya dimiliki DMP. GloRI memakai data itu dan memiliki klausul afiliasi di kontrak mitra, penandaan acknowledgment, serta engagement dengan akademisi. Program P3, P5, dan P12 berisiko tumpang tindih dengan DMP. [ISI: tugas dan fungsi DMP terbaru]
+3. **Kesejajaran dengan cascading:** program 2027 sejalan dengan International Research Network. KPI-126 menyerap 62,7% anggaran, tetapi hanya 26,7% dari total anggaran adalah program kolaborasi langsung (P1, P3, P7); sisanya pendanaan, dukungan, kebijakan, dan data. Citations per Faculty dan Academic Reputation (bobot QS 50%) hanya tersentuh sebagian dan belum punya KPI dampak atau reputasi.
+4. **Alokasi anggaran (pagu Rp1 miliar):** sekitar 50% menopang kolaborasi dan fellow (indikator berbobot 5%), sedangkan Citations per Faculty dan Academic Reputation menerima sekitar 14%. Bagian ini turun dari sekitar 17% pada usulan Rp3 miliar karena pemotongan tidak sepenuhnya proporsional: forum (P13) menerima Rp40 juta dari Rp66,7 juta bila proporsional, sedangkan jejaring domestik (P11) menerima Rp60 juta dari Rp33,3 juta.
+5. **Pagu Rp1 miliar belum diikuti pengujian ulang target.** Target dana eksternal Rp60 miliar kini berarti leverage 60 kali (sebelumnya 20 kali). Anggaran fellow hanya cukup untuk sekitar 3 fellow, sementara kegiatan P4 masih menyebut 10 orang dan KPI Malino menyebut 20 sampai 30.
+6. **GloRI adalah penggerak, bukan satu-satunya penghasil.** Kontribusi GloRI terhadap target universitas: 8 dari 40 konsorsium (20%) dan sekitar 12 sampai 20 dari 500 joint publication (2,5% sampai 4%; angkanya belum final). Sisanya bergantung pada fakultas.
+7. **Hal yang tidak dapat diselesaikan GloRI:** data FTE, Employer Reputation, Employment Outcomes, Faculty Student Ratio, dan International Student Ratio berada di unit lain, tetapi menentukan hasil peringkat.
+8. **Keterlambatan dampak:** kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit beberapa tahun kemudian, sehingga target peringkat 2027 tidak dapat dipertanggungjawabkan kepada GloRI. [Kemungkinan Besar]
+9. **Pembagian dengan DMP:** dataset publikasi, audit afiliasi Scopus, dan pelatihan penulisan umum sebaiknya dimiliki DMP. GloRI memakai data itu dan memiliki klausul afiliasi di kontrak mitra, penandaan acknowledgment, serta engagement dengan akademisi. [ISI: tugas dan fungsi DMP terbaru]
 
 ---
 
@@ -153,31 +155,73 @@ Realisasi, capaian, dan nilai 2026 sampai 2030 belum terisi. [ISI: realisasi 202
 
 ### 3.2 Indikator Renstra Unhas yang menopang program GloRI 2027
 
-| Kode Renstra | Indikator kinerja program | Satuan | Target 2027 | Program GloRI |
+| Kode Renstra | KPI | Indikator kinerja program | Satuan | Target 2027 | Program GloRI |
+|---|---|---|---|---|---|
+| 2.3.1 | KPI-126 | Persentase kerja sama riset internasional aktif yang memiliki agenda, pendanaan, atau output terukur | % | 26,78 | P1, P2, P3, P7, P9, P10, P11, P12 |
+| 2.3.2 | KPI-127 | Jumlah riset konsorsium | riset | 40 (menurut Summary; sheet P6 menyebut 2030) | P6 |
+| 2.3.3 | KPI-128 | Jumlah joint publication dengan mitra luar negeri | publikasi | 500 | P5, P8 |
+| 2.3.4 | KPI-129 | Jumlah joint international conference per tahun | "riset" (lihat 3.5) | 45 | P13 |
+| 4.1.1 | KPI-130 | Persentase dosen yang mengikuti skema penguatan rekognisi internasional dan jejaring kepakaran global | % | 64,00 | P4 |
+| 2.4.4 | - | Peringkat QS World University Ranking yang didukung evidence reputasi global dan internasionalisasi institusi | peringkat | 721-730 | P8, P12 (kode program; KPI tujuan lain) |
+| 5.3.3 | - | Persentase peningkatan pendapatan non-DIPA | % | 3,92 | P10 (kode program; KPI tujuan lain) |
+
+Target operasional 2027 pada Summary: KPI-126, 127, 128, dan 129 sebesar 100%, KPI-130 sebesar 92%. Target pada tabel di atas adalah target hasil (outcome) universitas.
+
+### 3.3 Pemetaan program ke KPI (cascading v2)
+
+Pemetaan pada file v2 adalah usulan yang masih menunggu konfirmasi. Padanan KPI-127 sampai 130 dengan kode Renstra 2.3.2, 2.3.3, 2.3.4, dan 4.1.1 sekarang tertulis eksplisit pada Summary.
+
+| Program | KPI tujuan | Kode Renstra program / KPI | Anggaran (Rp juta) | Kesesuaian kode (menurut file) |
 |---|---|---|---|---|
-| 2.3.1 | Persentase kerja sama riset internasional aktif yang memiliki agenda, pendanaan, atau output terukur | % | 26,78 | P1, P2, P3, P7, P9, P11 |
-| 2.3.2 | Jumlah riset konsorsium | riset | 40 (lihat catatan) | P6 |
-| 2.3.3 | Jumlah joint publication dengan mitra luar negeri | publikasi | 500 | P5 |
-| 2.3.4 | Jumlah joint international conference per tahun | "riset" (lihat catatan) | 45 | P13 |
-| 2.4.4 | Peringkat QS World University Ranking yang didukung evidence reputasi global dan internasionalisasi institusi | peringkat | 721-730 | P8, P12 |
-| 4.1.1 | Persentase dosen yang mengikuti skema penguatan rekognisi internasional dan jejaring kepakaran global | % | 64,00 | P4 |
-| 5.3.3 | Persentase peningkatan pendapatan non-DIPA | % | 3,92 | P10 |
+| P1 Global Research Flagship | KPI-126 | 2.3.1 / 2.3.1 | 117 | Sesuai |
+| P2 Grant Accelerator | KPI-126 | 2.3.1 / 2.3.1 | 200 | Sesuai |
+| P3 Top University Partnership | KPI-126 | 2.3.1 / 2.3.1 | 100 | Sesuai |
+| P4 International Research Fellows | KPI-130 | 4.1.1 / 4.1.1 | 150 | Sesuai |
+| P5 Publication & Citation Accelerator | KPI-128 | 2.3.3 / 2.3.3 | 83 | Sesuai |
+| P6 Network & Consortium | KPI-127 | 2.3.2 / 2.3.2 | 83 | Sesuai |
+| P7 Joint Laboratory / Hub | KPI-126 | 2.3.1 / 2.3.1 | 50 | Sesuai (kode alternatif 5.3.9 tidak ada di master) |
+| P8 Scientific Communication | KPI-128 | 2.4.4 / 2.3.3 | 17 | Berbeda; KPI terdekat (publikasi) |
+| P9 Institutional Management | KPI-126 | 2.3.1 / 2.3.1 | 50 | Sesuai (dukungan operasional) |
+| P10 Research-to-Impact & Policy | KPI-126 | 5.3.3 / 2.3.1 | 33 | Berbeda; KPI terdekat (kerja sama industri) |
+| P11 Domestic Networking | KPI-126 | 2.3.1 / 2.3.1 | 60 | Sesuai |
+| P12 Partnership & Research Database | KPI-126 | 2.4.4 / 2.3.1 | 17 | Berbeda; KPI terdekat (database kemitraan) |
+| P13 Global Forum & Lecture Series | KPI-129 | 2.3.4 / 2.3.4 | 40 | Sesuai (RKAT memakai 2.3.3) |
+| **Total** | | | **1.000** | |
 
-### 3.3 Hubungan KPI 2026-2030 dengan indikator Renstra 2027
+### 3.4 Perubahan akibat pagu Rp1 miliar (dari usulan Rp3 miliar)
 
-KPI-126 sama dengan indikator 2.3.1 (target 2027: 26,78). Untuk KPI-127 sampai 130, padanan berikut adalah [Menebak]: KPI-127 dengan 2.3.2, KPI-128 dengan 2.3.3, KPI-129 dengan 2.3.4, dan KPI-130 dengan 4.1.1. Cascading 2027 memakai ukuran absolut (jumlah konsorsium, jumlah joint publication, jumlah konferensi), sedangkan KPI 2026-2030 memakai persen capaian target. [ISI: konfirmasi mana yang berlaku sebagai KPI resmi]
+| Program | Usulan awal (Rp juta) | v2 (Rp juta) | Perubahan kegiatan |
+|---|---|---|---|
+| P1 | 350 | 117 | Hub Timur Tengah dan Rumah Budaya Fujian dihapus; empat kegiatan penguatan pusat masing-masing Rp10 juta |
+| P2 | 600 | 200 | Insentif proposal terkirim (Rp300 juta) dihapus; coaching clinic dan workshop masing-masing Rp100 juta |
+| P3 | 300 | 100 | Dashboard dari Rp200 juta menjadi Rp50 juta; pemetaan mitra dari Rp70 juta menjadi Rp20 juta |
+| P4 | 450 | 150 | Seluruh kegiatan diperkecil; target rasional fellow menjadi 3,3 |
+| P5 | 250 | 83 | Tetap satu kegiatan (4 coaching clinic); target rasional publikasi menjadi 12,3 |
+| P6 | 250 | 83 | Workshop rencana konsorsium dihapus; simposium Rp60 juta |
+| P7 | 150 | 50 | Dikecilkan |
+| P8 | 50 | 17 | Publikasi sains populer di media dihapus; tinggal workshop |
+| P9 | 150 | 50 | Rapat koordinasi dihapus |
+| P10 | 100 | 33 | Dikecilkan |
+| P11 | 100 | 60 | Perjalanan dalam negeri dan raker dipertahankan Rp30 juta masing-masing |
+| P12 | 50 | 17 | Pembaruan dashboard dihapus; tinggal pemeliharaan website |
+| P13 | 200 | 40 | Dua butir kegiatan masing-masing Rp20 juta |
+| **Total** | **3.000** | **1.000** | |
 
-### 3.4 Catatan konsistensi data cascading
+### 3.5 Catatan konsistensi data cascading
 
 | No | Temuan | Dampak | Tindak lanjut |
 |---|---|---|---|
-| 1 | Target riset konsorsium (2.3.2) tertulis "Target 2027 = 40" pada ringkasan, tetapi "Target 2030 = 40" pada sheet P6 | Target GloRI 9 konsorsium dapat terbaca 22,5% atau 100% dari target tergantung tahun | [ISI: konfirmasi tahun target] |
-| 2 | Satuan indikator 2.3.4 (conference) dan 2.3.2 (konsorsium) sama-sama "riset" | Satuan salah; 45 conference tertulis sebagai "riset" | Perbaiki satuan |
-| 3 | Kode Renstra P9, P11, dan P12 adalah dugaan (catatan pada file) | Program pendukung ditempatkan pada indikator yang tidak dirancang untuk itu | [ISI: kode resmi] |
-| 4 | P11 (jejaring riset domestik) memakai indikator kerja sama internasional (2.3.1) | Kegiatan domestik tidak menggerakkan indikator internasional | Pindahkan atau jelaskan |
-| 5 | P7 (joint lab) berpotensi memakai kode 5.3.9 (pembaruan laboratorium) | Kode ganda | [ISI: kode resmi] |
-| 6 | Realisasi 2026 belum terisi | Tidak ada baseline untuk menilai kewajaran target 2027 | [ISI: realisasi] |
-| 7 | Anggaran Rp3 miliar adalah usulan awal, bukan pagu | Seluruh target rasional dapat berubah | [ISI: pagu resmi] |
+| 1 | Target 2.3.2 tertulis 40 untuk 2027 pada Summary, tetapi "Target 2030: 40 riset" pada sheet P6 | Tahun target tidak jelas | [ISI: konfirmasi tahun] |
+| 2 | Kontribusi konsorsium GloRI: 8 (Raker 2-4 Oktober 2026, Summary) versus 9 (Dasar_Target dan target rasional P6) | Selisih satu konsorsium | [ISI: angka resmi dan daftar konsorsium] |
+| 3 | Kontribusi joint publication GloRI: 12,3 (Dasar_Target), 18 sampai 20 (Raker), dan 40 paper disubmit (kegiatan P5); Summary menyatakan belum final | Tiga angka berbeda untuk satu indikator | [ISI: satu angka resmi dan definisi: submit atau terbit] |
+| 4 | Fellow: target rasional 3,3 (kapasitas anggaran), kegiatan P4 menyebut "10 orang" dengan Rp100 juta, KPI Malino 20 sampai 30 | Anggaran Rp10 juta per orang tidak cukup untuk tiket, akomodasi, dan honor; kapasitas anggaran 0,17 dari minimum Malino | [ISI: jumlah fellow yang akan dibiayai] |
+| 5 | Target rasional berupa pecahan (3,3 fellow; 12,3 publikasi) | Tidak dapat dilaksanakan atau dilaporkan | Bulatkan dan sebutkan dasarnya |
+| 6 | Target P8 (2 kegiatan) dan P12 (2 pembaruan dashboard) lebih besar daripada kegiatan yang tersisa (P8: 1 workshop; P12: hanya website) | Target tanpa kegiatan | Sesuaikan target atau kegiatan |
+| 7 | Catatan usang pada Summary: "Kontribusi GloRI KPI-126: anggaran Rp1,8 miliar"; Dasar_Target: leverage 60 kali diberi label "Sesuai target 20x" | Angka versi Rp3 miliar tertinggal | Perbarui catatan |
+| 8 | Satuan 2.3.2 dan 2.3.4 sama-sama "riset" | Satuan konferensi salah | Perbaiki |
+| 9 | Kode Renstra: P8, P10, P12 berbeda dengan KPI tujuan; P13 memakai 2.3.3 di RKAT; P7 punya kode alternatif 5.3.9 yang tidak ada di master | Ketidaksesuaian antara RKAT dan master | [ISI: kode resmi] |
+| 10 | Distribusi pagu bukan proporsional untuk P11 (Rp60 juta, proporsional Rp33,3 juta) dan P13 (Rp40 juta, proporsional Rp66,7 juta) [Pasti, dari hitungan] | Dana forum, tuas Academic Reputation, berpindah ke jejaring domestik | [ISI: alasan dan keputusan] |
+| 11 | Realisasi 2026 belum terisi | Tidak ada baseline | [ISI: realisasi 2026] |
 
 ---
 
@@ -190,11 +234,11 @@ Skala kontribusi: **Kuat**, **Sedang**, **Lemah**, **-** (tidak ada). Penilaian 
 | Indikator Renstra / KPI | Academic Reputation (30%) | Citations per Faculty (20%) | International Faculty (5%) | International Research Network (5%) | Sustainability (5%) | Catatan |
 |---|---|---|---|---|---|---|
 | 2.3.1 % kerja sama riset internasional aktif (KPI-126) | Lemah | Sedang | - | **Kuat** | - | Kolaborasi yang berkelanjutan sesuai arah indikator IRN |
-| 2.3.2 Jumlah riset konsorsium | - | Lemah | - | Sedang | - | Konsorsium belum tentu menghasilkan publikasi |
-| 2.3.3 Jumlah joint publication dengan mitra luar negeri | Lemah | Sedang | - | **Kuat** | - | Hanya jumlah; tidak ada ukuran kualitas atau sitasi |
-| 2.3.4 Jumlah joint international conference | Lemah | - | - | Lemah | - | Keterlihatan; efek pada survei tidak pasti |
+| 2.3.2 Jumlah riset konsorsium (KPI-127) | - | Lemah | - | Sedang | - | Konsorsium belum tentu menghasilkan publikasi |
+| 2.3.3 Jumlah joint publication dengan mitra luar negeri (KPI-128) | Lemah | Sedang | - | **Kuat** | - | Hanya jumlah; tidak ada ukuran kualitas atau sitasi |
+| 2.3.4 Jumlah joint international conference (KPI-129) | Lemah | - | - | Lemah | - | Keterlihatan; efek pada survei tidak pasti |
 | 2.4.4 Peringkat QS | (hasil gabungan) | (hasil gabungan) | (hasil gabungan) | (hasil gabungan) | (hasil gabungan) | Target universitas; bukan tanggung jawab langsung GloRI |
-| 4.1.1 % dosen mengikuti skema rekognisi internasional | Lemah | - | Lemah | Sedang | - | Output P4 (visiting fellow) tidak sama dengan indikator (% dosen Unhas) |
+| 4.1.1 % dosen mengikuti skema rekognisi internasional (KPI-130) | Lemah | - | Lemah | Sedang | - | Output P4 (visiting fellow) tidak sama dengan indikator (% dosen Unhas) |
 | 5.3.3 % peningkatan pendapatan non-DIPA | - | - | - | - | - | Tidak terkait indikator QS |
 
 ### 4.2 Cakupan bobot QS yang relevan bagi GloRI
@@ -239,6 +283,19 @@ Ini usulan, bukan KPI resmi. Target diisi setelah baseline tersedia. Jika KPI ba
 | U6 | Peneliti/dosen asing yang memenuhi definisi QS | International Faculty Ratio | FTE sesuai definisi QS | Data SDM | [ISI] | [ISI] | SDM | Mendukung |
 
 
+### 4.4 Distribusi anggaran 2027 ke KPI dan ke indikator QS
+
+| KPI | Anggaran (Rp juta) | % | Program | Indikator QS terkait | Catatan |
+|---|---|---|---|---|---|
+| KPI-126 | 627 | 62,7 | P1, P2, P3, P7, P9, P10, P11, P12 | IRN (Kuat) | Kolaborasi langsung (P1, P3, P7) hanya Rp267 juta; sisanya Rp360 juta adalah pendanaan (P2), dukungan (P9, P11), kebijakan (P10), dan data (P12) |
+| KPI-127 | 83 | 8,3 | P6 | IRN (Sedang) | |
+| KPI-128 | 100 | 10,0 | P5, P8 | Citations per Faculty; IRN (Sedang) | P8 (Rp17 juta) adalah komunikasi sains; kaitannya dengan joint publication lemah |
+| KPI-129 | 40 | 4,0 | P13 | Academic Reputation (Lemah) | Forum dan kuliah tamu |
+| KPI-130 | 150 | 15,0 | P4 | IRN; Citations per Faculty (Sedang) | Output P4 berbeda dengan indikator 4.1.1 |
+| **Total** | **1.000** | **100** | | | |
+
+Bobot KPI pada cascading sama (20% per KPI), tetapi anggaran yang menopangnya berkisar dari 4% sampai 62,7%. Akibatnya capaian KPI-126 hampir seluruhnya menentukan nilai GloRI, sementara KPI-129 (forum) dan KPI-128 (joint publication) hanya menerima sebagian kecil sumber daya.
+
 ---
 
 ## 5. Strategi GloRI untuk Meningkatkan Peringkat QS
@@ -276,7 +333,7 @@ Perubahan dari matriks strategi sebelumnya: prioritas International Faculty Rati
 
 ### 5.4 Risiko integritas
 
-- Insentif yang dibayarkan per proposal terkirim (P2) dapat mendorong kuantitas di atas kualitas. Lihat 6.4.
+- Insentif per proposal terkirim (P2) sudah dihapus pada cascading v2. Jika dihidupkan kembali, kaitkan dengan mutu proposal, bukan jumlah yang dikirim.
 - Fellow yang diminta menghasilkan "output publikasi" harus diukur dari publikasi yang bermutu, bukan dari jumlah sitasi.
 - Pengisian kontak survei QS harus mengikuti aturan QS dan tidak boleh meminta suara. [Menebak] mekanisme resminya; cek panduan QS.
 
@@ -309,70 +366,71 @@ Mekanisme koordinasi yang diusulkan:
 
 ### 6.1 Peta program 2027 terhadap strategi dan indikator QS
 
-Anggaran adalah usulan awal Rp3 miliar, bukan pagu. Kategori: F = flagship, U = utama, P = pendukung, R = rutin.
+Pagu Rp1 miliar. Kategori: F = flagship, U = utama, P = pendukung, R = rutin.
 
-| Program | Kategori | Anggaran (Rp juta) | % | Kode Renstra | Strategi | Indikator QS utama | Output GloRI 2027 | Kesesuaian dengan QS |
-|---|---|---|---|---|---|---|---|---|
-| P1 Global Research Flagship | F | 350 | 11,7 | 2.3.1 | S2 | IRN | 5 flagship cluster | Sedang |
-| P2 Grant Accelerator | F | 600 | 20,0 | 2.3.1 | S3 | Tidak langsung | Proposal Rp200 miliar diajukan | Lemah (tidak langsung) |
-| P3 Top University Partnership | F | 300 | 10,0 | 2.3.1 | S2 | IRN | 10 mitra Top 100/200 dengan joint research | Sedang |
-| P4 International Research Fellows | F | 450 | 15,0 | 4.1.1 | S6 | IRN; CpF | 10 fellow | Sedang |
-| P5 Publication & Citation Accelerator | F | 250 | 8,3 | 2.3.3 | S1 | CpF; IRN | 19 joint publication Q1/Q2 | Sedang |
-| P6 Network & Consortium | U | 250 | 8,3 | 2.3.2 | S2 | IRN | 9 konsorsium | Sedang |
-| P7 Joint Laboratory / Hub | U | 150 | 5,0 | 2.3.1 | S2 | IRN | 3 joint lab/hub | Sedang |
-| P8 Scientific Communication | U | 50 | 1,7 | 2.4.4 | S4 | Academic Reputation | 2 kegiatan | Lemah |
-| P9 Institutional Management | P | 150 | 5,0 | 2.3.1 (dugaan) | - | - | 1 paket dukungan | Tidak ada |
-| P10 Research-to-Impact & Policy | U | 100 | 3,3 | 5.3.3 | S7 | Tidak ada | 5 policy brief | Tidak ada |
-| P11 Domestic Networking | P | 100 | 3,3 | 2.3.1 (dugaan) | - | - | 1 rapat kerja; 8 perjalanan dalam negeri | Tidak ada |
-| P12 Partnership & Research Database | R | 50 | 1,7 | 2.4.4 (dugaan) | S5 | IRN/CpF (data) | 2 pembaruan dashboard | Lemah |
-| P13 Global Forum & Lecture Series | R | 200 | 6,7 | 2.3.4 | S4 | Academic Reputation | 6 forum | Lemah |
-| **Total** | | **3.000** | **100** | | | | | |
+| Program | Kat. | Anggaran (Rp juta) | % | KPI | Kode Renstra | Strategi | Indikator QS utama | Output GloRI 2027 | Kesesuaian dengan QS |
+|---|---|---|---|---|---|---|---|---|---|
+| P1 Global Research Flagship | F | 117 | 11,7 | KPI-126 | 2.3.1 | S2 | IRN | 5 flagship cluster | Sedang |
+| P2 Grant Accelerator | F | 200 | 20,0 | KPI-126 | 2.3.1 | S3 | Tidak langsung | 30 proposal siap submit; proposal Rp200 miliar | Lemah (tidak langsung) |
+| P3 Top University Partnership | F | 100 | 10,0 | KPI-126 | 2.3.1 | S2 | IRN | 10 mitra Top 100/200 | Sedang |
+| P4 International Research Fellows | F | 150 | 15,0 | KPI-130 | 4.1.1 | S6 | IRN; CpF | 3,3 fellow (kegiatan menyebut 10) | Sedang |
+| P5 Publication & Citation Accelerator | F | 83 | 8,3 | KPI-128 | 2.3.3 | S1 | CpF; IRN | 12,3 joint publication Q1/Q2 (belum final) | Sedang |
+| P6 Network & Consortium | U | 83 | 8,3 | KPI-127 | 2.3.2 | S2 | IRN | 9 konsorsium (8 menurut Raker) | Sedang |
+| P7 Joint Laboratory / Hub | U | 50 | 5,0 | KPI-126 | 2.3.1 | S2 | IRN | 3 joint lab/hub | Sedang |
+| P8 Scientific Communication | U | 17 | 1,7 | KPI-128 | 2.4.4 | S4 | Academic Reputation | Target 2 kegiatan; 1 terdaftar | Lemah |
+| P9 Institutional Management | P | 50 | 5,0 | KPI-126 | 2.3.1 | - | - | 1 paket dukungan | Tidak ada |
+| P10 Research-to-Impact & Policy | U | 33 | 3,3 | KPI-126 | 5.3.3 | S7 | Tidak ada | 5 policy brief | Tidak ada |
+| P11 Domestic Networking | P | 60 | 6,0 | KPI-126 | 2.3.1 | - | - | 1 raker; 8 perjalanan dalam negeri | Tidak ada |
+| P12 Partnership & Research Database | R | 17 | 1,7 | KPI-126 | 2.4.4 | S5 | IRN/CpF (data) | Target 2 pembaruan dashboard; hanya website terdaftar | Lemah |
+| P13 Global Forum & Lecture Series | R | 40 | 4,0 | KPI-129 | 2.3.4 | S4 | Academic Reputation | 6 forum; 1 co-host konferensi (Hiroshima University dan IPB, Maret 2027) | Lemah |
+| **Total** | | **1.000** | **100** | | | | | | |
 
 ### 6.2 Alokasi anggaran dibandingkan bobot QS
 
-| Kelompok | Program | Anggaran (Rp juta) | % anggaran | Bobot QS terkait |
-|---|---|---|---|---|
-| Citations per Faculty (publikasi bersama) | P5 | 250 | 8,3 | 20% |
-| International Research Network (kolaborasi) | P1, P3, P6, P7 | 1.050 | 35,0 | 5% |
-| Fellow (IRN, CpF, International Faculty) | P4 | 450 | 15,0 | 5% (+ sebagian CpF) |
-| Academic Reputation (keterlihatan dan forum) | P8, P13 | 250 | 8,3 | 30% |
-| Penggerak pendanaan (tidak dinilai QS) | P2 | 600 | 20,0 | - |
-| Data dan dashboard | P12 | 50 | 1,7 | - |
-| Di luar QS | P10 | 100 | 3,3 | - |
-| Dukungan | P9, P11 | 250 | 8,3 | - |
-| **Total** | | **3.000** | **100** | |
+| Kelompok | Program | Anggaran (Rp juta) | % anggaran | % pada usulan Rp3 miliar | Bobot QS terkait |
+|---|---|---|---|---|---|
+| Citations per Faculty (publikasi bersama) | P5 | 83 | 8,3 | 8,3 | 20% |
+| International Research Network (kolaborasi) | P1, P3, P6, P7 | 350 | 35,0 | 35,0 | 5% |
+| Fellow (IRN, CpF, International Faculty) | P4 | 150 | 15,0 | 15,0 | 5% (+ sebagian CpF) |
+| Academic Reputation (keterlihatan dan forum) | P8, P13 | 57 | 5,7 | 8,3 | 30% |
+| Penggerak pendanaan (tidak dinilai QS) | P2 | 200 | 20,0 | 20,0 | - |
+| Data dan dashboard | P12 | 17 | 1,7 | 1,7 | - |
+| Di luar QS | P10 | 33 | 3,3 | 3,3 | - |
+| Dukungan | P9, P11 | 110 | 11,0 | 8,3 | - |
+| **Total** | | **1.000** | **100** | **100** | |
 
-Pengelompokan ini adalah penilaian penyusun [Menebak]. Temuannya: indikator berbobot 5% (IRN) menopang sekitar 35% anggaran langsung dan 15% lagi melalui fellow, sedangkan Academic Reputation (30%) dan Citations per Faculty (20%) masing-masing menerima sekitar 8%. Ini dapat dibenarkan bila kolaborasi dipakai sebagai jalan menuju publikasi dan sitasi, tetapi keputusan itu harus ditulis eksplisit dan diukur dengan KPI dampak (usul U1 dan U2).
+Pengelompokan ini adalah penilaian penyusun [Menebak]. Temuannya: indikator berbobot 5% (IRN) menopang 35% anggaran langsung dan 15% lagi melalui fellow, sedangkan Academic Reputation (30%) turun dari 8,3% menjadi 5,7% dan Citations per Faculty (20%) tetap 8,3%. Dukungan operasional dan jejaring domestik naik dari 8,3% menjadi 11%. Pilihan ini dapat dibenarkan bila kolaborasi dipakai sebagai jalan menuju publikasi dan sitasi, tetapi logikanya harus ditulis eksplisit dan diukur dengan KPI dampak (usul U1 dan U2).
 
 ### 6.3 Kontribusi GloRI terhadap target universitas
 
-| Indikator Renstra | Target universitas 2027 | Target rasional GloRI 2027 | Persen | Sisanya diharapkan dari |
+| Indikator Renstra | Target universitas 2027 | Kontribusi GloRI 2027 | Persen | Catatan |
 |---|---|---|---|---|
-| 2.3.2 Jumlah riset konsorsium | 40 (atau 2030) | 9 | 22,5% | [ISI: fakultas/pusat lain] |
-| 2.3.3 Joint publication dengan mitra luar negeri | 500 | 19 (Q1/Q2) | 3,8% | Fakultas dan dosen [ISI] |
-| 2.3.4 Joint international conference | 45 | 6 forum | 13,3% | Fakultas [ISI] |
-| 2.3.1 % kerja sama riset aktif | 26,78% | [ISI: jumlah kerja sama aktif dan penyebut] | [ISI] | [ISI] |
+| 2.3.2 Jumlah riset konsorsium (KPI-127) | 40 | 8 (Raker) atau 9 (Dasar_Target) | 20,0% atau 22,5% | Target universitas lintas DMP, LPPM, dan unit lain |
+| 2.3.3 Joint publication dengan mitra luar negeri (KPI-128) | 500 | 12,3 (Dasar_Target), 18 sampai 20 (Raker), atau 40 disubmit (P5) | 2,5%; 3,6% sampai 4,0%; 8,0% | Belum final; pilih satu angka dan definisi |
+| 2.3.4 Joint international conference (KPI-129) | 45 | 6 forum + 1 co-host (Hiroshima University dan IPB, Maret 2027) | 15,6% bila ketujuhnya dihitung | Belum tentu seluruh forum memenuhi definisi joint international conference |
+| 2.3.1 Persentase kerja sama riset aktif (KPI-126) | 26,78% | [ISI: jumlah kerja sama aktif dan penyebut] | [ISI] | Penyebut dan definisi kerja sama aktif belum ada |
 
 Implikasinya bagi fakultas: GloRI berperan sebagai penggerak dan fasilitator, bukan penghasil sebagian besar publikasi. Dokumen ini perlu memuat kontribusi target tiap fakultas. [ISI: pembagian target per fakultas]
 
-### 6.4 Temuan evaluasi atas daftar kegiatan 2027
+### 6.4 Temuan evaluasi atas daftar kegiatan 2027 (v2)
 
-| No | Program | Temuan | Rekomendasi |
-|---|---|---|---|
-| 1 | P8, P12, P13 | Kegiatan engagement dengan akademisi dan konferensi (tuas utama Academic Reputation, bobot 30%) tidak lagi punya program; P8 dipersempit ke sains populer yang menyasar publik umum, bukan akademisi yang menjadi responden survei | Tambahkan aktivitas yang menyasar akademisi (lihat 6.5, A5 sampai A7) |
-| 2 | P2 | Rp300 juta (50% anggaran P2) berupa insentif per proposal terkirim (30 proposal, rata-rata Rp10 juta). Insentif atas pengiriman, bukan kelolosan atau mutu, berisiko mendorong kuantitas | Bayar bertahap dan kaitkan dengan penilaian mutu, keselarasan dengan skema hibah, dan dukungan mitra |
-| 3 | P2 | Target proposal Rp200 miliar dari 30 proposal berarti rata-rata Rp6,7 miliar per proposal. Win rate 30% dan target dana eksternal Rp60 miliar belum didukung data GloRI (tertulis [Menebak] pada file) | Uji terhadap skema hibah sasaran dan data historis; [ISI: win rate historis] |
-| 4 | P4 | Output (10 fellow asing yang dibiayai) berbeda dengan indikator 4.1.1 (persen dosen Unhas yang mengikuti skema rekognisi internasional). Kapasitas anggaran 10 fellow adalah 0,5 dari minimum KPI bahan Malino (20 sampai 30 fellow) | Rancang ulang agar fellow dipasangkan dengan dosen Unhas dan hitung persen dosen yang terlibat; atau gunakan indikator lain; [ISI: keputusan jumlah fellow] |
-| 5 | P5 | Satu butir kegiatan senilai Rp250 juta (4 coaching clinic, 40 paper disubmit) tanpa rincian biaya, jadwal klinik, atau kriteria mutu; target rasional publikasi Q1/Q2 hanya 19 | Rinci per klinik, tetapkan kriteria jurnal sasaran, dan hubungkan dengan U1 dan U2; batasi pada joint publication internasional dan koordinasikan dengan pelatihan penulisan DMP agar tidak tumpang tindih |
-| 6 | P3, P12 | Rp200 juta (67% anggaran P3) untuk pengembangan dashboard global research, sementara P12 juga memelihara dashboard yang sama (Rp30 juta). Output P3 berupa dokumentasi webinar dan pemetaan, bukan agenda joint research dengan 10 mitra | Gabungkan dashboard ke satu program; pastikan tidak menduplikasi dashboard publikasi DMP (jika ada) dan GloRI hanya menambah lapisan kolaborasi; ubah output P3 menjadi dokumen agenda joint research dan surat komitmen mitra |
-| 7 | P1 | Output berupa rencana kerja dan laporan capaian pusat-pusat yang ada; hubungan dengan lima flagship research cluster belum tampak. Kegiatan "Rumah Budaya Indonesia Fujian Normal University" (output: kantor Unhas) belum jelas kaitannya dengan QS | Pastikan tiap kegiatan punya output riset terukur dan justifikasi QS; [ISI: daftar 5 cluster dan bidang unggulan] |
-| 8 | P6 | Daftar 9 pusat/institut sebagian belum berstatus resmi (Sustainability Institute: MoU masih negosiasi); target konsorsium 9 hanya satu konsorsium per pusat | [ISI: status tiap pusat] |
-| 9 | P13 | Dua butir kegiatan (webinar dan guest lecture, masing-masing Rp100 juta) tanpa jadwal, PIC, atau luaran; dua butir lain masih placeholder | [ISI: jadwal, PIC, dan luaran] |
-| 10 | P9, P11 | Dukungan dan jejaring domestik (Rp250 juta, 8,3%) tidak punya hubungan dengan indikator QS | Pertahankan dengan justifikasi operasional; jangan dicantumkan sebagai kontribusi QS |
-| 11 | P10 | 5 policy brief tidak menggerakkan indikator 5.3.3 (pendapatan non-DIPA) maupun QS | Beri label Non-QS; pertimbangkan indikator output yang sesuai (misal pendapatan dari kerja sama industri) |
-| 12 | Seluruhnya | 18 dari 44 kegiatan memakai PIC generik "Tim GloRI"; 4 tanpa PIC; 5 tanpa bulan mulai atau selesai; 4 tanpa luaran | Tetapkan PIC nama, bulan, dan luaran untuk setiap kegiatan |
-| 13 | Seluruhnya | Tidak ada kegiatan afiliasi Scopus, tidak ada pengukuran dampak, dan tidak ada aktivitas Academic Reputation yang menyasar akademisi | Tambahkan aktivitas usulan pada 6.5 |
-| 14 | Seluruhnya | Keterlambatan dampak: kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit 2028 sampai 2030 [Kemungkinan Besar]. Target peringkat 2027 pada 2.4.4 tidak dapat dipertanggungjawabkan kepada GloRI | Pisahkan target peringkat universitas dari KPI output GloRI |
+| No | Program | Temuan | Keadaan di v2 | Rekomendasi |
+|---|---|---|---|---|
+| 1 | P8, P12, P13 | Tuas utama Academic Reputation (bobot 30%) lemah. Engagement dengan akademisi dan konferensi tidak punya program; P8 tinggal satu workshop sains populer (Rp17 juta) yang menyasar publik umum; P13 hanya Rp40 juta untuk 6 forum (Rp6,7 juta per forum) | Memburuk: porsi anggaran turun dari 8,3% menjadi 5,7% | Gabungkan P8, P12, dan P13 menjadi satu program engagement dan visibilitas; tambahkan aktivitas A5, A6, A7, A14 (6.5) |
+| 2 | P2 | Insentif proposal terkirim Rp300 juta dihapus | Teratasi | Pertahankan; jika dihidupkan kembali, kaitkan dengan mutu |
+| 3 | P2 | Target 30 proposal (Rp200 miliar) dan dana eksternal Rp60 miliar tidak berubah walau dana turun dua pertiga: leverage kini 60 kali dengan win rate 30% yang belum didukung data GloRI | Belum | Uji ulang terhadap skema hibah sasaran dan data historis; turunkan target bila perlu; [ISI: win rate historis] |
+| 4 | P4 | Anggaran Rp150 juta hanya membiayai sekitar 3 fellow, sedangkan kegiatan menyebut 10 orang dengan Rp100 juta (Rp10 juta per orang); KPI Malino 20 sampai 30. Output (fellow asing) berbeda dengan indikator 4.1.1 (persen dosen Unhas) | Memburuk | Pilih jumlah fellow yang realistis, pasangkan dengan dosen Unhas, dan hitung persen dosen yang terlibat; [ISI: keputusan] |
+| 5 | P5 | Satu butir Rp83 juta untuk 4 coaching clinic dan 40 paper disubmit, tanpa rincian atau kriteria mutu; target rasional publikasi 12,3 berbeda dengan 18 sampai 20 (Raker) | Belum | Rinci per klinik, tetapkan kriteria jurnal sasaran, satukan angka (3.5, no 3); hubungkan dengan U1 dan U2; koordinasikan dengan pelatihan penulisan DMP |
+| 6 | P3, P12 | Dashboard di P3 (Rp50 juta, 50% anggaran P3) dan target dashboard P12 tanpa kegiatan; output P3 berupa dokumentasi webinar dan pemetaan, bukan agenda joint research dengan 10 mitra | Sebagian | Satukan dashboard; hindari duplikasi dengan dashboard publikasi DMP (jika ada); ubah output P3 menjadi agenda joint research dan surat komitmen mitra |
+| 7 | P1 | Dua kegiatan (hub Timur Tengah dan Rumah Budaya Fujian) dihapus; kegiatan tersisa berupa penguatan program kerja pusat (Rp10 juta masing-masing) dengan output rencana kerja dan laporan, bukan output riset | Sebagian | Pastikan tiap kegiatan punya output riset terukur dan justifikasi QS; [ISI: daftar 5 cluster dan bidang unggulan] |
+| 8 | P6 | Target 9 konsorsium versus 8 menurut Raker; sebagian pusat belum resmi (Sustainability Institute: MoU masih negosiasi); simposium Rp60 juta adalah 72% anggaran P6 | Belum | [ISI: status tiap pusat dan konsorsium resmi] |
+| 9 | P13 | Dua butir kegiatan (webinar/seminar dan guest lecture, masing-masing Rp20 juta) tanpa jadwal, PIC, atau luaran | Belum | [ISI: jadwal, PIC, dan luaran] |
+| 10 | P9, P11 | Dukungan dan jejaring domestik naik menjadi 11% anggaran; P11 menerima Rp26,7 juta lebih banyak dari porsi proporsional sedangkan P13 menerima jumlah yang sama lebih sedikit | Memburuk | Pertahankan P9 pada kebutuhan operasional; kaji ulang P11 (8 perjalanan Rp30 juta) |
+| 11 | P10 | 5 policy brief tidak menggerakkan indikator 5.3.3 maupun QS | Belum | Beri label Non-QS; pertimbangkan indikator output yang sesuai |
+| 12 | Seluruhnya | 16 dari 35 kegiatan memakai PIC generik "Tim GloRI"; 2 kegiatan (P13) tanpa PIC, jadwal, dan luaran | Membaik (sebelumnya 18 dari 44 dan 4 tanpa PIC) | Tetapkan PIC nama untuk kegiatan yang tersisa |
+| 13 | Seluruhnya | Tidak ada kegiatan afiliasi Scopus, pengukuran dampak, dan aktivitas Academic Reputation yang menyasar akademisi | Belum | Tambahkan aktivitas usulan di 6.5; banyak yang berbiaya rendah |
+| 14 | Seluruhnya | Keterlambatan dampak: kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit 2028 sampai 2030 [Kemungkinan Besar]; target peringkat 2027 pada 2.4.4 tidak dapat dipertanggungjawabkan kepada GloRI | Belum | Pisahkan target peringkat universitas dari KPI output GloRI |
+| 15 | Seluruhnya | Pagu dipotong dua pertiga tetapi target output sebagian besar program tidak berubah (konsorsium, proposal, mitra, joint lab, policy brief) | Belum | Uji ulang target dan tetapkan prioritas (6.7) |
 
 ### 6.5 Aktivitas usulan tambahan
 
@@ -388,12 +446,14 @@ Biaya dan PIC diisi setelah pagu resmi diketahui. Banyak aktivitas berbiaya rend
 | A6 | S4 | Penyerahan kontak akademisi mitra ke QS melalui jalur resmi, sesuai aturan QS | Sesuai jadwal QS [ISI] | Kontak terdaftar | [ISI] | [ISI] | U5 |
 | A7 | S4 | Peran editorial, keynote, dan kehadiran peneliti Unhas di konferensi internasional pada bidang unggulan | Sepanjang 2027 | Daftar peran dan kehadiran | [ISI] | [ISI] | 2.3.4 |
 | A8 | S2 | Perjanjian kolaborasi riset tertulis dengan mitra Top 100/200: agenda, sumber dana, dan luaran | Sepanjang 2027 | Dokumen agenda joint research | [ISI] | [ISI] | 2.3.1 |
-| A9 | S3 | Penapisan mutu proposal sebelum insentif dibayar; kaitkan dengan skema hibah | Q1 2027 | Kriteria dan formulir | [ISI] | [ISI] | 2.3.1 |
+| A9 | S3 | Penapisan mutu proposal pada coaching clinic (P2) sebelum disubmit; kaitkan dengan skema hibah | Q1 2027 | Kriteria dan formulir | [ISI] | [ISI] | 2.3.1 |
 | A10 | S7 | Dokumentasi riset Unhas terkait SDG untuk QS Sustainability | Q2 2027 | Database riset SDG | [ISI: tim keberlanjutan] | [ISI] | Non-KPI |
 | A11 | S5 | Klausul afiliasi Unhas baku pada kontrak fellow (P4) dan perjanjian kerja sama (MoU, joint lab) | Q1 2027 | Templat klausul | [ISI: GloRI] | [ISI] | U4, U8 |
 | A12 | S5 | Kode acknowledgment untuk tiap program GloRI (misal "GloRI-2027-P5") | Q1 2027 | Daftar kode dan panduan penulisan | [ISI: GloRI] | [ISI] | U8 |
 | A13 | S5 | Pengecekan triwulan afiliasi luaran kolaborasi GloRI, dengan data dari DMP | Tiap triwulan | Laporan koreksi | [ISI: GloRI dengan DMP] | [ISI] | U8 |
 | A14 | S4 | Tindak lanjut untuk tiap pembicara forum: webinar bersama, usulan ko-penulis, atau undangan kunjungan; catat di basis data kontak | Sepanjang 2027 | Basis data akademisi terlibat | [ISI: GloRI] | [ISI] | U9 |
+
+Dengan pagu Rp1 miliar, aktivitas A1 sampai A4 dan A11 sampai A13 berbiaya rendah dan sebagian dapat dikerjakan tanpa tambahan anggaran. [Menebak] Aktivitas yang berbiaya (A5 sampai A7, A14) dapat dibiayai dari penggabungan P8, P12, dan P13 serta efisiensi P11 (lihat 6.7).
 
 ### 6.6 Rangkuman evaluasi
 
@@ -402,8 +462,25 @@ Biaya dan PIC diisi setelah pagu resmi diketahui. Banyak aktivitas berbiaya rend
 | Keselarasan program dengan IRN | Baik (P1, P3, P6, P7, P4, P5) |
 | Keselarasan dengan Citations per Faculty | Sedang: ada jumlah joint publication, tanpa ukuran kualitas |
 | Keselarasan dengan Academic Reputation | Lemah: hanya P8 dan P13, tanpa sasaran akademisi |
-| Kelengkapan pelaksanaan | Sedang: 44 kegiatan, sebagian belum punya PIC, jadwal, atau luaran |
-| Kewajaran target | Belum dapat dinilai tanpa baseline dan pagu resmi |
+| Kelengkapan pelaksanaan | Membaik: 35 kegiatan, 16 dengan PIC generik, 2 tanpa PIC, jadwal, dan luaran |
+| Kewajaran target | Rendah pada P2 (leverage 60 kali) dan P4 (3 versus 20 sampai 30 fellow); lainnya belum dapat dinilai tanpa baseline |
+
+### 6.7 Opsi prioritisasi dengan pagu Rp1 miliar
+
+Pagu Rp1 miliar didistribusikan hampir proporsional dari usulan Rp3 miliar. Pemotongan seperti itu tidak sama dengan prioritisasi, karena beberapa program turun di bawah skala yang bermakna (P8 dan P12 masing-masing Rp17 juta) dan target sebagian besar program tidak ikut turun. Berikut arah yang diusulkan; angka final menjadi keputusan pimpinan GloRI.
+
+| Program | Anggaran v2 | Masalah pada pagu ini | Arah yang diusulkan | Alasan |
+|---|---|---|---|---|
+| P2 | Rp200 juta | Target 30 proposal dan Rp200 miliar tidak berubah | Turunkan target atau sumber daya clinic dibagi dengan DMP/LPPM; uji win rate | Leverage 60 kali sulit dibuktikan |
+| P4 | Rp150 juta | Hanya cukup sekitar 3 fellow; output tidak sama dengan indikator | Tetapkan jumlah realistis (3 sampai 4), pasangkan dengan dosen Unhas, atau gunakan fellowship daring | Manfaat utama adalah output bersama, bukan jumlah orang |
+| P5 | Rp83 juta | Satu butir; angka target tidak final | Pertahankan dan lindungi; rinci kriteria mutu | Satu-satunya program langsung untuk Citations per Faculty |
+| P8, P12, P13 | Rp17, 17, 40 juta | Masing-masing terlalu kecil dan tanpa program yang menyasar akademisi | Gabungkan menjadi satu program engagement akademisi dan visibilitas (Rp74 juta), tambahkan A5, A6, A7, A14 | Satu-satunya tuas Academic Reputation (30%) |
+| P9, P11 | Rp50, 60 juta | Naik menjadi 11% anggaran; P11 tidak terkait QS | Kembalikan P11 ke porsi proporsional (sekitar Rp33 juta) dan alihkan selisih ke program engagement | Pemotongan seharusnya tidak mengurangi tuas QS |
+| P3 | Rp100 juta | Dashboard (Rp50 juta) berpotensi duplikasi dengan DMP | Gunakan dashboard DMP dan alihkan dana ke agenda joint research dengan mitra | Output yang diminta adalah joint research, bukan dokumentasi |
+| P10 | Rp33 juta | Tidak terkait QS | Tunda atau danai dari sumber lain | Non-QS |
+| P1, P6, P7 | Rp117, 83, 50 juta | Output berupa rencana kerja dan komitmen | Pertahankan dengan output riset terukur | Menopang IRN |
+
+Rekomendasi ini tidak mengubah total Rp1 miliar. [ISI: keputusan pimpinan GloRI]
 
 ---
 
@@ -414,17 +491,17 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | | |
 |---|---|
 | **Kekuatan (Strengths)** | **Kelemahan (Weaknesses)** |
-| 1. Sejalan dengan arah indikator IRN (kolaborasi berkelanjutan) | 1. Anggaran kecil (Rp3 miliar, usulan) dibandingkan target (dana eksternal Rp60 miliar, leverage 20 kali) |
+| 1. Sejalan dengan arah indikator IRN (kolaborasi berkelanjutan) | 1. Pagu Rp1 miliar dibandingkan target (dana eksternal Rp60 miliar, leverage 60 kali; fellow 3 dari 20 sampai 30 pada KPI Malino) |
 | 2. Memiliki pusat dan kemitraan yang sudah ada (AIC Unhas Lab, Unhas-Stanford Office, Wallacea Research Center, CHASE/Coventry, Tokai University) | 2. Tidak ada KPI dampak, afiliasi Scopus, atau engagement akademisi |
-| 3. Terhubung dengan Renstra Unhas melalui kode indikator | 3. Banyak kegiatan tanpa PIC nama, jadwal, atau luaran |
-| 4. 65% anggaran untuk lima program flagship | 4. Kontribusi langsung GloRI kecil terhadap target joint publication universitas (3,8%) |
+| 3. Terhubung dengan Renstra Unhas melalui kode indikator dan pemetaan program ke lima KPI | 3. Banyak kegiatan tanpa PIC nama, jadwal, atau luaran |
+| 4. 65% anggaran untuk lima program flagship | 4. Kontribusi langsung GloRI kecil terhadap target joint publication universitas (2,5% sampai 4%) dan belum final |
 | 5. Topik khas (Wallacea, blue carbon, critical minerals, Timur Tengah) yang berpotensi menarik sitasi [Menebak] | 5. Beberapa pusat belum resmi; ketidakkonsistenan data cascading; baseline belum ada |
 | **Peluang (Opportunities)** | **Ancaman (Threats)** |
 | 1. QS menilai kolaborasi yang berkelanjutan (IRN) dan itu sejalan dengan fungsi GloRI | 1. 45% bobot berasal dari survei reputasi yang lambat bergerak |
 | 2. Mandat Rapat Kerja Malino dan dukungan pimpinan | 2. Jeda beberapa tahun antara kegiatan dan edisi QS yang terdampak |
 | 3. Mitra Top 100/200 sebagai sumber joint publication berkualitas | 3. Afiliasi Scopus yang tidak seragam menghilangkan sitasi |
 | 4. Perbaikan afiliasi Scopus dan data adalah langkah murah dan cepat | 4. Risiko reputasi bila insentif mendorong sitasi atau kuantitas yang tidak wajar |
-| 5. Peluang pendanaan internasional dan kemitraan industri | 5. Data FTE dan indikator di unit lain dapat menahan skor tanpa bisa diperbaiki GloRI; anggaran belum pagu |
+| 5. Peluang pendanaan internasional dan kemitraan industri | 5. Data FTE dan indikator di unit lain dapat menahan skor tanpa bisa diperbaiki GloRI; pemotongan pagu yang tidak mengikuti prioritas QS |
 
 ### 7.1 Strategi silang
 
@@ -455,8 +532,10 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 3 | Menetapkan pemilik data FTE dan data QS di tingkat universitas | Rektor, WR |
 | 4 | Menyepakati kontribusi target joint publication dan konsorsium per fakultas | Dekan |
 | 5 | Menyetujui perubahan P2 (penapisan mutu), P3 (output joint research), dan P4 (ukuran dosen Unhas) | Pimpinan GloRI |
-| 6 | Menyelesaikan ketidakkonsistenan data cascading pada 3.4 | Tim perencanaan |
+| 6 | Menyelesaikan ketidakkonsistenan data cascading pada 3.5 | Tim perencanaan |
 | 7 | Menetapkan pembagian peran GloRI dan DMP (5.5) dengan mencocokkannya pada tugas dan fungsi DMP terbaru | Rektor, Direktur DMP, Direktur Eksekutif GloRI |
+| 8 | Menetapkan prioritas program dengan pagu Rp1 miliar (6.7) dan menguji ulang target P2 dan P4 | Pimpinan GloRI, Rektor |
+| 9 | Mengonfirmasi pemetaan program ke KPI (3.3) dan memutuskan angka resmi joint publication, konsorsium, dan fellow (3.5) | Tim perencanaan, pimpinan GloRI |
 
 ### 8.3 Jalur menuju Renstra GloRI 2026-2030
 
@@ -493,70 +572,63 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 16 | Pagu anggaran 2027 | Anggaran | [ISI] | Keuangan |
 | 17 | Tugas dan fungsi DMP terbaru (setelah perubahan dari PMC menjadi direktorat pada 2026) | Pembagian peran 5.5 | [ISI] | DMP |
 | 18 | Dashboard publikasi dan sitasi DMP (jika ada) | Menghindari duplikasi dengan P3 dan P12 | [ISI] | DMP |
+| 19 | Hasil Rapat Kerja GloRI 2-4 Oktober 2026 (kontribusi konsorsium 8; joint publication 18 sampai 20; co-host konferensi Hiroshima University dan IPB, Maret 2027) | Kontribusi GloRI terhadap target universitas | [ISI: dokumen Raker] | GloRI |
 
-### Lampiran B. Rincian kegiatan 2027 (44 kegiatan)
+### Lampiran B. Rincian kegiatan 2027 (35 kegiatan, pagu Rp1 miliar)
 
 | Prog | No | Kegiatan | Luaran / bukti | Mulai | Selesai | PIC | Anggaran (Rp) |
 |---|---|---|---|---|---|---|---|
-| P1 | 1 | Penguatan program kerja Wallacea Research Center (WRC) | Rencana kerja 2027 dan laporan capaian Wallacea Research Center (WRC) | Jun | Des | Zulung | 20.000.000 |
-| P1 | 2 | Penguatan program kerja Center for Global Peace and Conflict Resolution (CGPCR) 2027 | Rencana kerja 2027 dan laporan capaian Center for Global Peace and Conflict Resolution (CGPCR) | Jun | Des | Prof Hafid Abbas | 50.000.000 |
-| P1 | 3 | Penguatan program kerja AIC Unhas Lab (Australia–Indonesia Centre) 2027 | Rencana kerja 2027 dan laporan capaian AIC Unhas Lab (Australia–Indonesia Centre) | Jun | Des | Hasnawati Saleh | 50.000.000 |
-| P1 | 4 | Penguatan program kerja Unhas–Stanford University Office (USUO) 2027 | Rencana kerja 2027 dan laporan capaian Unhas–Stanford University Office (USUO) | Jun | Des | Jumriani | 50.000.000 |
-| P1 | 5 | Strengthening middle east research hub | Research consortium | Jun | Agu | Zulung | 40.000.000 |
-| P1 | 6 | Rumah Budaya Indonesia Fujian Normal University | Unhas Office di Fujian Normal University | Feb | Mar | Prof Adi | 40.000.000 |
-| P1 | 7 | Workshop implementasi program CHASE (Unhas Coventry Research Consortium) | Matching fund commitment | Apr | Jul | Imam | 60.000.000 |
-| P1 | 8 | Blue Carbon Partnership Initiative with Tokai University | Blue print commitment | Mar | Mei | Rizky | 40.000.000 |
-| P2 | 1 | International Research Grant Proposal Coaching Clinic | 30 Proposal ready to submit | Jan | Nov | Tim GloRI | 200.000.000 |
+| P1 | 1 | Penguatan program kerja Wallacea Research Center (WRC) | Rencana kerja 2027 dan laporan capaian Wallacea Research Center (WRC) | Jun | Des | Zulung | 10.000.000 |
+| P1 | 2 | Penguatan program kerja Center for Global Peace and Conflict Resolution (CGPCR) 2027 | Rencana kerja 2027 dan laporan capaian Center for Global Peace and Conflict Resolution (CGPCR) | Jun | Des | Prof Hafid Abbas | 10.000.000 |
+| P1 | 3 | Penguatan program kerja AIC Unhas Lab (Australia–Indonesia Centre) 2027 | Rencana kerja 2027 dan laporan capaian AIC Unhas Lab (Australia–Indonesia Centre) | Jun | Des | Hasnawati Saleh | 10.000.000 |
+| P1 | 4 | Penguatan program kerja Unhas–Stanford University Office (USUO) 2027 | Rencana kerja 2027 dan laporan capaian Unhas–Stanford University Office (USUO) | Jun | Des | Jumriani | 10.000.000 |
+| P1 | 5 | Workshop implementasi program CHASE (Unhas Coventry Research Consortium) | Matching fund commitment | Apr | Jul | Imam | 37.000.000 |
+| P1 | 6 | Blue Carbon Partnership Initiative with Tokai University | Blue print commitment | Mar | Mei | Rizky | 40.000.000 |
+| P2 | 1 | International Research Grant Proposal Coaching Clinic | 30 Proposal ready to submit | Jan | Nov | Tim GloRI | 100.000.000 |
 | P2 | 2 | International Research Grant Proposal Workshop | Panduan proposal international grant | Jul | Jul | Tim GloRI | 100.000.000 |
-| P2 | 3 | Insentif proposal international research grant yang sudah submit | 30 proposal telah submit | [ISI] | Nov | Tim GloRI | 300.000.000 |
 | P3 | 1 | Webinar dengan expert dari 200 top dunia (10 x) | Dokumentasi pelaksanaan | Feb | Nov | Zulung | 30.000.000 |
-| P3 | 2 | Strategic partner mapping and selection | Dokumen pemetaan Universitas top 100 dan keunggulannya | Feb | Mei | Zulung | 70.000.000 |
-| P3 | 3 | Pengembangan dashboard global research UNHAS | Aplikasi | Mar | Agu | Tim GloRI | 200.000.000 |
-| P4 | 1 | Call for fellows dan seleksi calon international research fellows / visiting scholars (pemetaan pakar dari mitra Top 100/200) | Daftar fellow terpilih dan kriteria seleksi | Jan | Mar | Tim GloRI | 25.000.000 |
+| P3 | 2 | Strategic partner mapping and selection | Dokumen pemetaan Universitas top 100 dan keunggulannya | Feb | Mei | Zulung | 20.000.000 |
+| P3 | 3 | Pengembangan dashboard global research UNHAS | Aplikasi | Mar | Agu | Tim GloRI | 50.000.000 |
+| P4 | 1 | Call for fellows dan seleksi calon international research fellows / visiting scholars (pemetaan pakar dari mitra Top 100/200) | Daftar fellow terpilih dan kriteria seleksi | Jan | Mar | Tim GloRI | 15.000.000 |
 | P4 | 2 | Penyusunan skema fellowship dan kontrak kinerja (output publikasi/proposal per fellow) | Dokumen skema dan kontrak kinerja fellow | Feb | Mar | Tim GloRI | 15.000.000 |
-| P4 | 3 | Program visiting scholar / adjunct professor (10 orang: tiket, akomodasi, honor) | 10 fellow hadir; setiap fellow menghasilkan output publikasi/proposal | Apr | Okt | Tim GloRI | 350.000.000 |
-| P4 | 4 | Monitoring dan evaluasi output fellow (joint paper dan proposal) | Laporan capaian output per fellow | Okt | Des | Tim GloRI | 25.000.000 |
-| P4 | 5 | International Fellows Symposium (showcase hasil dan perluasan jejaring) | Dokumentasi symposium dan daftar tindak lanjut kolaborasi | Nov | Nov | Tim GloRI | 35.000.000 |
-| P5 | 1 | Coaching clinic untuk submission joint publication (4x) | Total 40 paper joint publication submitted | Feb | Des | Wildan | 250.000.000 |
-| P6 | 1 | Workshop penyusunan rencana konsorsium riset internasional per pusat | Draft rencana konsorsium untuk tiap pusat (target 9) | Feb | Apr | Zulung | 40.000.000 |
-| P6 | 2 | Webinar penjajakan mitra konsorsium riset internasional | Daftar calon mitra dan surat minat bergabung | Apr | Jun | Rizki | 20.000.000 |
-| P6 | 3 | FGD perumusan agenda riset konsorsium | Agenda riset bersama dan pembagian peran anggota | Mei | Agu | Natasya | 40.000.000 |
-| P6 | 4 | International Joint Research Symposium GloRI 2027 | Komitmen tertulis konsorsium (MoU atau letter of intent) dan proposal bersama | Sep | Nov | Wildan | 150.000.000 |
-| P7 | 1 | Pemetaan fasilitas laboratorium unggulan Unhas dan calon mitra joint lab | Dokumen pemetaan lab TRG dan shortlist calon mitra | Feb | Apr | Tim GloRI | 30.000.000 |
-| P7 | 2 | Expo / joint exhibition industri dan TRG yang memiliki lab | Katalog fasilitas lab dan daftar minat kerja sama industri–TRG | Agu | Sep | Tim GloRI | 60.000.000 |
-| P7 | 3 | Penjajakan dan penyusunan kesepakatan joint lab / research hub dengan mitra | 3 LoI atau MoA joint lab/hub | Okt | Des | Tim GloRI | 60.000.000 |
-| P8 | 1 | Workshop penulisan ilmiah populer | Peserta terlatih dan naskah sains populer siap terbit | Mei | Jun | Tim GloRI | 25.000.000 |
-| P8 | 2 | Publikasi sains populer di media ilmiah/publik internasional dan diseminasi hasil riset GloRI | Artikel sains populer terbit di media bereputasi | Jul | Nov | Tim GloRI | 25.000.000 |
-| P9 | 1 | ATK | ATK dan perlengkapan sekretariat tersedia | Jan | Des | Wildan | 20.000.000 |
-| P9 | 2 | Biaya operasional | Biaya operasional sekretariat GloRI terealisasi | Jan | Des | Wildan | 50.000.000 |
-| P9 | 3 | Biaya dukungan Operasional Kegiatan Glori | Dukungan logistik pelaksanaan kegiatan program GloRI | Jan | Des | Wildan | 40.000.000 |
-| P9 | 4 | Zoom | Lisensi Zoom untuk webinar dan rapat daring | Jan | Des | Wildan | 10.000.000 |
-| P9 | 5 | Rapat Kordinasi | Rapat koordinasi berkala dan notulensi | Jan | Des | Wildan | 30.000.000 |
-| P10 | 1 | Workshop penyusunan policy brief | 5 dokumen policy brief | Mar | Apr | Tim GloRI | 40.000.000 |
-| P10 | 2 | International industry collaboration workshop dan penjaringan invensi untuk HKI | Minimal 3 LoI kolaborasi industri dan daftar invensi yang siap didaftarkan ke HKI | Jun | Agu | Tim GloRI | 60.000.000 |
-| P11 | 1 | Perjalanan dinas dalam negeri untuk menjajaki peluang riset (8 kali) | 8 laporan perjalanan dan daftar peluang riset atau mitra yang dijajaki | Feb | Nov | Tim GloRI | 70.000.000 |
+| P4 | 3 | Program visiting scholar / adjunct professor (10 orang: tiket, akomodasi, honor) | 10 fellow hadir; setiap fellow menghasilkan output publikasi/proposal | Apr | Okt | Tim GloRI | 100.000.000 |
+| P4 | 4 | Monitoring dan evaluasi output fellow (joint paper dan proposal) | Laporan capaian output per fellow | Okt | Des | Tim GloRI | 10.000.000 |
+| P4 | 5 | International Fellows Symposium (showcase hasil dan perluasan jejaring) | Dokumentasi symposium dan daftar tindak lanjut kolaborasi | Nov | Nov | Tim GloRI | 10.000.000 |
+| P5 | 1 | Coaching clinic untuk submission joint publication (4x) | Total 40 paper joint publication submitted | Feb | Des | Wildan | 83.000.000 |
+| P6 | 1 | Webinar penjajakan mitra konsorsium riset internasional | Daftar calon mitra dan surat minat bergabung | Apr | Jun | Rizki | 10.000.000 |
+| P6 | 2 | FGD perumusan agenda riset konsorsium | Agenda riset bersama dan pembagian peran anggota | Mei | Agu | Natasya | 13.000.000 |
+| P6 | 3 | International Joint Research Symposium GloRI 2027 | Komitmen tertulis konsorsium (MoU atau letter of intent) dan proposal bersama | Sep | Nov | Wildan | 60.000.000 |
+| P7 | 1 | FGD Pemetaan fasilitas laboratorium unggulan Unhas dan calon mitra joint lab | Dokumen pemetaan lab TRG dan shortlist calon mitra | Feb | Apr | Tim GloRI | 10.000.000 |
+| P7 | 2 | Expo / joint exhibition industri dan TRG yang memiliki lab | Katalog fasilitas lab dan daftar minat kerja sama industri–TRG | Agu | Sep | Tim GloRI | 10.000.000 |
+| P7 | 3 | Penjajakan dan penyusunan kesepakatan joint lab / research hub dengan mitra | 3 LoI atau MoA joint lab/hub | Okt | Des | Tim GloRI | 30.000.000 |
+| P8 | 1 | Workshop penulisan ilmiah populer dan non ilmiah | Peserta terlatih dan naskah sains populer siap terbit | Mei | Jun | Tim GloRI | 17.000.000 |
+| P9 | 1 | ATK | ATK dan perlengkapan sekretariat tersedia | Jan | Des | Wildan | 10.000.000 |
+| P9 | 2 | Biaya operasional | Biaya operasional sekretariat GloRI terealisasi | Jan | Des | Wildan | 12.000.000 |
+| P9 | 3 | Biaya dukungan Operasional Kegiatan Glori | Dukungan logistik pelaksanaan kegiatan program GloRI | Jan | Des | Wildan | 25.000.000 |
+| P9 | 4 | Zoom | Lisensi Zoom untuk webinar dan rapat daring | Jan | Des | Wildan | 3.000.000 |
+| P10 | 1 | FGD penyusunan policy brief | 5 dokumen policy brief | Mar | Apr | Tim GloRI | 13.000.000 |
+| P10 | 2 | International industry collaboration workshop dan penjaringan invensi untuk HKI | Minimal 3 LoI kolaborasi industri dan daftar invensi yang siap didaftarkan ke HKI | Jun | Agu | Tim GloRI | 20.000.000 |
+| P11 | 1 | Perjalanan dinas dalam negeri untuk menjajaki peluang riset (8 kali) | 8 laporan perjalanan dan daftar peluang riset atau mitra yang dijajaki | Feb | Nov | Tim GloRI | 30.000.000 |
 | P11 | 2 | Rapat Kerja GloRI 2027-2028 | Notulen dan dokumen hasil Raker | Okt | Nov | Tim GloRI | 30.000.000 |
-| P12 | 1 | Pemeliharaan website GloRI (hosting, keamanan, pembaruan konten) | Updated website glori.unhas.ac.id aktif dan terbarui | Feb | Des | Wildan | 20.000.000 |
-| P12 | 2 | Pembaruan data dan pemeliharaan dashboard global research UNHAS | Dashboard terbarui dengan 2 pembaruan data (mitra, MoU, hibah, publikasi, mobilitas, pipeline proposal) | Sep | Des | Wildan | 30.000.000 |
-| P13 | 1 | Webinar/ Seminar | [ISI] | [ISI] | [ISI] | [ISI] | 100.000.000 |
-| P13 | 2 | Guest lecture | [ISI] | [ISI] | [ISI] | [ISI] | 100.000.000 |
-| P13 | 3 | Kegiatan 3 | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] |
-| P13 | 4 | Kegiatan 4 | [ISI] | [ISI] | [ISI] | [ISI] | [ISI] |
+| P12 | 1 | Pemeliharaan website GloRI (hosting, keamanan, pembaruan konten) | Updated website glori.unhas.ac.id aktif dan terbarui | Feb | Des | Wildan | 17.000.000 |
+| P13 | 1 | Webinar/ Seminar | [ISI] | [ISI] | [ISI] | [ISI] | 20.000.000 |
+| P13 | 2 | Guest lecture | [ISI] | [ISI] | [ISI] | [ISI] | 20.000.000 |
 
 ### Lampiran C. Daftar placeholder [ISI] yang harus dilengkapi
 
 1. Peringkat QS resmi, skor 10 indikator, dan pembanding (Bagian 1).
 2. Definisi indikator dari panduan metodologi QS dan bobot edisi terbaru (Bagian 2).
 3. Realisasi KPI 2026 dan baseline 2025 (Bagian 3).
-4. Tahun target konsorsium, satuan 2.3.2 dan 2.3.4, kode Renstra P7, P9, P11, P12 (Bagian 3.4).
+4. Tahun target konsorsium; angka resmi konsorsium (8 atau 9), joint publication (12, 18 sampai 20, atau 40), dan fellow (3 atau 10); satuan; kode Renstra (Bagian 3.5).
 5. Baseline dan target usulan U1 sampai U10 (Bagian 4.3).
 6. Pembagian target per fakultas (Bagian 6.3).
-7. PIC, jadwal, dan luaran kegiatan yang kosong (Bagian 6.4 dan Lampiran B).
-8. Pagu anggaran 2027 dan win rate historis (Bagian 6.4).
+7. PIC, jadwal, dan luaran P13; PIC nama untuk 16 kegiatan "Tim GloRI" (Lampiran B).
+8. Win rate historis dan pengujian ulang target proposal Rp200 miliar dan dana eksternal Rp60 miliar (Bagian 6.4).
 9. Daftar lima flagship cluster dan status pusat (Bagian 6.4).
 10. Jadwal dan biaya aktivitas usulan A1 sampai A14 (Bagian 6.5).
-11. Jadwal Renstra GloRI 2026-2030 (Bagian 8.3).
-12. Tugas dan fungsi DMP serta ada tidaknya dashboard publikasi DMP (Bagian 5.5 dan Lampiran A).
+11. Keputusan prioritisasi pagu (Bagian 6.7).
+12. Jadwal Renstra GloRI 2026-2030 (Bagian 8.3).
+13. Tugas dan fungsi DMP serta ada tidaknya dashboard publikasi DMP (Bagian 5.5 dan Lampiran A).
 
 ### Lampiran D. Sumber dan verifikasi
 
@@ -567,4 +639,4 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | [Mastersportal: Hasanuddin University](https://www.mastersportal.com/rankings-reviews/21482/hasanuddin-university.html) | Peringkat 2025 dan 2026 | Pihak ketiga; verifikasi |
 | [Halaman QS Unhas](https://www.topuniversities.com/universities/universitas-hasanuddin) | Pita 2027 | Cuplikan pencarian; verifikasi |
 | [Unhas: Enlisted in QS WUR](https://www.unhas.ac.id/enlisted-in-the-qs-world-university-ranking-universitas-hasanuddin-becomes-a-world-class-university/) | Masuk pertama kali | Artikel institusi |
-| Cascading_glori.xlsx dan 031026_Cascading_GloRI_2027.xlsx | KPI dan program GloRI | Data internal |
+| Cascading_glori.xlsx; 031026_Cascading_GloRI_2027.xlsx; 211026_Cascading_GloRI_2027_dengan_Summary_v2.xlsx | KPI dan program GloRI; v2 memuat pagu Rp1 miliar dan Summary Renstra-KPI | Data internal |
