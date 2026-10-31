@@ -4,12 +4,12 @@
 
 | | |
 |---|---|
-| Status | **DRAFT 0.4 untuk pembahasan dengan Direktur Eksekutif GloRI**, bukan dokumen resmi |
+| Status | **DRAFT 0.5 untuk pembahasan dengan Direktur Eksekutif GloRI**, bukan dokumen resmi |
 | Tanggal | 23 Oktober 2026 |
 | Penyusun | [ISI: nama tim penyusun GloRI] |
 | Pembaca sasaran | Pimpinan universitas, pimpinan fakultas, dan pemangku kepentingan terkait |
-| Sumber data internal | Cascading KPI GloRI (5 KPI, 2026-2030); Cascading Program GloRI 2027 v2 dengan Summary Renstra-KPI (13 program, **pagu disetujui Rp1 miliar**, didistribusi dari usulan awal Rp3 miliar) |
-| Perubahan dari 0.3 | Angka resmi GloRI 2027 dimasukkan: 8 konsorsium, 20 joint publication, 3 fellow; konsekuensinya pada target, kegiatan, dan formula diperbarui (3.5, 6.1, 6.3, 6.4, 6.7) |
+| Sumber data internal | Cascading KPI GloRI (5 KPI, 2026-2030); Cascading Program GloRI 2027 v2 dengan Summary Renstra-KPI (13 program, **pagu disetujui Rp1 miliar**, didistribusi dari usulan awal Rp3 miliar); Ceklist inputan RKAT (26 kegiatan, GL-01 sampai GL-26) |
+| Perubahan dari 0.4 | Ceklist inputan RKAT (26 kegiatan) dimasukkan: perbandingan dengan distribusi v2 (3.6), alokasi per kelompok QS menurut RKAT (6.8), dan keputusan tentang dasar angka yang berlaku (8.2) |
 
 ## Cara membaca dokumen ini
 
@@ -19,6 +19,7 @@
 - Jika suatu strategi tidak punya KPI di cascading, strategi itu ditandai **Non-KPI** dan tidak dipaksakan ke KPI yang ada. Strategi Non-KPI dapat mendukung KPI unit lain.
 - Peringkat dan bobot QS berasal dari pencarian web dan belum diverifikasi ke dokumen resmi QS. Bagian Lampiran D memuat daftar verifikasi.
 - **Anggaran:** pagu yang disetujui untuk GloRI 2027 adalah Rp1 miliar. Berdasarkan file v2, angka per program didistribusikan dari usulan awal Rp3 miliar secara hampir proporsional (dengan satu pengecualian, lihat 3.5). Seluruh angka rupiah di dokumen ini memakai pagu Rp1 miliar kecuali dinyatakan lain.
+- **Dasar angka:** Bagian 3.3 sampai 6.7 memakai cascading v2. Bagian 3.6 dan 6.8 membandingkannya dengan Ceklist inputan RKAT. Jika RKAT menjadi dasar yang berlaku, tabel di 6.1 dan 6.2 perlu diganti dengan angka RKAT. [ISI: dasar yang berlaku]
 - **DMP:** Direktorat Manajemen Publikasi, yang pada 2026 berubah status dari Pusat Manajemen Publikasi (PMC) menjadi direktorat (konfirmasi dari pimpinan GloRI). Fungsi PMC yang diketahui dari peraturan organisasi 2023 meliputi pembinaan publikasi dan jurnal internal serta pelatihan penulisan. Tugas dan fungsi DMP setelah menjadi direktorat belum diperoleh dan mungkin lebih luas. [ISI: tugas dan fungsi DMP terbaru]
 
 ## Ringkasan eksekutif
@@ -32,6 +33,7 @@
 7. **Hal yang tidak dapat diselesaikan GloRI:** data FTE, Employer Reputation, Employment Outcomes, Faculty Student Ratio, dan International Student Ratio berada di unit lain, tetapi menentukan hasil peringkat.
 8. **Keterlambatan dampak:** kegiatan 2027 kemungkinan baru memengaruhi edisi QS yang terbit beberapa tahun kemudian, sehingga target peringkat 2027 tidak dapat dipertanggungjawabkan kepada GloRI. [Kemungkinan Besar]
 9. **Pembagian dengan DMP:** dataset publikasi, audit afiliasi Scopus, dan pelatihan penulisan umum sebaiknya dimiliki DMP. GloRI memakai data itu dan memiliki klausul afiliasi di kontrak mitra, penandaan acknowledgment, serta engagement dengan akademisi. [ISI: tugas dan fungsi DMP terbaru]
+10. **RKAT 2027 menggeser Rp120 juta antar kegiatan dibanding v2:** Rp50 juta ditambahkan ke coaching clinic joint publication (satu-satunya program langsung untuk Citations per Faculty) dan Rp51 juta ke satu butir gabungan pusat studi, sekretariat, dan perjalanan luar negeri (GL-03, komposisi tidak dirinci); sumbernya workshop hibah (-Rp50 juta), konsorsium (-Rp20 juta), kebijakan dan industri (-Rp25 juta), serta komunikasi sains dan website (-Rp25 juta). Empat kegiatan (Rp39 juta) belum terinput, termasuk call for fellows.
 
 ---
 
@@ -222,6 +224,92 @@ Pemetaan pada file v2 adalah usulan yang masih menunggu konfirmasi. Padanan KPI-
 | 9 | Kode Renstra: P8, P10, P12 berbeda dengan KPI tujuan; P13 memakai 2.3.3 di RKAT; P7 punya kode alternatif 5.3.9 yang tidak ada di master | Ketidaksesuaian antara RKAT dan master | [ISI: kode resmi] |
 | 10 | Distribusi pagu bukan proporsional untuk P11 (Rp60 juta, proporsional Rp33,3 juta) dan P13 (Rp40 juta, proporsional Rp66,7 juta) [Pasti, dari hitungan] | Dana forum, tuas Academic Reputation, berpindah ke jejaring domestik | [ISI: alasan dan keputusan] |
 | 11 | Realisasi 2026 belum terisi | Tidak ada baseline | [ISI: realisasi 2026] |
+
+### 3.6 Distribusi anggaran dan pemetaan kegiatan pada RKAT
+
+Sumber: Ceklist inputan RKAT (26 kegiatan GL-01 sampai GL-26). Angka dalam tanda kurung pada nama kegiatan dibaca sebagai rencana; kolom "Jumlah terinput" adalah angka yang sudah dimasukkan ke RKAT.
+
+**Ringkasan:** total rencana Rp1.000 juta, total terinput Rp1.000 juta, selisih 0. Sebanyak 22 kegiatan sudah terinput pada RKAT dan TOR; 4 kegiatan belum terinput pada keduanya (GL-05, GL-15, GL-17, GL-23; total rencana Rp39 juta).
+
+**3.6.1 Per program Renstra: RKAT dibandingkan Summary v2**
+
+RKAT mengelompokkan kegiatan menurut program Renstra, sehingga dapat dibandingkan dengan distribusi per KPI pada Summary v2 (Rp juta).
+
+| Program Renstra pada RKAT | KPI | RKAT rencana | RKAT terinput | Summary v2 | Selisih rencana terhadap v2 |
+|---|---|---|---|---|---|
+| Kolaborasi Riset Internasional (2.3.1) | KPI-126 | 547 | 509,3 | 627 | -80 |
+| Kolaborasi Riset Internasional, konsorsium (2.3.2) | KPI-127 | 63 | 75,1 | 83 | -20 |
+| Publikasi Bersama dan Kepengarangan Internasional (2.3.3) | KPI-128 | 150 | 154,8 | 100 | +50 |
+| Konferensi dan Forum Riset Internasional Bersama (2.3.4) | KPI-129 | 40 | 51,5 | 40 | 0 |
+| Rekognisi Internasional dan Pemanfaatan Kepakaran Dosen (4.1.1) | KPI-130 | 200 | 209,3 | 150 | +50 |
+| **Total** | | **1.000** | **1.000** | **1.000** | **0** |
+
+Dua perbedaan pemetaan: (a) kegiatan kebijakan, sains populer, website, dan workshop industri (GL-14 sampai GL-17, Rp17 juta) dikelompokkan pada program publikasi bersama (2.3.3), sedangkan Summary v2 memetakannya ke 2.4.4 dan 5.3.3; hanya Rp133 juta dari Rp150 juta pada 2.3.3 yang berupa publikasi. (b) Dashboard (GL-21, Rp50 juta) dikelompokkan pada program rekognisi (4.1.1), sedangkan v2 menempatkannya pada P3 (2.3.1).
+
+**3.6.2 Per kegiatan: rencana, terinput, dan pemetaan ke program v2 (Rp juta)**
+
+Pemetaan ke P1 sampai P13 adalah dugaan penyusun berdasarkan kesamaan nama kegiatan. [Menebak]
+
+| Kode | Kegiatan (ringkas) | Program v2 | Rencana | Terinput | Selisih | Status RKAT/TOR |
+|---|---|---|---|---|---|---|
+| GL-01 | FGD pemetaan lab unggulan dan calon mitra joint lab | P7 | 10 | 12,05 | +2,05 | Terinput |
+| GL-02 | Penjajakan dan kesepakatan joint lab/hub dengan mitra | P7 | 30 | 5,00 | -25,00 | Terinput |
+| GL-03 | Penguatan program kerja pusat studi (WRC, CGPCR, AIC, USUO), dukungan sekretariat, dan perjalanan dinas luar negeri | P1 dan P9 (campuran) | 218 | 218,00 | 0 | Terinput |
+| GL-04 | Webinar dengan expert Top 200 (10 kali) | P3 | 34 | 33,60 | -0,40 | Terinput |
+| GL-05 | Expo/joint exhibition industri dan TRG | P7 | 15 | 0 | -15,00 | Belum terinput |
+| GL-06 | Strategic partner mapping dan seleksi mitra Top 100/200 | P3 | 20 | 18,85 | -1,15 | Terinput |
+| GL-07 | Perjalanan dinas dalam negeri (8 kali) | P11 | 40 | 41,92 | +1,92 | Terinput |
+| GL-08 | Coaching clinic proposal hibah internasional | P2 | 100 | 100,00 | 0 | Terinput |
+| GL-09 | Workshop proposal hibah (pemberi dan penerima) | P2 | 50 | 49,83 | -0,17 | Terinput |
+| GL-10 | Webinar penjajakan mitra konsorsium | P6 | 10 | 11,00 | +1,00 | Terinput |
+| GL-11 | FGD agenda riset konsorsium | P6 | 13 | 14,96 | +1,96 | Terinput |
+| GL-12 | International Joint Research Symposium GloRI 2027 | P6 | 40 | 49,14 | +9,14 | Terinput |
+| GL-13 | Rapat Kerja GloRI 2027-2028 | P11 | 30 | 30,00 | 0 | Terinput |
+| GL-14 | FGD/workshop policy brief | P10 | 3 | 11,84 | +8,84 | Terinput |
+| GL-15 | Workshop penulisan ilmiah populer dan non-ilmiah | P8 | 4 | 0 | -4,00 | Belum terinput |
+| GL-16 | Pemeliharaan website GloRI | P12 | 5 | 10,00 | +5,00 | Terinput |
+| GL-17 | Workshop kolaborasi industri dan business matching | P10 | 5 | 0 | -5,00 | Belum terinput |
+| GL-18 | Coaching clinic submission joint publication (4 kali) | P5 | 133 | 133,00 | 0 | Terinput |
+| GL-19 | Webinar/seminar internasional bersama scholars, industry leaders, policy makers | P13 | 20 | 28,50 | +8,50 | Terinput |
+| GL-20 | Guest lecture internasional | P13 | 20 | 23,00 | +3,00 | Terinput |
+| GL-21 | Dashboard global research UNHAS (versi beta) | P3 | 50 | 50,00 | 0 | Terinput |
+| GL-22 | International Fellows Symposium | P4 | 10 | 10,00 | 0 | Terinput |
+| GL-23 | Call for fellows dan seleksi fellow/visiting scholar | P4 | 15 | 0 | -15,00 | Belum terinput |
+| GL-24 | Skema fellowship dan kontrak kinerja | P4 | 15 | 15,00 | 0 | Terinput |
+| GL-25 | Program visiting scholar/adjunct professor (tiket, akomodasi, honor) | P4 | 100 | 128,66 | +28,66 | Terinput |
+| GL-26 | Monitoring dan evaluasi output fellow | P4 | 10 | 5,65 | -4,35 | Terinput |
+| | **Total** | | **1.000** | **1.000** | **0** | |
+
+**3.6.3 Perbedaan rencana RKAT terhadap distribusi v2 per program (Rp juta)**
+
+| Program v2 | v2 | RKAT rencana | Selisih | Penyebab utama |
+|---|---|---|---|---|
+| P1 + P9 (GL-03) | 167 | 218 | +51 | Butir gabungan; komposisi tidak dirinci |
+| P2 | 200 | 150 | -50 | Workshop hibah dari Rp100 juta menjadi Rp50 juta |
+| P3 | 100 | 104 | +4 | Webinar Rp34 juta (v2 Rp30 juta) |
+| P4 | 150 | 150 | 0 | Sama |
+| P5 | 83 | 133 | +50 | Coaching clinic joint publication diperbesar |
+| P6 | 83 | 63 | -20 | Simposium Rp40 juta (v2 Rp60 juta) |
+| P7 | 50 | 55 | +5 | Expo Rp15 juta (v2 Rp10 juta) |
+| P8 | 17 | 4 | -13 | Workshop sains populer Rp4 juta |
+| P10 | 33 | 8 | -25 | Policy brief Rp3 juta; workshop industri Rp5 juta |
+| P11 | 60 | 70 | +10 | Perjalanan dalam negeri Rp40 juta (v2 Rp30 juta) |
+| P12 | 17 | 5 | -12 | Website Rp5 juta |
+| P13 | 40 | 40 | 0 | Sama |
+| **Total** | **1.000** | **1.000** | **0** | |
+
+**3.6.4 Temuan atas RKAT**
+
+| No | Temuan | Dampak | Rekomendasi |
+|---|---|---|---|
+| 1 | Rp120 juta berpindah dari v2 ke RKAT; Rp50 juta (42%) ke coaching clinic joint publication dan Rp51 juta (43%) ke GL-03 | Perpindahan ke GL-03 tidak punya rincian; perpindahan ke P5 searah dengan prioritas Citations per Faculty | [ISI: komposisi GL-03 dan alasan perpindahan] |
+| 2 | GL-03 (Rp218 juta, 21,8% pagu) adalah butir terbesar dan menggabungkan tiga hal: program kerja pusat studi, sekretariat, dan perjalanan dinas luar negeri. Perjalanan luar negeri tidak ada pada v2, dan CHASE serta Blue Carbon (Rp77 juta pada v2) tidak disebut | Tidak dapat dinilai keterkaitannya dengan QS; risiko dukungan menyerap sumber daya riset | Pecah menjadi butir terpisah dengan output masing-masing |
+| 3 | Empat kegiatan belum terinput (Rp39 juta): call for fellows (GL-23), expo (GL-05), workshop sains populer (GL-15), workshop industri (GL-17) | Fellow akan dipilih tanpa call terbuka; GL-24 dan GL-25 sudah terinput | Masukkan GL-23 lebih dulu karena mendahului GL-24 dan GL-25 |
+| 4 | Kesepakatan joint lab (GL-02) hanya terinput Rp5 juta dari rencana Rp30 juta, padahal target adalah 3 LoI/MoA | Target 3 joint lab tidak punya dana yang memadai | Kaji ulang target joint lab atau alokasi |
+| 5 | Visiting scholar (GL-25) terinput Rp128,66 juta (rencana Rp100 juta); untuk 3 fellow berarti sekitar Rp42,9 juta per fellow | Selaras dengan angka resmi 3 fellow, tetapi melebihi rencana sebesar Rp28,66 juta | Konfirmasi biaya per fellow |
+| 6 | Jumlah terinput melebihi rencana pada 10 butir (total +Rp70,1 juta) dan di bawah rencana pada 5 butir (total -Rp31,1 juta); empat butir tidak terinput (-Rp39 juta); 7 butir sama | Total tetap Rp1 miliar karena kelebihan diserap oleh butir yang belum terinput | Pastikan keseimbangan tetap terjaga saat empat butir terinput |
+| 7 | Kelompok program RKAT tidak sama dengan Summary v2 (lihat 3.6.1) | KPI-128 tampak menerima Rp150 juta padahal hanya Rp133 juta berupa publikasi; KPI-130 menerima dashboard | [ISI: kode program resmi untuk GL-14 sampai GL-17 dan GL-21] |
+| 8 | Sheet MAK hanya memuat 9 akun belanja (521911 sampai 532919) tanpa pemetaan ke kegiatan | Tidak dapat memeriksa kesesuaian akun dengan jenis belanja | [ISI: pemetaan kegiatan ke MAK] |
 
 ---
 
@@ -482,6 +570,26 @@ Pagu Rp1 miliar didistribusikan hampir proporsional dari usulan Rp3 miliar. Pemo
 
 Rekomendasi ini tidak mengubah total Rp1 miliar. [ISI: keputusan pimpinan GloRI]
 
+### 6.8 Alokasi anggaran per kelompok QS menurut RKAT
+
+Pengelompokan adalah penilaian penyusun [Menebak]. Butir GL-03 dipisahkan karena komposisinya tidak diketahui.
+
+| Kelompok | Kegiatan RKAT | Rencana (Rp juta) | % | Pembanding v2 |
+|---|---|---|---|---|
+| Citations per Faculty (joint publication) | GL-18 | 133 | 13,3 | 8,3% |
+| Pusat studi, sekretariat, perjalanan luar negeri | GL-03 | 218 | 21,8 | P1 + P9 = 16,7% |
+| International Research Network (kolaborasi langsung) | GL-01, 02, 04, 05, 06, 10, 11, 12 | 172 | 17,2 | Tidak sebanding (v2 menyertakan pusat studi) |
+| Fellow | GL-22 sampai GL-26 | 150 | 15,0 | 15,0% |
+| Penggerak pendanaan (tidak dinilai QS) | GL-08, 09 | 150 | 15,0 | 20,0% |
+| Dukungan perjalanan domestik dan raker | GL-07, 13 | 70 | 7,0 | 6,0% (P11) |
+| Dashboard | GL-21 | 50 | 5,0 | 5,0% (di P3) |
+| Academic Reputation (forum dan komunikasi sains) | GL-15, 19, 20 | 44 | 4,4 | 5,7% |
+| Di luar QS (kebijakan dan industri) | GL-14, 17 | 8 | 0,8 | 3,3% |
+| Website | GL-16 | 5 | 0,5 | 1,7% (di P12) |
+| **Total** | | **1.000** | **100** | |
+
+Temuan: Citations per Faculty naik dari 8,3% menjadi 13,3%, sedangkan Academic Reputation turun dari 5,7% menjadi 4,4%. Butir terbesar adalah GL-03 (21,8%) yang kaitannya dengan QS belum dapat dinilai. Karena itu dua keputusan di 8.2 (dasar angka yang berlaku dan komposisi GL-03) perlu diambil sebelum tabel di 6.1 dan 6.2 difinalkan.
+
 ---
 
 ## 7. Analisis SWOT dari Strategi
@@ -536,6 +644,7 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 7 | Menetapkan pembagian peran GloRI dan DMP (5.5) dengan mencocokkannya pada tugas dan fungsi DMP terbaru | Rektor, Direktur DMP, Direktur Eksekutif GloRI |
 | 8 | Menetapkan prioritas program dengan pagu Rp1 miliar (6.7) dan menguji ulang target P2 dan P4 | Pimpinan GloRI, Rektor |
 | 9 | Mengonfirmasi pemetaan program ke KPI (3.3), menyesuaikan file cascading dengan angka resmi (8 konsorsium, 20 joint publication, 3 fellow), dan menetapkan definisi joint publication (disubmit atau terbit) | Tim perencanaan, pimpinan GloRI |
+| 10 | Menetapkan dasar angka yang berlaku (cascading v2 atau RKAT), merinci komposisi GL-03, dan menginput empat kegiatan yang belum terinput (3.6) | Tim perencanaan, pimpinan GloRI |
 
 ### 8.3 Jalur menuju Renstra GloRI 2026-2030
 
@@ -573,6 +682,8 @@ Analisis ini menilai strategi pada Bagian 5, bukan GloRI sebagai lembaga.
 | 17 | Tugas dan fungsi DMP terbaru (setelah perubahan dari PMC menjadi direktorat pada 2026) | Pembagian peran 5.5 | [ISI] | DMP |
 | 18 | Dashboard publikasi dan sitasi DMP (jika ada) | Menghindari duplikasi dengan P3 dan P12 | [ISI] | DMP |
 | 19 | Hasil Rapat Kerja GloRI 2-4 Oktober 2026 (kontribusi konsorsium 8; joint publication 18 sampai 20; co-host konferensi Hiroshima University dan IPB, Maret 2027) | Kontribusi GloRI terhadap target universitas | [ISI: dokumen Raker] | GloRI |
+| 20 | Ceklist inputan RKAT (26 kegiatan, jumlah terinput) | Distribusi anggaran dan pemetaan kegiatan | Ada (Ceklist_inputan_RKAT.xlsx) | GloRI |
+| 21 | Pemetaan kegiatan ke akun MAK | Pemeriksaan kesesuaian belanja | [ISI] | GloRI, keuangan |
 
 ### Lampiran B. Rincian kegiatan 2027 (35 kegiatan, pagu Rp1 miliar)
 
@@ -631,6 +742,8 @@ Catatan: teks kegiatan pada tabel di atas mengikuti file v2 dan belum disesuaika
 11. Keputusan prioritisasi pagu (Bagian 6.7).
 12. Jadwal Renstra GloRI 2026-2030 (Bagian 8.3).
 13. Tugas dan fungsi DMP serta ada tidaknya dashboard publikasi DMP (Bagian 5.5 dan Lampiran A).
+14. Dasar angka yang berlaku (cascading v2 atau RKAT) dan komposisi GL-03 (Bagian 3.6).
+15. Kode program resmi untuk GL-14 sampai GL-17 dan GL-21, serta pemetaan kegiatan ke MAK (Bagian 3.6).
 
 ### Lampiran D. Sumber dan verifikasi
 
@@ -641,4 +754,4 @@ Catatan: teks kegiatan pada tabel di atas mengikuti file v2 dan belum disesuaika
 | [Mastersportal: Hasanuddin University](https://www.mastersportal.com/rankings-reviews/21482/hasanuddin-university.html) | Peringkat 2025 dan 2026 | Pihak ketiga; verifikasi |
 | [Halaman QS Unhas](https://www.topuniversities.com/universities/universitas-hasanuddin) | Pita 2027 | Cuplikan pencarian; verifikasi |
 | [Unhas: Enlisted in QS WUR](https://www.unhas.ac.id/enlisted-in-the-qs-world-university-ranking-universitas-hasanuddin-becomes-a-world-class-university/) | Masuk pertama kali | Artikel institusi |
-| Cascading_glori.xlsx; 031026_Cascading_GloRI_2027.xlsx; 211026_Cascading_GloRI_2027_dengan_Summary_v2.xlsx | KPI dan program GloRI; v2 memuat pagu Rp1 miliar dan Summary Renstra-KPI | Data internal |
+| Cascading_glori.xlsx; 031026_Cascading_GloRI_2027.xlsx; 211026_Cascading_GloRI_2027_dengan_Summary_v2.xlsx; Ceklist_inputan_RKAT.xlsx | KPI dan program GloRI; v2 memuat pagu Rp1 miliar dan Summary Renstra-KPI; RKAT memuat 26 kegiatan dan jumlah terinput | Data internal |
