@@ -77,6 +77,12 @@ Lalu ganti folder `data/` di server (`peta-data.js` dan berkas JSON dibuat bersa
 - Awan kata berupa tombol HTML biasa (bukan kanvas), jadi dapat dibaca pembaca layar dan dipakai dengan papan ketik.
 
 
+## API dan pembaruan berkelanjutan
+
+Kontrak API (`docs/api/openapi.yaml`), skema data (`schemas/`), dan model pembaruan berlapis (`docs/PEMBARUAN_DATA.md`) sudah tersedia di repositori.
+Berkas JSON di folder `data/` ini memiliki bentuk yang sama dengan respons API baca, jadi backend dinamis dapat menggantikannya tanpa mengubah antarmuka.
+Pemeriksaan kontrak sebelum rilis data: `python3 scripts/trg_api_check.py`.
+
 ## Integrasi database (tahap berikut)
 
 Bila data dipindah ke database Laravel, cukup sediakan endpoint JSON dengan bentuk yang sama dan ubah fungsi `load()` di `app.js`

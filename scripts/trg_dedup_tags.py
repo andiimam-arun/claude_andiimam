@@ -10,9 +10,15 @@ Keluaran di data/trg:
 """
 import csv, re, collections as C
 
-D = "data/trg"
+import os
+D = os.environ.get("TRG_DATA", "data/trg")
 R = lambda f: list(csv.DictReader(open(f"{D}/{f}.csv", encoding="utf-8")))
 pen, trg = R("peneliti"), R("trg")
+import importlib.util, os
+def _load_overrides():
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trg_overrides.py")
+    spec = importlib.util.spec_from_file_location("trg_overrides", p); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
+OVR = _load_overrides(); REP = OVR.Report()
 tinfo = {t["slug"]: t for t in trg}
 
 # ---------- normalisasi nama ----------
@@ -46,6 +52,8 @@ def norm_name(n):
     return " ".join(out)
 
 
+OVR.apply_people(pen, norm_name, REP)   # koreksi manusia: profil orang dan ketua (sebelum dedup)
+
 # ---------- union-find ----------
 parent = list(range(len(pen)))
 def find(i):
@@ -70,6 +78,20 @@ for ids in idx.values():
     for j in ids[1:]:
         union(ids[0], j)
 id_groups = {find(i) for i in range(len(pen))}
+# koreksi manusia: paksa gabung / larang gabung
+_by_key = C.defaultdict(list)
+for i, p in enumerate(pen):
+    _by_key[p["_key"]].append(i)
+for a, b in OVR.forced_merges(norm_name):
+    ia, ib = _by_key.get(a, []), _by_key.get(b, [])
+    if not ia or not ib:
+        REP.bad(f"orang_gabung: nama tidak ditemukan ({a!r} / {b!r})"); continue
+    for j in ia[1:] + ib:
+        union(ia[0], j)
+    REP.ok(f"orang_gabung: {a} + {b} ({len(ia) + len(ib)} baris)")
+_blocked = OVR.separations(norm_name)
+def _is_blocked(key, i, j):
+    return (key, pen[i]["trg_slug"], pen[j]["trg_slug"]) in _blocked
 # penggabungan nama (>=2 token)
 byname = C.defaultdict(list)
 for i, p in enumerate(pen):
@@ -88,7 +110,8 @@ for key, ids in byname.items():
             review.append([key, "ID_berbeda_nama_sama", len(ids), "; ".join(sorted({pen[i]["trg_slug"] for i in ids}))])
             continue
         for j in ids[1:]:
-            union(ids[0], j)
+            if not _is_blocked(key, ids[0], j):
+                union(ids[0], j)
         if len(clusters) > 1 and not hasid:
             review.append([key, "nama_saja_lintas_klaster", len(ids), "; ".join(sorted({pen[i]["trg_slug"] for i in ids}))])
 
@@ -267,3 +290,5 @@ print("tag unik", len(tr), "| tag dipakai >=2 peneliti:", sum(1 for r in tr if r
 print("review", len(review), C.Counter(r[1] for r in review))
 print("peneliti dgn >=1 tag", len({p for p, _ in ptag}))
 print([r[:4] for r in tr[:25]])
+REP.write(f"{D}/override_laporan.txt")
+print("override:", len(REP.applied), "diterapkan,", len(REP.problems), "bermasalah")

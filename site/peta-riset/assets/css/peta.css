@@ -143,6 +143,8 @@ a.chip:hover { border-color: var(--glori-navy-soft); color: var(--glori-navy); }
 .trg h3 { font-size: 1.08rem; font-weight: 600; color: var(--glori-navy); overflow-wrap: anywhere; }
 .trg h3 a { color: inherit; text-underline-offset: 3px; }
 .trg .sub { margin: 2px 0 0; font-size: 13px; color: var(--glori-muted); }
+.trg .ver { margin: 6px 0 0; font-size: 12px; color: var(--glori-muted); }
+.trg .ver.ok { color: #1f6b46; font-weight: 500; }
 .trg .lead { font-size: 14px; margin: 0; }
 .trg .lead b { font: 500 12px var(--font-head); letter-spacing: .06em; text-transform: uppercase; color: var(--glori-muted); display: block; }
 .trg .stat { text-align: right; font-size: 13px; color: var(--glori-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }

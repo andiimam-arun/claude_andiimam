@@ -8,9 +8,12 @@ Menulis insights.json, memperbarui meta.json (jumlah artikel unik), dan membuat 
 Catatan metodologi: ukuran = jumlah artikel unik yang tercatat di halaman TRG (judul dinormalkan, artikel yang sama di
 beberapa TRG dihitung sekali). Ini ukuran aktivitas riset tercatat, bukan mutu atau dampak.
 """
-import csv, itertools, json, os, re, sys, collections as C
+import csv, itertools, json, os, re, statistics, sys, collections as C
+import importlib.util
+_p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trg_overrides.py")
+_sp = importlib.util.spec_from_file_location("trg_overrides", _p); OVR = importlib.util.module_from_spec(_sp); _sp.loader.exec_module(OVR); REP = OVR.Report()
 
-D = "data/trg"
+D = os.environ.get("TRG_DATA", "data/trg")
 O = sys.argv[1] if len(sys.argv) > 1 else "site/peta-riset/data"
 R = lambda f: list(csv.DictReader(open(f"{D}/{f}.csv", encoding="utf-8")))
 J = lambda n: json.load(open(f"{O}/{n}.json", encoding="utf-8"))
@@ -32,12 +35,32 @@ for r in R("publikasi"):
         a["tahun"] = int(r["tahun"])
 art = list(arts.values())
 
+# ---------- metrik kualitas (opsional): hasil scripts/trg_enrich.py ----------
+MET_PATH = os.environ.get("TRG_METRIK", f"{D}/artikel_metrik.csv")
+met = {r["kunci_judul"]: r for r in csv.DictReader(open(MET_PATH, encoding="utf-8"))} if os.path.exists(MET_PATH) else {}
+fl = lambda x: float(x) if x not in ("", None) else None
+
 # ---------- statistik per tema ----------
 st = {g["tag_id"]: dict(id=g["tag_id"], n_artikel=0) for g in tag}
-for a in art:
+qual = C.defaultdict(lambda: dict(sitasi=[], fwci=[], top10=[], oa=[]))
+for k, a in arts.items():
     tema = {t for s in a["slugs"] for t in tmap.get(s, [])}
+    m = met.get(k)
     for t in tema:
         st[t]["n_artikel"] += 1
+        if m:
+            for key in ("sitasi", "fwci"):
+                if fl(m[key]) is not None:
+                    qual[t][key].append(fl(m[key]))
+            qual[t]["top10"].append(int(m["top10"] or 0)); qual[t]["oa"].append(int(m["oa"] or 0))
+for t, v in st.items():
+    qd = qual.get(t)
+    if qd and len(qd["top10"]) >= 10:       # tampilkan hanya bila cukup artikel tercocok
+        n = len(qd["top10"])
+        v["kualitas"] = dict(n_cocok=n, cakupan=round(100 * n / max(1, v["n_artikel"])),
+                             sitasi_rata=round(statistics.mean(qd["sitasi"]), 1) if qd["sitasi"] else None,
+                             fwci_median=round(statistics.median(qd["fwci"]), 2) if qd["fwci"] else None,
+                             top10_pct=round(100 * sum(qd["top10"]) / n), oa_pct=round(100 * sum(qd["oa"]) / n))
 # Tren per tahun sengaja tidak dihitung: halaman TRG baru diisi sejak program TRG (2025-2026), sehingga artikel
 # terbaru tercatat jauh lebih lengkap daripada yang lama dan "pertumbuhan" akan menyesatkan.
 
@@ -66,6 +89,8 @@ characteristic property propertie dynamic dynamics condition service services st
 specie factor aspect application approach increase increased improving improvement toward role relation relations difference differences comparison effectively
 program parameter variable profile function pattern solution utilization improve integration life modified surface structure space industry variety
 school clinical modified model application factor level various several effective efficient""".split())
+_DROP, _ALIAS = OVR.keywords(REP)   # koreksi manusia atas kata kunci
+STOP |= _DROP
 BAD_BIGRAM = {"hasanuddin university", "type diabetes", "small medium", "medium enterprises", "linear canonical", "anisotropic functionally",
               "frugiperda smith", "bantimurung bulusaraung", "bulusaraung national", "health center", "lepidoptera noctuidae", "nusa tenggara",
               "elementary school", "older people", "functionally graded", "graded materials", "vascular streak", "streak dieback", "dieback disease"}
@@ -74,7 +99,7 @@ ID2EN = {"kakao": "cocoa", "kopi": "coffee", "padi": "rice", "jagung": "corn", "
          "akuntansi": "accounting", "keuangan": "financial", "pendidikan": "education", "budaya": "culture", "lingkungan": "environmental",
          "energi": "energy", "sampah": "waste", "banjir": "flood", "gempa": "earthquake", "pesisir": "coastal", "iklim": "climate", "pariwisata": "tourism",
          "pangan": "food", "hutan": "forest", "tanaman": "plant", "perempuan": "women", "anak": "children", "kanker": "cancer", "ibu": "maternal"}
-EN2ID = {"cocoa": "kakao", "coffee": "kopi", "rice": "padi", "corn": "jagung", "shrimp": "udang", "crab": "kepiting", "fish": "ikan", "law": "hukum",
+EN2ID_BASE = {"cocoa": "kakao", "coffee": "kopi", "rice": "padi", "corn": "jagung", "shrimp": "udang", "crab": "kepiting", "fish": "ikan", "law": "hukum",
          "nutrition": "gizi", "health": "kesehatan", "soil": "tanah", "land": "lahan", "disease": "penyakit", "economic": "ekonomi", "accounting": "akuntansi",
          "financial": "keuangan", "education": "pendidikan", "culture": "budaya", "environmental": "lingkungan", "energy": "energi", "waste": "sampah",
          "flood": "banjir", "earthquake": "gempa", "coastal": "pesisir", "climate": "iklim", "tourism": "pariwisata", "food": "pangan", "forest": "hutan",
@@ -82,6 +107,9 @@ EN2ID = {"cocoa": "kakao", "coffee": "kopi", "rice": "padi", "corn": "jagung", "
          "coral reef": "terumbu karang", "climate change": "perubahan iklim", "food security": "ketahanan pangan", "breast cancer": "kanker payudara",
          "pregnant women": "ibu hamil", "remote sensing": "penginderaan jauh", "seaweed": "rumput laut", "mangrove": "mangrove", "diabetes": "diabetes",
          "cardiovascular": "kardiovaskular", "machine learning": "pembelajaran mesin", "renewable": "terbarukan", "wound healing": "penyembuhan luka"}
+
+
+EN2ID = {**EN2ID_BASE, **_ALIAS}
 
 
 def toks(t):
@@ -134,7 +162,7 @@ for k, c in sorted(sel.items(), key=lambda kv: -kv[1])[:72]:
                    slugs=[s for s, _ in where[k].most_common(30)], tema=[t for t, _ in tema_of[k].most_common(3)]))
 
 yrs = [a["tahun"] for a in art if a["tahun"]]
-ins = dict(n_artikel_unik=len(art), n_dengan_tahun=len(yrs), tahun_min=min(yrs), tahun_maks=max(yrs), tema=list(st.values()), edges=edges, keywords=kw)
+ins = dict(diperkaya=bool(met), n_artikel_cocok=len(met), n_artikel_unik=len(art), n_dengan_tahun=len(yrs), tahun_min=min(yrs), tahun_maks=max(yrs), tema=list(st.values()), edges=edges, keywords=kw)
 json.dump(ins, open(f"{O}/insights.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 meta = J("meta")

@@ -17,12 +17,14 @@
       themeNote: "Klik sebuah tema untuk melihat para penelitinya. Satu peneliti bisa masuk beberapa tema, jadi totalnya melebihi jumlah peneliti unik.",
       fTrg: "Cari TRG", fSort: "Urutkan", sName: "Nama", sPeople: "Jumlah peneliti", sPapers: "Jumlah artikel",
       disclaimer: "Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.",
+      verified: function (d) { return "Terverifikasi " + d; }, unverified: "Belum diverifikasi ketua TRG",
       leaderOf: "Ketua TRG", trgLabel: "TRG", themeLabel: "Tema", noExpertise: "Keahlian belum dicantumkan di halaman TRG.",
       showing: function (a, b) { return "Menampilkan " + a + " dari " + b + " peneliti"; }, none: "Tidak ada peneliti yang cocok. Coba kata kunci lain atau longgarkan filter.",
       more: function (n) { return "Tampilkan " + n + " lagi"; }, people: "peneliti", trgs: "TRG", papers: "artikel", leader: "Ketua", faculty: "Fakultas",
       trgShowing: function (a) { return a + " TRG"; }, noLeader: "Ketua belum terbaca dari situs", moreChips: function (n) { return "+" + n + " lainnya"; },
       source: function (d, u) { return "Sumber: halaman publik " + u + ", dikumpulkan " + d + "."; },
       contact: function (e) { return "Koreksi data: " + e; }, contactNone: "Untuk koreksi data, hubungi pengelola GloRI.",
+      qualLine: function (q) { return "Mutu artikel yang tercocok (" + q.cakupan + "% artikel): FWCI median " + q.fwci_median + " · " + q.top10_pct + "% termasuk 10% teratas · " + q.oa_pct + "% akses terbuka"; },
       spotHead: "Bidang riset terbanyak", spotNote: "Lima tema dengan artikel terbanyak yang tercatat di halaman TRG. Ini ukuran aktivitas riset yang tercatat, bukan mutu atau dampak.",
       netHead: "Jaringan tema", netNote: "Setiap bulatan adalah satu tema; makin besar berarti makin banyak artikel. Garis menghubungkan tema yang dikerjakan oleh peneliti yang sama; makin tebal berarti makin banyak peneliti bersama. Klik bulatan untuk melihat detail.",
       netMin: "Tampilkan hubungan dari", cloudHead: "Kata kunci riset", cloudNote: "Kata yang sering muncul pada judul artikel TRG, sudah disaring dari kata umum. Ukuran menunjukkan jumlah artikel yang memuat kata itu. Klik sebuah kata untuk melihat TRG dan penelitinya.",
@@ -42,12 +44,14 @@
       themeNote: "Click a theme to see its researchers. A researcher can belong to several themes, so totals exceed the number of unique researchers.",
       fTrg: "Search TRGs", fSort: "Sort by", sName: "Name", sPeople: "Number of researchers", sPapers: "Number of articles",
       disclaimer: "Data are collected automatically from public TRG pages and may contain errors or omissions. Researchers with the same name may be merged incorrectly, and missing expertise means it is not listed on the TRG page. The list covers leaders, lecturers, researchers, and external collaborators; students are not shown.",
+      verified: function (d) { return "Verified " + d; }, unverified: "Not yet verified by the TRG leader",
       leaderOf: "TRG leader", trgLabel: "TRG", themeLabel: "Themes", noExpertise: "Expertise not listed on the TRG page.",
       showing: function (a, b) { return "Showing " + a + " of " + b + " researchers"; }, none: "No matching researchers. Try other keywords or loosen the filters.",
       more: function (n) { return "Show " + n + " more"; }, people: "researchers", trgs: "TRGs", papers: "articles", leader: "Leader", faculty: "Faculty",
       trgShowing: function (a) { return a + " TRGs"; }, noLeader: "Leader not yet read from the site", moreChips: function (n) { return "+" + n + " more"; },
       source: function (d, u) { return "Source: public pages of " + u + ", collected " + d + "."; },
       contact: function (e) { return "Data corrections: " + e; }, contactNone: "For data corrections, contact the GloRI administrators.",
+      qualLine: function (q) { return "Quality of matched articles (" + q.cakupan + "% of articles): median FWCI " + q.fwci_median + " · " + q.top10_pct + "% in the top 10% · " + q.oa_pct + "% open access"; },
       spotHead: "Research areas with the most output", spotNote: "The five themes with the most articles recorded on TRG pages. This measures recorded research activity, not quality or impact.",
       netHead: "Theme network", netNote: "Each circle is a theme; larger means more articles. Lines connect themes worked on by the same researchers; thicker means more shared researchers. Click a circle for details.",
       netMin: "Show links from", cloudHead: "Research keywords", cloudNote: "Words that often appear in TRG article titles, filtered of generic terms. Size shows the number of articles containing the word. Click a word to see its TRGs and researchers.",
@@ -260,7 +264,8 @@
     var ul = $("#trg-list"); ul.replaceChildren.apply(ul, rows.map(function (g) {
       var li = el("li", "trg"), c1 = el("div"), h = el("h3");
       if (g.url) { var a = el("a", null, g.nama); a.href = g.url; a.target = "_blank"; a.rel = "noopener"; h.appendChild(a); } else h.textContent = g.nama;
-      c1.appendChild(h); c1.appendChild(el("p", "sub", g.fakultas + " · " + klasterName(g.klaster))); li.appendChild(c1);
+      c1.appendChild(h); c1.appendChild(el("p", "sub", g.fakultas + " · " + klasterName(g.klaster)));
+      c1.appendChild(el("p", g.terverifikasi ? "ver ok" : "ver", g.terverifikasi ? t.verified(g.terverifikasi) : t.unverified)); li.appendChild(c1);
       var c2 = el("p", "lead"); c2.appendChild(el("b", null, t.leader)); c2.appendChild(document.createTextNode(g.ketua || t.noLeader)); li.appendChild(c2);
       var c3 = el("div"); var tags = (g.tag_ids || "").split(";").filter(Boolean).map(function (id) { return tagById[id]; }).filter(Boolean);
       if (tags.length) { var u = el("ul", "chips"); tags.forEach(function (x) { var l = el("li"); l.appendChild(el("span", "chip theme", tagName(x))); u.appendChild(l); }); c3.appendChild(u); }
@@ -348,6 +353,7 @@
       var box = $("#net-detail"), g = n.g, ins = insTema[g.tag_id] || {}; box.replaceChildren();
       box.appendChild(el("h3", null, tagName(g)));
       box.appendChild(el("p", null, klasterName(g.klaster) + " · " + t.articlesN(ins.n_artikel || 0) + " · " + t.peopleN(g.n_peneliti) + " · " + t.trgN(g.n_trg)));
+      if (ins.kualitas && ins.kualitas.fwci_median != null) box.appendChild(el("p", "muted", t.qualLine(ins.kualitas)));
       var conn = D.ins.edges.filter(function (e) { return e[0] === n.id || e[1] === n.id; }).sort(function (a, b) { return b[2] - a[2]; }).slice(0, 6);
       if (conn.length) {
         box.appendChild(el("p", "row-label", t.linked)); var ul = el("ul");

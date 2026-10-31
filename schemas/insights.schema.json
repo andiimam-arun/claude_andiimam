@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wawasan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "n_artikel_unik",
+    "tema",
+    "edges",
+    "keywords"
+  ],
+  "properties": {
+    "diperkaya": {
+      "type": "boolean"
+    },
+    "n_artikel_cocok": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_artikel_unik": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_dengan_tahun": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tahun_min": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tahun_maks": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tema": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "n_artikel"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "n_artikel": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "kualitas": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "n_cocok",
+              "cakupan",
+              "top10_pct",
+              "oa_pct"
+            ],
+            "properties": {
+              "n_cocok": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "cakupan": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sitasi_rata": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "fwci_median": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "top10_pct": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "oa_pct": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer",
+            "minimum": 0
+          }
+        ],
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "t",
+          "n",
+          "n_trg",
+          "klaster",
+          "slugs"
+        ],
+        "properties": {
+          "t": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_trg": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "klaster": {
+            "type": "string"
+          },
+          "slugs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tema": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
