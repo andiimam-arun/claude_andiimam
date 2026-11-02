@@ -64,7 +64,7 @@ def get_json(url, cache, headers=None):
             json.dump(data, open(key, "w", encoding="utf-8"))
             return data
         except urllib.error.HTTPError as e:
-            if e.code == 404:                       # tidak ditemukan: catat sebagai kosong agar tidak diulang
+            if e.code in (400, 404):                # tidak ditemukan / permintaan tak terbaca (mis. judul bersimbol aneh): catat kosong agar tidak diulang
                 json.dump(None, open(key, "w")); return None
             if e.code == 429:
                 body = (e.read() or b"").decode("utf-8", "ignore")
