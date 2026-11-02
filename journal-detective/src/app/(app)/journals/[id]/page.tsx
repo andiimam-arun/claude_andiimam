@@ -24,7 +24,7 @@ export default async function JournalRecord({ params, searchParams }: { params: 
   return (
     <>
       {sp.notice && <Notice kind="ok">{sp.notice}</Notice>}{sp.error && <Notice kind="error">{sp.error}</Notice>}
-      <PageHeader title={j.title} subtitle={`ISSN ${j.issn ?? "—"} · E-ISSN ${j.eissn ?? "—"} · ${j.publisher ?? "—"} · ${L ? "versi catatan" : "record version"} ${j.recordVersion}`}
+      <PageHeader title={j.title} subtitle={`Journal Passport · ISSN ${j.issn ?? "—"} · E-ISSN ${j.eissn ?? "—"} · ${j.publisher ?? "—"} · ${L ? "versi catatan" : "record version"} ${j.recordVersion}`}
         actions={<>{latest && <Link className="btn-primary" href={`/investigations/${latest.id}`}>{L ? "Buka penilaian terbaru" : "Open latest assessment"}</Link>}
           {user.role !== "ADMIN" && <form action={flagReassessAction}><input type="hidden" name="journalId" value={j.id} /><input type="hidden" name="back" value={`/journals/${j.id}`} /><input type="hidden" name="reason" value="Ditandai dari registri" /><button className="btn-outline" type="submit">{j.reassessFlag ? (L ? "Sudah ditandai ✓" : "Flagged ✓") : (L ? "Tandai penilaian ulang" : "Flag for reassessment")}</button></form>}</>} />
       <div className="grid gap-6 lg:grid-cols-3">

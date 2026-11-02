@@ -257,6 +257,7 @@ export async function runInvestigation(i: RunInput): Promise<InvestigationResult
 
   const verifiedDomains = new Set<string>();
   for (const e of all) if (e.key === "identity.official_domain" && e.status === "VERIFIED") for (const d of (e.data.domains ?? []) as string[]) { const r = registrableDomain(d); if (r) verifiedDomains.add(r); }
+  for (const e of all) if (e.key === "hijack.website" && ["MATCHES_OFFICIAL", "AUTHORIZED_MIGRATION"].includes(e.data.relation) && e.status === "VERIFIED") for (const d of (e.data.officialDomains ?? []) as string[]) { const r = registrableDomain(d); if (r) verifiedDomains.add(r); }
   const due = policy.config.reassessmentIntervalDays ? new Date(Date.now() + policy.config.reassessmentIntervalDays * 86_400_000) : null;
   await prisma.journal.update({
     where: { id: journal.id },

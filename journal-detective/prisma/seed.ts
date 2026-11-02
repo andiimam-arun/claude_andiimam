@@ -75,9 +75,25 @@ async function main() {
   // 6. Jurnal tanpa data rujukan apa pun → Scopus UNVERIFIED (Case F)
   await createApplication({ ...base, manuscriptTitle: "Evaluasi Program Posyandu di Wilayah Fiktif", stage: "PRE_SUBMISSION", journalName: "Jurnal Tanpa Data Rujukan (FIKTIF)", journalIssn: "9900-0040", journalPublisher: "Penerbit Tidak Dikenal (FIKTIF)", claimedIndexing: "Scopus", journalUrl: "https://tanpa-data.example" } as any, S, student.id);
 
+  // 7. Diterima TANPA putaran revisi, bukti koheren → HIJAU/HIJAU (Case G)
+  const a7 = await createApplication({ ...base, manuscriptTitle: "Faktor Risiko Stunting pada Anak Usia Dini di Wilayah Fiktif", stage: "ACCEPTED", submissionDate: "2026-06-01", trackingId: "JRKN-2026-0042", journalName: "Jurnal Riset Kesehatan Nusantara (FIKTIF)", journalIssn: "9900-0016", journalPublisher: "Penerbit Fiktif Nusantara", claimedIndexing: "Scopus", journalUrl: "https://jurnal-riset-kesehatan.example" } as any, S, student.id);
+  await addEvent(a7.id, { type: "SUBMITTED", occurredAt: "2026-06-01", note: "Dikirim" }, S);
+  await addEvent(a7.id, { type: "UNDER_REVIEW", occurredAt: "2026-06-10" }, S);
+  await addEvent(a7.id, { type: "ACCEPTED", occurredAt: "2026-09-12", note: "Diterima tanpa revisi — sah" }, S);
+  await uploadDocument({ applicationId: a7.id, docType: "ACCEPTANCE_LETTER", filename: "surat_penerimaan_fiktif.txt", data: fx("surat_penerimaan_fiktif.txt"), actor: S });
+  await setChecklist(a7.id, "SUBMISSION_ACK", "MET", "Tanda terima diverifikasi (demo)", R);
+  await setChecklist(a7.id, "ACCEPTANCE_LETTER", "MET", "Koheren dengan riwayat editorial (demo)", R);
+
+  // 8. Domain mirip domain resmi (satu huruf berbeda) → KUNING, perlu konfirmasi peninjau
+  await createApplication({ ...base, manuscriptTitle: "Studi Kualitas Air Minum di Wilayah Fiktif", stage: "PRE_SUBMISSION", journalName: "Jurnal Riset Kesehatan Nusantara (FIKTIF)", journalIssn: "9900-0016", journalPublisher: "Penerbit Fiktif Nusantara", claimedIndexing: "Scopus", journalUrl: "https://jurnal-riset-kesehatam.example" } as any, S, student.id);
+
+  // 9. Faktur APC mengarah ke domain di luar domain resmi → tanda HIGH, administratif KUNING
+  const a9 = await createApplication({ ...base, manuscriptTitle: "Faktor Risiko Stunting pada Anak Usia Dini di Wilayah Fiktif", stage: "PAYMENT_REQUESTED", submissionDate: "2026-06-01", trackingId: "JRKN-2026-0042", journalName: "Jurnal Riset Kesehatan Nusantara (FIKTIF)", journalIssn: "9900-0016", journalPublisher: "Penerbit Fiktif Nusantara", claimedIndexing: "Scopus", journalUrl: "https://jurnal-riset-kesehatan.example" } as any, S, student.id);
+  await uploadDocument({ applicationId: a9.id, docType: "APC_INVOICE", filename: "faktur_fiktif.txt", data: Buffer.from("[FIKTIF] Invoice APC\nManuscript ID: JRKN-2026-0042\nBayar di https://bayar-apc-cepat.example/pay\nUSD 300"), actor: S });
+
   // Sebaran waktu agar grafik bulanan bermakna
   const apps = await prisma.application.findMany({ orderBy: { createdAt: "asc" } });
-  const offs = [75, 55, 40, 20, 8, 1];
+  const offs = [75, 60, 50, 40, 30, 20, 12, 5, 1];
   for (let i = 0; i < apps.length; i++) await prisma.application.update({ where: { id: apps[i].id }, data: { createdAt: daysAgo(offs[i] ?? 1) } });
 
   await audit(A, "SEED_DEMO", "System", null, { note: "Data demonstrasi FIKTIF dimuat" });

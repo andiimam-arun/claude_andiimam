@@ -155,3 +155,20 @@ test("mahasiswa tidak dapat membuka halaman staf maupun permohonan orang lain", 
   await page.goto("/journals");
   await expect(page).toHaveURL(/error=forbidden|\/$/);
 });
+
+test("Journal Passport dan Riwayat Penilaian dapat dicari, ada jadwal validasi ulang", async ({ page }) => {
+  await login(page, "peninjau@jd.example");
+  await page.getByRole("link", { name: "Journal Passport" }).click();
+  await expect(page.getByText("Validasi ulang").first()).toBeVisible();
+  await page.fill('input[name="q"]', "9900-0016");
+  await page.getByRole("button", { name: "Cari" }).click();
+  await expect(page.getByRole("link", { name: /Jurnal Riset Kesehatan Nusantara/ }).first()).toBeVisible();
+  await page.getByRole("link", { name: "Riwayat Penilaian" }).click();
+  await page.fill('input[name="q"]', "jurnal-riset-kesehatam");
+  await page.getByRole("button", { name: "Cari" }).click();
+  await expect(page.getByText("jurnal-riset-kesehatam.example")).toBeVisible();
+  await page.selectOption('select[name="status"]', "RED");
+  await page.fill('input[name="q"]', "");
+  await page.getByRole("button", { name: "Cari" }).click();
+  await expect(page.getByText("klon/identitas palsu").first()).toBeVisible();
+});

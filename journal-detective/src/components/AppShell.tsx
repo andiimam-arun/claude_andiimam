@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LayoutDashboard, Search, Database, GraduationCap, FileSearch, Stamp, Mail, BarChart3, Library, Settings, ShieldCheck, LogOut } from "lucide-react";
+import { LayoutDashboard, Search, Database, History, GraduationCap, FileSearch, Stamp, Mail, BarChart3, Library, Settings, ShieldCheck, LogOut } from "lucide-react";
 import { NAV_ACCESS, type NavKey } from "@/lib/auth/permissions";
 import type { SessionUser } from "@/lib/auth/session";
 import { t, type Lang } from "@/lib/i18n";
@@ -9,6 +9,7 @@ const ITEMS: Array<{ key: NavKey; href: string; Icon: typeof Search }> = [
   { key: "dashboard", href: "/", Icon: LayoutDashboard },
   { key: "investigate", href: "/investigations/new", Icon: Search },
   { key: "journals", href: "/journals", Icon: Database },
+  { key: "assessments", href: "/assessments", Icon: History },
   { key: "applications", href: "/applications", Icon: GraduationCap },
   { key: "evidence", href: "/evidence-review", Icon: FileSearch },
   { key: "approvals", href: "/approvals", Icon: Stamp },

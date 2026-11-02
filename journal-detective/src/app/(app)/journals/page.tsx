@@ -23,7 +23,7 @@ export default async function Journals({ searchParams }: { searchParams: Promise
   const L = lang === "id";
   return (
     <>
-      <PageHeader title={t("nav.journals")} subtitle={L ? "Registri institusi semua jurnal yang pernah dinilai. Status lama bukan jaminan; lihat tanggal verifikasi terakhir." : "Institutional registry of every assessed journal. An old status is no guarantee; see the last verification date."}
+      <PageHeader title={t("nav.journals")} subtitle={L ? "Journal Passport: paspor institusi setiap jurnal yang pernah dinilai (identitas, domain terverifikasi, riwayat, sinyal peringatan, jadwal validasi ulang). Status lama bukan jaminan; lihat tanggal verifikasi terakhir." : "Journal Passport: the institutional passport of every assessed journal (identity, verified domains, history, warning signals, revalidation date). An old status is no guarantee; see the last verification date."}
         actions={<a className="btn-outline" href="/api/export/journals">{L ? "Ekspor CSV" : "Export CSV"}</a>} />
       <form className="mb-4 flex flex-wrap gap-2" method="get">
         <input className="input max-w-md" name="q" defaultValue={q} placeholder={L ? "Cari ISSN, Source ID, judul, penerbit…" : "Search ISSN, Source ID, title, publisher…"} aria-label="search" />
@@ -31,7 +31,7 @@ export default async function Journals({ searchParams }: { searchParams: Promise
         <button className="btn-primary" type="submit">{L ? "Cari" : "Search"}</button>
       </form>
       <Card><div className="overflow-x-auto"><table className="w-full">
-        <thead><tr><th className="th">{L ? "Jurnal" : "Journal"}</th><th className="th">ISSN</th><th className="th">{L ? "Penerbit" : "Publisher"}</th><th className="th">{L ? "Status terakhir" : "Latest status"}</th><th className="th">{L ? "Verifikasi terakhir" : "Last verified"}</th><th className="th">{L ? "Permohonan" : "Apps"}</th><th className="th">v</th></tr></thead>
+        <thead><tr><th className="th">{L ? "Jurnal" : "Journal"}</th><th className="th">ISSN</th><th className="th">{L ? "Penerbit" : "Publisher"}</th><th className="th">{L ? "Status terakhir" : "Latest status"}</th><th className="th">{L ? "Verifikasi terakhir" : "Last verified"}</th><th className="th">{L ? "Validasi ulang" : "Revalidate by"}</th><th className="th">{L ? "Permohonan" : "Apps"}</th><th className="th">v</th></tr></thead>
         <tbody className="divide-y divide-slate-100">
           {rows.map((j) => {
             const a = j.assessments[0];
@@ -43,11 +43,11 @@ export default async function Journals({ searchParams }: { searchParams: Promise
                 <td className="td">{j.publisher ?? "—"}</td>
                 <td className="td">{a ? <StatusBadge status={a.journalStatus as any} lang={lang} /> : "—"}</td>
                 <td className="td text-xs">{fmtDate(j.lastVerifiedAt)}{stale && <div className="font-semibold text-warn">{L ? "perlu validasi ulang" : "needs revalidation"}</div>}</td>
-                <td className="td">{j._count.applications}</td><td className="td text-xs text-slate-500">{j.recordVersion}</td>
+                <td className="td text-xs">{fmtDate(j.reassessDueAt)}{j.reassessDueAt && j.reassessDueAt.getTime() < Date.now() && <div className="font-semibold text-bad">{L ? "terlambat" : "overdue"}</div>}</td><td className="td">{j._count.applications}</td><td className="td text-xs text-slate-500">{j.recordVersion}</td>
               </tr>
             );
           })}
-          {rows.length === 0 && <tr><td className="td text-slate-500" colSpan={7}>{L ? "Belum ada jurnal." : "No journals."}</td></tr>}
+          {rows.length === 0 && <tr><td className="td text-slate-500" colSpan={8}>{L ? "Belum ada jurnal." : "No journals."}</td></tr>}
         </tbody></table></div></Card>
     </>
   );

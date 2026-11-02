@@ -74,7 +74,7 @@ export default async function InvestigationPage({ params, searchParams }: { para
             <form action={aiSummaryAction}><input type="hidden" name="assessmentId" value={a.id} />
               <button className="btn-outline" type="submit" disabled={!ai.enabled} title={ai.enabled ? "" : "ANTHROPIC_API_KEY belum dikonfigurasi"}><Sparkles className="h-4 w-4" aria-hidden /> {L ? "Ringkasan AI (penasihat)" : "AI summary (advisory)"}</button></form>
           )}
-          <Link className="ml-auto text-sm font-medium text-navy-700 underline" href={`/journals/${j.id}`}>{L ? "Catatan registri jurnal" : "Journal registry record"} →</Link>
+          <Link className="ml-auto text-sm font-medium text-navy-700 underline" href={`/journals/${j.id}`}>{"Journal Passport"} →</Link>
         </div>
         {isStale && <div className="border-t border-amber-200 bg-warn-soft px-6 py-2 text-xs font-medium text-warn-ink">{L ? `Penilaian ini berusia ${Math.floor((Date.now() - a.createdAt.getTime()) / 86_400_000)} hari. Bukti sensitif waktu perlu divalidasi ulang sebelum dipakai untuk keputusan.` : `This assessment is ${Math.floor((Date.now() - a.createdAt.getTime()) / 86_400_000)} days old. Time-sensitive evidence should be revalidated before use.`}</div>}
       </div>

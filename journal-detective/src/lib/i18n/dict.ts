@@ -10,7 +10,7 @@ export const id: Dict = {
   "app.advisory": "Rekomendasi bersifat penasihat. Hanya pejabat manusia berwenang yang dapat menerbitkan persetujuan institusional.",
   "lang.switch": "English",
 
-  "nav.dashboard": "Ikhtisar", "nav.investigate": "Investigasi Jurnal Baru", "nav.journals": "Basis Data Jurnal", "nav.applications": "Permohonan Mahasiswa",
+  "nav.dashboard": "Ikhtisar", "nav.investigate": "Investigasi Jurnal Baru", "nav.journals": "Journal Passport", "nav.assessments": "Riwayat Penilaian", "nav.applications": "Permohonan Mahasiswa",
   "nav.evidence": "Tinjauan Bukti", "nav.approvals": "Persetujuan Tertunda", "nav.letters": "Surat Klirens", "nav.analytics": "Analitik & Laporan",
   "nav.sources": "Sumber Rujukan", "nav.settings": "Pengaturan & Kebijakan", "nav.logout": "Keluar",
 
@@ -146,7 +146,7 @@ export const en: Dict = {
   "app.advisory": "Recommendations are advisory. Only authorized human officers can issue institutional approval.",
   "lang.switch": "Bahasa Indonesia",
 
-  "nav.dashboard": "Overview", "nav.investigate": "New Journal Investigation", "nav.journals": "Journal Database", "nav.applications": "Student Applications",
+  "nav.dashboard": "Overview", "nav.investigate": "New Journal Investigation", "nav.journals": "Journal Passport", "nav.assessments": "Assessment History", "nav.applications": "Student Applications",
   "nav.evidence": "Evidence Review", "nav.approvals": "Pending Approvals", "nav.letters": "Clearance Letters", "nav.analytics": "Analytics & Reports",
   "nav.sources": "Reference Sources", "nav.settings": "Settings & Policy Rules", "nav.logout": "Sign out",
 
