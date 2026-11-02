@@ -13,6 +13,9 @@ Antarmuka berbahasa Indonesia (bawaan) dengan opsi English. Untuk keterbatasan d
 
 Detail aturan: [docs/ASSESSMENT_POLICY.md](docs/ASSESSMENT_POLICY.md).
 
+## Lingkungan DEMO dan PILOT
+`APP_MODE=DEMO` (bawaan; data fiktif, `npm run db:seed`) dan `APP_MODE=PILOT` (data nyata, tanpa data/akun demo) memakai **basis data dan folder unggahan terpisah** dan saling menolak berjalan di atas data yang lain. Banner lingkungan selalu tampil. Inisialisasi pilot yang aman: `npm run pilot:init` (menolak basis data tidak kosong). Panduan lengkap: **[docs/PILOT_RUNBOOK.md](docs/PILOT_RUNBOOK.md)**. Validasi dunia nyata: [docs/REAL_WORLD_VALIDATION.md](docs/REAL_WORLD_VALIDATION.md) (**belum dilakukan**). Laporan Fase 1B: [docs/PHASE_1B_REPORT.md](docs/PHASE_1B_REPORT.md).
+
 ## Persyaratan
 Node.js ≥ 20 (diuji pada 22), npm. Basis data bawaan SQLite (tanpa server). Produksi: PostgreSQL (lihat [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)).
 
@@ -58,7 +61,7 @@ Case I (administrator tidak bisa menerbitkan surat resmi) didemonstrasikan lewat
 ```bash
 npm run typecheck
 npm run lint
-npm test                                    # vitest (56): mesin keputusan (Case A–I), layanan, keamanan, i18n
+npm test                                    # vitest (103): mesin keputusan, layanan, tujuan/klon, validasi, PILOT, cadangan, adapter eksternal (fixture), keamanan, i18n
 PW_CHROMIUM=/path/ke/chromium npm run test:e2e   # Playwright (membangun & menjalankan app pada port 3100 dengan DB e2e)
 ```
 `PW_CHROMIUM` hanya perlu bila versi browser Playwright terpasang berbeda.

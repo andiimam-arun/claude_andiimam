@@ -3,6 +3,7 @@ import { checkApproval, canPerform, nextState, MIN_JUSTIFICATION, TERMINAL_STATE
 import { audit } from "./audit";
 import { evaluateApplication, reassessApplicationJournal } from "./applications";
 import { getActivePolicy } from "./policyService";
+import { officialPolicyBlockReason } from "../mode";
 
 export interface ActingUser { id: string; name: string; role: Role }
 
@@ -12,7 +13,8 @@ const ERR: Record<string, string> = {
   IDENTITY_FRAUD_BLOCK: "Persetujuan diblokir: identitas jurnal/situs terbukti palsu. Tidak dapat di-override.",
   BLOCKED_NOT_OVERRIDABLE: "Persetujuan diblokir: hasil MERAH tidak dapat di-override menurut kebijakan aktif.",
   OVERRIDE_JUSTIFICATION_REQUIRED: `Rekomendasi bukan HIJAU: justifikasi tertulis minimal ${MIN_JUSTIFICATION} karakter wajib diisi untuk menyetujui.`,
-  NO_DECISION: "Belum ada penilaian jurnal untuk permohonan ini.",
+  NO_DECISION: "Belum ada penilaian jurnal/tujuan yang berlaku untuk permohonan ini (jurnal atau tujuan berubah?). Lakukan penilaian ulang.",
+  POLICY_NOT_CONFIGURED: "Kebijakan resmi belum dikonfigurasi. Persetujuan klirens resmi diblokir sampai pejabat berwenang menerbitkan kebijakan resmi.",
 };
 
 export class ActionError extends Error {}
@@ -38,7 +40,7 @@ export async function performReviewAction(opts: { applicationId: string; actor: 
   const data: Record<string, unknown> = {};
 
   if (action === "APPROVE") {
-    const c = checkApproval({ role: actor.role, state: from, final: evaln.final, justification: rationale });
+    const c = checkApproval({ role: actor.role, state: from, final: evaln.final, justification: rationale, officialPolicyConfigured: !officialPolicyBlockReason(policy) });
     if (!c.ok) throw new ActionError(ERR[c.error!] ?? "Persetujuan ditolak");
     if (c.isOverride) {
       overrideJson = JSON.stringify({ by: actor.name, at: new Date().toISOString(), justification: rationale, finalStatus: evaln.final!.status, journalStatus: evaln.final!.journalStatus, administrativeStatus: evaln.final!.administrativeStatus, policyVersion: policy.version });

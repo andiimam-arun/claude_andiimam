@@ -124,7 +124,8 @@ export async function renderLetterPdf(i: LetterPdfInput): Promise<Uint8Array> {
   w.kv("Penilaian indeksasi", s.indexingAssessment);
   w.kv("Tanggal penilaian", s.assessmentDate);
   w.y -= 6;
-  w.kv("Status jurnal", s.statuses.journal);
+  w.kv("Status jurnal (identitas)", s.statuses.journal);
+  w.kv("Status tujuan pengiriman", s.statuses.destination ?? "-");
   w.kv("Status administratif", s.statuses.administrative);
   w.kv("Rekomendasi akhir", s.statuses.final);
   w.y -= 4;
@@ -192,7 +193,7 @@ export async function renderAssessmentReport(r: ReportInput): Promise<Uint8Array
   w.kv(L === "id" ? "Situs diajukan" : "Submitted site", r.identity.submittedWebsite ?? "-");
   w.y -= 6;
   w.kv(L === "id" ? "Identitas" : "Identity", t(L, `ident.${r.decision.identityStatus}`));
-  w.kv(L === "id" ? "Situs" : "Website", t(L, `web.${r.decision.websiteStatus}`));
+  w.kv(L === "id" ? "Tujuan pengiriman" : "Submission destination", `${t(L, `status.${r.decision.destinationStatus}`)} - ${t(L, `web.${r.decision.websiteStatus}`)}${r.decision.destinationHost ? ` (${r.decision.destinationHost})` : ""}`);
   w.kv("Scopus", `${t(L, `idx.${r.decision.indexingStatus}`)}${r.decision.indexingBasis ? ` [${t(L, `integ.${r.decision.indexingBasis}`)}]` : ""}${r.decision.indexingDataDate ? ` ${r.decision.indexingDataDate.slice(0, 10)}` : ""}`);
   w.kv(L === "id" ? "Kelayakan kebijakan" : "Policy eligibility", t(L, `elig.${r.decision.policyEligibility}`));
   w.kv(L === "id" ? "Risiko predator" : "Predatory risk", t(L, `pred.${r.decision.predatoryAssessment}`));

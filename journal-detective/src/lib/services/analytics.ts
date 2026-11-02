@@ -23,13 +23,11 @@ export async function dashboardStats() {
     const d = parseJson<JournalDecision | null>(a.decisionJson, null);
     if (d) idxDist.set(d.indexingStatus, (d.indexingStatus ? (idxDist.get(d.indexingStatus) ?? 0) : 0) + 1);
   }
-  // Insiden klon dihitung dari SEMUA penilaian (jurnal + domain unik), bukan hanya penilaian terakhir per jurnal.
-  const incidents = new Set<string>();
-  for (const a of assessments) {
-    const d = parseJson<JournalDecision | null>(a.decisionJson, null);
-    if (d?.websiteStatus === "UNSAFE_CONFIRMED_CLONE") incidents.add(`${a.journalId}|${a.submittedDomain}`);
-  }
-  const clones = incidents.size;
+  // Insiden klon = temuan tujuan AKTIF berstatus CLONE_CONFIRMED (permanen per host); temuan yang dikoreksi tidak dihitung, riwayat tetap ada.
+  const rows = await prisma.destinationFinding.findMany({ orderBy: { createdAt: "asc" } });
+  const latestByHost = new Map<string, (typeof rows)[number]>();
+  for (const r of rows) latestByHost.set(`${r.journalId}|${r.host}`, r);
+  const clones = [...latestByHost.values()].filter((r) => r.status === "CLONE_CONFIRMED").length;
   const months: Record<string, number> = {};
   const now = new Date();
   for (let i = 5; i >= 0; i--) months[monthKey(new Date(now.getFullYear(), now.getMonth() - i, 1))] = 0;

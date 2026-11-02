@@ -26,9 +26,13 @@ export interface DecideJournalInput {
   evidence: EvidenceRecord[];
   policy: PolicyConfig;
   now?: Date;
+  /** Mode PILOT: bukti berpenanda demonstrasi (data.demo) TIDAK PERNAH dihitung sebagai bukti. */
+  pilotMode?: boolean;
 }
 
-export function decideJournal({ identity, evidence, policy, now = new Date() }: DecideJournalInput): JournalDecision {
+export function decideJournal({ identity, evidence: allEvidence, policy, now = new Date(), pilotMode = false }: DecideJournalInput): JournalDecision {
+  const demoEvidence = pilotMode ? allEvidence.filter((e) => e.data?.demo === true) : [];
+  const evidence = pilotMode ? allEvidence.filter((e) => e.data?.demo !== true) : allEvidence;
   const reasons: Reason[] = [];
   const actions: JournalDecision["nextActions"] = [];
   const addAction = (code: string, params?: Record<string, string | number>) => {
@@ -48,6 +52,10 @@ export function decideJournal({ identity, evidence, policy, now = new Date() }: 
   const claimsDoaj = claimed.some((c) => c.includes("doaj"));
   const claimsNational = claimed.some((c) => c.includes("sinta") || c.includes("akredit") || c.includes("accredit"));
 
+  if (demoEvidence.length) {
+    yellow("demo_evidence_excluded", { n: demoEvidence.length });
+    addAction("replace_demo_evidence");
+  }
   // ---------- 1. Identitas ----------
   const identityConflicts = evidence.filter((e) => e.key.startsWith("identity.") && e.key !== "identity.corroboration" && e.key !== "identity.official_domain" && (e.status === "CONFLICTED" || e.requiresHumanConfirmation) && e.review !== "DISMISSED");
   const corroboration = evidence.filter((e) => e.key === "identity.corroboration" && e.status === "VERIFIED");
@@ -58,17 +66,24 @@ export function decideJournal({ identity, evidence, policy, now = new Date() }: 
   // ---------- 2. Situs yang diajukan ----------
   const hj = evidence.filter((e) => e.key === "hijack.website");
   let websiteStatus: WebsiteStatus = "UNVERIFIED";
+  const UNRES = ["DIFFERENT_DOMAIN", "SUBDOMAIN_UNRESOLVED", "REDIRECT_UNRESOLVED", "EXTERNAL_PLATFORM_UNRESOLVED"];
+  const HUMAN_CONFIRMABLE = ["REPORTED_CLONE", "LOOKALIKE", ...UNRES];
   const confirmedClone = hj.find(
-    (e) => (e.data.relation === "CONFIRMED_CLONE" && e.status === "VERIFIED" && e.review !== "DISMISSED") ||
-      (["REPORTED_CLONE", "LOOKALIKE", "DIFFERENT_DOMAIN"].includes(e.data.relation) && confirmed(e)),
+    (e) => (e.data.relation === "CONFIRMED_CLONE" && e.status === "VERIFIED" && e.review !== "DISMISSED") || (HUMAN_CONFIRMABLE.includes(e.data.relation) && confirmed(e)),
   );
   const matches = hj.find((e) => e.data.relation === "MATCHES_OFFICIAL" && e.status === "VERIFIED");
   const migration = hj.find((e) => e.data.relation === "AUTHORIZED_MIGRATION" && e.status === "VERIFIED" && e.review !== "DISMISSED");
-  const suspicious = hj.find((e) => ["REPORTED_CLONE", "LOOKALIKE", "DIFFERENT_DOMAIN"].includes(e.data.relation) && pending(e));
+  const platform = hj.find((e) => e.data.relation === "PLATFORM_VERIFIED" && e.status === "VERIFIED" && e.review !== "DISMISSED");
+  const suspicious = hj.find((e) => ["REPORTED_CLONE", "LOOKALIKE"].includes(e.data.relation) && pending(e));
+  // Perbedaan domain/subdomain/pengalihan/platform eksternal yang BELUM diverifikasi = UNRESOLVED (bukan temuan penipuan).
+  const unresolved = hj.find((e) => UNRES.includes(e.data.relation) && e.review !== "DISMISSED" && !confirmed(e));
   if (confirmedClone) websiteStatus = "UNSAFE_CONFIRMED_CLONE";
   else if (suspicious) websiteStatus = "SUSPICIOUS";
+  else if (unresolved) websiteStatus = "UNRESOLVED";
+  else if (platform) websiteStatus = "VERIFIED_PLATFORM";
   else if (migration) websiteStatus = "AUTHORIZED_MIGRATION";
   else if (matches) websiteStatus = "AUTHENTIC";
+  const destinationHost: string | null = (hj.find((e) => e.data.submittedHost)?.data.submittedHost as string | undefined) ?? (hj.find((e) => e.data.submittedDomain)?.data.submittedDomain as string | undefined) ?? null;
 
   // Peringatan peniruan lain (situs lain yang memakai ISSN yang sama, dsb.)
   const otherHijack = evidence.filter((e) => e.key.startsWith("hijack.") && e.key !== "hijack.website" && flagged(e));
@@ -127,7 +142,6 @@ export function decideJournal({ identity, evidence, policy, now = new Date() }: 
 
   // RED integritas kritis
   if (confirmedClone) {
-    redCategory = "CRITICAL_INTEGRITY";
     identityFraudBlock = true;
     red("website_confirmed_clone", { domain: String(confirmedClone.data.submittedDomain ?? "") }, ["hijack.website"]);
     if (identityStatus === "CORROBORATED" || (confirmedClone.data.officialDomains ?? []).length) {
@@ -137,7 +151,6 @@ export function decideJournal({ identity, evidence, policy, now = new Date() }: 
     addAction("warn_student_clone");
   }
   if (impersonation) {
-    redCategory = "CRITICAL_INTEGRITY";
     identityFraudBlock = true;
     red("identity_impersonation_confirmed", {}, ["hijack.identity_impersonation"]);
   }
@@ -258,7 +271,11 @@ export function decideJournal({ identity, evidence, policy, now = new Date() }: 
   // Situs
   if (websiteStatus === "AUTHENTIC") green("website_matches_official", {}, ["hijack.website"]);
   else if (websiteStatus === "AUTHORIZED_MIGRATION") green("website_authorized_migration", {}, ["hijack.website"]);
-  else if (websiteStatus === "SUSPICIOUS") {
+  else if (websiteStatus === "VERIFIED_PLATFORM") green("website_verified_platform", {}, ["hijack.website"]);
+  else if (websiteStatus === "UNRESOLVED") {
+    yellow("website_unresolved", { domain: String(unresolved!.data.submittedHost ?? unresolved!.data.submittedDomain ?? ""), kind: String(unresolved!.data.relation) }, ["hijack.website"]);
+    addAction("verify_destination");
+  } else if (websiteStatus === "SUSPICIOUS") {
     yellow("website_suspicious", { domain: String(suspicious!.data.submittedDomain ?? "") }, ["hijack.website"]);
     addAction("confirm_or_dismiss_clone");
   } else if (websiteStatus === "UNVERIFIED") {
@@ -316,29 +333,38 @@ export function decideJournal({ identity, evidence, policy, now = new Date() }: 
   const needsEscalation = evidence.some(
     (e) => policy.escalationEvidenceKeys.includes(e.key) && e.review !== "DISMISSED" &&
       (e.status === "VERIFIED" || e.status === "CONFLICTED" || e.requiresHumanConfirmation) &&
-      !(e.key === "hijack.website" && (e.data.relation === "MATCHES_OFFICIAL" || e.data.relation === "AUTHORIZED_MIGRATION" || e.data.relation === "NO_SUBMITTED" || e.data.relation === "NO_OFFICIAL_DOMAIN")),
+      !(e.key === "hijack.website" && (e.data.relation === "MATCHES_OFFICIAL" || e.data.relation === "AUTHORIZED_MIGRATION" || e.data.relation === "PLATFORM_VERIFIED" || UNRES.includes(e.data.relation) || e.data.relation === "NO_SUBMITTED" || e.data.relation === "NO_OFFICIAL_DOMAIN")),
   );
   if (needsEscalation) addAction("escalate_investigation");
 
-  // ---------- Status akhir jurnal ----------
+  // ---------- Pelingkupan alasan: JURNAL vs TUJUAN ----------
+  const DEST = new Set(["website_confirmed_clone", "identity_authentic_site_clone", "identity_impersonation_confirmed", "website_matches_official", "website_authorized_migration", "website_verified_platform", "website_suspicious", "website_unresolved", "website_unverified"]);
+  for (const r of reasons) r.scope = DEST.has(r.code) ? "DESTINATION" : "JOURNAL";
+  const hasDestIssue = !!(confirmedClone || impersonation);
+  const destinationStatus: JournalDecision["destinationStatus"] = hasDestIssue
+    ? "RED"
+    : websiteStatus === "AUTHENTIC" || websiteStatus === "AUTHORIZED_MIGRATION" || websiteStatus === "VERIFIED_PLATFORM" ? "GREEN" : "YELLOW";
+
+  // ---------- Status identitas jurnal (tanpa tujuan) ----------
   let journalStatus: JournalDecision["journalStatus"];
   if (redCategory === "CRITICAL_INTEGRITY") journalStatus = "RED";
   else if (eligibility === "INELIGIBLE") {
     journalStatus = "RED";
     redCategory = "POLICY_INELIGIBLE";
-  } else if (reasons.some((r) => r.level === "YELLOW")) journalStatus = "YELLOW";
-  else if (identityStatus === "CORROBORATED" && (websiteStatus === "AUTHENTIC" || websiteStatus === "AUTHORIZED_MIGRATION") && eligibility === "ELIGIBLE") {
+  } else if (reasons.some((r) => r.level === "YELLOW" && r.scope === "JOURNAL")) journalStatus = "YELLOW";
+  else if (identityStatus === "CORROBORATED" && eligibility === "ELIGIBLE") {
     journalStatus = "GREEN";
-    addAction("none_required");
+    if (destinationStatus === "GREEN") addAction("none_required");
   } else {
     // Pengaman: tanpa bukti lengkap tidak pernah HIJAU.
     journalStatus = "YELLOW";
     yellow("insufficient_evidence");
+    reasons[reasons.length - 1].scope = "JOURNAL";
   }
-  if (journalStatus === "YELLOW" && actions.length === 0) addAction("gather_more_evidence");
+  if ((journalStatus === "YELLOW" || destinationStatus === "YELLOW") && actions.length === 0) addAction("gather_more_evidence");
 
   return {
-    journalStatus, redCategory: journalStatus === "RED" ? redCategory : null, identityStatus, websiteStatus, indexingStatus,
+    journalStatus, destinationStatus, destinationHost, redCategory: journalStatus === "RED" ? redCategory : null, identityStatus, websiteStatus, indexingStatus,
     indexingBasis, indexingDataDate, policyEligibility: eligibility, predatoryAssessment, identityFraudBlock, needsEscalation,
     reasons, nextActions: actions,
   };

@@ -25,7 +25,9 @@ describe("CASE A — jurnal sah, terindeks aktif, situs otentik", () => {
     expect(d.journalStatus).toBe("YELLOW");
   });
   it("tanpa bukti identitas/situs tidak pernah HIJAU", () => {
-    expect(journal([ev.scopus("ACTIVE")]).journalStatus).toBe("YELLOW");
+    const j = journal([ev.scopus("ACTIVE")]);
+    expect(j.journalStatus).toBe("YELLOW");
+    expect(j.destinationStatus).toBe("YELLOW");
   });
 });
 
@@ -40,6 +42,7 @@ describe("CASE B — jurnal HIJAU, surat penerimaan belum terverifikasi → perm
     ]);
     const f = decideFinal(j, a, policy());
     expect(j.journalStatus).toBe("GREEN");
+    expect(j.destinationStatus).toBe("GREEN");
     expect(a.status).toBe("YELLOW");
     expect(a.unverifiedDocs).toEqual(["ACCEPTANCE_LETTER"]);
     expect(f.status).toBe("YELLOW");
@@ -48,11 +51,12 @@ describe("CASE B — jurnal HIJAU, surat penerimaan belum terverifikasi → perm
 });
 
 describe("CASE C — situs klon terkonfirmasi", () => {
-  it("situs MERAH & klirens diblokir; identitas asli tetap dicatat", () => {
+  it("TUJUAN MERAH, identitas jurnal tetap HIJAU (dimensi terpisah) & klirens diblokir", () => {
     const j = journal([ev.identityOk(), ev.scopus("ACTIVE"), ev.siteClone()], policy(), identity({ submittedWebsite: "https://jurnal-fiktif-online.example" }));
     expect(j.websiteStatus).toBe("UNSAFE_CONFIRMED_CLONE");
-    expect(j.journalStatus).toBe("RED");
-    expect(j.redCategory).toBe("CRITICAL_INTEGRITY");
+    expect(j.journalStatus).toBe("GREEN"); // jurnal yang sah
+    expect(j.destinationStatus).toBe("RED"); // tujuan persis yang diajukan
+    expect(j.redCategory).toBeNull();
     expect(j.identityFraudBlock).toBe(true);
     expect(j.identityStatus).toBe("CORROBORATED");
     expect(j.predatoryAssessment).not.toBe("CONFIRMED_VIOLATION"); // klon ≠ jurnal predator
@@ -61,21 +65,55 @@ describe("CASE C — situs klon terkonfirmasi", () => {
     expect(f.clearanceBlocked).toBe(true);
     expect(f.hardBlock).toBe(true);
     expect(f.overridableByHead).toBe(false);
+    expect(f.journalStatus).toBe("GREEN");
+    expect(f.destinationStatus).toBe("RED");
   });
   it("kecurigaan klon (belum dikonfirmasi) → KUNING; bukan RED otomatis", () => {
     const sus = { ...ev.siteClone(), status: "REPORTED_UNVERIFIED" as const, requiresHumanConfirmation: true, review: "PENDING" as const, data: { relation: "LOOKALIKE", submittedDomain: "jurnal-fiktif-online.example", officialDomains: ["jurnal-fiktif.example"] } };
     const j = journal([ev.identityOk(), ev.scopus("ACTIVE"), sus]);
     expect(j.websiteStatus).toBe("SUSPICIOUS");
-    expect(j.journalStatus).toBe("YELLOW");
+    expect(j.journalStatus).toBe("GREEN");
+    expect(j.destinationStatus).toBe("YELLOW");
     expect(j.identityFraudBlock).toBe(false);
   });
   it("peninjau mengonfirmasi kecurigaan → klon terkonfirmasi", () => {
     const sus = { ...ev.siteClone(), status: "REPORTED_UNVERIFIED" as const, requiresHumanConfirmation: true, review: "CONFIRMED" as const, data: { relation: "LOOKALIKE", submittedDomain: "x.example", officialDomains: ["jurnal-fiktif.example"] } };
-    expect(journal([ev.identityOk(), ev.scopus("ACTIVE"), sus]).journalStatus).toBe("RED");
+    const j = journal([ev.identityOk(), ev.scopus("ACTIVE"), sus]);
+    expect(j.destinationStatus).toBe("RED");
+    expect(j.journalStatus).toBe("GREEN");
   });
   it("kecurigaan ditolak peninjau tidak membuat HIJAU tanpa bukti kecocokan", () => {
     const sus = { ...ev.siteClone(), status: "REPORTED_UNVERIFIED" as const, requiresHumanConfirmation: true, review: "DISMISSED" as const, data: { relation: "LOOKALIKE" } };
-    expect(journal([ev.identityOk(), ev.scopus("ACTIVE"), sus]).journalStatus).toBe("YELLOW");
+    expect(journal([ev.identityOk(), ev.scopus("ACTIVE"), sus]).destinationStatus).toBe("YELLOW");
+  });
+});
+
+describe("Fase 1B — tujuan tidak terselesaikan bukan temuan penipuan", () => {
+  const unres = (relation: string) => ({ ...ev.siteClone(), status: "REPORTED_UNVERIFIED" as const, severity: "MEDIUM" as const, requiresHumanConfirmation: true, review: "PENDING" as const, data: { relation, submittedDomain: "sub.jurnal-fiktif.example", submittedHost: "sub.jurnal-fiktif.example", officialDomains: ["jurnal-fiktif.example"] } });
+  for (const r of ["SUBDOMAIN_UNRESOLVED", "REDIRECT_UNRESOLVED", "EXTERNAL_PLATFORM_UNRESOLVED", "DIFFERENT_DOMAIN"]) {
+    it(`${r} → tujuan KUNING (UNRESOLVED), jurnal tetap HIJAU, tanpa blokir keras`, () => {
+      const j = journal([ev.identityOk(), ev.scopus("ACTIVE"), unres(r)]);
+      expect(j.websiteStatus).toBe("UNRESOLVED");
+      expect(j.destinationStatus).toBe("YELLOW");
+      expect(j.journalStatus).toBe("GREEN");
+      expect(j.identityFraudBlock).toBe(false);
+      const f = decideFinal(j, admin("PRE_SUBMISSION"), policy());
+      expect(f.status).toBe("YELLOW");
+      expect(f.clearanceBlocked).toBe(false);
+    });
+  }
+  it("platform eksternal terverifikasi → tujuan HIJAU", () => {
+    const p = { ...ev.siteMatches(), data: { relation: "PLATFORM_VERIFIED", submittedHost: "sistem.platform.example" } };
+    const j = journal([ev.identityOk(), ev.scopus("ACTIVE"), p]);
+    expect(j.websiteStatus).toBe("VERIFIED_PLATFORM");
+    expect(j.destinationStatus).toBe("GREEN");
+    expect(j.journalStatus).toBe("GREEN");
+  });
+  it("jurnal HIJAU tidak menghapus tujuan MERAH pada decision yang sama", () => {
+    const j = journal([...greenSet().filter((e) => e.key !== "hijack.website"), ev.siteClone()]);
+    expect(j.journalStatus).toBe("GREEN");
+    expect(j.destinationStatus).toBe("RED");
+    expect(decideFinal(j, admin("PRE_SUBMISSION"), policy()).status).toBe("RED");
   });
 });
 
@@ -207,7 +245,8 @@ describe("CASE H — surat penerimaan valid untuk situs klon", () => {
     expect(f.clearanceBlocked).toBe(true);
     expect(f.hardBlock).toBe(true);
     expect(f.administrativeStatus).toBe("GREEN"); // dimensi tetap dilaporkan terpisah
-    expect(f.journalStatus).toBe("RED");
+    expect(f.journalStatus).toBe("GREEN");
+    expect(f.destinationStatus).toBe("RED");
     expect(checkApproval({ role: "HEAD", state: "IN_REVIEW", final: f, justification: "x".repeat(50) })).toMatchObject({ ok: false, error: "IDENTITY_FRAUD_BLOCK" });
   });
   it("RED administratif tidak berarti jurnal palsu", () => {

@@ -15,6 +15,7 @@ import { assertSafeUrl, isPrivateIp, UnsafeUrlError } from "@/lib/security/safeF
 import { extractFields } from "@/lib/engine/extract";
 import { isValidIssn } from "@/lib/engine/issn";
 import { parseJson } from "@/lib/engine/util";
+import { activeFindings } from "@/lib/services/destinationFindings";
 
 type U = { id: string; name: string; role: "STUDENT" | "REVIEWER" | "HEAD" | "ADMIN" };
 let admin: U, reviewer: U, head: U, student: U;
@@ -45,7 +46,7 @@ beforeAll(async () => {
 
 describe("registri & impor", () => {
   it("impor memulihkan ISSN tanpa tanda hubung/nol depan hanya bila checksum sah dan mencatat asal-usul", async () => {
-    const ds = await prisma.referenceDataset.findFirstOrThrow({ where: { kind: "SCOPUS_SOURCE_LIST" } });
+    const ds = await prisma.referenceDataset.findFirstOrThrow({ where: { kind: "SCOPUS_SOURCE_LIST", provenance: "fiktif uji" } });
     expect(ds.provenance).toBe("fiktif uji");
     expect(ds.sha256).toHaveLength(64);
     const r = await prisma.referenceRecord.findFirstOrThrow({ where: { sourceId: "111" } });
@@ -84,10 +85,12 @@ describe("Case C/H pada tingkat layanan — situs klon", () => {
     expect(ev.journal!.websiteStatus).toBe("UNSAFE_CONFIRMED_CLONE");
     expect(ev.final!.status).toBe("RED");
     expect(ev.final!.hardBlock).toBe(true);
-    // insiden klon permanen pada paspor jurnal walau penilaian berikutnya memakai situs resmi
-    await runInvestigation({ identity: { title: "Jurnal Aktif Uji (FIKTIF)", altTitles: [], issn: "9900-0016", subjects: [], claimedIndexing: [], submittedWebsite: "https://aktif-uji.example" }, actor: reviewer });
-    const jr = await prisma.journal.findUniqueOrThrow({ where: { id: app.journalId! } });
-    expect(parseJson<string[]>(jr.knownWarningsJson, []).some((w) => w.startsWith("clone_site:"))).toBe(true);
+    // temuan klon PERMANEN per host: tetap aktif walau penilaian berikutnya memakai situs resmi (jurnal HIJAU)
+    const authentic = await runInvestigation({ identity: { title: "Jurnal Aktif Uji (FIKTIF)", altTitles: [], issn: "9900-0016", subjects: [], claimedIndexing: [], submittedWebsite: "https://aktif-uji.example" }, actor: reviewer });
+    expect(authentic.decision.journalStatus).toBe("GREEN");
+    expect(authentic.decision.destinationStatus).toBe("GREEN");
+    const fnd = await activeFindings(app.journalId!);
+    expect(fnd.active.find((f) => f.host === "beda-total-uji.example" || f.host === "aktif-uji-online.example")?.status).toBe("CLONE_CONFIRMED");
     await expect(performReviewAction({ applicationId: app.id, actor: head, action: "APPROVE", rationale: "Mencoba override klon dengan justifikasi panjang." })).rejects.toThrow(/diblokir/);
     await expect(performReviewAction({ applicationId: app.id, actor: head, action: "APPROVE", rationale: "Mencoba override klon dengan justifikasi panjang." })).rejects.toBeInstanceOf(ActionError);
   });

@@ -29,7 +29,7 @@ export default async function Applications({ searchParams }: { searchParams: Pro
       </form>
       <Card><div className="overflow-x-auto"><table className="w-full">
         <thead><tr><th className="th">Ref.</th><th className="th">{L ? "Mahasiswa" : "Student"}</th><th className="th">{L ? "Naskah / Jurnal" : "Manuscript / Journal"}</th><th className="th">{L ? "Tahap" : "Stage"}</th>
-          <th className="th">{L ? "Jurnal" : "Journal"}</th><th className="th">{L ? "Administratif" : "Admin"}</th><th className="th">{L ? "Akhir" : "Final"}</th><th className="th">{L ? "Alur" : "Workflow"}</th></tr></thead>
+          <th className="th">{L ? "Jurnal" : "Journal"}</th><th className="th">{L ? "Tujuan" : "Destination"}</th><th className="th">{L ? "Administratif" : "Admin"}</th><th className="th">{L ? "Akhir" : "Final"}</th><th className="th">{L ? "Alur" : "Workflow"}</th></tr></thead>
         <tbody className="divide-y divide-slate-100">
           {apps.map((a, i) => { const e = evals[i]; return (
             <tr key={a.id} className="hover:bg-slate-50">
@@ -38,11 +38,12 @@ export default async function Applications({ searchParams }: { searchParams: Pro
               <td className="td max-w-xs"><div className="line-clamp-2 font-medium">{a.manuscriptTitle}</div><div className="text-xs text-slate-500">{a.journalName}</div></td>
               <td className="td text-xs">{t(`stage.${a.stage}`)}</td>
               <td className="td">{e.journal ? <StatusBadge status={e.journal.journalStatus} lang={lang} /> : "—"}</td>
+              <td className="td">{e.journal ? <StatusBadge status={e.journal.destinationStatus} lang={lang} /> : <span className="text-xs text-warn">{L ? "nilai ulang" : "reassess"}</span>}</td>
               <td className="td"><StatusBadge status={e.administrative.status} lang={lang} /></td>
               <td className="td">{e.final ? <StatusBadge status={e.final.status} lang={lang} /> : "—"}</td>
               <td className="td text-xs">{t(`wf.${a.workflow}`)}</td>
             </tr>); })}
-          {apps.length === 0 && <tr><td className="td text-slate-500" colSpan={8}>—</td></tr>}
+          {apps.length === 0 && <tr><td className="td text-slate-500" colSpan={9}>—</td></tr>}
         </tbody></table></div></Card>
     </>
   );

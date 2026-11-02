@@ -168,7 +168,7 @@ test("Journal Passport dan Riwayat Penilaian dapat dicari, ada jadwal validasi u
   await page.fill('input[name="q"]', "jurnal-riset-kesehatam");
   await page.getByRole("button", { name: "Cari" }).click();
   await expect(page.getByText("jurnal-riset-kesehatam.example")).toBeVisible();
-  await page.selectOption('select[name="status"]', "RED");
+  await page.selectOption('select[name="dest"]', "RED");
   await page.fill('input[name="q"]', "");
   await page.getByRole("button", { name: "Cari" }).click();
   await expect(page.getByText("klon/identitas palsu").first()).toBeVisible();

@@ -9,7 +9,8 @@ const PORT = 3111;
 const env = { ...process.env, SESSION_SECRET: "restart-check-secret-restart-check-secret-1234", INSECURE_COOKIES: "1", DISABLE_EXTERNAL_LOOKUPS: "1" };
 const prisma = new PrismaClient();
 const doc = await prisma.document.findFirstOrThrow({ where: { filename: { endsWith: ".pdf" } } });
-const before = { journals: await prisma.journal.count(), assessments: await prisma.assessment.count(), docs: await prisma.document.count(), audit: await prisma.auditLog.count() };
+const snap = async () => ({ users: await prisma.user.count(), journals: await prisma.journal.count(), assessments: await prisma.assessment.count(), docs: await prisma.document.count(), findings: await prisma.destinationFinding.count(), validationCases: await prisma.validationCase.count(), validationRuns: await prisma.validationRun.count() });
+const before = await snap();
 
 async function runServer() {
   const p = spawn("npx", ["next", "start", "-p", String(PORT)], { env, stdio: "ignore", detached: true });
@@ -39,6 +40,8 @@ async function check(label) {
 
 let s = await runServer(); await check("sebelum restart"); await stop(s);
 s = await runServer(); await check("setelah restart ");
-const after = { journals: await prisma.journal.count(), assessments: await prisma.assessment.count(), docs: await prisma.document.count(), audit: await prisma.auditLog.count() };
-console.log("jumlah baris sebelum:", JSON.stringify(before), "sesudah:", JSON.stringify(after), JSON.stringify(before) === JSON.stringify(after) ? "→ IDENTIK" : "→ BERBEDA");
+const after = await snap();
+const same = JSON.stringify(before) === JSON.stringify(after);
+console.log("jumlah baris sebelum:", JSON.stringify(before), "sesudah:", JSON.stringify(after), same ? "→ IDENTIK" : "→ BERBEDA");
+if (!same) process.exitCode = 1;
 await stop(s); await prisma.$disconnect();

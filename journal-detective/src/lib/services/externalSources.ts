@@ -14,7 +14,15 @@ export interface ExternalJournalInfo {
   crossref?: { found: boolean; title?: string; publisher?: string; issns: string[]; totalDois?: number; currentDois?: number; backfileDois?: number };
 }
 
-const DISABLED = () => process.env.DISABLE_EXTERNAL_LOOKUPS === "1" || process.env.NODE_ENV === "test";
+const DISABLED = () => process.env.DISABLE_EXTERNAL_LOOKUPS === "1";
+
+/** Pesan galat HTTP yang dapat dibedakan (batas laju, galat server, dsb.). */
+export function httpFailure(status: number, retryAfter?: string | null): string {
+  if (status === 429) return `dibatasi laju oleh layanan (HTTP 429${retryAfter ? `, Retry-After ${retryAfter}` : ""})`;
+  if (status === 403 || status === 401) return `akses ditolak (HTTP ${status})`;
+  if (status >= 500) return `galat server layanan (HTTP ${status})`;
+  return `HTTP ${status}`;
+}
 
 function unavailable(source: string, key: string, check: "METADATA", url: string, reason: string, state: "UNAVAILABLE" | "ERROR" = "UNAVAILABLE"): EvidenceRecord {
   return makeEvidence({
@@ -32,8 +40,10 @@ export async function lookupDoaj(issn: string | null, claimsDoaj: boolean): Prom
   if (DISABLED()) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, "pencarian eksternal dinonaktifkan")] };
   try {
     const r = await safeFetch(url, { timeoutMs: 8000, maxBytes: 400_000, allowPrivate: false });
-    if (!r.ok) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, `HTTP ${r.status}`, "ERROR")] };
-    const j = JSON.parse(r.text);
+    if (!r.ok) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, httpFailure(r.status, r.retryAfter), "ERROR")] };
+    let j: any;
+    try { j = JSON.parse(r.text); } catch { return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, "respons bukan JSON yang valid", "ERROR")] }; }
+    if (!j || !Array.isArray(j.results)) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, "bentuk respons tidak dikenali", "ERROR")] };
     const hit = j?.results?.[0];
     const now = new Date().toISOString();
     if (!hit) {
@@ -68,7 +78,7 @@ export async function lookupDoaj(issn: string | null, claimsDoaj: boolean): Prom
     }
     return { evidence: ev, info };
   } catch (e: any) {
-    return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.message ?? e).slice(0, 80), "ERROR")] };
+    return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e).slice(0, 100), "ERROR")] };
   }
 }
 
@@ -85,8 +95,10 @@ export async function lookupCrossref(issn: string | null, title: string): Promis
         explanation: "Tidak adanya registrasi DOI Crossref bukan bukti penipuan; tidak semua penerbit memakai Crossref.", severity: "INFO", strength: "WEAK", fingerprintSeed: `cr-nf|${n}`,
       })] };
     }
-    if (!r.ok) return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, `HTTP ${r.status}`, "ERROR")] };
-    const m = JSON.parse(r.text)?.message;
+    if (!r.ok) return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, httpFailure(r.status, r.retryAfter), "ERROR")] };
+    let m: any;
+    try { m = JSON.parse(r.text)?.message; } catch { return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, "respons bukan JSON yang valid", "ERROR")] }; }
+    if (!m || typeof m !== "object") return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, "bentuk respons tidak dikenali", "ERROR")] };
     const issns = (m?.ISSN ?? []).map((x: string) => normalizeIssn(x)).filter(Boolean) as string[];
     const info = { found: true, title: m?.title, publisher: m?.publisher, issns, totalDois: m?.counts?.["total-dois"], currentDois: m?.counts?.["current-dois"], backfileDois: m?.counts?.["backfile-dois"] };
     const sim = m?.title ? titleSimilarity(m.title, title) : 0;
@@ -104,6 +116,6 @@ export async function lookupCrossref(issn: string | null, title: string): Promis
     }
     return { evidence: ev, info };
   } catch (e: any) {
-    return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.message ?? e).slice(0, 80), "ERROR")] };
+    return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e).slice(0, 100), "ERROR")] };
   }
 }

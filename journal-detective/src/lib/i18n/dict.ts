@@ -10,7 +10,7 @@ export const id: Dict = {
   "app.advisory": "Rekomendasi bersifat penasihat. Hanya pejabat manusia berwenang yang dapat menerbitkan persetujuan institusional.",
   "lang.switch": "English",
 
-  "nav.dashboard": "Ikhtisar", "nav.investigate": "Investigasi Jurnal Baru", "nav.journals": "Journal Passport", "nav.assessments": "Riwayat Penilaian", "nav.applications": "Permohonan Mahasiswa",
+  "nav.dashboard": "Ikhtisar", "nav.investigate": "Investigasi Jurnal Baru", "nav.journals": "Journal Passport", "nav.assessments": "Riwayat Penilaian", "nav.validation": "Validasi Dunia Nyata", "nav.applications": "Permohonan Mahasiswa",
   "nav.evidence": "Tinjauan Bukti", "nav.approvals": "Persetujuan Tertunda", "nav.letters": "Surat Klirens", "nav.analytics": "Analitik & Laporan",
   "nav.sources": "Sumber Rujukan", "nav.settings": "Pengaturan & Kebijakan", "nav.logout": "Keluar",
 
@@ -47,7 +47,7 @@ export const id: Dict = {
   "wf.PENDING_REVIEW": "Menunggu tinjauan", "wf.IN_REVIEW": "Sedang ditinjau", "wf.NEEDS_EVIDENCE": "Butuh bukti tambahan", "wf.RETURNED": "Dikembalikan untuk revisi", "wf.ESCALATED": "Dieskalasi",
   "wf.RECOMMENDED": "Direkomendasikan — menunggu pejabat", "wf.APPROVED": "Disetujui", "wf.REJECTED": "Ditolak",
   "act.START_REVIEW": "Mulai tinjauan", "act.APPROVE": "Setujui", "act.REQUEST_EVIDENCE": "Minta bukti tambahan", "act.RETURN_FOR_REVISION": "Kembalikan untuk revisi", "act.REJECT": "Tolak permohonan",
-  "act.REASSESS": "Nilai ulang jurnal", "act.ESCALATE": "Eskalasi untuk investigasi", "act.RECOMMEND_APPROVE": "Rekomendasikan setuju", "act.RECOMMEND_REJECT": "Rekomendasikan tolak",
+  "act.REASSESS": "Nilai ulang jurnal", "act.ESCALATE": "Eskalasi untuk investigasi", "act.RECOMMEND_APPROVE": "Rekomendasikan setuju", "act.RECOMMEND_REJECT": "Rekomendasikan tolak", "act.RECOMMENDATION_INVALIDATED": "Rekomendasi dibatalkan (jurnal/tujuan berubah)",
   "role.STUDENT": "Mahasiswa", "role.REVIEWER": "Peninjau", "role.HEAD": "Kepala Unit Publikasi", "role.ADMIN": "Administrator",
   "letter.PRE_SUBMISSION": "Klirens pra-pengiriman", "letter.POST_ACCEPTANCE_PAYMENT": "Klirens pasca-penerimaan (pembayaran)", "letter.DRAFT": "DRAF", "letter.ISSUED": "DITERBITKAN", "letter.REVOKED": "DICABUT",
 
@@ -137,6 +137,15 @@ export const id: Dict = {
   "final.final_journal_yellow": "Status jurnal masih perlu investigasi/bukti.",
   "final.final_admin_yellow": "Bukti tahap permohonan masih perlu dilengkapi/diverifikasi.",
   "final.final_all_green": "Jurnal terverifikasi dan bukti tahap memuaskan.",
+
+  "dim.destination": "Status Tujuan Pengiriman (situs persis yang diajukan)",
+  "web.UNRESOLVED": "Belum terselesaikan (perlu verifikasi)", "web.VERIFIED_PLATFORM": "Platform pengiriman eksternal terverifikasi",
+  "reason.website_unresolved": "Tujuan {domain} berbeda dari host resmi yang terverifikasi ({kind}: subdomain, pengalihan, migrasi, atau platform eksternal yang BELUM diverifikasi). Ini bukan temuan penipuan; tujuan belum dapat dipakai sampai diverifikasi.",
+  "reason.website_verified_platform": "Tujuan pengiriman adalah platform eksternal yang telah diverifikasi sah dengan bukti.",
+  "action.verify_destination": "Verifikasi tujuan persis (pernyataan penerbit/halaman resmi), lalu catat temuan tujuan: migrasi sah, platform eksternal, atau otentik.",
+  "final.final_destination_yellow": "Tujuan pengiriman yang diajukan belum terverifikasi/terselesaikan.",
+  "reason.demo_evidence_excluded": "{n} bukti berasal dari data DEMONSTRASI/fiktif dan TIDAK dihitung pada mode PILOT.",
+  "action.replace_demo_evidence": "Ganti dengan bukti nyata (impor sah atau bukti manual bersumber) — bukti demonstrasi tidak dapat memenuhi syarat klirens PILOT.",
 };
 
 export const en: Dict = {
@@ -146,7 +155,7 @@ export const en: Dict = {
   "app.advisory": "Recommendations are advisory. Only authorized human officers can issue institutional approval.",
   "lang.switch": "Bahasa Indonesia",
 
-  "nav.dashboard": "Overview", "nav.investigate": "New Journal Investigation", "nav.journals": "Journal Passport", "nav.assessments": "Assessment History", "nav.applications": "Student Applications",
+  "nav.dashboard": "Overview", "nav.investigate": "New Journal Investigation", "nav.journals": "Journal Passport", "nav.assessments": "Assessment History", "nav.validation": "Real-World Validation", "nav.applications": "Student Applications",
   "nav.evidence": "Evidence Review", "nav.approvals": "Pending Approvals", "nav.letters": "Clearance Letters", "nav.analytics": "Analytics & Reports",
   "nav.sources": "Reference Sources", "nav.settings": "Settings & Policy Rules", "nav.logout": "Sign out",
 
@@ -183,7 +192,7 @@ export const en: Dict = {
   "wf.PENDING_REVIEW": "Pending review", "wf.IN_REVIEW": "In review", "wf.NEEDS_EVIDENCE": "Additional evidence needed", "wf.RETURNED": "Returned for revision", "wf.ESCALATED": "Escalated",
   "wf.RECOMMENDED": "Recommended — awaiting officer", "wf.APPROVED": "Approved", "wf.REJECTED": "Rejected",
   "act.START_REVIEW": "Start review", "act.APPROVE": "Approve", "act.REQUEST_EVIDENCE": "Request additional evidence", "act.RETURN_FOR_REVISION": "Return for revision", "act.REJECT": "Reject application",
-  "act.REASSESS": "Reassess journal", "act.ESCALATE": "Escalate for investigation", "act.RECOMMEND_APPROVE": "Recommend approval", "act.RECOMMEND_REJECT": "Recommend rejection",
+  "act.REASSESS": "Reassess journal", "act.ESCALATE": "Escalate for investigation", "act.RECOMMEND_APPROVE": "Recommend approval", "act.RECOMMEND_REJECT": "Recommend rejection", "act.RECOMMENDATION_INVALIDATED": "Recommendation invalidated (journal/destination changed)",
   "role.STUDENT": "Student", "role.REVIEWER": "Reviewer", "role.HEAD": "Head of Publication Unit", "role.ADMIN": "Administrator",
   "letter.PRE_SUBMISSION": "Pre-submission clearance", "letter.POST_ACCEPTANCE_PAYMENT": "Post-acceptance clearance (payment)", "letter.DRAFT": "DRAFT", "letter.ISSUED": "ISSUED", "letter.REVOKED": "REVOKED",
 
@@ -273,4 +282,13 @@ export const en: Dict = {
   "final.final_journal_yellow": "Journal status still needs investigation/evidence.",
   "final.final_admin_yellow": "Application-stage evidence still needs to be completed/verified.",
   "final.final_all_green": "Journal verified and stage evidence satisfactory.",
+
+  "dim.destination": "Submission Destination Status (exact website submitted)",
+  "web.UNRESOLVED": "Unresolved (needs verification)", "web.VERIFIED_PLATFORM": "Verified external submission platform",
+  "reason.website_unresolved": "Destination {domain} differs from the verified official host ({kind}: subdomain, redirect, migration, or external platform NOT yet verified). This is not a fraud finding; the destination cannot be used until verified.",
+  "reason.website_verified_platform": "The submission destination is an external platform verified as legitimate with evidence.",
+  "action.verify_destination": "Verify the exact destination (publisher statement/official page), then record a destination finding: authorized migration, external platform, or authentic.",
+  "final.final_destination_yellow": "The submitted destination is not yet verified/resolved.",
+  "reason.demo_evidence_excluded": "{n} evidence items come from DEMONSTRATION/fictional data and are NOT counted in PILOT mode.",
+  "action.replace_demo_evidence": "Replace with real evidence (lawful import or sourced manual evidence) — demonstration evidence cannot satisfy PILOT clearance requirements.",
 };

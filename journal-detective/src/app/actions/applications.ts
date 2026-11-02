@@ -1,7 +1,7 @@
 "use server";
 import { prisma } from "@/lib/db";
 import { requireUser, requireRole } from "@/lib/auth/session";
-import { applicationSchema, createApplication, setChecklist, updateStage, addEvent, resolveFlag, refreshFlags } from "@/lib/services/applications";
+import { applicationSchema, createApplication, setChecklist, updateStage, addEvent, resolveFlag, refreshFlags, changeApplicationJournal } from "@/lib/services/applications";
 import { uploadDocument, saveDocumentFields, purgeApplicationDocuments } from "@/lib/services/documents";
 import { performReviewAction, ActionError } from "@/lib/services/approval";
 import { STAGES, DOC_TYPES, type DocType, type Stage } from "@/lib/engine/types";
@@ -117,4 +117,17 @@ export async function purgeDocsAction(form: FormData) {
   const id = str(form, "applicationId");
   try { await purgeApplicationDocuments(id, user, str(form, "reason") || "retensi"); } catch (e) { go(`/applications/${id}`, { error: errMsg(e) }); }
   go(`/applications/${id}`, { notice: "Berkas dokumen dihapus permanen (jejak audit dipertahankan)." });
+}
+
+export async function changeJournalAction(form: FormData) {
+  const user = await requireUser();
+  const id = str(form, "applicationId");
+  try {
+    await assertAccess(id, user);
+    const r = await changeApplicationJournal(id, {
+      journalName: str(form, "journalName"), journalIssn: str(form, "journalIssn") || null, journalPublisher: str(form, "journalPublisher") || null,
+      journalUrl: str(form, "journalUrl"), claimedIndexing: str(form, "claimedIndexing") || null, claimedQuartile: str(form, "claimedQuartile") || null,
+    }, user);
+    go(`/applications/${id}`, { notice: r.changed ? "Jurnal/tujuan diubah: rekomendasi lama dibatalkan dan penilaian ulang dijalankan." : "Tidak ada perubahan pada jurnal/tujuan." });
+  } catch (e) { go(`/applications/${id}`, { error: errMsg(e) }); }
 }

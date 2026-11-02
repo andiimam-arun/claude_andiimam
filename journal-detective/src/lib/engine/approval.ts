@@ -59,15 +59,16 @@ export function nextState(action: ReviewActionType, from: WorkflowState): Workfl
 
 export interface ApprovalCheck {
   ok: boolean;
-  error?: "ROLE_NOT_ALLOWED" | "ALREADY_FINAL" | "IDENTITY_FRAUD_BLOCK" | "BLOCKED_NOT_OVERRIDABLE" | "OVERRIDE_JUSTIFICATION_REQUIRED" | "NO_DECISION";
+  error?: "ROLE_NOT_ALLOWED" | "POLICY_NOT_CONFIGURED" | "ALREADY_FINAL" | "IDENTITY_FRAUD_BLOCK" | "BLOCKED_NOT_OVERRIDABLE" | "OVERRIDE_JUSTIFICATION_REQUIRED" | "NO_DECISION";
   isOverride: boolean;
 }
 
 export const MIN_JUSTIFICATION = 20;
 
 /** Aturan persetujuan institusional. Pemblokiran identitas palsu terkonfirmasi TIDAK dapat di-override siapa pun. */
-export function checkApproval(opts: { role: Role; state: WorkflowState; final: FinalDecision | null; justification?: string }): ApprovalCheck {
+export function checkApproval(opts: { role: Role; state: WorkflowState; final: FinalDecision | null; justification?: string; officialPolicyConfigured?: boolean }): ApprovalCheck {
   if (!canPerform(opts.role, "APPROVE")) return { ok: false, error: "ROLE_NOT_ALLOWED", isOverride: false };
+  if (opts.officialPolicyConfigured === false) return { ok: false, error: "POLICY_NOT_CONFIGURED", isOverride: false };
   if (TERMINAL_STATES.includes(opts.state)) return { ok: false, error: "ALREADY_FINAL", isOverride: false };
   if (!opts.final) return { ok: false, error: "NO_DECISION", isOverride: false };
   if (opts.final.hardBlock) return { ok: false, error: "IDENTITY_FRAUD_BLOCK", isOverride: false };
@@ -81,15 +82,16 @@ export function checkApproval(opts: { role: Role; state: WorkflowState; final: F
 
 export interface IssueCheck {
   ok: boolean;
-  error?: "ROLE_NOT_ALLOWED" | "NOT_APPROVED" | "BLOCKED" | "NUMBER_REQUIRED";
+  error?: "ROLE_NOT_ALLOWED" | "POLICY_NOT_CONFIGURED" | "NOT_APPROVED" | "BLOCKED" | "NUMBER_REQUIRED";
 }
 
 /**
  * Surat resmi hanya boleh diterbitkan oleh Kepala Unit setelah persetujuan manusia.
  * Administrator TIDAK dapat menerbitkan surat resmi; ia hanya dapat membuat draf berwatermark.
  */
-export function checkOfficialIssuance(opts: { role: Role; state: WorkflowState; final: FinalDecision | null; officialNumber?: string | null; isOverrideApproved?: boolean }): IssueCheck {
+export function checkOfficialIssuance(opts: { role: Role; state: WorkflowState; final: FinalDecision | null; officialNumber?: string | null; isOverrideApproved?: boolean; officialPolicyConfigured?: boolean }): IssueCheck {
   if (opts.role !== "HEAD") return { ok: false, error: "ROLE_NOT_ALLOWED" };
+  if (opts.officialPolicyConfigured === false) return { ok: false, error: "POLICY_NOT_CONFIGURED" };
   if (opts.state !== "APPROVED") return { ok: false, error: "NOT_APPROVED" };
   if (opts.final?.hardBlock) return { ok: false, error: "BLOCKED" };
   if (opts.final?.clearanceBlocked && !opts.isOverrideApproved) return { ok: false, error: "BLOCKED" };

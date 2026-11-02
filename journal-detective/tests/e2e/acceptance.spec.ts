@@ -48,17 +48,19 @@ test.describe.serial("audit penerimaan Fase 1 — alur lengkap", () => {
     const invUrl = page.url().split("?")[0];
 
     // VERIFIED tanpa sumber ditolak
-    await page.selectOption('select[name="kind"]', "scopus.coverage");
-    await page.fill('input[name="finding"]', "Aktif");
-    await page.fill('input[name="sourceName"]', "Scopus Sources");
-    await page.getByRole("button", { name: "Catat bukti manual" }).click();
+    const mf = () => page.locator('form:has(select[name="kind"])');
+    await mf().locator('select[name="kind"]').selectOption("scopus.coverage");
+    await mf().locator('input[name="finding"]').fill("Aktif");
+    await mf().locator('input[name="sourceName"]').fill("Scopus Sources");
+    await mf().getByRole("button", { name: "Catat bukti manual" }).click();
     await expect(page.getByText(/wajib mencantumkan URL sumber/)).toBeVisible();
 
     const add = async (kind: string, fields: Record<string, string>) => {
       await page.goto(invUrl);
-      await page.selectOption('select[name="kind"]', kind);
-      for (const [k, v] of Object.entries(fields)) await page.fill(`[name="${k}"]`, v);
-      await page.getByRole("button", { name: "Catat bukti manual" }).click();
+      const mf = page.locator('form:has(select[name="kind"])');
+      await mf.locator('select[name="kind"]').selectOption(kind);
+      for (const [k, v] of Object.entries(fields)) await mf.locator(`[name="${k}"]`).fill(v);
+      await mf.getByRole("button", { name: "Catat bukti manual" }).click();
       await expect(page.getByText("Bukti manual dicatat")).toBeVisible();
     };
     await add("scopus.coverage", { finding: "Aktif menurut Scopus Sources (cek manual fiktif)", sourceName: "Scopus Sources (simulasi uji FIKTIF)", sourceUrl: "https://www.scopus.com/sources", sourceDataDate: new Date().toISOString().slice(0, 10) });

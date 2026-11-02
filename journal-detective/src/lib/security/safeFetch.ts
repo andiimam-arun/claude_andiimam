@@ -62,6 +62,7 @@ export interface SafeFetchResult {
   contentType: string;
   text: string;
   truncated: boolean;
+  retryAfter?: string | null;
 }
 
 const ALLOWED_TYPES = ["text/html", "application/json", "text/plain", "application/xhtml+xml", "application/xml", "text/xml"];
@@ -134,7 +135,7 @@ export async function safeFetch(
         }
         chunks.push(value);
       }
-      return { ok: res.ok, status: res.status, finalUrl: url.toString(), contentType: ct, text: Buffer.concat(chunks).toString("utf8"), truncated };
+      return { ok: res.ok, status: res.status, finalUrl: url.toString(), contentType: ct, text: Buffer.concat(chunks).toString("utf8"), truncated, retryAfter: res.headers.get("retry-after") };
     }
     throw new UnsafeUrlError("Terlalu banyak pengalihan");
   } finally {
