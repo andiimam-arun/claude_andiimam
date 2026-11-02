@@ -22,6 +22,19 @@ for r in pub:
     if len(k) >= 12:
         arts.setdefault(k, set()).add(r["trg_slug"])
 ART_PER = C.Counter(s for v in arts.values() for s in v)
+# Kualitas jurnal (opsional): hasil scripts/trg_kuartil_trg.py. Dasar: artikel 2020 ke atas, kuartil SJR terbaik jurnal.
+DARI = 2020
+try:
+    KQ = {(r["trg_slug"], norm(r["judul"])): r for r in R("artikel_kuartil")}
+    MET = {r["kunci_judul"]: r for r in R("artikel_metrik")}
+    KQ_TRG = {r["slug"]: r for r in R("trg_kuartil")}
+except FileNotFoundError:
+    KQ, MET, KQ_TRG = {}, {}, {}
+YR = {}
+for r in pub:
+    k = norm(r["judul"]); m = MET.get(k)
+    y = m["tahun"] if m and str(m["tahun"]).isdigit() else r["tahun"]
+    if k not in YR and str(y).isdigit(): YR[k] = int(y)
 INA = re.compile(r"indonesia|universitas|institut\b|politeknik|unhas|hasanuddin|makassar|brin|bogor|bandung|jakarta|surabaya|yogya|manado|sulawesi|kementerian|stikes|uin\b|ipb|itb|ugm|unm\b|unpad|undip|unair|bone|gowa|palu|kendari|ambon|mataram|papua|aceh|medan|padang|riau|pontianak|banjarmasin|malang|semarang|udayana", re.I)
 
 # Kandidat: aturan kata UTUH pada nama TRG (kelompok buatan analis; satu TRG boleh masuk beberapa kandidat; daftar anggota lengkap ada di lembar masing-masing)
@@ -65,10 +78,12 @@ def main():
     ws = wb.active; ws.title = "Ringkasan"
     ws["A1"] = "Potensi konsorsium dan institut dari TRG Unhas (penyaringan awal)"; ws["A1"].font = Font(name="Arial", size=14, bold=True)
     ws["A2"] = ("Berbasis data publik TRG (ukuran, keterhubungan, mitra luar). Bukan keputusan kelayakan: pendanaan, tata kelola, komitmen ketua, "
-                "dan status hukum tidak ada di data. Satu TRG dapat masuk lebih dari satu kandidat.")
-    ws["A2"].font = Font(name="Arial", size=9, italic=True); ws.merge_cells("A2:L2"); ws["A2"].alignment = Alignment(wrap_text=True)
+                "dan status hukum tidak ada di data. Satu TRG dapat masuk lebih dari satu kandidat. Kolom kualitas jurnal: artikel 2020 ke atas, kuartil SJR terbaik jurnal "
+                "(berkas SJR 2025), dihitung hanya dari artikel yang tercocok ke OpenAlex, jadi merupakan batas bawah.")
+    ws["A2"].font = Font(name="Arial", size=9, italic=True); ws.merge_cells("A2:P2"); ws["A2"].alignment = Alignment(wrap_text=True)
     head = ["Kandidat", "Bentuk yang disarankan", "Pusat Unggulan GloRI terkait", "Jumlah TRG", "Jumlah fakultas", "Peneliti (non-mahasiswa, unik)",
-            "Ketua TRG terbaca", "Artikel unik", "Peneliti ber-ID (%)", "TRG saling terhubung (%)", "Mitra luar negeri (institusi)", "Catatan"]
+            "Ketua TRG terbaca", "Artikel unik", "Peneliti ber-ID (%)", "TRG saling terhubung (%)", "Mitra luar negeri (institusi)",
+            "Artikel Q1+Q2 sejak 2020 (unik)", "Artikel bertindeks SJR sejak 2020", "Q1+Q2 dari bertindeks (%)", "Artikel sejak 2020 tercocok ke OpenAlex (%)", "Catatan"]
     for j, h in enumerate(head, 1):
         c = ws.cell(row=4, column=j, value=h); c.font, c.fill, c.alignment = HF, HFILL, Alignment(wrap_text=True, vertical="center")
     detail = []
@@ -83,20 +98,25 @@ def main():
         foreign = {re.sub(r"\s+", " ", p["afiliasi"]).strip().lower()[:60] for p in pen if p["trg_slug"] in S and p["peran"].lower().startswith("external")
                    and p["afiliasi"].strip() and not INA.search(p["afiliasi"]) and len(p["afiliasi"]) < 90}
         sheet = re.sub(r"[^A-Za-z0-9 ]", "", name)[:28].strip()
+        rec = {k for k in art if YR.get(k, 0) >= DARI}                                   # artikel unik kandidat, 2020+
+        idx = {k for k in rec if any((s_, k) in KQ for s_ in S)}                           # bertindeks SJR
+        q12 = {k for k in idx if any(KQ[(s_, k)]["kuartil"] in ("Q1", "Q2") for s_ in S if (s_, k) in KQ)}
+        cov = sum(1 for k in rec if k in MET)
         vals = [name, form, centre, f"=COUNTA('{sheet}'!A5:A200)", len(fak), len(ppl), len(leads), len(art), round(idp / max(1, len(ppl)), 3),
-                round(len(linked) / max(1, len(slugs)), 3), len(foreign), note]
+                round(len(linked) / max(1, len(slugs)), 3), len(foreign),
+                len(q12) if KQ else "n/a", len(idx) if KQ else "n/a", round(len(q12) / len(idx), 3) if idx else "", round(cov / len(rec), 3) if rec else "", note]
         for j, v in enumerate(vals, 1):
             c = ws.cell(row=i, column=j, value=v); c.font = NF; c.alignment = Alignment(wrap_text=True, vertical="top")
-        ws.cell(row=i, column=9).number_format = "0%"; ws.cell(row=i, column=10).number_format = "0%"
+        for cc in (9, 10, 14, 15): ws.cell(row=i, column=cc).number_format = "0%"
         detail.append((sheet, name, slugs))
-    for j, w in enumerate([36, 26, 30, 10, 10, 16, 12, 12, 12, 14, 14, 70], 1):
+    for j, w in enumerate([36, 26, 30, 10, 10, 16, 12, 12, 12, 14, 14, 14, 14, 14, 16, 70], 1):
         ws.column_dimensions[get_column_letter(j)].width = w
     ws.row_dimensions[4].height = 44; ws.freeze_panes = "B5"
     for sheet, name, slugs in detail:
         w = wb.create_sheet(sheet)
         w["A1"] = name; w["A1"].font = Font(name="Arial", size=12, bold=True)
         w["A2"] = "TRG anggota kandidat (diurutkan menurut artikel unik)"; w["A2"].font = Font(name="Arial", size=9, italic=True)
-        h = ["TRG", "Fakultas", "Ketua (yang terbaca)", "Peneliti (non-mahasiswa)", "Artikel unik", "Slug"]
+        h = ["TRG", "Fakultas", "Ketua (yang terbaca)", "Peneliti (non-mahasiswa)", "Artikel unik", "Slug", "Q1+Q2 sejak 2020", "Bertindeks SJR sejak 2020"]
         for j, x in enumerate(h, 1):
             c = w.cell(row=4, column=j, value=x); c.font, c.fill = HF, HFILL
         lead = {}
@@ -105,10 +125,12 @@ def main():
                 lead.setdefault(s, []).append(p["nama"])
         for r, s in enumerate(slugs, 5):
             n = sum(1 for p in unik if roles(p) != {"student"} and s in p["trg_slugs"].split(";"))
-            vals = [trg[s]["nama"], trg[s]["fakultas"].replace("Faculty of ", ""), " | ".join(lead.get(s, [])) or "(belum terbaca)", n, ART_PER[s], s]
+            kt = KQ_TRG.get(s, {})
+            vals = [trg[s]["nama"], trg[s]["fakultas"].replace("Faculty of ", ""), " | ".join(lead.get(s, [])) or "(belum terbaca)", n, ART_PER[s], s,
+                    int(kt.get(f"sejak{DARI}_Q12", 0)) if kt else "n/a", int(kt.get(f"sejak{DARI}_bertindeks", 0)) if kt else "n/a"]
             for j, v in enumerate(vals, 1):
                 w.cell(row=r, column=j, value=v).font = NF
-        for j, wd in enumerate([52, 30, 44, 14, 12, 22], 1):
+        for j, wd in enumerate([52, 30, 44, 14, 12, 22, 16, 18], 1):
             w.column_dimensions[get_column_letter(j)].width = wd
         w.freeze_panes = "A5"
     # pasangan TRG yang paling banyak berbagi peneliti (kolaborasi nyata dari bawah)
