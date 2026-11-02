@@ -16,6 +16,7 @@ import { lookupScopusApi } from "./scopusApi";
 import { buildHijackEvidence, type HijackRef } from "./hijack";
 import { activeFindings, recordFinding, type FindingStatus } from "./destinationFindings";
 import { getMode, isPilot } from "../mode";
+import { lookupScopusImport, scopusImportEvidence } from "./scopusReference";
 
 export function rowToEvidence(r: Evidence, review?: "CONFIRMED" | "DISMISSED" | null): EvidenceRecord {
   const base = r.requiresHuman ? "PENDING" : "NOT_REQUIRED";
@@ -70,7 +71,14 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
   }
 
   // --- Scopus ---
-  const sc = await lookupReference("SCOPUS_SOURCE_LIST", { issn, eissn, sourceId: identity.scopusSourceId, title: identity.title });
+  // Database referensi Scopus (impor workbook) lebih dahulu. Impor generik lama (mis. data demo fiktif) tetap dipakai hanya bila
+  // workbook tidak memuat jurnal tersebut tetapi dataset lama memuatnya; selain itu "tidak ditemukan" berasal dari impor workbook.
+  const si = await lookupScopusImport({ issn, eissn, sourceId: identity.scopusSourceId, title: identity.title });
+  const emptyLegacy = { datasets: [] as any[], matches: [] as any[], matchedBy: null as null | "IDENTIFIER" | "TITLE" };
+  const legacy = si.import && si.matches.length ? emptyLegacy : await lookupReference("SCOPUS_SOURCE_LIST", { issn, eissn, sourceId: identity.scopusSourceId, title: identity.title });
+  const scopusHandled = !!si.import && (si.matches.length > 0 || legacy.matches.length === 0);
+  if (scopusHandled) out.push(...scopusImportEvidence(identity, si));
+  const sc = scopusHandled ? emptyLegacy : legacy;
   const scApi = await lookupScopusApi(issn ?? eissn);
   if (scApi) out.push(scApi);
   // Kebijakan impor: impor TERBARU (tanggal pengamatan) menggantikan impor lama untuk identifier yang sama; impor lama dipertahankan sebagai riwayat (bukan konflik).
@@ -106,7 +114,7 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
         fingerprintSeed: `scopus-import|${m.id}`,
       }));
     }
-  } else if (!scApi) {
+  } else if (!scApi && !scopusHandled) {
     if (sc.datasets.length) {
       const ds = [...sc.datasets].sort((a, b) => (b.sourceDate ?? b.importedAt).getTime() - (a.sourceDate ?? a.importedAt).getTime())[0];
       out.push(makeEvidence({

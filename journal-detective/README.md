@@ -16,6 +16,9 @@ Detail aturan: [docs/ASSESSMENT_POLICY.md](docs/ASSESSMENT_POLICY.md).
 ## Lingkungan DEMO dan PILOT
 `APP_MODE=DEMO` (bawaan; data fiktif, `npm run db:seed`) dan `APP_MODE=PILOT` (data nyata, tanpa data/akun demo) memakai **basis data dan folder unggahan terpisah** dan saling menolak berjalan di atas data yang lain. Banner lingkungan selalu tampil. Inisialisasi pilot yang aman: `npm run pilot:init` (menolak basis data tidak kosong). Panduan lengkap: **[docs/PILOT_RUNBOOK.md](docs/PILOT_RUNBOOK.md)**. Validasi dunia nyata: [docs/REAL_WORLD_VALIDATION.md](docs/REAL_WORLD_VALIDATION.md) (**belum dilakukan**). Laporan Fase 1B: [docs/PHASE_1B_REPORT.md](docs/PHASE_1B_REPORT.md).
 
+## Database Scopus (impor workbook)
+Impor workbook Scopus Source List sekali (menu **Database Scopus**), lalu cari jurnal dengan nama/ISSN dan periksa tanpa memasukkan bukti manual. Panduan, perilaku, dan batasan: [docs/SCOPUS_IMPORT.md](docs/SCOPUS_IMPORT.md).
+
 ## Persyaratan
 Node.js ≥ 20 (diuji pada 22), npm. Basis data bawaan SQLite (tanpa server). Produksi: PostgreSQL (lihat [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)).
 

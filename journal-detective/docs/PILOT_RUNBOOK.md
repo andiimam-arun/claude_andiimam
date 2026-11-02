@@ -28,6 +28,7 @@ DEMO tetap tersedia terpisah: `APP_MODE=DEMO` dengan `.env` DEMO (`npm run db:re
 Tidak ada aturan, nomor surat, tanda tangan, atau persetujuan yang dikarang sistem.
 
 ## 3. Impor Scopus Source List yang sah
+**Disarankan:** menu **Database Scopus** (workbook asli 3 sheet, pratinjau sebelum simpan) — lihat `docs/SCOPUS_IMPORT.md`. Bagian di bawah menjelaskan impor generik CSV/XLSX lama.
 Tanpa kunci API. Gunakan hanya berkas yang Anda peroleh secara sah sesuai lisensi (mis. unduhan resmi institusi).
 **Sumber Rujukan → Impor dataset** → jenis `SCOPUS_SOURCE_LIST`, berkas CSV/XLSX, label versi, **tanggal pengamatan data (wajib)**, asal-usul & dasar lisensi, centang pernyataan sah.
 Validasi otomatis menolak: tanpa kolom judul/identifier/status, tanpa tanggal pengamatan, tanggal masa depan, ISSN rusak > 5%. Peringatan dicatat pada dataset. Impor lama dipertahankan; **impor terbaru menggantikan** yang lama untuk identifier yang sama (riwayat tampil sebagai bukti informasi). Bukti dari impor selalu berlabel *Data impor (historis)* dengan tanggal data, dan kedaluwarsa menurut kebijakan (umur maksimum bukti).

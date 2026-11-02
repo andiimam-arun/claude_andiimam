@@ -26,7 +26,7 @@ Empat keadaan dibedakan: **Diimplementasikan** (kode ada) · **Teruji dengan fix
 
 | Sumber | Diimplementasikan | Fixture terkendali | Terbukti hidup | Catatan lingkungan pembangunan |
 |---|---|---|---|---|
-| Scopus Source List (impor CSV/XLSX, tanpa kunci API) | Ya | Ya: CSV, XLSX, struktur/identifier/tanggal ditolak, impor lama vs baru, usang | Tidak berlaku (berkas) — **belum ada berkas Scopus nyata yang diimpor** | Operator mengimpor berkas sah (runbook §3) |
+| Scopus Source List — **workbook 3 sheet** (Database Scopus, `docs/SCOPUS_IMPORT.md`) dan impor generik CSV/XLSX (tanpa kunci API) | Ya | Ya: workbook sintetis (header baris 1/2/3, kolom dibalik, nol depan/X, Discontinued, Accepted, konflik, duplikat, pratinjau/konfirmasi/batal, riwayat), CSV/XLSX generik, impor lama vs baru, usang; **belum diuji pada workbook asli** | Tidak berlaku (berkas) — **belum ada berkas Scopus nyata yang diimpor** | Operator mengimpor berkas sah (runbook §3) |
 | Scopus Serial Title API | Ya (kode) | **Tidak** | **Tidak** | Tanpa kunci; tidak dibutuhkan pilot |
 | DOAJ API | Ya | Ya: sukses, kosong, timeout, 429, 403, 5xx, respons rusak, bentuk tak dikenal, dinonaktifkan | **Tidak** | Egress menolak `doaj.org` (CONNECT 403); `pilot:smoke` mencatat FAILED |
 | Crossref REST API | Ya | Ya (sama) | **Tidak** | Egress menolak `api.crossref.org` (CONNECT 403) |

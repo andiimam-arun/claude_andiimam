@@ -1,7 +1,7 @@
 import type { Role } from "../engine/approval";
 
 export type NavKey =
-  | "dashboard" | "investigate" | "journals" | "assessments" | "validation" | "applications" | "evidence" | "approvals" | "letters" | "analytics" | "sources" | "settings";
+  | "dashboard" | "investigate" | "journals" | "assessments" | "validation" | "applications" | "evidence" | "approvals" | "letters" | "analytics" | "sources" | "scopus" | "settings";
 
 export const NAV_ACCESS: Record<NavKey, Role[]> = {
   dashboard: ["STUDENT", "REVIEWER", "HEAD", "ADMIN"],
@@ -15,6 +15,7 @@ export const NAV_ACCESS: Record<NavKey, Role[]> = {
   letters: ["STUDENT", "REVIEWER", "HEAD", "ADMIN"],
   analytics: ["REVIEWER", "HEAD", "ADMIN"],
   sources: ["REVIEWER", "HEAD", "ADMIN"],
+  scopus: ["REVIEWER", "HEAD", "ADMIN"],
   settings: ["ADMIN", "HEAD"],
 };
 

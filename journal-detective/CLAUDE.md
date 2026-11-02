@@ -40,7 +40,9 @@ tests/unit|e2e      vitest / playwright
 17. Klaim integrasi LIVE hanya bila permintaan nyata berhasil (`pilot:smoke`) dan hasilnya diperiksa.
 18. Tes yang mengubah `APP_MODE` memakai `withMode` (tests/unit/helpers.ts). Tes layanan berbagi `prisma/test.db`; gunakan ISSN/judul unik per berkas.
 
+19. **Database referensi Scopus** (`ScopusImport`/`ScopusSource`) terpisah dari Journal Passport; impor lewat pratinjau → konfirmasi; riwayat dipertahankan; Passport hanya dibuat saat jurnal diperiksa. Header dideteksi dari nama kolom (`engine/scopusImport.ts`, murni). Jangan memakai pembaca streaming ExcelJS (tidak deterministik). Jangan menyamakan Inactive dengan penghentian karena kualitas; Accepted ≠ aktif; tidak ditemukan ≠ tidak terindeks.
+
 ## Perintah
-`npm run dev | build | typecheck | lint | test | test:e2e | db:seed | db:reset | pilot:init | pilot:check | pilot:smoke | pilot:backup | pilot:restore | pilot:retention`.
+`npm run dev | build | typecheck | lint | test | test:e2e | db:seed | db:reset | pilot:init | pilot:check | pilot:smoke | pilot:backup | pilot:restore | pilot:retention | scopus:import`.
 Tes layanan memakai `prisma/test.db` yang dibuat dari migrasi (globalSetup). Seed memakai `tsx --conditions=react-server` karena paket `server-only`.
 Skema SQLite memakai String untuk enum dan JSON; saat pindah ke PostgreSQL ubah provider dan kolom `*Json` ke `Json` (lihat DEPLOYMENT).

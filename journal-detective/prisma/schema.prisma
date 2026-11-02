@@ -434,3 +434,64 @@ model ValidationRun {
   runAt      DateTime @default(now())
   classifiedById String?
 }
+
+// ===== Database referensi Scopus (terpisah dari Journal Passport) =====
+model ScopusImport {
+  id            String   @id @default(cuid())
+  versionLabel  String
+  observationDate DateTime
+  sourceUrl     String?
+  fileName      String
+  fileSize      Int
+  sha256        String
+  uploadedAt    DateTime @default(now())
+  importedById  String
+  importedByName String
+  status        String // PREVIEW | CONFIRMED | SUPERSEDED | CANCELLED | FAILED
+  isCurrent     Boolean  @default(false)
+  isDemo        Boolean  @default(false)
+  stagedPath    String?
+  summaryJson   String   @default("{}")
+  recordCount   Int      @default(0)
+  confirmedAt   DateTime?
+  supersededAt  DateTime?
+  records       ScopusSource[]
+
+  @@index([status, isCurrent])
+}
+
+model ScopusSource {
+  id        String @id @default(cuid())
+  importId  String
+  import    ScopusImport @relation(fields: [importId], references: [id], onDelete: Cascade)
+  sourceId  String?
+  title     String
+  normTitle String
+  issnRaw   String?
+  eissnRaw  String?
+  issn      String? // kunci pencarian: 8 karakter tanpa tanda hubung, huruf besar (nol depan & X dipertahankan)
+  eissn     String?
+  status    String // ACTIVE | INACTIVE | ACCEPTED | UNKNOWN
+  activeRaw String?
+  coverage  String?
+  coverageFrom Int?
+  coverageTo   Int?
+  discontinuedQuality Boolean @default(false)
+  discontinuedRaw String?
+  sourceType String?
+  publisher  String?
+  publisherGroup String?
+  publisherCountry String?
+  asjc       String?
+  openAccessRaw String?
+  origin     String // SOURCES | DISCONTINUED | ACCEPTED
+  discontinuedJson String?
+  acceptedJson String?
+  conflictsJson String @default("[]")
+  extraJson  String @default("{}")
+
+  @@index([importId, sourceId])
+  @@index([importId, issn])
+  @@index([importId, eissn])
+  @@index([importId, normTitle])
+}

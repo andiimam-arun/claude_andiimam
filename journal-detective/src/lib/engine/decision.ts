@@ -92,7 +92,7 @@ export function decideJournal({ identity, evidence: allEvidence, policy, now = n
   // ---------- 3. Indeksasi Scopus ----------
   const scopusAll = evidence.filter((e) => e.key === "scopus.coverage");
   const live = scopusAll.filter((e) => e.integration === "LIVE_VERIFIED" && e.status === "VERIFIED");
-  const verifiedCov = (live.length ? live : scopusAll.filter((e) => e.status === "VERIFIED")).filter((e) => ["ACTIVE", "DISCONTINUED", "ON_HOLD"].includes(e.data.coverage));
+  const verifiedCov = (live.length ? live : scopusAll.filter((e) => e.status === "VERIFIED")).filter((e) => ["ACTIVE", "DISCONTINUED", "ON_HOLD", "ACCEPTED_PENDING"].includes(e.data.coverage));
   const covSet = new Set(verifiedCov.map((e) => e.data.coverage as string));
   const conflicted = scopusAll.some((e) => e.status === "CONFLICTED") || covSet.size > 1;
   let indexingStatus: IndexingStatus = "UNVERIFIED";
@@ -112,6 +112,7 @@ export function decideJournal({ identity, evidence: allEvidence, policy, now = n
     if (cov === "ACTIVE") {
       indexingStatus = ageDays > policy.maxIndexEvidenceAgeDays ? "OUTDATED_EVIDENCE" : "ACTIVE_VERIFIED";
     } else if (cov === "DISCONTINUED") indexingStatus = "DISCONTINUED_VERIFIED";
+    else if (cov === "ACCEPTED_PENDING") indexingStatus = "ACCEPTED_PENDING";
     else indexingStatus = "ON_HOLD_VERIFIED";
   } else {
     const nf = scopusAll.find((e) => e.status === "NOT_FOUND");
@@ -189,6 +190,10 @@ export function decideJournal({ identity, evidence: allEvidence, policy, now = n
       mark("INELIGIBLE");
       red("policy_scopus_not_listed", {}, ["scopus.coverage"]);
       info("not_predatory_note");
+    } else if (indexingStatus === "ACCEPTED_PENDING") {
+      mark("UNDETERMINED");
+      yellow("scopus_accepted_pending", {}, ["scopus.coverage"]);
+      addAction("verify_scopus_current");
     } else if (indexingStatus === "ON_HOLD_VERIFIED") {
       mark("UNDETERMINED");
       yellow("scopus_on_hold", {}, ["scopus.coverage"]);
@@ -234,6 +239,10 @@ export function decideJournal({ identity, evidence: allEvidence, policy, now = n
 
   // Perbandingan klaim vs bukti
   if (claimsScopus && indexingStatus === "DISCONTINUED_VERIFIED") info("scopus_claim_outdated");
+  if (indexingStatus === "DISCONTINUED_VERIFIED" && indexingEvidence) {
+    if (indexingEvidence.data.discontinuedForQuality === true) info("scopus_discontinued_quality", {}, ["scopus.coverage"]);
+    else if (indexingEvidence.data.discontinuedForQuality === false && indexingEvidence.data.importVersion) info("scopus_inactive_not_quality", {}, ["scopus.coverage"]);
+  }
   if (claimsScopus && !policy.requireCurrentScopus && indexingStatus !== "ACTIVE_VERIFIED" && indexingStatus !== "NOT_LISTED_CONCLUSIVE") {
     yellow("claim_scopus_unverified");
     addAction("verify_scopus_manually");

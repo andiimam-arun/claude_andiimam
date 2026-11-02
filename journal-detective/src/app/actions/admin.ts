@@ -116,3 +116,17 @@ export async function saveRetentionAction(form: FormData) {
   try { const v = str(form, "days"); await setRetention(v ? Number(v) : null, user); } catch (e) { go("/settings", { error: errMsg(e) }); }
   go("/settings", { notice: "Masa retensi disimpan. Tidak ada penghapusan otomatis; gunakan `npm run pilot:retention` (dry-run) lalu --execute." });
 }
+
+export async function confirmScopusImportAction(form: FormData) {
+  const user = await requireRole("ADMIN", "HEAD");
+  const { confirmImport } = await import("@/lib/services/scopusReference");
+  try { await confirmImport(str(form, "importId"), user); } catch (e) { go(`/sources/scopus?preview=${str(form, "importId")}`, { error: errMsg(e) }); }
+  go("/sources/scopus", { notice: "Impor dikonfirmasi. Database referensi Scopus terkini sudah dapat dicari; impor sebelumnya dipertahankan sebagai riwayat." });
+}
+
+export async function cancelScopusImportAction(form: FormData) {
+  const user = await requireRole("ADMIN", "HEAD");
+  const { cancelImport } = await import("@/lib/services/scopusReference");
+  try { await cancelImport(str(form, "importId"), user); } catch (e) { go("/sources/scopus", { error: errMsg(e) }); }
+  go("/sources/scopus", { notice: "Pratinjau dibatalkan. Tidak ada data yang diimpor." });
+}

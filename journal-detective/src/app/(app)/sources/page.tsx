@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { requireRole } from "@/lib/auth/session";
 import { getT } from "@/lib/i18n/server";
 import { listDatasets, DATASET_KINDS } from "@/lib/services/reference";
@@ -33,6 +34,7 @@ export default async function Sources({ searchParams }: { searchParams: Promise<
     <>
       {sp.notice && <Notice kind="ok">{sp.notice}</Notice>}{sp.error && <Notice kind="error">{sp.error}</Notice>}
       <PageHeader title={t("nav.sources")} subtitle={L ? "Status integrasi eksternal ditampilkan apa adanya. Sumber yang tidak tersedia tidak pernah diganti data demonstrasi." : "External-integration states are shown as they are. Unavailable sources are never replaced with demonstration data."} />
+      <Notice kind="info">{L ? "Untuk Scopus, gunakan menu " : "For Scopus, use the "}<Link className="font-semibold underline" href="/sources/scopus">{L ? "Database Scopus" : "Scopus Database"}</Link>{L ? ": impor workbook Source List asli (3 sheet) sekali, lalu cari dan periksa jurnal tanpa memasukkan bukti satu per satu." : " menu: import the original Source List workbook (3 sheets) once, then search and investigate journals without entering evidence one by one."}</Notice>
       <Card className="mb-6"><CardHeader title={L ? "Status integrasi" : "Integration status"} /><ul className="divide-y divide-slate-100">{SOURCES.map((s) => (
         <li key={s.name} className="flex flex-wrap items-start gap-3 px-5 py-3"><div className="min-w-[220px] flex-1"><div className="text-sm font-semibold">{s.name}</div><div className="text-xs text-slate-600">{L ? s.id : s.en}</div>
           {(s.name === "DOAJ API" || s.name === "Crossref REST API") && (() => { const r = smoke[s.name.startsWith("DOAJ") ? "DOAJ" : "Crossref"]; return r ? <div className={`mt-1 text-xs font-semibold ${r.outcome === "LIVE_OK" ? "text-ok" : "text-bad"}`}>{L ? "Smoke test operator terakhir" : "Last operator smoke test"}: {r.outcome} · {fmtDate(r.at, true)} — {String(r.detail).slice(0, 140)}</div> : <div className="mt-1 text-xs font-semibold text-warn">{L ? "Belum pernah terbukti hidup (jalankan `npm run pilot:smoke` di server target)" : "Never proven live (run `npm run pilot:smoke` on the target server)"}</div>; })()}</div>

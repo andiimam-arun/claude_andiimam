@@ -61,3 +61,10 @@ Mengubah jurnal/tujuan pada permohonan **membatalkan** rekomendasi (alur kembali
 ## 8. Mode PILOT
 Bukti bertanda demonstrasi (`data.demo`) **tidak pernah** dihitung pada PILOT (alasan `demo_evidence_excluded`, tidak HIJAU). Persetujuan dan penerbitan surat resmi **diblokir** selama kebijakan aktif adalah placeholder ("Kebijakan resmi belum dikonfigurasi") — hanya Kepala Unit yang dapat menerbitkan kebijakan RESMI.
 Impor Scopus: impor terbaru (tanggal pengamatan) menggantikan impor lama untuk identifier yang sama; lama dipertahankan sebagai riwayat; bukti kedaluwarsa menurut kebijakan; konflik antar sumber non-impor (live/manual vs impor) tetap menghasilkan CONFLICTED.
+
+## 9. Impor Scopus (workbook)
+- Bukti dari impor selalu `IMPORTED_DATA` berlabel versi + tanggal pengamatan. *Tidak ditemukan* = `NOT_FOUND` tidak konklusif (belum terverifikasi).
+- `Inactive` → cakupan berakhir (`DISCONTINUED`); **alasan kualitas hanya** bila kolom "Titles Discontinued by Scopus" menandainya (alasan info `scopus_discontinued_quality` vs `scopus_inactive_not_quality`). Keduanya tidak menjadikan jurnal "predator".
+- `Accepted Titles` → `ACCEPTED_PENDING`: tidak memenuhi indeksasi aktif; bila kebijakan mewajibkan Scopus aktif → KUNING (tidak ditentukan), bukan MERAH.
+- Record berkonflik → bukti `CONFLICTED` → indeksasi KONFLIK (KUNING) sampai ditinjau.
+- Indeksasi aktif dari impor tidak mengubah status tujuan (host persis) maupun administratif; klirens akhir tetap memerlukan keduanya.

@@ -12,7 +12,7 @@ export const id: Dict = {
 
   "nav.dashboard": "Ikhtisar", "nav.investigate": "Investigasi Jurnal Baru", "nav.journals": "Journal Passport", "nav.assessments": "Riwayat Penilaian", "nav.validation": "Validasi Dunia Nyata", "nav.applications": "Permohonan Mahasiswa",
   "nav.evidence": "Tinjauan Bukti", "nav.approvals": "Persetujuan Tertunda", "nav.letters": "Surat Klirens", "nav.analytics": "Analitik & Laporan",
-  "nav.sources": "Sumber Rujukan", "nav.settings": "Pengaturan & Kebijakan", "nav.logout": "Keluar",
+  "nav.sources": "Sumber Rujukan", "nav.scopus": "Database Scopus", "nav.settings": "Pengaturan & Kebijakan", "nav.logout": "Keluar",
 
   "status.GREEN": "HIJAU", "status.YELLOW": "KUNING", "status.RED": "MERAH",
   "status.GREEN.long": "TERVERIFIKASI", "status.YELLOW.long": "PERLU INVESTIGASI", "status.RED.long": "TIDAK LAYAK / RISIKO KRITIS",
@@ -146,6 +146,10 @@ export const id: Dict = {
   "final.final_destination_yellow": "Tujuan pengiriman yang diajukan belum terverifikasi/terselesaikan.",
   "reason.demo_evidence_excluded": "{n} bukti berasal dari data DEMONSTRASI/fiktif dan TIDAK dihitung pada mode PILOT.",
   "action.replace_demo_evidence": "Ganti dengan bukti nyata (impor sah atau bukti manual bersumber) — bukti demonstrasi tidak dapat memenuhi syarat klirens PILOT.",
+  "idx.ACCEPTED_PENDING": "Diterima untuk ditambahkan (belum otomatis aktif)",
+  "reason.scopus_accepted_pending": "Judul tercantum pada daftar Accepted Titles: diterima untuk proses penambahan ke Scopus, BUKAN otomatis aktif terindeks. Belum memenuhi indeksasi aktif.",
+  "reason.scopus_discontinued_quality": "Scopus menandai judul ini dihentikan karena masalah kualitas (menurut berkas impor). Ini temuan sumber, bukan kesimpulan sistem tentang praktik penerbitan.",
+  "reason.scopus_inactive_not_quality": "Status Inactive pada impor TIDAK ditandai sebagai dihentikan karena masalah kualitas; Inactive tidak otomatis berarti masalah kualitas.",
 };
 
 export const en: Dict = {
@@ -157,7 +161,7 @@ export const en: Dict = {
 
   "nav.dashboard": "Overview", "nav.investigate": "New Journal Investigation", "nav.journals": "Journal Passport", "nav.assessments": "Assessment History", "nav.validation": "Real-World Validation", "nav.applications": "Student Applications",
   "nav.evidence": "Evidence Review", "nav.approvals": "Pending Approvals", "nav.letters": "Clearance Letters", "nav.analytics": "Analytics & Reports",
-  "nav.sources": "Reference Sources", "nav.settings": "Settings & Policy Rules", "nav.logout": "Sign out",
+  "nav.sources": "Reference Sources", "nav.scopus": "Scopus Database", "nav.settings": "Settings & Policy Rules", "nav.logout": "Sign out",
 
   "status.GREEN": "GREEN", "status.YELLOW": "YELLOW", "status.RED": "RED",
   "status.GREEN.long": "VERIFIED", "status.YELLOW.long": "NEEDS INVESTIGATION", "status.RED.long": "NOT ELIGIBLE / CRITICAL RISK",
@@ -291,4 +295,8 @@ export const en: Dict = {
   "final.final_destination_yellow": "The submitted destination is not yet verified/resolved.",
   "reason.demo_evidence_excluded": "{n} evidence items come from DEMONSTRATION/fictional data and are NOT counted in PILOT mode.",
   "action.replace_demo_evidence": "Replace with real evidence (lawful import or sourced manual evidence) — demonstration evidence cannot satisfy PILOT clearance requirements.",
+  "idx.ACCEPTED_PENDING": "Accepted for addition (not automatically active)",
+  "reason.scopus_accepted_pending": "The title is listed in Accepted Titles: accepted for the addition process to Scopus, NOT automatically actively indexed. Does not yet meet active indexing.",
+  "reason.scopus_discontinued_quality": "Scopus marks this title as discontinued for quality reasons (per the imported file). This is a source finding, not the system's conclusion about publishing practices.",
+  "reason.scopus_inactive_not_quality": "The Inactive status in the import is NOT flagged as discontinued for quality reasons; Inactive does not automatically mean a quality problem.",
 };
