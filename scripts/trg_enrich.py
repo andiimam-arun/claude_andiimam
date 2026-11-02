@@ -22,6 +22,7 @@ OA = os.environ.get("OPENALEX_BASE", "https://api.openalex.org").rstrip("/")
 CR = os.environ.get("CROSSREF_BASE", "https://api.crossref.org").rstrip("/")
 OR = os.environ.get("ORCID_BASE", "https://pub.orcid.org").rstrip("/")
 MAILTO = os.environ.get("BIBLIO_MAILTO", "")
+OA_KEY = os.environ.get("OPENALEX_API_KEY", "")      # kunci gratis dari openalex.org; dikirim lewat header, tidak ikut ke URL maupun cache
 DELAY = float(os.environ.get("BIBLIO_DELAY", "0.12"))
 DOI_RX = re.compile(r"10\.\d{4,9}/[^\s\"<>?#]+", re.I)
 WORK_FIELDS = "id,doi,title,publication_year,cited_by_count,fwci,citation_normalized_percentile,primary_location,open_access,type"
@@ -52,7 +53,8 @@ def get_json(url, cache, headers=None):
     for attempt in range(4):
         time.sleep(DELAY)
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "application/json", **(headers or {})})
+            auth = {"Authorization": "Bearer " + OA_KEY} if OA_KEY and url.startswith(OA) else {}
+            req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "application/json", **auth, **(headers or {})})
             with urllib.request.urlopen(req, timeout=60) as r:
                 STATS["http"] += 1
                 data = json.loads(r.read().decode("utf-8"))
@@ -61,6 +63,8 @@ def get_json(url, cache, headers=None):
         except urllib.error.HTTPError as e:
             if e.code == 404:                       # tidak ditemukan: catat sebagai kosong agar tidak diulang
                 json.dump(None, open(key, "w")); return None
+            if e.code == 429 and "Insufficient budget" in (e.read() or b"").decode("utf-8", "ignore"):
+                sys.exit("OpenAlex: kuota harian tanpa kunci habis. Buat kunci gratis di openalex.org lalu set OPENALEX_API_KEY.")
             if e.code in (429, 500, 502, 503, 504):
                 time.sleep(2 ** attempt * 2); continue
             raise

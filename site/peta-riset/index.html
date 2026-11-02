@@ -53,6 +53,7 @@
     <button class="tab" role="tab" id="tab-cari" data-tab="cari" aria-selected="true" aria-controls="cari" data-i="tabSearch">Cari ahli</button>
     <button class="tab" role="tab" id="tab-tema" data-tab="tema" aria-selected="false" aria-controls="tema" data-i="tabTheme">Peta tema</button>
     <button class="tab" role="tab" id="tab-trg" data-tab="trg" aria-selected="false" aria-controls="trg" data-i="tabTrg">Daftar TRG</button>
+    <button class="tab" role="tab" id="tab-luar" data-tab="luar" aria-selected="false" aria-controls="luar" data-i="tabLuar" hidden>Pakar di luar TRG</button>
   </div>
 
   <div id="loadmsg" class="notice" role="status" data-i="loading">Memuat data…</div>
@@ -105,6 +106,18 @@
       <div class="legend" id="legend"></div>
       <div class="bars" id="bars"></div>
     </div>
+  </section>
+
+  <section id="luar" class="panel" role="tabpanel" aria-labelledby="tab-luar" hidden>
+    <p class="notice" id="luar-note"></p>
+    <div class="filters">
+      <label class="field grow"><span data-i="fLuar">Cari pakar</span><input id="l-q" type="search" autocomplete="off"></label>
+      <label class="field"><span data-i="fBidang">Bidang</span><select id="l-bidang"></select></label>
+    </div>
+    <div class="bars" id="l-bars"></div>
+    <p class="count" id="l-count" aria-live="polite"></p>
+    <ul class="cards" id="l-cards"></ul>
+    <button type="button" class="more" id="l-more" hidden></button>
   </section>
 
   <section id="trg" class="panel" role="tabpanel" aria-labelledby="tab-trg" hidden>

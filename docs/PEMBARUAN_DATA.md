@@ -47,6 +47,27 @@ Hasil akhirnya `data/perubahan/AAAA-MM-HH.md`: orang baru dan hilang, ketua yang
   Metrik kualitas tampil di halaman hanya untuk tema dengan ≥ 10 artikel tercocok.
 - Alamat email kontak untuk "polite pool" OpenAlex/Crossref diambil dari variabel lingkungan `BIBLIO_MAILTO`, tidak ditulis di kode.
 
+### Pakar Unhas dari OpenAlex (institusi I98301867)
+
+`--enrich` mencocokkan artikel yang sudah kita punya. Skrip berikut sebaliknya: menarik **semua penulis berafiliasi Unhas** dari OpenAlex,
+lalu mencocokkannya ke peneliti TRG. Tujuannya menemukan pakar yang belum ada di TRG manapun dan menambah metrik (h-index, sitasi, bidang).
+
+```
+OPENALEX_API_KEY=... BIBLIO_MAILTO=... python3 scripts/trg_openalex_unhas.py --cache /jalur/cache/openalex          # tarik (uji: --max-halaman 1)
+python3 scripts/trg_openalex_match.py                                                                              # cocokkan + data situs
+# atau semuanya: python3 scripts/trg_refresh.py --skip-crawl --openalex --cache /jalur/cache
+```
+
+- **Kunci API wajib.** OpenAlex membatasi akses tanpa kunci dengan kuota harian yang dibagi per alamat IP; di lingkungan bersama kuota itu cepat habis.
+  Kunci gratis dibuat di openalex.org dan dikirim lewat header (tidak masuk URL maupun cache).
+- **Urutan kecocokan:** ORCID sama, lalu Scopus ID sama, lalu nama sama (urutan kata bebas, minimal 2 kata). Kecocokan nama yang ambigu
+  tidak dipakai; masuk `data/openalex/tinjau.csv`. Cara membereskannya: tambahkan ORCID orang itu lewat `data/overrides/profil_orang.csv`.
+- **Hasil:** `data/openalex/pakar_openalex.csv` (semua penulis + status), `site/peta-riset/data/openalex.json`. Tab "Pakar di luar TRG" dan baris
+  metrik di kartu peneliti hanya muncul bila berkas itu ada.
+- **Afiliasi:** default memakai afiliasi terakhir (orang yang kini di Unhas); `--semua-afiliasi` juga mengambil yang pernah berafiliasi.
+- **Keterbatasan:** profil penulis OpenAlex dibuat otomatis; nama Indonesia sering terpecah atau tergabung. Daftar "di luar TRG" adalah petunjuk
+  yang perlu diverifikasi, bukan data resmi. Ambang tampil: minimal 5 karya (`--min-karya`).
+
 ## Lapis 2: koreksi manual
 
 Enam berkas CSV (`ketua`, `orang_gabung`, `orang_pisah`, `tema_trg`, `kata_kunci`, `profil_orang`). Setiap baris memuat `alasan`, `oleh`, `tanggal`.

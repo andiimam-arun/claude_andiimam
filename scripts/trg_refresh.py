@@ -74,6 +74,7 @@ def report(old, new, today):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache"); ap.add_argument("--skip-crawl", action="store_true"); ap.add_argument("--enrich", action="store_true")
+    ap.add_argument("--openalex", action="store_true", help="tarik ulang penulis Unhas dari OpenAlex (perlu OPENALEX_API_KEY)")
     ap.add_argument("--forms-xlsx", action="store_true", help="buat ulang formulir xlsx berisi data terbaru"); ap.add_argument("--no-snapshot", action="store_true")
     a = ap.parse_args()
     if not a.skip_crawl and not a.cache:
@@ -91,6 +92,12 @@ def main():
         run("scripts/trg_dedup_tags.py")                               # peneliti_unik (ber-ID) dibutuhkan pengayaan
         run("scripts/trg_enrich.py", "--cache", os.path.join(a.cache or ROOT, "biblio"), "--out", D, "--data", D)
     run("scripts/trg_dedup_tags.py"); run("scripts/trg_tag_tier1.py"); run("scripts/trg_report.py")
+    if a.openalex:
+        if not (os.environ.get("OPENALEX_API_KEY")):
+            sys.exit("--openalex memerlukan OPENALEX_API_KEY (kunci gratis dari openalex.org)")
+        run("scripts/trg_openalex_unhas.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"))
+    if os.path.exists(os.path.join(ROOT, "data", "openalex", "penulis_unhas.csv")):
+        run("scripts/trg_openalex_match.py", "--oa", os.path.join(ROOT, "data", "openalex"), "--data", D, "--site", SITE)
     run("scripts/trg_dashboard_data.py", SITE, "--tanpa-mahasiswa"); run("scripts/trg_insights.py")
     run("scripts/trg_api_check.py", SITE)
     if a.forms_xlsx:

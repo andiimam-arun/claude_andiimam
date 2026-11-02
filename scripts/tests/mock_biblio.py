@@ -15,6 +15,25 @@ def work(doi, title=None):
             "primary_location": {"source": {"display_name": "MOCK Journal", "issn_l": "0000-0000"}}, "open_access": {"is_oa": h % 2 == 0}}
 
 
+N_INST = 450
+
+
+def mk_orcid(i):
+    """ORCID sintetis dengan checksum sah (ISO 7064 mod 11-2)."""
+    base = f"{i:015d}"; t = 0
+    for c in base: t = (t + int(c)) * 2
+    r = (12 - t % 11) % 11; d = "X" if r == 10 else str(r); s = base + d
+    return f"{s[0:4]}-{s[4:8]}-{s[8:12]}-{s[12:16]}"
+
+
+def inst_author(i):
+    return {"id": f"https://openalex.org/A9{i:07d}", "orcid": f"https://orcid.org/{mk_orcid(i)}" if i % 3 else None, "display_name": f"Mock Author{i} Unhas",
+            "works_count": i % 40, "cited_by_count": i * 7, "summary_stats": {"h_index": i % 30, "i10_index": i % 10},
+            "ids": {"scopus": f"https://www.scopus.com/authid/detail.uri?authorId=7{i:010d}"},
+            "topics": [{"display_name": f"Topic {i % 5}", "subfield": {"display_name": f"Sub {i % 4}"}, "field": {"display_name": ["Medicine", "Engineering", "Agricultural and Biological Sciences"][i % 3]}}],
+            "last_known_institutions": [{"display_name": "Hasanuddin University"}]}
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *a): pass
 
@@ -40,6 +59,11 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(404, {"status": "not found"})
             return self.send(200, {"message": {"container-title": ["MOCK Crossref Journal"], "ISSN": ["1111-1111"], "is-referenced-by-count": H(d) % 50,
                                                "issued": {"date-parts": [[2019]]}, "type": "journal-article"}})
+        if u.path == "/authors" and "filter" in qs and qs["filter"][0].split(":")[0] in ("last_known_institutions.id", "affiliations.institution.id"):
+            cur = qs.get("cursor", ["*"])[0]; per = int(qs.get("per-page", ["25"])[0]); start = 0 if cur == "*" else int(cur)
+            chunk = [inst_author(i) for i in range(start + 1, min(start + per, N_INST) + 1)]
+            nxt = str(start + per) if start + per < N_INST else None
+            return self.send(200, {"meta": {"count": N_INST, "next_cursor": nxt}, "results": chunk})
         if u.path == "/authors" and "filter" in qs:
             os_ = [x.rsplit("/", 1)[-1] for x in qs["filter"][0][len("orcid:"):].split("|")]
             return self.send(200, {"results": [{"id": f"https://openalex.org/A{H(o)}", "orcid": f"https://orcid.org/{o}", "display_name": f"MOCK {o}", "works_count": H(o) % 80,

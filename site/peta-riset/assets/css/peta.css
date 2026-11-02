@@ -167,3 +167,12 @@ a.chip:hover { border-color: var(--glori-navy-soft); color: var(--glori-navy); }
   .hero-search button { padding: 0 18px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* pakar di luar TRG (OpenAlex) */
+.oaline { margin: 0; font-size: 14px; color: var(--glori-navy); font-weight: 600; }
+#l-bars { margin: 8px 0 16px; }
+#l-bars .bar { cursor: default; }
+#l-bars .bar:hover { background: none; }
+#l-bars .track { display: flex; }
+#l-bars .fill { background: var(--glori-navy); border-radius: 0; }
+#l-bars .fill.alt { background: var(--glori-red); }

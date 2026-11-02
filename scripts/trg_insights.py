@@ -169,6 +169,8 @@ meta = J("meta")
 meta["n_artikel"] = len(art)
 json.dump(meta, open(f"{O}/meta.json", "w", encoding="utf-8"), ensure_ascii=False)
 bundle = {n: J(n) for n in ("peneliti", "trg", "tag", "meta", "insights")}
+if os.path.exists(f"{O}/openalex.json"):
+    bundle["openalex"] = J("openalex")
 with open(f"{O}/peta-data.js", "w", encoding="utf-8") as fh:
     fh.write("/* dibuat oleh scripts/trg_dashboard_data.py dan scripts/trg_insights.py; jangan disunting manual */\nwindow.PETA_DATA = ")
     json.dump(bundle, fh, ensure_ascii=False, separators=(",", ":"))
