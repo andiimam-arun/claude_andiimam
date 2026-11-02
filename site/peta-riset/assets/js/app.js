@@ -19,7 +19,8 @@
       fKlaster: "Klaster", fTema: "Tema", fLead: "Hanya ketua TRG", fId: "Punya ID peneliti", reset: "Atur ulang",
       allKlaster: "Semua klaster", allTema: "Semua tema", themeHead: "Peneliti menurut tema",
       themeNote: "Klik sebuah tema untuk melihat para penelitinya. Satu peneliti bisa masuk beberapa tema, jadi totalnya melebihi jumlah peneliti unik.",
-      fTrg: "Cari TRG", fSort: "Urutkan", sName: "Nama", sPeople: "Jumlah peneliti", sPapers: "Jumlah artikel",
+      fTrg: "Cari TRG", fSort: "Urutkan", sName: "Nama", sPeople: "Jumlah peneliti", sPapers: "Jumlah artikel", sQ12: "Artikel Q1+Q2",
+      kqLine: function (k) { return "Q1+Q2: " + k.q12 + " dari " + k.i + " artikel bertindeks SJR (Q1 " + k.q1 + ", Q2 " + k.q2 + "; " + k.c + " dari " + k.n + " artikel tercocok)"; },
       disclaimer: "Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.",
       verified: function (d) { return "Terverifikasi " + d; }, unverified: "Belum diverifikasi ketua TRG",
       leaderOf: "Ketua TRG", trgLabel: "TRG", themeLabel: "Tema", noExpertise: "Keahlian belum dicantumkan di halaman TRG.",
@@ -50,7 +51,8 @@
       fKlaster: "Cluster", fTema: "Theme", fLead: "TRG leaders only", fId: "Has researcher ID", reset: "Reset",
       allKlaster: "All clusters", allTema: "All themes", themeHead: "Researchers by theme",
       themeNote: "Click a theme to see its researchers. A researcher can belong to several themes, so totals exceed the number of unique researchers.",
-      fTrg: "Search TRGs", fSort: "Sort by", sName: "Name", sPeople: "Number of researchers", sPapers: "Number of articles",
+      fTrg: "Search TRGs", fSort: "Sort by", sName: "Name", sPeople: "Number of researchers", sPapers: "Number of articles", sQ12: "Q1+Q2 articles",
+      kqLine: function (k) { return "Q1+Q2: " + k.q12 + " of " + k.i + " SJR-indexed articles (Q1 " + k.q1 + ", Q2 " + k.q2 + "; " + k.c + " of " + k.n + " articles matched)"; },
       disclaimer: "Data are collected automatically from public TRG pages and may contain errors or omissions. Researchers with the same name may be merged incorrectly, and missing expertise means it is not listed on the TRG page. The list covers leaders, lecturers, researchers, and external collaborators; students are not shown.",
       verified: function (d) { return "Verified " + d; }, unverified: "Not yet verified by the TRG leader",
       leaderOf: "TRG leader", trgLabel: "TRG", themeLabel: "Themes", noExpertise: "Expertise not listed on the TRG page.",
@@ -98,7 +100,7 @@
   var TABS = ["cari", "tema", "trg", "luar"];
   var PAGE = 24;
 
-  var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null };
+  var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null, kq: null };
   var tagById = {}, trgBySlug = {}, haystack = [], kwByTerm = {}, insTema = {};
   var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", lsolo: true, llimit: PAGE,
             tq: "", tk: "", tsort: "nama", kw: "", netMin: 3, sel: "" };
@@ -300,7 +302,9 @@
       if (S.tk && g.klaster !== S.tk) return false;
       return !q || norm(g.nama + " " + g.fakultas + " " + g.ketua + " " + g.tag).indexOf(q) >= 0 || q.split(/\s+/).every(function (w) { return norm(g.nama + " " + g.fakultas + " " + g.ketua + " " + g.tag).indexOf(w) >= 0; });
     });
-    rows.sort(function (a, b) { return S.tsort === "nama" ? a.nama.localeCompare(b.nama) : (b[S.tsort] - a[S.tsort]) || a.nama.localeCompare(b.nama); });
+    var kqv = function (g) { var k = D.kq && D.kq.trg[g.slug]; return k ? k.q1 + k.q2 : -1; };
+    if (S.tsort === "q12" && !D.kq) S.tsort = "nama";
+    rows.sort(function (a, b) { return S.tsort === "q12" ? (kqv(b) - kqv(a)) || a.nama.localeCompare(b.nama) : S.tsort === "nama" ? a.nama.localeCompare(b.nama) : (b[S.tsort] - a[S.tsort]) || a.nama.localeCompare(b.nama); });
     $("#t-count").textContent = t.trgShowing(fmt(rows.length));
     var ul = $("#trg-list"); ul.replaceChildren.apply(ul, rows.map(function (g) {
       var li = el("li", "trg"), c1 = el("div"), h = el("h3");
@@ -310,6 +314,8 @@
       var c2 = el("p", "lead"); c2.appendChild(el("b", null, t.leader)); c2.appendChild(document.createTextNode(g.ketua || t.noLeader)); li.appendChild(c2);
       var c3 = el("div"); var tags = (g.tag_ids || "").split(";").filter(Boolean).map(function (id) { return tagById[id]; }).filter(Boolean);
       if (tags.length) { var u = el("ul", "chips"); tags.forEach(function (x) { var l = el("li"); l.appendChild(el("span", "chip theme", tagName(x))); u.appendChild(l); }); c3.appendChild(u); }
+      var kk = D.kq && D.kq.trg[g.slug];
+      if (kk && kk.i) { var kl = el("p", "sub kq", t.kqLine({ q12: kk.q1 + kk.q2, i: kk.i, q1: kk.q1, q2: kk.q2, c: kk.c, n: kk.n })); c3.appendChild(kl); }
       li.appendChild(c3);
       var st = el("div", "stat"), b1 = el("span"); b1.append(el("b", null, fmt(g.n_peneliti)), document.createTextNode(t.people));
       var b2 = el("span"); b2.append(el("b", null, fmt(g.n_publikasi)), document.createTextNode(t.papers)); st.append(b1, b2); li.appendChild(st);
@@ -468,14 +474,15 @@
   // Data tertanam (data/peta-data.js) dipakai lebih dulu agar halaman bisa dibuka langsung dari berkas; bila tidak ada, ambil JSON lewat server.
   function loadAll() {
     var B = window.PETA_DATA;
-    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta, B.insights || {}, B.openalex || null]);
-    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta"), load("insights").catch(function () { return {}; }), load("openalex").catch(function () { return null; })]);
+    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta, B.insights || {}, B.openalex || null, B.kuartil || null]);
+    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta"), load("insights").catch(function () { return {}; }), load("openalex").catch(function () { return null; }), load("kuartil").catch(function () { return null; })]);
   }
 
   readUrl(); applyI18n(); bind(); show(S.tab);
   loadAll().then(function (r) {
     D.people = r[0]; D.trg = r[1]; D.tag = r[2]; D.meta = r[3]; D.ins = { tema: (r[4] && r[4].tema) || [], edges: (r[4] && r[4].edges) || [], keywords: (r[4] && r[4].keywords) || [] };
     D.oa = r[5] && r[5].metrik ? r[5] : null; if (!D.oa && S.tab === "luar") show("cari");
+    D.kq = r[6] && r[6].trg ? r[6] : null; var qo = $("#t-sort-q12"); if (qo) qo.hidden = !D.kq;
     D.tag.forEach(function (g) { tagById[g.tag_id] = g; }); D.trg.forEach(function (g) { trgBySlug[g.slug] = g; });
     D.ins.tema.forEach(function (x) { insTema[x.id] = x; }); D.ins.keywords.forEach(function (k) { kwByTerm[k.t] = k; });
     buildIndex(); $("#loadmsg").hidden = true; renderAll();

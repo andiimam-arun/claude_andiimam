@@ -89,4 +89,9 @@ save("openalex.schema.json", {"$schema": D2020, "title": "Pengayaan OpenAlex (op
     "metrik": {"type": "object", "description": "id peneliti situs -> metrik OpenAlex", "additionalProperties": metr}, "luar_trg": arr(luar),
     "bidang": arr(obj({"nama": STR, "n_penulis": INT, "sitasi": INT, "di_trg": INT, "luar_trg": INT}, ["nama", "n_penulis", "sitasi", "di_trg", "luar_trg"]))},
     ["dibuat", "sumber", "n_penulis", "n_cocok", "n_luar_trg", "metrik", "luar_trg", "bidang"])})
-print("skema model baca: peneliti, trg, tag, meta, insights, openalex")
+save("kuartil.schema.json", {"$schema": D2020, "title": "Artikel Q1-Q4 per TRG (opsional)", **obj({
+    "dibuat": STR, "sumber": STR, "sjr_tahun": arr(INT), "dari": INT,
+    "total": obj({k: INT for k in ("artikel", "tercocok", "bertindeks", "Q1", "Q2", "Q3", "Q4", "Q12")}, ["artikel", "tercocok", "bertindeks", "Q1", "Q2", "Q12"]),
+    "trg": {"type": "object", "description": "slug TRG -> hitungan", "additionalProperties": obj({"n": INT, "c": INT, "i": INT, "q1": INT, "q2": INT, "q3": INT, "q4": INT}, ["n", "c", "i", "q1", "q2", "q3", "q4"])}},
+    ["dibuat", "sumber", "sjr_tahun", "dari", "total", "trg"])})
+print("skema model baca: peneliti, trg, tag, meta, insights, openalex, kuartil")

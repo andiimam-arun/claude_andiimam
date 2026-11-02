@@ -85,7 +85,7 @@ def parse_work(w):
     cnp = w.get("citation_normalized_percentile") or {}
     return dict(openalex_id=(w.get("id") or "").rsplit("/", 1)[-1], doi=norm_doi(w.get("doi")), tahun=w.get("publication_year") or "",
                 sitasi=w.get("cited_by_count") if w.get("cited_by_count") is not None else "", fwci=w.get("fwci") if w.get("fwci") is not None else "",
-                top10=int(bool(cnp.get("is_in_top_10_percent"))), jurnal=src.get("display_name") or "", issn=src.get("issn_l") or "",
+                top10=int(bool(cnp.get("is_in_top_10_percent"))), jurnal=src.get("display_name") or "", issn=src.get("issn_l") or "", issn_semua=";".join(x for x in (src.get("issn") or []) if x),
                 oa=int(bool((w.get("open_access") or {}).get("is_oa"))), jenis=w.get("type") or "")
 
 
@@ -112,7 +112,7 @@ def crossref(doi, cache):
         return None
     yr = ((m.get("issued") or {}).get("date-parts") or [[None]])[0][0]
     return dict(openalex_id="", doi=doi, tahun=yr or "", sitasi=m.get("is-referenced-by-count", ""), fwci="", top10=0,
-                jurnal=(m.get("container-title") or [""])[0], issn=(m.get("ISSN") or [""])[0], oa=0, jenis=m.get("type") or "")
+                jurnal=(m.get("container-title") or [""])[0], issn=(m.get("ISSN") or [""])[0], issn_semua=";".join(m.get("ISSN") or []), oa=0, jenis=m.get("type") or "")
 
 
 def title_match(title, year, cache):
@@ -194,7 +194,7 @@ def main():
             rows[k] = dict(kunci_judul=k, **hit[0], dasar_kecocokan=hit[1], skor_kecocokan=hit[2])
         else:
             via["tidak_cocok"] += 1
-    head = ["kunci_judul", "openalex_id", "doi", "tahun", "sitasi", "fwci", "top10", "jurnal", "issn", "oa", "jenis", "dasar_kecocokan", "skor_kecocokan"]
+    head = ["kunci_judul", "openalex_id", "doi", "tahun", "sitasi", "fwci", "top10", "jurnal", "issn", "issn_semua", "oa", "jenis", "dasar_kecocokan", "skor_kecocokan"]
     write(f"{a.out}/artikel_metrik.csv", head, [rows[k] for k in sorted(rows)])
     people = list(csv.DictReader(open(f"{a.data}/peneliti_unik.csv", encoding="utf-8")))
     raw = [p for p in people if p["orcid"].strip()]

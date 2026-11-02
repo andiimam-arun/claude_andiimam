@@ -176,3 +176,4 @@ a.chip:hover { border-color: var(--glori-navy-soft); color: var(--glori-navy); }
 #l-bars .track { display: flex; }
 #l-bars .fill { background: var(--glori-navy); border-radius: 0; }
 #l-bars .fill.alt { background: var(--glori-red); }
+.kq { color: var(--glori-navy); font-weight: 600; }

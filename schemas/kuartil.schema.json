@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Artikel Q1-Q4 per TRG (opsional)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dibuat",
+    "sumber",
+    "sjr_tahun",
+    "dari",
+    "total",
+    "trg"
+  ],
+  "properties": {
+    "dibuat": {
+      "type": "string"
+    },
+    "sumber": {
+      "type": "string"
+    },
+    "sjr_tahun": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "dari": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "total": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artikel",
+        "tercocok",
+        "bertindeks",
+        "Q1",
+        "Q2",
+        "Q12"
+      ],
+      "properties": {
+        "artikel": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tercocok": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bertindeks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "Q1": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "Q2": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "Q3": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "Q4": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "Q12": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "trg": {
+      "type": "object",
+      "description": "slug TRG -> hitungan",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "n",
+          "c",
+          "i",
+          "q1",
+          "q2",
+          "q3",
+          "q4"
+        ],
+        "properties": {
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "c": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "i": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q1": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q2": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q3": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q4": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
