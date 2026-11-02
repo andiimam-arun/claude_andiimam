@@ -27,6 +27,7 @@ DELAY = float(os.environ.get("BIBLIO_DELAY", "0.12"))
 DOI_RX = re.compile(r"10\.\d{4,9}/[^\s\"<>?#]+", re.I)
 WORK_FIELDS = "id,doi,title,publication_year,cited_by_count,fwci,citation_normalized_percentile,primary_location,open_access,type"
 STATS = {"http": 0, "cache": 0}
+CACHE_ONLY = False                                   # --hanya-cache: pakai hasil yang sudah ada, tanpa permintaan baru (mis. saat kuota habis)
 
 
 _fs = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trg_formspec.py")
@@ -49,6 +50,8 @@ def get_json(url, cache, headers=None):
     if os.path.exists(key):
         STATS["cache"] += 1
         return json.load(open(key, encoding="utf-8"))
+    if CACHE_ONLY:
+        return None
     ua = "Unhas-TRG-mapping/1.0" + (f" (mailto:{MAILTO})" if MAILTO else "")
     for attempt in range(4):
         time.sleep(DELAY)
@@ -63,8 +66,10 @@ def get_json(url, cache, headers=None):
         except urllib.error.HTTPError as e:
             if e.code == 404:                       # tidak ditemukan: catat sebagai kosong agar tidak diulang
                 json.dump(None, open(key, "w")); return None
-            if e.code == 429 and "Insufficient budget" in (e.read() or b"").decode("utf-8", "ignore"):
-                sys.exit("OpenAlex: kuota harian tanpa kunci habis. Buat kunci gratis di openalex.org lalu set OPENALEX_API_KEY.")
+            if e.code == 429:
+                body = (e.read() or b"").decode("utf-8", "ignore")
+                if "Insufficient budget" in body:
+                    sys.exit("OpenAlex: kuota habis (" + ("kunci terpasang" if OA_KEY else "tanpa kunci; set OPENALEX_API_KEY") + "). Respons: " + body[:300])
             if e.code in (429, 500, 502, 503, 504):
                 time.sleep(2 ** attempt * 2); continue
             raise
@@ -156,7 +161,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache", required=True); ap.add_argument("--out", default="data/trg"); ap.add_argument("--data", default="data/trg")
     ap.add_argument("--limit", type=int, default=0); ap.add_argument("--no-title-match", action="store_true"); ap.add_argument("--orcid-verify", action="store_true")
+    ap.add_argument("--hanya-cache", action="store_true", help="tanpa permintaan baru; hasil sebagian bila cache belum lengkap")
     a = ap.parse_args()
+    global CACHE_ONLY
+    CACHE_ONLY = a.hanya_cache
     os.makedirs(a.cache, exist_ok=True); os.makedirs(a.out, exist_ok=True)
     if not MAILTO:
         print("PERINGATAN: BIBLIO_MAILTO belum diisi; OpenAlex/Crossref akan lebih lambat dan dapat membatasi permintaan.", file=sys.stderr)
