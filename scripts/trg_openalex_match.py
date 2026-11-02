@@ -71,10 +71,10 @@ for r in oa:
     for b in bid(r)[:1]:                                     # satu bidang utama per orang agar tidak dihitung ganda
         f = fields[b]; f["n_penulis"] += 1; f["sitasi"] += num(r["sitasi"]); f["di_trg" if r["status"] == "cocok" else "luar_trg"] += 1
 out = dict(dibuat=datetime.date.today().isoformat(), sumber="OpenAlex (CC0)", institusi="Universitas Hasanuddin (I98301867)",
-           n_penulis=len(oa), n_cocok=len(metrik), n_tinjau=len({t["openalex_author"] for t in tinjau}), n_luar_trg=len(luar),
+           n_penulis=len(oa), n_peneliti_trg=len(people), n_cocok=len(metrik), n_tinjau=len({t["openalex_author"] for t in tinjau}), n_luar_trg=len(luar),
            metrik=metrik, luar_trg=[dict(oa=r["openalex_author"], nama=r["nama"], orcid=r["orcid"], h=num(r["h_index"]), s=num(r["sitasi"]), k=num(r["karya"]), b=bid(r)[:3], t=r["topik"].split(" | ")[:4], x=lain(r)[:3], u=int(not lain(r))) for r in luar[:a.maks_luar]],
            bidang=sorted(([dict(nama=k, **v) for k, v in fields.items()]), key=lambda x: -x["sitasi"]))
 os.makedirs(a.site, exist_ok=True)
 json.dump(out, open(f"{a.site}/openalex.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 st = C.Counter(r["status"] for r in oa)
-print(f"penulis OpenAlex {len(oa)} | cocok {len(metrik)} dari {len(people)} peneliti TRG ({round(100 * len(metrik) / max(1, len(people)))}%) | dasar {dict(C.Counter(d for _, d in matched.values()))} | status {dict(st)}")
+print(f"penulis OpenAlex {len(oa)} | cocok {len(metrik)} dari {len(people)} peneliti TRG unik, termasuk mahasiswa ({round(100 * len(metrik) / max(1, len(people)))}%) | dasar {dict(C.Counter(d for _, d in matched.values()))} | status {dict(st)}")

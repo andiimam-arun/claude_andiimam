@@ -68,6 +68,18 @@ python3 scripts/trg_openalex_match.py                                           
 - **Keterbatasan:** profil penulis OpenAlex dibuat otomatis; nama Indonesia sering terpecah atau tergabung. Daftar "di luar TRG" adalah petunjuk
   yang perlu diverifikasi, bukan data resmi. Ambang tampil: minimal 5 karya (`--min-karya`).
 
+### Kuartil jurnal (Q1-Q4)
+
+OpenAlex tidak memuat kuartil; kuartil berasal dari SJR (SCImago). `scripts/trg_kuartil.py` menghitung artikel jurnal Unhas per tahun dari OpenAlex
+(`data/openalex/jurnal_unhas.csv`) dan menggabungkannya dengan berkas SJR yang Anda unduh dari scimagojr.com:
+
+```
+OPENALEX_API_KEY=... python3 scripts/trg_kuartil.py --cache /jalur/cache --sjr 2023=scimagojr_2023.csv --sjr 2024=scimagojr_2024.csv
+```
+
+Hasil: `kuartil_unhas.csv` (Q1-Q4 per tahun) dan `jurnal_tanpa_kuartil.csv` (jurnal terbanyak yang tidak ditemukan di SJR; periksa ini sebelum angka dilaporkan).
+Satuan: artikel dengan minimal satu penulis berafiliasi Unhas, hitung utuh. Penyebut kecocokan peneliti TRG adalah semua orang unik (2.842, termasuk mahasiswa).
+
 ## Lapis 2: koreksi manual
 
 Enam berkas CSV (`ketua`, `orang_gabung`, `orang_pisah`, `tema_trg`, `kata_kunci`, `profil_orang`). Setiap baris memuat `alasan`, `oleh`, `tanggal`.

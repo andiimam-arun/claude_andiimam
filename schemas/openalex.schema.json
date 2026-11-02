@@ -27,6 +27,10 @@
       "type": "integer",
       "minimum": 0
     },
+    "n_peneliti_trg": {
+      "type": "integer",
+      "minimum": 0
+    },
     "n_cocok": {
       "type": "integer",
       "minimum": 0

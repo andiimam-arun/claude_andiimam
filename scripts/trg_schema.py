@@ -85,7 +85,7 @@ save("insights.schema.json", {"$schema": D2020, "title": "Wawasan", **obj({
 metr = obj({"oa": STR, "h": INT, "s": INT, "k": INT, "b": arr(STR), "d": {"enum": ["orcid", "scopus", "nama"]}}, ["oa", "h", "s", "k", "d"])
 luar = obj({"oa": STR, "nama": STR, "orcid": STR, "h": INT, "s": INT, "k": INT, "b": arr(STR), "t": arr(STR), "x": arr(STR), "u": INT}, ["oa", "nama", "h", "s", "k"])
 save("openalex.schema.json", {"$schema": D2020, "title": "Pengayaan OpenAlex (opsional)", **obj({
-    "dibuat": STR, "sumber": STR, "institusi": STR, "n_penulis": INT, "n_cocok": INT, "n_tinjau": INT, "n_luar_trg": INT,
+    "dibuat": STR, "sumber": STR, "institusi": STR, "n_penulis": INT, "n_peneliti_trg": INT, "n_cocok": INT, "n_tinjau": INT, "n_luar_trg": INT,
     "metrik": {"type": "object", "description": "id peneliti situs -> metrik OpenAlex", "additionalProperties": metr}, "luar_trg": arr(luar),
     "bidang": arr(obj({"nama": STR, "n_penulis": INT, "sitasi": INT, "di_trg": INT, "luar_trg": INT}, ["nama", "n_penulis", "sitasi", "di_trg", "luar_trg"]))},
     ["dibuat", "sumber", "n_penulis", "n_cocok", "n_luar_trg", "metrik", "luar_trg", "bidang"])})
