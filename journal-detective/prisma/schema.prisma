@@ -1,0 +1,335 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Catatan: SQLite tidak mendukung enum; nilai enum divalidasi di lapisan TypeScript (src/lib/engine/types.ts).
+// Kolom *Json menyimpan JSON.stringify(...). Untuk PostgreSQL ganti provider dan ubah *Json menjadi Json.
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  role         String // STUDENT | REVIEWER | HEAD | ADMIN
+  passwordHash String
+  active       Boolean  @default(true)
+  studyProgram String?
+  studentNumber String?
+  createdAt    DateTime @default(now())
+  applications Application[] @relation("StudentApps")
+  actions      ReviewAction[]
+}
+
+model Policy {
+  id         String   @id @default(cuid())
+  version    Int      @unique
+  name       String
+  isDemo     Boolean  @default(true)
+  configJson String
+  note       String?
+  active     Boolean  @default(false)
+  createdBy  String
+  createdAt  DateTime @default(now())
+}
+
+model Journal {
+  id               String   @id @default(cuid())
+  title            String
+  normTitle        String
+  altTitlesJson    String   @default("[]")
+  issn             String?
+  eissn            String?
+  scopusSourceId   String?
+  publisher        String?
+  country          String?
+  officialWebsite  String?
+  verifiedDomainsJson String @default("[]")
+  subjectsJson     String   @default("[]")
+  claimedIndexingJson String @default("[]")
+  knownWarningsJson String  @default("[]")
+  isDemo           Boolean  @default(false)
+  recordVersion    Int      @default(1)
+  lastVerifiedAt   DateTime?
+  reassessFlag     Boolean  @default(false)
+  reassessReason   String?
+  reassessDueAt    DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  assessments      Assessment[]
+  evidence         Evidence[]
+  applications     Application[]
+
+  @@index([issn])
+  @@index([eissn])
+  @@index([scopusSourceId])
+  @@index([normTitle])
+}
+
+model Assessment {
+  id            String   @id @default(cuid())
+  refNumber     String   @unique
+  journalId     String
+  journal       Journal  @relation(fields: [journalId], references: [id])
+  submittedUrl  String?
+  submittedDomain String?
+  policyId      String
+  policyVersion Int
+  journalStatus String // GREEN | YELLOW | RED
+  decisionJson  String // JournalDecision lengkap (alasan, indeksasi, dsb.)
+  inputJson     String // snapshot input identitas
+  evidenceIdsJson String @default("[]")
+  aiSummary     String?
+  createdById   String
+  createdAt     DateTime @default(now())
+  applications  Application[]
+
+  @@index([journalId])
+}
+
+model Evidence {
+  id             String   @id @default(cuid())
+  journalId      String
+  journal        Journal  @relation(fields: [journalId], references: [id])
+  assessmentId   String?
+  origin         String // AUTO | MANUAL
+  check          String
+  key            String
+  finding        String
+  status         String
+  integration    String
+  sourceName     String
+  sourceUrl      String?
+  sourceRef      String?
+  retrievedAt    DateTime
+  sourceDataDate String?
+  extracted      String   @default("")
+  explanation    String   @default("")
+  severity       String
+  strength       String
+  requiresHuman  Boolean  @default(false)
+  dataJson       String   @default("{}")
+  fingerprint    String
+  retracted      Boolean  @default(false)
+  createdById    String?
+  createdAt      DateTime @default(now())
+
+  @@index([journalId])
+  @@index([assessmentId])
+}
+
+// Keputusan peninjauan manusia atas bukti (bertahan lintas penilaian ulang, kunci: fingerprint)
+model EvidenceReview {
+  id          String   @id @default(cuid())
+  journalId   String
+  fingerprint String
+  decision    String // CONFIRMED | DISMISSED
+  note        String
+  reviewerId  String
+  reviewerName String
+  createdAt   DateTime @default(now())
+
+  @@index([journalId, fingerprint])
+}
+
+model ReferenceDataset {
+  id         String   @id @default(cuid())
+  kind       String // SCOPUS_SOURCE_LIST | SCIMAGO | BEALL | HIJACKED | DOAJ_LIST
+  filename   String
+  versionLabel String
+  provenance String
+  sourceDate DateTime?
+  isComplete Boolean  @default(true)
+  isDemo     Boolean  @default(false)
+  rowCount   Int
+  sha256     String
+  importedAt DateTime @default(now())
+  importedById String
+  active     Boolean  @default(true)
+  records    ReferenceRecord[]
+}
+
+model ReferenceRecord {
+  id        String   @id @default(cuid())
+  datasetId String
+  dataset   ReferenceDataset @relation(fields: [datasetId], references: [id], onDelete: Cascade)
+  kind      String
+  title     String
+  normTitle String
+  issn      String?
+  eissn     String?
+  sourceId  String?
+  publisher String?
+  domain    String?
+  url       String?
+  status    String?
+  dataJson  String   @default("{}")
+
+  @@index([datasetId])
+  @@index([issn])
+  @@index([eissn])
+  @@index([sourceId])
+  @@index([normTitle])
+  @@index([domain])
+}
+
+model Application {
+  id            String   @id @default(cuid())
+  refNumber     String   @unique
+  studentUserId String?
+  student       User?    @relation("StudentApps", fields: [studentUserId], references: [id])
+  studentName   String
+  studentNumber String
+  studyProgram  String
+  supervisor    String
+  studentEmail  String
+  manuscriptTitle String
+  researchField String
+  stage         String
+  submissionDate DateTime?
+  trackingId    String?
+  journalUrl    String?
+  articleDoi    String?
+  articleUrl    String?
+  journalName   String
+  journalIssn   String?
+  journalPublisher String?
+  claimedIndexing String?
+  claimedQuartile String?
+  journalId     String?
+  journal       Journal? @relation(fields: [journalId], references: [id])
+  assessmentId  String?
+  assessment    Assessment? @relation(fields: [assessmentId], references: [id])
+  workflow      String   @default("PENDING_REVIEW") // PENDING_REVIEW | IN_REVIEW | NEEDS_EVIDENCE | RETURNED | ESCALATED | RECOMMENDED | APPROVED | REJECTED
+  recommendation String? // RECOMMEND_APPROVE | RECOMMEND_REJECT
+  adminRejected Boolean  @default(false)
+  overrideJson  String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  decidedAt     DateTime?
+  documents     Document[]
+  events        ManuscriptEvent[]
+  checklist     ChecklistItem[]
+  actions       ReviewAction[]
+  letters       Letter[]
+  flags         ConsistencyFlag[]
+
+  @@index([workflow])
+  @@index([studentUserId])
+}
+
+model Document {
+  id            String   @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  docType       String
+  filename      String
+  mime          String
+  size          Int
+  storagePath   String
+  sha256        String
+  extractedText String?
+  extractionNote String?
+  fieldsJson    String   @default("{}")
+  fieldsReviewed Boolean  @default(false)
+  reviewedById  String?
+  uploadedById  String
+  createdAt     DateTime @default(now())
+}
+
+model ManuscriptEvent {
+  id            String   @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  type          String // SUBMITTED | UNDER_REVIEW | REVISION_REQUESTED | REVISION_SUBMITTED | ACCEPTED | PAYMENT_REQUESTED | PUBLISHED | OTHER
+  occurredAt    DateTime
+  note          String?
+  documentId    String?
+  createdById   String
+  createdAt     DateTime @default(now())
+}
+
+model ChecklistItem {
+  id            String   @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  docType       String
+  status        String // UNVERIFIED | MET | UNMET | NOT_APPLICABLE
+  note          String?
+  reviewedById  String?
+  updatedAt     DateTime @updatedAt
+
+  @@unique([applicationId, docType])
+}
+
+model ConsistencyFlag {
+  id            String   @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  documentId    String?
+  code          String
+  message       String
+  severity      String
+  state         String   @default("OPEN") // OPEN | CONFIRMED | DISMISSED
+  note          String?
+  resolvedById  String?
+  createdAt     DateTime @default(now())
+}
+
+model ReviewAction {
+  id            String   @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  action        String
+  actorId       String
+  actor         User     @relation(fields: [actorId], references: [id])
+  rationale     String
+  policyVersion Int
+  fromState     String
+  toState       String
+  createdAt     DateTime @default(now())
+}
+
+model Letter {
+  id             String   @id @default(cuid())
+  applicationId  String
+  application    Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  type           String // PRE_SUBMISSION | POST_ACCEPTANCE_PAYMENT
+  status         String   @default("DRAFT") // DRAFT | ISSUED | REVOKED
+  officialNumber String?
+  verifyToken    String   @unique
+  approverId     String?
+  approverName   String?
+  approverTitle  String?
+  approvedAt     DateTime?
+  snapshotJson   String   // isi surat yang dibekukan saat penerbitan (atau draf terbaru)
+  policyVersion  Int
+  createdById    String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Setting {
+  key       String   @id
+  valueJson String
+  updatedAt DateTime @updatedAt
+}
+
+model AuditLog {
+  id            String   @id @default(cuid())
+  actorId       String?
+  actorName     String
+  actorRole     String?
+  action        String
+  entity        String
+  entityId      String?
+  detailJson    String   @default("{}")
+  policyVersion Int?
+  createdAt     DateTime @default(now())
+
+  @@index([entity, entityId])
+  @@index([createdAt])
+}

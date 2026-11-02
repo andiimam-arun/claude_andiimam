@@ -1,0 +1,10 @@
+node_modules/
+.next/
+*.db
+*.db-journal
+storage*/
+.env
+test-results/
+playwright-report/
+*.tsbuildinfo
+next-env.d.ts
