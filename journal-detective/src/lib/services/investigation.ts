@@ -258,12 +258,15 @@ export async function runInvestigation(i: RunInput): Promise<InvestigationResult
   const verifiedDomains = new Set<string>();
   for (const e of all) if (e.key === "identity.official_domain" && e.status === "VERIFIED") for (const d of (e.data.domains ?? []) as string[]) { const r = registrableDomain(d); if (r) verifiedDomains.add(r); }
   for (const e of all) if (e.key === "hijack.website" && ["MATCHES_OFFICIAL", "AUTHORIZED_MIGRATION"].includes(e.data.relation) && e.status === "VERIFIED") for (const d of (e.data.officialDomains ?? []) as string[]) { const r = registrableDomain(d); if (r) verifiedDomains.add(r); }
+  // Insiden klon bersifat permanen pada paspor jurnal (tidak hilang saat penilaian berikutnya memakai situs resmi).
+  const priorWarnings = parseJson<string[]>(journal.knownWarningsJson, []).filter((w) => w.startsWith("clone_site:"));
+  const cloneWarn = decision.websiteStatus === "UNSAFE_CONFIRMED_CLONE" && i.identity.submittedWebsite ? [`clone_site:${registrableDomain(i.identity.submittedWebsite)}`] : [];
   const due = policy.config.reassessmentIntervalDays ? new Date(Date.now() + policy.config.reassessmentIntervalDays * 86_400_000) : null;
   await prisma.journal.update({
     where: { id: journal.id },
     data: {
       lastVerifiedAt: new Date(), verifiedDomainsJson: JSON.stringify([...verifiedDomains]), reassessDueAt: due,
-      knownWarningsJson: JSON.stringify(decision.reasons.filter((r) => r.level === "RED" || r.level === "YELLOW").map((r) => r.code)),
+      knownWarningsJson: JSON.stringify(Array.from(new Set([...priorWarnings, ...cloneWarn, ...decision.reasons.filter((r) => r.level === "RED" || r.level === "YELLOW").map((r) => r.code)]))),
       recordVersion: { increment: 0 },
     },
   });

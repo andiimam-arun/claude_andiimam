@@ -164,6 +164,7 @@ test("Journal Passport dan Riwayat Penilaian dapat dicari, ada jadwal validasi u
   await page.getByRole("button", { name: "Cari" }).click();
   await expect(page.getByRole("link", { name: /Jurnal Riset Kesehatan Nusantara/ }).first()).toBeVisible();
   await page.getByRole("link", { name: "Riwayat Penilaian" }).click();
+  await expect(page).toHaveURL(/\/assessments/);
   await page.fill('input[name="q"]', "jurnal-riset-kesehatam");
   await page.getByRole("button", { name: "Cari" }).click();
   await expect(page.getByText("jurnal-riset-kesehatam.example")).toBeVisible();

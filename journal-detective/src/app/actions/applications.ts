@@ -31,6 +31,8 @@ export async function createApplicationAction(form: FormData) {
 async function assertAccess(applicationId: string, user: { id: string; role: string }) {
   const app = await prisma.application.findUniqueOrThrow({ where: { id: applicationId } });
   if (user.role === "STUDENT" && app.studentUserId !== user.id) throw new Error("Tidak berwenang atas permohonan ini");
+  // Permohonan final dikunci: tidak ada perubahan tahap/bukti/dokumen setelah disetujui atau ditolak.
+  if (["APPROVED", "REJECTED"].includes(app.workflow)) throw new Error("Permohonan sudah final dan dikunci; tidak dapat diubah.");
   return app;
 }
 

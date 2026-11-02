@@ -96,6 +96,7 @@ async function main() {
   const offs = [75, 60, 50, 40, 30, 20, 12, 5, 1];
   for (let i = 0; i < apps.length; i++) await prisma.application.update({ where: { id: apps[i].id }, data: { createdAt: daysAgo(offs[i] ?? 1) } });
 
+  await prisma.journal.updateMany({ data: { isDemo: true } }); // seluruh jurnal seed FIKTIF
   await audit(A, "SEED_DEMO", "System", null, { note: "Data demonstrasi FIKTIF dimuat" });
   console.log(`Seed selesai. Pengguna demo (kata sandi dari DEMO_PASSWORD):\n  ${head.email} (Kepala Unit)\n  ${reviewer.email} (Peninjau)\n  ${admin.email} (Administrator)\n  ${student.email} (Mahasiswa)`);
 }

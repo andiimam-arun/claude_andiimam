@@ -19,13 +19,17 @@ export async function dashboardStats() {
   const latest = journals.map((j) => j.assessments[0]).filter(Boolean);
   const count = (s: string) => latest.filter((a) => a.journalStatus === s).length;
   const idxDist = new Map<string, number>();
-  let clones = 0;
   for (const a of latest) {
     const d = parseJson<JournalDecision | null>(a.decisionJson, null);
-    if (!d) continue;
-    idxDist.set(d.indexingStatus, (idxDist.get(d.indexingStatus) ?? 0) + 1);
-    if (d.websiteStatus === "UNSAFE_CONFIRMED_CLONE") clones++;
+    if (d) idxDist.set(d.indexingStatus, (d.indexingStatus ? (idxDist.get(d.indexingStatus) ?? 0) : 0) + 1);
   }
+  // Insiden klon dihitung dari SEMUA penilaian (jurnal + domain unik), bukan hanya penilaian terakhir per jurnal.
+  const incidents = new Set<string>();
+  for (const a of assessments) {
+    const d = parseJson<JournalDecision | null>(a.decisionJson, null);
+    if (d?.websiteStatus === "UNSAFE_CONFIRMED_CLONE") incidents.add(`${a.journalId}|${a.submittedDomain}`);
+  }
+  const clones = incidents.size;
   const months: Record<string, number> = {};
   const now = new Date();
   for (let i = 5; i >= 0; i--) months[monthKey(new Date(now.getFullYear(), now.getMonth() - i, 1))] = 0;

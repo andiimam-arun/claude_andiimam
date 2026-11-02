@@ -84,6 +84,10 @@ describe("Case C/H pada tingkat layanan — situs klon", () => {
     expect(ev.journal!.websiteStatus).toBe("UNSAFE_CONFIRMED_CLONE");
     expect(ev.final!.status).toBe("RED");
     expect(ev.final!.hardBlock).toBe(true);
+    // insiden klon permanen pada paspor jurnal walau penilaian berikutnya memakai situs resmi
+    await runInvestigation({ identity: { title: "Jurnal Aktif Uji (FIKTIF)", altTitles: [], issn: "9900-0016", subjects: [], claimedIndexing: [], submittedWebsite: "https://aktif-uji.example" }, actor: reviewer });
+    const jr = await prisma.journal.findUniqueOrThrow({ where: { id: app.journalId! } });
+    expect(parseJson<string[]>(jr.knownWarningsJson, []).some((w) => w.startsWith("clone_site:"))).toBe(true);
     await expect(performReviewAction({ applicationId: app.id, actor: head, action: "APPROVE", rationale: "Mencoba override klon dengan justifikasi panjang." })).rejects.toThrow(/diblokir/);
     await expect(performReviewAction({ applicationId: app.id, actor: head, action: "APPROVE", rationale: "Mencoba override klon dengan justifikasi panjang." })).rejects.toBeInstanceOf(ActionError);
   });
@@ -119,6 +123,18 @@ describe("Case I — penerbitan surat resmi", () => {
     expect(v?.status).toBe("ISSUED");
     expect(v?.studentMasked).toBe("Mahasiswa U***"); // nama dimasking
     await expect(issueLetter(lid, head, "UJI/002/2026")).rejects.toThrow(/bukan berstatus draf/);
+    // watermark: draf memuat teks DRAF, surat terbit tidak; surat terbit memuat nomor resmi
+    const { PDFParse } = await import("pdf-parse");
+    const textOf = async (b: Uint8Array) => { const pr = new PDFParse({ data: b }); const r = await pr.getText(); await pr.destroy(); return r.text; };
+    const snap = JSON.parse(issued.snapshotJson);
+    const draftPdf = await renderLetterPdf({ snapshot: snap, status: "DRAFT", officialNumber: null, approverName: null, approverTitle: null, approvedAt: null, verifyUrl: null });
+    const issuedPdf = await renderLetterPdf({ snapshot: snap, status: "ISSUED", officialNumber: issued.officialNumber, approverName: issued.approverName, approverTitle: issued.approverTitle, approvedAt: issued.approvedAt, verifyUrl: "http://x/verify/t" });
+    const dt = await textOf(draftPdf);
+    expect(dt).toContain("DRAF - BELUM DISETUJUI");
+    expect(dt).toContain("NOMOR SURAT RESMI");
+    const it = await textOf(issuedPdf);
+    expect(it).not.toContain("DRAF - BELUM DISETUJUI");
+    expect(it).toContain("UJI/001/2026");
     const act = await prisma.reviewAction.findMany({ where: { applicationId: app.id } });
     expect(act.every((a) => a.policyVersion >= 1 && a.rationale.length >= 10)).toBe(true);
   });
@@ -209,5 +225,46 @@ describe("keamanan: unggahan, SSRF, ekstraksi", () => {
     expect(ev.administrative.status).toBe("RED");
     expect(ev.final!.journalStatus).toBe("GREEN"); // RED administratif ≠ jurnal curang
     expect(ev.final!.status).toBe("RED");
+  });
+});
+
+describe("audit Fase 1 — celah material", () => {
+  it("persetujuan memakai penilaian yang divalidasi ulang: klon yang dikonfirmasi SETELAH penilaian tetap memblokir", async () => {
+    const app = await createApplication(form({ journalUrl: "https://beda-total-uji.example" }), student, student.id);
+    expect((await evaluateApplication(app)).final!.status).toBe("YELLOW"); // dugaan, belum dikonfirmasi
+    const e = await prisma.evidence.findFirstOrThrow({ where: { assessmentId: app.assessmentId!, key: "hijack.website" } });
+    await reviewEvidence({ journalId: app.journalId!, fingerprint: e.fingerprint, decision: "CONFIRMED", note: "Dikonfirmasi klon setelah penilaian awal", actor: reviewer });
+    // penilaian tersimpan masih lama (KUNING) — tetapi persetujuan harus tetap diblokir
+    await expect(performReviewAction({ applicationId: app.id, actor: head, action: "APPROVE", rationale: "Justifikasi panjang yang seharusnya tidak berlaku." })).rejects.toThrow(/diblokir/);
+    const fresh = await prisma.application.findUniqueOrThrow({ where: { id: app.id } });
+    expect(fresh.workflow).not.toBe("APPROVED");
+  });
+  it("impor XLSX berfungsi dan mencatat baris", async () => {
+    const ExcelJS = (await import("exceljs")).default;
+    const wb = new ExcelJS.Workbook();
+    const ws = wb.addWorksheet("s");
+    ws.addRow(["Source Title", "Print-ISSN", "E-ISSN", "Active or Inactive", "Publisher's Name", "Sourceid"]);
+    ws.addRow(["Jurnal XLSX Uji (FIKTIF)", "9900-0059", "", "Active", "Penerbit XLSX", "333"]);
+    const buf = Buffer.from(await wb.xlsx.writeBuffer());
+    const ds = await importDataset({ kind: "SCOPUS_SOURCE_LIST", buffer: buf, filename: "s.xlsx", versionLabel: "xlsx uji", provenance: "fiktif uji", sourceDate: new Date(), isComplete: true, isDemo: true, actor: admin });
+    expect(ds.rowCount).toBe(1);
+    const r = await runInvestigation({ identity: { title: "Jurnal XLSX Uji (FIKTIF)", altTitles: [], issn: "9900-0059", subjects: [], claimedIndexing: [], submittedWebsite: null }, actor: reviewer });
+    expect(r.decision.indexingStatus).toBe("ACTIVE_VERIFIED");
+    expect(r.decision.indexingBasis).toBe("IMPORTED_DATA");
+  });
+  it("ekstraksi teks dari PDF sungguhan dan koreksi manusia", async () => {
+    const { PDFDocument, StandardFonts } = await import("pdf-lib");
+    const doc = await PDFDocument.create();
+    const page = doc.addPage();
+    const font = await doc.embedFont(StandardFonts.Helvetica);
+    page.drawText("Manuscript ID: PDF-777", { x: 50, y: 700, size: 12, font });
+    page.drawText("Title: Naskah PDF Uji Ekstraksi Otomatis", { x: 50, y: 680, size: 12, font });
+    page.drawText("ISSN 9900-0016", { x: 50, y: 660, size: 12, font });
+    const bytes = Buffer.from(await doc.save());
+    const app = await createApplication(form({ stage: "SUBMITTED", submissionDate: "2026-07-01" }), student, student.id);
+    const d = await uploadDocument({ applicationId: app.id, docType: "SUBMISSION_ACK", filename: "ack.pdf", data: bytes, actor: student });
+    expect(d.extractedText).toContain("PDF-777");
+    expect(parseJson<any>(d.fieldsJson, {}).manuscriptId).toBe("PDF-777");
+    expect(d.fieldsReviewed).toBe(false); // belum ditinjau manusia
   });
 });

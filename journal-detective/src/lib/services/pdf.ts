@@ -70,9 +70,9 @@ class Writer {
 }
 
 function watermark(p: PDFPage, font: PDFFont, label: string) {
-  const size = 62;
+  const size = 46;
   const w = font.widthOfTextAtSize(label, size);
-  p.drawText(label, { x: 595.28 / 2 - (w / 2) * Math.cos(Math.PI / 4) + 40, y: 841.89 / 2 - (w / 2) * Math.sin(Math.PI / 4) - 40, size, font, color: rgb(0.85, 0.15, 0.15), opacity: 0.16, rotate: degrees(45) });
+  p.drawText(label, { x: 595.28 / 2 - (w / 2) * Math.cos(Math.PI / 4), y: 841.89 / 2 - (w / 2) * Math.sin(Math.PI / 4), size, font, color: rgb(0.85, 0.15, 0.15), opacity: 0.16, rotate: degrees(45) });
 }
 
 export interface LetterPdfInput {

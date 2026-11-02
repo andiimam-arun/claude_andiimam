@@ -23,9 +23,15 @@ export async function performReviewAction(opts: { applicationId: string; actor: 
   const rationale = opts.rationale.trim();
   if (!canPerform(actor.role, action)) throw new ActionError(ERR.ROLE_NOT_ALLOWED);
   if (rationale.length < 10) throw new ActionError("Alasan/rasional minimal 10 karakter wajib diisi.");
-  const app = await prisma.application.findUniqueOrThrow({ where: { id: applicationId } });
+  let app = await prisma.application.findUniqueOrThrow({ where: { id: applicationId } });
   const from = app.workflow as WorkflowState;
   if (TERMINAL_STATES.includes(from)) throw new ActionError(ERR.ALREADY_FINAL);
+  // Keputusan akhir selalu memakai penilaian jurnal yang DIVALIDASI ULANG saat ini, agar bukti/konfirmasi yang masuk
+  // setelah penilaian lama (mis. klon dikonfirmasi) tidak terlewat. Hanya untuk pejabat yang berwenang menyetujui.
+  if (action === "APPROVE" && canPerform(actor.role, "APPROVE")) {
+    await reassessApplicationJournal(applicationId, actor);
+    app = await prisma.application.findUniqueOrThrow({ where: { id: applicationId } });
+  }
   const policy = await getActivePolicy();
   const evaln = await evaluateApplication(app);
   let overrideJson: string | null = null;

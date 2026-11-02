@@ -58,13 +58,16 @@ Case I (administrator tidak bisa menerbitkan surat resmi) didemonstrasikan lewat
 ```bash
 npm run typecheck
 npm run lint
-npm test                                    # vitest: mesin keputusan (Case A–I), layanan, keamanan, i18n
+npm test                                    # vitest (56): mesin keputusan (Case A–I), layanan, keamanan, i18n
 PW_CHROMIUM=/path/ke/chromium npm run test:e2e   # Playwright (membangun & menjalankan app pada port 3100 dengan DB e2e)
 ```
 `PW_CHROMIUM` hanya perlu bila versi browser Playwright terpasang berbeda.
 
 ## Konfigurasi (`.env`)
 Lihat `.env.example`. Rahasia hanya di server; tidak ada kunci di sisi browser. `SCOPUS_API_KEY` dan `ANTHROPIC_API_KEY` opsional (kosong = fitur nonaktif dan ditampilkan sebagai UNAVAILABLE). `DISABLE_EXTERNAL_LOOKUPS=1` mematikan panggilan ke Crossref/DOAJ.
+
+## Audit penerimaan
+Laporan audit Fase 1, klasifikasi persyaratan, dan langkah validasi manual: [docs/ACCEPTANCE_REPORT.md](docs/ACCEPTANCE_REPORT.md).
 
 ## Status & keterbatasan
 **Berfungsi (Fase 1):** dasbor responsif, investigasi jurnal 6 pemeriksaan, **Journal Passport** (registri jurnal + jadwal validasi ulang), halaman **Riwayat Penilaian** yang bisa dicari, impor Scopus/SCImago/Beall/daftar-dibajak (CSV/XLSX, dengan asal-usul & versi), bukti manual terdokumentasi, mesin keputusan berbasis aturan, laporan PDF, formulir permohonan + unggah bukti + ekstraksi teks PDF/TXT/EML, tanda ketidakkonsistenan, daftar periksa & linimasa, tinjauan manusia + enam aksi, surat klirens (draf berwatermark, PDF, QR verifikasi publik), kebijakan berversi, audit log, peran & otorisasi, DOAJ & Crossref (API publik).
@@ -73,7 +76,7 @@ Lihat `.env.example`. Rahasia hanya di server; tidak ada kunci di sisi browser. 
 - Scopus Serial Title API: kode ada namun **belum diuji terhadap API langsung** (butuh kunci berlisensi); status diturunkan dari tahun cakupan dan selalu butuh konfirmasi manusia.
 - SCImago, Retraction Watch Hijacked Journal Checker, Beall: **tidak ada integrasi langsung** (tanpa scraping); gunakan impor sah atau bukti manual.
 - OCR gambar belum tersedia (PNG/JPG disimpan; kolom diisi manual). Ekstraksi DOCX belum ada.
-- Panggilan DOAJ/Crossref **tidak dapat diverifikasi hidup di lingkungan pembangunan** (jaringan terbatas); adapter diuji pada jalur UNAVAILABLE.
+- Panggilan DOAJ/Crossref **tidak pernah terbukti hidup**: egress lingkungan pembangunan menolak host tersebut (403); adapter hanya teruji pada jalur UNAVAILABLE/ERROR. Lihat `docs/ACCEPTANCE_REPORT.md`.
 - Tanda tangan elektronik tersertifikasi belum terintegrasi (ada placeholder). Nomor surat resmi selalu dimasukkan manusia.
 - Ringkasan AI (opsional) belum diuji dengan layanan langsung; tidak pernah memengaruhi status.
 - Teks alasan/antarmuka dwibahasa; narasi bukti otomatis & templat surat berbahasa Indonesia (templat dapat disunting).
