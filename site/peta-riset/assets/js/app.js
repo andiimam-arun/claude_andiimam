@@ -11,7 +11,7 @@
       title: "Peta Riset Unhas", lede: "Temukan peneliti dan kelompok riset tematik (TRG) Universitas Hasanuddin berdasarkan nama, keahlian, dan tema riset.",
       searchLabel: "Cari ahli", searchPh: "Cari nama, keahlian, atau TRG: kakao, malaria, hukum pidana", searchBtn: "Cari",
       kTrg: "TRG", kPeople: "Peneliti", kLead: "TRG dengan ketua terbaca", kPapers: "Artikel tercatat",
-      tabLuar: "Pakar di luar TRG", fLuar: "Cari pakar", fBidang: "Bidang", allFields: "Semua bidang",
+      tabLuar: "Pakar di luar TRG", fLuar: "Cari pakar", fBidang: "Bidang", fSolo: "Hanya yang berafiliasi Unhas saja", otherAff: "Afiliasi lain", allFields: "Semua bidang",
       oaLine: function (m) { return "OpenAlex: h-index " + m.h + " · " + fmt(m.s) + " sitasi · " + fmt(m.k) + " karya"; },
       luarNote: function (o) { return "Penulis berafiliasi Unhas di OpenAlex yang belum tercatat di TRG manapun (" + fmt(o.n_luar_trg) + " dengan minimal 5 karya). Pencocokan memakai ORCID, Scopus ID, lalu nama; profil otomatis OpenAlex dapat keliru atau terpecah, jadi gunakan sebagai petunjuk, bukan data resmi. Sumber: OpenAlex (CC0), " + o.dibuat + "."; },
       luarShowing: function (a, b) { return "Menampilkan " + a + " dari " + b + " pakar"; }, luarNone: "Tidak ada pakar yang cocok.", luarBars: "Penulis per bidang utama (di TRG / di luar TRG)", inTrgN: "di TRG", outTrgN: "di luar TRG",
@@ -42,7 +42,7 @@
       title: "Unhas Research Map", lede: "Find researchers and Thematic Research Groups (TRGs) at Hasanuddin University by name, expertise, and research theme.",
       searchLabel: "Find an expert", searchPh: "Search name, expertise, or TRG: cocoa, malaria, criminal law", searchBtn: "Search",
       kTrg: "TRGs", kPeople: "Researchers", kLead: "TRGs with a leader listed", kPapers: "Recorded articles",
-      tabLuar: "Experts outside TRGs", fLuar: "Search experts", fBidang: "Field", allFields: "All fields",
+      tabLuar: "Experts outside TRGs", fLuar: "Search experts", fBidang: "Field", fSolo: "Unhas-only affiliation", otherAff: "Other affiliations", allFields: "All fields",
       oaLine: function (m) { return "OpenAlex: h-index " + m.h + " · " + fmt(m.s) + " citations · " + fmt(m.k) + " works"; },
       luarNote: function (o) { return "Unhas-affiliated authors in OpenAlex who are not listed in any TRG (" + fmt(o.n_luar_trg) + " with at least 5 works). Matching uses ORCID, Scopus ID, then name; OpenAlex's automatic profiles can be wrong or split, so treat this as a lead, not an official record. Source: OpenAlex (CC0), " + o.dibuat + "."; },
       luarShowing: function (a, b) { return "Showing " + a + " of " + b + " experts"; }, luarNone: "No matching experts.", luarBars: "Authors by primary field (in TRG / outside TRG)", inTrgN: "in a TRG", outTrgN: "outside TRGs",
@@ -100,7 +100,7 @@
 
   var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null };
   var tagById = {}, trgBySlug = {}, haystack = [], kwByTerm = {}, insTema = {};
-  var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", llimit: PAGE,
+  var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", lsolo: true, llimit: PAGE,
             tq: "", tk: "", tsort: "nama", kw: "", netMin: 3, sel: "" };
   var T = function () { return I18N[S.lang]; };
   var fmt = function (n) { return new Intl.NumberFormat(S.lang === "en" ? "en" : "id-ID").format(n); };
@@ -262,12 +262,14 @@
     var q = norm(S.lq).split(/\s+/).filter(Boolean), f = S.lf;
     var rows = o.luar_trg.filter(function (x) {
       if (f && x.b.indexOf(f) < 0) return false;
+      if (S.lsolo && !x.u) return false;
       var h = norm(x.nama + " " + x.b.join(" ") + " " + x.t.join(" ")); return q.every(function (w) { return h.indexOf(w) >= 0; });
     }), shown = rows.slice(0, S.llimit);
     $("#l-cards").replaceChildren.apply($("#l-cards"), shown.map(function (x) {
       var li = el("li", "person"); li.appendChild(el("h3", null, x.nama)); li.appendChild(el("p", "oaline", t.oaLine(x)));
       if (x.b.length) li.appendChild(chipList(t.fBidang, x.b.map(function (b) { return el("span", "chip theme", b); })));
       if (x.t.length) li.appendChild(el("p", "expertise", x.t.join("; ")));
+      if (x.x && x.x.length) li.appendChild(el("p", "muted", t.otherAff + ": " + x.x.join("; ")));
       var ids = el("div", "ids"), add = function (l, u) { var a = el("a", null, l); a.href = u; a.target = "_blank"; a.rel = "noopener"; ids.appendChild(a); };
       add("OpenAlex", "https://openalex.org/authors/" + encodeURIComponent(x.oa)); if (x.orcid) add("ORCID", "https://orcid.org/" + encodeURIComponent(x.orcid)); li.appendChild(ids); return li;
     }));
@@ -452,6 +454,7 @@
     $("#more").addEventListener("click", function () { S.limit += PAGE; renderSearch(); });
     $("#l-q").addEventListener("input", function (e) { S.lq = e.target.value; S.llimit = PAGE; renderLuar(); });
     $("#l-bidang").addEventListener("change", function (e) { S.lf = e.target.value; S.llimit = PAGE; renderLuar(); });
+    $("#l-solo").addEventListener("change", function (e) { S.lsolo = e.target.checked; S.llimit = PAGE; renderLuar(); });
     $("#l-more").addEventListener("click", function () { S.llimit += PAGE; renderLuar(); });
     $("#t-q").addEventListener("input", function (e) { S.tq = e.target.value; renderTrg(); });
     $("#t-klaster").addEventListener("change", function (e) { S.tk = e.target.value; renderTrg(); });

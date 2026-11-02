@@ -129,6 +129,16 @@
             "items": {
               "type": "string"
             }
+          },
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "u": {
+            "type": "integer",
+            "minimum": 0
           }
         }
       }

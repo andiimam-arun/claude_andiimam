@@ -38,5 +38,6 @@ tj = list(csv.DictReader(open(f"{oa}/tinjau.csv", encoding="utf-8"))); assert {t
 allr = {x["nama"]: x for x in csv.DictReader(open(f"{oa}/pakar_openalex.csv", encoding="utf-8"))}
 assert allr["Mock Author7 Unhas"]["status"] == "tinjau"
 assert j["n_luar_trg"] > 100 and all(x["k"] >= 5 for x in j["luar_trg"]) and j["luar_trg"][0]["h"] >= j["luar_trg"][-1]["h"], "daftar di luar TRG salah"
+assert all(x["u"] == 1 and x["x"] == [] for x in j["luar_trg"]), "afiliasi tunggal harus u=1"
 assert not ({"P00001", "P00002"} & {x["oa"] for x in j["luar_trg"]}) and len(j["bidang"]) == 3
 print("OK | penulis", j["n_penulis"], "| cocok", j["n_cocok"], "| ambigu", j["n_tinjau"], "| di luar TRG", j["n_luar_trg"], "| putaran 2: 0 HTTP")

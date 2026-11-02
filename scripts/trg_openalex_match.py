@@ -15,7 +15,7 @@ Keluaran:
 import argparse, csv, datetime, json, os, re, collections as C
 
 ap = argparse.ArgumentParser(); ap.add_argument("--oa", default="data/openalex"); ap.add_argument("--data", default=os.environ.get("TRG_DATA", "data/trg"))
-ap.add_argument("--site", default="site/peta-riset/data"); ap.add_argument("--min-karya", type=int, default=5); ap.add_argument("--maks-luar", type=int, default=1500)
+ap.add_argument("--site", default="site/peta-riset/data"); ap.add_argument("--min-karya", type=int, default=5); ap.add_argument("--maks-luar", type=int, default=3000)
 a = ap.parse_args()
 R = lambda p: list(csv.DictReader(open(p, encoding="utf-8")))
 oa = R(f"{a.oa}/penulis_unhas.csv"); people = R(f"{a.data}/peneliti_unik.csv")
@@ -62,6 +62,7 @@ write(f"{a.oa}/tinjau.csv", ["openalex_author", "nama_openalex", "karya", "sitas
 
 num = lambda x: int(float(x)) if str(x).strip() not in ("", "None") else 0
 bid = lambda r: [b for b in r["bidang"].split(" | ") if b]
+lain = lambda r: [i for i in r["institusi_terakhir"].split(" | ") if i and "hasanuddin" not in i.lower()]     # afiliasi selain Unhas (kolaborator asing sering berafiliasi ganda)
 metrik = {pid: dict(oa=r["openalex_author"], h=num(r["h_index"]), s=num(r["sitasi"]), k=num(r["karya"]), b=bid(r)[:3], d=d) for pid, (r, d) in matched.items()}
 luar = sorted((r for r in oa if r["status"] == "belum_di_trg"), key=lambda r: (-num(r["h_index"]), -num(r["sitasi"])))
 fields = C.defaultdict(lambda: dict(n_penulis=0, sitasi=0, di_trg=0, luar_trg=0))
@@ -71,7 +72,7 @@ for r in oa:
         f = fields[b]; f["n_penulis"] += 1; f["sitasi"] += num(r["sitasi"]); f["di_trg" if r["status"] == "cocok" else "luar_trg"] += 1
 out = dict(dibuat=datetime.date.today().isoformat(), sumber="OpenAlex (CC0)", institusi="Universitas Hasanuddin (I98301867)",
            n_penulis=len(oa), n_cocok=len(metrik), n_tinjau=len({t["openalex_author"] for t in tinjau}), n_luar_trg=len(luar),
-           metrik=metrik, luar_trg=[dict(oa=r["openalex_author"], nama=r["nama"], orcid=r["orcid"], h=num(r["h_index"]), s=num(r["sitasi"]), k=num(r["karya"]), b=bid(r)[:3], t=r["topik"].split(" | ")[:4]) for r in luar[:a.maks_luar]],
+           metrik=metrik, luar_trg=[dict(oa=r["openalex_author"], nama=r["nama"], orcid=r["orcid"], h=num(r["h_index"]), s=num(r["sitasi"]), k=num(r["karya"]), b=bid(r)[:3], t=r["topik"].split(" | ")[:4], x=lain(r)[:3], u=int(not lain(r))) for r in luar[:a.maks_luar]],
            bidang=sorted(([dict(nama=k, **v) for k, v in fields.items()]), key=lambda x: -x["sitasi"]))
 os.makedirs(a.site, exist_ok=True)
 json.dump(out, open(f"{a.site}/openalex.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
