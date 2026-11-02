@@ -1,225 +1,226 @@
 slug,nama,artikel,tercocok,bertindeks,Q1,Q2,Q3,Q4,Q12,Q12_pct_bertindeks,cakupan_pct
 bionanocomposite,Bionanocomposite Research Group,109,108,108,81,25,2,0,106,98,99
+ufrg,Unhas Fly Research Group,98,80,64,43,10,11,0,53,83,82
 dtdds,Transdermal and Transmucosal Drug Delivery Research Group,50,50,49,31,12,5,1,43,88,100
-cul-tor,Cultural Tourism Research Group,72,47,32,27,2,3,0,29,91,65
-fis-rg,Forensic & Investigative Sciences Research Group,76,43,33,18,9,3,3,27,82,57
-ufrg,Unhas Fly Research Group,98,39,29,21,6,2,0,27,93,40
-womenhealth-con,Women\'s Health Concern Research Group,102,89,59,3,21,32,3,24,41,87
+cul-tor,Cultural Tourism Research Group,72,61,35,28,2,4,1,30,86,85
+fis-rg,Forensic & Investigative Sciences Research Group,76,57,38,20,9,3,6,29,76,75
+womenhealth-con,Women\'s Health Concern Research Group,103,100,66,4,22,34,6,26,39,97
+respobio,Research Group For Post-Harvest Technology and Biotechnology,27,25,24,20,0,2,2,20,83,93
 functionallygm,Functionally Graded Materials Research Group,22,21,21,9,10,1,1,19,90,95
-bione-rg,Biopesticides and Natural Enemies Research Group,53,49,27,7,9,6,5,16,59,92
-malvecsis,Malaria and Vector Resistance Research Group,23,21,19,12,3,2,2,15,79,91
+eaging,Enhancement Healthy Aging,32,29,25,5,12,5,3,17,68,91
+malvecsis,Malaria and Vector Resistance Research Group,23,23,21,13,4,2,2,17,81,100
+food-crops,Food Crops Value Chain Research Group,38,32,19,10,7,1,1,17,89,84
+bione-rg,Biopesticides and Natural Enemies Research Group,53,50,27,7,9,6,5,16,59,94
 ioprg,Industrial and Organizational Psychology Research Group,17,16,16,9,6,1,0,15,94,94
-eaging,Enhancement Healthy Aging,32,24,20,3,11,3,3,14,70,75
-food-crops,Food Crops Value Chain Research Group,38,28,16,8,6,1,1,14,88,74
-feedtech,Feed Technology and Industry Research Group,39,23,17,0,13,4,0,13,76,59
-coastal-sr,Coastal Settlement Resilience Research Group,29,20,16,5,8,1,2,13,81,69
-sesreg,Seagrass Restoration & Ecosystem Services Research Group,33,25,16,10,2,4,0,12,75,76
+sesreg,Seagrass Restoration & Ecosystem Services Research Group,33,32,19,10,4,5,0,14,74,97
+coastal-sr,Coastal Settlement Resilience Research Group,29,23,17,6,8,1,2,14,82,79
+pednrg,Pediatric Nursing Research Group,49,41,20,2,11,5,2,13,65,84
+feedtech,Feed Technology and Industry Research Group,39,30,19,0,13,6,0,13,68,77
+tredic,Tropical Ecology and Biodiversity Conservation Research Group,31,21,18,9,4,2,3,13,72,68
+dreams,Drug Efficacy and Medication Safety Research Group,28,24,21,2,10,5,4,12,57,86
+nnrg,Neonatal Nursing Research Group,38,33,20,5,7,4,4,12,60,87
+nmhealthcare,Nursing Management & Healthcare Quality Research Group,52,42,17,4,8,3,2,12,71,81
+qft-rg,Quaternion Fourier Transform Research Group,25,23,17,0,12,3,2,12,71,92
 postharvest-me,Postharvest Metabo-Engineering Research Group,13,13,13,11,1,1,0,12,92,100
-nmhealthcare,Nursing Management & Healthcare Quality Research Group,52,35,15,3,8,3,1,11,73,67
-corn-rg,Corn Research Group,17,12,11,9,2,0,0,11,100,71
-qft-rg,Quaternion Fourier Transform Research Group,25,21,15,0,10,3,2,10,67,84
-dreams,Drug Efficacy and Medication Safety Research Group,28,16,13,2,8,2,1,10,77,57
+smsrg,Structural Maintenance and Strengthening Research Group,37,22,16,6,5,1,4,11,69,59
+sri,Sustainable and Resilient Infrastructure Research Group,28,18,12,4,7,1,0,11,92,64
+corn-rg,Corn Research Group,17,13,11,9,2,0,0,11,100,76
+lsfa-trg,Lobster Sustainable Fisheries and Aquaculture Research Group,34,32,24,9,1,8,6,10,42,94
+llgr-rg,Research Group of Local Livestock Genetic Resources,18,17,17,5,5,7,0,10,59,94
+cbmc,Chemical Biology and Medicinal Chemistry Research Group,16,14,14,6,4,1,3,10,71,88
+dfd-rg,Digital Forensic Dentistry Research Group,20,17,14,4,6,1,3,10,71,85
 csva,Precision Agriculture Research Group,19,14,13,9,1,1,2,10,77,74
-dfd-rg,Digital Forensic Dentistry Research Group,20,14,12,4,6,0,2,10,83,70
-respobio,Research Group For Post-Harvest Technology and Biotechnology,26,13,12,10,0,1,1,10,83,50
-tredic,Tropical Ecology and Biodiversity Conservation Research Group,31,13,12,7,3,0,2,10,83,42
-lsfa-trg,Lobster Sustainable Fisheries and Aquaculture Research Group,34,25,19,9,0,7,3,9,47,74
-nnrg,Neonatal Nursing Research Group,38,24,15,4,5,3,3,9,60,63
-pednrg,Pediatric Nursing Research Group,49,22,12,2,7,2,1,9,75,45
-cbmc,Chemical Biology and Medicinal Chemistry Research Group,16,11,11,6,3,1,1,9,82,69
+aphreg,Animal Production and Health Research Group,25,22,12,3,7,2,0,10,83,88
+biovax,Biovax TB Research Group,43,38,29,2,7,15,5,9,31,88
+hortibb,Horticultural Breeding and Biotechnology Research Group,39,25,19,3,6,9,1,9,47,64
+most-rg,Metabolism and Oxidative Stress Research Group,28,25,19,4,5,6,4,9,47,89
+nutrifeed,Poultry Nutrition and Feed Research Group,38,29,19,0,9,10,0,9,47,76
+aisrg,Agricultural Institution Strengthening Research Group,37,32,14,5,4,5,0,9,64,86
+float-struc,Floating Structure Research Group,24,16,13,1,8,2,2,9,69,67
+neuro-onc,Neuro-Oncology Nursing Researh Group,18,17,13,5,4,2,2,9,69,94
 rice-rg,Rice Research Group,12,10,9,5,4,0,0,9,100,83
-most-rg,Metabolism and Oxidative Stress Research Group,28,22,16,4,4,5,3,8,50,79
-nutrifeed,Poultry Nutrition and Feed Research Group,38,21,14,0,8,6,0,8,57,55
+amrg,Agricultural Mycology Research Group,43,42,22,5,3,9,5,8,36,98
+blu-eco,Blue Economics Research Group,47,40,12,4,4,4,0,8,67,85
+hncd-rg,Holistic Nursing For Chronic Diseases Research Group,13,11,10,4,4,1,1,8,80,85
+sop-land,Sub-optimal Land Agriculture Research Group,12,12,10,2,6,2,0,8,80,100
 govmo-soc,Government Modernization and Social Change Research Group,10,9,9,6,2,1,0,8,89,90
-sop-land,Sub-optimal Land Agriculture Research Group,12,11,9,2,6,1,0,8,89,92
-hrm,Human Resource Management and Behavioral Research Group,40,12,8,8,0,0,0,8,100,30
-wildev,Wildlife Ecology and Conservation Research Group,16,14,13,5,2,3,3,7,54,88
-neuro-onc,Neuro-Oncology Nursing Researh Group,18,11,9,5,2,0,2,7,78,61
-smsrg,Structural Maintenance and Strengthening Research Group,37,12,9,3,4,0,2,7,78,32
-sri,Sustainable and Resilient Infrastructure Research Group,28,9,7,3,4,0,0,7,100,32
-aisrg,Agricultural Institution Strengthening Research Group,37,27,10,4,2,4,0,6,60,73
-hortibb,Horticultural Breeding and Biotechnology Research Group,39,13,8,3,3,2,0,6,75,33
+hrm,Human Resource Management and Behavioral Research Group,40,18,8,8,0,0,0,8,100,45
+biodental-engineering,Biodental Engineering Research Group,28,20,13,4,3,5,1,7,54,71
+wildev,Wildlife Ecology and Conservation Research Group,16,15,13,5,2,3,3,7,54,94
+dims-rg,Digital Media and Society Research Group,13,10,10,6,1,3,0,7,70,77
+graphtheory,Graph Theory Research Group,11,11,10,3,4,2,1,7,70,100
+natural-drug,Natural Product Drug Discovery Research Group,17,12,10,5,2,2,1,7,70,71
+forestsociety,Forest and Society Research Group,9,8,7,7,0,0,0,7,100,89
+urbinfrastructur-r,Urban Infrastructure Resilience Research Group,17,15,7,3,4,0,0,7,100,88
+wasmalaw,Waste Management Law Research Group,14,13,7,5,2,0,0,7,100,93
+stochastic,Stochastic Modeling Research Group,56,39,17,4,2,5,6,6,35,70
+ihmrg,Integrated Health Modelling Research Group,42,42,12,5,1,2,4,6,50,100
+ddrg,Deforestation and Degradation Research Group,36,14,11,3,3,3,2,6,55,39
+karstbios,Karst Bioprospecting and Society Research Group,16,14,11,4,2,5,0,6,55,88
+v-mat,Vulnerable Maternity Nursing Research Group,13,11,11,5,1,4,1,6,55,85
+ammd,Applied Mechanics and Mechanical Design Research Group,13,10,10,1,5,3,1,6,60,77
+glohamod,Global Hazard Modelling Research Group,13,11,10,4,2,4,0,6,60,85
+f-analysis,Functional Analysis Research Group,11,9,9,0,6,2,1,6,67,82
+aio-rg,Advanced Imaging of Oromaxillofacial Research Group,16,15,8,1,5,2,0,6,75,94
+bus-trans,Business Transformation Research Group,15,14,8,1,5,1,1,6,75,93
 hospbiz,Hospital Business Development Research Group,12,10,8,2,4,1,1,6,75,83
-llgr-rg,Research Group of Local Livestock Genetic Resources,18,8,8,3,3,2,0,6,75,44
-aphreg,Animal Production and Health Research Group,25,13,7,2,4,1,0,6,86,52
-hncd-rg,Holistic Nursing For Chronic Diseases Research Group,11,7,7,2,4,0,1,6,86,64
+p-rg,Phytophthora Research Group,8,7,7,6,0,1,0,6,86,88
 marinenutraceutical,Marine Nutraceutical and Cosmeceutical Research Group,8,8,6,3,3,0,0,6,100,100
-biovax,Biovax TB Research Group,43,21,17,2,3,9,3,5,29,49
-amrg,Agricultural Mycology Research Group,35,33,14,4,1,7,2,5,36,94
-tfed,Tuna Fisheries and Economic Development Research Group,24,20,13,3,2,3,5,5,38,83
-idlfrg,Institutional Development of Livestock Farmers Research Group,17,12,12,1,4,6,1,5,42,71
-stochastic,Stochastic Modeling Research Group,56,29,12,3,2,4,3,5,42,52
-ddrg,Deforestation and Degradation Research Group,36,9,9,3,2,2,2,5,56,25
-float-struc,Floating Structure Research Group,24,10,9,1,4,2,2,5,56,42
-f-analysis,Functional Analysis Research Group,11,8,8,0,5,2,1,5,62,73
-biodental-engineering,Biodental Engineering Research Group,28,9,7,3,2,2,0,5,71,32
-karstbios,Karst Bioprospecting and Society Research Group,16,9,7,4,1,2,0,5,71,56
-aio-rg,Advanced Imaging of Oromaxillofacial Research Group,16,10,6,1,4,1,0,5,83,62
-blu-eco,Blue Economics Research Group,47,19,6,3,2,1,0,5,83,40
+renalnutrition,Nephro and Nutrition Research Group,21,20,18,2,3,1,12,5,28,95
+tfed,Tuna Fisheries and Economic Development Research Group,24,23,14,3,2,4,5,5,36,96
+idlfrg,Institutional Development of Livestock Farmers Research Group,17,14,13,1,4,7,1,5,38,82
+asds,Applied Statistics and Data Science Research Group,19,17,12,2,3,2,5,5,42,89
+ffbi,Fermented Food and Beverage Innovation Research Group,16,15,8,4,1,3,0,5,62,94
+medi-edu,Medical Education Research Group,14,12,8,5,0,1,2,5,62,86
+addis,Infectious Animal Disease Dynamic Research Group,12,10,7,0,5,2,0,5,71,83
+socialcap,Social Capital Research Group,10,9,7,4,1,0,2,5,71,90
+tnaq-rg,Transportation and Air Quality Research Group,33,22,7,1,4,1,1,5,71,67
+bisa,Biofilm Infection and Superbug Research Group,8,7,6,4,1,1,0,5,83,88
+mhsrg,Migration and Human Security,30,25,6,2,3,0,1,5,83,83
 msm-rg,Multifunctional Semiconductor Materials Research Group,6,6,6,4,1,1,0,5,83,100
-socialcap,Social Capital Research Group,10,8,6,4,1,0,1,5,83,80
-forestsociety,Forest and Society Research Group,7,6,5,5,0,0,0,5,100,86
-ohcirg,One Health For Costal and Island Research Group,6,5,5,1,4,0,0,5,100,83
-urbinfrastructur-r,Urban Infrastructure Resilience Research Group,17,12,5,2,3,0,0,5,100,71
-biochar,Biochar For Environmental Sustainability,29,27,25,0,4,15,6,4,16,93
-asds,Applied Statistics and Data Science Research Group,19,14,10,2,2,1,5,4,40,74
-ihmrg,Integrated Health Modelling Research Group,18,18,7,3,1,1,2,4,57,100
-v-mat,Vulnerable Maternity Nursing Research Group,13,7,7,4,0,2,1,4,57,54
-ethnicfood,Ethnic Food Research Group,18,12,6,2,2,2,0,4,67,67
-glohamod,Global Hazard Modelling Research Group,13,6,6,2,2,2,0,4,67,46
-natural-drug,Natural Product Drug Discovery Research Group,17,7,6,3,1,1,1,4,67,41
-dims-rg,Digital Media and Society Research Group,13,5,5,4,0,1,0,4,80,38
+ohcirg,One Health For Costal and Island Research Group,6,6,6,1,4,1,0,5,83,100
+etoxh,Environmental Toxicology and Health Reseach Group,6,5,5,3,2,0,0,5,100,83
+biochar,Biochar For Environmental Sustainability,29,28,26,0,4,16,6,4,15,97
+agribac,Agricultural Bacteriology Research Group,21,21,13,3,1,6,3,4,31,100
+se-ncd,Social Epidemiology of Non-Communicable-Disease Research Group,20,19,13,1,3,4,5,4,31,95
+eiarg,Environmental Impact Assessment Research Group,19,16,12,1,3,6,2,4,33,84
+press-ncd,Prevention Strategies For Ncd Research Group,26,23,12,4,0,5,3,4,33,88
+cocoa-rg,Cocoa Research Group,27,26,11,4,0,7,0,4,36,96
+mnprg,Metabolomics and Natural Products Research Group,14,10,9,3,1,5,0,4,44,71
+odfrg,Organic Dairy Farming Research Group,13,12,9,1,3,4,1,4,44,92
+corporate-gover,Corporate Governance Research Group,61,30,8,3,1,3,1,4,50,49
+nutriepi,Nutritional Epidemiology Research Group,8,7,7,3,1,0,3,4,57,88
+ethnicfood,Ethnic Food Research Group,18,13,6,2,2,2,0,4,67,72
+ggerg,Geotechnical and Geoenvironmental Research Group,6,6,6,4,0,2,0,4,67,100
+res-economics,Resource Economics Research Group,11,10,6,2,2,1,1,4,67,91
+c3rg,Climate Change and Coastal Resilience Research Group,6,6,5,1,3,0,1,4,80,100
+abdes,"Equine Breeding, Development, & Sustainability Research Group",8,6,5,3,1,0,1,4,80,75
+fprg,Fixed Point Research Group,6,6,5,0,4,0,1,4,80,100
 smes,Small and Medium Enterprise Research Group,9,8,5,0,4,1,0,4,80,89
-bus-trans,Business Transformation Research Group,15,7,4,1,3,0,0,4,100,47
-dynapop-maths,Mathematical Models In Dynamical Population,11,10,4,2,2,0,0,4,100,91
+cnrm,Conflict and Natural Resources Management Research Group,9,8,4,1,3,0,0,4,100,89
+dynapop-maths,Mathematical Models In Dynamical Population,12,12,4,2,2,0,0,4,100,100
 mpr,Medical Physics Research Group,14,14,4,1,3,0,0,4,100,100
-mhsrg,Migration and Human Security,30,16,4,2,2,0,0,4,100,53
-boneregeneration,Bone Regeneration Research Group,13,10,10,0,3,4,3,3,30,77
-cocoa-rg,Cocoa Research Group,27,23,8,3,0,5,0,3,38,85
-agribac,Agricultural Bacteriology Research Group,15,13,7,2,1,3,1,3,43,87
-odfrg,Organic Dairy Farming Research Group,10,9,7,1,2,3,1,3,43,90
-eiarg,Environmental Impact Assessment Research Group,18,8,6,1,2,3,0,3,50,44
-ffbi,Fermented Food and Beverage Innovation Research Group,11,8,6,2,1,3,0,3,50,73
-ammd,Applied Mechanics and Mechanical Design Research Group,13,5,5,0,3,1,1,3,60,38
-ggerg,Geotechnical and Geoenvironmental Research Group,5,5,5,3,0,2,0,3,60,100
-mnprg,Metabolomics and Natural Products Research Group,14,5,5,2,1,2,0,3,60,36
-res-economics,Resource Economics Research Group,10,8,5,1,2,1,1,3,60,80
-se-ncd,Social Epidemiology of Non-Communicable-Disease Research Group,20,11,5,1,2,2,0,3,60,55
-bisa,Biofilm Infection and Superbug Research Group,6,5,4,2,1,1,0,3,75,83
+afmrg,Advanced Functional Materials Research Group,52,51,20,1,2,11,6,3,15,98
+powersystems,Power Systems Research Group,34,21,16,2,1,8,5,3,19,62
+boneregeneration,Bone Regeneration Research Group,13,12,12,0,3,6,3,3,25,92
+coastaldw,Coastal Domestic Water Research Group,13,12,11,0,3,3,5,3,27,92
+futropicrops,Future-Fit Tropical Food Crops Research Group,15,14,11,1,2,6,2,3,27,93
+energy-e-conser,Energy Efficiency and Conservation Research Group,15,14,10,0,3,3,4,3,30,93
+dis-intel,Distributed Intelligence Research Group,20,16,9,1,2,4,2,3,33,80
+iorg,Immuno-Oncology Research Group,10,9,8,1,2,4,1,3,38,90
+naftech,Natural Fiber Technology Research Group,19,16,8,1,2,2,3,3,38,84
+victory,Victim Rights Protection and Recovery Research Group,43,24,8,1,2,5,0,3,38,56
+ais-rg,Accounting Information System Research Group,27,22,6,0,3,1,2,3,50,81
+marg,Maritime Anthropology Research Group,16,15,5,2,1,1,1,3,60,94
+multifor,Multiple-Use Forest Management Reserach Group,8,7,5,3,0,2,0,3,60,88
+neocare,Neonatal Care Research Group,10,8,5,0,3,2,0,3,60,80
+adhentisrg,Adhesive Dentistry Research Group,11,6,4,1,2,1,0,3,75,55
 datascienceai,Data Science and Artificial Intelligence Research Group,22,6,4,3,0,1,0,3,75,27
-energy-e-conser,Energy Efficiency and Conservation Research Group,15,4,4,0,3,0,1,3,75,27
-fprg,Fixed Point Research Group,6,5,4,0,3,0,1,3,75,83
 mvrg,Malaria Vaccine Research Group,4,4,4,0,3,1,0,3,75,100
 ngenergy,Nanogenerator Materials For Energy Harvesting Research Group,4,4,4,1,2,1,0,3,75,100
-nutriepi,Nutritional Epidemiology Research Group,6,4,4,2,1,0,1,3,75,67
+oralmicrobiome-rg,Oral Microbiome Research,7,5,4,0,3,1,0,3,75,71
+pmn-rg,Pain Management Nursing,11,7,4,0,3,1,0,3,75,64
+afdays,Advanced Facade and Daylighting Systems,12,10,3,0,3,0,0,3,100,83
 advfood,Advanced Food Processing Research Group,9,7,3,1,2,0,0,3,100,78
-medi-edu,Medical Education Research Group,14,4,3,3,0,0,0,3,100,29
-pmn-rg,Pain Management Nursing,11,4,3,0,3,0,0,3,100,36
-p-rg,Phytophthora Research Group,8,3,3,3,0,0,0,3,100,38
-renalnutrition,Nephro and Nutrition Research Group,20,11,10,1,1,1,7,2,20,55
-powersystems,Power Systems Research Group,34,11,8,1,1,4,2,2,25,32
-press-ncd,Prevention Strategies For Ncd Research Group,17,12,7,2,0,2,3,2,29,71
-dis-intel,Distributed Intelligence Research Group,20,10,6,0,2,3,1,2,33,50
-prg,Paleoenvironmental Research Group,26,15,6,2,0,2,2,2,33,58
-futropicrops,Future-Fit Tropical Food Crops Research Group,15,6,5,1,1,3,0,2,40,40
-graphtheory,Graph Theory Research Group,11,6,5,1,1,2,1,2,40,55
-naftech,Natural Fiber Technology Research Group,19,7,5,1,1,2,1,2,40,37
-smprg,Sustainable Metallurgical Process Research Group,11,9,5,1,1,2,1,2,40,82
-addis,Infectious Animal Disease Dynamic Research Group,12,7,4,0,2,2,0,2,50,58
+ctrg,Counter Terrorism Research Group,16,16,3,1,2,0,0,3,100,100
+flowliqtion,Flowslide and Liquefaction Research Group,8,6,3,3,0,0,0,3,100,75
+icchealth,Intersectionality of Climate Crisis and Health,5,3,3,2,1,0,0,3,100,60
+locwis,Local Culture and Wisdom Research Group,5,5,3,3,0,0,0,3,100,100
+mcrg,Manuscript and Culture Research Group,7,7,3,3,0,0,0,3,100,100
+mediacom,Media and Communication Research Group,4,4,3,1,2,0,0,3,100,100
+oeceng,Ocean Energy and Coastal Engineering Research Group,7,7,3,3,0,0,0,3,100,100
+rdrg,Regenerative Dentistry Research Group,3,3,3,2,1,0,0,3,100,100
+stepmic,Spatial Epidemiology and Syndemic Research Group,7,6,3,3,0,0,0,3,100,86
+smprg,Sustainable Metallurgical Process Research Group,20,20,8,1,1,3,3,2,25,100
+bite-fish,Biogeography and taxonomy Endemic Fishes Research Group,20,14,7,1,1,3,2,2,29,70
+dhrg,Digestive Health Research Group,9,7,7,0,2,5,0,2,29,78
+milkd,Milk and Diary Products Research Group,19,14,7,0,2,4,1,2,29,74
+multitrophic,Multitrophic Research Group,18,10,6,2,0,1,3,2,33,56
+prg,Paleoenvironmental Research Group,26,16,6,2,0,2,2,2,33,62
+fone-rg,Food Nutritional Enrichment Research Group,9,8,5,2,0,3,0,2,40,89
+lcpr-rg,Legal Protection of Children's Rights Research Group,18,18,5,0,2,3,0,2,40,100
+ocnrg,Obesity and Child Nutrition Research Group,8,5,5,0,2,2,1,2,40,62
+albiorg,Algal Biotechnology Research Group,8,7,4,2,0,2,0,2,50,88
+ecohealth,Environmental contamination and Health Risk Research Group,4,4,4,2,0,1,1,2,50,100
+finra,Financial Reporting and Accountability Research Group,9,7,4,0,2,2,0,2,50,78
+fdmrg,Flood Disaster Management Research Group,10,9,4,2,0,1,1,2,50,90
+marine-natural,Marine Natural Product Chemistry Research Group,5,5,4,0,2,1,1,2,50,100
+neurogenetics,Neurogenetics Research Group,5,4,4,2,0,0,2,2,50,80
 bcqlrg,Birth Cohort and Quality of Life Research Group,3,3,3,0,2,0,1,2,67,100
-coastaldw,Coastal Domestic Water Research Group,13,3,3,0,2,0,1,2,67,23
-abdes,"Equine Breeding, Development, & Sustainability Research Group",8,3,3,1,1,0,1,2,67,38
-marg,Maritime Anthropology Research Group,10,7,3,2,0,1,0,2,67,70
-multifor,Multiple-Use Forest Management Reserach Group,8,4,3,2,0,1,0,2,67,50
-ocnrg,Obesity and Child Nutrition Research Group,8,3,3,0,2,1,0,2,67,38
-oralmicrobiome-rg,Oral Microbiome Research,7,3,3,0,2,1,0,2,67,43
+core,Coastal Community Development Research Group,7,6,3,1,1,0,1,2,67,86
+crem,Critical and Rare-Earth Metals Research Group,9,7,3,1,1,1,0,2,67,78
+dgrg,Dairy Goat Research Group,8,8,3,2,0,1,0,2,67,100
 rene,Renewable Energy Research Group,8,6,3,1,1,1,0,2,67,75
-ais-rg,Accounting Information System Research Group,27,10,2,0,2,0,0,2,100,37
-apm,Accounting and Public Management Research Group,53,13,2,0,2,0,0,2,100,25
-adhentisrg,Adhesive Dentistry Research Group,11,2,2,1,1,0,0,2,100,18
-afdays,Advanced Facade and Daylighting Systems,12,7,2,0,2,0,0,2,100,58
-core,Coastal Community Development Research Group,7,3,2,1,1,0,0,2,100,43
-cnrm,Conflict and Natural Resources Management Research Group,8,3,2,0,2,0,0,2,100,38
-ctrg,Counter Terrorism Research Group,16,12,2,1,1,0,0,2,100,75
-crem,Critical and Rare-Earth Metals Research Group,6,3,2,1,1,0,0,2,100,50
-dege-rg,Development Economics and Gender Research Group,7,3,2,1,1,0,0,2,100,43
-etoxh,Environmental Toxicology and Health Reseach Group,6,2,2,1,1,0,0,2,100,33
-fsarg,Financial Statement Analysis Research Group,14,6,2,0,2,0,0,2,100,43
-islamicfrg,Islamic Economics and Finance Research Group,12,9,2,0,2,0,0,2,100,75
-marine-natural,Marine Natural Product Chemistry Research Group,5,2,2,0,2,0,0,2,100,40
-neocare,Neonatal Care Research Group,10,4,2,0,2,0,0,2,100,40
-neurogenetics,Neurogenetics Research Group,5,2,2,2,0,0,0,2,100,40
-oeceng,Ocean Energy and Coastal Engineering Research Group,7,4,2,2,0,0,0,2,100,57
-rdrg,Regenerative Dentistry Research Group,3,2,2,1,1,0,0,2,100,67
-tnaq-rg,Transportation and Air Quality Research Group,30,13,2,0,2,0,0,2,100,43
-wasmalaw,Waste Management Law Research Group,6,3,2,2,0,0,0,2,100,50
-afmrg,Advanced Functional Materials Research Group,52,28,11,0,1,8,2,1,9,54
+ropt,Resilience of Urban Public Transport Research Group,14,9,3,2,0,1,0,2,67,64
+apm,Accounting and Public Management Research Group,53,35,2,0,2,0,0,2,100,66
+constitution,Constitutional Convention and Democracy Research Group,3,3,2,1,1,0,0,2,100,100
+dege-rg,Development Economics and Gender Research Group,7,5,2,1,1,0,0,2,100,71
+fsarg,Financial Statement Analysis Research Group,14,10,2,0,2,0,0,2,100,71
+hes,Health and Safety Engineering Research Group,8,6,2,0,2,0,0,2,100,75
+islamicfrg,Islamic Economics and Finance Research Group,12,11,2,0,2,0,0,2,100,92
+sca,Research Group on Sustainability and Critical Accounting,7,7,2,2,0,0,0,2,100,100
+urbhealth,Urban Health and Healthy Cities Research Group,15,13,11,1,0,4,6,1,9,87
 fiterg,Fishing Technology Research Group,22,20,7,1,0,4,2,1,14,91
-bite-fish,Biogeography and taxonomy Endemic Fishes Research Group,20,11,5,0,1,3,1,1,20,55
-dhrg,Digestive Health Research Group,9,5,5,0,1,4,0,1,20,56
+fisher-g,Fish and Shellfish Diseases,7,6,6,0,1,4,1,1,17,86
+pbnp,Biocontrol and Natural Plant Product Research Group,25,17,5,1,0,4,0,1,20,68
+isoshrg,Informal-Sector Occupational Safety and Health Research Group,6,6,5,0,1,2,2,1,20,100
+imppd,Integrated Pest Disease Management,5,5,5,1,0,2,2,1,20,100
 lightweight-mat,Lightweight Material Research Group,11,10,5,0,1,2,2,1,20,91
-isoshrg,Informal-Sector Occupational Safety and Health Research Group,6,4,4,0,1,1,2,1,25,67
-imppd,Integrated Pest Disease Management,5,4,4,1,0,2,1,1,25,80
+ait,Applied Intelligent Technologies Research Group,16,15,4,0,1,2,1,1,25,94
+build-acoustics,Building Acoustics Research Group,16,13,4,0,1,0,3,1,25,81
+cyberiot,Cyber Resilience and Internet of Things Research Group,33,30,4,0,1,3,0,1,25,91
 nap,Noise and Air Pollution Research Group,10,10,4,0,1,1,2,1,25,100
-victory,Victim Rights Protection and Recovery Research Group,43,10,4,0,1,3,0,1,25,23
-albiorg,Algal Biotechnology Research Group,8,6,3,1,0,2,0,1,33,75
-corporate-gover,Corporate Governance Research Group,61,9,3,0,1,2,0,1,33,15
-cyberiot,Cyber Resilience and Internet of Things Research Group,33,22,3,0,1,2,0,1,33,67
 hvit-rg,High Voltage and Insulation Technology Research Group,4,4,3,0,1,2,0,1,33,100
-lcpr-rg,Legal Protection of Children's Rights Research Group,18,7,3,0,1,2,0,1,33,39
-milkd,Milk and Diary Products Research Group,19,7,3,0,1,1,1,1,33,37
-c3rg,Climate Change and Coastal Resilience Research Group,6,2,2,0,1,0,1,1,50,33
-finra,Financial Reporting and Accountability Research Group,9,5,2,0,1,1,0,1,50,56
-iorg,Immuno-Oncology Research Group,10,2,2,0,1,1,0,1,50,20
-mwm-rg,Malignant and Wound Management Research Group,6,2,2,1,0,1,0,1,50,33
+mwm-rg,Malignant and Wound Management Research Group,6,4,3,1,0,1,1,1,33,67
+srcrg,Shark and Ray Conservation Research Group,14,11,3,1,0,0,2,1,33,79
+bl-rg,Business Law Research Group,6,5,2,1,0,1,0,1,50,83
 marsplan,Marine Spatial Planning Research Group,6,6,2,1,0,1,0,1,50,100
+mrcrg,Mechatronic and Robotic Control Research Group,5,3,2,1,0,1,0,1,50,60
 msbd,Microfinance and Small Business Development Research Group,5,4,2,0,1,0,1,1,50,80
-multitrophic,Multitrophic Research Group,18,4,2,1,0,0,1,1,50,22
-ropt,Resilience of Urban Public Transport Research Group,14,2,2,1,0,1,0,1,50,14
-srcrg,Shark and Ray Conservation Research Group,14,6,2,1,0,0,1,1,50,43
-sqlm-rg,Soil Quality and Land Management Research Group,3,2,2,0,1,1,0,1,50,67
+sqlm-rg,Soil Quality and Land Management Research Group,2,2,2,0,1,1,0,1,50,100
+bstt-rg,Bone & Soft Tissue Tumor Reseach Group,1,1,1,0,1,0,0,1,100,100
 cava-rg,Cardiovascular Research Group,1,1,1,1,0,0,0,1,100,100
-constitution,Constitutional Convention and Democracy Research Group,3,1,1,0,1,0,0,1,100,33
-criminological,Criminological Justice Research Group,4,1,1,0,1,0,0,1,100,25
+cegorg,Clean Energy and Grid Optimization Research Group,1,1,1,1,0,0,0,1,100,100
+criminological,Criminological Justice Research Group,4,3,1,0,1,0,0,1,100,75
 drg,Disability Research Group,1,1,1,1,0,0,0,1,100,100
-ecohealth,Environmental contamination and Health Risk Research Group,4,1,1,1,0,0,0,1,100,25
-fdmrg,Flood Disaster Management Research Group,10,4,1,1,0,0,0,1,100,40
-flowliqtion,Flowslide and Liquefaction Research Group,6,3,1,1,0,0,0,1,100,50
-hes,Health and Safety Engineering Research Group,8,1,1,0,1,0,0,1,100,12
-icchealth,Intersectionality of Climate Crisis and Health,5,1,1,0,1,0,0,1,100,20
-locwis,Local Culture and Wisdom Research Group,4,3,1,1,0,0,0,1,100,75
-mcrg,Manuscript and Culture Research Group,2,2,1,1,0,0,0,1,100,100
-mrcrg,Mechatronic and Robotic Control Research Group,5,2,1,1,0,0,0,1,100,40
-mediacom,Media and Communication Research Group,4,2,1,0,1,0,0,1,100,50
-mhvp,Mental Health In Vulnerable Populations Research Group,11,6,1,1,0,0,0,1,100,55
+mhvp,Mental Health In Vulnerable Populations Research Group,11,8,1,1,0,0,0,1,100,73
 nifodi,Non-timber Forest Product Diversification Research Group,4,2,1,1,0,0,0,1,100,50
 oraclefrg,Orofacial Cleft Research Group,1,1,1,0,1,0,0,1,100,100
-periodontal,Periodontal Research Group,9,4,1,0,1,0,0,1,100,44
-psyling,Psycholinguistics Research Group,22,6,1,0,1,0,0,1,100,27
+periodontal,Periodontal Research Group,9,6,1,0,1,0,0,1,100,67
+pneumonia,Pneumonia Research Group,1,1,1,0,1,0,0,1,100,100
+psyling,Psycholinguistics Research Group,22,14,1,0,1,0,0,1,100,64
+rg2,Regulation and Governance Research Group,3,2,1,0,1,0,0,1,100,67
 safos,Sago For Food Security,3,3,1,1,0,0,0,1,100,100
-stepmic,Spatial Epidemiology and Syndemic Research Group,7,1,1,1,0,0,0,1,100,14
 se-engineering,Structural and Earthquake Engineering Research Group,1,1,1,0,1,0,0,1,100,100
-ambioc,Aquatic Macrofaunal Biodiversity and Conservation,6,6,4,0,0,4,0,0,0,100
-urbhealth,Urban Health and Healthy Cities Research Group,15,6,4,0,0,3,1,0,0,40
-fone-rg,Food Nutritional Enrichment Research Group,9,6,3,0,0,3,0,0,0,67
-ait,Applied Intelligent Technologies Research Group,16,10,2,0,0,1,1,0,0,62
-fortrebgen,Forest Tree Breeding and Genomics Research Group,12,4,2,0,0,2,0,0,0,33
+secrg,Forest Hydrology and Watershed Managment Research Group,12,12,10,0,0,10,0,0,0,100
+ambioc,Aquatic Macrofaunal Biodiversity and Conservation,10,10,8,0,0,7,1,0,0,100
+fortrebgen,Forest Tree Breeding and Genomics Research Group,12,9,4,0,0,2,2,0,0,75
+proagritech,Appropriate Agricultural Technology Research Group,8,7,3,0,0,3,0,0,0,88
+geosus,Geospatial For Sustainable Land Use,2,2,2,0,0,2,0,0,0,100
+livagri,Livestock Agribusiness Research Group,8,8,2,0,0,1,1,0,0,100
+ph-entomology,Public Health Entomology Research Group,3,3,2,0,0,0,2,0,0,100
 shrimpfarming,Shrimp Farming Research Group,2,2,2,0,0,0,2,0,0,100
-sophymicro,Soil Physics and Micromorphology Research Group,7,5,2,0,0,1,1,0,0,71
-wte,Waste to Energy Research Group,8,4,2,0,0,1,1,0,0,50
+sophymicro,Soil Physics and Micromorphology Research Group,8,7,2,0,0,1,1,0,0,88
+wte,Waste to Energy Research Group,8,5,2,0,0,1,1,0,0,62
 algebra,Algebra Research Group,2,2,1,0,0,0,1,0,0,100
-pbnp,Biocontrol and Natural Plant Product Research Group,25,12,1,0,0,1,0,0,0,48
-bl-rg,Business Law Research Group,6,1,1,0,0,1,0,0,0,17
-dgrg,Dairy Goat Research Group,8,4,1,0,0,1,0,0,0,50
-depadis,Democracy and Participation In Diverse Society Research Group,6,6,1,0,0,1,0,0,0,100
+depadis,Democracy and Participation In Diverse Society Research Group,7,7,1,0,0,1,0,0,0,100
 ermrg,Earth Resources Management Research Group,1,1,1,0,0,1,0,0,0,100
 ecofor,Ecotourism and Forest Biodiversity Research Group,6,5,1,0,0,1,0,0,0,83
-fisher-g,Fish and Shellfish Diseases,7,1,1,0,0,1,0,0,0,14
-secrg,Forest Hydrology and Watershed Managment Research Group,12,3,1,0,0,1,0,0,0,25
-geosus,Geospatial For Sustainable Land Use,1,1,1,0,0,1,0,0,0,100
-livagri,Livestock Agribusiness Research Group,8,5,1,0,0,1,0,0,0,62
-ncprg,Natural Coastal Protection Research Group,3,2,1,0,0,1,0,0,0,67
+farg,Forensic Accounting Research Group,10,7,1,0,0,1,0,0,0,70
+geriatricdentistry,Geriatric Dentistry Research Group,2,2,1,0,0,1,0,0,0,100
+ncprg,Natural Coastal Protection Research Group,3,3,1,0,0,1,0,0,0,100
 tila-techrg,Nile Tilapia Research Group,2,2,1,0,0,0,1,0,0,100
-ph-entomology,Public Health Entomology Research Group,3,2,1,0,0,0,1,0,0,67
 posbrg,Public Opinion and Social Behavior Riserearch Group,1,1,1,0,0,1,0,0,0,100
-adaptivepublic-orga,Adaptive Public Organization Research Group,2,2,0,0,0,0,0,0,,100
-proagritech,Appropriate Agricultural Technology Research Group,8,1,0,0,0,0,0,0,,12
+workfasma,Workplace Fatigue and Stress Management Research Group,4,3,1,0,0,0,1,0,0,75
+adaptivepublic-orga,Adaptive Public Organization Research Group,3,3,0,0,0,0,0,0,,100
 beefpro,Beef Cattle Productivity Research Group,1,0,0,0,0,0,0,0,,0
-bstt-rg,Bone & Soft Tissue Tumor Reseach Group,1,0,0,0,0,0,0,0,,0
-build-acoustics,Building Acoustics Research Group,16,6,0,0,0,0,0,0,,38
-cegorg,Clean Energy and Grid Optimization Research Group,1,0,0,0,0,0,0,0,,0
-dlp-rg,Disability Law and Policy Research Group,4,0,0,0,0,0,0,0,,0
-emccrg,Emerging Markets Cross-Cultural Research Group,5,1,0,0,0,0,0,0,,20
+dlp-rg,Disability Law and Policy Research Group,4,2,0,0,0,0,0,0,,50
+emccrg,Emerging Markets Cross-Cultural Research Group,5,2,0,0,0,0,0,0,,40
 ethno,Ethno-Literature Research Group,4,1,0,0,0,0,0,0,,25
-farg,Forensic Accounting Research Group,10,4,0,0,0,0,0,0,,40
-flcrg,French Linguistics and Culture Research Group,4,1,0,0,0,0,0,0,,25
-geriatricdentistry,Geriatric Dentistry Research Group,2,0,0,0,0,0,0,0,,0
-marketingbhvr,Marketing and Behavioral Research Group,4,1,0,0,0,0,0,0,,25
+flcrg,French Linguistics and Culture Research Group,4,4,0,0,0,0,0,0,,100
+marketingbhvr,Marketing and Behavioral Research Group,4,3,0,0,0,0,0,0,,75
 thecore,Microbiome Therapeutic Research Group,1,1,0,0,0,0,0,0,,100
-oilpalm,Oil Palm Research Group,2,0,0,0,0,0,0,0,,0
-cpcd,"Peace, Conflict, and Democracy Research Group",17,3,0,0,0,0,0,0,,18
-rg2,Regulation and Governance Research Group,3,0,0,0,0,0,0,0,,0
-sca,Research Group on Sustainability and Critical Accounting,2,1,0,0,0,0,0,0,,50
+oilpalm,Oil Palm Research Group,2,1,0,0,0,0,0,0,,50
+cpcd,"Peace, Conflict, and Democracy Research Group",17,9,0,0,0,0,0,0,,53
 swcerg,Soil and Water Conservation Engineering Research Group,3,2,0,0,0,0,0,0,,67
 torcg,Tropical Orchids and Horticulture Research Group,22,1,0,0,0,0,0,0,,5
-workfasma,Workplace Fatigue and Stress Management Research Group,4,1,0,0,0,0,0,0,,25
