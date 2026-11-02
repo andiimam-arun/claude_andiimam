@@ -12,9 +12,10 @@ W(f"{d}/artikel_metrik.csv", H, [(n(t1), 2022, "J1", "11111111", "", "doi"), (n(
 sj = os.path.join(tmp, "sjr.csv"); open(sj, "w", encoding="utf-8-sig").write('Rank;Title;Issn;SJR Best Quartile\n1;J1;"11111111";Q1\n2;J2;"22222223";Q2\n')
 r = subprocess.run([sys.executable, "-I", os.path.join(HERE, "..", "trg_kuartil_trg.py"), "--sjr", f"2025={sj}", "--data", d, "--site", site], capture_output=True, text=True); assert r.returncode == 0, r.stderr + r.stdout
 rows = {x["slug"]: x for x in csv.DictReader(open(f"{d}/trg_kuartil.csv", encoding="utf-8"))}
-a, b = rows["a"], rows["b"]
+a, b, c = rows["a"], rows["b"], rows["c"]
 assert (a["artikel"], a["tercocok"], a["Q1"], a["Q2"], a["Q12"]) == ("3", "2", "1", "1", "2"), a          # duplikat judul dihitung sekali; ISSN kedua (22222223) cocok
-assert (b["artikel"], b["tercocok"], b["bertindeks"], b["Q1"]) == ("2", "2", "1", "1"), b                  # 2015 di luar jendela 2020+; jurnal lokal tercocok tetapi tanpa kuartil
-assert "c" not in rows, "TRG tanpa tahun tidak boleh dihitung"
-j = json.load(open(f"{site}/kuartil.json", encoding="utf-8")); assert j["trg"]["a"]["q1"] == 1 and j["total"]["Q12"] == 3 and j["sjr_tahun"] == [2025], j
-print("OK | duplikat, ISSN ganda, jendela tahun, jurnal tanpa kuartil, TRG tanpa tahun")
+assert (b["artikel"], b["tercocok"], b["bertindeks"], b["Q1"]) == ("3", "3", "2", "2"), b                  # artikel 2015 ikut hitungan utama (kuartil jurnal saat ini); jurnal lokal tanpa kuartil
+assert (b["sejak2020_artikel"], b["sejak2020_bertindeks"], b["sejak2020_Q1"]) == ("2", "1", "1"), b        # jendela 2020+ dipisah
+assert c["artikel"] == "1" and c["tercocok"] == "0" and c["sejak2020_artikel"] == "0", c                    # tanpa tahun: dihitung di semua tahun, bukan di jendela
+j = json.load(open(f"{site}/kuartil.json", encoding="utf-8")); assert j["trg"]["b"]["q1"] == 2 and j["trg"]["b"]["r1"] == 1 and j["total"]["Q12"] == 4 and j["sjr_tahun"] == [2025], j
+print("OK | duplikat, ISSN ganda, semua tahun + jendela 2020+, jurnal tanpa kuartil, TRG tanpa tahun")

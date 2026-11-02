@@ -20,7 +20,7 @@
       allKlaster: "Semua klaster", allTema: "Semua tema", themeHead: "Peneliti menurut tema",
       themeNote: "Klik sebuah tema untuk melihat para penelitinya. Satu peneliti bisa masuk beberapa tema, jadi totalnya melebihi jumlah peneliti unik.",
       fTrg: "Cari TRG", fSort: "Urutkan", sName: "Nama", sPeople: "Jumlah peneliti", sPapers: "Jumlah artikel", sQ12: "Artikel Q1+Q2",
-      kqLine: function (k) { return "Q1+Q2: " + k.q12 + " dari " + k.i + " artikel bertindeks SJR (Q1 " + k.q1 + ", Q2 " + k.q2 + "; " + k.c + " dari " + k.n + " artikel tercocok)"; },
+      kqLine: function (k) { return "Q1+Q2: " + k.q12 + " dari " + k.i + " artikel bertindeks SJR (Q1 " + k.q1 + ", Q2 " + k.q2 + "), semua tahun · sejak " + k.dari + ": " + k.r12 + " dari " + k.ri + " · " + k.c + " dari " + k.n + " artikel tercocok ke OpenAlex"; },
       disclaimer: "Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.",
       verified: function (d) { return "Terverifikasi " + d; }, unverified: "Belum diverifikasi ketua TRG",
       leaderOf: "Ketua TRG", trgLabel: "TRG", themeLabel: "Tema", noExpertise: "Keahlian belum dicantumkan di halaman TRG.",
@@ -52,7 +52,7 @@
       allKlaster: "All clusters", allTema: "All themes", themeHead: "Researchers by theme",
       themeNote: "Click a theme to see its researchers. A researcher can belong to several themes, so totals exceed the number of unique researchers.",
       fTrg: "Search TRGs", fSort: "Sort by", sName: "Name", sPeople: "Number of researchers", sPapers: "Number of articles", sQ12: "Q1+Q2 articles",
-      kqLine: function (k) { return "Q1+Q2: " + k.q12 + " of " + k.i + " SJR-indexed articles (Q1 " + k.q1 + ", Q2 " + k.q2 + "; " + k.c + " of " + k.n + " articles matched)"; },
+      kqLine: function (k) { return "Q1+Q2: " + k.q12 + " of " + k.i + " SJR-indexed articles (Q1 " + k.q1 + ", Q2 " + k.q2 + "), all years · since " + k.dari + ": " + k.r12 + " of " + k.ri + " · " + k.c + " of " + k.n + " articles matched to OpenAlex"; },
       disclaimer: "Data are collected automatically from public TRG pages and may contain errors or omissions. Researchers with the same name may be merged incorrectly, and missing expertise means it is not listed on the TRG page. The list covers leaders, lecturers, researchers, and external collaborators; students are not shown.",
       verified: function (d) { return "Verified " + d; }, unverified: "Not yet verified by the TRG leader",
       leaderOf: "TRG leader", trgLabel: "TRG", themeLabel: "Themes", noExpertise: "Expertise not listed on the TRG page.",
@@ -315,7 +315,7 @@
       var c3 = el("div"); var tags = (g.tag_ids || "").split(";").filter(Boolean).map(function (id) { return tagById[id]; }).filter(Boolean);
       if (tags.length) { var u = el("ul", "chips"); tags.forEach(function (x) { var l = el("li"); l.appendChild(el("span", "chip theme", tagName(x))); u.appendChild(l); }); c3.appendChild(u); }
       var kk = D.kq && D.kq.trg[g.slug];
-      if (kk && kk.i) { var kl = el("p", "sub kq", t.kqLine({ q12: kk.q1 + kk.q2, i: kk.i, q1: kk.q1, q2: kk.q2, c: kk.c, n: kk.n })); c3.appendChild(kl); }
+      if (kk && kk.i) { var kl = el("p", "sub kq", t.kqLine({ q12: kk.q1 + kk.q2, i: kk.i, q1: kk.q1, q2: kk.q2, c: kk.c, n: kk.n, r12: kk.r1 + kk.r2, ri: kk.ri, dari: D.kq.dari })); c3.appendChild(kl); }
       li.appendChild(c3);
       var st = el("div", "stat"), b1 = el("span"); b1.append(el("b", null, fmt(g.n_peneliti)), document.createTextNode(t.people));
       var b2 = el("span"); b2.append(el("b", null, fmt(g.n_publikasi)), document.createTextNode(t.papers)); st.append(b1, b2); li.appendChild(st);

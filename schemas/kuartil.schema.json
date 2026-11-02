@@ -72,6 +72,10 @@
         "Q12": {
           "type": "integer",
           "minimum": 0
+        },
+        "sejak_Q12": {
+          "type": "integer",
+          "minimum": 0
         }
       }
     },
@@ -88,7 +92,11 @@
           "q1",
           "q2",
           "q3",
-          "q4"
+          "q4",
+          "rn",
+          "ri",
+          "r1",
+          "r2"
         ],
         "properties": {
           "n": {
@@ -116,6 +124,22 @@
             "minimum": 0
           },
           "q4": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "rn": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "ri": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "r1": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "r2": {
             "type": "integer",
             "minimum": 0
           }
