@@ -19,6 +19,7 @@ import {
   uploadDocumentAction, updateStageAction, addEventAction, setChecklistAction, saveFieldsAction, resolveFlagAction, reviewActionAction, purgeDocsAction,
 } from "@/app/actions/applications";
 import { createDraftAction } from "@/app/actions/letters";
+import { changeJournalAction } from "@/app/actions/applications";
 
 export const dynamic = "force-dynamic";
 
@@ -51,11 +52,17 @@ export default async function ApplicationPage({ params, searchParams }: { params
       <PageHeader title={app.manuscriptTitle} subtitle={`${app.refNumber} · ${app.studentName} (${app.studentNumber}) · ${app.studyProgram} · ${L ? "Pembimbing" : "Supervisor"}: ${app.supervisor}`}
         actions={<Pill tone="navy">{t(`wf.${app.workflow}`)}</Pill>} />
 
-      {/* Tiga dimensi — selalu terpisah */}
-      <div className="grid gap-4 md:grid-cols-3">
-        {ev.journal ? <TrafficCard lang={lang} title={t("dim.journal")} status={ev.journal.journalStatus} headline={t(`status.${ev.journal.journalStatus}.long`)} detail={ev.journal.redCategory ? t(`red.${ev.journal.redCategory}`) : app.journalName} /> : <div className="card p-4 text-sm">—</div>}
+      {/* Empat dimensi — selalu terpisah */}
+      {ev.invalidated && (
+        <div role="alert" className="mb-4 rounded-xl border-2 border-amber-400 bg-warn-soft p-4 text-sm font-semibold text-warn-ink">
+          {L ? "Jurnal/tujuan pada permohonan berubah setelah penilaian terakhir. Rekomendasi lama TIDAK berlaku; penilaian ulang diperlukan sebelum keputusan." : "The journal/destination changed after the last assessment. The old recommendation is NOT valid; reassessment is required before a decision."}
+        </div>
+      )}
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {ev.journal ? <TrafficCard lang={lang} title={t("dim.journal")} status={ev.journal.journalStatus} headline={t(`status.${ev.journal.journalStatus}.long`)} detail={ev.journal.redCategory ? t(`red.${ev.journal.redCategory}`) : app.journalName} /> : <div className="card p-4 text-sm">{L ? "Perlu penilaian ulang" : "Reassessment needed"}</div>}
+        {ev.journal ? <TrafficCard lang={lang} title={t("dim.destination")} status={ev.journal.destinationStatus} headline={t(`web.${ev.journal.websiteStatus}`)} detail={ev.journal.destinationHost ?? (L ? "tujuan tidak diberikan" : "no destination provided")} /> : <div className="card p-4 text-sm">—</div>}
         <TrafficCard lang={lang} title={t("dim.admin")} status={ev.administrative.status} headline={t(`status.${ev.administrative.status}.app`)} detail={`${t(`stage.${app.stage}`)}`} />
-        {ev.final && <TrafficCard lang={lang} title={t("dim.final")} status={ev.final.status} headline={t(`status.${ev.final.status}.app`)} detail={ev.final.hardBlock ? (L ? "Diblokir — tidak dapat di-override" : "Blocked — cannot be overridden") : ev.final.clearanceBlocked ? (L ? "Diblokir" : "Blocked") : undefined} />}
+        {ev.final ? <TrafficCard lang={lang} title={t("dim.final")} status={ev.final.status} headline={t(`status.${ev.final.status}.app`)} detail={ev.final.hardBlock ? (L ? "Diblokir — tidak dapat di-override" : "Blocked — cannot be overridden") : ev.final.clearanceBlocked ? (L ? "Diblokir" : "Blocked") : undefined} /> : <div className="card p-4 text-sm">—</div>}
       </div>
 
       {ev.final?.hardBlock && (
@@ -69,7 +76,8 @@ export default async function ApplicationPage({ params, searchParams }: { params
           <Card>
             <CardHeader title={L ? "Alasan rekomendasi" : "Reasons for the recommendation"} subtitle={L ? "Dua dimensi dinilai terpisah lalu digabung secara transparan." : "Two dimensions are assessed separately and combined transparently."} />
             <CardBody className="space-y-4">
-              {staff && ev.journal && (<div><div className="label">{t("dim.journal")}</div><ul className="space-y-1.5 text-sm">{ev.journal.reasons.map((r, i) => <li key={i} className="flex gap-2"><StatusBadge status={r.level} lang={lang} className="h-fit shrink-0" /><span>{reasonText(lang, r)}</span></li>)}</ul>
+              {staff && ev.journal && (<div><div className="label">{t("dim.destination")}</div><ul className="space-y-1.5 text-sm">{ev.journal.reasons.filter((r) => r.scope === "DESTINATION").map((r, i) => <li key={i} className="flex gap-2"><StatusBadge status={r.level} lang={lang} className="h-fit shrink-0" /><span>{reasonText(lang, r)}</span></li>)}</ul></div>)}
+              {staff && ev.journal && (<div><div className="label">{t("dim.journal")}</div><ul className="space-y-1.5 text-sm">{ev.journal.reasons.filter((r) => r.scope !== "DESTINATION").map((r, i) => <li key={i} className="flex gap-2"><StatusBadge status={r.level} lang={lang} className="h-fit shrink-0" /><span>{reasonText(lang, r)}</span></li>)}</ul>
                 {app.assessmentId && <Link className="mt-2 inline-block text-sm text-navy-700 underline" href={`/investigations/${app.assessmentId}`}>{L ? "Buka investigasi jurnal lengkap →" : "Open full journal investigation →"}</Link>}</div>)}
               <div><div className="label">{t("dim.admin")}</div><ul className="space-y-1.5 text-sm">{ev.administrative.reasons.map((r, i) => <li key={i} className="flex gap-2"><StatusBadge status={r.level} lang={lang} className="h-fit shrink-0" /><span>{reasonText(lang, r)}</span></li>)}</ul></div>
               {ev.final && <div><div className="label">{t("dim.final")}</div><ul className="space-y-1.5 text-sm">{ev.final.reasons.map((r, i) => <li key={i} className="flex gap-2"><StatusBadge status={r.level} lang={lang} className="h-fit shrink-0" /><span>{reasonText(lang, r)}</span></li>)}</ul></div>}
@@ -222,6 +230,18 @@ export default async function ApplicationPage({ params, searchParams }: { params
             <div><span className="label">{L ? "Klaim" : "Claims"}</span>{app.claimedIndexing ?? "—"} {app.claimedQuartile && `· ${app.claimedQuartile}`}</div>
             <div><span className="label">{L ? "ID pelacakan" : "Tracking ID"}</span>{app.trackingId ?? "—"}</div>
             <div><span className="label">{L ? "Tanggal pengiriman" : "Submission date"}</span>{fmtDate(app.submissionDate)}</div>
+            <div><span className="label">{L ? "Host tujuan (persis)" : "Destination host (exact)"}</span><span className="font-mono text-xs">{app.destinationHost ?? "—"}</span></div>
+            {!done && (
+              <details className="border-t border-slate-100 pt-3"><summary className="cursor-pointer text-xs font-semibold text-navy-700">{L ? "Ubah jurnal / tujuan (membatalkan rekomendasi lama)" : "Change journal / destination (invalidates the old recommendation)"}</summary>
+                <form action={changeJournalAction} className="mt-2 grid gap-2">
+                  <input type="hidden" name="applicationId" value={app.id} />
+                  <input className="input" name="journalName" defaultValue={app.journalName} required aria-label="journal" />
+                  <div className="grid grid-cols-2 gap-2"><input className="input" name="journalIssn" defaultValue={app.journalIssn ?? ""} placeholder="ISSN" aria-label="issn" /><input className="input" name="journalPublisher" defaultValue={app.journalPublisher ?? ""} placeholder={L ? "penerbit" : "publisher"} aria-label="publisher" /></div>
+                  <input className="input" name="journalUrl" type="url" defaultValue={app.journalUrl ?? ""} placeholder="https://" aria-label="url" />
+                  <div className="grid grid-cols-2 gap-2"><input className="input" name="claimedIndexing" defaultValue={app.claimedIndexing ?? ""} placeholder={L ? "klaim indeksasi" : "claimed indexing"} aria-label="indexing" /><input className="input" name="claimedQuartile" defaultValue={app.claimedQuartile ?? ""} placeholder="Q" aria-label="quartile" /></div>
+                  <button className="btn-outline" type="submit">{L ? "Simpan & nilai ulang" : "Save & reassess"}</button>
+                </form></details>
+            )}
           </CardBody></Card>
 
           {/* Tindakan peninjauan */}

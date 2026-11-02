@@ -114,11 +114,12 @@ export interface PolicyConfig {
 }
 
 export type RedCategory = "CRITICAL_INTEGRITY" | "POLICY_INELIGIBLE";
-export type WebsiteStatus = "AUTHENTIC" | "AUTHORIZED_MIGRATION" | "UNSAFE_CONFIRMED_CLONE" | "SUSPICIOUS" | "UNVERIFIED";
+export type WebsiteStatus = "AUTHENTIC" | "AUTHORIZED_MIGRATION" | "VERIFIED_PLATFORM" | "UNSAFE_CONFIRMED_CLONE" | "SUSPICIOUS" | "UNRESOLVED" | "UNVERIFIED";
 export type IndexingStatus =
   | "ACTIVE_VERIFIED"
   | "DISCONTINUED_VERIFIED"
   | "ON_HOLD_VERIFIED"
+  | "ACCEPTED_PENDING"
   | "NOT_LISTED_CONCLUSIVE"
   | "NOT_LISTED_INCONCLUSIVE"
   | "OUTDATED_EVIDENCE"
@@ -130,13 +131,19 @@ export type IdentityStatus = "CORROBORATED" | "UNVERIFIED" | "CONFLICTED";
 
 export interface Reason {
   code: string; // dikunci ke kamus i18n "reason.<code>"
+  /** JOURNAL = identitas/indeksasi/kebijakan/predator jurnal; DESTINATION = tujuan (host persis) yang diajukan. */
+  scope?: "JOURNAL" | "DESTINATION";
   level: TrafficLight | "INFO";
   params?: Record<string, string | number>;
   evidenceKeys?: string[];
 }
 
 export interface JournalDecision {
+  /** Status IDENTITAS JURNAL (identitas, indeksasi, kebijakan, predator). TIDAK memuat status tujuan pengiriman. */
   journalStatus: TrafficLight;
+  /** Status TUJUAN/situs pengiriman persis yang diajukan; terpisah dari journalStatus. */
+  destinationStatus: TrafficLight;
+  destinationHost: string | null;
   redCategory: RedCategory | null;
   identityStatus: IdentityStatus;
   websiteStatus: WebsiteStatus;
@@ -184,6 +191,7 @@ export interface AdministrativeDecision {
 export interface FinalDecision {
   status: TrafficLight;
   journalStatus: TrafficLight;
+  destinationStatus: TrafficLight;
   administrativeStatus: TrafficLight;
   clearanceBlocked: boolean;
   /** True bila blokir berasal dari identitas palsu (tidak dapat di-override). */

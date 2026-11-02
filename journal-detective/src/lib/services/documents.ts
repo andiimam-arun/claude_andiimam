@@ -16,13 +16,18 @@ const MAX_TEXT = 200_000;
 async function extractText(buf: Buffer, ext: string): Promise<{ text: string | null; note: string }> {
   try {
     if (ext === "pdf") {
-      const pdf = (await import("pdf-parse/lib/pdf-parse.js")).default;
-      const r = await Promise.race([
-        pdf(buf, { max: 30 }),
-        new Promise<never>((_, rej) => setTimeout(() => rej(new Error("waktu ekstraksi habis")), 15000)),
-      ]);
-      const t = stripControl(r.text ?? "").trim();
-      return t.length > 20 ? { text: t.slice(0, MAX_TEXT), note: `Teks diekstrak otomatis dari ${r.numpages} halaman PDF.` } : { text: null, note: "PDF tidak memuat teks yang dapat diekstrak (kemungkinan hasil pindai). Isi kolom secara manual." };
+      const { PDFParse } = await import("pdf-parse");
+      const parser = new PDFParse({ data: new Uint8Array(buf) });
+      try {
+        const r = await Promise.race([
+          parser.getText(),
+          new Promise<never>((_, rej) => setTimeout(() => rej(new Error("waktu ekstraksi habis")), 20000)),
+        ]);
+        const t = stripControl((r.text ?? "").replace(/-- \d+ of \d+ --/g, "")).trim();
+        return t.length > 20 ? { text: t.slice(0, MAX_TEXT), note: `Teks diekstrak otomatis dari ${r.total} halaman PDF.` } : { text: null, note: "PDF tidak memuat teks yang dapat diekstrak (kemungkinan hasil pindai). Isi kolom secara manual." };
+      } finally {
+        await parser.destroy().catch(() => undefined);
+      }
     }
     if (ext === "txt" || ext === "eml") return { text: stripControl(buf.toString("utf8")).slice(0, MAX_TEXT), note: "Teks dibaca langsung dari berkas." };
     if (ext === "png" || ext === "jpg" || ext === "jpeg") return { text: null, note: "Gambar: OCR belum dikonfigurasi. Peninjau memeriksa gambar asli dan mengisi kolom secara manual." };

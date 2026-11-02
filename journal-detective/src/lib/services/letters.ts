@@ -8,6 +8,7 @@ import { evaluateApplication } from "./applications";
 import { getActivePolicy } from "./policyService";
 import { getBranding, getTemplates } from "./settings";
 import { t, reasonText } from "../i18n";
+import { officialPolicyBlockReason } from "../mode";
 
 export type LetterType = "PRE_SUBMISSION" | "POST_ACCEPTANCE_PAYMENT";
 export interface Actor { id: string; name: string; role: Role }
@@ -23,7 +24,7 @@ export interface LetterSnapshot {
   journal: { title: string; issn: string | null; eissn: string | null; publisher: string | null; verifiedWebsites: string[]; submittedWebsite: string | null };
   indexingAssessment: string;
   conclusions: string[];
-  statuses: { journal: string; administrative: string; final: string };
+  statuses: { journal: string; destination: string; administrative: string; final: string };
   assessmentRef: string;
   assessmentDate: string;
   policyVersion: number;
@@ -58,6 +59,7 @@ export async function buildSnapshot(applicationId: string, type: LetterType): Pr
     conclusions,
     statuses: {
       journal: jd ? `${t("id", `status.${jd.journalStatus}`)} — ${t("id", `status.${jd.journalStatus}.long`)}` : "-",
+      destination: jd ? `${t("id", `status.${jd.destinationStatus}`)} — ${t("id", `web.${jd.websiteStatus}`)}${jd.destinationHost ? ` (${jd.destinationHost})` : ""}` : "-",
       administrative: `${t("id", `status.${evaln.administrative.status}`)}`,
       final: evaln.final ? `${t("id", `status.${evaln.final.status}`)} — ${t("id", `status.${evaln.final.status}.app`)}` : "-",
     },
@@ -94,9 +96,11 @@ export async function issueLetter(letterId: string, actor: Actor, officialNumber
   const evaln = await evaluateApplication(letter.application);
   const c = checkOfficialIssuance({
     role: actor.role, state: letter.application.workflow as WorkflowState, final: evaln.final, officialNumber, isOverrideApproved: !!letter.application.overrideJson,
+    officialPolicyConfigured: !officialPolicyBlockReason(await getActivePolicy()),
   });
   if (!c.ok) {
     const msg: Record<string, string> = {
+      POLICY_NOT_CONFIGURED: "Kebijakan resmi belum dikonfigurasi. Surat resmi tidak dapat diterbitkan.",
       ROLE_NOT_ALLOWED: "Hanya Kepala Unit Publikasi yang dapat menerbitkan surat resmi. Peran Anda hanya dapat membuat draf berwatermark.",
       NOT_APPROVED: "Surat resmi hanya dapat diterbitkan setelah persetujuan institusional oleh pejabat berwenang.",
       BLOCKED: "Klirens diblokir (hasil MERAH); surat resmi tidak dapat diterbitkan.",

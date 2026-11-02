@@ -2,6 +2,7 @@ import { prisma } from "../db";
 import { DEMO_POLICY, parsePolicy } from "../engine/policy";
 import type { PolicyConfig } from "../engine/types";
 import { audit, type Actor } from "./audit";
+import { isPilot } from "../mode";
 
 export interface ActivePolicy { id: string; version: number; name: string; isDemo: boolean; config: PolicyConfig; createdAt: Date; note: string | null }
 
@@ -9,7 +10,7 @@ export async function getActivePolicy(): Promise<ActivePolicy> {
   let p = await prisma.policy.findFirst({ where: { active: true }, orderBy: { version: "desc" } });
   if (!p) {
     p = await prisma.policy.create({
-      data: { version: 1, name: "Kebijakan DEMONSTRASI (bukan peraturan resmi)", isDemo: true, configJson: JSON.stringify(DEMO_POLICY), active: true, createdBy: "sistem", note: "Nilai awal demonstrasi. Pejabat berwenang wajib memasukkan aturan resmi fakultas." },
+      data: { version: 1, name: isPilot() ? "Kebijakan resmi belum dikonfigurasi (placeholder sementara)" : "Kebijakan DEMONSTRASI (bukan peraturan resmi)", isDemo: true, configJson: JSON.stringify(DEMO_POLICY), active: true, createdBy: "sistem", note: isPilot() ? "Placeholder agar investigasi dapat berjalan. BUKAN peraturan fakultas. Klirens resmi diblokir sampai pejabat berwenang menerbitkan kebijakan resmi." : "Nilai awal demonstrasi. Pejabat berwenang wajib memasukkan aturan resmi fakultas." },
     });
   }
   return { id: p.id, version: p.version, name: p.name, isDemo: p.isDemo, config: parsePolicy(JSON.parse(p.configJson)), createdAt: p.createdAt, note: p.note };

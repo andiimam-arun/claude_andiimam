@@ -14,6 +14,9 @@ import { searchRegistry, upsertJournal } from "./journalRegistry";
 import { lookupCrossref, lookupDoaj } from "./externalSources";
 import { lookupScopusApi } from "./scopusApi";
 import { buildHijackEvidence, type HijackRef } from "./hijack";
+import { activeFindings, recordFinding, type FindingStatus } from "./destinationFindings";
+import { getMode, isPilot } from "../mode";
+import { lookupScopusImport, scopusImportEvidence } from "./scopusReference";
 
 export function rowToEvidence(r: Evidence, review?: "CONFIRMED" | "DISMISSED" | null): EvidenceRecord {
   const base = r.requiresHuman ? "PENDING" : "NOT_REQUIRED";
@@ -68,11 +71,31 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
   }
 
   // --- Scopus ---
-  const sc = await lookupReference("SCOPUS_SOURCE_LIST", { issn, eissn, sourceId: identity.scopusSourceId, title: identity.title });
+  // Database referensi Scopus (impor workbook) lebih dahulu. Impor generik lama (mis. data demo fiktif) tetap dipakai hanya bila
+  // workbook tidak memuat jurnal tersebut tetapi dataset lama memuatnya; selain itu "tidak ditemukan" berasal dari impor workbook.
+  const si = await lookupScopusImport({ issn, eissn, sourceId: identity.scopusSourceId, title: identity.title });
+  const emptyLegacy = { datasets: [] as any[], matches: [] as any[], matchedBy: null as null | "IDENTIFIER" | "TITLE" };
+  const legacy = si.import && si.matches.length ? emptyLegacy : await lookupReference("SCOPUS_SOURCE_LIST", { issn, eissn, sourceId: identity.scopusSourceId, title: identity.title });
+  const scopusHandled = !!si.import && (si.matches.length > 0 || legacy.matches.length === 0);
+  if (scopusHandled) out.push(...scopusImportEvidence(identity, si));
+  const sc = scopusHandled ? emptyLegacy : legacy;
   const scApi = await lookupScopusApi(issn ?? eissn);
   if (scApi) out.push(scApi);
-  if (sc.matches.length) {
-    for (const m of sc.matches.slice(0, 3)) {
+  // Kebijakan impor: impor TERBARU (tanggal pengamatan) menggantikan impor lama untuk identifier yang sama; impor lama dipertahankan sebagai riwayat (bukan konflik).
+  const dsTime = (id: string) => { const d = sc.datasets.find((x) => x.id === id)!; return (d.sourceDate ?? d.importedAt).getTime(); };
+  const scSorted = [...sc.matches].sort((a, b) => dsTime(b.datasetId) - dsTime(a.datasetId));
+  const scNewest = scSorted[0]?.datasetId;
+  const scCurrent = scSorted.filter((m) => m.datasetId === scNewest);
+  for (const m of scSorted.filter((x) => x.datasetId !== scNewest).slice(0, 2)) {
+    const ds = sc.datasets.find((d) => d.id === m.datasetId)!;
+    out.push(makeEvidence({
+      check: "SCOPUS", key: "scopus.import_history", status: "REPORTED_UNVERIFIED", integration: "IMPORTED_DATA", severity: "INFO", strength: "WEAK",
+      finding: `Impor lama (${ds.versionLabel}) mencatat status "${m.status ?? "?"}" untuk "${m.title}"; digantikan oleh impor yang lebih baru.`, sourceName: `Impor Scopus — ${ds.versionLabel}${ds.isDemo ? " [DATA DEMONSTRASI FIKTIF]" : ""}`, sourceDataDate: ds.sourceDate?.toISOString() ?? null,
+      explanation: "Riwayat saja; tidak dihitung dalam keputusan karena impor yang lebih baru berlaku.", data: { datasetId: ds.id, status: m.status }, fingerprintSeed: `scopus-hist|${m.id}`,
+    }));
+  }
+  if (scCurrent.length) {
+    for (const m of scCurrent.slice(0, 3)) {
       const ds = sc.datasets.find((d) => d.id === m.datasetId)!;
       const st = (m.status ?? "").toLowerCase();
       const cov = st.startsWith("active") ? "ACTIVE" : st.startsWith("inactive") || st.includes("discontinued") ? "DISCONTINUED" : null;
@@ -91,9 +114,9 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
         fingerprintSeed: `scopus-import|${m.id}`,
       }));
     }
-  } else if (!scApi) {
+  } else if (!scApi && !scopusHandled) {
     if (sc.datasets.length) {
-      const ds = sc.datasets[0];
+      const ds = [...sc.datasets].sort((a, b) => (b.sourceDate ?? b.importedAt).getTime() - (a.sourceDate ?? a.importedAt).getTime())[0];
       out.push(makeEvidence({
         check: "SCOPUS", key: "scopus.coverage", status: "NOT_FOUND", integration: "IMPORTED_DATA",
         finding: `Tidak ditemukan pada daftar sumber Scopus yang diimpor (${ds.versionLabel}).`, sourceName: `Impor Scopus Source List — ${ds.versionLabel}${ds.isDemo ? " [DATA DEMONSTRASI FIKTIF]" : ""}`,
@@ -109,7 +132,7 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
     }
   }
   // Perbandingan identitas dengan rekaman Scopus
-  const best = sc.matches[0];
+  const best = scCurrent[0];
   if (best && sc.matchedBy === "IDENTIFIER") {
     if (titleSimilarity(best.title, identity.title) < 0.6 && !identity.altTitles.some((a) => titleSimilarity(best.title, a) >= 0.6)) {
       out.push(makeEvidence({
@@ -199,7 +222,8 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
   });
   // Bukti domain resmi dari bukti otomatis (DOAJ) + manual
   const forHijack = [...manual, ...out];
-  out.push(...buildHijackEvidence({ submittedUrl: identity.submittedWebsite, evidence: forHijack, refs, hasHijackDataset: hj.datasets.length > 0 }));
+  const fnd = await activeFindings(journalId);
+  out.push(...buildHijackEvidence({ submittedUrl: identity.submittedWebsite, evidence: forHijack, refs, hasHijackDataset: hj.datasets.length > 0, findings: fnd.active, retractedHosts: fnd.retractedHosts }));
   if (!hj.datasets.length) {
     out.push(makeEvidence({
       check: "HIJACK", key: "hijack.reference", status: "UNAVAILABLE", integration: "UNAVAILABLE", finding: "Belum ada daftar rujukan jurnal dibajak yang diimpor (mis. dari Retraction Watch Hijacked Journal Checker).",
@@ -208,7 +232,9 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
     }));
   }
   void cfg;
-  return out;
+  // Bukti yang berasal dari dataset berpenanda DEMO ditandai (data.demo) agar tidak pernah memenuhi syarat klirens PILOT.
+  const demoDatasets = new Set((await prisma.referenceDataset.findMany({ where: { isDemo: true }, select: { id: true } })).map((d) => d.id));
+  return out.map((e) => (e.data?.datasetId && demoDatasets.has(e.data.datasetId)) || /\[DATA DEMONSTRASI FIKTIF\]|\[FIKTIF\]/.test(e.sourceName) ? { ...e, data: { ...e.data, demo: true } } : e);
 }
 
 export interface InvestigationResult {
@@ -233,7 +259,7 @@ export async function runInvestigation(i: RunInput): Promise<InvestigationResult
   const autoRaw = await collectAutoEvidence(identity, journal.id, manual, policy.config);
   const auto = applyReviews(autoRaw, reviews);
   const all = [...auto, ...manual];
-  const decision = decideJournal({ identity, evidence: all, policy: policy.config });
+  const decision = decideJournal({ identity, evidence: all, policy: policy.config, pilotMode: isPilot() });
 
   const count = await prisma.assessment.count();
   const a = await prisma.assessment.create({
@@ -257,12 +283,13 @@ export async function runInvestigation(i: RunInput): Promise<InvestigationResult
 
   const verifiedDomains = new Set<string>();
   for (const e of all) if (e.key === "identity.official_domain" && e.status === "VERIFIED") for (const d of (e.data.domains ?? []) as string[]) { const r = registrableDomain(d); if (r) verifiedDomains.add(r); }
+  for (const e of all) if (e.key === "hijack.website" && ["MATCHES_OFFICIAL", "AUTHORIZED_MIGRATION"].includes(e.data.relation) && e.status === "VERIFIED") for (const d of (e.data.officialDomains ?? []) as string[]) { const r = registrableDomain(d); if (r) verifiedDomains.add(r); }
   const due = policy.config.reassessmentIntervalDays ? new Date(Date.now() + policy.config.reassessmentIntervalDays * 86_400_000) : null;
   await prisma.journal.update({
     where: { id: journal.id },
     data: {
       lastVerifiedAt: new Date(), verifiedDomainsJson: JSON.stringify([...verifiedDomains]), reassessDueAt: due,
-      knownWarningsJson: JSON.stringify(decision.reasons.filter((r) => r.level === "RED" || r.level === "YELLOW").map((r) => r.code)),
+      knownWarningsJson: JSON.stringify(Array.from(new Set(decision.reasons.filter((r) => (r.level === "RED" || r.level === "YELLOW") && r.scope !== "DESTINATION").map((r) => r.code)))),
       recordVersion: { increment: 0 },
     },
   });
@@ -309,9 +336,19 @@ export async function addManualEvidence(i: ManualEvidenceInput) {
   if (!i.finding.trim()) throw new Error("Temuan wajib diisi");
   if (i.status === "VERIFIED" && !(i.sourceUrl?.trim() || i.sourceRef?.trim())) throw new Error("Bukti berstatus VERIFIED wajib mencantumkan URL sumber atau referensi dokumen terunggah");
   if (i.sourceUrl && !/^https?:\/\//i.test(i.sourceUrl)) throw new Error("URL sumber harus diawali http(s)://");
-  const data = { ...i.data };
-  if (i.kind === "hijack.website" && data.submittedDomain) data.submittedDomain = registrableDomain(String(data.submittedDomain));
+  const data: Record<string, any> = { ...i.data, ...(getMode() === "DEMO" ? { demo: true } : {}) };
   if (i.kind === "identity.official_domain") data.domains = (data.domains as string[]).map((d) => d.trim()).filter(Boolean);
+  if (i.kind === "hijack.website") {
+    // Temuan tujuan disimpan sebagai temuan PERMANEN per host persis (bukan bukti biasa) — lihat destinationFindings.ts
+    const rel = String(i.data.relation);
+    const map: Record<string, FindingStatus> = { CONFIRMED_CLONE: "CLONE_CONFIRMED", AUTHORIZED_MIGRATION: "MIGRATION_VERIFIED", MATCHES_OFFICIAL: "AUTHENTIC_VERIFIED", PLATFORM_VERIFIED: "PLATFORM_VERIFIED" };
+    if (!map[rel]) throw new Error("Hasil perbandingan tujuan tidak valid");
+    if (i.status !== "VERIFIED") throw new Error("Temuan tujuan harus berstatus VERIFIED dengan sumber; untuk dugaan gunakan peninjauan bukti");
+    return recordFinding({
+      journalId: i.journalId, urlOrHost: String(i.data.submittedDomain ?? ""), status: map[rel], basis: i.finding, sourceName: i.sourceName, sourceUrl: i.sourceUrl, sourceRef: i.sourceRef,
+      sourceDataDate: i.sourceDataDate ? new Date(i.sourceDataDate).toISOString() : null, includeSubdomains: !!i.data.includeSubdomains, actor: i.actor,
+    });
+  }
   const flagged = i.status === "REPORTED_UNVERIFIED" || (i.kind === "beall.match");
   const ev = makeEvidence({
     check: KIND_CHECK[i.kind], key: i.kind, finding: i.finding, status: i.status, integration: "MANUAL_EVIDENCE", sourceName: i.sourceName, sourceUrl: i.sourceUrl || null, sourceRef: i.sourceRef || null,
@@ -343,6 +380,14 @@ export async function reviewEvidence(opts: { journalId: string; fingerprint: str
     data: { journalId: opts.journalId, fingerprint: opts.fingerprint, decision: opts.decision, note: opts.note.trim(), reviewerId: opts.actor.id, reviewerName: opts.actor.name },
   });
   await audit(opts.actor, "EVIDENCE_REVIEWED", "EvidenceReview", r.id, { journalId: opts.journalId, fingerprint: opts.fingerprint, decision: opts.decision, note: opts.note });
+  // Konfirmasi dugaan klon/tujuan menjadi TEMUAN PERMANEN pada host persis tersebut (dengan asal-usul bukti).
+  if (opts.decision === "CONFIRMED") {
+    const ev = await prisma.evidence.findFirst({ where: { journalId: opts.journalId, fingerprint: opts.fingerprint, key: "hijack.website" }, orderBy: { createdAt: "desc" } });
+    const host = ev ? (parseJson<any>(ev.dataJson, {}).submittedHost as string | undefined) : undefined;
+    if (ev && host) {
+      await recordFinding({ journalId: opts.journalId, urlOrHost: host, status: "CLONE_CONFIRMED", basis: `Dikonfirmasi peninjau: ${opts.note.trim()}`, sourceName: ev.sourceName, sourceUrl: ev.sourceUrl, sourceRef: ev.sourceRef ?? "bukti otomatis", sourceDataDate: ev.sourceDataDate, evidenceFingerprint: opts.fingerprint, actor: opts.actor });
+    }
+  }
   return r;
 }
 

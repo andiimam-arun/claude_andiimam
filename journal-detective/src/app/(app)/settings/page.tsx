@@ -5,7 +5,8 @@ import { getActivePolicy, listPolicies } from "@/lib/services/policyService";
 import { getBranding, getTemplates } from "@/lib/services/settings";
 import { DOC_TYPES, STAGES } from "@/lib/engine/types";
 import { ROLES } from "@/lib/engine/approval";
-import { savePolicyAction, saveBrandingAction, saveTemplatesAction, createUserAction, toggleUserAction } from "@/app/actions/admin";
+import { getRetention, findExpiredDocuments } from "@/lib/ops/retention";
+import { saveRetentionAction, savePolicyAction, saveBrandingAction, saveTemplatesAction, createUserAction, toggleUserAction } from "@/app/actions/admin";
 import { Card, CardBody, CardHeader, PageHeader, Notice } from "@/components/ui/card";
 import { Pill } from "@/components/StatusBadge";
 import { fmtDate } from "@/lib/utils";
@@ -21,6 +22,8 @@ export default async function Settings({ searchParams }: { searchParams: Promise
     prisma.user.findMany({ orderBy: { createdAt: "asc" } }), prisma.auditLog.findMany({ orderBy: { createdAt: "desc" }, take: 40 }),
   ]);
   const c = policy.config;
+  const retention = await getRetention();
+  const expired = retention.documentRetentionDays ? await findExpiredDocuments(retention.documentRetentionDays) : [];
   return (
     <>
       {sp.notice && <Notice kind="ok">{sp.notice}</Notice>}{sp.error && <Notice kind="error">{sp.error}</Notice>}
@@ -59,6 +62,10 @@ export default async function Settings({ searchParams }: { searchParams: Promise
           <ul className="mt-2 space-y-1 text-xs">{history.map((h) => <li key={h.id}>v{h.version} · {h.name} · <Pill tone={h.isDemo ? "amber" : "green"}>{h.isDemo ? "DEMO" : "OFFICIAL"}</Pill> · {fmtDate(h.createdAt, true)} · {h.active ? <b>{L ? "aktif" : "active"}</b> : ""} {h.note ? `· ${h.note}` : ""}</li>)}</ul>
         </CardBody>
       </Card>
+
+      <Card className="mb-6"><CardHeader title={L ? "Retensi & penghapusan dokumen" : "Document retention & deletion"} subtitle={L ? "Tidak ada penghapusan otomatis. Dokumen pada permohonan FINAL yang melewati masa retensi dilaporkan; penghapusan permanen hanya lewat tindakan eksplisit." : "No automatic deletion. Documents of FINAL applications past retention are reported; permanent deletion only by explicit action."} />
+        <CardBody><form action={saveRetentionAction} className="flex flex-wrap items-end gap-3"><label><span className="label">{L ? "Masa retensi (hari; kosong = tanpa batas otomatis)" : "Retention (days; empty = no automatic limit)"}</span><input className="input" type="number" name="days" min={30} max={3650} defaultValue={retention.documentRetentionDays ?? ""} /></label><button className="btn-primary" type="submit">{L ? "Simpan" : "Save"}</button></form>
+          <p className="mt-3 text-sm">{retention.documentRetentionDays ? `${expired.length} ${L ? "permohonan final berisi dokumen melewati masa retensi." : "final applications hold documents past retention."}` : (L ? "Masa retensi belum ditetapkan." : "Retention not set.")}</p></CardBody></Card>
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Card><CardHeader title={L ? "Identitas & penandatangan surat" : "Letter branding & signatory"} /><CardBody>

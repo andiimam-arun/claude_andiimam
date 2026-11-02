@@ -62,6 +62,7 @@ model Journal {
   assessments      Assessment[]
   evidence         Evidence[]
   applications     Application[]
+  destinationFindings DestinationFinding[]
 
   @@index([issn])
   @@index([eissn])
@@ -149,6 +150,7 @@ model ReferenceDataset {
   importedAt DateTime @default(now())
   importedById String
   active     Boolean  @default(true)
+  validationJson String @default("{}")
   records    ReferenceRecord[]
 }
 
@@ -201,6 +203,9 @@ model Application {
   claimedQuartile String?
   journalId     String?
   journal       Journal? @relation(fields: [journalId], references: [id])
+  destinationHost String?
+  assessedFingerprint String?
+  invalidatedAt DateTime?
   assessmentId  String?
   assessment    Assessment? @relation(fields: [assessmentId], references: [id])
   workflow      String   @default("PENDING_REVIEW") // PENDING_REVIEW | IN_REVIEW | NEEDS_EVIDENCE | RETURNED | ESCALATED | RECOMMENDED | APPROVED | REJECTED
@@ -332,4 +337,161 @@ model AuditLog {
 
   @@index([entity, entityId])
   @@index([createdAt])
+}
+
+// Temuan per-TUJUAN (host persis) — permanen, berasal-usul, tidak pernah ditimpa. Koreksi = baris baru berstatus RETRACTED.
+model DestinationFinding {
+  id            String   @id @default(cuid())
+  journalId     String
+  journal       Journal  @relation(fields: [journalId], references: [id])
+  host          String
+  registrableDomain String
+  status        String // CLONE_CONFIRMED | AUTHENTIC_VERIFIED | MIGRATION_VERIFIED | PLATFORM_VERIFIED | RETRACTED
+  retractsId    String?
+  basis         String
+  sourceName    String
+  sourceUrl     String?
+  sourceRef     String?
+  sourceDataDate String?
+  evidenceFingerprint String?
+  includeSubdomains Boolean @default(false)
+  isDemo        Boolean  @default(false)
+  createdById   String
+  createdByName String
+  createdAt     DateTime @default(now())
+
+  @@index([journalId, host])
+}
+
+model ValidationCase {
+  id         String   @id @default(cuid())
+  caseCode   String   @unique
+  category   String
+  title      String
+  issn       String?
+  eissn      String?
+  submittedUrl String?
+  authenticUrl String?
+  stage      String   @default("PRE_SUBMISSION")
+  pseudonym  String?
+  sourcesJson String  @default("[]")
+  notes      String?
+  isFictionalFixture Boolean @default(false)
+  applicationId String?
+  status     String   @default("AWAITING_MANUAL_REFERENCE")
+  createdById String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  references ValidationReference[]
+  runs       ValidationRun[]
+}
+
+model ValidationReference {
+  id         String   @id @default(cuid())
+  caseId     String
+  case       ValidationCase @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  version    Int
+  journalStatus String
+  destinationStatus String
+  adminStatus String
+  finalStatus String
+  rationale  String
+  uncertainty String?
+  assessorId String
+  assessorName String
+  assessedAt DateTime
+  policyVersion Int
+  sourcesJson String @default("[]")
+  createdAt  DateTime @default(now())
+  runs       ValidationRun[]
+}
+
+model ValidationRun {
+  id         String   @id @default(cuid())
+  caseId     String
+  case       ValidationCase @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  referenceId String
+  reference  ValidationReference @relation(fields: [referenceId], references: [id])
+  runNo      Int
+  assessmentId String?
+  applicationId String?
+  policyVersion Int
+  policyHash String
+  appVersion String
+  applicationSnapshotJson String?
+  evidenceSnapshotJson String
+  generatedJson String
+  comparisonJson String
+  agreement  String // AGREE | DISAGREE
+  safetyCritical Boolean @default(false)
+  discrepancyClass String?
+  discrepancyNote String?
+  correctiveAction String?
+  retestOfRunId String?
+  retestOutcome String?
+  runById    String
+  runByName  String
+  runAt      DateTime @default(now())
+  classifiedById String?
+}
+
+// ===== Database referensi Scopus (terpisah dari Journal Passport) =====
+model ScopusImport {
+  id            String   @id @default(cuid())
+  versionLabel  String
+  observationDate DateTime
+  sourceUrl     String?
+  fileName      String
+  fileSize      Int
+  sha256        String
+  uploadedAt    DateTime @default(now())
+  importedById  String
+  importedByName String
+  status        String // PREVIEW | CONFIRMED | SUPERSEDED | CANCELLED | FAILED
+  isCurrent     Boolean  @default(false)
+  isDemo        Boolean  @default(false)
+  stagedPath    String?
+  summaryJson   String   @default("{}")
+  recordCount   Int      @default(0)
+  confirmedAt   DateTime?
+  supersededAt  DateTime?
+  records       ScopusSource[]
+
+  @@index([status, isCurrent])
+}
+
+model ScopusSource {
+  id        String @id @default(cuid())
+  importId  String
+  import    ScopusImport @relation(fields: [importId], references: [id], onDelete: Cascade)
+  sourceId  String?
+  title     String
+  normTitle String
+  issnRaw   String?
+  eissnRaw  String?
+  issn      String? // kunci pencarian: 8 karakter tanpa tanda hubung, huruf besar (nol depan & X dipertahankan)
+  eissn     String?
+  status    String // ACTIVE | INACTIVE | ACCEPTED | UNKNOWN
+  activeRaw String?
+  coverage  String?
+  coverageFrom Int?
+  coverageTo   Int?
+  discontinuedQuality Boolean @default(false)
+  discontinuedRaw String?
+  sourceType String?
+  publisher  String?
+  publisherGroup String?
+  publisherCountry String?
+  asjc       String?
+  openAccessRaw String?
+  origin     String // SOURCES | DISCONTINUED | ACCEPTED
+  discontinuedJson String?
+  acceptedJson String?
+  conflictsJson String @default("[]")
+  extraJson  String @default("{}")
+
+  @@index([importId, sourceId])
+  @@index([importId, issn])
+  @@index([importId, eissn])
+  @@index([importId, normTitle])
 }

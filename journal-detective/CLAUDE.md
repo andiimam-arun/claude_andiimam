@@ -5,9 +5,11 @@ Next.js 15 (App Router) + TypeScript + Tailwind 3 + Prisma 6 (SQLite dev / Postg
 
 ```
 src/lib/engine/     MURNI (tanpa I/O): types, decision (jurnal), clearance (administratif+akhir), approval (aturan peran/persetujuan/penerbitan),
-                    domain, issn, extract, consistency, anomalies, policy, evidence
+                    domain (normalisasi tujuan, host persis), issn, extract, consistency, anomalies, policy, evidence, validation
 src/lib/services/   I/O: journalRegistry, reference (impor dataset), investigation (orkestrator 6 cek), hijack, externalSources (DOAJ/Crossref),
-                    scopusApi (ekstensi), applications, documents, approval, letters, pdf, analytics, audit, policyService, settings, ai, siteSnapshot
+                    scopusApi (ekstensi), destinationFindings, validation, applications, documents, approval, letters, pdf, analytics, audit, policyService, settings, ai, siteSnapshot
+src/lib/ops/        pilot (init/check), backup (backup/restore), retention
+src/lib/mode.ts     DEMO/PILOT, penanda lingkungan
 src/lib/security/   safeFetch (SSRF), upload (magic bytes), sanitize (injeksi prompt)
 src/lib/auth/       session (JWT cookie httpOnly + cek DB), permissions
 src/lib/i18n/       dict (id/en), reasonText/actionText
@@ -30,7 +32,17 @@ tests/unit|e2e      vitest / playwright
 11. Data demonstrasi harus berlabel FIKTIF, tidak pernah menggantikan data sumber yang tidak tersedia.
 12. Server actions: panggil `requireRole`/`requireUser` di awal; jangan percaya input klien.
 
+## Aturan Fase 1B (tambahan)
+13. **Empat penilaian terpisah**: jurnal, tujuan (host persis), administratif, akhir. Jangan menggabungkan lencana HIJAU yang menyembunyikan tujuan tidak aman. Temuan tujuan permanen; koreksi hanya lewat `retractFinding`.
+14. **DEMO vs PILOT** ditentukan `APP_MODE`; basis data & folder terpisah; penanda lingkungan di tabel `Setting`. Jangan menyalin data/rahasia antar lingkungan. Bukti `data.demo` tidak berlaku pada PILOT. `pilot:init` tidak boleh menghapus/menimpa.
+15. Persetujuan/penerbitan resmi diblokir tanpa kebijakan RESMI pada PILOT. Jangan mengarang kebijakan, nomor surat, tanda tangan.
+16. **Validasi perangkat lunak ≠ validasi dunia nyata.** Fixture fiktif berlabel dan tidak dihitung pada cakupan nyata; jangan menulis hasil validasi nyata. Referensi manual dikunci sebelum aplikasi dijalankan.
+17. Klaim integrasi LIVE hanya bila permintaan nyata berhasil (`pilot:smoke`) dan hasilnya diperiksa.
+18. Tes yang mengubah `APP_MODE` memakai `withMode` (tests/unit/helpers.ts). Tes layanan berbagi `prisma/test.db`; gunakan ISSN/judul unik per berkas.
+
+19. **Database referensi Scopus** (`ScopusImport`/`ScopusSource`) terpisah dari Journal Passport; impor lewat pratinjau → konfirmasi; riwayat dipertahankan; Passport hanya dibuat saat jurnal diperiksa. Header dideteksi dari nama kolom (`engine/scopusImport.ts`, murni). Jangan memakai pembaca streaming ExcelJS (tidak deterministik). Jangan menyamakan Inactive dengan penghentian karena kualitas; Accepted ≠ aktif; tidak ditemukan ≠ tidak terindeks.
+
 ## Perintah
-`npm run dev | build | typecheck | lint | test | test:e2e | db:seed | db:reset`.
+`npm run dev | build | typecheck | lint | test | test:e2e | db:seed | db:reset | pilot:init | pilot:check | pilot:smoke | pilot:backup | pilot:restore | pilot:retention | scopus:import`.
 Tes layanan memakai `prisma/test.db` yang dibuat dari migrasi (globalSetup). Seed memakai `tsx --conditions=react-server` karena paket `server-only`.
 Skema SQLite memakai String untuk enum dan JSON; saat pindah ke PostgreSQL ubah provider dan kolom `*Json` ke `Json` (lihat DEPLOYMENT).

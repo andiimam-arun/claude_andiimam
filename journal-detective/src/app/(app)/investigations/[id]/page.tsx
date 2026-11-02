@@ -13,6 +13,7 @@ import { ManualEvidenceForm } from "@/components/ManualEvidenceForm";
 import { reassessJournalAction, flagReassessAction, snapshotSiteAction, aiSummaryAction } from "@/app/actions/investigations";
 import { fmtDate } from "@/lib/utils";
 import { getAiProvider } from "@/lib/services/ai";
+import { DestinationFindings } from "@/components/DestinationFindings";
 
 export const dynamic = "force-dynamic";
 
@@ -34,7 +35,7 @@ export default async function InvestigationPage({ params, searchParams }: { para
   const isStale = a.createdAt.getTime() < Date.now() - 86_400_000;
   const ai = getAiProvider();
 
-  const webTone = d.websiteStatus === "UNSAFE_CONFIRMED_CLONE" ? "RED" : d.websiteStatus === "AUTHENTIC" || d.websiteStatus === "AUTHORIZED_MIGRATION" ? "GREEN" : "YELLOW";
+  const webTone = d.destinationStatus;
   const idxTone = d.indexingStatus === "ACTIVE_VERIFIED" ? "GREEN" : d.indexingStatus === "DISCONTINUED_VERIFIED" || d.indexingStatus === "NOT_LISTED_CONCLUSIVE" ? "RED" : "YELLOW";
   const predTone = d.predatoryAssessment === "CONFIRMED_VIOLATION" ? "RED" : d.predatoryAssessment === "REVIEW_REQUIRED" || d.predatoryAssessment === "NOT_ASSESSED" ? "YELLOW" : "GREEN";
   const eligTone = d.policyEligibility === "ELIGIBLE" ? "GREEN" : d.policyEligibility === "INELIGIBLE" ? "RED" : "YELLOW";
@@ -55,6 +56,7 @@ export default async function InvestigationPage({ params, searchParams }: { para
             </p>
           </div>
           <div className="text-right">
+            <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-slate-600">{t("dim.journal")}</div>
             <StatusBadge status={d.journalStatus} lang={lang} className="!px-4 !py-1.5 !text-base" />
             <div className="mt-1.5 text-sm font-bold text-slate-900">{t(`status.${d.journalStatus}.long`)}</div>
             {d.redCategory && <div className="mt-0.5 max-w-xs text-xs font-semibold text-bad-ink">{t(`red.${d.redCategory}`)}</div>}
@@ -74,14 +76,14 @@ export default async function InvestigationPage({ params, searchParams }: { para
             <form action={aiSummaryAction}><input type="hidden" name="assessmentId" value={a.id} />
               <button className="btn-outline" type="submit" disabled={!ai.enabled} title={ai.enabled ? "" : "ANTHROPIC_API_KEY belum dikonfigurasi"}><Sparkles className="h-4 w-4" aria-hidden /> {L ? "Ringkasan AI (penasihat)" : "AI summary (advisory)"}</button></form>
           )}
-          <Link className="ml-auto text-sm font-medium text-navy-700 underline" href={`/journals/${j.id}`}>{L ? "Catatan registri jurnal" : "Journal registry record"} →</Link>
+          <Link className="ml-auto text-sm font-medium text-navy-700 underline" href={`/journals/${j.id}`}>{"Journal Passport"} →</Link>
         </div>
         {isStale && <div className="border-t border-amber-200 bg-warn-soft px-6 py-2 text-xs font-medium text-warn-ink">{L ? `Penilaian ini berusia ${Math.floor((Date.now() - a.createdAt.getTime()) / 86_400_000)} hari. Bukti sensitif waktu perlu divalidasi ulang sebelum dipakai untuk keputusan.` : `This assessment is ${Math.floor((Date.now() - a.createdAt.getTime()) / 86_400_000)} days old. Time-sensitive evidence should be revalidated before use.`}</div>}
       </div>
 
       {/* Kartu status */}
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <TrafficCard lang={lang} title={L ? "Situs yang diajukan" : "Submitted website"} status={webTone} headline={t(`web.${d.websiteStatus}`)} detail={sub ? `${sub}` : L ? "tidak diberikan" : "not provided"} />
+        <TrafficCard lang={lang} title={t("dim.destination")} status={webTone} headline={t(`web.${d.websiteStatus}`)} detail={d.destinationHost ?? (sub ? `${sub}` : L ? "tidak diberikan" : "not provided")} />
         <TrafficCard lang={lang} title={L ? "Indeksasi Scopus" : "Scopus indexing"} status={idxTone} headline={t(`idx.${d.indexingStatus}`)} detail={d.indexingBasis ? `${t(`integ.${d.indexingBasis}`)} · ${L ? "data" : "data"} ${fmtDate(d.indexingDataDate)}` : L ? "tanpa basis bukti" : "no evidentiary basis"} />
         <TrafficCard lang={lang} title={L ? "Kelayakan kebijakan" : "Policy eligibility"} status={eligTone} headline={t(`elig.${d.policyEligibility}`)} detail={`${L ? "Identitas" : "Identity"}: ${t(`ident.${d.identityStatus}`)}`} />
         <TrafficCard lang={lang} title={L ? "Risiko penerbitan predator" : "Predatory-publishing risk"} status={predTone} headline={t(`pred.${d.predatoryAssessment}`)} detail={L ? "Daftar Beall hanya pemicu tinjauan" : "Beall list only triggers review"} />
@@ -94,8 +96,8 @@ export default async function InvestigationPage({ params, searchParams }: { para
             <CardHeader title={L ? "Alasan penilaian" : "Reasons for assessment"} subtitle={L ? "Setiap alasan dihasilkan aturan transparan (docs/ASSESSMENT_POLICY.md)" : "Every reason is produced by transparent rules (docs/ASSESSMENT_POLICY.md)"} />
             <CardBody>
               <ul className="space-y-2">
-                {d.reasons.map((r, i) => (
-                  <li key={i} className="flex gap-2.5 text-sm"><StatusBadge status={r.level} lang={lang} className="mt-0.5 h-fit shrink-0" /><span>{reasonText(lang, r)}</span></li>
+                {[...d.reasons.filter((r) => r.scope !== "DESTINATION"), ...d.reasons.filter((r) => r.scope === "DESTINATION")].map((r, i) => (
+                  <li key={i} className="flex gap-2.5 text-sm"><StatusBadge status={r.level} lang={lang} className="mt-0.5 h-fit shrink-0" /><span>{r.scope === "DESTINATION" && <b className="mr-1 text-[11px] uppercase text-slate-500">[{L ? "tujuan" : "destination"}]</b>}{reasonText(lang, r)}</span></li>
                 ))}
               </ul>
             </CardBody>
@@ -108,8 +110,8 @@ export default async function InvestigationPage({ params, searchParams }: { para
               <div className="rounded-lg border border-green-300 bg-ok-soft p-3"><div className="label !mb-1">{L ? "Domain resmi terverifikasi" : "Verified official domain"}</div>
                 {officials.length ? officials.map((o) => <div key={o} className="font-mono text-sm font-semibold text-ok-ink">{o}</div>) : <div className="text-sm text-slate-700">{L ? "Belum ditetapkan — tidak ada dugaan; tambahkan bukti domain resmi." : "Not yet established — no assumption made; add official-domain evidence."}</div>}</div>
               <div className={`rounded-lg border p-3 ${webTone === "RED" ? "border-red-400 bg-bad-soft" : webTone === "GREEN" ? "border-green-300 bg-ok-soft" : "border-amber-300 bg-warn-soft"}`}>
-                <div className="label !mb-1">{L ? "Diajukan mahasiswa" : "Submitted by student"}</div>
-                <div className="font-mono text-sm font-semibold">{sub ?? "—"}</div>
+                <div className="label !mb-1">{L ? "Tujuan diajukan (host persis)" : "Submitted destination (exact host)"}</div>
+                <div className="font-mono text-sm font-semibold">{d.destinationHost ?? sub ?? "—"}</div>
                 <div className="mt-1.5"><StatusBadge status={webTone} lang={lang} /> <span className="ml-1 text-xs font-semibold">{t(`web.${d.websiteStatus}`)}</span></div>
                 {d.websiteStatus === "UNSAFE_CONFIRMED_CLONE" && <p className="mt-2 text-xs font-bold text-bad-ink">{L ? "TIDAK AMAN — jangan kirim naskah/pembayaran lewat situs ini." : "UNSAFE — do not submit manuscripts/payments through this site."}</p>}
               </div>
@@ -122,6 +124,8 @@ export default async function InvestigationPage({ params, searchParams }: { para
               )}
             </CardBody>
           </Card>
+
+          <DestinationFindings journalId={j.id} back={back} lang={lang} canEdit={canAct} defaultHost={d.destinationHost ?? sub} />
 
           {/* Kartu verifikasi indeksasi */}
           <Card>

@@ -8,6 +8,7 @@ import { Card, CardBody, CardHeader, PageHeader, Notice } from "@/components/ui/
 import { StatusBadge, Pill } from "@/components/StatusBadge";
 import { flagReassessAction } from "@/app/actions/investigations";
 import { fmtDate } from "@/lib/utils";
+import { DestinationFindings } from "@/components/DestinationFindings";
 
 export const dynamic = "force-dynamic";
 
@@ -24,7 +25,7 @@ export default async function JournalRecord({ params, searchParams }: { params: 
   return (
     <>
       {sp.notice && <Notice kind="ok">{sp.notice}</Notice>}{sp.error && <Notice kind="error">{sp.error}</Notice>}
-      <PageHeader title={j.title} subtitle={`ISSN ${j.issn ?? "—"} · E-ISSN ${j.eissn ?? "—"} · ${j.publisher ?? "—"} · ${L ? "versi catatan" : "record version"} ${j.recordVersion}`}
+      <PageHeader title={j.title} subtitle={`Journal Passport · ISSN ${j.issn ?? "—"} · E-ISSN ${j.eissn ?? "—"} · ${j.publisher ?? "—"} · ${L ? "versi catatan" : "record version"} ${j.recordVersion}`}
         actions={<>{latest && <Link className="btn-primary" href={`/investigations/${latest.id}`}>{L ? "Buka penilaian terbaru" : "Open latest assessment"}</Link>}
           {user.role !== "ADMIN" && <form action={flagReassessAction}><input type="hidden" name="journalId" value={j.id} /><input type="hidden" name="back" value={`/journals/${j.id}`} /><input type="hidden" name="reason" value="Ditandai dari registri" /><button className="btn-outline" type="submit">{j.reassessFlag ? (L ? "Sudah ditandai ✓" : "Flagged ✓") : (L ? "Tandai penilaian ulang" : "Flag for reassessment")}</button></form>}</>} />
       <div className="grid gap-6 lg:grid-cols-3">
@@ -42,6 +43,7 @@ export default async function JournalRecord({ params, searchParams }: { params: 
           <tbody className="divide-y divide-slate-100">{j.assessments.map((a) => { const d = parseJson<any>(a.decisionJson, {}); return (
             <tr key={a.id}><td className="td"><Link className="text-navy-700 underline" href={`/investigations/${a.id}`}>{a.refNumber}</Link></td><td className="td text-xs">{fmtDate(a.createdAt, true)}</td><td className="td"><StatusBadge status={a.journalStatus as any} lang={lang} /></td>
               <td className="td text-xs">{d.indexingStatus ? t(`idx.${d.indexingStatus}`) : "—"}{d.indexingBasis ? ` · ${t(`integ.${d.indexingBasis}`)}` : ""}</td><td className="td text-xs">v{a.policyVersion}</td></tr>); })}</tbody></table></div></Card>
+        <div className="lg:col-span-3"><DestinationFindings journalId={j.id} back={`/journals/${j.id}`} lang={lang} canEdit={user.role !== "ADMIN"} /></div>
         <Card className="lg:col-span-2"><CardHeader title={L ? "Bukti manual aktif" : "Active manual evidence"} /><CardBody>
           {manual.length === 0 ? <p className="text-sm text-slate-500">—</p> : <ul className="space-y-1.5 text-sm">{manual.map((m) => <li key={m.id}><Pill>{m.key}</Pill> {m.finding} <span className="text-xs text-slate-500">— {m.sourceName}, {fmtDate(m.createdAt)}</span></li>)}</ul>}
         </CardBody></Card>

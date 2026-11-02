@@ -13,8 +13,7 @@ Bukti bertanda "perlu konfirmasi" menunggu keputusan peninjau (CONFIRMED / DITOL
 Urutan evaluasi:
 
 **MERAH — integritas kritis** bila salah satu:
-- situs diajukan = klon/dibajak **terkonfirmasi** (bukti manual VERIFIED, atau dugaan dari daftar rujukan/kemiripan yang dikonfirmasi peninjau) → juga `identityFraudBlock`;
-- peniruan identitas terkonfirmasi (`hijack.identity_impersonation` VERIFIED);
+- *(Fase 1B: klon/peniruan identitas terkonfirmasi tidak lagi menjadikan JURNAL MERAH; itu menjadikan TUJUAN MERAH + `identityFraudBlock` — lihat bagian 7.)*
 - klaim Scopus terbukti salah: klaim ada **dan** "tidak terdaftar" *konklusif* (hanya dari verifikasi langsung atau bukti manual terverifikasi — **bukan** dari impor historis);
 - indikator penerbitan KRITIS terverifikasi.
 
@@ -22,7 +21,7 @@ Urutan evaluasi:
 
 **KUNING** bila ada hal tak terselesaikan: identitas belum dikorroborasi / ada ketidaksesuaian; situs belum terverifikasi atau mencurigakan; indeksasi tak terverifikasi, tidak konklusif, kedaluwarsa (> `maxIndexEvidenceAgeDays`), bertentangan, atau "ditahan"; kecocokan Beall menunggu tinjauan (atau dikonfirmasi tetapi tanpa pelanggaran kritis); indikator keparahan sedang/tinggi terverifikasi; klaim indeksasi (Scopus/DOAJ/akreditasi) belum terverifikasi; kuartil diklaim berbeda; bukti menunggu konfirmasi manusia.
 
-**HIJAU** hanya bila: identitas terkorroborasi **dan** situs otentik (cocok domain resmi dari sumber independen, atau migrasi sah terverifikasi) **dan** kelayakan kebijakan terpenuhi **dan** tidak ada alasan KUNING. Tanpa bukti lengkap tidak pernah HIJAU (pengaman `insufficient_evidence`).
+**HIJAU (jurnal)** hanya bila: identitas terkorroborasi **dan** kelayakan kebijakan terpenuhi **dan** tidak ada alasan KUNING berlingkup jurnal. (Keaslian situs dinilai pada dimensi TUJUAN, bagian 7.) Tanpa bukti lengkap tidak pernah HIJAU (pengaman `insufficient_evidence`).
 
 Tidak pernah otomatis: Beall, tidak terdaftar Scopus, tidak ada di DOAJ, APC, domain baru, atau data tidak tersedia.
 
@@ -46,3 +45,26 @@ Surat resmi: hanya Kepala Unit, hanya bila permohonan APPROVED dan tidak dibloki
 
 ## 6. Kebijakan konfigurabel
 Editor kebijakan (Pengaturan) menerbitkan **versi baru** (tidak menimpa) dengan catatan wajib; hanya Kepala Unit yang dapat menandai RESMI. Default: kebijakan DEMONSTRASI berlabel jelas. Parameter: Scopus wajib, penanganan dihentikan, akreditasi nasional, kuartil, umur bukti, dokumen per tahap, kunci eskalasi, tenggat tinjauan, interval penilaian ulang, ambang penerimaan cepat, override Kepala.
+
+
+## 7. Pembaruan Fase 1B — empat penilaian terpisah
+Aplikasi dinilai pada **empat** lapis yang tidak boleh saling menutupi:
+1. **Identitas jurnal** (`journalStatus`): identitas, indeksasi, kebijakan, risiko penerbitan. **Tidak** memuat situs yang diajukan. MERAH hanya untuk klaim Scopus terbukti salah, pelanggaran kritis terverifikasi, atau ketidaklayakan kebijakan.
+2. **Tujuan pengiriman** (`destinationStatus`): host **persis** yang diajukan. MERAH bila klon/dibajak **terkonfirmasi** (temuan tujuan permanen) atau peniruan identitas terverifikasi; HIJAU bila host sama persis dengan host resmi independen, migrasi sah terverifikasi, atau platform eksternal terverifikasi; selain itu KUNING.
+3. **Administratif naskah** (per tahap, tidak berubah).
+4. **Rekomendasi akhir**: MERAH bila salah satu dari (1)(2)(3) MERAH; KUNING bila ada yang KUNING; HIJAU bila ketiganya HIJAU. Contoh wajib: jurnal sah HIJAU + tujuan klon terkonfirmasi MERAH → permohonan MERAH, klirens diblokir (tidak dapat di-override).
+
+Perbandingan tujuan memakai **host persis** (huruf kecil, tanpa `www.` dan titik akhir; kredensial/port tidak lazim/IP/punycode ditandai; skema selain http(s) ditolak). Subdomain, pengalihan, migrasi, dan platform eksternal yang **belum diverifikasi** → keadaan **UNRESOLVED** (KUNING), bukan temuan penipuan. Perbedaan domain saja tidak pernah menghasilkan temuan penipuan; kemiripan mencolok = SUSPICIOUS (perlu konfirmasi manusia).
+**Temuan tujuan** (`DestinationFinding`) bersifat permanen per (jurnal, host), berasal-usul, dan tidak pernah ditimpa. Penilaian HIJAU baru atas jurnal asli **tidak** menghapus temuan klon pada host lain. Temuan bertentangan ditolak; **koreksi terkontrol** (peninjau/Kepala, rasional ≥ 20 karakter + bukti, audit) membuat baris `RETRACTED` baru dan mempertahankan riwayat.
+Mengubah jurnal/tujuan pada permohonan **membatalkan** rekomendasi (alur kembali ke PENDING_REVIEW, rekomendasi dihapus, riwayat dicatat) dan memicu penilaian ulang; persetujuan selalu menilai ulang jurnal+tujuan+kebijakan aktif pada saat keputusan.
+
+## 8. Mode PILOT
+Bukti bertanda demonstrasi (`data.demo`) **tidak pernah** dihitung pada PILOT (alasan `demo_evidence_excluded`, tidak HIJAU). Persetujuan dan penerbitan surat resmi **diblokir** selama kebijakan aktif adalah placeholder ("Kebijakan resmi belum dikonfigurasi") — hanya Kepala Unit yang dapat menerbitkan kebijakan RESMI.
+Impor Scopus: impor terbaru (tanggal pengamatan) menggantikan impor lama untuk identifier yang sama; lama dipertahankan sebagai riwayat; bukti kedaluwarsa menurut kebijakan; konflik antar sumber non-impor (live/manual vs impor) tetap menghasilkan CONFLICTED.
+
+## 9. Impor Scopus (workbook)
+- Bukti dari impor selalu `IMPORTED_DATA` berlabel versi + tanggal pengamatan. *Tidak ditemukan* = `NOT_FOUND` tidak konklusif (belum terverifikasi).
+- `Inactive` → cakupan berakhir (`DISCONTINUED`); **alasan kualitas hanya** bila kolom "Titles Discontinued by Scopus" menandainya (alasan info `scopus_discontinued_quality` vs `scopus_inactive_not_quality`). Keduanya tidak menjadikan jurnal "predator".
+- `Accepted Titles` → `ACCEPTED_PENDING`: tidak memenuhi indeksasi aktif; bila kebijakan mewajibkan Scopus aktif → KUNING (tidak ditentukan), bukan MERAH.
+- Record berkonflik → bukti `CONFLICTED` → indeksasi KONFLIK (KUNING) sampai ditinjau.
+- Indeksasi aktif dari impor tidak mengubah status tujuan (host persis) maupun administratif; klirens akhir tetap memerlukan keduanya.
