@@ -1,566 +1,564 @@
 peneliti_id,nama_kami,orcid,openalex_author,nama_openalex,karya,sitasi,h_index,i10_index
 P00008,"Prof. Dr. Zaraswati Dwyana Zainuddin, M.Si",0000-0001-5002-237X,A5109733093,Zarsawaty Dwyana,1,3,1,0
-P02716,"Hapsah, S. Kep., Ns., M. Kep",0000-0001-5025-7080,A5073724254,Hapsah Hapsah,32,50,4,1
-P00349,Muhammad Ihsan Andi Dagong,0000-0001-5060-2614,A5075807675,Muhammad Ihsan Andi Dagong,114,276,8,4
-P02711,"Dr. Yuliana Syam, S.Kep., Ns., M.Kes",0000-0001-5078-4462,A5071556944,Yuliana Syam,104,271,8,6
-P00936,"Hermita Arif, CIFP., M.Com",0000-0001-5104-9355,A5064289841,Hermita Arif,22,26,2,1
-P02697,"Prof. Gerhard Fortwengel, MPH",0000-0001-5105-2060,A5091190557,Gerhard Fortwengel,143,674,14,18
-P02289,Prof . Dr. Peter Davey,0000-0001-5133-640X,A5004751329,Peter A. Davey,22,360,11,11
-P02211,Amelia Ramadhani Anshar,0000-0001-5169-8013,A5045519373,Amelia Ramadhani Anshar,14,18,2,0
-P01668,Prof. Li Huan,0000-0001-5211-8324,A5159068654,Huan Li,1,0,0,0
-P01496,"Prof. Dr. Andi Muhammad Akhmar, S.S., M.Hum.",0000-0001-5215-5205,A5148952952,Andi Akhmar,1,0,0,0
-P00269,Rasdiana Mudatsir,0000-0001-5242-4962,A5006010408,Rasdiana Mudatsir,31,31,3,1
-P01555,"Dr. Bahrun, M.Si",0000-0001-5243-014X,A5046843054,Bahrun Bahrun,6,3,1,0
-P00762,"Prof. Dr. Ir. Amran Achmad, M.Sc.",0000-0001-5336-5028,A5103111581,Amran Achmad,60,173,7,4
-P02775,"Riskah Nur`amalia, S.Ft., Physio., M.Biomed., Ph.D",0000-0001-5356-4166,A5053122786,Riskah Nur’amalia,22,56,3,1
-P01439,"Dr. Ahmad Bahar, S.T., M.Si.",0000-0001-5375-9924,A5022939875,Ahmad Bahar,38,119,6,5
-P02750,"Mulhaeriah, S.Kep., Ns., M.Kep., Sp.Mat",0000-0001-5380-780X,A5103178828,Mulhaeriah Mulhaeriah,19,38,2,1
-P00263,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",0000-0001-5453-6052,A5071742678,Muhammad Ridwan,9,24,3,0
-P02592,"Yayu Mulsiany Evary, S.Si., M.Pharm.Sci., Apt",0000-0001-5504-325X,A5050951789,Yayu Mulsiani Evary,21,180,6,2
-P01959,Dr. Anuar Mohamad,0000-0001-5520-0438,A5060367800,Anuar Mohamad,9,22,3,0
+P02783,"Hapsah, S. Kep., Ns., M. Kep",0000-0001-5025-7080,A5073724254,Hapsah Hapsah,32,50,4,1
+P00362,Muhammad Ihsan Andi Dagong,0000-0001-5060-2614,A5075807675,Muhammad Ihsan Andi Dagong,114,276,8,4
+P02778,"Dr. Yuliana Syam, S.Kep., Ns., M.Kes",0000-0001-5078-4462,A5071556944,Yuliana Syam,104,271,8,6
+P00959,"Hermita Arif, CIFP., M.Com",0000-0001-5104-9355,A5064289841,Hermita Arif,22,26,2,1
+P02764,"Prof. Gerhard Fortwengel, MPH",0000-0001-5105-2060,A5091190557,Gerhard Fortwengel,143,674,14,18
+P02352,Prof . Dr. Peter Davey,0000-0001-5133-640X,A5004751329,Peter A. Davey,22,360,11,11
+P02273,Amelia Ramadhani Anshar,0000-0001-5169-8013,A5045519373,Amelia Ramadhani Anshar,14,18,2,0
+P01719,Prof. Li Huan,0000-0001-5211-8324,A5159068654,Huan Li,1,0,0,0
+P01524,"Prof. Dr. Andi Muhammad Akhmar, S.S., M.Hum.",0000-0001-5215-5205,A5148952952,Andi Akhmar,1,0,0,0
+P00282,Rasdiana Mudatsir,0000-0001-5242-4962,A5006010408,Rasdiana Mudatsir,31,31,3,1
+P01604,"Dr. Bahrun, M.Si",0000-0001-5243-014X,A5046843054,Bahrun Bahrun,6,3,1,0
+P00780,"Prof. Dr. Ir. Amran Achmad, M.Sc.",0000-0001-5336-5028,A5103111581,Amran Achmad,60,173,7,4
+P02843,"Riskah Nur`amalia, S.Ft., Physio., M.Biomed., Ph.D",0000-0001-5356-4166,A5053122786,Riskah Nur’amalia,22,56,3,1
+P01465,"Dr. Ahmad Bahar, S.T., M.Si.",0000-0001-5375-9924,A5022939875,Ahmad Bahar,38,119,6,5
+P02818,"Mulhaeriah, S.Kep., Ns., M.Kep., Sp.Mat",0000-0001-5380-780X,A5103178828,Mulhaeriah Mulhaeriah,19,38,2,1
+P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",0000-0001-5453-6052,A5071742678,Muhammad Ridwan,9,24,3,0
+P02659,"Yayu Mulsiany Evary, S.Si., M.Pharm.Sci., Apt",0000-0001-5504-325X,A5050951789,Yayu Mulsiani Evary,21,180,6,2
+P02018,Dr. Anuar Mohamad,0000-0001-5520-0438,A5060367800,Anuar Mohamad,9,22,3,0
 P00041,"Prof. Muhammad Arsyad, Ph.D",0000-0001-5619-4543,A5120879766,Muhammad Arsyad,12,3,1,0
-P00352,Hideyuki Mannen,0000-0001-5627-7082,A5023384057,Hideyuki Mannen,217,4838,35,95
-P00396,"Dr. Ir. Wempie Pakiding, M.Sc",0000-0001-5650-8493,A5042887063,Wempie Pakiding,90,275,9,8
+P00365,Hideyuki Mannen,0000-0001-5627-7082,A5023384057,Hideyuki Mannen,217,4838,35,95
+P00409,"Dr. Ir. Wempie Pakiding, M.Sc",0000-0001-5650-8493,A5042887063,Wempie Pakiding,90,275,9,8
 ,,0000-0001-5656-3118,A5102759372,Francis Gaudreault,22,571,13,14
-P01477,"Dr. Nuraidar Agus, S.S., M.Hum.",0000-0001-5678-0112,A5030853319,Nuraidar Agus,37,33,3,0
-P02580,Hesty Setiawati,0000-0001-5705-4737,A5122172901,Hesti Widyawati,2,0,0,0
-P01299,"Novy N.R.A. Mokobombang, S.T., Ms.T.M., Ph.D",0000-0001-5706-939X,A5032965574,Novy NRA Mokobombang,22,18,3,0
-P01626,Edy Saputra Rusdi,0000-0001-5714-9111,A5043203596,Edy Saputra Rusdi,14,20,3,0
-P00104,DR. Nurul Amalina Mohd Zain,0000-0001-5764-2715,A5002530194,Nurul Amalina Mohd Zain,36,703,12,12
-P01607,"Dian Sidik Arsyad, SKM., MKM., Ph.D",0000-0001-5811-2011,A5010591810,Dian Sidik Arsyad,120,584,11,13
-P00935,"Dr. Darwis Said, Ak., MSA., CSRA",0000-0001-5843-6884,A5004963648,Darwis Said,120,134,5,3
-P02320,"Prof. Dr. Bahruddin Thalib, drg., M.Kes., Sp.Pros ., Subsp., PKIKG (K).",0000-0001-5868-3113,A5024888609,Bahruddin Thalib,102,164,7,1
-P00160,"Prof. Dr. Ir. Elkwakib Syam’un, M.P",0000-0001-5875-118X,A5024528064,Elkawakib Syam’un,133,239,7,5
-P01702,"Prof. Dr.Eng. Ir. Muhammad Isran Ramli, ST., MT., IPM., ASEAN Eng.",0000-0001-5904-1358,A5088427546,Muhammad Isran Ramli,184,346,9,8
-P02420,"Dr. Syahrir A. Pasinringi, MS",0000-0001-5947-2596,A5015018042,Syahrir A. Pasinringi,196,389,10,11
-P02315,"Prof. Dr. Nurlindah Hamrun, drg., M.Kes.",0000-0001-6000-7480,A5019962807,Nurlindah Hamrun,54,99,6,2
-P00248,"Ir. Ayu Anisa Amir, M.Si",0000-0001-6100-8901,A5111305102,Ayu Anisa Amir,15,4,1,0
-P02734,"Dr. dr. Martira Maddeppungeng, Sp.A (K)",0000-0001-6109-6024,A5042682326,Martira Maddeppungeng,48,112,5,3
-P00488,"Kurniati Umrah Nur, M.AppSc(ME)Hons",0000-0001-6177-7495,A5039856822,K. Nur,12,17,2,0
-P02835,"Dinah Inrawati Agustin, S.Tr.Keb.,M.keb",0000-0001-6192-5953,A5092734154,Dinah Inrawati Agustin,16,44,3,2
-P00206,"Reynaldi Laurenze, S.P., M.Si.",0000-0001-6287-0050,A5092703349,Reynaldi Laurenze,18,20,2,1
-P00162,"Muh. Faried, S.P., M.Si",0000-0001-6326-1724,A5077600767,Muhammad Faried,31,18,3,0
-P02156,"drh. Nurul Sulfi Andini, M.Sc.",0000-0001-6354-0782,A5034555577,Nurul Sulfi Andini,10,21,2,1
-P01548,Dr. Nur Asmi,0000-0001-6366-1832,A5032277145,Nur Asmi,48,65,5,0
-P00720,"Ahmad Dhiaulhaq, Ph.D",0000-0001-6420-9936,A5009947241,Ahmad Dhiaulhaq,60,984,16,17
-P01458,"Prof. Dr. Nurhayati, M.Hum",0000-0001-6447-0018,A5148973395,Nurhayati,1,0,0,0
-P00102,"Dr. Ir. Katriani Mantja, M.P.",0000-0001-6522-1689,A5025209147,Katriani Mantja,77,65,4,1
-P01631,"Denny Ivanal Hakim, S.Si., M.Si., Ph.D",0000-0001-6560-9368,A5004371275,‎Denny Ivanal Hakim,88,508,14,16
-P00360,"Fahrul Irawan, S.Pt., M.Si., Ph.D",0000-0001-6640-0785,A5016716729,Fahrul Irawan,10,7,2,0
-P02740,"Dr. Arbianingsih, S.Kep., Ns., M.Kes.",0000-0001-6658-8490,A5070576442,Arbianingsih Arbianingsih,26,59,5,2
-P00978,"Prof. Dr. Grace T. Pontoh, SE., M. Si, Ak., CA.",0000-0001-6672-5408,A5061708920,Grace Theresia Pontoh,115,215,7,4
-P00796,"Arida Fauziyah, S.Si., M.Sc.",0000-0001-6755-6685,A5017147446,Arida Fauziyah,2,61,1,1
-P02257,"Francesco Cangiano, Ph.D",0000-0001-6761-9439,A5083319325,Francesco Cangiano,24,413,6,6
-P00283,"Dr. Muh. Akhsan Akib, M.S.",0000-0001-6777-7891,A5121458318,Muh. Akhsan Akib,9,11,1,1
-P01562,Syamsuddin Toaha,0000-0001-6819-3943,A5090173279,Syamsuddin Toaha,138,343,11,12
-P00496,"Dr. Ellya Sinurat, S.Si.",0000-0001-6825-7230,A5047268215,Ellya Sinurat,84,449,12,12
-P02732,"Prof. Dr. Kadek Ayu Erika, S.Kep., Ns., M.Kes.",0000-0001-6875-5264,A5082557160,Kadek Ayu Erika,108,230,9,8
-P00766,"Ir. Adrayanti Sabar., S.Hut., MP., IPM",0000-0001-6925-1324,A5084869305,Adrayanti Sabar,40,161,3,2
-P02050,"Dr. Ikhlas Kitta, ST, MT",0000-0001-6991-0342,A5037607916,Ikhlas Kitta,66,76,5,0
-P00351,"Prof. Dr. Ir. Lellah Rahim, M.Sc, IPU., ASEAN Eng.",0000-0001-7081-7786,A5053205141,Lellah Rahim,66,95,4,1
-P01459,"Dr. Ikhwan M. Said, M.Hum",0000-0001-7102-2256,A5011230468,Ikhwan M. Said,42,140,6,4
-P02091,"Prof. dr. Syafruddin, PhD",0000-0001-7141-2545,A5068758926,Din Syafruddin,246,4838,36,92
-P02699,Prof. Dr. Dnyanesh Limaye,0000-0001-7264-9210,A5076518163,Dnyanesh Limaye,58,609,12,14
-P02735,"Dr. Tuti Seniwati, S.Kep., Ns., M.Kes.",0000-0001-7270-0493,A5020973400,Tuti Seniwati,23,167,4,4
-P02409,"Prof Aminuddin Syam, S.KM., M.Kes., M.Med.Ed",0000-0001-7284-2985,A5069280505,Aminuddin Syam,235,644,13,22
-P00381,"Kannika Umpuch, Ph. D (Thailand)",0000-0001-7290-375X,A5076600782,Kannika Umpuch,20,7,2,0
-P00785,"Dr. Kidung Tirtayasa Putra Pangestu, S.Hut., M.Si.",0000-0001-7341-8967,A5022331565,Kidung Tirtayasa Putra Pangestu,28,62,5,2
-P00426,Prof. Dr. Hasan Ozgunay,0000-0001-7351-2603,A5020415903,Hasan Özgünay,47,412,10,10
-P00111,Sitti Inderiati,0000-0001-7367-408X,A5047681883,Sitti Inderiati,16,42,2,1
-P02701,"Assoc. Prof. Petra Mandysová, RN, MSN, PhD",0000-0001-7399-1456,A5027296928,Petra Mandysová,65,322,10,10
-P02134,"Prof. Dr. dr. Haerani Rasyid, Sp.PD, KGH, Sp.GK (K), M.Kes",0000-0001-7404-2973,A5067321096,Haerani Rasyid,176,398,11,12
-P01012,"Muhammad Irdam Ferdiansah SE., M.ACC., Ph.D, Ak., CA.",0000-0001-7421-8297,A5069827894,Muhammad Irdam Ferdiansah,40,71,4,2
-P00482,Dr. Aimi Nabilah Hussein,0000-0001-7481-9682,A5015910655,Aimi Nabilah Hussein,13,56,3,2
-P00611,"Prof. Dr. Ir. Abdul Haris, M.Si.",0000-0001-7535-4514,A5051800452,Abdul Haris,293,979,15,24
+P01505,"Dr. Nuraidar Agus, S.S., M.Hum.",0000-0001-5678-0112,A5030853319,Nuraidar Agus,37,33,3,0
+P02647,Hesty Setiawati,0000-0001-5705-4737,A5122172901,Hesti Widyawati,2,0,0,0
+P01323,"Novy N.R.A. Mokobombang, S.T., Ms.T.M., Ph.D",0000-0001-5706-939X,A5032965574,Novy NRA Mokobombang,22,18,3,0
+P01675,Edy Saputra Rusdi,0000-0001-5714-9111,A5043203596,Edy Saputra Rusdi,14,20,3,0
+P00105,DR. Nurul Amalina Mohd Zain,0000-0001-5764-2715,A5002530194,Nurul Amalina Mohd Zain,36,703,12,12
+P01657,"Dian Sidik Arsyad, SKM., MKM., Ph.D",0000-0001-5811-2011,A5010591810,Dian Sidik Arsyad,120,584,11,13
+P00958,"Dr. Darwis Said, Ak., MSA., CSRA",0000-0001-5843-6884,A5004963648,Darwis Said,120,134,5,3
+P02383,"Prof. Dr. Bahruddin Thalib, drg., M.Kes., Sp.Pros ., Subsp., PKIKG (K).",0000-0001-5868-3113,A5024888609,Bahruddin Thalib,102,164,7,1
+P00169,"Prof. Dr. Ir. Elkwakib Syam’un, M.P",0000-0001-5875-118X,A5024528064,Elkawakib Syam’un,133,239,7,5
+P01753,"Prof. Dr.Eng. Ir. Muhammad Isran Ramli, ST., MT., IPM., ASEAN Eng.",0000-0001-5904-1358,A5088427546,Muhammad Isran Ramli,184,346,9,8
+P02484,"Dr. Syahrir A. Pasinringi, MS",0000-0001-5947-2596,A5015018042,Syahrir A. Pasinringi,196,389,10,11
+P02378,"Prof. Dr. Nurlindah Hamrun, drg., M.Kes.",0000-0001-6000-7480,A5019962807,Nurlindah Hamrun,54,99,6,2
+P00261,"Ir. Ayu Anisa Amir, M.Si",0000-0001-6100-8901,A5111305102,Ayu Anisa Amir,15,4,1,0
+P02802,"Dr. dr. Martira Maddeppungeng, Sp.A (K)",0000-0001-6109-6024,A5042682326,Martira Maddeppungeng,48,112,5,3
+P00501,"Kurniati Umrah Nur, M.AppSc(ME)Hons",0000-0001-6177-7495,A5039856822,K. Nur,12,17,2,0
+P02903,"Dinah Inrawati Agustin, S.Tr.Keb.,M.keb",0000-0001-6192-5953,A5092734154,Dinah Inrawati Agustin,16,44,3,2
+P00219,"Reynaldi Laurenze, S.P., M.Si.",0000-0001-6287-0050,A5092703349,Reynaldi Laurenze,18,20,2,1
+P00171,"Muh. Faried, S.P., M.Si",0000-0001-6326-1724,A5077600767,Muhammad Faried,31,18,3,0
+P02218,"drh. Nurul Sulfi Andini, M.Sc.",0000-0001-6354-0782,A5034555577,Nurul Sulfi Andini,10,21,2,1
+P01597,Dr. Nur Asmi,0000-0001-6366-1832,A5032277145,Nur Asmi,48,65,5,0
+P00737,"Ahmad Dhiaulhaq, Ph.D",0000-0001-6420-9936,A5009947241,Ahmad Dhiaulhaq,60,984,16,17
+P01487,"Prof. Dr. Nurhayati, M.Hum",0000-0001-6447-0018,A5148973395,Nurhayati,1,0,0,0
+P00103,"Dr. Ir. Katriani Mantja, M.P.",0000-0001-6522-1689,A5025209147,Katriani Mantja,77,65,4,1
+P01680,"Denny Ivanal Hakim, S.Si., M.Si., Ph.D",0000-0001-6560-9368,A5004371275,‎Denny Ivanal Hakim,88,508,14,16
+P00373,"Fahrul Irawan, S.Pt., M.Si., Ph.D",0000-0001-6640-0785,A5016716729,Fahrul Irawan,10,7,2,0
+P02808,"Dr. Arbianingsih, S.Kep., Ns., M.Kes.",0000-0001-6658-8490,A5070576442,Arbianingsih Arbianingsih,26,59,5,2
+P01001,"Prof. Dr. Grace T. Pontoh, SE., M. Si, Ak., CA.",0000-0001-6672-5408,A5061708920,Grace Theresia Pontoh,115,215,7,4
+P00814,"Arida Fauziyah, S.Si., M.Sc.",0000-0001-6755-6685,A5017147446,Arida Fauziyah,2,61,1,1
+P02320,"Francesco Cangiano, Ph.D",0000-0001-6761-9439,A5083319325,Francesco Cangiano,24,413,6,6
+P00296,"Dr. Muh. Akhsan Akib, M.S.",0000-0001-6777-7891,A5121458318,Muh. Akhsan Akib,9,11,1,1
+P01611,Syamsuddin Toaha,0000-0001-6819-3943,A5090173279,Syamsuddin Toaha,138,343,11,12
+P00509,"Dr. Ellya Sinurat, S.Si.",0000-0001-6825-7230,A5047268215,Ellya Sinurat,84,449,12,12
+P02800,"Prof. Dr. Kadek Ayu Erika, S.Kep., Ns., M.Kes.",0000-0001-6875-5264,A5082557160,Kadek Ayu Erika,108,230,9,8
+P00784,"Ir. Adrayanti Sabar., S.Hut., MP., IPM",0000-0001-6925-1324,A5084869305,Adrayanti Sabar,40,161,3,2
+P02109,"Dr. Ikhlas Kitta, ST, MT",0000-0001-6991-0342,A5037607916,Ikhlas Kitta,66,76,5,0
+P00364,"Prof. Dr. Ir. Lellah Rahim, M.Sc, IPU., ASEAN Eng.",0000-0001-7081-7786,A5053205141,Lellah Rahim,66,95,4,1
+P01488,"Dr. Ikhwan M. Said, M.Hum",0000-0001-7102-2256,A5011230468,Ikhwan M. Said,42,140,6,4
+P02152,"Prof. dr. Syafruddin, PhD",0000-0001-7141-2545,A5068758926,Din Syafruddin,246,4838,36,92
+P02766,Prof. Dr. Dnyanesh Limaye,0000-0001-7264-9210,A5076518163,Dnyanesh Limaye,58,609,12,14
+P02803,"Dr. Tuti Seniwati, S.Kep., Ns., M.Kes.",0000-0001-7270-0493,A5020973400,Tuti Seniwati,23,167,4,4
+P02473,"Prof Aminuddin Syam, S.KM., M.Kes., M.Med.Ed",0000-0001-7284-2985,A5069280505,Aminuddin Syam,235,644,13,22
+P00394,"Kannika Umpuch, Ph. D (Thailand)",0000-0001-7290-375X,A5076600782,Kannika Umpuch,20,7,2,0
+P00803,"Dr. Kidung Tirtayasa Putra Pangestu, S.Hut., M.Si.",0000-0001-7341-8967,A5022331565,Kidung Tirtayasa Putra Pangestu,28,62,5,2
+P00439,Prof. Dr. Hasan Ozgunay,0000-0001-7351-2603,A5020415903,Hasan Özgünay,47,412,10,10
+P00112,Sitti Inderiati,0000-0001-7367-408X,A5047681883,Sitti Inderiati,16,42,2,1
+P02768,"Assoc. Prof. Petra Mandysová, RN, MSN, PhD",0000-0001-7399-1456,A5027296928,Petra Mandysová,65,322,10,10
+P02197,"Prof. Dr. dr. Haerani Rasyid, Sp.PD, KGH, Sp.GK (K), M.Kes",0000-0001-7404-2973,A5067321096,Haerani Rasyid,176,398,11,12
+P01036,"Muhammad Irdam Ferdiansah SE., M.ACC., Ph.D, Ak., CA.",0000-0001-7421-8297,A5069827894,Muhammad Irdam Ferdiansah,40,71,4,2
+P00495,Dr. Aimi Nabilah Hussein,0000-0001-7481-9682,A5015910655,Aimi Nabilah Hussein,13,56,3,2
+P00626,"Prof. Dr. Ir. Abdul Haris, M.Si.",0000-0001-7535-4514,A5051800452,Abdul Haris,293,979,15,24
 ,,0000-0001-7564-1003,A5035961664,Muh Fichriyadi Hastira,43,13,2,0
-P02111,"Dr. Ika Yustisia, MD",0000-0001-7611-968X,A5036674239,Ika Yustisia,81,209,6,3
-P01085,"Muhammad Istiyansyah Ulman Idris, S.E., M.Sc. CRA., CRP.",0000-0001-7637-0735,A5078346381,Muhammad Istiyansyah Ulman Idris,9,24,1,1
+P02173,"Dr. Ika Yustisia, MD",0000-0001-7611-968X,A5036674239,Ika Yustisia,81,209,6,3
+P01109,"Muhammad Istiyansyah Ulman Idris, S.E., M.Sc. CRA., CRP.",0000-0001-7637-0735,A5078346381,Muhammad Istiyansyah Ulman Idris,9,24,1,1
 ,,0000-0001-7721-9658,A5036404339,Gemini Alam,29,95,5,3
-P02188,"Prof. Takuro Furusawa, Ph.D",0000-0001-7772-3053,A5072647100,Takuro Furusawa,69,1072,15,22
-P00128,Prof. Salengke,0000-0001-7777-2971,A5010141693,Salengke Salengke,124,1068,16,26
-P01062,Prof. Dr. Dileep Kumar M,0000-0001-7777-3907,A5027778277,Dileep Kumar M.,78,703,12,17
-P01242,"Prof. Dr. Alwi, M.Si",0000-0001-7785-8548,A5128718608,Alwi,1,0,0,0
-P01095,"Prof. Dr. Haliah, SE., M.Si., Ak., CA., CRP., CRA., CWMA.",0000-0001-7812-0502,A5111008659,Haliah Haliah,189,296,8,6
-P02112,"Prof. Geoffrey Dobson, Ph.D",0000-0001-7905-4551,A5014268293,Geoffrey Phillip Dobson,183,4692,40,108
-P00266,"Prof. B. Nishantha, Ph.D.",0000-0001-8274-9880,A5045755548,B. Nishantha,33,83,5,2
+P02250,"Prof. Takuro Furusawa, Ph.D",0000-0001-7772-3053,A5072647100,Takuro Furusawa,69,1072,15,22
+P00129,Prof. Salengke,0000-0001-7777-2971,A5010141693,Salengke Salengke,124,1068,16,26
+P01086,Prof. Dr. Dileep Kumar M,0000-0001-7777-3907,A5027778277,Dileep Kumar M.,78,703,12,17
+P01266,"Prof. Dr. Alwi, M.Si",0000-0001-7785-8548,A5128718608,Alwi,1,0,0,0
+P01119,"Prof. Dr. Haliah, SE., M.Si., Ak., CA., CRP., CRA., CWMA.",0000-0001-7812-0502,A5111008659,Haliah Haliah,189,296,8,6
+P02174,"Prof. Geoffrey Dobson, Ph.D",0000-0001-7905-4551,A5014268293,Geoffrey Phillip Dobson,183,4692,40,108
+P00279,"Prof. B. Nishantha, Ph.D.",0000-0001-8274-9880,A5045755548,B. Nishantha,33,83,5,2
 P00058,"Dr. Muhammad Fuad Anshori, S.P., M.Si",0000-0001-8275-0179,A5109510169,Muhammad Fuad Ansho,3,39,2,2
-P00377,"Prof. Dr. Ir. Ambo Ako, M. Sc., IPU",0000-0001-8291-9560,A5020921717,Ambo Ako,63,110,6,2
-P01704,"Dr.Eng. Ir. Muralia Hustim, S.T., M.T., IPM., AER",0000-0001-8323-1549,A5026936209,Muralia Hustim,129,148,5,1
-P00124,TS. DR. Anas Mohd Mustafah,0000-0001-8368-3035,A5049088250,Anas Mohd Mustafah,22,35,3,1
-P00719,"Nurdin Dalya, S.Hut, M.Hut, Ph.D",0000-0001-8459-9660,A5087301344,Nurdin Dalya,28,22,2,0
-P01550,"Drs. Fredryk Mandey, M.Sc.",0000-0001-8502-0227,A5006246754,Fredryk Mandey,25,28,2,0
-P02114,Dr. Elke Sokoya,0000-0001-8509-2044,A5036319081,Elke M. Sokoya,36,248,9,8
+P00390,"Prof. Dr. Ir. Ambo Ako, M. Sc., IPU",0000-0001-8291-9560,A5020921717,Ambo Ako,63,110,6,2
+P01755,"Dr.Eng. Ir. Muralia Hustim, S.T., M.T., IPM., AER",0000-0001-8323-1549,A5026936209,Muralia Hustim,129,148,5,1
+P00125,TS. DR. Anas Mohd Mustafah,0000-0001-8368-3035,A5049088250,Anas Mohd Mustafah,22,35,3,1
+P00736,"Nurdin Dalya, S.Hut, M.Hut, Ph.D",0000-0001-8459-9660,A5087301344,Nurdin Dalya,28,22,2,0
+P01599,"Drs. Fredryk Mandey, M.Sc.",0000-0001-8502-0227,A5006246754,Fredryk Mandey,25,28,2,0
+P02176,Dr. Elke Sokoya,0000-0001-8509-2044,A5036319081,Elke M. Sokoya,36,248,9,8
 ,,0000-0001-8540-1644,A5008431822,Tutik Kuswinanti,186,515,9,8
-P02108,"Aminuddin, MD, M.Nut & Diet, Ph.D",0000-0001-8564-7847,A5135355418,Aminuddin Aminuddin,2,0,0,0
-P01084,"Prof. Dr. Nirwana, S.E., M.Si., Ak., CA.",0000-0001-8608-9517,A5046027625,Nirwana Nirwana,82,142,5,3
-P01609,Prof. Kerrie Mengersen,0000-0001-8625-9168,A5001588690,Kerrie Lee Mengersen,1206,27198,75,395
-P00273,Shinichi Tebayashi,0000-0001-8640-8872,A5030536698,Shin‐ichi Tebayashi,78,882,18,33
+P02170,"Aminuddin, MD, M.Nut & Diet, Ph.D",0000-0001-8564-7847,A5135355418,Aminuddin Aminuddin,2,0,0,0
+P01108,"Prof. Dr. Nirwana, S.E., M.Si., Ak., CA.",0000-0001-8608-9517,A5046027625,Nirwana Nirwana,82,142,5,3
+P01658,Prof. Kerrie Mengersen,0000-0001-8625-9168,A5001588690,Kerrie Lee Mengersen,1206,27198,75,395
+P00286,Shinichi Tebayashi,0000-0001-8640-8872,A5030536698,Shin‐ichi Tebayashi,78,882,18,33
 P00052,"Prof. Ir. Rinaldi Sjahril, M.Agr., Ph.D.",0000-0001-8645-4828,A5013633593,Rinaldi Sjahril,111,460,10,10
-P01769,"Prof. Dr. Eng. Jalaluddin, ST, MT",0000-0001-8650-7475,A5006602542,Jalaluddin Haddada,7,5,1,0
-P00444,"Prof. Dr. Ir. Syahruddin Said, M.Agr.Sc., IPU., ASEAN Eng.",0000-0001-8681-4985,A5043734884,Syahruddin Said,148,690,14,24
-P01219,"Agussalim, S.I.P.,MIRAP",0000-0001-8697-7936,A5049573301,Agussalim Burhanuddin,70,63,4,0
+P01821,"Prof. Dr. Eng. Jalaluddin, ST, MT",0000-0001-8650-7475,A5006602542,Jalaluddin Haddada,7,5,1,0
+P00457,"Prof. Dr. Ir. Syahruddin Said, M.Agr.Sc., IPU., ASEAN Eng.",0000-0001-8681-4985,A5043734884,Syahruddin Said,148,690,14,24
+P01243,"Agussalim, S.I.P.,MIRAP",0000-0001-8697-7936,A5049573301,Agussalim Burhanuddin,70,63,4,0
 P00018,Dr. Suriani,0000-0001-8781-221X,A5053259332,Suriani Suriani,79,276,10,10
-P01474,"Dr. Dafirah, M.Hum.",0000-0001-8792-0579,A5083791463,Dafirah Dafirah,14,5,1,0
-P00909,"Muhammad Tahir Sapsal, STP, M.Si",0000-0001-8830-1235,A5021921933,Muhammad Tahir Sapsal,75,118,5,1
-P01410,"Prof. Dr. Birkah Latif, S.H., M.H., LL.M.",0000-0001-8840-9465,A5023934540,Birkah Latif,50,52,4,1
-P02038,"Associate Professor Ir. Elyas Palantei, M.Eng., Ph.D",0000-0001-8876-4926,A5019157069,Elyas Palantei,122,407,9,8
-P00492,"Asmi Citra Malina, S.Pi., M.Agr., Ph.D",0000-0001-8967-210X,A5053290630,Asmi Citra Malina A.R. Tassakka,68,756,12,14
-P01435,Dr.Marianna Sigala,0000-0001-8997-2292,A5006428406,Μαριάννα Σιγάλα,425,20127,62,174
-P00350,RR Sri Rachma Aprilita Bugiwati,0000-0001-9036-2555,A5015592781,Sri Rachma Aprilita Bugiwati,41,134,6,3
-P01551,"Dr. Herlina Rasyid, M.Si",0000-0001-9136-9716,A5021327493,Herlina Rasyid,63,82,5,0
+P01502,"Dr. Dafirah, M.Hum.",0000-0001-8792-0579,A5083791463,Dafirah Dafirah,14,5,1,0
+P00931,"Muhammad Tahir Sapsal, STP, M.Si",0000-0001-8830-1235,A5021921933,Muhammad Tahir Sapsal,75,118,5,1
+P01436,"Prof. Dr. Birkah Latif, S.H., M.H., LL.M.",0000-0001-8840-9465,A5023934540,Birkah Latif,50,52,4,1
+P02097,"Associate Professor Ir. Elyas Palantei, M.Eng., Ph.D",0000-0001-8876-4926,A5019157069,Elyas Palantei,122,407,9,8
+P00505,"Asmi Citra Malina, S.Pi., M.Agr., Ph.D",0000-0001-8967-210X,A5053290630,Asmi Citra Malina A.R. Tassakka,68,756,12,14
+P01461,Dr.Marianna Sigala,0000-0001-8997-2292,A5006428406,Μαριάννα Σιγάλα,425,20127,62,174
+P00363,RR Sri Rachma Aprilita Bugiwati,0000-0001-9036-2555,A5015592781,Sri Rachma Aprilita Bugiwati,41,134,6,3
+P01600,"Dr. Herlina Rasyid, M.Si",0000-0001-9136-9716,A5021327493,Herlina Rasyid,63,82,5,0
 ,,0000-0001-9198-3951,A5065859286,Hui Li,5778,42938,96,615
-P01331,David Jimoh Kayode,0000-0001-9200-249X,A5088896574,David Jimoh Kayode,27,119,5,2
-P02204,Naoki Isobe,0000-0001-9230-6346,A5050319787,Naoki Isobe,809,9394,44,205
-P00612,"Prof. Dr. Ir. Rohani AR, M.Si.",0000-0001-9276-7492,A5000229829,Rohani Ambo‐Rappe,214,1963,25,43
-P02666,"Dr. Takdir Tahir, S.Kep., Ns., M.Kes.",0000-0001-9356-1242,A5021385573,Takdir Tahir,67,123,6,3
-P01670,"Prof Widi Astuti, S.T., M.T.",0000-0001-9364-4291,A5073116154,Widi Astuti,145,1245,19,40
-P00615,"Prof. Dr. Ir. Rahmadi Tambaru, M.Si.",0000-0001-9403-0697,A5064961427,Rahmadi Tambaru,72,102,5,3
-P00717,Munajat Nursaputra PhD (cand),0000-0001-9470-5148,A5024847922,Munajat Nursaputra,77,210,8,5
-P01630,"Dr. Harmanus Batkunde, S.Si M.Si",0000-0001-9471-0326,A5043676146,Harmanus Batkunde,33,36,4,0
-P01485,"Ratnawati, S.S.,M.Pd.",0000-0001-9518-4575,A5101924884,Ratnawati,30,2,1,0
-P00110,"Ifayanti Ridwan Saleh, Ph.D.",0000-0001-9528-3151,A5080134208,Ifayanti Ridwan,140,311,9,8
-P00855,Assoc. Prof. ChM Dr. Fatimah Salim,0000-0001-9560-068X,A5052707270,Fatimah Salim,68,395,10,11
-P01669,Muhammad Akbar Rhamdhani,0000-0001-9596-4141,A5046600903,Tsubasa Otake,129,1347,23,32
-P02047,"Prof. Dr. Ir. Salama Manjang, MT., IPU., ASEAN Eng.",0000-0001-9616-7435,A5091828097,Salama Manjang,97,249,8,6
-P00899,"Dr.rer.nat. Zainal, S.TP., M.FoodTech",0000-0001-9638-0711,A5032749971,Zainal Zainal,96,280,9,8
-P01495,"Prof. Dr. Fathu Rahman, M.Hum",0000-0001-9641-036X,A5057269560,Fathu Rahman,157,634,14,19
-P00481,Dr. Mamat Hamidi Kamalludin,0000-0001-9728-8212,A5089410033,Mamat Hamidi Kamalludin,52,348,12,14
-P00542,"Prof. Dr. Ir. Jamaluddin Jompa, MSc",0000-0001-9740-333X,A5075200840,Jamaluddin Jompa,366,7984,38,95
-P02582,"A. Anggriani, S.Si, M.Clin.Pharm, Apt",0000-0001-9831-4494,A5125407653,Andi Anggriani,5,2,1,0
-P02612,Dr. Maria Mir,0000-0001-9841-8891,A5034088746,Maria Mir,26,1641,13,15
-P02186,"Prof. dr. Irawan Yusuf, PhD.",0000-0001-9891-131X,A5069595788,Irawan Yusuf,126,717,14,20
-P00813,"Dr. Ir. Sitti Nuraeni, M.P",0000-0002-0095-7967,A5015114781,Sitti Nuraeni,78,92,5,1
-P00711,Dr. Karno B. Batiran,0000-0002-0145-6777,A5047759147,Karno B. Batiran,15,82,6,2
-P01023,"Hillman Wirawan, S.Psi., M.M., M.A., Ph.D",0000-0002-0160-3108,A5010368608,Hillman Wirawan,68,1058,16,23
-P02548,"Rahayu Indriasari, SKM., MPHCN., Ph.D",0000-0002-0348-2338,A5058645830,Rahayu Indriasari,115,374,10,11
-P01326,"Prof. Seniwati, Ph.D",0000-0002-0483-9116,A5110750468,Seniwati,25,55,5,1
-P02095,"Prof. Masaharu Tokoro, MD., Ph.D",0000-0002-0489-5388,A5121766712,Masaharu Tokoro,2,2,1,0
-P00889,"Dr. Februadi Bastian, S.TP., M.Si",0000-0002-0495-5838,A5068480308,Muhammad Asfar,49,112,5,3
-P00399,"Prof. Ahmad Sofyan, S.Pt., M.Sc., Ph.D",0000-0002-0578-4671,A5002736447,Ahmad Sofyan,112,692,12,20
-P00227,"Dr. Ir. Idris Summase, M.Si.",0000-0002-0649-2419,A5085311271,Idris Summase,25,43,4,0
-P00850,"Fitriwati, SE., M.Si.",0000-0002-0742-8339,A5086097438,Fitriwati Djam’an,14,1,1,0
-P00979,"Dr. Nadhirah Nagu, SE., Ak., M.Si., CA., CSRA., CSRA., CSP., ACSAP",0000-0002-0759-1435,A5034488341,Nadhirah Nagu,55,84,6,3
-P02610,Prof. Ryan F. Donnelly,0000-0002-0766-4147,A5035668087,Ryan F. Donnelly,765,39121,105,412
-P02787,"Lai Lee Lee., Ph.D",0000-0002-0783-6340,A5125024477,Lee Lee Lai,11,1,1,0
-P02255,"Rezky Ariany Aras, S.Psi., M.Psi., Psikolog",0000-0002-0868-2080,A5018487775,Rezky Ariany Aras,14,31,3,1
-P01334,"Muhammad Fajhriyadi Hastira, S.IP., M.H.I",0000-0002-0900-0782,A5116477655,Muhammad Fajhriyadi Hastira,30,0,0,0
-P01482,"Rismawidiawati, S.Sos., M.Si.",0000-0002-1012-7860,A5043853065,Rismawidiawati Rusli,21,20,2,0
-P00422,"Dr. Ir. Jamila Mustabi, S.Pt, M.Si, IPM",0000-0002-1031-9889,A5016276061,Jamila Mustabi,63,60,4,0
-P02051,Prof. Ir. Dr. Hazlie Bin Mokhlis,0000-0002-1166-1934,A5071963555,Hazlie Mokhlis,589,15558,64,245
-P01260,Siran Liang,0000-0002-1265-6029,A5068474488,Siran Liang,6,14,2,1
-P02757,"Ns. Suryane Sulistiana Susanti, S.Kep., M.A., Ph.D",0000-0002-1335-8912,A5036036428,Suryane Sulistiana Susanti,62,149,6,6
-P02043,"Prof. Dr. dr. Rina Masadah, Sp.PA.,M.Phil.DFM",0000-0002-1380-4759,A5057696171,Rina Masadah,120,382,10,12
-P02308,"Prof. Dr. drg. Rasmidar Samad, MS., FISDPH. FISPD",0000-0002-1384-6967,A5039796463,Rasmidar Samad,117,131,6,2
-P02115,Andhira Prabawati,0000-0002-1385-9856,A5116588277,Andhira Prabawati,2,1,1,0
-P00134,"Dr. dr. Husnul Mubarak., Sp. KFR",0000-0002-1404-2960,A5043894609,Husnul Mubarak,64,55,4,1
-P02572,Dr. Nguyen Minh Hien,0000-0002-1451-3769,A5132862620,Hien Minh Nguyen,1,1,1,0
-P00977,"Dr. Rahmawati HS, SE, M. Si, Ak, CA, ASEAN CPA",0000-0002-1457-7914,A5024637247,Rahmawati HS,21,9,2,0
-P00851,"Ira Taskirawati, S.Hut., M.Si., Ph.D.",0000-0002-1467-4327,A5060907305,Ira Taskirawati,53,158,7,4
-P02319,"Prof. Dr. Asmawati, drg., M.Kes., PBO",0000-0002-1478-8914,A5044891104,Asmawati Amin,15,5,1,0
-P00760,"Prof. Dr. Supratman, S.Hut., M.P",0000-0002-1484-6598,A5089570008,Supratman Supratman,48,480,9,9
-P01915,"Ir. Rasdiana Zakaria, S.T., M.T",0000-0002-1534-8443,A5066443029,R Zakaria,16,34,4,0
-P00767,"Dr. Rahmat Muhammad, M.Si",0000-0002-1535-1060,A5085868001,Rahmat Muhammad,77,58,4,0
+P01355,David Jimoh Kayode,0000-0001-9200-249X,A5088896574,David Jimoh Kayode,27,119,5,2
+P02266,Naoki Isobe,0000-0001-9230-6346,A5050319787,Naoki Isobe,809,9394,44,205
+P00627,"Prof. Dr. Ir. Rohani AR, M.Si.",0000-0001-9276-7492,A5000229829,Rohani Ambo‐Rappe,214,1963,25,43
+P02853,"Dr. Takdir Tahir, S.Kep., Ns., M.Kes.",0000-0001-9356-1242,A5021385573,Takdir Tahir,67,123,6,3
+P01721,"Prof Widi Astuti, S.T., M.T.",0000-0001-9364-4291,A5073116154,Widi Astuti,145,1245,19,40
+P00630,"Prof. Dr. Ir. Rahmadi Tambaru, M.Si.",0000-0001-9403-0697,A5064961427,Rahmadi Tambaru,72,102,5,3
+P00734,Munajat Nursaputra PhD (cand),0000-0001-9470-5148,A5024847922,Munajat Nursaputra,77,210,8,5
+P01679,"Dr. Harmanus Batkunde, S.Si M.Si",0000-0001-9471-0326,A5043676146,Harmanus Batkunde,33,36,4,0
+P01513,"Ratnawati, S.S.,M.Pd.",0000-0001-9518-4575,A5101924884,Ratnawati,30,2,1,0
+P00111,"Ifayanti Ridwan Saleh, Ph.D.",0000-0001-9528-3151,A5080134208,Ifayanti Ridwan,140,311,9,8
+P00873,Assoc. Prof. ChM Dr. Fatimah Salim,0000-0001-9560-068X,A5052707270,Fatimah Salim,68,395,10,11
+P01720,Prof. Tsubasa Otake,0000-0001-9596-4141,A5046600903,Tsubasa Otake,129,1347,23,32
+P02106,"Prof. Dr. Ir. Salama Manjang, MT., IPU., ASEAN Eng.",0000-0001-9616-7435,A5091828097,Salama Manjang,97,249,8,6
+P00920,"Dr.rer.nat. Zainal, S.TP., M.FoodTech",0000-0001-9638-0711,A5032749971,Zainal Zainal,96,280,9,8
+P01523,"Prof. Dr. Fathu Rahman, M.Hum",0000-0001-9641-036X,A5057269560,Fathu Rahman,157,634,14,19
+P00494,Dr. Mamat Hamidi Kamalludin,0000-0001-9728-8212,A5089410033,Mamat Hamidi Kamalludin,52,348,12,14
+P00556,"Prof. Dr. Ir. Jamaluddin Jompa, M.Sc.",0000-0001-9740-333X,A5075200840,Jamaluddin Jompa,366,7984,38,95
+P02649,"A. Anggriani, S.Si, M.Clin.Pharm, Apt",0000-0001-9831-4494,A5125407653,Andi Anggriani,5,2,1,0
+P02679,Dr. Maria Mir,0000-0001-9841-8891,A5034088746,Maria Mir,26,1641,13,15
+P02248,"Prof. dr. Irawan Yusuf, PhD.",0000-0001-9891-131X,A5069595788,Irawan Yusuf,126,717,14,20
+P00831,"Dr. Ir. Sitti Nuraeni, M.P",0000-0002-0095-7967,A5015114781,Sitti Nuraeni,78,92,5,1
+P00728,Dr. Karno B. Batiran,0000-0002-0145-6777,A5047759147,Karno B. Batiran,15,82,6,2
+P01047,"Hillman Wirawan, S.Psi., M.M., M.A., Ph.D",0000-0002-0160-3108,A5010368608,Hillman Wirawan,68,1058,16,23
+P02615,"Rahayu Indriasari, SKM., MPHCN., Ph.D",0000-0002-0348-2338,A5058645830,Rahayu Indriasari,115,374,10,11
+P01350,"Prof. Seniwati, Ph.D",0000-0002-0483-9116,A5110750468,Seniwati,25,55,5,1
+P02157,Dr. Puji Budi Setia Asih,0000-0002-0489-5388,A5121766712,Masaharu Tokoro,2,2,1,0
+P00909,"Dr. Muhammad Asfar, STP., M.Si.",0000-0002-0495-5838,A5068480308,Muhammad Asfar,49,112,5,3
+P00412,"Prof. Ahmad Sofyan, S.Pt., M.Sc., Ph.D",0000-0002-0578-4671,A5002736447,Ahmad Sofyan,112,692,12,20
+P00240,"Dr. Ir. Idris Summase, M.Si.",0000-0002-0649-2419,A5085311271,Idris Summase,25,43,4,0
+P00868,"Fitriwati, SE., M.Si.",0000-0002-0742-8339,A5086097438,Fitriwati Djam’an,14,1,1,0
+P01002,"Dr. Nadhirah Nagu, SE., Ak., M.Si., CA., CSRA., CSRA., CSP., ACSAP",0000-0002-0759-1435,A5034488341,Nadhirah Nagu,55,84,6,3
+P02677,Prof. Ryan F. Donnelly,0000-0002-0766-4147,A5035668087,Ryan F. Donnelly,765,39121,105,412
+P02856,"Lai Lee Lee., Ph.D",0000-0002-0783-6340,A5125024477,Lee Lee Lai,11,1,1,0
+P02318,"Rezky Ariany Aras, S.Psi., M.Psi., Psikolog",0000-0002-0868-2080,A5018487775,Rezky Ariany Aras,14,31,3,1
+P01358,"Muhammad Fajhriyadi Hastira, S.IP., M.H.I",0000-0002-0900-0782,A5116477655,Muhammad Fajhriyadi Hastira,30,0,0,0
+P01510,"Rismawidiawati, S.Sos., M.Si.",0000-0002-1012-7860,A5043853065,Rismawidiawati Rusli,21,20,2,0
+P00435,"Dr. Ir. Jamila Mustabi, S.Pt, M.Si, IPM",0000-0002-1031-9889,A5016276061,Jamila Mustabi,63,60,4,0
+P02110,Prof. Ir. Dr. Hazlie Bin Mokhlis,0000-0002-1166-1934,A5071963555,Hazlie Mokhlis,589,15558,64,245
+P01284,Siran Liang,0000-0002-1265-6029,A5068474488,Siran Liang,6,14,2,1
+P02825,"Ns. Suryane Sulistiana Susanti, S.Kep., M.A., Ph.D",0000-0002-1335-8912,A5036036428,Suryane Sulistiana Susanti,62,149,6,6
+P02102,"Prof. Dr. dr. Rina Masadah, Sp.PA.,M.Phil.DFM",0000-0002-1380-4759,A5057696171,Rina Masadah,120,382,10,12
+P02371,"Prof. Dr. drg. Rasmidar Samad, MS., FISDPH. FISPD",0000-0002-1384-6967,A5039796463,Rasmidar Samad,117,131,6,2
+P02177,Andhira Prabawati,0000-0002-1385-9856,A5116588277,Andhira Prabawati,2,1,1,0
+P00135,"Dr. dr. Husnul Mubarak., Sp. KFR",0000-0002-1404-2960,A5043894609,Husnul Mubarak,64,55,4,1
+P02639,Dr. Nguyen Minh Hien,0000-0002-1451-3769,A5132862620,Hien Minh Nguyen,1,1,1,0
+P01000,"Dr. Rahmawati HS, SE, M. Si, Ak, CA, ASEAN CPA",0000-0002-1457-7914,A5024637247,Rahmawati HS,21,9,2,0
+P00869,"Ira Taskirawati, S.Hut., M.Si., Ph.D.",0000-0002-1467-4327,A5060907305,Ira Taskirawati,53,158,7,4
+P02382,"Prof. Dr. Asmawati, drg., M.Kes., PBO",0000-0002-1478-8914,A5044891104,Asmawati Amin,15,5,1,0
+P00777,"Prof. Dr. Supratman, S.Hut., M.P",0000-0002-1484-6598,A5089570008,Supratman Supratman,48,480,9,9
+P01975,"Ir. Rasdiana Zakaria, S.T., M.T",0000-0002-1534-8443,A5066443029,R Zakaria,16,34,4,0
+P00785,"Dr. Rahmat Muhammad, M.Si",0000-0002-1535-1060,A5085868001,Rahmat Muhammad,77,58,4,0
 P00043,"Asti Irawanti Azis, S.P., M.Si.",0000-0002-1594-7139,A5034109082,Asti Irawanti Azis,16,53,2,2
-P01270,"Dr. Fitrawan Umar, S.T., M.Sc.",0000-0002-1710-7512,A5003850116,Fitrawan Umar,15,37,4,0
+P01294,"Dr. Fitrawan Umar, S.T., M.Sc.",0000-0002-1710-7512,A5003850116,Fitrawan Umar,15,37,4,0
 P00004,"Prof. Dr. Ir. Fachirah Ulfa, M.P.",0000-0002-1736-9563,A5048310521,Fachirah Ulfa,57,64,4,0
-P02187,"Prof Yuming Guo, Ph.D",0000-0002-1766-6592,A5100604759,Yuming Guo,1104,178268,123,610
-P00476,"Prof. Dr. Ir. Sudirman Baco, M.Sc.",0000-0002-1819-3096,A5035029964,Sudirman Baco,10,17,3,0
-P02469,"Dr. Hasan Basri, SKM",0000-0002-1871-9377,A5043515519,Hasan Basri,107,1421,17,21
-P02726,"Gulzar Malik, BScN, BA, MNsg, PhD, FHEA",0000-0002-1935-1367,A5084431996,Gulzar Malik,78,652,14,22
-P02222,"Prof. dr. Upik A. Miskad, PhD, SpPA (K)",0000-0002-1980-395X,A5050324397,Upik Anderiani Miskad,167,722,11,16
-P02049,"Prof. Dr. Ing. Ir. Faizal Arya Samman, S.T., M.T.",0000-0002-1985-5805,A5058797993,Faizal Arya Samman,167,527,11,15
-P02570,"Achmad Himawan, S.Si., M.Si., Ph.D., Apt.",0000-0002-2017-3406,A5059029724,Achmad Himawan,64,1079,16,24
-P00254,"Dr. Putra Astaman, M.Si., CPRM.",0000-0002-2021-073X,A5092926627,Putra Astaman,35,2,1,0
-P00243,"Prof. Rahim Darma, Ph.D",0000-0002-2065-5923,A5031275172,Rahim Darma,27,98,6,3
-P00569,"Dr. Wasir Samad, S.Si., M.Si.",0000-0002-2135-3177,A5110648285,Wasir Samad,34,70,5,0
-P02155,"Abdul Wahid Jamaluddin, S.Farm., M.Farm., Apt.",0000-0002-2143-9069,A5066510914,Abdul Wahid Jamaluddin,38,55,3,2
-P02568,"Bustanul Arifin, S.Farm, M.Sc, MPH, Ph.D, Apt.",0000-0002-2303-310X,A5081266936,Bustanul Arifin,62,454,11,11
-P00423,Prof. Dr. Mehmet Mete Mutlu,0000-0002-2365-7887,A5002756578,Mehmet Mete Mutlu,54,288,8,6
-P02557,Prof. Mu Li,0000-0002-2371-8950,A5032260593,Mu Li,7,11,1,1
-P01332,"Munif Arif Ranti, S.IP., MA",0000-0002-2415-3007,A5080425699,Munif Arif Ranti,16,9,2,0
-P02748,"Dr. Erfina, S.Kep., Ns., M.Kep.",0000-0002-2437-9591,A5008108018,Erfina Erfina,140,516,9,9
-P00288,Ernawati Djaya,0000-0002-2465-4733,A5031892201,Ernawati Djaya,17,19,3,0
-P01603,"Prof. Sri Astuti Thamrin, S.Si, M.Stat, Ph.D",0000-0002-2512-0266,A5059651747,Sri Astuti Thamrin,87,365,10,10
-P00382,"Dr. Laode Alhamd, SP, M.Sc. (BRIN)",0000-0002-2574-5952,A5011157405,Laode Alhamd,46,218,6,3
-P00922,"Prof.Dr. Suhardi, S.TP., MP.",0000-0002-2596-6763,A5137674440,Suhardi Suhardi,3,0,0,0
-P01574,"Dr. Sri Dewi Astuty, S.Si., M.Si.",0000-0002-2614-8287,A5011371534,Sri Dewi Astuty,61,69,4,1
-P01130,Assoc. Prof. Dr. Ida Md. Yasin,0000-0002-2638-9312,A5074393029,Ida Md. Yasin,56,394,11,12
-P00852,Dr. Antonio Di Martino,0000-0002-2664-4483,A5021669967,Antonio Di Martino,78,1248,21,32
-P00125,Prof. Madya Dr. Mohd Rafein Zakaria,0000-0002-2698-615X,A5013346196,Mohd Rafein Zakaria,92,2501,30,45
+P02249,"Prof Yuming Guo, Ph.D",0000-0002-1766-6592,A5100604759,Yuming Guo,1104,178268,123,610
+P00489,"Prof. Dr. Ir. Sudirman Baco, M.Sc.",0000-0002-1819-3096,A5035029964,Sudirman Baco,10,17,3,0
+P02534,"Dr. Hasan Basri, SKM",0000-0002-1871-9377,A5043515519,Hasan Basri,107,1421,17,21
+P02794,"Gulzar Malik, BScN, BA, MNsg, PhD, FHEA",0000-0002-1935-1367,A5084431996,Gulzar Malik,78,652,14,22
+P02284,"Prof. dr. Upik A. Miskad, PhD, SpPA (K)",0000-0002-1980-395X,A5050324397,Upik Anderiani Miskad,167,722,11,16
+P02108,"Prof. Dr. Ing. Ir. Faizal Arya Samman, S.T., M.T.",0000-0002-1985-5805,A5058797993,Faizal Arya Samman,167,527,11,15
+P02637,"Achmad Himawan, S.Si., M.Si., Ph.D., Apt.",0000-0002-2017-3406,A5059029724,Achmad Himawan,64,1079,16,24
+P00267,"Dr. Putra Astaman, M.Si., CPRM.",0000-0002-2021-073X,A5092926627,Putra Astaman,35,2,1,0
+P00256,"Prof. Rahim Darma, Ph.D",0000-0002-2065-5923,A5031275172,Rahim Darma,27,98,6,3
+P00583,"Dr. Wasir Samad, S.Si., M.Si.",0000-0002-2135-3177,A5110648285,Wasir Samad,34,70,5,0
+P02217,"Abdul Wahid Jamaluddin, S.Farm., M.Farm., Apt.",0000-0002-2143-9069,A5066510914,Abdul Wahid Jamaluddin,38,55,3,2
+P02635,"Bustanul Arifin, S.Farm, M.Sc, MPH, Ph.D, Apt.",0000-0002-2303-310X,A5081266936,Bustanul Arifin,62,454,11,11
+P00436,Prof. Dr. Mehmet Mete Mutlu,0000-0002-2365-7887,A5002756578,Mehmet Mete Mutlu,54,288,8,6
+P02624,Prof. Mu Li,0000-0002-2371-8950,A5032260593,Mu Li,7,11,1,1
+P01356,"Munif Arif Ranti, S.IP., MA",0000-0002-2415-3007,A5080425699,Munif Arif Ranti,16,9,2,0
+P02816,"Dr. Erfina, S.Kep., Ns., M.Kep.",0000-0002-2437-9591,A5008108018,Erfina Erfina,140,516,9,9
+P00301,Ernawati Djaya,0000-0002-2465-4733,A5031892201,Ernawati Djaya,17,19,3,0
+P01653,"Prof. Sri Astuti Thamrin, S.Si, M.Stat, Ph.D",0000-0002-2512-0266,A5059651747,Sri Astuti Thamrin,87,365,10,10
+P00395,"Dr. Laode Alhamd, SP, M.Sc. (BRIN)",0000-0002-2574-5952,A5011157405,Laode Alhamd,46,218,6,3
+P00944,"Prof.Dr. Suhardi, S.TP., MP.",0000-0002-2596-6763,A5137674440,Suhardi Suhardi,3,0,0,0
+P01623,"Dr. Sri Dewi Astuty, S.Si., M.Si.",0000-0002-2614-8287,A5011371534,Sri Dewi Astuty,61,69,4,1
+P01154,Assoc. Prof. Dr. Ida Md. Yasin,0000-0002-2638-9312,A5074393029,Ida Md. Yasin,56,394,11,12
+P00870,Dr. Antonio Di Martino,0000-0002-2664-4483,A5021669967,Antonio Di Martino,78,1248,21,32
+P00126,Prof. Madya Dr. Mohd Rafein Zakaria,0000-0002-2698-615X,A5013346196,Mohd Rafein Zakaria,92,2501,30,45
 ,,0000-0002-2699-0968,A5073399711,Syarifuddin Syarifuddin,21,1,1,0
-P00981,Professor Dr Rozainun Haji Abdul Aziz P.M.K. CA(M),0000-0002-2699-298X,A5102850106,Rozainun Abdul Aziz,38,214,7,6
-P00797,"Dr. Asrianny, S.Hut., M.Si.",0000-0002-2733-9990,A5022470882,Asrianny Asrianny,11,70,4,2
-P00951,"Umi Pratiwi Rimayanti, S.Kep., Ns., MN., Ph.D",0000-0002-2761-4403,A5103000524,Romi Setiawan,7,30,2,1
-P00130,"Nurhasni Hasan, SSi, MSi, MPharmSc, PhD, Apt",0000-0002-2785-7229,A5035434033,Nurhasni Hasan,66,1966,24,32
-P00250,Dr. Rida Akzar,0000-0002-2800-7330,A5039629401,Rida Akzar,32,112,6,4
-P00161,"Prof. Dr. Ir. Feranita, M.P",0000-0002-2819-8456,A5050233567,Feranita Haring,62,81,5,2
-P00995,"Prof. Dr. Najmi Kamariah, SE., M.Si.",0000-0002-2866-6213,A5012513881,Najmi Kamariah,29,129,5,3
-P01059,"Dr. Ratna Ayu Damayanti, Ak.,MSoc.Sc.,CA",0000-0002-2867-6315,A5082565191,Ratna Ayu Damayanti,72,175,6,4
+P01004,Professor Dr Rozainun Haji Abdul Aziz P.M.K. CA(M),0000-0002-2699-298X,A5102850106,Rozainun Abdul Aziz,38,214,7,6
+P00815,"Dr. Asrianny, S.Hut., M.Si.",0000-0002-2733-9990,A5022470882,Asrianny Asrianny,11,70,4,2
+P00974,"Romi Setiawan, MSM",0000-0002-2761-4403,A5103000524,Romi Setiawan,7,30,2,1
+P00131,"Nurhasni Hasan, SSi, MSi, MPharmSc, PhD, Apt",0000-0002-2785-7229,A5035434033,Nurhasni Hasan,66,1966,24,32
+P00263,Dr. Rida Akzar,0000-0002-2800-7330,A5039629401,Rida Akzar,32,112,6,4
+P00170,"Prof. Dr. Ir. Feranita, M.P",0000-0002-2819-8456,A5050233567,Feranita Haring,62,81,5,2
+P01018,"Prof. Dr. Najmi Kamariah, SE., M.Si.",0000-0002-2866-6213,A5012513881,Najmi Kamariah,29,129,5,3
+P01083,"Dr. Ratna Ayu Damayanti, Ak.,MSoc.Sc.,CA",0000-0002-2867-6315,A5082565191,Ratna Ayu Damayanti,72,175,6,4
 P00039,Prof. Dr. Ir. Sylvia sjam MS,0000-0002-2881-1871,A5046869901,Sylvia Sjam,104,164,6,1
-P01134,"Prof. Dr. Arifuddin, SE., M.Si., Ak., CA.",0000-0002-2938-4613,A5109746151,Arifuddin,7,3,1,0
-P01268,"Dr. Ahmad Ismail, S.Sos.,M.Si",0000-0002-2949-7802,A5135397819,Ahmad Ismail,1,0,0,0
-P01750,"Dr. Eng. Ir. Ibrahim Djamaluddin, S.T., M.Eng.",0000-0002-2963-1899,A5031287143,Ibrahim Djamaluddin,59,646,10,11
-P00714,Dr. Nurul Hasfi,0000-0002-3072-9893,A5032814088,Nurul Hasfi,66,191,7,7
-P02724,"Syahrul, S.Kep., Ns., M.Kep., Sp.Kep.MB",0000-0002-3352-7672,A5094029334,Syahrul Syahrul,6,3,1,0
-P02092,"Dr. dr. Dianawaty Amiruddin, Sp.KK",0000-0002-3361-0652,A5089699049,Dianawaty Amiruddin,8,21,3,1
-P00861,Prof. Dr. Mohd Hafiz Hanafiah,0000-0002-3378-7300,A5121598031,Mohd Hafiz Hanafiah,17,8,2,0
-P01436,Prof. Dr. Bertalan Pusztai,0000-0002-3440-827X,A5008084609,Bertalan Pusztai,32,15,2,0
-P02727,"Dr. Domingos Soares, S.Kep, Ns., MM, M.Enf",0000-0002-3466-1267,A5078541614,Domingos Soares,47,21,2,0
-P00671,"Bayu Priyambodo, Ph.D",0000-0002-3487-2179,A5011159866,Bayu Priyambodo,21,251,7,7
-P02105,"Prof. M. Aryadi Arsyad, MD, MBiomedSc, Ph.D",0000-0002-3492-0599,A5015372850,Aryadi Arsyad,95,370,12,16
-P02373,Dr. Shaharuddin Mohd. Sham,0000-0002-3603-0821,A5102412219,Shaharuddin Mohd Sham,36,106,5,3
-P00228,"M. Bayu Mario, S.P., M.P., M.Sc.",0000-0002-3619-3348,A5051071737,Muhammad Bayu Mario,39,96,5,3
-P00322,Prof. Sitti Nurani Sirajuddin,0000-0002-3875-3185,A5069773188,Sitti Nurani Sirajuddin,224,612,11,16
-P01092,"Dr. Hj. A. Ratna Sari Dewi, S.E., M.Si, WPPE., WMI., CRA., CBOA.",0000-0002-3893-8083,A5079836260,Andi Ratna Sari Dewi,52,70,3,2
-P02742,"Nuzul Qur’aniati, S.Kep., Ns., M.Ng., Ph.D",0000-0002-3939-6482,A5056891446,Nuzul Qur’aniati,69,90,4,1
-P01000,Prof. Mohamed Ibrid Mugableh,0000-0002-3974-8185,A5065841581,Mohamed Ibrahim Mugableh,37,412,12,14
-P02693,"Aulia Insani Latif, S.Kep., Ns., M.Kep",0000-0002-3987-3736,A5068088167,Aulia Insani Latif,28,98,6,4
-P02643,Prof. Dr. Csupor Dezső,0000-0002-4088-3333,A5091307720,Dezső Csupor,289,4318,36,119
-P01651,"Prof. Dr. Ulva Ria Irfan, S.T., M.T.",0000-0002-4167-6766,A5061521041,Ulva Ria Irfan,100,245,6,3
-P00172,"Dr. Adiansyah Syarifuddin, STP, MSi",0000-0002-4205-1805,A5121252003,Adiansyah Syarifuddin,12,14,1,1
-P02313,Surijana Mappangara,0000-0002-4215-6412,A5050221742,Surijana Mappangara,38,34,4,0
-P02698,Dr. Nor Aziyan Binti Yahaya,0000-0002-4225-2148,A5070161767,Nor Aziyan Yahaya,31,219,7,7
-P01323,"Vinanda Cinta Cendekia Putri, S.Sos, M.I.Kom.",0000-0002-4255-3338,A5038947514,Vinanda Cinta Cendekia Putri,14,52,4,2
-P00267,Simon Anthony Kayombo,0000-0002-4284-7053,A5089855871,Simon Anthony Kayombo,5,3,1,0
-P02094,"Prof. Shiroh Iwanaga, BSc, Ph.D",0000-0002-4394-7267,A5014673096,Shiroh Iwanaga,235,9014,51,130
-P02283,"Prof. Dr. Hasanuddin Thahir., drg., MS., Sp.Perio(K)",0000-0002-4526-6422,A5038741720,Hasanuddin Thahir,40,44,3,1
-P00541,"Dr. Andi Aliah Hidayani, S.Si, M.Si",0000-0002-4541-5539,A5088442552,Andi Aliah Hidayani,85,141,6,2
-P01116,"Dr. Adya Utami Syukri, SE., M.Si.",0000-0002-4545-3711,A5080965300,Adya Utami Syukri,16,85,3,1
-P00264,"Ir. A. Amrullah, M.Si",0000-0002-4633-8520,A5147068046,A. Amrullah,1,0,0,0
-P01105,Mansur Maturidi Arief,0000-0002-4636-3451,A5024932692,Mansur Arief,63,586,12,12
-P02679,"Dr. Rosyidah Arafat, S.Kep., Ns.,M.Kep., Sp.KMB",0000-0002-4715-7668,A5007212696,Andi Masyitha Irwan,127,479,11,15
-P00312,Dr. Aroua Ammar,0000-0002-4733-7108,A5019002511,Aroua Ammar,10,94,5,3
-P02831,"Dr. Khalid ali khan, PhD",0000-0002-4734-6338,A5042081377,Khalid Ali Khan,451,10827,51,250
-P01078,"Dr. Sri Sundari, SE, AK, M.Si., CA",0000-0002-4773-1746,A5121971980,Sri Sundari,23,1,1,0
-P00761,"Prof. Dr. Syamsu Alam, SE., M.Si",0000-0002-4809-3299,A5103118615,Syamsu Alam,180,358,9,9
-P01479,Dr. Stephen C. Druce,0000-0002-4865-1887,A5017398160,Stephen C. Druce,48,132,6,3
-P02647,Dr. Felix Chan,0000-0002-4867-9636,A5076970304,Felix Chan,27,489,11,11
-P01114,"Dr. Harun, MAcc",0000-0002-4870-5523,A5018555484,Harun Harun,188,1404,19,30
-P01422,"Dr. Kadarudin, S.H., M.H.",0000-0002-4919-6169,A5073571373,Kadarudin Kadarudin,51,88,6,1
-P01090,"Audrey Michelle Wenny Yolanda, S.E., M.Ac.",0000-0002-4929-5706,A5091771999,Audrey Michelle Wenny Yolanda,13,5,1,0
+P01158,"Prof. Dr. Arifuddin, SE., M.Si., Ak., CA.",0000-0002-2938-4613,A5109746151,Arifuddin,7,3,1,0
+P01292,"Dr. Ahmad Ismail, S.Sos.,M.Si",0000-0002-2949-7802,A5135397819,Ahmad Ismail,1,0,0,0
+P01802,"Dr. Eng. Ir. Ibrahim Djamaluddin, S.T., M.Eng.",0000-0002-2963-1899,A5031287143,Ibrahim Djamaluddin,59,646,10,11
+P00731,Dr. Nurul Hasfi,0000-0002-3072-9893,A5032814088,Nurul Hasfi,66,191,7,7
+P02792,"Syahrul, S.Kep., Ns., M.Kep., Sp.Kep.MB",0000-0002-3352-7672,A5094029334,Syahrul Syahrul,6,3,1,0
+P02153,"Dr. dr. Dianawaty Amiruddin, Sp.KK",0000-0002-3361-0652,A5089699049,Dianawaty Amiruddin,8,21,3,1
+P00879,Prof. Dr. Mohd Hafiz Hanafiah,0000-0002-3378-7300,A5121598031,Mohd Hafiz Hanafiah,17,8,2,0
+P01462,Prof. Dr. Bertalan Pusztai,0000-0002-3440-827X,A5008084609,Bertalan Pusztai,32,15,2,0
+P02795,"Dr. Domingos Soares, S.Kep, Ns., MM, M.Enf",0000-0002-3466-1267,A5078541614,Domingos Soares,47,21,2,0
+P00688,"Bayu Priyambodo, Ph.D",0000-0002-3487-2179,A5011159866,Bayu Priyambodo,21,251,7,7
+P02167,"Prof. M. Aryadi Arsyad, MD, MBiomedSc, Ph.D",0000-0002-3492-0599,A5015372850,Aryadi Arsyad,95,370,12,16
+P02437,Dr. Shaharuddin Mohd. Sham,0000-0002-3603-0821,A5102412219,Shaharuddin Mohd Sham,36,106,5,3
+P00241,"M. Bayu Mario, S.P., M.P., M.Sc.",0000-0002-3619-3348,A5051071737,Muhammad Bayu Mario,39,96,5,3
+P00335,Prof. Sitti Nurani Sirajuddin,0000-0002-3875-3185,A5069773188,Sitti Nurani Sirajuddin,224,612,11,16
+P01116,"Dr. Hj. A. Ratna Sari Dewi, S.E., M.Si, WPPE., WMI., CRA., CBOA.",0000-0002-3893-8083,A5079836260,Andi Ratna Sari Dewi,52,70,3,2
+P02810,"Nuzul Qur’aniati, S.Kep., Ns., M.Ng., Ph.D",0000-0002-3939-6482,A5056891446,Nuzul Qur’aniati,69,90,4,1
+P01024,Prof. Mohamed Ibrid Mugableh,0000-0002-3974-8185,A5065841581,Mohamed Ibrahim Mugableh,37,412,12,14
+P02760,"Aulia Insani Latif, S.Kep., Ns., M.Kep",0000-0002-3987-3736,A5068088167,Aulia Insani Latif,28,98,6,4
+P02710,Prof. Dr. Csupor Dezső,0000-0002-4088-3333,A5091307720,Dezső Csupor,289,4318,36,119
+P01702,"Prof. Dr. Ulva Ria Irfan, S.T., M.T.",0000-0002-4167-6766,A5061521041,Ulva Ria Irfan,100,245,6,3
+P00888,Dr. Februadi Bastian,0000-0002-4198-4662,A5045601652,Februadi Bastian,94,410,9,8
+P00951,"Dr. Adiansyah Syarifuddin, STP, MSi",0000-0002-4205-1805,A5121252003,Adiansyah Syarifuddin,12,14,1,1
+P02376,Surijana Mappangara,0000-0002-4215-6412,A5050221742,Surijana Mappangara,38,34,4,0
+P02765,Dr. Nor Aziyan Binti Yahaya,0000-0002-4225-2148,A5070161767,Nor Aziyan Yahaya,31,219,7,7
+P01347,"Vinanda Cinta Cendekia Putri, S.Sos, M.I.Kom.",0000-0002-4255-3338,A5038947514,Vinanda Cinta Cendekia Putri,14,52,4,2
+P00280,Simon Anthony Kayombo,0000-0002-4284-7053,A5089855871,Simon Anthony Kayombo,5,3,1,0
+P02155,"Prof. Shiroh Iwanaga, BSc, Ph.D",0000-0002-4394-7267,A5014673096,Shiroh Iwanaga,235,9014,51,130
+P02346,"Prof. Dr. Hasanuddin Thahir., drg., MS., Sp.Perio(K)",0000-0002-4526-6422,A5038741720,Hasanuddin Thahir,40,44,3,1
+P00554,"Dr. Andi Aliah Hidayani, S.Si, M.Si",0000-0002-4541-5539,A5088442552,Andi Aliah Hidayani,85,141,6,2
+P01140,"Dr. Adya Utami Syukri, SE., M.Si.",0000-0002-4545-3711,A5080965300,Adya Utami Syukri,16,85,3,1
+P00277,"Ir. A. Amrullah, M.Si",0000-0002-4633-8520,A5147068046,A. Amrullah,1,0,0,0
+P01129,Mansur Maturidi Arief,0000-0002-4636-3451,A5024932692,Mansur Arief,63,586,12,12
+P00325,Dr. Aroua Ammar,0000-0002-4733-7108,A5019002511,Aroua Ammar,10,94,5,3
+P02899,"Dr. Khalid ali khan, PhD",0000-0002-4734-6338,A5042081377,Khalid Ali Khan,451,10827,51,250
+P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",0000-0002-4773-1746,A5121971980,Sri Sundari,23,1,1,0
+P00779,"Prof. Dr. Ir. Yusran., S.Hut, M.Si., IPU",0000-0002-4809-3299,A5103118615,Syamsu Alam,180,358,9,9
+P01507,Dr. Stephen C. Druce,0000-0002-4865-1887,A5017398160,Stephen C. Druce,48,132,6,3
+P02714,Dr. Felix Chan,0000-0002-4867-9636,A5076970304,Felix Chan,27,489,11,11
+P01138,"Dr. Harun, MAcc",0000-0002-4870-5523,A5018555484,Harun Harun,188,1404,19,30
+P01448,"Dr. Kadarudin, S.H., M.H.",0000-0002-4919-6169,A5073571373,Kadarudin Kadarudin,51,88,6,1
+P01114,"Audrey Michelle Wenny Yolanda, S.E., M.Ac.",0000-0002-4929-5706,A5091771999,Audrey Michelle Wenny Yolanda,13,5,1,0
 P00015,"Prof. Ann M. Stevens, M.S., Ph.D.",0000-0002-4942-0124,A5023808829,Ann M. Stevens,76,4411,33,51
-P00123,Prof. Ts Dr. Siti Khairunniza Bejo,0000-0002-4972-1701,A5021848935,Siti Khairunniza Bejo,152,2788,27,65
+P00124,Prof. Ts Dr. Siti Khairunniza Bejo,0000-0002-4972-1701,A5021848935,Siti Khairunniza Bejo,152,2788,27,65
 P00001,Prof. Dr. Sc. Agr. Ir. Baharuddin,0000-0002-5109-8090,A5101466814,Baharuddin Baharuddin,83,359,10,10
-P00853,Prof. Dr. Widya Fatriasari,0000-0002-5166-9498,A5038499223,Widya Fatrıasarı,346,5208,32,110
-P00251,Prof. Dr. Nitty Hirawaty Kamarulzaman,0000-0002-5239-1942,A5075650967,Nitty Hirawaty Kamarulzaman,188,1363,20,43
-P02239,Irawaty Djaharuddin,0000-0002-5240-4950,A5015021188,Irawati Djaharuddin,8,23,2,1
-P00510,"Prof. Dr. drh. Dwi Kesuma Sari, APVet.",0000-0002-5326-3336,A5003175331,Dwi Kesuma Sari,63,289,8,6
-P01664,Prof. Sun-Lin Chung,0000-0002-5362-4496,A5071733459,Sun‐Lin Chung,486,35845,100,244
-P02733,"Nur Fadilah, S.Kep., Ns., MN.",0000-0002-5384-1589,A5020993109,Nur Fadilah,157,230,7,5
-P01497,"Dr. M. Dalyan, M.Hum.",0000-0002-5385-9850,A5050874447,M. Dalyan,21,42,4,1
-P02686,"Fadiah Izzati Salim, S.Kep., Ns., M.Kep",0000-0002-5434-682X,A5077076961,Wa Ode Nur Isnah Sabriyati,19,13,2,0
-P01013,Professor Lu Aye,0000-0002-5495-1683,A5076260211,Lu Aye,341,8279,46,130
-P00129,Prof. Amran Laga,0000-0002-5497-2388,A5083593255,Amran Laga,149,462,10,12
-P00991,"Prof. Dr. Abdul Rahman Kadir, SE.,M.Si",0000-0002-5527-6018,A5059308810,Abdul Rahman Kadir,5,1,1,0
-P01481,"Jusmianti Garing, S.S.,M.A.",0000-0002-5557-8585,A5069050445,Jusmianti Garing,37,54,4,0
-P02090,Fadil Mula Putra,0000-0002-5567-4710,A5080215381,Muhammad Phetrus Johan,58,360,8,7
-P02725,"Dr. Lee Wan Ling, , MN.,RN.",0000-0002-5584-2905,A5032616712,Wan Ling Lee,54,435,15,15
-P02046,Associate Professor Dr. Sascha Stegen,0000-0002-5654-1215,A5059186485,Sascha Stegen,55,1216,15,20
-P02644,Dr. Arie Arizandi Kurnianto,0000-0002-5779-0934,A5068639154,Arie Arizandi Kurnianto,38,86,6,4
-P00311,Dr. Lekhnath Kafle,0000-0002-5817-9483,A5070137312,Lekhnath Kafle,85,477,13,16
-P02109,"Prof. Yulia Yusrini Djabir, M.BMSc, M.Si, PhD, Apt",0000-0002-5891-7247,A5033498145,Yulia Yusrini Djabir,94,389,12,15
-P00872,"Prof. Dr. Ir. Andi Nur Faidah Rahman, STP., M.Si",0000-0002-5925-9485,A5039236193,Andi Nur Faidah Rahman,61,178,7,4
-P02719,Dr Asri Maharani,0000-0002-5931-8692,A5057312509,Asri Maharani,198,2896,26,56
-P02681,"Prof. Mayumi Kato, Ph.D., RN.",0000-0002-5965-299X,A5047098496,Kathleen M. Potempa,93,1429,19,30
-P01434,Noel Scott,0000-0002-5982-8983,A5050493862,Ya. V. Hrudz,1,0,0,0
-P02286,"Saldy Yusuf, S.Kep., NS., MHS., Ph.D",0000-0002-5993-9325,A5084215737,Saldy Yusuf,147,747,12,15
-P02704,"Theodoula Adamakidou, RN, MSc, MHSA, PhD",0000-0002-6025-8260,A5060061470,Θεοδούλα Αδαμακίδου,17,3,1,0
-P01007,"Dr. Fahrina Mustafa, SE., M. Si",0000-0002-6040-2293,A5006472256,Fahrina Mustafa,57,134,6,3
-P00440,"Dr. Hasbi, S.Pt., M.Si",0000-0002-6069-2171,A5018927644,Hasbi Hasbi,45,125,7,5
-P01792,"Prof, Dr. Ir. Rustan Tarakka, ST., MT.",0000-0002-6083-650X,A5034048633,Rustan Tarakka,72,152,7,2
-P00900,"Prof. Takao Nagano, Ph.D",0000-0002-6105-8703,A5007682748,Takao Nagano,61,1444,20,25
-P02261,"Novina Sabila Zahra, S.Psi., M.A",0000-0002-6122-6180,A5058936416,Novina Sabila Zahra,19,27,3,0
-P01310,"Ridwan Syam, S.Sos, M.Si",0000-0002-6182-7162,A5027788596,Ridwan Syam,37,36,3,0
-P02369,"Prof. Dr. Anwar Daud, S.KM., M.Kes.",0000-0002-6236-6097,A5127744208,Anwar Daud,3,0,0,0
-P00380,Associate Professor Dr. Mohammad Mijanur Rahman (Malaysia),0000-0002-6244-7129,A5001581000,Mohammad Mijanur Rahman,167,2214,25,51
-P02041,"Prof. Dr. Eng. Intan Sari Areni., ST., MT.",0000-0002-6248-3656,A5066541415,Intan Sari Areni,179,574,12,17
-P02110,"Andi Ariyandy, MD, Ph.D",0000-0002-6492-5235,A5077186568,Andi Ariyandy,45,42,4,1
-P02567,"apt. Muh. Akbar Bahar, Ph.D",0000-0002-6582-5615,A5135668052,Muh.Akbar Bahar,10,0,0,0
-P00310,Dr. Ravindra Chandra Joshi,0000-0002-6607-4235,A5118237426,Cyril L. Tura,4,4,1,0
-P02213,Ahmad Muchlis,0000-0002-6645-8036,A5065189973,Ahmad Muchlis,41,15,2,0
+P00871,Prof. Dr. Widya Fatriasari,0000-0002-5166-9498,A5038499223,Widya Fatrıasarı,346,5208,32,110
+P00264,Prof. Dr. Nitty Hirawaty Kamarulzaman,0000-0002-5239-1942,A5075650967,Nitty Hirawaty Kamarulzaman,188,1363,20,43
+P02302,Irawaty Djaharuddin,0000-0002-5240-4950,A5015021188,Irawati Djaharuddin,8,23,2,1
+P00523,"Prof. Dr. drh. Dwi Kesuma Sari, APVet.",0000-0002-5326-3336,A5003175331,Dwi Kesuma Sari,63,289,8,6
+P01715,Prof. Sun-Lin Chung,0000-0002-5362-4496,A5071733459,Sun‐Lin Chung,486,35845,100,244
+P02801,"Nur Fadilah, S.Kep., Ns., MN.",0000-0002-5384-1589,A5020993109,Nur Fadilah,157,230,7,5
+P01525,"Dr. M. Dalyan, M.Hum.",0000-0002-5385-9850,A5050874447,M. Dalyan,21,42,4,1
+P02752,"Fadiah Izzati Salim, S.Kep., Ns., M.Kep",0000-0002-5434-682X,A5077076961,Wa Ode Nur Isnah Sabriyati,19,13,2,0
+P01037,Professor Lu Aye,0000-0002-5495-1683,A5076260211,Lu Aye,341,8279,46,130
+P00130,Prof. Amran Laga,0000-0002-5497-2388,A5083593255,Amran Laga,149,462,10,12
+P01014,"Prof. Dr. Abdul Rahman Kadir, SE.,M.Si",0000-0002-5527-6018,A5059308810,Abdul Rahman Kadir,5,1,1,0
+P01509,"Jusmianti Garing, S.S.,M.A.",0000-0002-5557-8585,A5069050445,Jusmianti Garing,37,54,4,0
+P02151,Fadil Mula Putra,0000-0002-5567-4710,A5080215381,Muhammad Phetrus Johan,58,360,8,7
+P02793,"Dr. Lee Wan Ling, , MN.,RN.",0000-0002-5584-2905,A5032616712,Wan Ling Lee,54,435,15,15
+P02105,Associate Professor Dr. Sascha Stegen,0000-0002-5654-1215,A5059186485,Sascha Stegen,55,1216,15,20
+P02711,Dr. Arie Arizandi Kurnianto,0000-0002-5779-0934,A5068639154,Arie Arizandi Kurnianto,38,86,6,4
+P00324,Dr. Lekhnath Kafle,0000-0002-5817-9483,A5070137312,Lekhnath Kafle,85,477,13,16
+P02171,"Prof. Yulia Yusrini Djabir, M.BMSc, M.Si, PhD, Apt",0000-0002-5891-7247,A5033498145,Yulia Yusrini Djabir,94,389,12,15
+P00891,"Prof. Dr. Ir. Andi Nur Faidah Rahman, STP., M.Si",0000-0002-5925-9485,A5039236193,Andi Nur Faidah Rahman,61,178,7,4
+P02786,Dr Asri Maharani,0000-0002-5931-8692,A5057312509,Asri Maharani,198,2896,26,56
+P02747,"Prof. Mayumi Kato, Ph.D., RN.",0000-0002-5965-299X,A5047098496,Kathleen M. Potempa,93,1429,19,30
+P01460,Noel Scott,0000-0002-5982-8983,A5050493862,Ya. V. Hrudz,1,0,0,0
+P02349,"Saldy Yusuf., PhD. ETN",0000-0002-5993-9325,A5084215737,Saldy Yusuf,147,747,12,15
+P02771,"Theodoula Adamakidou, RN, MSc, MHSA, PhD",0000-0002-6025-8260,A5060061470,Θεοδούλα Αδαμακίδου,17,3,1,0
+P01031,"Dr. Fahrina Mustafa, SE., M. Si",0000-0002-6040-2293,A5006472256,Fahrina Mustafa,57,134,6,3
+P00453,"Dr. Hasbi, S.Pt., M.Si",0000-0002-6069-2171,A5018927644,Hasbi Hasbi,45,125,7,5
+P01844,"Prof, Dr. Ir. Rustan Tarakka, ST., MT.",0000-0002-6083-650X,A5034048633,Rustan Tarakka,72,152,7,2
+P00921,"Prof. Takao Nagano, Ph.D",0000-0002-6105-8703,A5007682748,Takao Nagano,61,1444,20,25
+P02324,"Novina Sabila Zahra, S.Psi., M.A",0000-0002-6122-6180,A5058936416,Novina Sabila Zahra,19,27,3,0
+P01334,"Ridwan Syam, S.Sos, M.Si",0000-0002-6182-7162,A5027788596,Ridwan Syam,37,36,3,0
+P02433,"Prof. Dr. Anwar Daud, S.KM., M.Kes.",0000-0002-6236-6097,A5127744208,Anwar Daud,3,0,0,0
+P00393,Associate Professor Dr. Mohammad Mijanur Rahman (Malaysia),0000-0002-6244-7129,A5001581000,Mohammad Mijanur Rahman,167,2214,25,51
+P02100,"Prof. Dr. Eng. Intan Sari Areni., ST., MT.",0000-0002-6248-3656,A5066541415,Intan Sari Areni,179,574,12,17
+P02172,"Andi Ariyandy, MD, Ph.D",0000-0002-6492-5235,A5077186568,Andi Ariyandy,45,42,4,1
+P02634,"apt. Muh. Akbar Bahar, Ph.D",0000-0002-6582-5615,A5135668052,Muh.Akbar Bahar,10,0,0,0
+P00323,Dr. Ravindra Chandra Joshi,0000-0002-6607-4235,A5118237426,Cyril L. Tura,4,4,1,0
+P02275,Ahmad Muchlis,0000-0002-6645-8036,A5065189973,Ahmad Muchlis,41,15,2,0
 P00055,"Dr. Muh. Riadi, S.P., M.P.",0000-0002-6688-9653,A5090687654,M Riadi,90,239,8,6
-P01315,"Dr. Alem Febri Sonni, M.Si.",0000-0002-6785-5033,A5025999969,Alem Febri Sonni,181,298,7,6
-P00278,"Eirene Brugman, S.P., M.Sc.",0000-0002-6935-6385,A5006342517,E. Brugman,30,748,7,7
-P02793,"Prof. Dr. Ir. Muh Restu, M.P",0000-0002-7087-9589,A5019061441,Andi Detti Yunianti,96,125,5,2
+P01339,"Dr. Alem Febri Sonni, M.Si.",0000-0002-6785-5033,A5025999969,Alem Febri Sonni,181,298,7,6
+P00291,"Eirene Brugman, S.P., M.Sc.",0000-0002-6935-6385,A5006342517,E. Brugman,30,748,7,7
 P00005,"Muhammad Junaid, S.P., M.P., Ph.D.",0000-0002-7116-5887,A5079568576,Muhammad Junaid,53,420,8,7
-P00959,"Rianda Ridho Hafizh Thaha, S.E., M.B.A.",0000-0002-7150-2732,A5057888031,Rianda Ridho Hafizh Thaha,12,13,2,0
-P02645,"Prof. apt. Ivan S. Pradipta, Ph.D",0000-0002-7151-0783,A5071276548,Ivan Surya Pradipta,80,1359,18,28
-P00101,Prof. Muh. Farid BDR,0000-0002-7178-7790,A5135784671,MUH. FARID BDR,3,9,1,0
-P00265,"Prof. Dr. Ir. Rahmadanih, M.Si",0000-0002-7179-0498,A5052480433,Rahmadanih Rahmadanih,120,324,9,6
-P02683,Prof. Dr. Noor Azah Abd Aziz,0000-0002-7204-6097,A5109279322,NA Aziz,7,10,2,0
-P01960,Dr. Yaser Qudaih,0000-0002-7259-865X,A5036641473,Yaser Soilman Qudaih,77,1115,15,21
-P00370,Dr. Farah Adila Abdullah,0000-0002-7263-8500,A5148867323,F. A. Abdullah,1,0,0,0
-P00739,"Andang Suryana Soma, S.Hut., MP., Ph.D",0000-0002-7277-6129,A5011999873,Andang Suryana Soma,115,250,8,6
-P01552,"Dr. Ajuk Sapar, M.Si",0000-0002-7278-6159,A5043355651,Ajuk Sapar,69,156,6,4
-P02424,"Dr. Fridawaty Rivai, SKM., M.Kes",0000-0002-7336-7001,A5079273583,Fridawaty Rivai,140,249,8,5
-P02107,"Prof. Dr. Irfan Idris, MD",0000-0002-7350-8687,A5047264457,Irfan Idris,160,538,13,21
-P02690,"Prof. Dr. Elly L Sjattar, S.Kp., M.Kes",0000-0002-7376-5771,A5040876495,Elly Lilianty Sjattar,122,423,11,15
-P02773,"Yusfina, S.Ft., Physio., M.Kes",0000-0002-7398-7278,A5119068285,Yusfina Yusfina,1,0,0,0
-P02558,Assoc. Prof. Andrew Holmes,0000-0002-7406-4387,A5013337848,Andrew J. Holmes,146,8912,46,81
-P00685,"Prof Hiroyuki Motomura, Ph.D",0000-0002-7448-2482,A5126088020,Hiroyuki Motomura,4,0,0,0
-P00218,"Hishar Mirsam, S.P., M.Si.",0000-0002-7450-8574,A5086379158,Hishar Mirsam,52,200,7,6
-P01624,"Naimah Aris, S.Si. M.Math",0000-0002-7465-5371,A5044942429,Naimah Aris,49,96,4,3
-P01221,"Dr. Amril, S.A.P., MPA",0000-0002-7610-3220,A5084992238,Amril Hans,46,46,4,0
-P00314,"Dr. A. Irma Suryani, S.Pd., M.Si.",0000-0002-7618-3734,A5091702056,Ani Suryani,83,213,7,3
-P02694,"Dr. Nuurhidayat Jafar, S.Kep., Ns., M.Kep",0000-0002-7715-8805,A5011208508,Nuurhidayat Jafar,42,67,5,2
-P02836,"Zafitri Nulandari, S.Tr.Keb., Bdn.,M.Keb",0000-0002-7745-9501,A5080796179,Zafitri Nulandari,15,20,3,0
-P02556,"Prof. Dr. M. Thahir Haning, M.Si",0000-0002-7751-454X,A5019363460,Mohamad Thahir Haning,30,58,5,1
-P02826,"Dr Fendi,S.Si, M.Si",0000-0002-7761-2158,A5027441515,Fendi Fendi,39,306,8,5
-P00245,Dr. Letty Fudjaja,0000-0002-7762-9531,A5005480264,L Fudjaja,66,166,7,2
-P00309,"Ahwiyah Ekawaty Said, S.P., M.Si.",0000-0002-7826-2321,A5083497331,Ahwiyah Ekawaty Said,15,46,4,2
-P01061,"Prof. Dr. Syarifuddin, Ak., MSoc.Sc.,CA",0000-0002-7880-9331,A5100336097,Syarifuddin Syarifuddin,277,528,11,13
-P00379,"Dr. Agr. Ir. Renny Fatmyah Utamy, S. Pt., M. Agr., IPM",0000-0002-7908-6710,A5055401409,Renny Fatmyah Utamy,90,82,4,2
-P02595,Prof. Yoshihiro Hayakawa,0000-0002-7921-1171,A5012119811,Yoshihiro Hayakawa,512,26647,80,261
-P00369,"Prof. Dr. Syahdar Baba, S.Pt., M.Si.",0000-0002-8025-4072,A5055952700,Syahdar Baba,94,182,6,4
-P02164,"drh. Anjani Marisa Kartikasari, M.Si.",0000-0002-8030-9010,A5010285845,Anjani Marisa Kartikasari,17,69,4,2
-P00712,"Fatwa Faturachmat, S.Hut, M.Hut",0000-0002-8174-8955,A5080109393,Fatwa Faturachmat,18,173,7,4
-P02776,"Toshiaki Takahashi, PhD, RN",0000-0002-8188-2505,A5015604127,Toshiaki Takahashi,625,14847,55,256
-P02368,"Dr. Agus Bintara Birawida, S.Kel., M.Kes",0000-0002-8223-2387,A5136662946,Agus Bintara Biwareda,1,0,0,0
-P01515,Bualkar Abdullah,0000-0002-8241-3604,A5012379579,Dahlang Tahir,3,15,2,0
-P01538,"Prof. Dr. Budi Nurwahyu, MS",0000-0002-8245-8845,A5073009340,Budi Nurwahyu,50,116,6,5
-P00708,Dr. Micah R. Fisher,0000-0002-8246-2318,A5123550522,Micah Fisher,3,0,0,0
-P02785,"Prof. Dr. dr. Prihantono, Sp.B. Subsp.Onk(K)",0000-0002-8247-0457,A5033363566,Prihantono Prihantono,237,897,15,24
-P00996,Associate Professor. Dr. Sabbar Dahham Sabbar,0000-0002-8317-8458,A5053914783,Sabbar Dahham Sabbar,44,84,4,2
-P01703,"Prof. Dr. Ir. Hj. Sumarni Hamid Aly, MT., IPU",0000-0002-8328-1930,A5112805933,Sumarni Hamid Aly,88,117,5,0
-P00763,"Dr. Ir. Syamsuddin Millang., MS",0000-0002-8353-7342,A5022199687,Syamsuddin Millang,77,136,6,3
-P02756,"Jennifer Barkin, M.S., PhD",0000-0002-8364-4260,A5140841406,Jennifer Barkin,1,0,0,0
-P02184,"Andi Tenri Esa, MD, Ph.D",0000-0002-8373-6755,A5052815950,Tenri Esa,58,104,6,3
-P02287,"Dr. dr. Hasta Handayani Idrus, M.Kes, CIAR",0000-0002-8563-6395,A5055011925,Hasta Handayani Idrus,119,191,8,6
-P01087,Prof. Dr. Noor Ismawati Binti Jafaar,0000-0002-8604-6004,A5082239536,Noor Ismawati Jaafar,116,4763,28,42
-P00282,Dr. Eriyanto Yusnawan,0000-0002-8641-8445,A5052259780,Eriyanto Yusnawan,82,419,13,18
-P00108,Prof. Dr. Rusnadi Padjung,0000-0002-8644-3210,A5053732802,Rusnadi Padjung,62,393,9,8
-P02611,Dr. Juan Domínguez- Robles,0000-0002-8654-8434,A5081547013,Juan Domínguez‐Robles,156,6430,47,87
-P00279,"Dr. Mustika Tuwo, S.Si., M.Si.",0000-0002-8721-2780,A5004262918,Mustika Tuwo,79,157,6,2
-P01043,Khalid Eltayeb Elfaki Adam,0000-0002-8728-0492,A5012030432,Khalid Eltayeb Elfaki,32,606,13,16
-P02573,Dk Dr Nurolaini Pg Haji Muhd Kifli,0000-0002-8817-7956,A5088359575,Nurolaini Kifli,63,2358,21,28
-P00420,"Prof. Dr. Ir. Muhammad Irfan Said, S.Pt, M.P, IPM, ASEAN Eng.",0000-0002-8824-4944,A5075882764,Muhammad Irfan Said,121,313,9,9
-P00491,"DR. Marlina Achmad, S.Pi. M.Si",0000-0002-8863-8476,A5082467830,Marlina Achmad,31,53,3,1
-P00998,"Prof. Dr. Maat Pono, SE., M.Si",0000-0002-8906-8743,A5051134209,Maat Pono,84,144,7,2
-P02160,"drh. Mawar Subangkit, M.Si., Ph.D.",0000-0002-9098-0094,A5046619306,Mawar Subangkit,75,371,11,11
-P01083,"Dr. Andi Kusumawati, S.E., M.Si., Ak., CA.",0000-0002-9106-8320,A5027484521,Andi Kusumawati,150,218,7,3
-P00205,"Dr. Ir. Mahyuddin, M.Si",0000-0002-9115-2901,A5036419479,Mahyuddin Mahyuddin,92,128,6,2
-P00856,"Eka Novriyanti, S.Hut., M.Si., Ph.D.",0000-0002-9160-3274,A5003738447,EKA NOVRIYANTI,2,7,1,0
-P00261,"Prof. Dr. Ir. Sitti Bulkis, M.S.",0000-0002-9207-9953,A5109533605,Sitti Bulkis,63,75,4,1
-P02298,Sri Oktawati,0000-0002-9212-6641,A5003731509,Sri Oktawati,75,101,4,2
-P00765,"Prof. Makkarennu., S.Hut., M.Si., Ph.D",0000-0002-9284-8118,A5024899927,Makkarennu Makkarennu,71,155,7,4
-P02650,"apt. Madania, M.Sc",0000-0002-9296-9286,A5048792682,Madania Madania,73,101,5,3
-P02370,"Ir. Nur An-Nisa Putry Mangarengi, S.T., M.Sc",0000-0002-9308-4658,A5077674816,N A P Mangarengi,21,31,4,0
-P01257,"Prof. Dr. Andi M. Rusli, M.Si",0000-0002-9342-3840,A5059761710,Andi Muhammad Rusli,81,39,3,1
-P02153,Fika Yuliza Purba,0000-0002-9483-3876,A5075434845,Fika Yuliza Purba,34,172,7,7
-P00246,Dr. Heliawaty,0000-0002-9509-6548,A5025556453,Heliawaty Lakare,6,10,1,0
-P01940,"Dr. Eng. Ardy Arsyad, ST, M.Eng.Sc",0000-0002-9513-6386,A5041804326,Ardy Arsyad,105,269,8,5
-P02377,"Nurlia Sila, SKM.M.KL",0000-0002-9612-159X,A5041883212,Nurlia Sila,11,9,2,0
-P00424,Prof. Dr. Maurizia Seggiani,0000-0002-9628-7178,A5027532557,Maurizia Seggiani,227,5288,35,85
-P00999,"Prof. Dr. Musran Munizu, SE, M.Si, MAP, CIPM",0000-0002-9687-3441,A5083282915,Musran Munizu,201,574,10,11
-P00507,"Mufti Hatur Rahmi, S.Tr.Pi., M.Si.",0000-0002-9695-9333,A5062813049,Mufti Hatur Rahmi,19,194,6,4
-P02596,"Besse Hardianti S.Si., M.Pharm.Sc., PhD., Apt",0000-0002-9705-128X,A5048137482,Besse Hardianti,34,175,8,8
-P00934,Universitas Hasanuddin,0000-0002-9727-3499,A5038251000,Abdul Hamid Habbe,128,243,7,4
-P01303,Sudirman Nasir,0000-0002-9735-1178,A5102815969,Sudirman Nasir,139,732,13,17
-P00398,Prof. Dr. Anjas Asmara @ Ab. Hadi Bin Samsudin,0000-0002-9758-7973,A5071660166,Anjas Asmara Samsudin,192,3317,32,66
-P01741,"Dr.Eng Nadella Marchelina S.T., M.Eng.",0000-0002-9781-0629,A5080612304,Nadella Marchelina,8,33,3,2
-P01628,Dr. Hemanta Kalita,0000-0002-9798-6608,A5051960178,Hemanta Kalita,103,79,4,1
-P00718,"Nasri, Ph.D",0000-0002-9857-9588,A5039310281,NASRI NASRI,4,4,1,0
-P01259,"Takuji W. Tsusaka, Ph.D",0000-0002-9872-2436,A5059099005,Takuji W. Tsusaka,152,2621,28,59
-P01546,"Prof. Dr. Hasmawati, M.Si.",0000-0002-9894-061X,A5100698063,Nurdin Hinding,45,71,5,3
-P01954,"Prof. Dr.Eng. Ir. Syafaruddin, S.T., M.Eng., IPU",0000-0002-9915-7694,A5000285228,Syafaruddin Syafaruddin,127,2105,15,16
-P01263,"Prof. Dr. Munsi Lampe, MA",0000-0002-9922-4017,A5024259788,Munsi Lampe,13,13,2,0
-P02410,"Andi Imam Arundhana Thahir, S.Gz, MPH, Ph.D",0000-0002-9926-6604,A5059138115,Andi Imam Arundhana,65,302,12,15
-P02718,Dr. Jufri Hidayat,0000-0002-9978-4479,A5030231743,Jufri Hidayat,9,23,3,1
+P00982,"Rianda Ridho Hafizh Thaha, S.E., M.B.A.",0000-0002-7150-2732,A5057888031,Rianda Ridho Hafizh Thaha,12,13,2,0
+P02712,"Prof. apt. Ivan S. Pradipta, Ph.D",0000-0002-7151-0783,A5071276548,Ivan Surya Pradipta,80,1359,18,28
+P00102,Prof. Muh. Farid BDR,0000-0002-7178-7790,A5135784671,MUH. FARID BDR,3,9,1,0
+P00278,"Prof. Dr. Ir. Rahmadanih, M.Si",0000-0002-7179-0498,A5052480433,Rahmadanih Rahmadanih,120,324,9,6
+P02749,Prof. Dr. Noor Azah Abd Aziz,0000-0002-7204-6097,A5109279322,NA Aziz,7,10,2,0
+P02019,Dr. Yaser Qudaih,0000-0002-7259-865X,A5036641473,Yaser Soilman Qudaih,77,1115,15,21
+P00383,Dr. Farah Adila Abdullah,0000-0002-7263-8500,A5148867323,F. A. Abdullah,1,0,0,0
+P00756,"Andang Suryana Soma, S.Hut., MP., Ph.D",0000-0002-7277-6129,A5011999873,Andang Suryana Soma,115,250,8,6
+P01601,"Dr. Ajuk Sapar, M.Si",0000-0002-7278-6159,A5043355651,Ajuk Sapar,69,156,6,4
+P02488,"Dr. Fridawaty Rivai, SKM., M.Kes",0000-0002-7336-7001,A5079273583,Fridawaty Rivai,140,249,8,5
+P02169,"Prof. Dr. Irfan Idris, MD",0000-0002-7350-8687,A5047264457,Irfan Idris,160,538,13,21
+P02756,"Prof. Dr. Elly L Sjattar, S.Kp., M.Kes",0000-0002-7376-5771,A5040876495,Elly Lilianty Sjattar,122,423,11,15
+P02841,"Yusfina, S.Ft., Physio., M.Kes",0000-0002-7398-7278,A5119068285,Yusfina Yusfina,1,0,0,0
+P02625,Assoc. Prof. Andrew Holmes,0000-0002-7406-4387,A5013337848,Andrew J. Holmes,146,8912,46,81
+P00702,"Prof Hiroyuki Motomura, Ph.D",0000-0002-7448-2482,A5126088020,Hiroyuki Motomura,4,0,0,0
+P00231,"Hishar Mirsam, S.P., M.Si.",0000-0002-7450-8574,A5086379158,Hishar Mirsam,52,200,7,6
+P01673,"Naimah Aris, S.Si. M.Math",0000-0002-7465-5371,A5044942429,Naimah Aris,49,96,4,3
+P01245,"Dr. Amril, S.A.P., MPA",0000-0002-7610-3220,A5084992238,Amril Hans,46,46,4,0
+P00327,"Dr. A. Irma Suryani, S.Pd., M.Si.",0000-0002-7618-3734,A5091702056,Ani Suryani,83,213,7,3
+P02761,"Dr. Nuurhidayat Jafar, S.Kep., Ns., M.Kep",0000-0002-7715-8805,A5011208508,Nuurhidayat Jafar,42,67,5,2
+P02904,"Zafitri Nulandari, S.Tr.Keb., Bdn.,M.Keb",0000-0002-7745-9501,A5080796179,Zafitri Nulandari,15,20,3,0
+P02623,"Prof. Dr. M. Thahir Haning, M.Si",0000-0002-7751-454X,A5019363460,Mohamad Thahir Haning,30,58,5,1
+P02894,"Dr Fendi,S.Si, M.Si",0000-0002-7761-2158,A5027441515,Fendi Fendi,39,306,8,5
+P00258,Dr. Letty Fudjaja,0000-0002-7762-9531,A5005480264,L Fudjaja,66,166,7,2
+P00322,"Ahwiyah Ekawaty Said, S.P., M.Si.",0000-0002-7826-2321,A5083497331,Ahwiyah Ekawaty Said,15,46,4,2
+P01085,"Prof. Dr. Syarifuddin, Ak., MSoc.Sc.,CA",0000-0002-7880-9331,A5100336097,Syarifuddin Syarifuddin,277,528,11,13
+P00392,"Dr. Agr. Ir. Renny Fatmyah Utamy, S. Pt., M. Agr., IPM",0000-0002-7908-6710,A5055401409,Renny Fatmyah Utamy,90,82,4,2
+P02662,Prof. Yoshihiro Hayakawa,0000-0002-7921-1171,A5012119811,Yoshihiro Hayakawa,512,26647,80,261
+P00382,"Prof. Dr. Syahdar Baba, S.Pt., M.Si.",0000-0002-8025-4072,A5055952700,Syahdar Baba,94,182,6,4
+P02226,"drh. Anjani Marisa Kartikasari, M.Si.",0000-0002-8030-9010,A5010285845,Anjani Marisa Kartikasari,17,69,4,2
+P00729,"Fatwa Faturachmat, S.Hut, M.Hut",0000-0002-8174-8955,A5080109393,Fatwa Faturachmat,18,173,7,4
+P02844,"Toshiaki Takahashi, PhD, RN",0000-0002-8188-2505,A5015604127,Toshiaki Takahashi,625,14847,55,256
+P02432,"Dr. Agus Bintara Birawida, S.Kel., M.Kes",0000-0002-8223-2387,A5136662946,Agus Bintara Biwareda,1,0,0,0
+P01586,"Prof. Dr. Budi Nurwahyu, MS",0000-0002-8245-8845,A5073009340,Budi Nurwahyu,50,116,6,5
+P00725,Dr. Micah R. Fisher,0000-0002-8246-2318,A5123550522,Micah Fisher,3,0,0,0
+P02854,"Prof. Dr. dr. Prihantono, Sp.B. Subsp.Onk(K)",0000-0002-8247-0457,A5033363566,Prihantono Prihantono,237,897,15,24
+P01020,Associate Professor. Dr. Sabbar Dahham Sabbar,0000-0002-8317-8458,A5053914783,Sabbar Dahham Sabbar,44,84,4,2
+P01754,"Prof. Dr. Ir. Hj. Sumarni Hamid Aly, MT., IPU",0000-0002-8328-1930,A5112805933,Sumarni Hamid Aly,88,117,5,0
+P00781,"Dr. Ir. Syamsuddin Millang., MS",0000-0002-8353-7342,A5022199687,Syamsuddin Millang,77,136,6,3
+P02824,"Jennifer Barkin, M.S., PhD",0000-0002-8364-4260,A5140841406,Jennifer Barkin,1,0,0,0
+P02246,"Andi Tenri Esa, MD, Ph.D",0000-0002-8373-6755,A5052815950,Tenri Esa,58,104,6,3
+P02350,"Dr. dr. Hasta Handayani Idrus, M.Kes, CIAR",0000-0002-8563-6395,A5055011925,Hasta Handayani Idrus,119,191,8,6
+P01111,Prof. Dr. Noor Ismawati Binti Jafaar,0000-0002-8604-6004,A5082239536,Noor Ismawati Jaafar,116,4763,28,42
+P00295,Dr. Eriyanto Yusnawan,0000-0002-8641-8445,A5052259780,Eriyanto Yusnawan,82,419,13,18
+P00109,Prof. Dr. Rusnadi Padjung,0000-0002-8644-3210,A5053732802,Rusnadi Padjung,62,393,9,8
+P02678,Dr. Juan Domínguez- Robles,0000-0002-8654-8434,A5081547013,Juan Domínguez‐Robles,156,6430,47,87
+P00292,"Dr. Mustika Tuwo, S.Si., M.Si.",0000-0002-8721-2780,A5004262918,Mustika Tuwo,79,157,6,2
+P01067,Khalid Eltayeb Elfaki Adam,0000-0002-8728-0492,A5012030432,Khalid Eltayeb Elfaki,32,606,13,16
+P02640,Dk Dr Nurolaini Pg Haji Muhd Kifli,0000-0002-8817-7956,A5088359575,Nurolaini Kifli,63,2358,21,28
+P00433,"Prof. Dr. Ir. Muhammad Irfan Said, S.Pt, M.P, IPM, ASEAN Eng.",0000-0002-8824-4944,A5075882764,Muhammad Irfan Said,121,313,9,9
+P00504,"DR. Marlina Achmad, S.Pi. M.Si",0000-0002-8863-8476,A5082467830,Marlina Achmad,31,53,3,1
+P01022,"Prof. Dr. Maat Pono, SE., M.Si",0000-0002-8906-8743,A5051134209,Maat Pono,84,144,7,2
+P02222,"drh. Mawar Subangkit, M.Si., Ph.D.",0000-0002-9098-0094,A5046619306,Mawar Subangkit,75,371,11,11
+P01107,"Dr. Andi Kusumawati, S.E., M.Si., Ak., CA.",0000-0002-9106-8320,A5027484521,Andi Kusumawati,150,218,7,3
+P00218,"Dr. Ir. Mahyuddin, M.Si",0000-0002-9115-2901,A5036419479,Mahyuddin Mahyuddin,92,128,6,2
+P00874,"Eka Novriyanti, S.Hut., M.Si., Ph.D.",0000-0002-9160-3274,A5003738447,EKA NOVRIYANTI,2,7,1,0
+P00274,"Prof. Dr. Ir. Sitti Bulkis, M.S.",0000-0002-9207-9953,A5109533605,Sitti Bulkis,63,75,4,1
+P02361,Sri Oktawati,0000-0002-9212-6641,A5003731509,Sri Oktawati,75,101,4,2
+P00783,"Prof. Makkarennu., S.Hut., M.Si., Ph.D",0000-0002-9284-8118,A5024899927,Makkarennu Makkarennu,71,155,7,4
+P02717,"apt. Madania, M.Sc",0000-0002-9296-9286,A5048792682,Madania Madania,73,101,5,3
+P02434,"Ir. Nur An-Nisa Putry Mangarengi, S.T., M.Sc",0000-0002-9308-4658,A5077674816,N A P Mangarengi,21,31,4,0
+P01281,"Prof. Dr. Andi M. Rusli, M.Si",0000-0002-9342-3840,A5059761710,Andi Muhammad Rusli,81,39,3,1
+P02215,Fika Yuliza Purba,0000-0002-9483-3876,A5075434845,Fika Yuliza Purba,34,172,7,7
+P00259,Dr. Heliawaty,0000-0002-9509-6548,A5025556453,Heliawaty Lakare,6,10,1,0
+P02000,"Dr. Eng. Ardy Arsyad, ST, M.Eng.Sc",0000-0002-9513-6386,A5041804326,Ardy Arsyad,105,269,8,5
+P02441,"Nurlia Sila, SKM.M.KL",0000-0002-9612-159X,A5041883212,Nurlia Sila,11,9,2,0
+P00437,Prof. Dr. Maurizia Seggiani,0000-0002-9628-7178,A5027532557,Maurizia Seggiani,227,5288,35,85
+P01023,"Prof. Dr. Musran Munizu, SE, M.Si, MAP, CIPM",0000-0002-9687-3441,A5083282915,Musran Munizu,201,574,10,11
+P00520,"Mufti Hatur Rahmi, S.Tr.Pi., M.Si.",0000-0002-9695-9333,A5062813049,Mufti Hatur Rahmi,19,194,6,4
+P02663,"Besse Hardianti S.Si., M.Pharm.Sc., PhD., Apt",0000-0002-9705-128X,A5048137482,Besse Hardianti,34,175,8,8
+P00957,Universitas Hasanuddin,0000-0002-9727-3499,A5038251000,Abdul Hamid Habbe,128,243,7,4
+P01327,Sudirman Nasir,0000-0002-9735-1178,A5102815969,Sudirman Nasir,139,732,13,17
+P00411,Prof. Dr. Anjas Asmara @ Ab. Hadi Bin Samsudin,0000-0002-9758-7973,A5071660166,Anjas Asmara Samsudin,192,3317,32,66
+P01793,"Dr.Eng Nadella Marchelina S.T., M.Eng.",0000-0002-9781-0629,A5080612304,Nadella Marchelina,8,33,3,2
+P01677,Dr. Hemanta Kalita,0000-0002-9798-6608,A5051960178,Hemanta Kalita,103,79,4,1
+P00735,"Nasri, Ph.D",0000-0002-9857-9588,A5039310281,NASRI NASRI,4,4,1,0
+P01283,"Takuji W. Tsusaka, Ph.D",0000-0002-9872-2436,A5059099005,Takuji W. Tsusaka,152,2621,28,59
+P02014,"Prof. Dr.Eng. Ir. Syafaruddin, S.T., M.Eng., IPU",0000-0002-9915-7694,A5000285228,Syafaruddin Syafaruddin,127,2105,15,16
+P01287,"Prof. Dr. Munsi Lampe, MA",0000-0002-9922-4017,A5024259788,Munsi Lampe,13,13,2,0
+P02474,"Andi Imam Arundhana Thahir, S.Gz, MPH, Ph.D",0000-0002-9926-6604,A5059138115,Andi Imam Arundhana,65,302,12,15
+P02785,Dr. Jufri Hidayat,0000-0002-9978-4479,A5030231743,Jufri Hidayat,9,23,3,1
 ,,0000-0003-0092-2139,A5135504837,Huan Li,9,3,1,0
-P02113,"Hayley Letson, PhD",0000-0003-0135-134X,A5086809269,Hayley L. Letson,98,2017,29,56
-P00060,"Muspirah Djalal, M.Sc",0000-0003-0167-7016,A5025410511,Andi Dirpan,179,1538,21,37
-P01491,"Khaidir Sirajuddin, S.S.",0000-0003-0224-3674,A5010947747,Khaidir Sirajuddin,4,14,1,1
-P00441,"Dr. Ir. Zulkharnaim, S.Pt., M.Si., IPM",0000-0003-0277-6964,A5066386547,Zulkharnaim Zulkharnaim,27,40,3,1
-P00394,"Dr. Djabal Nur Basir, S.Si., MSi",0000-0003-0325-5669,A5093632189,Basir Rasyid,4,1,1,0
-P00849,"Dr. Hikma Yanti, S.Hut., M.Si.",0000-0003-0334-7774,A5083763292,Hikma Yanti,51,101,6,4
-P02316,Yasir Dilshad Siddiqui,0000-0003-0395-0098,A5029323073,Yasir Dilshad Siddiqui,32,197,7,5
-P02053,"Prof. Ir. Muhammad Bachtiar Nappu, ST., MT., M.Phil., Ph.D.",0000-0003-0406-5971,A5045598267,Muhammad Bachtiar Nappu,97,650,13,22
-P01320,"Dr. Irwanto, S.Sos., M.I.Kom.",0000-0003-0474-5141,A5099182431,Irwanto Irwanto,24,147,5,3
-P00871,Prof. Dr. Ir. Meta Mahendradatta,0000-0003-0516-8411,A5083554230,Meta Mahendradatta,123,500,11,18
-P02731,"Prof. Rini Rachmawaty, Ph.D, MN, BSN, RN",0000-0003-0519-5591,A5064909276,Rini Rachmawaty,90,274,9,8
-P01060,"Prof. Dr. Darmawati, S.E., M.Si., Ak., CA., CRA., Asean CPA.",0000-0003-0536-3225,A5056428470,Darmawati Darmawati,28,25,2,1
-P00613,"Prof. Dr. Ir. Budimawan, DEA",0000-0003-0566-2305,A5023215005,Budimawan Budimawan,51,150,7,4
-P02288,Prof. Dr. Tuti Ningseh Mohd Dom,0000-0003-0575-8382,A5086684122,Tuti Ningseh Mohd Dom,73,571,12,17
-P01248,"Muhammad Chaeroel Ansar, S.IP., M.Sc",0000-0003-0646-8141,A5088686607,Muhammad Chaeroel Ansar,37,60,5,2
-P02161,"April Hari Wardhana, M.Si., Ph.D.",0000-0003-0750-8467,A5004701358,April Hari Wardhana,140,697,13,24
-P00572,"Dr. Widyastuti, S.Kel.",0000-0003-0763-6581,A5036398280,Widyastuti Umar,42,73,4,1
-P02739,"Mgr. Eva Hlaváčková, Ph.D.",0000-0003-0792-4567,A5047742515,Eva Hlaváčková,27,75,4,3
-P02159,Dr. Mohd Farhan Hanif Reduan,0000-0003-0815-8761,A5010429559,Mohd Farhan Hanif Reduan,66,672,14,17
-P00327,"Abdel Razzaq Mohammad Al-Tawaha, Ph.D",0000-0003-0826-0942,A5128245636,Abdel Razzaq Mohammad Al-Tawaha,4,2,1,0
-P01468,"Prof. Dr. Muhlis Hadrawi, S.S., M.Hum.",0000-0003-0852-8080,A5057018729,Muhlis Hadrawi,50,56,3,1
+P02175,"Hayley Letson, PhD",0000-0003-0135-134X,A5086809269,Hayley L. Letson,98,2017,29,56
+P00061,"Prof. Ir. Andi Dirpan, Ph.D",0000-0003-0167-7016,A5025410511,Andi Dirpan,179,1538,21,37
+P00928,Prof. Dr. Ir Abu Bakar Tawali,0000-0003-0196-8497,A5016443724,Abu Bakar Tawali,115,315,10,10
+P01519,"Khaidir Sirajuddin, S.S.",0000-0003-0224-3674,A5010947747,Khaidir Sirajuddin,4,14,1,1
+P00454,"Dr. Ir. Zulkharnaim, S.Pt., M.Si., IPM",0000-0003-0277-6964,A5066386547,Zulkharnaim Zulkharnaim,27,40,3,1
+P00407,"Dr. Djabal Nur Basir, S.Si., MSi",0000-0003-0325-5669,A5093632189,Basir Rasyid,4,1,1,0
+P00867,"Dr. Hikma Yanti, S.Hut., M.Si.",0000-0003-0334-7774,A5083763292,Hikma Yanti,51,101,6,4
+P02379,Yasir Dilshad Siddiqui,0000-0003-0395-0098,A5029323073,Yasir Dilshad Siddiqui,32,197,7,5
+P02112,"Prof. Ir. Muhammad Bachtiar Nappu, ST., MT., M.Phil., Ph.D.",0000-0003-0406-5971,A5045598267,Muhammad Bachtiar Nappu,97,650,13,22
+P01344,"Dr. Irwanto, S.Sos., M.I.Kom.",0000-0003-0474-5141,A5099182431,Irwanto Irwanto,24,147,5,3
+P00890,Prof. Dr. Ir. Meta Mahendradatta,0000-0003-0516-8411,A5083554230,Meta Mahendradatta,123,500,11,18
+P01084,"Prof. Dr. Darmawati, S.E., M.Si., Ak., CA., CRA., Asean CPA.",0000-0003-0536-3225,A5056428470,Darmawati Darmawati,28,25,2,1
+P00628,"Prof. Dr. Ir. Budimawan, DEA",0000-0003-0566-2305,A5023215005,Budimawan Budimawan,51,150,7,4
+P02351,Prof. Dr. Tuti Ningseh Mohd Dom,0000-0003-0575-8382,A5086684122,Tuti Ningseh Mohd Dom,73,571,12,17
+P01272,"Muhammad Chaeroel Ansar, S.IP., M.Sc",0000-0003-0646-8141,A5088686607,Muhammad Chaeroel Ansar,37,60,5,2
+P02223,"April Hari Wardhana, M.Si., Ph.D.",0000-0003-0750-8467,A5136679494,Sei Iwasaki,1,0,0,0
+P00586,"Dr. Widyastuti, S.Kel.",0000-0003-0763-6581,A5036398280,Widyastuti Umar,42,73,4,1
+P02807,"Mgr. Eva Hlaváčková, Ph.D.",0000-0003-0792-4567,A5047742515,Eva Hlaváčková,27,75,4,3
+P02221,Dr. Mohd Farhan Hanif Reduan,0000-0003-0815-8761,A5010429559,Mohd Farhan Hanif Reduan,66,672,14,17
+P00340,"Abdel Razzaq Mohammad Al-Tawaha, Ph.D",0000-0003-0826-0942,A5128245636,Abdel Razzaq Mohammad Al-Tawaha,4,2,1,0
+P01497,"Prof. Dr. Muhlis Hadrawi, S.S., M.Hum.",0000-0003-0852-8080,A5057018729,Muhlis Hadrawi,50,56,3,1
 P00038,Ade Rosmana,0000-0003-0887-1735,A5065294191,Ade Rosmana,155,592,11,15
-P00121,"Dr. Ir. Rafiuddin, M.P.",0000-0003-0897-0469,A5044940341,R. Rafiuddin,3,1,1,0
-P02279,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",0000-0003-0943-4000,A5038213751,Muhammad Ruslin,8,6,2,0
-P02603,"Prof. Firzan Nainu, Ph.D.",0000-0003-0989-4023,A5122993693,Firzan Nainu,1,2,1,0
-P01407,Dr. Nurul Hidayat Ab Rahman,0000-0003-1008-4263,A5036811305,Nurul Hidayat Ab Rahman,30,45,3,0
-P01608,"Prof. Dr Eng. Armin Lawi, S.Si, M.Eng",0000-0003-1023-6925,A5089918406,Armin Lawi,118,605,13,17
-P02523,Dr. Vivien How,0000-0003-1067-9929,A5041520289,Vivien How,98,619,11,15
-P01066,Dr. Kashan Pirzada,0000-0003-1186-0631,A5047042844,Kashan Pirzada,73,731,16,22
-P00103,"Nuniek Widiayani, SP. MP.",0000-0003-1207-7737,A5022089259,Nuniek Widiayani,43,78,5,0
-P02702,Prof. Chrysoula Tsiou,0000-0003-1243-7069,A5081578254,Chrysoula Tsiou,33,595,8,8
-P02158,"Dr. Irma Andriani, M.Si.",0000-0003-1268-6559,A5104388051,Irma Andriani,31,217,6,2
-P01079,"Prof Hasan Fauzi, M.B.A, Ph.D., CA, CSRA",0000-0003-1275-6166,A5027960823,Hasan Fauzi,60,726,14,17
+P00122,"Dr. Ir. Rafiuddin, M.P.",0000-0003-0897-0469,A5044940341,R. Rafiuddin,3,1,1,0
+P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",0000-0003-0943-4000,A5038213751,Muhammad Ruslin,8,6,2,0
+P02670,"Prof. Firzan Nainu, Ph.D.",0000-0003-0989-4023,A5122993693,Firzan Nainu,1,2,1,0
+P01433,Dr. Nurul Hidayat Ab Rahman,0000-0003-1008-4263,A5036811305,Nurul Hidayat Ab Rahman,30,45,3,0
+P01585,"Prof. Dr. Eng. Armin Lawi, S.Si., M.Eng.",0000-0003-1023-6925,A5089918406,Armin Lawi,118,605,13,17
+P02590,Dr. Vivien How,0000-0003-1067-9929,A5041520289,Vivien How,98,619,11,15
+P01090,Dr. Kashan Pirzada,0000-0003-1186-0631,A5047042844,Kashan Pirzada,73,731,16,22
+P00104,"Nuniek Widiayani, SP. MP.",0000-0003-1207-7737,A5022089259,Nuniek Widiayani,43,78,5,0
+P02769,Prof. Chrysoula Tsiou,0000-0003-1243-7069,A5081578254,Chrysoula Tsiou,33,595,8,8
+P02220,"Dr. Irma Andriani, M.Si.",0000-0003-1268-6559,A5104388051,Irma Andriani,31,217,6,2
+P01103,"Prof Hasan Fauzi, M.B.A, Ph.D., CA, CSRA",0000-0003-1275-6166,A5027960823,Hasan Fauzi,60,726,14,17
 ,,0000-0003-1278-6402,A5032002375,Mediaty Mediaty,99,145,7,4
-P00244,Prof. Dr. A. Nixia Tenriawaru,0000-0003-1398-9754,A5055569584,Nixia Tenriawaru,19,16,2,0
-P00323,"Prof. Dr. Ir. Jasmal A. Syamsu, M.Si., IPU., ASEAN.Eng",0000-0003-1410-5201,A5036714818,Jasmal A. Syamsu,134,278,8,6
-P01225,Dr. Sana Jaffrey,0000-0003-1454-4968,A5038639278,Sana Jaffrey,20,193,7,5
-P00363,"Dr. Sri Gustina, S.Pt., M.Si",0000-0003-1466-4740,A5015553804,Sri Gustina,51,114,6,4
-P02458,"Muhammad Rachmat, SKM., M.Kes",0000-0003-1520-6434,A5008407207,Muhammad Rachmat,65,310,10,11
-P02496,"Prof. Dr. Nurhaedar Jafar, Apt.,M.Kes",0000-0003-1578-0831,A5125436928,Nurhaeda Jafar,1,0,0,0
-P02371,"Muh Fajaruddin Natsir, S.KM., M.Kes.",0000-0003-1585-1169,A5057571394,MUH. FAJARUDDIN NATSIR,11,2,1,0
-P00364,Muhammad Fajar Amrullah,0000-0003-1589-4572,A5056298941,Muhammad Fajar Amrullah,28,20,2,0
+P00257,Prof. Dr. A. Nixia Tenriawaru,0000-0003-1398-9754,A5055569584,Nixia Tenriawaru,19,16,2,0
+P00336,"Prof. Dr. Ir. Jasmal Ahmari Syamsu, M.Si., IPU, ASEAN Eng",0000-0003-1410-5201,A5036714818,Jasmal A. Syamsu,134,278,8,6
+P01249,Dr. Sana Jaffrey,0000-0003-1454-4968,A5038639278,Sana Jaffrey,20,193,7,5
+P00376,"Dr. Sri Gustina, S.Pt., M.Si",0000-0003-1466-4740,A5015553804,Sri Gustina,51,114,6,4
+P02523,"Muhammad Rachmat, SKM., M.Kes",0000-0003-1520-6434,A5008407207,Muhammad Rachmat,65,310,10,11
+P02561,"Prof. Dr. Nurhaedar Jafar, Apt.,M.Kes",0000-0003-1578-0831,A5057823581,Nurhaedar Jafar,117,280,8,6
+P02435,"Muh Fajaruddin Natsir, S.KM., M.Kes.",0000-0003-1585-1169,A5057571394,MUH. FAJARUDDIN NATSIR,11,2,1,0
+P00377,Muhammad Fajar Amrullah,0000-0003-1589-4572,A5056298941,Muhammad Fajar Amrullah,28,20,2,0
 ,,0000-0003-1627-1553,A5150597091,Muhammad Yusuf,7,0,0,0
-P02305,Maria Tanumihardja,0000-0003-1669-3609,A5007763339,Maria Tanumiharja,10,296,4,4
-P01486,Dr. Fajar Erikha,0000-0003-1713-6281,A5085999052,Fajar Erikha,23,104,5,2
-P01121,Amer Ahmad Hatamleh,0000-0003-1847-0492,A5009048112,Amer Ahmad Hatamleh,25,77,4,4
-P02649,"apt. Ida Adhayanti, M.Sc",0000-0003-1997-5820,A5080190915,Ida Adhayanti,30,52,3,2
-P00994,Musab Iqtait,0000-0003-2091-5657,A5082830168,Musab Iqtait,23,192,8,6
-P00417,"Indrawirawan, S.Pt., M.Sc.",0000-0003-2127-6092,A5087764366,Indrawirawan Indrawirawan,18,12,2,0
-P02786,"Dr. Andi Rizky Arbaim Hasyar, S.Ft, Physio",0000-0003-2230-8754,A5078124996,Andi Rizky Arbaim Hasyar,18,8,2,0
-P02372,"Dr. Owildan Wisudawan B, S.KM., M.Kes",0000-0003-2300-0049,A5026449187,Owildan Wisudawan B,17,8,2,0
-P01265,"Prof. Dr. Eymal B Demmalino, M.Si",0000-0003-2316-5951,A5106606342,Eymal Bahsar Demmallino,2,3,1,0
-P02258,"Francis Gaudreault, Ph.D",0000-0003-2540-6667,A5008586178,Francis Gaudreault,16,179,5,3
-P01011,"Afdal Madein, PhD, CA",0000-0003-2623-8204,A5063112277,Afdal Madein,25,48,4,1
-P01205,"Suryanto, S.Sos., M.Si",0000-0003-2627-2541,A5076422285,Suryanto Arifin,25,24,2,0
-P00075,"Irma Jamaluddin, S.P., M.Si., Ph.D.",0000-0003-2628-1616,A5125471247,Irma Jamaluddin,7,7,1,0
-P00395,"Dr. Ir. Muh. Ridwan, M.Si., IPU",0000-0003-2646-6987,A5112332728,Muh. Ridwan,20,8,1,0
-P01773,"M. Anis Ilahi Rahmadhani, ST., MT.",0000-0003-2663-0740,A5030358282,Muhammad Anis Ilahi Rahmadhani,10,16,3,0
-P00325,Dr. Emely J. Escala,0000-0003-2666-9901,A5090125772,Emely J. Escala,10,0,0,0
-P01629,"Dr. Al Ashari Masta, S.Si. M.Si",0000-0003-2737-3598,A5022360624,Al Azhary Masta,53,160,6,4
-P00930,Dr. Intan Syafinaz Binti Mohamed Amin Tawakkal,0000-0003-2796-2608,A5074590944,Intan Syafinaz Mohamed Amin Tawakkal,75,3279,25,37
-P00402,Dr. Muhammad Umair Asghar,0000-0003-2838-0749,A5061627061,Muhammad Umair Asghar,25,255,8,7
-P02774,"Syahrul, S.Kep,. Ns., M.Kes., Ph.D",0000-0003-2939-4173,A5100685675,Syahrul Syahrul,136,547,11,13
-P00984,"Anis Anshari Mas'ud, S.Kom., M.M.",0000-0003-2985-490X,A5100678671,Anis Anshari Mas’ud,40,66,5,2
-P02300,A.St. Hajrah Yusuf,0000-0003-3010-4524,A5090055470,Andi Sitti Hajrah Yusuf,23,111,6,4
-P00359,"Dr. Erni Damayanti, S.Pt",0000-0003-3028-2267,A5077275904,Erni Damayanti,24,38,3,2
-P00811,"Prof. Dr. Ir. Astuti Arif, S.Hut., M.Si., IPU",0000-0003-3106-1642,A5101417264,Astuti Arif,44,126,6,4
-P00716,"Emban Ibnurusyd Mas'ud, PhD (cand)",0000-0003-3120-6629,A5072549439,Emban Ibnurusyd Mas’ud,24,57,5,2
-P00404,"Ichlasul Amal, S.Pt., M.Si.",0000-0003-3120-7269,A5002921325,Ichlasul Amal,24,8,2,0
-P02304,"Prof. Dr. drg. Muhammad Harun Ahmad, M.Kes, Sp.KGA.,Subs.KKA(K).,FSASS",0000-0003-3124-2064,A5019185256,Harun Achmad,221,811,14,21
-P02203,Erick V. G. Komba,0000-0003-3242-2219,A5136984334,Emmanuel Erick V. G. Komba,1,0,0,0
-P00975,"Prof. Dr. Mediaty, SE., M.Si., Ak, CA, CWM.",0000-0003-3314-4900,A5023157816,Mediaty Mediaty,14,9,2,0
-P01224,Dr. Muhammad Febriansyah,0000-0003-3368-0105,A5019061673,Muhammad Febriansyah,20,22,2,1
-P00354,Procula Rudlof Matitaputty,0000-0003-3376-2266,A5057922705,Procula Rudlof Matitaputty,66,167,6,3
-P01218,"Andi Ahmad Yani, S.Sos.,M.Si, MPA, M.Sc",0000-0003-3401-7639,A5042068300,Andi Ahmad Yani,64,72,4,0
-P01716,"Prof. Dr. Ir. Muhammad Yusuf, S.Pt., IPU",0000-0003-3421-4384,A5122942454,Muhammad Yusuf,3,1,1,0
-P01916,"Ir. Zarah Arwieny Hanami, S.T., M.T",0000-0003-3439-8419,A5091020404,Zarah Arwieny Hanami,34,108,6,2
-P00407,Khaerani Kiramang,0000-0003-3489-3209,A5033120303,Khaerani Kiramang,31,78,6,4
-P00122,Dr. Mohd Hadi Akbar Bin Basri,0000-0003-3541-9795,A5101731877,Mohd Hadi Akbar Basri,21,71,5,3
+P02368,Maria Tanumihardja,0000-0003-1669-3609,A5007763339,Maria Tanumiharja,10,296,4,4
+P01514,Dr. Fajar Erikha,0000-0003-1713-6281,A5085999052,Fajar Erikha,23,104,5,2
+P01145,Amer Ahmad Hatamleh,0000-0003-1847-0492,A5009048112,Amer Ahmad Hatamleh,25,77,4,4
+P02716,"apt. Ida Adhayanti, M.Sc",0000-0003-1997-5820,A5080190915,Ida Adhayanti,30,52,3,2
+P01017,Musab Iqtait,0000-0003-2091-5657,A5082830168,Musab Iqtait,23,192,8,6
+P00430,"Indrawirawan, S.Pt., M.Sc.",0000-0003-2127-6092,A5087764366,Indrawirawan Indrawirawan,18,12,2,0
+P02855,"Dr. Andi Rizky Arbaim Hasyar, S.Ft, Physio",0000-0003-2230-8754,A5078124996,Andi Rizky Arbaim Hasyar,18,8,2,0
+P02436,"Dr. Owildan Wisudawan B, S.KM., M.Kes",0000-0003-2300-0049,A5026449187,Owildan Wisudawan B,17,8,2,0
+P01289,"Prof. Dr. Eymal B Demmalino, M.Si",0000-0003-2316-5951,A5106606342,Eymal Bahsar Demmallino,2,3,1,0
+P02321,"Francis Gaudreault, Ph.D",0000-0003-2540-6667,A5008586178,Francis Gaudreault,16,179,5,3
+P01035,"Afdal Madein, PhD, CA",0000-0003-2623-8204,A5063112277,Afdal Madein,25,48,4,1
+P01229,"Suryanto, S.Sos., M.Si",0000-0003-2627-2541,A5076422285,Suryanto Arifin,25,24,2,0
+P00076,"Irma Jamaluddin, S.P., M.Si., Ph.D.",0000-0003-2628-1616,A5125471247,Irma Jamaluddin,7,7,1,0
+P00408,"Dr. Ir. Muh. Ridwan, M.Si., IPU",0000-0003-2646-6987,A5112332728,Muh. Ridwan,20,8,1,0
+P01825,"M. Anis Ilahi Rahmadhani, ST., MT.",0000-0003-2663-0740,A5030358282,Muhammad Anis Ilahi Rahmadhani,10,16,3,0
+P00338,Dr. Emely J. Escala,0000-0003-2666-9901,A5090125772,Emely J. Escala,10,0,0,0
+P01678,"Dr. Al Ashari Masta, S.Si. M.Si",0000-0003-2737-3598,A5022360624,Al Azhary Masta,53,160,6,4
+P00953,Dr. Intan Syafinaz Binti Mohamed Amin Tawakkal,0000-0003-2796-2608,A5074590944,Intan Syafinaz Mohamed Amin Tawakkal,75,3279,25,37
+P00415,Dr. Muhammad Umair Asghar,0000-0003-2838-0749,A5061627061,Muhammad Umair Asghar,25,255,8,7
+P02842,"Syahrul, S.Kep,. Ns., M.Kes., Ph.D",0000-0003-2939-4173,A5100685675,Syahrul Syahrul,136,547,11,13
+P01007,"Anis Anshari Mas'ud, S.Kom., M.M.",0000-0003-2985-490X,A5100678671,Anis Anshari Mas’ud,40,66,5,2
+P02363,A.St. Hajrah Yusuf,0000-0003-3010-4524,A5090055470,Andi Sitti Hajrah Yusuf,23,111,6,4
+P00372,"Dr. Erni Damayanti, S.Pt",0000-0003-3028-2267,A5077275904,Erni Damayanti,24,38,3,2
+P00829,"Prof. Dr. Ir. Astuti Arif, S.Hut., M.Si., IPU",0000-0003-3106-1642,A5101417264,Astuti Arif,44,126,6,4
+P00733,"Emban Ibnurusyd Mas'ud, PhD (cand)",0000-0003-3120-6629,A5072549439,Emban Ibnurusyd Mas’ud,24,57,5,2
+P00417,"Ichlasul Amal, S.Pt., M.Si.",0000-0003-3120-7269,A5002921325,Ichlasul Amal,24,8,2,0
+P02367,"Prof. Dr. drg. Muhammad Harun Ahmad, M.Kes, Sp.KGA.,Subs.KKA(K).,FSASS",0000-0003-3124-2064,A5019185256,Harun Achmad,221,811,14,21
+P02265,Erick V. G. Komba,0000-0003-3242-2219,A5136984334,Emmanuel Erick V. G. Komba,1,0,0,0
+P00998,"Prof. Dr. Mediaty, SE., M.Si., Ak, CA, CWM.",0000-0003-3314-4900,A5023157816,Mediaty Mediaty,14,9,2,0
+P01248,Dr. Muhammad Febriansyah,0000-0003-3368-0105,A5019061673,Muhammad Febriansyah,20,22,2,1
+P00367,Procula Rudlof Matitaputty,0000-0003-3376-2266,A5057922705,Procula Rudlof Matitaputty,66,167,6,3
+P01242,"Andi Ahmad Yani, S.Sos.,M.Si, MPA, M.Sc",0000-0003-3401-7639,A5042068300,Andi Ahmad Yani,64,72,4,0
+P01767,"Prof. Dr. Ir. Muhammad Yusuf, S.Pt., IPU",0000-0003-3421-4384,A5122942454,Muhammad Yusuf,3,1,1,0
+P01976,"Ir. Zarah Arwieny Hanami, S.T., M.T",0000-0003-3439-8419,A5091020404,Zarah Arwieny Hanami,34,108,6,2
+P00420,Khaerani Kiramang,0000-0003-3489-3209,A5033120303,Khaerani Kiramang,31,78,6,4
+P00123,Dr. Mohd Hadi Akbar Bin Basri,0000-0003-3541-9795,A5101731877,Mohd Hadi Akbar Basri,21,71,5,3
 ,,0000-0003-3692-8946,A5073791603,Makoto Matsubayashi,164,1793,24,63
-P02306,Dr. Ahmad Shuhud Irfani bin Zakaria,0000-0003-3715-9181,A5042093569,Ahmad Shuhud Irfani Zakaria,33,123,5,3
-P00508,"Dr. Ir. Badraeni, MP.",0000-0003-3762-6333,A5003812001,Badraeni,13,50,4,2
-P02715,"Ns. Nurlaila Fitriani, S. Kep. M. Kep. Sp. Kep. J",0000-0003-3844-0346,A5110970909,Nurlaila Fitriani,16,25,2,1
-P01930,Prof. Mitsuhiro Okayasu,0000-0003-3897-070X,A5030627216,Mitsuhiro Okayasu,203,1937,25,66
-P02736,Dr. Misita Anwar,0000-0003-3979-1746,A5113188619,MISITA ANWAR,9,6,2,0
-P00284,"Erwin Najamuddin, S.P., M.Si.",0000-0003-3991-1955,A5068283045,Erwin Najamuddin,25,27,3,0
-P00126,Prof. Dr. Ir. Kaimuddin M.Si.,0000-0003-4007-4007,A5058565723,Kaimuddin Kaimuddin,19,36,3,1
-P01627,Prof. Dr. Sükran Konca,0000-0003-4019-958X,A5086452355,Şükran Konca,48,195,9,7
-P00756,Tine Grebenc,0000-0003-4035-8587,A5008582736,Tine Grebenc,290,9495,37,72
-P00710,Dr. Nurhady Sirimorok,0000-0003-4041-6396,A5063666730,Nurhady Sirimorok,43,193,8,5
-P02559,"Laksmi Trisasmita, S.Gz, MKM",0000-0003-4102-6162,A5019050017,Laksmi Trisasmita,21,20,3,1
-P02224,"James Baurley, PhD",0000-0003-4116-7723,A5028199808,James W. Baurley,140,1726,22,37
-P00289,Nurasiah Djaenuddin,0000-0003-4167-1436,A5011059400,Nurasiah Djaenuddin,52,173,7,5
-P00109,"Dr. Rahmansyah Dermawan, S.P., M.P",0000-0003-4206-5673,A5071221113,Rahmansyah Dermawan,47,119,6,3
-P01795,"Prof. Dr. Ir. Nasaruddin Salam, MT.",0000-0003-4213-531X,A5017534623,Nasaruddin Salam,58,170,6,3
-P02042,"Andini Dani Achmad, S.T., M.T",0000-0003-4225-8248,A5108020389,Andani Achmad,7,4,1,0
-P02691,"RIJAL S.Ft., Physio., M. Biomed., M.Sc. PH., Ph.D. PT",0000-0003-4247-3124,A5094048997,Rijal Rijal,6,1,1,0
-P02498,"Dr. Healthy Hidayanty, SKM.M.Kes",0000-0003-4319-0011,A5012197725,Healthy Hidayanty,129,372,10,10
-P02646,"Nur Aizati Athirah Daud, Ph.D",0000-0003-4336-9468,A5025281039,Nur Aizati Athirah Daud,67,479,13,17
-P02093,"Andi Alfian Zainuddin, MD, MPH, Ph.D",0000-0003-4436-3906,A5123037747,Andi Alfian Zainuddin,1,2,1,0
-P02284,"Prof. Dr. Andi Zulkifli Abdullah., drg., M.Kes",0000-0003-4437-6811,A5101973327,Andi Zulkifli Abdullah,62,188,8,4
-P00543,"Dr. Ir. M. Rijal Idrus, M.Sc",0000-0003-4544-9162,A5030976604,Rijal Idrus,6,6,1,0
-P00397,"Prof. Dr. Ir. Asmuddin Natsir, M.Sc",0000-0003-4719-3519,A5026345564,Sri Purwanti,106,261,8,8
-P02695,"Dr. Andina Setyawati, S.Kep., Ns., M.Kep",0000-0003-4728-0815,A5003115506,Andina Setyawati,55,83,4,2
-P00668,"Prof. Dr. Ir. Najamuddin, M.Sc",0000-0003-4737-0781,A5034581645,Najamuddin Najamuddin,93,262,7,4
-P00686,"Dr. Nurjirana, S.Kel., M.Si",0000-0003-4801-1481,A5125556748,Nurjirana Nurjirana,5,0,0,0
-P00163,Prof. Dr. Jose Luis Trevizan Chiomento,0000-0003-4819-2761,A5039042687,José Luís Trevizan Chiomento,111,576,12,15
-P02282,"Prof. Fuad Husain Akbar., drg., MARS, Ph.D., FISQua",0000-0003-4819-4820,A5022385156,Fuad Husain Akbar,103,273,9,7
-P01433,"Prof. Muhammad Hasyim, M.Si.",0000-0003-4827-2737,A5049640923,Muhammad Qasash Hasyim,110,654,15,20
-P02581,"Anshar Saud, S.Si, M.Farm, Apt.",0000-0003-4864-0624,A5033148607,Anshar Saud,15,4,1,0
-P02096,"Prof. Neil F Lobo, Ph.D",0000-0003-4878-4839,A5047831132,Neil Francis Lobo,325,11663,49,133
-P00707,Prof. Dr. forest. Muhammad Alif K. Sahide,0000-0003-4908-0323,A5023265775,Muhammad Alif K. Sahide,121,1957,23,37
-P01498,Datuk Prof. Kolonel (K) Dr. Awang Azman Awang Pawi,0000-0003-4939-2706,A5071264895,Awang Azman Awang Pawi,92,126,5,3
-P00165,"Cennawati, S.P., M.Si",0000-0003-4949-4016,A5128985203,Cennawati Cennawati,6,0,0,0
-P01958,Prof. Donald S. Zinger,0009-0000-1453-5274,A5014608706,Donald S. Zinger,55,2008,19,25
-P00249,"Siti Hardiyanti Syam, M.Si",0009-0000-1461-1695,A5023877735,Siti Hardiyanti Syam,37,32,3,0
-P02163,"Prof. Makoto Matsubayashi, DVM, Ph.D.",0009-0000-2191-8919,A5105032001,Makoto Matsubayashi,11,29,3,1
-P02209,Zainal Abidin Kholilullah,0009-0000-3859-122X,A5127086499,Zainal Abidin Kholilulloh,1,0,0,0
-P00905,"Dwi Ghina Nadhifa, S.TP",0009-0000-4213-0901,A5095764980,Dwi Ghina Nadhifa,12,53,5,4
-P00837,"Anugrahandini Nasir, S.Hut., M.Si",0009-0000-4357-6438,A5024491634,Anugrahandini Nasir,6,2,1,0
-P00167,"Abdul Jalil, S.P., M.Si.",0009-0000-5435-0717,A5099721561,Abdul Jalıl,3,2,1,0
-P01249,"Dr. Suhardiman Syamsu, M.Si",0009-0000-5955-4110,A5021970742,Suhardiman Syamsu,58,28,4,0
-P00940,"Fakhrul Indra Hermansyah, S.E., M.Sc",0009-0000-6246-2954,A5099852083,Fakhrul Indra Hermansyah,30,23,2,0
-P02747,"Ninda Regita Cahyani, S.Kep., Ns.",0009-0000-9955-8140,A5138805334,Ninda Regita Cahyani,1,0,0,0
-P01405,"Dr. Haeranah, S.H., M.H",0009-0001-0742-6966,A5018948853,Haeranah Haeranah,33,40,3,1
-P02565,Swasti Purnama Sari,0009-0001-2167-3998,A5118653412,Swasti Purnama Sari,2,0,0,0
-P02167,"drh. Anak Agung P.J. Wahyuda, M.Si.",0009-0001-2673-5107,A5117317369,Anak Agung Putu Joni Wahyuda,6,1,1,0
-P02713,"Dr. Hastuti, S. Kep., Ns., M. Kes.",0009-0001-4950-9663,A5101958638,Hastuti Hastuti,17,84,5,4
-P00997,"Nur Rezky Amaliah, SE., M.Si",0009-0001-5070-8299,A5118799112,Nur Rezky Amaliah,2,5,1,0
+P02369,Dr. Ahmad Shuhud Irfani bin Zakaria,0000-0003-3715-9181,A5042093569,Ahmad Shuhud Irfani Zakaria,33,123,5,3
+P00521,"Dr. Ir. Badraeni, MP.",0000-0003-3762-6333,A5003812001,Badraeni,13,50,4,2
+P02782,"Ns. Nurlaila Fitriani, S. Kep. M. Kep. Sp. Kep. J",0000-0003-3844-0346,A5110970909,Nurlaila Fitriani,16,25,2,1
+P01990,Prof. Mitsuhiro Okayasu,0000-0003-3897-070X,A5030627216,Mitsuhiro Okayasu,203,1937,25,66
+P02804,Dr. Misita Anwar,0000-0003-3979-1746,A5113188619,MISITA ANWAR,9,6,2,0
+P00297,"Erwin Najamuddin, S.P., M.Si.",0000-0003-3991-1955,A5068283045,Erwin Najamuddin,25,27,3,0
+P00127,Prof. Dr. Ir. Kaimuddin M.Si.,0000-0003-4007-4007,A5058565723,Kaimuddin Kaimuddin,19,36,3,1
+P01676,Prof. Dr. Sükran Konca,0000-0003-4019-958X,A5086452355,Şükran Konca,48,195,9,7
+P00773,Tine Grebenc,0000-0003-4035-8587,A5008582736,Tine Grebenc,290,9495,37,72
+P00727,Dr. Nurhady Sirimorok,0000-0003-4041-6396,A5063666730,Nurhady Sirimorok,43,193,8,5
+P02626,"Laksmi Trisasmita, S.Gz, MKM",0000-0003-4102-6162,A5019050017,Laksmi Trisasmita,21,20,3,1
+P02287,"James Baurley, PhD",0000-0003-4116-7723,A5028199808,James W. Baurley,140,1726,22,37
+P00302,Nurasiah Djaenuddin,0000-0003-4167-1436,A5011059400,Nurasiah Djaenuddin,52,173,7,5
+P00110,"Dr. Rahmansyah Dermawan, S.P., M.P",0000-0003-4206-5673,A5071221113,Rahmansyah Dermawan,47,119,6,3
+P01847,"Prof. Dr. Ir. Nasaruddin Salam, MT.",0000-0003-4213-531X,A5017534623,Nasaruddin Salam,58,170,6,3
+P02101,"Andini Dani Achmad, S.T., M.T",0000-0003-4225-8248,A5108020389,Andani Achmad,7,4,1,0
+P02757,"RIJAL S.Ft., Physio., M. Biomed., M.Sc. PH., Ph.D. PT",0000-0003-4247-3124,A5094048997,Rijal Rijal,6,1,1,0
+P02563,"Dr. Healthy Hidayanty, SKM.M.Kes",0000-0003-4319-0011,A5012197725,Healthy Hidayanty,129,372,10,10
+P02713,"Nur Aizati Athirah Daud, Ph.D",0000-0003-4336-9468,A5025281039,Nur Aizati Athirah Daud,67,479,13,17
+P02154,"Andi Alfian Zainuddin, MD, MPH, Ph.D",0000-0003-4436-3906,A5123037747,Andi Alfian Zainuddin,1,2,1,0
+P02347,"Prof. Dr. Andi Zulkifli Abdullah., drg., M.Kes",0000-0003-4437-6811,A5101973327,Andi Zulkifli Abdullah,62,188,8,4
+P00557,"Dr. Ir. M. Rijal Idrus, M.Sc",0000-0003-4544-9162,A5030976604,Rijal Idrus,6,6,1,0
+P00410,"Prof. Dr. Ir. Asmuddin Natsir, M.Sc",0000-0003-4719-3519,A5026345564,Sri Purwanti,106,261,8,8
+P02762,"Dr. Andina Setyawati, S.Kep., Ns., M.Kep",0000-0003-4728-0815,A5003115506,Andina Setyawati,55,83,4,2
+P00685,"Prof. Dr. Ir. Najamuddin, M.Sc",0000-0003-4737-0781,A5034581645,Najamuddin Najamuddin,93,262,7,4
+P00703,"Dr. Nurjirana, S.Kel., M.Si",0000-0003-4801-1481,A5125556748,Nurjirana Nurjirana,5,0,0,0
+P00172,Prof. Dr. Jose Luis Trevizan Chiomento,0000-0003-4819-2761,A5039042687,José Luís Trevizan Chiomento,111,576,12,15
+P02345,"Prof. Fuad Husain Akbar., drg., MARS, Ph.D., FISQua",0000-0003-4819-4820,A5022385156,Fuad Husain Akbar,103,273,9,7
+P01459,"Prof. Muhammad Hasyim, M.Si.",0000-0003-4827-2737,A5049640923,Muhammad Qasash Hasyim,110,654,15,20
+P02648,"Anshar Saud, S.Si, M.Farm, Apt.",0000-0003-4864-0624,A5033148607,Anshar Saud,15,4,1,0
+P02158,"Prof. Neil F Lobo, Ph.D",0000-0003-4878-4839,A5047831132,Neil Francis Lobo,325,11663,49,133
+P00724,Prof. Dr. forest. Muhammad Alif K. Sahide,0000-0003-4908-0323,A5023265775,Muhammad Alif K. Sahide,121,1957,23,37
+P01526,Datuk Prof. Kolonel (K) Dr. Awang Azman Awang Pawi,0000-0003-4939-2706,A5071264895,Awang Azman Awang Pawi,92,126,5,3
+P00174,"Cennawati, S.P., M.Si",0000-0003-4949-4016,A5128985203,Cennawati Cennawati,6,0,0,0
+P02017,Prof. Donald S. Zinger,0009-0000-1453-5274,A5014608706,Donald S. Zinger,55,2008,19,25
+P00262,"Siti Hardiyanti Syam, M.Si",0009-0000-1461-1695,A5023877735,Siti Hardiyanti Syam,37,32,3,0
+P02225,"Prof. Makoto Matsubayashi, DVM, Ph.D.",0009-0000-2191-8919,A5105032001,Makoto Matsubayashi,11,29,3,1
+P02271,Zainal Abidin Kholilullah,0009-0000-3859-122X,A5127086499,Zainal Abidin Kholilulloh,1,0,0,0
+P00926,"Dwi Ghina Nadhifa, S.TP",0009-0000-4213-0901,A5095764980,Dwi Ghina Nadhifa,12,53,5,4
+P00855,"Anugrahandini Nasir, S.Hut., M.Si",0009-0000-4357-6438,A5024491634,Anugrahandini Nasir,6,2,1,0
+P00176,"Abdul Jalil, S.P., M.Si.",0009-0000-5435-0717,A5099721561,Abdul Jalıl,3,2,1,0
+P01273,"Dr. Suhardiman Syamsu, M.Si",0009-0000-5955-4110,A5021970742,Suhardiman Syamsu,58,28,4,0
+P00963,"Fakhrul Indra Hermansyah, S.E., M.Sc",0009-0000-6246-2954,A5099852083,Fakhrul Indra Hermansyah,30,23,2,0
+P02815,"Ninda Regita Cahyani, S.Kep., Ns.",0009-0000-9955-8140,A5138805334,Ninda Regita Cahyani,1,0,0,0
+P01431,"Dr. Haeranah, S.H., M.H",0009-0001-0742-6966,A5018948853,Haeranah Haeranah,33,40,3,1
+P02632,Swasti Purnama Sari,0009-0001-2167-3998,A5118653412,Swasti Purnama Sari,2,0,0,0
+P02229,"drh. Anak Agung P.J. Wahyuda, M.Si.",0009-0001-2673-5107,A5117317369,Anak Agung Putu Joni Wahyuda,6,1,1,0
+P02780,"Dr. Hastuti, S. Kep., Ns., M. Kes.",0009-0001-4950-9663,A5101958638,Hastuti Hastuti,17,84,5,4
+P01021,"Nur Rezky Amaliah, SE., M.Si",0009-0001-5070-8299,A5118799112,Nur Rezky Amaliah,2,5,1,0
 P00045,"Dr. Ir. Vien Sartika Dewi, M.Si",0009-0001-6049-2647,A5114140121,Vien Sartika Dewi,57,115,6,3
-P01328,"Dr. Ariana, S.IP., M.Si.",0009-0001-6080-2043,A5143878961,Ariana Yunus,3,0,0,0
-P01421,"Prof. Dr. Iin Karita Sakharina, S.H., M.A.",0009-0001-6179-5439,A5052488951,Iin Karita Sakharina,68,91,5,2
-P00280,"Prof. Dr. Ir. Itji Diana Daud, M.S.",0009-0001-8066-6819,A5031869677,Itji Diana Daud,53,122,5,2
+P01352,"Dr. Ariana, S.IP., M.Si.",0009-0001-6080-2043,A5143878961,Ariana Yunus,3,0,0,0
+P01447,"Prof. Dr. Iin Karita Sakharina, S.H., M.A.",0009-0001-6179-5439,A5052488951,Iin Karita Sakharina,68,91,5,2
+P00293,"Prof. Dr. Ir. Itji Diana Daud, M.S.",0009-0001-8066-6819,A5031869677,Itji Diana Daud,53,122,5,2
 ,,0009-0001-8361-2998,A5066676557,Fuad Akbar,7,0,0,0
-P00378,"Dr. Sutomo Syawal, S. Pt., M. Si",0009-0002-1706-816X,A5045656532,Sutomo Syawal,24,39,4,1
-P01487,"Yusuf, S.S.",0009-0002-1969-9117,A5101594560,Yusuf Yusuf,231,477,11,14
-P00358,Athhar Manabi Diansyah,0009-0002-2338-8215,A5026480586,Athhar Manabi Diansyah,75,68,5,0
-P01862,Dr. Eng. Lukmanul Hakim Arma,0009-0002-2502-4191,A5064984663,Lukmanul Hakim Arma,32,30,3,0
-P00361,"Ismah Ulfiyah Azis, S.Pt., M.Sc",0009-0002-3675-3234,A5110986023,Ismah Ulfiyah Azis,12,8,2,0
-P01096,Indira Syakira Kirana Juanda,0009-0002-6503-559X,A5115450183,Indira Syakira Kirana Juanda,5,12,2,1
-P00166,"Padil Wijaya, S.Tr.P., M.Si.",0009-0003-0604-4100,A5042577969,Padil Wijaya,9,2,1,0
-P01010,"Muhammad Try Dharsana, M.Acc.",0009-0003-1947-8274,A5093790608,Muhammad Try Dharsana,26,20,2,0
-P01625,Eliyah Acantha Manapa Sampetoding,0009-0003-3594-4888,A5120572332,Eliyah Acantha Manapa Sampetoding,3,0,0,0
-P00446,"Siti Nuraisyah Hamsir, S.Pt",0009-0003-4584-7117,A5107159550,Siti Nuraisya Hamsir,7,0,0,0
-P00485,"Azisah Nurfadillah, S.Pt",0009-0003-5107-7059,A5117360479,Azisah Nurfadilah,5,3,1,0
-P00120,Dr. Syatrianty A. Syaiful,0009-0003-5318-5870,A5109351959,Syatrianti Andi Syaiful,14,54,4,1
-P01393,"Afif Muhni, S.H., M.H.",0009-0003-7716-4425,A5056975426,Afif Muhni,9,9,1,0
-P01258,"Dr. A. Lukman Irwan, M.Si",0009-0003-8943-2626,A5128706182,Andi Lukman Irwan,29,2,1,0
-P00445,"Muhammad Misbah Ahmad Ruhani, S.Pt., M.Si",0009-0003-8985-6197,A5122751900,Muhammad Misbah Ahmad Ruhani,2,0,0,0
-P02784,Farawansah,0009-0003-9909-6208,A5117141603,Farawansah Farawansah,3,3,1,0
-P01272,"Andi Batara Al Isra, S.Sos.,M.A",0009-0004-3591-204X,A5090411833,Andi Batara Al Isra,25,8,2,0
-P00955,"Nur Fajar Alfitra, S.Psi., M.Sc.",0009-0004-7650-1183,A5046416916,Nur Fajar Alfitra,16,7,2,0
-P02170,"drh. Zulfikri Mustakdir, M.Si.",0009-0004-9278-6967,A5048350657,Zulfikri Mustakdir,11,0,0,0
-P01220,"Dr. Ichlas Nanang Afandi, S.Psi., MA",0009-0005-1088-668X,A5026624530,Ichlas Nanang Afandi,39,21,2,0
-P00726,"Yasmita Yaman, S.Hut",0009-0005-5895-9411,A5117576525,Yasmita Yaman,4,6,1,0
-P02048,"Ir. Ian Adrian Bustanuddin, S.T., M.T",0009-0005-5908-6966,A5119974890,Ian Adrian Bustanuddin,7,3,1,0
-P02721,Zakariaty,0009-0005-6088-9598,A5013441832,Zakariyati,6,0,0,0
-P01266,"Prof. Dr. Pawennari Hijjang, MA",0009-0005-6560-9639,A5055648253,Pawennari Hijjang,94,148,6,4
-P01086,"Haniek Khoirunnissa Baja, S.E., M.Sc.",0009-0005-7682-4123,A5120169398,Haniek Khoirunnissa Baja,6,5,1,0
-P02712,"Prof. Dr. Ariyanti Saleh, SKp. M.Si",0009-0005-8748-9826,A5065782123,Ariyanti Saleh,103,254,8,5
-P00425,Prof. Dr. Konstantina Kollia,0009-0005-9712-7685,A5075647807,C. Kollia,58,475,11,13
-P02205,Irwan Ismail,0009-0006-0391-5806,A5113062404,Irwan Ismail,11,4,1,0
-P02166,"drh. Rian Hari Suharto, M.Sc.",0009-0006-0753-535X,A5053074133,Rian Hari Suharto,21,6,1,0
-P02391,"Dr.dr. Anna Khuzaimah, M.Kes",0009-0006-2729-643X,A5107768152,Anna Khuzaimah,3,1,1,0
-P01264,"Hardiyanti Munsi, S.Sos.,M.Si",0009-0006-5425-2707,A5089414264,Hardiyanti Munsi,24,66,5,1
-P02162,"Prof. Alan P. Dargantes, DVM., MTVSc., Ph.D",0009-0006-5840-4771,A5029621277,A.P. Dargantes,50,1204,14,14
-P01549,"Riska Mardiyanti, M.Sc",0009-0006-6052-6938,A5078946639,Riska Mardiyanti,19,18,2,0
-P00173,"Adhyta Puspita S., S.P., M.Si",0009-0006-6469-7654,A5119644883,Adhyta Puspita Summase,9,7,2,0
-P01232,"Nuralamsyah Ismail, S.Sos., M.A.",0009-0006-8341-6571,A5055448485,Nuralamsyah Ismail,10,8,1,0
-P02285,"Muh. Gazali, MARS., drg., MARS., Sp.BM(K)",0009-0006-9839-8361,A5046478400,Mohammad Gazali,21,55,4,1
-P00277,"Nurmujahidin, S.P., M.Si.",0009-0007-1076-6818,A5068864256,N Nurmujahidin,9,10,2,0
+P00391,"Dr. Sutomo Syawal, S. Pt., M. Si",0009-0002-1706-816X,A5045656532,Sutomo Syawal,24,39,4,1
+P01515,"Yusuf, S.S.",0009-0002-1969-9117,A5101594560,Yusuf Yusuf,231,477,11,14
+P00371,Athhar Manabi Diansyah,0009-0002-2338-8215,A5026480586,Athhar Manabi Diansyah,75,68,5,0
+P01920,Dr. Eng. Lukmanul Hakim Arma,0009-0002-2502-4191,A5064984663,Lukmanul Hakim Arma,32,30,3,0
+P00374,"Ismah Ulfiyah Azis, S.Pt., M.Sc",0009-0002-3675-3234,A5110986023,Ismah Ulfiyah Azis,12,8,2,0
+P01120,Indira Syakira Kirana Juanda,0009-0002-6503-559X,A5115450183,Indira Syakira Kirana Juanda,5,12,2,1
+P00175,"Padil Wijaya, S.Tr.P., M.Si.",0009-0003-0604-4100,A5042577969,Padil Wijaya,9,2,1,0
+P01034,"Muhammad Try Dharsana, M.Acc.",0009-0003-1947-8274,A5093790608,Muhammad Try Dharsana,26,20,2,0
+P01674,Eliyah Acantha Manapa Sampetoding,0009-0003-3594-4888,A5120572332,Eliyah Acantha Manapa Sampetoding,3,0,0,0
+P00459,"Siti Nuraisyah Hamsir, S.Pt",0009-0003-4584-7117,A5107159550,Siti Nuraisya Hamsir,7,0,0,0
+P00498,"Azisah Nurfadillah, S.Pt",0009-0003-5107-7059,A5117360479,Azisah Nurfadilah,5,3,1,0
+P00121,Dr. Syatrianty A. Syaiful,0009-0003-5318-5870,A5109351959,Syatrianti Andi Syaiful,14,54,4,1
+P01419,"Afif Muhni, S.H., M.H.",0009-0003-7716-4425,A5056975426,Afif Muhni,9,9,1,0
+P01282,"Dr. A. Lukman Irwan, M.Si",0009-0003-8943-2626,A5128706182,Andi Lukman Irwan,29,2,1,0
+P00458,"Muhammad Misbah Ahmad Ruhani, S.Pt., M.Si",0009-0003-8985-6197,A5122751900,Muhammad Misbah Ahmad Ruhani,2,0,0,0
+P02852,Farawansah,0009-0003-9909-6208,A5117141603,Farawansah Farawansah,3,3,1,0
+P01296,"Andi Batara Al Isra, S.Sos.,M.A",0009-0004-3591-204X,A5090411833,Andi Batara Al Isra,25,8,2,0
+P00978,"Nur Fajar Alfitra, S.Psi., M.Sc.",0009-0004-7650-1183,A5046416916,Nur Fajar Alfitra,16,7,2,0
+P02232,"drh. Zulfikri Mustakdir, M.Si.",0009-0004-9278-6967,A5048350657,Zulfikri Mustakdir,11,0,0,0
+P01244,"Dr. Ichlas Nanang Afandi, S.Psi., MA",0009-0005-1088-668X,A5026624530,Ichlas Nanang Afandi,39,21,2,0
+P00743,"Yasmita Yaman, S.Hut",0009-0005-5895-9411,A5117576525,Yasmita Yaman,4,6,1,0
+P02107,"Ir. Ian Adrian Bustanuddin, S.T., M.T",0009-0005-5908-6966,A5119974890,Ian Adrian Bustanuddin,7,3,1,0
+P02788,Zakariaty,0009-0005-6088-9598,A5013441832,Zakariyati,6,0,0,0
+P01290,"Prof. Dr. Pawennari Hijjang, MA",0009-0005-6560-9639,A5055648253,Pawennari Hijjang,94,148,6,4
+P01110,"Haniek Khoirunnissa Baja, S.E., M.Sc.",0009-0005-7682-4123,A5120169398,Haniek Khoirunnissa Baja,6,5,1,0
+P02779,"Prof. Dr. Ariyanti Saleh, SKp. M.Si",0009-0005-8748-9826,A5065782123,Ariyanti Saleh,103,254,8,5
+P00438,Prof. Dr. Konstantina Kollia,0009-0005-9712-7685,A5075647807,C. Kollia,58,475,11,13
+P02267,Irwan Ismail,0009-0006-0391-5806,A5113062404,Irwan Ismail,11,4,1,0
+P02228,"drh. Rian Hari Suharto, M.Sc.",0009-0006-0753-535X,A5053074133,Rian Hari Suharto,21,6,1,0
+P02455,"Dr.dr. Anna Khuzaimah, M.Kes",0009-0006-2729-643X,A5107768152,Anna Khuzaimah,3,1,1,0
+P01288,"Hardiyanti Munsi, S.Sos.,M.Si",0009-0006-5425-2707,A5089414264,Hardiyanti Munsi,24,66,5,1
+P02224,"Prof. Alan P. Dargantes, DVM., MTVSc., Ph.D",0009-0006-5840-4771,A5029621277,A.P. Dargantes,50,1204,14,14
+P01598,"Riska Mardiyanti, M.Sc",0009-0006-6052-6938,A5078946639,Riska Mardiyanti,19,18,2,0
+P00186,"Adhyta Puspita S., S.P., M.Si",0009-0006-6469-7654,A5119644883,Adhyta Puspita Summase,9,7,2,0
+P01256,"Nuralamsyah Ismail, S.Sos., M.A.",0009-0006-8341-6571,A5055448485,Nuralamsyah Ismail,10,8,1,0
+P02348,"Muh. Gazali, MARS., drg., MARS., Sp.BM(K)",0009-0006-9839-8361,A5046478400,Mohammad Gazali,21,55,4,1
+P00290,"Nurmujahidin, S.P., M.Si.",0009-0007-1076-6818,A5068864256,N Nurmujahidin,9,10,2,0
 ,,0009-0007-1303-3310,A5018932653,Nirwana Nirwana,193,211,6,3
-P01438,Aqilah Nurul Khaerani Latif,0009-0007-1396-7535,A5025966255,Aqilah Nurul Khaerani Latif,17,23,3,1
-P02745,"Yulita Palembangan, S.Kep., Ns.",0009-0007-2612-8319,A5136875742,Yulita Palembangan,2,0,0,0
-P01361,"M. Aris Munandar, S.H., M.H.",0009-0007-2833-5936,A5004055326,Moh. Aris Munandar,29,69,4,1
-P00897,"Andi Rahmayanti R., S.TP., M.Si",0009-0007-3608-0945,A5056758544,Andi Rahmayanti Ramli,17,29,3,1
-P02795,Dr. Ir. Darhamsyah,0009-0007-8311-6429,A5138959027,Darhamsyah Darhamsyah,5,0,0,0
-P00722,"Abdurrahman Abdullah, S.Hut, M.Hut",0009-0008-0434-8326,A5110820880,Akmaliza Binti Abdullah,3,0,0,0
-P00113,M. Alfan Ikhlasul Amal,0009-0008-2372-7428,A5076426260,Muhammad Alfan Ikhlasul Amal,8,8,2,0
-P01470,"Prof. Dr. Nurhayati Rahman, MS.",0009-0008-2733-1586,A5104199557,Nurhayati Rahman,23,27,4,0
-P01341,"Dr. Andi Ahmad Hasan Tenriliweng, S.ST., M.Si",0009-0008-5618-1169,A5107105018,Andi Ahmad Hasan Tenriliweng,11,4,1,0
-P01318,"Dr. Muliadi Mau, M.Si.",0009-0008-6062-6589,A5007219153,Muliadi Mau,134,40,3,1
-P01500,"Dr. Martina, M.Pd.",0009-0008-7911-9165,A5063516352,Martina Martina,13,13,2,0
-P01094,"Andi Iqra Pradipta Natsir, S.E., M.Si., Ak., ACPA, CRA, CRP.",0009-0008-8539-0795,A5001017610,Andi Iqra Pradipta Natsir,16,26,2,1
-P00133,Arfina Shalsabila,0009-0008-8851-2583,A5120439687,Arfina Shalsabila,3,0,0,0
-P02772,Yuyun Widaningsih,0009-0008-9058-4244,A5044427653,Yuyun Widaningsih,77,112,6,3
-P01065,Muhammad Gafur Kadar,0009-0008-9088-7763,A5007194865,Muhammad gafur Kadar,4,2,1,0
-P00171,"Masrinda Oktavia, S.P",0009-0009-0865-4037,A5148425988,Masrinda Oktavia,3,0,0,0
-P01311,"Novia Fridayanti, M.Si.",0009-0009-4242-9845,A5117906945,Novia Fridayanti,3,1,1,0
-P02605,Mukarram Mudjahid,0009-0009-5361-4712,A5101594588,Mukarram Mudjahid,33,194,8,7
-P01047,Martha Edward Makatha,0009-0009-6040-2873,A5119075239,Martha Edward Makatha,7,1,1,0
-P02173,"drh. A. Rifqatul Ummah, M.Sc.",0009-0009-6683-4087,A5118574715,Andi Rifqatul Ummah,2,0,0,0
-P00384,"Zyahrul Ramadan, S. Pt., M. Si",0009-0009-7460-103X,A5098882983,Zyahrul Ramadan,21,8,2,0
-P01329,"Prof. Dr. Rahmatia, MA",0009-0009-7550-9243,A5158011250,Rahmatia,1,0,0,0
-P02829,"Dr. Risfah Yulianti,M.Si,Apt.",0009-0009-8127-5084,A5046566481,Risfah Yulianty,83,327,12,15
-P00403,"Andi Muhammad Fuad Al Kautsar Walinono, S.Pt., M.Si.",0009-0009-9074-5578,A5116367471,Andi Muh Fuad Al Kautsar Walinono,10,0,0,0
-P02824,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",0009-0009-9515-8831,A5079865519,Andi Sri Hastuti Handayani Usman,14,11,2,0
+P01464,Aqilah Nurul Khaerani Latif,0009-0007-1396-7535,A5025966255,Aqilah Nurul Khaerani Latif,17,23,3,1
+P02813,"Yulita Palembangan, S.Kep., Ns.",0009-0007-2612-8319,A5136875742,Yulita Palembangan,2,0,0,0
+P01385,"M. Aris Munandar, S.H., M.H.",0009-0007-2833-5936,A5004055326,Moh. Aris Munandar,29,69,4,1
+P00918,"Andi Rahmayanti R., S.TP., M.Si",0009-0007-3608-0945,A5056758544,Andi Rahmayanti Ramli,17,29,3,1
+P02864,Dr. Ir. Darhamsyah,0009-0007-8311-6429,A5138959027,Darhamsyah Darhamsyah,5,0,0,0
+P00739,"Abdurrahman Abdullah, S.Hut, M.Hut",0009-0008-0434-8326,A5110820880,Akmaliza Binti Abdullah,3,0,0,0
+P00114,M. Alfan Ikhlasul Amal,0009-0008-2372-7428,A5076426260,Muhammad Alfan Ikhlasul Amal,8,8,2,0
+P01499,"Prof. Dr. Nurhayati Rahman, MS.",0009-0008-2733-1586,A5104199557,Nurhayati Rahman,23,27,4,0
+P02285,"dr. Amalia Yamin, M. Kes, SpPA",0009-0008-5383-3408,A5056721407,Amalia Yamin,19,7,1,0
+P01365,"Dr. Andi Ahmad Hasan Tenriliweng, S.ST., M.Si",0009-0008-5618-1169,A5107105018,Andi Ahmad Hasan Tenriliweng,11,4,1,0
+P01342,"Dr. Muliadi Mau, M.Si.",0009-0008-6062-6589,A5007219153,Muliadi Mau,134,40,3,1
+P01528,"Dr. Martina, M.Pd.",0009-0008-7911-9165,A5063516352,Martina Martina,13,13,2,0
+P01118,"Andi Iqra Pradipta Natsir, S.E., M.Si., Ak., ACPA, CRA, CRP.",0009-0008-8539-0795,A5001017610,Andi Iqra Pradipta Natsir,16,26,2,1
+P00134,Arfina Shalsabila,0009-0008-8851-2583,A5120439687,Arfina Shalsabila,3,0,0,0
+P02840,Yuyun Widaningsih,0009-0008-9058-4244,A5044427653,Yuyun Widaningsih,77,112,6,3
+P01089,Muhammad Gafur Kadar,0009-0008-9088-7763,A5007194865,Muhammad gafur Kadar,4,2,1,0
+P00180,"Masrinda Oktavia, S.P",0009-0009-0865-4037,A5148425988,Masrinda Oktavia,3,0,0,0
+P01335,"Novia Fridayanti, M.Si.",0009-0009-4242-9845,A5117906945,Novia Fridayanti,3,1,1,0
+P02672,Mukarram Mudjahid,0009-0009-5361-4712,A5101594588,Mukarram Mudjahid,33,194,8,7
+P01071,Martha Edward Makatha,0009-0009-6040-2873,A5119075239,Martha Edward Makatha,7,1,1,0
+P02235,"drh. A. Rifqatul Ummah, M.Sc.",0009-0009-6683-4087,A5118574715,Andi Rifqatul Ummah,2,0,0,0
+P00397,"Zyahrul Ramadan, S. Pt., M. Si",0009-0009-7460-103X,A5098882983,Zyahrul Ramadan,21,8,2,0
+P01353,"Prof. Dr. Rahmatia, MA",0009-0009-7550-9243,A5158011250,Rahmatia,1,0,0,0
+P02897,"Dr. Risfah Yulianti,M.Si,Apt.",0009-0009-8127-5084,A5046566481,Risfah Yulianty,83,327,12,15
+P00416,"Andi Muhammad Fuad Al Kautsar Walinono, S.Pt., M.Si.",0009-0009-9074-5578,A5116367471,Andi Muh Fuad Al Kautsar Walinono,10,0,0,0
+P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",0009-0009-9515-8831,A5079865519,Andi Sri Hastuti Handayani Usman,14,11,2,0
