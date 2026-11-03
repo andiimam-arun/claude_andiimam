@@ -25,14 +25,7 @@ P00007,bacteriology
 P00008,microbiology
 P00010,biotechnology
 P00010,biologi
-P00011,geomorphology
-P00011,classification soil
-P00011,characteristic gis soil
-P00011,geography
-P00011,conservation soil
-P00011,remote sensing
 P00011,evaluation land planning use
-P00011,environmental land resource
 P00012,biotechnology breeding plant
 P00013,microbiology
 P00014,biological pathology plant
@@ -90,2320 +83,2340 @@ P00056,crop ecology plant production
 P00057,breeding plant
 P00058,breeding plant
 P00058,biotechnology breeding plant
-P00059,agoclimatology
-P00059,abiotic stress
-P00060,harvest post technology
-P00060,food packaging product
-P00060,active packaging smart
-P00060,biotechnology food microbiology
-P00060,programming web
-P00061,engineering food
-P00061,food
-P00061,postharvest technology
-P00062,agronomy
-P00062,horticulture
+P00059,geomorphology
+P00059,classification soil
+P00059,characteristic gis soil
+P00059,geography
+P00059,conservation soil
+P00059,remote sensing
+P00059,environmental land resource
+P00060,agoclimatology
+P00060,abiotic stress
+P00061,harvest post technology
+P00061,food packaging product
+P00061,active packaging smart
+P00062,engineering food
+P00062,food
+P00062,postharvest technology
 P00063,agronomy
-P00064,palm sago
-P00064,management water
-P00065,breeding genetic plant
-P00065,culture plant tissue
-P00065,metabolite plant secondary
-P00066,breeding plant
-P00066,solil
-P00066,biology biotechnology molecular plant
-P00067,cell plant technology
-P00068,biotechnology plant
-P00068,genetic molecular plant
-P00069,break dna double strand
-P00069,development flower
-P00069,mutation
-P00069,double fertilization
-P00069,gamete male
+P00063,horticulture
+P00064,agronomy
+P00065,palm sago
+P00065,management water
+P00066,breeding genetic plant
+P00066,culture plant tissue
+P00066,metabolite plant secondary
+P00067,breeding plant
+P00067,solil
+P00067,biology biotechnology molecular plant
+P00068,cell plant technology
 P00069,biotechnology plant
-P00070,genetic modification
-P00070,cell differentiation
+P00069,genetic molecular plant
+P00070,break dna double strand
+P00070,development flower
+P00070,mutation
 P00070,double fertilization
-P00070,life
-P00070,molecule plant
-P00070,reproduction
-P00070,cell fusion
-P00070,gamete
-P00071,crop physiology
-P00072,ecophysiology plant
-P00072,ecology molecular
-P00072,indigenous vegetable
-P00072,amorphophallus specy
-P00072,fruit production tree
-P00073,agronomist
-P00075,biology biotechnology molecular plant
-P00076,chemistry
-P00077,breeding culture plant tissue
-P00079,agronomy
-P00080,biotechnology plant
-P00081,agronomy
+P00070,gamete male
+P00070,biotechnology plant
+P00071,genetic modification
+P00071,cell differentiation
+P00071,double fertilization
+P00071,life
+P00071,molecule plant
+P00071,reproduction
+P00071,cell fusion
+P00071,gamete
+P00072,crop physiology
+P00073,ecophysiology plant
+P00073,ecology molecular
+P00073,indigenous vegetable
+P00073,amorphophallus specy
+P00073,fruit production tree
+P00074,agronomist
+P00076,biology biotechnology molecular plant
+P00077,chemistry
+P00078,breeding culture plant tissue
+P00080,agronomy
+P00081,biotechnology plant
 P00082,agronomy
 P00083,agronomy
-P00084,agrotecnology
+P00084,agronomy
 P00085,agrotecnology
 P00086,agrotecnology
-P00088,genesis landslide mineralogy soil
+P00087,agrotecnology
 P00089,genesis landslide mineralogy soil
-P00089,conservation soil water
-P00090,genesis landuse planning soil
-P00091,biodiversity environmental management
-P00092,development econometric economic spatial
-P00093,blue economy
-P00093,economy environmental
-P00094,finance spatial
-P00094,environmental finance
-P00095,climate finance
-P00095,environmental esg finance governance social
-P00095,accounting accounting financial ocean
-P00095,accounting financial
-P00095,digital finance
-P00095,accounting environmental
-P00095,accounting shariah
-P00096,remote sensing
-P00101,breeding plant
-P00101,biotechnology breeding plant
-P00102,horticulture
-P00103,crop
-P00104,physiology plant stress
-P00105,breeding genetic plant
-P00106,biotecnology breeding plant
-P00107,breeding genetic plant
-P00108,crop production
-P00108,crop physiology
-P00108,agroclimatology
-P00108,crop modeling
-P00109,horticulture
-P00110,ecophysiology plant
-P00111,culture tissue
-P00112,breeding plant
+P00090,genesis landslide mineralogy soil
+P00090,conservation soil water
+P00091,genesis landuse planning soil
+P00092,biodiversity environmental management
+P00093,development econometric economic spatial
+P00094,blue economy
+P00094,economy environmental
+P00095,finance spatial
+P00095,environmental finance
+P00096,climate finance
+P00096,environmental esg finance governance social
+P00096,accounting accounting financial ocean
+P00096,accounting financial
+P00096,digital finance
+P00096,accounting environmental
+P00096,accounting shariah
+P00097,remote sensing
+P00102,breeding plant
+P00102,biotechnology breeding plant
+P00103,horticulture
+P00104,crop
+P00105,physiology plant stress
+P00106,breeding genetic plant
+P00107,biotecnology breeding plant
+P00108,breeding genetic plant
+P00109,crop production
+P00109,crop physiology
+P00109,agroclimatology
+P00109,crop modeling
+P00110,horticulture
+P00111,ecophysiology plant
+P00112,culture tissue
 P00113,breeding plant
-P00114,biological control
-P00114,dynamic population
-P00114,insect
-P00114,ecology insect
-P00114,integrated management pest
-P00114,plant protection
-P00116,biology invertebrate management pest
-P00119,physiology plant
-P00120,physiology seed
-P00121,ecology plant
-P00122,agronomy oil palm
-P00123,imaging technology
-P00123,agriculture artificial intelligence precision
-P00124,automation control
-P00124,agricultural control design machinery
-P00124,automation
-P00124,energy green technology
-P00125,development processing product
-P00126,agriculture climatology
-P00126,crop modelling
-P00126,farming integrated system
-P00127,agribusiness
-P00128,engineering food process
-P00129,biotechnology food
-P00130,delivery drug system
-P00130,based delivery drug particulate system
-P00130,drug formulation
-P00130,pharmaceutical technology
-P00131,agrotechnology
-P00132,agronomy oil palm
-P00133,agrotechnology
-P00134,management resource water
-P00135,agronomy
-P00135,agroclimatology
-P00139,csiro
-P00140,agriculture farming organic sustainable
-P00144,breeding crop modelling plant
-P00145,agronomy crop production
-P00146,computer network
-P00146,computing ubiquitous
-P00146,internet thing
-P00147,microbiology
-P00147,biology soil
-P00148,chemistry enzymatic processe starch
-P00149,environmental
-P00149,agricultural
-P00149,engineering environmental planning rural
-P00151,biodiversity soil
-P00152,chemical soil
+P00114,breeding plant
+P00115,biological control
+P00115,dynamic population
+P00115,insect
+P00115,ecology insect
+P00115,integrated management pest
+P00115,plant protection
+P00117,biology invertebrate management pest
+P00120,physiology plant
+P00121,physiology seed
+P00122,ecology plant
+P00123,agronomy oil palm
+P00124,imaging technology
+P00124,agriculture artificial intelligence precision
+P00125,automation control
+P00125,agricultural control design machinery
+P00125,automation
+P00125,energy green technology
+P00126,development processing product
+P00127,agriculture climatology
+P00127,crop modelling
+P00127,farming integrated system
+P00128,agribusiness
+P00129,engineering food process
+P00130,biotechnology food
+P00131,delivery drug system
+P00131,based delivery drug particulate system
+P00131,drug formulation
+P00131,pharmaceutical technology
+P00132,agrotechnology
+P00133,agronomy oil palm
+P00134,agrotechnology
+P00135,management resource water
+P00136,agronomy
+P00136,agroclimatology
+P00140,csiro
+P00141,agriculture farming organic sustainable
+P00145,breeding crop modelling plant
+P00146,agronomy crop production
+P00147,computer network
+P00147,computing ubiquitous
+P00147,internet thing
+P00148,microbiology
+P00148,biology soil
+P00149,chemistry enzymatic processe starch
+P00150,environmental
+P00150,agricultural
+P00150,engineering environmental planning rural
 P00152,biodiversity soil
-P00155,agroforestry carbon sequestration
-P00156,agriculture commodity economic socio value
-P00156,darmawan dr ir prof salman
-P00156,adaptation based change climate community
-P00157,children food need special technology
-P00158,agriculture commodity economic socio value
-P00159,community conflict development sociology
-P00159,development sociology
-P00159,sociology
-P00160,horticulture
-P00161,propagation vitro
-P00162,olericulture
-P00163,horticulture
-P00164,horticulture
-P00165,horticulture microbe
-P00166,horticulture
-P00167,horticulture
-P00168,horticulture
+P00153,chemical soil
+P00153,biodiversity soil
+P00156,agroforestry carbon sequestration
+P00157,agriculture commodity economic socio value
+P00157,darmawan dr ir prof salman
+P00157,adaptation based change climate community
+P00158,children food need special technology
+P00159,agriculture commodity economic socio value
+P00160,community conflict development sociology
+P00160,development sociology
+P00160,sociology
+P00161,paleoenvironment
+P00162,evaluation land
+P00162,genesis soil
+P00163,analyse data gis rs
+P00163,engineering geology
+P00163,geotechnic
+P00163,disaster engineering geohazard management risk
+P00164,hydrology
+P00165,consultant individual
+P00166,lahan mitigasi sumberdaya
+P00167,land reclamation
+P00168,soil
 P00169,horticulture
-P00170,horticulture
-P00171,team trophort
-P00172,focus food research security
-P00172,agriculture capital development social
-P00172,farming focus integrated research system
-P00172,co creation knowledge livestock production scale small
-P00172,development focus food research rural sociology
-P00172,coating edible film
-P00172,food packaging
-P00173,entrepreneurship
-P00173,agribusiness food management security
-P00175,agriculture development land planning rural use
-P00178,focuse governance on peatland research
-P00178,livelihood
-P00178,participatory
-P00178,development policy relevant research sustainable
-P00181,evaluation land survey
-P00182,ecophysiology
-P00183,ecology landscape
-P00184,conservation soil water
-P00185,environmental quality
-P00186,genetic genomic plant
-P00187,evaluation land survey
-P00188,change climate farming system
-P00189,land management planning regional use
-P00190,agriculture regenerative
-P00192,breeding genetic plant resource
-P00193,quality soil
-P00193,land management
-P00194,management resource technology water
-P00195,conservation engineering irrigation land
-P00198,agroecological change climate farming
-P00218,plant protection
-P00218,mycology
-P00225,agribusiness food sustainability
-P00226,ecophysiology plant
-P00227,agribusiness
-P00227,agricultural sociology
-P00227,agricultural development
-P00228,pest product stored
-P00228,entomology
-P00228,botanical pesticide
-P00228,insect taxonomy
-P00229,breeding genomic plant
-P00230,plant production
-P00231,based farming rice system
-P00232,anther culture double haploid rice via
-P00233,analysis biometric
-P00234,development rice
-P00235,breeding rice
-P00236,breeding rice
-P00237,breeding double haploid rice
-P00238,breeding rice
-P00239,breeding rice
-P00240,breeding mutation
-P00241,abiotic physiology stress
-P00242,breeding plant
-P00243,agricultural development economic
-P00244,agricultural economic
-P00246,agricultural capital social
-P00247,agricultural marketing
-P00248,agriculture sustainable
-P00249,agribusiness digital
-P00250,agricultural economic food
-P00251,agricultural chain management marketing supply
-P00252,agribusiness
-P00253,community development environment
-P00254,agribusiness management risk
-P00255,economic environmental resource
-P00260,fcvc team
-P00264,agriculture economic socio
-P00267,agricultural extension system
-P00268,agricultural economy socio
-P00269,food s security
-P00270,economic socio
-P00272,pharmacognosy phytochemistry
-P00272,phytochemistry
-P00272,chemistry natural product
-P00272,metabolomic
-P00276,antagonist microbial
-P00276,approache ecological
-P00277,bacteriology
-P00278,mycology
-P00278,oomycete pathogenic plant
-P00278,genetic pathogen plant population
-P00279,culture plant tissue
-P00280,biological conservation control enemy natural
-P00280,biological control habitat management
-P00281,agricultural plant
-P00281,agronomy
-P00281,soil
-P00282,phytopathology
-P00282,plant protection
-P00282,plant
-P00283,physiology plant
-P00283,mycorrhiza
-P00283,ecology
-P00284,mycology
-P00285,mycology
-P00286,plant protection
-P00286,mycology
-P00287,mycology
-P00288,mycology
-P00289,mycology
-P00290,agricultural plant
-P00290,agronomy
-P00291,plant protection
+P00170,propagation vitro
+P00171,olericulture
+P00172,horticulture
+P00173,horticulture
+P00174,horticulture microbe
+P00175,horticulture
+P00176,horticulture
+P00177,horticulture
+P00178,horticulture
+P00179,horticulture
+P00180,team trophort
+P00181,focus food research security
+P00181,agriculture capital development social
+P00182,farming focus integrated research system
+P00182,co creation knowledge livestock production scale small
+P00185,development focus food research rural sociology
+P00186,entrepreneurship
+P00186,agribusiness food management security
+P00188,agriculture development land planning rural use
+P00191,focuse governance on peatland research
+P00191,livelihood
+P00191,participatory
+P00191,development policy relevant research sustainable
+P00194,evaluation land survey
+P00195,ecophysiology
+P00196,ecology landscape
+P00197,conservation soil water
+P00198,environmental quality
+P00199,genetic genomic plant
+P00200,evaluation land survey
+P00201,change climate farming system
+P00202,land management planning regional use
+P00203,agriculture regenerative
+P00205,breeding genetic plant resource
+P00206,quality soil
+P00206,land management
+P00207,management resource technology water
+P00208,conservation engineering irrigation land
+P00211,agroecological change climate farming
+P00231,plant protection
+P00231,mycology
+P00238,agribusiness food sustainability
+P00239,ecophysiology plant
+P00240,agribusiness
+P00240,agricultural sociology
+P00240,agricultural development
+P00241,pest product stored
+P00241,entomology
+P00241,botanical pesticide
+P00241,insect taxonomy
+P00242,breeding genomic plant
+P00243,plant production
+P00244,based farming rice system
+P00245,anther culture double haploid rice via
+P00246,analysis biometric
+P00247,development rice
+P00248,breeding rice
+P00249,breeding rice
+P00250,breeding double haploid rice
+P00251,breeding rice
+P00252,breeding rice
+P00253,breeding mutation
+P00254,abiotic physiology stress
+P00255,breeding plant
+P00256,agricultural development economic
+P00257,agricultural economic
+P00259,agricultural capital social
+P00260,agricultural marketing
+P00261,agriculture sustainable
+P00262,agribusiness digital
+P00263,agricultural economic food
+P00264,agricultural chain management marketing supply
+P00265,agribusiness
+P00266,community development environment
+P00267,agribusiness management risk
+P00268,economic environmental resource
+P00273,fcvc team
+P00277,agriculture economic socio
+P00280,agricultural extension system
+P00281,agricultural economy socio
+P00282,food s security
+P00283,economic socio
+P00285,pharmacognosy phytochemistry
+P00285,phytochemistry
+P00285,chemistry natural product
+P00285,metabolomic
+P00289,antagonist microbial
+P00289,approache ecological
+P00290,bacteriology
 P00291,mycology
-P00292,biology
-P00293,conservation forest
-P00293,ecology forest
-P00293,conservation genetic
-P00294,pathology plant
-P00294,disease epidemiology plant
-P00295,pathology plant
-P00295,forest pathology
-P00295,biology evolutionary
-P00295,taxonomy
-P00296,forest pathology
-P00296,invasive specy
-P00296,taxonomy
-P00296,biology evolutionary
-P00297,pathology plant
-P00297,interaction pathogen plant
-P00297,crop integrated management
-P00298,pathology plant
-P00298,phytophthora
-P00298,molecular phylogenetic
-P00299,biology plant
-P00299,molecular pathogen plant response to
-P00300,biology fungi genetic molecular plant
-P00301,cacao disease pod rot
-P00309,entomology
-P00309,biological control
-P00310,entomology
-P00310,integrated management pest
-P00311,entomology
-P00311,integrated management pest
-P00312,ecophysiology plant
-P00313,disease pest
-P00314,biology
-P00314,agricultural entomology
-P00315,biological control habitat management
-P00316,entomology
-P00316,pest product stored
-P00317,phytopathology
-P00318,entomology
-P00319,phytopathology
-P00320,phytopathology
-P00321,bione team
-P00323,feed industry
-P00323,feed technology
-P00324,crop forage
-P00325,animal nutrition
-P00325,animal animal nutrition
-P00326,cattle consultant integrated oil palm system
-P00327,plant production
-P00328,feasibility study
-P00329,agribusine
-P00330,idlf rg team
-P00337,cnica nacional t universidad
-P00337,costa rica
-P00349,animal breeding genetic molecular
-P00350,breeding livestock
-P00350,genetic quantitative
-P00351,breeding livestock
-P00351,genetic quantitative
-P00352,animal breeding genetic molecular
-P00353,china ilri
-P00354,animal breeding
-P00355,biology cell molecular
-P00356,animal breeding
-P00357,biology molecular
-P00358,animal reproduction
-P00358,biotechnology reproduction
-P00359,animal physiology
-P00360,feed nutrition ruminant technology
-P00360,herbivore
-P00361,additive animal feed nutrition
-P00362,animal physiology
-P00362,environmental livestock
-P00363,biology reproductive
-P00364,diverisity genetic
-P00364,biology reproductive
-P00365,animal breeding
-P00366,biology molecular
-P00367,animal breeding genetic
-P00368,animal breeding genetic
-P00369,extension livestock
-P00370,agricultural extension
-P00376,access as limited resource such to
-P00376,technology
-P00376,market
-P00377,dairy farm management operation
-P00378,animal production
-P00379,cows dairy feed management manajemen pakan perah ternak
-P00380,animal nutrition
-P00381,crop forage production tropical
-P00381,nutrition ruminant
-P00381,management pasture
-P00381,production silage
-P00382,aspect cycle ecology several
-P00382,dynamic
-P00382,succession
-P00382,etc
-P00383,dairy production
-P00384,dairy nutrition physiology
-P00385,dairy feed
-P00385,south sulawesi
-P00385,grant opportunity pursuing
-P00385,finding impactful publishing
-P00386,dairy farming system
-P00387,dairy feed
-P00388,cattle dairy
-P00389,cattle dairy
-P00390,cattle dairy
-P00391,cattle dairy
-P00392,cattle dairy
-P00393,feed nutrition poultry
-P00394,analytical material measurement
-P00394,environmental toxicology
-P00395,industry livestock management
-P00396,livestock poultry production
-P00397,animal nutrition
-P00398,animal nutrition
-P00399,additive feed
-P00400,additive feed
-P00402,animal nutrition
-P00403,animal feed
-P00403,animal feed program study technology
-P00404,animal feed
-P00404,animal feed program study technology
-P00405,feed nutrition poultry
-P00406,health public veterinary
-P00415,pounutrifeed team
-P00416,economy livestock
-P00417,economic livestock production
-P00419,livagri team
-P00420,by livestock processing product technology waste
-P00423,engineering leather
-P00424,chemical engineering
-P00425,chemical engineering
-P00426,engineering leather
-P00428,application eco enzyme technology
-P00429,chemical effect
-P00429,enzymatic
-P00430,enzyme fruit technology waste
-P00431,eco enzyme technology vegetable waste
-P00440,animal physiology reproductive
-P00448,breeding equine
-P00448,development
-P00448,feed nutrition
-P00448,animal health
-P00448,governance management
-P00448,analysis economic socio
-P00448,aspect by development integrating these tourism
-P00448,aims an create efficient group to
-P00448,sustainable
-P00448,community farming horse impactful model wider
-P00451,state united
-P00452,state united
-P00455,advantage local poultry utilizing
-P00455,feed technology
-P00455,disease resistance
-P00455,other trait
-P00455,all core retaining strength their while
-P00457,ergonomic occupational safety
-P00458,charoen co group pokphand
-P00458,ltd
-P00458,south sulawesi
-P00460,weifang
-P00460,china
-P00461,manhattan
-P00462,dinajpur
-P00462,bangladesh
-P00464,kendari
-P00476,beef breeding cattle management
-P00487,algal biotechnology
-P00487,marine natural product
-P00487,biotechnology fishery marine
-P00488,animal aquatic nutrition
-P00489,aquaculture fish nutrition
-P00490,fish nutritionfish
-P00490,aquaculturechemical
-P00490,biochemia
-P00491,aquaculture biotechnology
-P00491,anatomical pathology
-P00492,biotechnology
-P00493,food technology
-P00493,food functional
-P00494,bioprocessing
-P00494,biorefinery
-P00494,food processing
-P00494,microalgae technology
-P00494,sustainability
-P00495,biosorption karbon metal microalgae
-P00496,food technology
-P00496,food functional
-P00497,biotechnology microbiology
-P00498,material natural pharmacology
-P00505,pharmaceutical
-P00505,environmental remediation
-P00506,fishery product technology
-P00507,aquatic product technology
-P00507,fishery material
-P00508,cultivation macro microalgae
-P00508,aquaculture quality water
-P00510,pathology veterinary
-P00521,aquetox
-P00522,biodiversity marine
-P00523,bio ecology seagrass specialist
-P00524,biology invertebrate specialist
-P00525,bio ecology expert fish reef
-P00526,conservation natural resource specialist
-P00528,coastal community sociology
-P00529,ecology expert social
-P00529,conservation marine
-P00529,fishery management
-P00531,conservation marine
-P00531,governance marine
-P00531,interdisciplinary
-P00537,ecological modelling network social
-P00541,expert genetic
-P00542,ecology marine
-P00542,coral ecology reef
-P00542,coral ecology marine reef
-P00543,change climate
-P00543,conservation marine
-P00559,ggerg team
-P00560,fishery oceanography
-P00560,fishery marine
-P00561,fishery oceanography
-P00562,dynamic fishery population
-P00563,fishery remote sensing
-P00563,ecotoxicology marine
-P00564,capture fishery information management system
-P00564,fishery marine oceanography satellite
-P00565,biology marine
-P00566,ecotoxicology marine pollution
-P00567,living mapping marine resource
-P00567,geo marine spatial
-P00568,environmental geotechnical
-P00569,hydrodynamic marine oceanography physical
-P00569,hydrodynamic marine oceanographic physical
-P00569,oseanografi phisical
-P00569,modeling oceanographic
-P00570,coral disease marine microbiology
-P00571,aquatic biodiversity resource taxonomy
-P00572,genetic population
-P00572,genetic marine
-P00572,diversity genetic
-P00573,marine pollution
-P00574,economic fishery marine socio
-P00575,engineering environmental pollutant
-P00575,air pollution
-P00576,applied marine microbiology
-P00577,bioprospecting marine
-P00577,biology ray shark
-P00577,fish taxonomy
-P00578,aquatic ecotoxicology plastic pollution
-P00579,environmental hydraulic hydrology
-P00580,ambo dr ir prof tuwo
-P00580,dea
-P00596,2010 are coastal his main oceanography research topic
-P00596,coastal design protection
-P00596,coastal hazard mitigation ocean
-P00602,wind
-P00602,tide
-P00602,level rise sea storm
-P00602,warmer water
-P00602,erosion
-P00602,intrusion saltwater
-P00602,loss wetland
-P00604,data reporting
-P00606,bahtiar hendriyadi
-P00607,muhlis
-P00608,amalia ramadhan
-P00609,edwin kevin kondo
-P00610,coral ecology reef
-P00611,biology marine
-P00612,ecology seagrass
-P00613,biology fishery
-P00613,biology fishery management
-P00614,ichtiology marine
-P00614,fish taxonomy
-P00615,marine plankton
-P00616,biology ray shark
-P00619,bycatch
-P00619,habitat loss
-P00629,center environmental research smithsonian
-P00630,center environmental research smithsonian
-P00632,environmental institure marine technology
-P00648,fishery oceanography
-P00649,engineering fishing vessel
-P00650,gis marine remote sensing
-P00651,assessment management stock
-P00651,prediction spatial tuna
-P00652,based ecology ecosystem fishery management resource
-P00653,fishery gis
-P00659,education
-P00659,aim enhance productivity research to we
-P00659,teaching
-P00659,market sustainability
-P00659,development policy
-P00660,marine remote sensing
-P00661,living mapping marine resource
-P00662,planning regional
-P00663,earth
-P00664,fishery marine remote sensing
-P00665,economic fishery socio
-P00668,design fishing gear technology
-P00669,budidaya laut
-P00670,aquaculture
-P00671,analyst aquaculture
-P00673,fishing technology
-P00676,fishing gear technology
-P00677,development focuse group lobster on research
-P00677,cultivation
-P00677,biology integrate marine we
-P00677,aquaculture technology
-P00677,provide recommendation scientific
-P00677,government
-P00677,industry
-P00679,hatchery management shrimp
-P00680,biochemistry nutritional
-P00681,engineering water
-P00682,aquaculture
-P00683,feed nutritional
-P00684,fish fisiology respon
-P00685,fish taxonomy
-P00686,fish taxonomy
-P00687,fish taxonomy
-P00687,coastal
-P00687,ecology ecosystem integrate marine we
-P00687,genetic
-P00687,biodiversity conservation monitoring support to
-P00687,ecosystem resilience
-P00687,fishery sustainable
-P00687,advancing based solution while
-P00687,development policy
-P00688,enfish team
-P00689,biology fish
-P00689,fishery
-P00689,coastal management resorce
-P00689,environement life
-P00696,hatchery management
-P00707,analysis ecology policy political
-P00708,ecology political
-P00709,global history
-P00710,common study
-P00711,rural study youth
-P00712,forestry social
-P00713,analysis gender
-P00714,disaster media
-P00715,communication environmental
-P00716,engagement multistakeholder
-P00717,gis remote sensing
-P00718,biodiversity conservation
-P00719,management natural resource
-P00719,community forest harvesting management
-P00720,conflict resolution
-P00721,economy forest
-P00722,critical indigeneous study
-P00723,forestry social
-P00724,photovoice
-P00725,gender
-P00726,forestry social
-P00727,anthropology
-P00739,geographic information management system watershed
-P00740,planning spatial
-P00741,agriculture engineering
-P00742,environment forestry geospatial information system
-P00742,geographic information modelling spatial system
-P00743,engineering forest harvesting region
-P00744,remote sensing
-P00745,hydrology watershed
-P00746,management watershed
-P00747,disaster management planning urban
-P00748,spatial
-P00748,adaptation change climate impact
-P00749,carbon estimation
-P00750,landuse
-P00750,change landcover
-P00751,flooding hazard lanslide
-P00752,flooding hazard landslide
-P00753,forhwm team
-P00755,molecular systematic
-P00756,mycology
-P00756,mycorrhiza
-P00756,ectomycorrhiza
-P00756,fungi
-P00756,truffle
-P00757,phytophatology
-P00758,microbiology
-P00759,karstbiosociety team
-P00760,forest management
-P00761,economic forestry
-P00761,forest policy
-P00761,financial management
-P00762,biology conservation ecology forest
-P00762,ecology forest
-P00763,agroforestry
-P00764,entrepreneurship forestry
-P00765,forest marketing product
-P00766,forest landscape management
-P00767,sociology
-P00767,political sosialogy
-P00768,forest management multiple use
-P00768,economic forestry social
-P00769,silviculture
-P00769,agroforestry forest restoration
-P00770,financial management
-P00770,information management system
-P00770,business digital
-P00770,management strategic
-P00771,goverment policy
-P00775,environmental forestry social sociology
-P00781,forest non product timber utilization
-P00782,bees beneficial honey insect management
-P00783,forest product technology
-P00784,ecology forest
-P00785,cutting engineered tool
-P00785,computer control machine numerical
-P00785,based material processing wood wood
-P00786,anatomy wood
-P00786,quality wood
-P00787,biocomposite technology
-P00788,technology wood
-P00788,utilisation wood
-P00789,forest non product timber utilization
-P00790,concervation forest
-P00791,forest non product timber utilization
-P00792,ecology
-P00792,ecology invasive specy
-P00794,conservation management wildlife
-P00795,ecology wildlife
-P00796,ecology mangrove
-P00796,conservation genetic
-P00797,ecotourism
-P00798,ecology forest
-P00799,phytobiography
-P00800,biology conservation
-P00800,ecology
-P00800,forestry
-P00801,anthropological primatology
-P00802,primatology
-P00802,behavioural ecology
-P00803,evolution social
-P00804,emotional skill social
-P00805,bats biology chiroptera ecology evolutionary mammal
-P00811,biodeterioration chemical wood
-P00813,entomologi forest
-P00815,ekologi serangga taksonomi
-P00817,bee honey soliter
-P00819,entomology
-P00819,genetic molecular
-P00819,phylogenetic
-P00819,genetic population
-P00820,malacologist
-P00823,environment forestry laboratorium
-P00826,rg termite
-P00827,forest planning
-P00828,forest inventory
-P00829,development forestry planning regional
-P00830,environmental forestry remote sensing
-P00831,biogeography
-P00832,geoinformatic gis remote sensing technology
-P00833,forest landscape management
-P00834,geographic information system
-P00835,forest inventory remote sensing
-P00836,modelling remote sensing spatial
-P00837,forest planning
-P00848,chemistry forest product
-P00849,hasil hutan teknologi
-P00850,microeconomic
-P00851,destroying insect mycology wood
-P00852,material
-P00852,biopolymer
-P00852,encapsulation
-P00853,biomass conversion
-P00853,cellulose lignin valorization
-P00853,characterization comprehensive fiber natural
-P00854,chemistry wood
-P00854,composite wood
-P00854,adhesive coating
-P00854,biomass wood
-P00854,polymer
-P00855,chemistry natural product
-P00855,ethnobotanical plant
-P00855,organic spectroscopy
-P00855,mass spectrometry
-P00855,chemistry medicinal
-P00856,ecochemophysiology plant
-P00856,forest product technology
-P00856,metabolite plant secondary
-P00862,ecotourism practitioner researcher
-P00865,innovation
-P00865,collaboration
-P00865,community ecofor empower local
-P00865,build network strong
-P00871,control food monitoring quality
-P00872,harvest post processing technology
-P00873,energy renewable
-P00874,food processing
-P00874,food technology
-P00875,agricultural industrial technology
-P00876,food processing technology
-P00877,edible packaging
-P00878,engineering food microstructure
-P00878,powder technology
-P00878,processing thermal
-P00878,engineering food
-P00879,fruit processing vegetable
-P00884,food technology
-P00885,food technology
-P00886,packaging smart
-P00887,harvest post technology
-P00888,harvest post processing technology
-P00889,chemistry food
-P00889,analysis food processing
-P00890,food nutrition
-P00890,environment sustainability
-P00890,biotechnology genomic
-P00890,engineering system
-P00890,chemistry material
-P00891,are interest main metabolism plant research secondary
-P00891,enzyme function relationship structure
-P00892,engineering food processing
-P00896,agroindustrial process technology
-P00897,biochemistry food
-P00898,chemistry food microbiology
-P00899,control food monitoring quality
-P00899,analysis food technology
-P00900,chemistry food
-P00901,engineering food processing
-P00906,agroindustrial process technology
-P00907,agricultural engineering mechanical
-P00911,control instrumentation
-P00913,e lorosa orental timor universidade
-P00921,control system
-P00921,automation
-P00921,industry partner
-P00922,engineering management resource water
-P00923,engineering soil water
-P00924,engineering management resource water
-P00925,agricultural management water
-P00926,irrigation smart
-P00930,engineering food packaging packaging
-P00931,food packaging
-P00932,food technology
-P00933,food technology
-P00934,abdul dr habbe hamid prof
-P00934,m si
-P00935,accounting environmental
-P00936,finance islamic social
-P00936,finance personal
-P00936,accounting islamic
-P00938,accounting financial
-P00940,economic islam
-P00940,economic publik
-P00948,inclusivity
-P00948,economic ethical finance practice
-P00948,aligning ash maqasid shariah with
-P00948,smsrg team
-P00950,behavioral economic
-P00951,medical nursing palliative surgical
-P00954,development sustainable tourism
-P00958,financial management
-P00959,management marketing
-P00959,manajemen
-P00959,marketing
-P00959,management strategic
-P00959,digital management marketing
-P00960,human management resource
-P00961,human management resource
-P00961,human management resourch
-P00962,management risk
-P00963,management strategic
-P00963,business consultant development
-P00964,human management resource
-P00965,human management resource
-P00966,financial management
-P00966,management operation
-P00967,corporate finance
-P00967,investment
-P00967,corporate governance
-P00967,behavioral finance
-P00967,business management
-P00968,human management resourch
-P00968,behaviour organizational
-P00968,human management resource
-P00968,business ethic
-P00968,culture organizational
-P00969,corporate financial management
-P00970,management marketing
-P00971,management marketing
-P00973,management marketing
-P00974,management marketing
-P00975,accounting management public
-P00976,accounting finance
-P00976,accounting financial
-P00976,accounting sustainability
-P00977,accounting
-P00977,accounting financial
-P00977,accounting government
-P00978,accounting information system
-P00979,accounting assurance sustainability sustainability
-P00980,accounting management
-P00980,accounting financial
-P00981,accounting management
-P00982,accounting blue
-P00983,accounting corporate governance
-P00984,business digital
-P00991,management strategic
-P00992,manajemen
-P00992,economic pembangunan perencanaan
-P00992,development economic
-P00993,management strategic wealth
-P00994,manajemen
-P00995,management publik sektor strategic
-P00996,manajemen
-P00996,business economic islamic
-P00997,manajemen sain
-P00997,manajemen
-P00998,management operational
-P00999,chain management supply
-P01000,bancking finance management
-P01001,banking finance
-P01003,enterprise financing green
-P01007,digital marketing
-P01007,commerce e
-P01007,customer satisfaction
-P01007,management marketing marketing tourism
-P01009,technical
-P01009,advice driven evidence
-P01010,accounting environmental
-P01011,accounting environmental management
-P01011,accounting management
-P01011,accounting sustainability
-P01011,accounting social
-P01011,accounting environmental
-P01012,accounting management
-P01012,accounting behavioural
-P01013,efficiency energy energy renewable
-P01013,ai complex modelling system
-P01014,accounting environmental
-P01015,accounting environmental management
-P01016,accounting environmental
-P01018,accounting management
-P01018,accounting behavioral
-P01019,accounting environmental
-P01020,accounting critical
-P01021,accounting environmental waste
-P01022,behavior human management organizational resource
-P01023,human resource
-P01024,behavior human management organizational resource
-P01025,entrepreneurship tourism
-P01026,economic resource
-P01028,human management resource
-P01029,management marketing
-P01042,human management resource
-P01042,economic
-P01042,management
-P01042,economic resource valuation
-P01043,development economic
-P01043,environmental sustainability
-P01043,macroeconomic
-P01057,economic integrate theory we
-P01057,empirical research
-P01057,policy recommendation
-P01057,governmental
-P01057,industrial stakeholder
-P01058,bangking monetary
-P01059,accounting public sector
-P01059,finance government local
-P01059,accounting environmental
-P01060,accounting
-P01060,accounting financial
-P01060,accounting government
-P01061,budgeting political
-P01061,accounting public sector
-P01061,auditing
-P01062,behavioural
-P01062,entrepreneurship technology
-P01065,engage our research with
-P01065,collaborating forward look to we with you
-P01065,finance
-P01065,accounting sustainability
-P01066,corporate governance
-P01066,accountability
-P01066,corporate reporting
-P01066,corporate disclosure
-P01066,csr
-P01066,sustainability
-P01067,accounting sustainability
-P01067,accounting s3
-P01068,human management resource
-P01068,behaviour organizational
-P01069,human management resource
-P01070,management operation
-P01070,finanacial management
-P01071,behaviour organizational
-P01071,human management resource
-P01072,human management resource
-P01072,diversity gender
-P01073,human management resource
-P01073,behaviour organizational
-P01074,financial management
-P01074,business international
-P01075,marketing strategic
-P01075,human management resource
-P01076,accounting management
-P01077,hr human management resource
-P01078,accounting accounting behavioral management
-P01079,accounting sustainability
-P01080,accounting finance
-P01081,corgov team
-P01082,accounting
-P01083,accounting financial
-P01084,accounting public sector
-P01085,accounting financial
-P01086,accounting financial
-P01087,governance it
-P01087,it management
-P01087,computer human interaction
-P01087,adoption media social
-P01089,accounting
-P01090,accounting financial
-P01091,accounting
-P01091,auditing
-P01092,accounting financial
-P01094,accounting financial
-P01095,accounting
-P01095,capital market
-P01096,accounting tax
-P01097,accounting
-P01098,accounting
-P01099,accounting financial
-P01100,accounting public sector
-P01101,accounting public
-P01101,auditing
-P01102,financial management
-P01103,accounting sharia
-P01104,management quality
-P01105,engineering mechanical
-P01106,financial management
-P01107,accounting sustainability
-P01108,accounting management
-P01109,business economic islamic
-P01111,development economic
-P01111,monetary
-P01119,g nomic team
-P01120,financial management
-P01127,culture organizational
-P01127,leadership
-P01128,accounting
-P01128,finance p ublic
-P01128,microfinance
-P01129,fishery
-P01130,improvement productivity quality
-P01131,accounting fraud
-P01132,accounting financial
-P01133,accounting fraud
-P01134,auditing
-P01135,accounting public
-P01136,auditing
-P01137,accounting
-P01138,accounting
-P01139,technical
-P01139,advice driven evidence
-P01140,economic public
-P01140,econometric
-P01146,development economic
-P01147,development economic
-P01148,development economic
-P01150,economic moneter
-P01150,finance
-P01151,financial inclusion
-P01151,alleviation innovative lending poverty through
-P01151,saving
-P01152,market non strategy
-P01153,management strategic
-P01157,body regulatory
-P01157,civil organization society
-P01157,stakeholder various
-P01158,accounting information system
-P01186,interdisciplinary
-P01186,erp implementation
-P01186,ais literacy
-P01186,collaboration strategic
-P01186,contribution policy
-P01186,ais development rg support sustainable
-P01186,digital financial inclusion
-P01186,0 5 era public sector society transformation
-P01187,democracy local politic
-P01188,conflict environmental politic
-P01189,gender
-P01189,movement religion social sosial
-P01190,gender policy public
-P01191,gender policy public
-P01192,anthropology political
-P01193,antrhopology international relation
-P01194,local politic
-P01195,local politic
-P01197,communication cultural
-P01198,communication media
-P01205,development sociology
-P01205,conflict development participatory planning social
-P01206,children sociology
-P01206,child protection social welfare
-P01206,social work
-P01207,political public sociology
-P01207,change digital media social
-P01208,horus
-P01208,analysis cutting edge individual tech through
-P01212,conflict resolution
-P01213,cooperation development international
-P01214,conflict disaster sociology sociology
-P01215,good governance paradiplomacy
-P01217,economy global politic political
-P01218,conflict governance post
-P01218,governance public
-P01218,governance policy public
-P01219,politic religious security study
-P01220,psicology social
-P01221,disaster governance
-P01221,policy public
-P01222,agrarian rural sociology
-P01223,asset engineering human infrastructure management security
-P01224,comparative politic
-P01225,comparative democratization
-P01225,collective violence
-P01225,bureaucracy
-P01226,international peace relation study
-P01227,conflict peace resolution
-P01228,administration public
-P01230,peace
-P01230,conflict
-P01230,analyst policy
-P01230,conflict resolution
-P01230,exploring pathway peace sustainable to
-P01230,community empower
-P01230,contribute inclusive to
-P01230,resilient
-P01230,democratic society
-P01231,organization public
-P01231,adaptive capacity
-P01232,policy public
-P01233,organization public
-P01233,communnity development
-P01234,policy public
-P01234,disability study
-P01235,policy public
-P01236,policy public
-P01237,management public
-P01238,organization public
-P01239,policy public
-P01242,policy public
-P01243,organization public
-P01244,policy public
-P01247,government
-P01248,comparative government
-P01249,governance
-P01249,governance local study
-P01251,change gender social
-P01252,civil empowerment society women
-P01253,policy public
-P01253,gender policy public
-P01254,policy social
-P01255,bureaucracy
-P01255,bureaucracy government
-P01257,ecology governmental
-P01258,bureaucracy reform
-P01259,capital formation social
-P01260,anthropology ecology environmental political
-P01261,data environmental informatic
-P01263,anthropology maritim
-P01263,anthropology marine
-P01263,ethnicity
-P01263,culture
-P01264,antropologi budaya organisasi
-P01264,antropology business
-P01265,maritime
-P01265,agriculture
-P01265,environmental
-P01266,anthropology
-P01266,ecology
-P01266,culture
-P01266,community local
-P01267,anthropology marine
-P01267,coastal community
-P01267,culture maritim
-P01268,anthropology
-P01268,media
-P01268,community local
-P01268,identity
-P01269,ecology
-P01269,agribisnis
-P01270,planning regional urban
-P01270,rural study
-P01270,ecology human
-P01271,anthropology
-P01271,empowerment
-P01271,community
-P01272,anthropology
-P01273,anthropologi maritim
-P01275,anthropology
-P01276,community development
-P01277,anthropology
-P01278,anthropology
-P01279,anthropology
-P01280,anthropology business organization
-P01281,anthropology urban
-P01282,anthropologi power
-P01283,indigenous people
-P01284,action collective industrial relation
-P01285,indigenous people
-P01286,anthropology urban
-P01290,planning social
-P01290,capital social
-P01290,community conflict maritime social sociology
-P01291,coastal sociology urban
-P01291,exclusion poverty social
-P01291,community empowerment
-P01292,development study
-P01292,research social
-P01292,education sociology
-P01293,anthropology maritime
-P01293,fisherman poverty
-P01293,culture fisherman social
-P01294,coastal fishery
-P01294,ecological social system
-P01294,habitat restoration
-P01294,food security
-P01294,assessment stock
-P01295,psychology social
-P01297,resilience
-P01297,depletion marine resource
-P01297,economic socio vulnerability
-P01297,bridge core knowledge scientific seek to
-P01297,local wisdom
-P01303,leader
-P01308,drg team
-P01309,political sociology
-P01309,policy social
-P01309,behavior social
-P01314,expressed
-P01318,communication
-P01320,jakarta
-P01323,communication digital program study
-P01325,consumed how information is produced
-P01325,academic challenge inquiry intersecting rigorous through
-P01326,counter terrorism
-P01330,thailand
-P01338,security
-P01338,tourism
-P01339,forced migration refugee
-P01339,human law right
-P01339,community development international
-P01343,development inclusive
-P01344,development
-P01350,cohesion social
-P01350,human security
-P01361,criminal health law law
-P01361,criminal law
-P01361,health law
-P01370,scholar
-P01370,researchgate
-P01370,sinta
-P01373,constitutional law
-P01373,law party political
-P01373,environmental law
-P01386,real simulation time
-P01386,configuration inverter
-P01386,control fuzzy logic
-P01386,algorithm genetic
-P01386,algorithm evolutionary
-P01386,chao optimization particle swarm theory
-P01387,victimologi
-P01387,criminal law
-P01387,justice restorative
-P01388,criminal law
-P01389,criminal law prosedural
-P01390,penologi
-P01391,anti laundering law law money riminal
-P01392,cyber law tech
-P01392,environmental law
-P01392,human law right
-P01392,law revenue
-P01392,law medical
-P01393,criminal law
-P01393,banking crime
-P01393,laundering money
-P01393,asset recovery
-P01394,criminal law
-P01395,criminal law
-P01396,criminal law
-P01397,criminal law
-P01398,criminal law victimologi
-P01404,criminal law
-P01404,child protection
-P01405,criminal law
-P01406,criminal law
-P01406,social
-P01407,child law
-P01407,development goal sustainable
-P01407,development sustainable
-P01407,family law
-P01407,family islamic law
-P01409,lcpr team
-P01410,environmental international law
-P01418,researcher
-P01419,researcher
-P01421,international law
-P01421,human law right
-P01421,diplomatic law
-P01421,expressed
-P01431,expressed
-P01433,semiotic
-P01433,language
-P01433,linguistic
-P01433,tourism
-P01433,cultural study
-P01434,tourism
-P01436,tourism
-P01436,ethnography
-P01436,communication intercultural
-P01437,archeology
-P01438,planning tourism
-P01438,management
-P01438,cultural heritage tourism
-P01438,conservation marine tourism
-P01439,marine tourism
-P01439,ecotourism
-P01439,french language
-P01439,culture study tourism
-P01440,archeology
-P01442,developing enhance model planning sustainable to tourism
-P01442,management
-P01449,flcrg team
-P01458,psikolinguistik
-P01459,semantik
-P01460,stilistika
-P01461,sosiolinguistik
-P01463,literature
-P01464,stilistika
-P01467,psycholinguistic team
-P01468,philological specialist study
-P01469,linguistic specialist
-P01470,philological specialist study
-P01471,aquatic ecotoxicology specialist
-P01472,history local south specialist sulawesi
-P01473,archaeology prehistoric specialist
-P01473,analysis mathematical
-P01473,analysis analysis fourier functional
-P01474,oral specialit study tradition
-P01475,cultural specialist study
-P01476,philological specialist study
-P01477,linguistic specialist study
-P01478,asian history southeast specialist
-P01479,asian history southeast specialist
-P01480,history south specialist sulawesi
-P01481,linguistic specialist study theoretical
-P01482,global historical local specialist study
-P01485,interdiscipliner linguistic
-P01486,onomastic
-P01486,onomastic socio
-P01486,sociolinguistic
-P01486,languange psychology social
-P01487,applied linguistic toponymy
-P01487,onomastic
-P01488,culture media study
-P01490,ancient bugis manuscript translation transliteration
-P01490,digitization manuscript
-P01491,archaeology geographic gis information system
-P01492,literary study stylistic
-P01495,literature
-P01500,literature
-P01503,as explore folktale group oral such this tradition
-P01503,pantun
-P01503,expression
-P01503,advice
-P01503,poem
-P01503,proverb
-P01503,ancestral message
-P01503,song
-P01503,as identity mantra meaningful reflection
-P01503,value
-P01503,belief
-P01503,tradition
-P01516,computation material
-P01517,material shielding
-P01518,biocomposite material
-P01519,bioceramic material
-P01520,bioplastic
-P01529,hydrometeorology
-P01529,based climate modeling phenomena
-P01529,a a focus on range topic wide with
-P01532,archeology
-P01535,at disease infectious medicine stanford univ
-P01536,fort manage rotterdam site
-P01536,archaeological leang leang park
-P01536,leang timpuseng
-P01538,fixed point theory
-P01538,b fixed generalized metric point space theory
-P01539,analysis mathematical
-P01539,analysis functional
-P01540,analysis mathematical
-P01541,fixed point theory
-P01542,fixed point theory
-P01542,fixed point
-P01543,fixed point theory
-P01544,fixed point theory
-P01545,fixed point theory
-P01551,chemistry
-P01561,manaprochem team
-P01562,mathematical modelling
-P01563,astuty dewi dr sri
-P01563,s si
-P01563,m si
-P01574,email
-P01574,homepage
-P01577,modeling statistical
-P01577,inference statistical
-P01577,applied statistic
-P01578,control linear non optimal system
-P01594,geophysic
-P01594,geophysic measurement
-P01598,earthquake geomechanic
-P01598,active tectonic
-P01603,data statistical
-P01603,bayesian method
-P01603,method survival
-P01603,analysis spatial
-P01603,analysis sery time
-P01604,management risk
-P01604,actuarial
-P01605,data
-P01606,computer vision
-P01606,learning machine
-P01607,health public
-P01607,epidemiology
-P01607,health information system
-P01607,data health
-P01607,biostatistic
-P01608,computer
-P01608,distributed system
-P01608,data
-P01608,algorithm
-P01608,artificial intelligence
-P01609,bayesian complex modelling modelling statistical system
-P01610,modelling sery time
-P01610,bayesian inference
-P01610,learning machine
-P01610,deep learning
-P01612,data learning machine mining
-P01613,sem
-P01613,komputasi spasial
-P01615,applied statistic
-P01618,data mining
-P01618,operation research
-P01618,deep learning multimodal
-P01619,statistic
-P01619,data
-P01619,education
-P01620,data
-P01621,data
-P01622,data
-P01623,statistic
-P01625,learning machine
-P01626,learning machine
-P01627,analysis functional
-P01628,measure theory
-P01628,function space
-P01628,integration theory
-P01629,analysis mathematic
-P01630,analysis functional
-P01631,analysis fourier
-P01632,analysis analysis fourier functional
-P01633,mathematic
-P01634,analy f team
-P01635,material semiconductor
-P01638,chennai
-P01638,india
-P01643,synthesize
-P01643,characterize material property tailored with
-P01643,integrating material physic
-P01643,nanotech
-P01643,address energy engineering global green to
-P01643,environment
-P01643,challenge smart tech
-P01649,petrology
-P01649,economic geology
-P01649,disaster management
-P01649,exploration geological
-P01650,engineer mining
-P01650,coal petrology
-P01651,geochemistry
-P01651,environment geo
-P01652,metallurgy mineralogy
-P01653,geology
-P01653,petrology
-P01653,vulcanology
-P01654,geology
-P01654,environment geo
-P01654,geo hydrology
-P01655,chemistry solid
-P01656,metallurgy
-P01656,chemistry geo
-P01657,geology petroleum
-P01658,oceanography
-P01659,geohazard
-P01659,modelling tsunami
-P01659,analysis hazard seismic
-P01660,applied seismology
-P01661,exploration mining
-P01661,petrography
-P01661,geochemistry
-P01661,rg smp team
-P01662,applied geophysic
-P01662,geophysic solid
-P01663,exploration geology
-P01663,geochemistry
-P01664,academia sinica taiwan
-P01672,gea geo pt
-P01693,engineering geotechnical
-P01701,ggerg team
-P01702,environmental transportation
-P01703,engineering mobility traffic urban
-P01703,environmental transportation
-P01703,air quality transportation
-P01704,engineering traffic urban
-P01704,environmental noise
-P01705,planning settlement urban
-P01706,modeling transportation
-P01709,analysis traffic urban
-P01710,analysis traffic urban
-P01711,analysis traffic urban
-P01712,analysis traffic urban
-P01716,reproduksi ternak
-P01721,control specialist system
-P01725,engineering software
-P01725,engineering web
-P01725,animation
-P01729,ical
-P01729,arduino implemented mega microcontroller on
-P01730,civil engineering
-P01730,design seismic
-P01730,composite structure
-P01740,amet dolor ipsum lorem sit
-P01741,civil engineering geodesy
-P01743,building
-P01743,construction
-P01743,environment
-P01743,management waste
-P01744,remote sensing
-P01744,geographic gis information system
-P01744,engineering geospatial
-P01744,change climate
-P01745,engineering resource water
-P01745,hydraulic structure
-P01745,model numerical
-P01745,modelling water
-P01746,seismogeodesy
-P01746,remote sensing
-P01746,geodesy
-P01746,geomatic
-P01750,environmental geotechnical
-P01760,management sanitation waste
-P01763,group research
-P01764,leader mrcrg
-P01765,analysis specialist vibration
-P01771,lightweight material
-P01792,conversion energy
-P01792,fluid mechanic
-P01793,conversion energy
-P01794,conversion energy
-P01795,conversion energy
-P01795,fluid mechanic
-P01796,aerodynamic
-P01802,efficiency fuel improving
-P01802,computational
-P01802,analysis method theoretical
-P01802,fast
-P01802,environmentally friendly system transportation
-P01803,distribution programming system web
-P01804,telecomunication
-P01805,analytic data media social
-P01805,informatic social
-P01805,artificial intelligence
-P01806,language processing
-P01806,artificial intelligence
-P01806,data mining
-P01806,analysis multimedia
-P01807,intelligence system
-P01807,analytic data
-P01808,analysis computing intellegent
-P01854,sensor system
-P01854,distribution electrical power
-P01854,economic electrical engineering installation technology
-P01855,industrial management
-P01856,engineering power system
-P01856,power quality
-P01856,energy sustainable
-P01857,efficiency energy energy technology
-P01858,energy management
-P01858,energy renewable
-P01858,power solar
-P01859,energy storage
-P01863,lightweight manufactur material
-P01863,lightweight manufacture material
-P01863,architecture
-P01870,rg smp team
-P01871,housing planning settlement
-P01872,design planning urban
-P01873,city development planning waterfront
-P01874,housing planning settlement
-P01875,planning regional
-P01875,tourism
-P01875,disaster mitigation
-P01876,infrastructure planning transportation
-P01877,housing planning settlement
-P01886,technical
-P01886,advice driven evidence
-P01899,micropaleontology
-P01899,stratigraphy
-P01899,paleoceanography
-P01900,carbonate sedimentology
-P01900,geology quaternary
-P01900,disaster management
-P01901,geophysic
-P01901,geohydrology
-P01901,oceanography
-P01902,geochemistry organic
-P01902,geology petroleum
-P01902,paleoenvironment
-P01903,sedimentology
-P01903,economic mineral
-P01903,geochemistry
-P01906,geochemistry petroleum
-P01908,bmkg
-P01914,prg team
-P01915,environmental management risk
-P01916,air pollution
-P01917,environmental noise
-P01918,engineering traffic transportation
-P01919,aerosol
-P01920,air control pollution technology
-P01921,ambient exposure particulate personal
-P01922,air pollution
-P01923,noise traffic
-P01928,lightweight material structure
-P01929,ballistic lightweight material
-P01930,engineering material
-P01931,lightweight material structure
-P01932,ballistic light material
-P01940,earthquake engineering geotechnical
-P01940,induced liquefaction seismic
-P01940,landslide mitigation
-P01940,artificial engineering geotechnical inteligence
-P01941,liquefaction soil
-P01941,countermeasure liquefactuion
-P01941,aseismic design
-P01942,earthquake engineering geotechnical
-P01943,earthquake engineering geotechnical
-P01944,earthquake engineering geotechnical
-P01944,engineering foundation
-P01944,improvement soil
-P01945,geotechnic
-P01945,liquefaction
-P01945,dynamic soil
-P01945,earthquake engineering
-P01945,slope stability
-P01946,geotechnic
-P01946,liquefaction
-P01947,exploration geophysic
-P01950,geoteknik
-P01951,geoteknik
-P01952,geoteknik
-P01952,civil engineering
-P01953,earthquake engineering geotechnical
-P01954,artificial energy intelligence renewable
-P01955,generation load management power
-P01956,energy management system
-P01957,energy hybrid system
-P01958,electrical engineering technology
-P01959,energy management renewable system
-P01960,energy environment system
-P01961,artificial intelligence load shedding with
-P01962,electric energy management vehicle
-P01963,learning machine tunnel wind with
-P01964,cell material solar
-P01965,axis turbine vertical wind
-P01966,based control pmsg power wind
-P01967,real simulation time
-P01967,configuration inverter
-P01967,control fuzzy logic
-P01967,algorithm genetic
-P01967,algorithm evolutionary
-P01967,chao optimization particle swarm theory
-P01968,design human life
-P01969,biopotential
-P01970,engineering management
-P01971,cognitive ergonomic
-P01972,ergonomic
-P01973,safety
-P01973,being collaborative research through well
-P01973,innovation
-P01973,education
-P01973,develop ergonomic product solution we
-P01973,workspace
-P01973,environment living
-P01973,ability ages all comfort ensuring inclusivity
-P01973,ecology food nutrition
-P01979,damage intact ship stability
-P01979,avoidance based collision design performance ship
-P01979,assessment formal safety ship
-P01980,hydrodynamic ship
-P01981,hydrodynamic marine
-P01982,floating hydrodynamic mooring structure
-P01982,fluid interaction structure
-P01982,energy marine renewable
-P01997,air pollution
-P01998,remote sensing
-P01998,air quality
-P01998,environmental monitoring
-P01999,remote sensing
-P01999,air quality
-P01999,environmental monitoring
-P02000,environmental monitoring remote sensing
-P02001,air pollution
-P02002,air microplastic
-P02003,facility transportation
-P02004,remote sensing
-P02004,air quality
-P02004,environmental monitoring
-P02005,cycle driving vehicle
-P02006,environmental monitoring remote sensing
-P02007,environmental monitoring remote sensing
-P02008,air pollution
-P02009,air pollution
-P02010,emission truck
-P02011,emission light vehicle
-P02012,green open romote sensing space
-P02013,air pollution
-P02014,emission truck
-P02015,air microplastic
-P02016,air microplastic
-P02017,air microplastic
-P02018,air microplastic
-P02019,coastal engineering
-P02020,coastal engineering
-P02021,coastal engineering
-P02022,coastal engineering
-P02023,coastal engineering
-P02024,coastal engineering
-P02025,hydraulic
-P02026,engineering water
-P02027,engineering water
-P02028,engineering water
-P02029,engineering water
-P02030,engineering water
-P02031,material strength
-P02031,composite
-P02031,fiber natural
-P02037,thermal
-P02037,surface treatment
-P02037,scalable technology
-P02037,academia bridge industry naftech rg
-P02037,transportation
-P02037,marine
-P02037,aerospace
-P02037,defense sector
-P02038,communication technology wireless
-P02038,antenna fabrication modeling
-P02038,fiber network optical
-P02038,antenna intelligent system
-P02047,high insulation voltage
-P02059,expert tb tuberculosis
-P02059,microbiology
-P02081,biovax team
-P02084,anatomical pathology
-P02085,spine surgery
-P02085,disorder spinal
-P02085,orthopaedic trauma
-P02085,degenerative disease spine
-P02085,reconstruction spinal
-P02086,biology cell
-P02086,biology molecular
-P02086,protein translocation
-P02086,protein targeting
-P02086,biology endoplasmic reticulum
-P02086,biochemistry protein
-P02087,oncology orthopaedic
-P02087,orthopaedic surgery
-P02087,musculoskeletal tumor
-P02087,orthopaedic trauma
-P02087,bone research soft tissue tumor
-P02088,orthopaedic surgery
-P02088,hip knee surgery
-P02088,adult reconstruction
-P02088,orthopaedic trauma
-P02088,injury sport
-P02088,knee replacement surgery
-P02089,biochemistry
-P02089,engineering tissue
-P02089,medicine regenerative
-P02089,cleft lip palate reconstruction
-P02089,analysis based evidence medicine meta review systematic
-P02090,dokter orthopaedi spesialis traumatology
-P02093,community medicine
-P02093,health management
-P02093,environmental healt
-P02093,hepidemiology
-P02093,biostatistic
-P02093,environmental health
-P02093,epidemiology
-P02097,assistant research
-P02098,assistant research
-P02105,human physiology
-P02105,physiology
-P02106,pharmacology toxicology
-P02106,molecular pharmacology
-P02107,biology cell molecular
-P02108,clinical nutrition
-P02109,clinical pharmacy
-P02109,clinical pharmacology pharmacy
-P02110,physiology sport
-P02110,endocrine physiology
-P02110,health medical professional
-P02111,biochemistry
-P02112,cardiovascular physiology
-P02113,pharmacology physiology
-P02114,chronic disease
-P02117,most rg team
-P02121,clinical nutrition specialist
-P02122,clinical email microbiology specialist
-P02122,homepage
-P02123,mit
-P02124,germany kiel univ
-P02125,germany kiel univ
-P02128,malaya univ
-P02132,clinical nutrition resident
-P02133,clinical nutrition resident
-P02134,clinical nutrition
-P02134,hypertension nephrology
-P02134,internal medicine
-P02135,internal medicine
-P02135,nephrology
-P02135,rheumatology
-P02136,internal medicine
-P02137,insulin resistance
-P02137,obesity
-P02137,biology molecular
-P02137,clinical nutrition
-P02137,immunology
-P02142,consist group nephrologist this
-P02142,clinical nutrition
-P02151,pharmacology
-P02151,pharmacognosy
-P02151,phytochemistry
-P02151,characterization isolation natural product
-P02152,aiming mutation novel to uncover
-P02152,inheritance pattern
-P02152,diagnosis early enhance strive to we
-P02152,strategy treatment
-P02152,affected individual medicine personalized
-P02153,reproduction veterinary
-P02154,microbiology veterinary
-P02155,pharmacology veterinary
-P02156,pathology veterinary
-P02157,biochemistry veterinary
-P02158,biotechnology
-P02159,clinical pathology veterinary
-P02160,pathology veterinary
-P02161,parasitology veterinary
-P02162,parasitology veterinary
-P02163,parasitology veterinary
-P02164,parasitology veterinary
-P02165,reproduction veterinary
-P02166,epidemiology veterinary
-P02167,health public veterinary
-P02168,radiology surgery veterinary
-P02169,internal medicine veterinary
-P02170,parasitology veterinary
-P02171,anatomy veterinary
-P02172,microbiology veterinary
-P02173,radiology surgery veterinary
-P02174,anatomy veterinary
-P02175,neonatology
-P02176,medicine preventive
-P02177,neonatology
-P02178,pediatric
-P02178,allergy immunology
-P02179,child development pediatric social
-P02180,nursing
-P02180,care infant neonatal nursing
-P02181,assistant research
-P02182,neonatology
-P02183,neonatology
-P02186,genetic medicine physiology
-P02196,analysis spatial
-P02196,data health public
-P02196,environmental
-P02196,determinant structural
-P02213,animal health
-P02213,disease how improve spread understanding we
-P02213,animal impact on population their
-P02213,health human interaction their with
-P02214,parasitology
-P02214,immunology
-P02214,vaccinology
-P02214,disease infectious
-P02222,pathology
-P02222,cancer
-P02222,immunology
-P02223,advance endoscopy expert
-P02223,cancer colorectal
-P02223,disease pancreatic
-P02223,disease fatty liver
-P02223,gastrointestinal motility
-P02224,data genomic scientist
-P02225,bioinformatic
-P02226,digestive surgery
-P02227,epidemiology
-P02227,analysis collection data data
-P02228,anatomical pathology
-P02229,anatomical pathology
-P02231,pathology
-P02232,pathology
-P02233,digestive surgery
-P02234,anak bedah digestif
-P02235,digestive surgery
-P02236,gastroenterohepatology
-P02237,digestive surgery
-P02238,digestive surgery
-P02239,pulmonology
-P02240,pulmonology
-P02241,pulmonology
-P02244,microbiology
-P02251,umc urecht
-P02253,ethical
-P02253,based cardiovascular evidence practice strengthen
-P02253,across burden disease diverse population reduce
-P02254,psychology social
-P02257,accademy rabdan
-P02258,accademy rabdan
-P02275,based evidence
-P02275,approache enhanced strengthen teaching technology we
-P02275,assessment
-P02275,curriculum
-P02275,leadership
-P02275,foster partnership
-P02275,ethical prepare
-P02276,dentistry
-P02278,maxillofacial oral radiology
-P02279,maxillofacial oral surgery
-P02279,immersive reality
-P02279,engineering tissue
-P02279,maxillofacial oral surgeon
-P02280,electrical engineer
-P02280,robotic
-P02280,immersive reality
-P02280,artificial control intelligence robotic
-P02287,biomedicine expert
-P02287,biology molecular
-P02287,immunology
-P02287,food medicine
-P02289,change climate environmental health
-P02292,biomarine dentistry
-P02293,composit material strengthness
-P02298,periodontist
-P02303,biota marine particularly
-P02303,collaboration foster interdisciplinary
-P02303,into practical research translate
-P02304,dentistry pediatric
-P02304,anak kraniofasial
-P02305,gigi konservasi
-P02305,endodontic extraxt herbal microbiology
-P02306,clinical dental dentistry health paediatric
-P02307,biologi oral
-P02308,gigi masyarakat medicine
-P02312,focuse on safety team
-P02312,effectiveness
-P02312,application health improve oral practical to worldwide
-P02318,affordable aims group provide to
-P02319,biology oral
-P02326,biomaterial
-P02341,biomedical
-P02341,health public
-P02341,advance innovation technological to understanding
-P02341,prevention
-P02341,academic collaboration foster
-P02341,care finding improved into patient scientific translate
-P02341,education
-P02341,development policy
-P02344,information technology
-P02344,biomedical
-P02344,safety
-P02351,researcher
-P02352,researcher
-P02353,researcher
-P02354,researcher
-P02362,cohort study
-P02362,assessment factor health population risk
-P02363,a assistant dedicated field group is najwati our research
-P02363,collection contributing data to
-P02363,engagement participant
-P02364,a disease foundation strong surveillance with
-P02364,analysis data
-P02364,factor risk
-P02365,coordination participant
-P02365,field operation
-P02365,contributing epidemiological our study success to
-P02366,ade
-P02366,collection contribute data she to
-P02366,field operation
-P02366,coordination participant
-P02366,initiative our research success supporting
-P02368,coastal environmental expert health
-P02368,drinking quality water
-P02368,assessment ehra environmental health risk
-P02368,coastal domestic water
-P02369,clean supply water
-P02369,assessment ehra environmental health risk
-P02369,amdal
-P02369,environmental health quality
-P02371,technology treatment wastewater water
-P02371,based community management solid waste
-P02372,environmental expert health microbiology
-P02372,environmental health microbiology
-P02373,groundwater quality
-P02373,assessment ehra environmental health risk
-P02374,applied biology ecology environmental
-P02375,hydrobiology
-P02375,fishery
-P02375,aquatic toxicology
-P02376,ecology human
-P02376,environment
-P02378,quality water
-P02378,environmental sanitation
-P02379,envoromental health
-P02383,cdw team
-P02384,eiarg team
-P02389,environmental health
-P02391,herbal medicine traditional
-P02392,health occupational
-P02392,construction health occupational safety
-P02409,deficiency food functional nutritional
-P02410,obesity prevention
-P02410,child health
-P02410,gut microbiome
-P02425,assistance development health system technical
-P02426,health public
-P02427,medicine
-P02428,isoshrg leader
-P02430,disease injury related work
-P02432,collaboration external
-P02433,collaboration external
-P02438,leader
-P02467,particularly population vulnerable
-P02468,child maternal nutrition
-P02469,health intervention nutrition public
-P02496,disease metabolic nutrition
-P02497,nutrition survey
-P02498,anthropology nutritional
-P02500,education nutrition
-P02508,about focus information present research theme we
-P02508,research team
-P02508,as as publication various well
-P02508,book including
-P02509,health occupational
-P02510,engineering safety
-P02513,epidemiologist
-P02514,epidemiologist
-P02515,epidemiologist
-P02516,biology moleculer
-P02517,epidemiologist
-P02518,epidemiologist
-P02521,homepage
-P02521,scholar
-P02521,sinta
-P02522,homepage
-P02522,scholar
-P02522,sinta
-P02523,homepage
-P02523,scholar
-P02523,orcid
-P02523,linkedin
-P02523,researchgate
-P02527,epidemiology genetic social
-P02528,epidemiology health public
-P02529,environmental health
-P02529,control rat vector
-P02530,adolescent epidemiology health
-P02531,behavioral health promotion
-P02532,epidemiology
-P02533,epidemiology global health
-P02542,aviation health occupational safety sector
-P02543,health health occupational occupational psychology
-P02543,hazard identification
-P02543,assessment control hirarc risk risk
-P02547,epidemiogy
-P02551,health reproductive
-P02555,ambassador global sustainability
-P02566,biological group integrate
-P02566,behavioral
-P02566,development intervention
-P02567,pharmacology
-P02567,pharmacoepidemiology pharmacogenetic
-P02567,applied pharmacoepidemiology pharmacology
-P02568,clinical community pharmacy qualitative research
-P02568,outcome patient reported
-P02568,instrument research validation
-P02568,health life quality related
-P02569,pharmacology toxicology
-P02570,biomaterial pharmaceutical
-P02570,advanced manufacturing
-P02570,diagnosis transdermal
-P02571,clinical pharmacy
-P02572,natural product
-P02573,chemistry medicinal pharmacology
-P02574,biomarker blood
-P02580,herbal medicine
-P02581,administrative behavioral pharmacy social
-P02582,clinical pharmacy
-P02587,a design focus on primary with
-P02587,development
-P02587,compound novel pharmaceutical synthesis
-P02589,phytochemical
-P02590,delivery dermal drug trandermal
-P02590,pharmaceutical technology
-P02590,delivery intradermal system transdermal
-P02590,microneedle
-P02591,pharmacognosy
-P02592,phytochemistry
-P02593,pharmaceutical
-P02594,pharmaceutical
-P02595,immunology
-P02595,biology cancer
-P02596,biology cancer immunology
-P02597,pharmaceutic translational
-P02597,advanced delivery drug
-P02597,formulation pharmaceutical
-P02597,liposome
-P02597,delivery drug transdermal
-P02597,microneedle
-P02597,controlled delivery drug targeted
-P02597,based hydrogen sulphide therapeutic
-P02602,drug nature team
-P02603,pharmacology
-P02603,immunology
-P02603,virology
-P02608,pharmaceutical technology
-P02609,material
-P02609,radiopharmaceutical
-P02609,nanotechnology
-P02613,pharmaceutical technology
-P02614,pharmaceutical technology
-P02615,pharmaceutical technology
-P02616,pharmaceutical technology
-P02617,pharmaceutical technology
-P02618,pharmaceutical technology
-P02619,pharmaceutical technology
-P02620,pharmaceutical technology
-P02621,pharmaceutical technology
-P02622,pharmaceutical technology
-P02623,pharmaceutical technology
-P02624,pharmaceutical technology
-P02625,chemistry medicinal
-P02625,biology chemical
-P02626,pharmacognosy phytochemistry
-P02626,extraction identification natural product
-P02627,phytochemistry
-P02627,chemistry natural product
-P02627,analysis natural product
-P02628,chemistry pharmaceutical
-P02637,metabolomic natural product
-P02638,phytochemistry
-P02638,chemistry natural product
-P02638,metabolomic
-P02639,alkaloid extraction
-P02641,a been bioactive compound has long nature treasure trove
-P02641,agriculture
-P02641,biological decode its significance
-P02641,application discovery into real translate world
-P02642,clinical pharmacy
-P02643,clinical pharmacy phytotherapy
-P02644,hta pharmacoeconomic
-P02645,clinical community disease infectious pharmacy
-P02646,clinical pharmacy
-P02646,pharmacogenomic
-P02646,health pharmacy women
-P02647,pharmacology
-P02647,neuroscience
-P02648,clinical pharmacy
-P02650,cost
-P02650,qol
-P02652,attitude herbal medicine pharmacist project
-P02652,barrier
-P02652,community information pharmacy source
-P02656,attitude
-P02656,perception pharmacogenomic
-P02657,cam project use
-P02657,adherence medication
-P02657,hiv life people quality with
-P02657,aids
-P02663,community evaluation knowledge pharmacist project
-P02663,attitude
-P02663,perception
-P02665,association between complementary medicine project use
-P02665,adherence medication
-P02665,among epilepsy life patient quality with
-P02666,malignant management wound
-P02666,healing theraphy wound
-P02666,diabetic foot ulcre
-P02666,medical nursing surgical
-P02679,care neuroscience palliative
-P02690,medical nursing surgical
-P02690,cronic disease
-P02690,disease infectious
-P02690,care efficacy management self self
-P02690,management selfcare
-P02691,fisioteraphy
-P02692,community family nursing
-P02693,medical nursing surgical
-P02694,chronic community disease
-P02695,endocrinology
-P02695,biomolecular development herbal nursing
-P02696,cardiac instructur rehabilitation renal
-P02697,clinical study trial
-P02698,nursing
-P02699,clinical trial
-P02699,epidemiology
-P02699,pharmacology
-P02700,community nursing
-P02702,adult nursing nursing perioperative
-P02703,basic nursing
-P02703,adult nursing
-P02704,care community health home nursing
-P02705,adult nursing
-P02706,medical nursing surgical urogenital
-P02710,collaboration
-P02710,innovation
-P02711,complementary therapy
-P02711,biomedic
-P02711,nursing pharmacology
-P02712,health mental nursing
-P02713,health mental nursing
-P02714,health mental nursing
-P02715,health mental nursing psychiatric
-P02715,adolescent health mental
-P02716,health mental nursing
-P02718,disparity health
-P02719,health mental
-P02720,health mental nursing
-P02722,health mental nursing
-P02723,health mental nursing
-P02724,care critical nursing
-P02724,cardiovascular critical
-P02724,chronic disease
-P02725,nursing
-P02726,acute care critical nursing
-P02727,leadership nursing
-P02727,health readiness system
-P02728,healthcare patient quality safety
-P02729,nursing
-P02730,neo nurs team
-P02732,child development growth
-P02733,child family health nursing
-P02734,child development growth
-P02735,care critical pediatric
-P02736,information system
-P02737,health mental nursing psychiatric
-P02738,community health nursing
-P02740,development platform technology
-P02741,child development growth
-P02742,child family health nursing
-P02743,child health nursing
-P02744,nursing
-P02745,nursing pediatric
-P02746,nursing pediatric
-P02747,pednrg team
-P02748,especially maternity nursing population vulnerable
-P02749,clinical community expert maternity nursing setting
-P02750,expert health nursing s women
-P02751,expert neonatal nursing
-P02752,community expert medicine nutrition preventive
-P02753,expert maternity nursing
-P02760,clinical community maternity nursing setting
-P02761,anak infeksi nursing pada penyakit transkultural
-P02763,care emergency nursing
-P02764,care intensive neonatal
-P02765,nursing pediatric
-P02766,midwifery nursing
-P02767,nursing
-P02770,leste timor
-P02771,leste timor
-P02778,regency tojo una una
-P02784,psychologically
-P02784,socially
-P02784,consequently spiritually
-P02790,cancer center national
-P02792,a cancer global health issue major remain
-P02792,cancer common five globally most type
-P02792,order
-P02792,are cancer lung
-P02792,breast cancer
-P02792,cancer colorectal
-P02792,cancer prostate
-P02792,cancer stomach
-P02807,innovation
-P02807,capacity enhance human resource
-P02807,adaptation change climate
-P02807,eco friendly marine tourism
-P02807,energy ocean renewable
-P02808,resource water
-P02808,coastal engineering
-P02809,architecture
-P02810,coastal resilience settlement
-P02816,forensic medicine medicolegal specialist
-P02817,criminologist legal professional
-P02818,criminologist
-P02819,forensic medicine medicolegal specialist
-P02820,expert reserach statistic
-P02824,approach complementary
-P02824,epidemiology
-P02824,health women
-P02824,biostatistic
-P02825,economic
-P02825,management marketing service
-P02826,material physicsiibiophysicsiibiomaterial
-P02827,midwifery
-P02828,midwifery
-P02829,chemistry pharmaceutical
-P02830,food nutrition
-P02830,engineering food
-P02830,food safety
-P02830,food industry
-P02831,honeybee
-P02831,bacteria gut
-P02831,analysis bee honey product
-P02831,ecology pollination
-P02832,nursing
-P02832,health women
-P02833,pharmacology
-P02833,pharmacognosy
-P02833,natural pharmacy product
-P02834,midwifery
-P02835,midwifery
-P02836,midwifery
-P02837,midwifery
-P02838,midwifery
-P02839,midwifery
-P02840,midwifery
-P02841,midwifery
-P02842,midwifery
+P00291,oomycete pathogenic plant
+P00291,genetic pathogen plant population
+P00292,culture plant tissue
+P00293,biological conservation control enemy natural
+P00293,biological control habitat management
+P00294,agricultural plant
+P00294,agronomy
+P00294,soil
+P00295,phytopathology
+P00295,plant protection
+P00295,plant
+P00296,physiology plant
+P00296,mycorrhiza
+P00296,ecology
+P00297,mycology
+P00298,mycology
+P00299,plant protection
+P00299,mycology
+P00300,mycology
+P00301,mycology
+P00302,mycology
+P00303,agricultural plant
+P00303,agronomy
+P00304,plant protection
+P00304,mycology
+P00305,biology
+P00306,conservation forest
+P00306,ecology forest
+P00306,conservation genetic
+P00307,pathology plant
+P00307,disease epidemiology plant
+P00308,pathology plant
+P00308,forest pathology
+P00308,biology evolutionary
+P00308,taxonomy
+P00309,forest pathology
+P00309,invasive specy
+P00309,taxonomy
+P00309,biology evolutionary
+P00310,pathology plant
+P00310,interaction pathogen plant
+P00310,crop integrated management
+P00311,pathology plant
+P00311,phytophthora
+P00311,molecular phylogenetic
+P00312,biology plant
+P00312,molecular pathogen plant response to
+P00313,biology fungi genetic molecular plant
+P00314,cacao disease pod rot
+P00322,entomology
+P00322,biological control
+P00323,entomology
+P00323,integrated management pest
+P00324,entomology
+P00324,integrated management pest
+P00325,ecophysiology plant
+P00326,disease pest
+P00327,biology
+P00327,agricultural entomology
+P00328,biological control habitat management
+P00329,entomology
+P00329,pest product stored
+P00330,phytopathology
+P00331,entomology
+P00332,phytopathology
+P00333,phytopathology
+P00334,bione team
+P00336,feed industry
+P00336,feed technology
+P00337,crop forage
+P00338,animal nutrition
+P00338,animal animal nutrition
+P00339,cattle consultant integrated oil palm system
+P00340,plant production
+P00341,feasibility study
+P00342,agribusine
+P00343,idlf rg team
+P00350,cnica nacional t universidad
+P00350,costa rica
+P00362,animal breeding genetic molecular
+P00363,breeding livestock
+P00363,genetic quantitative
+P00364,breeding livestock
+P00364,genetic quantitative
+P00365,animal breeding genetic molecular
+P00366,china ilri
+P00367,animal breeding
+P00368,biology cell molecular
+P00369,animal breeding
+P00370,biology molecular
+P00371,animal reproduction
+P00371,biotechnology reproduction
+P00372,animal physiology
+P00373,feed nutrition ruminant technology
+P00373,herbivore
+P00374,additive animal feed nutrition
+P00375,animal physiology
+P00375,environmental livestock
+P00376,biology reproductive
+P00377,diverisity genetic
+P00377,biology reproductive
+P00378,animal breeding
+P00379,biology molecular
+P00380,animal breeding genetic
+P00381,animal breeding genetic
+P00382,extension livestock
+P00383,agricultural extension
+P00389,access as limited resource such to
+P00389,technology
+P00389,market
+P00390,dairy farm management operation
+P00391,animal production
+P00392,cows dairy feed management manajemen pakan perah ternak
+P00393,animal nutrition
+P00394,crop forage production tropical
+P00394,nutrition ruminant
+P00394,management pasture
+P00394,production silage
+P00395,aspect cycle ecology several
+P00395,dynamic
+P00395,succession
+P00395,etc
+P00396,dairy production
+P00397,dairy nutrition physiology
+P00398,dairy feed
+P00398,south sulawesi
+P00398,grant opportunity pursuing
+P00398,finding impactful publishing
+P00399,dairy farming system
+P00400,dairy feed
+P00401,cattle dairy
+P00402,cattle dairy
+P00403,cattle dairy
+P00404,cattle dairy
+P00405,cattle dairy
+P00406,feed nutrition poultry
+P00407,analytical material measurement
+P00407,environmental toxicology
+P00408,industry livestock management
+P00409,livestock poultry production
+P00410,animal nutrition
+P00411,animal nutrition
+P00412,additive feed
+P00413,additive feed
+P00415,animal nutrition
+P00416,animal feed
+P00416,animal feed program study technology
+P00417,animal feed
+P00417,animal feed program study technology
+P00418,feed nutrition poultry
+P00419,health public veterinary
+P00428,pounutrifeed team
+P00429,economy livestock
+P00430,economic livestock production
+P00432,livagri team
+P00433,by livestock processing product technology waste
+P00436,engineering leather
+P00437,chemical engineering
+P00438,chemical engineering
+P00439,engineering leather
+P00441,application eco enzyme technology
+P00442,chemical effect
+P00442,enzymatic
+P00443,enzyme fruit technology waste
+P00444,eco enzyme technology vegetable waste
+P00453,animal physiology reproductive
+P00461,breeding equine
+P00461,development
+P00461,feed nutrition
+P00461,animal health
+P00461,governance management
+P00461,analysis economic socio
+P00461,aspect by development integrating these tourism
+P00461,aims an create efficient group to
+P00461,sustainable
+P00461,community farming horse impactful model wider
+P00464,state united
+P00465,state united
+P00468,advantage local poultry utilizing
+P00468,feed technology
+P00468,disease resistance
+P00468,other trait
+P00468,all core retaining strength their while
+P00470,ergonomic occupational safety
+P00471,charoen co group pokphand
+P00471,ltd
+P00471,south sulawesi
+P00473,weifang
+P00473,china
+P00474,manhattan
+P00475,dinajpur
+P00475,bangladesh
+P00477,kendari
+P00489,beef breeding cattle management
+P00500,algal biotechnology
+P00500,marine natural product
+P00500,biotechnology fishery marine
+P00501,animal aquatic nutrition
+P00502,aquaculture fish nutrition
+P00503,fish nutritionfish
+P00503,aquaculturechemical
+P00503,biochemia
+P00504,aquaculture biotechnology
+P00505,biotechnology
+P00506,food technology
+P00506,food functional
+P00507,bioprocessing
+P00507,biorefinery
+P00507,food processing
+P00507,microalgae technology
+P00507,sustainability
+P00508,biosorption karbon metal microalgae
+P00509,food technology
+P00509,food functional
+P00510,biotechnology microbiology
+P00511,material natural pharmacology
+P00518,pharmaceutical
+P00518,environmental remediation
+P00519,fishery product technology
+P00520,aquatic product technology
+P00520,fishery material
+P00521,cultivation macro microalgae
+P00521,aquaculture quality water
+P00522,aquatic ecotoxicology specialist
+P00523,pathology veterinary
+P00534,aquetox
+P00535,biodiversity marine
+P00536,bio ecology seagrass specialist
+P00537,biology invertebrate specialist
+P00538,bio ecology expert fish reef
+P00539,conservation natural resource specialist
+P00541,coastal community sociology
+P00542,ecology expert social
+P00542,conservation marine
+P00542,fishery management
+P00544,conservation marine
+P00544,governance marine
+P00544,interdisciplinary
+P00550,ecological modelling network social
+P00554,expert genetic
+P00556,ecology marine
+P00556,coral ecology reef
+P00556,coral ecology marine reef
+P00557,change climate
+P00557,conservation marine
+P00573,ggerg team
+P00574,fishery oceanography
+P00574,fishery marine
+P00575,fishery oceanography
+P00576,dynamic fishery population
+P00577,fishery remote sensing
+P00578,capture fishery information management system
+P00578,fishery marine oceanography satellite
+P00579,biology marine
+P00580,ecotoxicology marine pollution
+P00581,living mapping marine resource
+P00581,geo marine spatial
+P00582,environmental geotechnical
+P00583,hydrodynamic marine oceanography physical
+P00583,hydrodynamic marine oceanographic physical
+P00583,oseanografi phisical
+P00583,modeling oceanographic
+P00584,coral disease marine microbiology
+P00585,aquatic biodiversity resource taxonomy
+P00586,genetic population
+P00586,genetic marine
+P00586,diversity genetic
+P00587,marine pollution
+P00588,economic fishery marine socio
+P00589,engineering environmental pollutant
+P00589,air pollution
+P00590,applied marine microbiology
+P00591,bioprospecting marine
+P00591,biology ray shark
+P00591,fish taxonomy
+P00592,aquatic ecotoxicology plastic pollution
+P00593,environmental hydraulic hydrology
+P00594,ambo dr ir prof tuwo
+P00594,dea
+P00610,2010 are coastal his main oceanography research topic
+P00610,coastal design protection
+P00610,coastal hazard mitigation ocean
+P00616,wind
+P00616,tide
+P00616,level rise sea storm
+P00616,warmer water
+P00616,erosion
+P00616,intrusion saltwater
+P00616,loss wetland
+P00619,data reporting
+P00621,bahtiar hendriyadi
+P00622,muhlis
+P00623,amalia ramadhan
+P00624,edwin kevin kondo
+P00625,coral ecology reef
+P00626,biology marine
+P00627,ecology seagrass
+P00628,biology fishery
+P00628,biology fishery management
+P00629,ichtiology marine
+P00629,fish taxonomy
+P00630,marine plankton
+P00631,biology ray shark
+P00634,bycatch
+P00634,habitat loss
+P00645,center environmental research smithsonian
+P00646,center environmental research smithsonian
+P00648,environmental institure marine technology
+P00664,fishery oceanography
+P00665,engineering fishing vessel
+P00666,gis marine remote sensing
+P00667,assessment management stock
+P00667,prediction spatial tuna
+P00668,based ecology ecosystem fishery management resource
+P00669,fishery gis
+P00675,education
+P00675,aim enhance productivity research to we
+P00675,teaching
+P00675,market sustainability
+P00675,development policy
+P00676,marine remote sensing
+P00677,living mapping marine resource
+P00678,planning regional
+P00679,ecotoxicology marine
+P00680,earth
+P00681,fishery marine remote sensing
+P00682,economic fishery socio
+P00685,design fishing gear technology
+P00686,budidaya laut
+P00687,aquaculture
+P00688,analyst aquaculture
+P00690,fishing technology
+P00693,fishing gear technology
+P00694,development focuse group lobster on research
+P00694,cultivation
+P00694,biology integrate marine we
+P00694,aquaculture technology
+P00694,provide recommendation scientific
+P00694,government
+P00694,industry
+P00696,hatchery management shrimp
+P00697,biochemistry nutritional
+P00698,engineering water
+P00699,aquaculture
+P00700,feed nutritional
+P00701,fish fisiology respon
+P00702,fish taxonomy
+P00703,fish taxonomy
+P00704,fish taxonomy
+P00704,coastal
+P00704,ecology ecosystem integrate marine we
+P00704,genetic
+P00704,biodiversity conservation monitoring support to
+P00704,ecosystem resilience
+P00704,fishery sustainable
+P00704,advancing based solution while
+P00704,development policy
+P00705,enfish team
+P00706,biology fish
+P00706,fishery
+P00706,coastal management resorce
+P00706,environement life
+P00713,hatchery management
+P00724,analysis ecology policy political
+P00725,ecology political
+P00726,global history
+P00727,common study
+P00728,rural study youth
+P00729,forestry social
+P00730,analysis gender
+P00731,disaster media
+P00732,communication environmental
+P00733,engagement multistakeholder
+P00734,gis remote sensing
+P00735,biodiversity conservation
+P00736,management natural resource
+P00736,community forest harvesting management
+P00737,conflict resolution
+P00738,economy forest
+P00739,critical indigeneous study
+P00740,forestry social
+P00741,photovoice
+P00742,gender
+P00743,forestry social
+P00744,anthropology
+P00756,geographic information management system watershed
+P00757,planning spatial
+P00758,agriculture engineering
+P00759,environment forestry geospatial information system
+P00759,geographic information modelling spatial system
+P00760,engineering forest harvesting region
+P00761,remote sensing
+P00762,hydrology watershed
+P00763,management watershed
+P00764,disaster management planning urban
+P00765,spatial
+P00765,adaptation change climate impact
+P00766,carbon estimation
+P00767,landuse
+P00767,change landcover
+P00768,flooding hazard lanslide
+P00769,flooding hazard landslide
+P00770,forhwm team
+P00772,molecular systematic
+P00773,mycology
+P00773,mycorrhiza
+P00773,ectomycorrhiza
+P00773,fungi
+P00773,truffle
+P00774,phytophatology
+P00775,microbiology
+P00776,karstbiosociety team
+P00777,forest management
+P00778,economic forestry
+P00778,financial management
+P00779,forest policy
+P00780,biology conservation ecology forest
+P00780,ecology forest
+P00781,agroforestry
+P00782,entrepreneurship forestry
+P00783,forest marketing product
+P00784,forest landscape management
+P00785,sociology
+P00785,political sosialogy
+P00786,forest management multiple use
+P00786,economic forestry social
+P00787,silviculture
+P00787,agroforestry forest restoration
+P00788,financial management
+P00788,information management system
+P00788,business digital
+P00788,management strategic
+P00789,goverment policy
+P00793,environmental forestry social sociology
+P00799,forest non product timber utilization
+P00800,bees beneficial honey insect management
+P00801,forest product technology
+P00802,ecology forest
+P00803,cutting engineered tool
+P00803,computer control machine numerical
+P00803,based material processing wood wood
+P00804,anatomy wood
+P00804,quality wood
+P00805,biocomposite technology
+P00806,technology wood
+P00806,utilisation wood
+P00807,forest non product timber utilization
+P00808,concervation forest
+P00809,forest non product timber utilization
+P00810,ecology
+P00810,ecology invasive specy
+P00812,conservation management wildlife
+P00813,ecology wildlife
+P00814,ecology mangrove
+P00814,conservation genetic
+P00815,ecotourism
+P00816,ecology forest
+P00817,phytobiography
+P00818,biology conservation
+P00818,ecology
+P00818,forestry
+P00819,anthropological primatology
+P00820,primatology
+P00820,behavioural ecology
+P00821,evolution social
+P00822,emotional skill social
+P00823,bats biology chiroptera ecology evolutionary mammal
+P00829,biodeterioration chemical wood
+P00831,entomologi forest
+P00833,ekologi serangga taksonomi
+P00835,bee honey soliter
+P00837,entomology
+P00837,genetic molecular
+P00837,phylogenetic
+P00837,genetic population
+P00838,malacologist
+P00841,environment forestry laboratorium
+P00844,rg termite
+P00845,forest planning
+P00846,forest inventory
+P00847,development forestry planning regional
+P00848,environmental forestry remote sensing
+P00849,biogeography
+P00850,geoinformatic gis remote sensing technology
+P00851,forest landscape management
+P00852,geographic information system
+P00853,forest inventory remote sensing
+P00854,modelling remote sensing spatial
+P00855,forest planning
+P00866,chemistry forest product
+P00867,hasil hutan teknologi
+P00868,microeconomic
+P00869,destroying insect mycology wood
+P00870,material
+P00870,biopolymer
+P00870,encapsulation
+P00871,biomass conversion
+P00871,cellulose lignin valorization
+P00871,characterization comprehensive fiber natural
+P00872,chemistry wood
+P00872,composite wood
+P00872,adhesive coating
+P00872,biomass wood
+P00872,polymer
+P00873,chemistry natural product
+P00873,ethnobotanical plant
+P00873,organic spectroscopy
+P00873,mass spectrometry
+P00873,chemistry medicinal
+P00874,ecochemophysiology plant
+P00874,forest product technology
+P00874,metabolite plant secondary
+P00880,ecotourism practitioner researcher
+P00883,innovation
+P00883,collaboration
+P00883,community ecofor empower local
+P00883,build network strong
+P00888,chemistry food
+P00890,control food monitoring quality
+P00891,harvest post processing technology
+P00892,energy renewable
+P00893,food processing
+P00893,food technology
+P00894,agricultural industrial technology
+P00895,food processing technology
+P00896,edible packaging
+P00897,engineering food microstructure
+P00897,powder technology
+P00897,processing thermal
+P00897,engineering food
+P00898,fruit processing vegetable
+P00903,food technology
+P00904,food technology
+P00905,packaging smart
+P00906,harvest post technology
+P00908,harvest post processing technology
+P00909,chemistry food
+P00909,analysis food processing
+P00910,biotechnology food microbiology
+P00911,food nutrition
+P00911,environment sustainability
+P00911,biotechnology genomic
+P00911,engineering system
+P00911,chemistry material
+P00912,are interest main metabolism plant research secondary
+P00912,enzyme function relationship structure
+P00913,engineering food processing
+P00917,agroindustrial process technology
+P00918,biochemistry food
+P00919,chemistry food microbiology
+P00920,control food monitoring quality
+P00921,chemistry food
+P00922,engineering food processing
+P00927,agroindustrial process technology
+P00928,analysis food technology
+P00929,agricultural engineering mechanical
+P00933,control instrumentation
+P00935,e lorosa orental timor universidade
+P00943,control system
+P00943,automation
+P00943,industry partner
+P00944,engineering management resource water
+P00945,engineering soil water
+P00946,engineering management resource water
+P00947,agricultural management water
+P00948,irrigation smart
+P00951,coating edible film
+P00951,food packaging
+P00953,engineering food packaging packaging
+P00954,food packaging
+P00955,food technology
+P00956,food technology
+P00957,abdul dr habbe hamid prof
+P00957,m si
+P00958,accounting environmental
+P00959,finance islamic social
+P00959,finance personal
+P00959,accounting islamic
+P00961,accounting financial
+P00963,economic islam
+P00963,economic publik
+P00971,inclusivity
+P00971,economic ethical finance practice
+P00971,aligning ash maqasid shariah with
+P00971,smsrg team
+P00973,behavioral economic
+P00977,development sustainable tourism
+P00981,financial management
+P00982,management marketing
+P00982,manajemen
+P00982,marketing
+P00982,management strategic
+P00982,digital management marketing
+P00983,human management resource
+P00984,human management resource
+P00984,human management resourch
+P00985,management risk
+P00986,management strategic
+P00986,business consultant development
+P00987,human management resource
+P00988,human management resource
+P00989,financial management
+P00989,management operation
+P00990,corporate finance
+P00990,investment
+P00990,corporate governance
+P00990,behavioral finance
+P00990,business management
+P00991,human management resourch
+P00991,behaviour organizational
+P00991,human management resource
+P00991,business ethic
+P00991,culture organizational
+P00992,corporate financial management
+P00993,management marketing
+P00994,management marketing
+P00996,management marketing
+P00997,management marketing
+P00998,accounting management public
+P00999,accounting finance
+P00999,accounting financial
+P00999,accounting sustainability
+P01000,accounting
+P01000,accounting financial
+P01000,accounting government
+P01001,accounting information system
+P01002,accounting assurance sustainability sustainability
+P01003,accounting management
+P01003,accounting financial
+P01004,accounting management
+P01005,accounting blue
+P01006,accounting corporate governance
+P01007,business digital
+P01014,management strategic
+P01015,manajemen
+P01016,management strategic wealth
+P01017,manajemen
+P01018,management publik sektor strategic
+P01019,economic pembangunan perencanaan
+P01019,development economic
+P01020,manajemen
+P01020,business economic islamic
+P01021,manajemen sain
+P01021,manajemen
+P01022,management operational
+P01023,chain management supply
+P01024,bancking finance management
+P01025,banking finance
+P01027,enterprise financing green
+P01031,digital marketing
+P01031,commerce e
+P01031,customer satisfaction
+P01031,management marketing marketing tourism
+P01033,technical
+P01033,advice driven evidence
+P01034,accounting environmental
+P01035,accounting environmental management
+P01035,accounting management
+P01035,accounting sustainability
+P01035,accounting social
+P01035,accounting environmental
+P01036,accounting management
+P01036,accounting behavioural
+P01037,efficiency energy energy renewable
+P01037,ai complex modelling system
+P01038,accounting environmental
+P01039,accounting environmental management
+P01040,accounting environmental
+P01042,accounting management
+P01042,accounting behavioral
+P01043,accounting environmental
+P01044,accounting critical
+P01045,accounting environmental waste
+P01046,behavior human management organizational resource
+P01047,human resource
+P01048,behavior human management organizational resource
+P01049,entrepreneurship tourism
+P01050,economic resource
+P01052,human management resource
+P01053,management marketing
+P01066,human management resource
+P01066,economic
+P01066,management
+P01066,economic resource valuation
+P01067,development economic
+P01067,environmental sustainability
+P01067,macroeconomic
+P01081,economic integrate theory we
+P01081,empirical research
+P01081,policy recommendation
+P01081,governmental
+P01081,industrial stakeholder
+P01082,bangking monetary
+P01083,accounting public sector
+P01083,finance government local
+P01083,accounting environmental
+P01084,accounting
+P01084,accounting financial
+P01084,accounting government
+P01085,budgeting political
+P01085,accounting public sector
+P01085,auditing
+P01086,behavioural
+P01086,entrepreneurship technology
+P01089,engage our research with
+P01089,collaborating forward look to we with you
+P01089,finance
+P01089,accounting sustainability
+P01090,corporate governance
+P01090,accountability
+P01090,corporate reporting
+P01090,corporate disclosure
+P01090,csr
+P01090,sustainability
+P01091,accounting sustainability
+P01091,accounting s3
+P01092,human management resource
+P01092,behaviour organizational
+P01093,human management resource
+P01094,management operation
+P01094,finanacial management
+P01095,behaviour organizational
+P01095,human management resource
+P01096,human management resource
+P01096,diversity gender
+P01097,human management resource
+P01097,behaviour organizational
+P01098,financial management
+P01098,business international
+P01099,marketing strategic
+P01099,human management resource
+P01100,accounting management
+P01101,hr human management resource
+P01102,accounting accounting behavioral management
+P01103,accounting sustainability
+P01104,accounting finance
+P01105,corgov team
+P01106,accounting
+P01107,accounting financial
+P01108,accounting public sector
+P01109,accounting financial
+P01110,accounting financial
+P01111,governance it
+P01111,it management
+P01111,computer human interaction
+P01111,adoption media social
+P01113,accounting
+P01114,accounting financial
+P01115,accounting
+P01115,auditing
+P01116,accounting financial
+P01118,accounting financial
+P01119,accounting
+P01119,capital market
+P01120,accounting tax
+P01121,accounting
+P01122,accounting
+P01123,accounting financial
+P01124,accounting public sector
+P01125,accounting public
+P01125,auditing
+P01126,financial management
+P01127,accounting sharia
+P01128,management quality
+P01129,engineering mechanical
+P01130,financial management
+P01131,accounting sustainability
+P01132,accounting management
+P01133,business economic islamic
+P01135,development economic
+P01135,monetary
+P01143,g nomic team
+P01144,financial management
+P01151,culture organizational
+P01151,leadership
+P01152,accounting
+P01152,finance p ublic
+P01152,microfinance
+P01153,fishery
+P01154,improvement productivity quality
+P01155,accounting fraud
+P01156,accounting financial
+P01157,accounting fraud
+P01158,auditing
+P01159,accounting public
+P01160,auditing
+P01161,accounting
+P01162,accounting
+P01163,technical
+P01163,advice driven evidence
+P01164,economic public
+P01164,econometric
+P01170,development economic
+P01171,development economic
+P01172,development economic
+P01174,economic moneter
+P01174,finance
+P01175,financial inclusion
+P01175,alleviation innovative lending poverty through
+P01175,saving
+P01176,market non strategy
+P01177,management strategic
+P01181,body regulatory
+P01181,civil organization society
+P01181,stakeholder various
+P01182,accounting information system
+P01210,interdisciplinary
+P01210,erp implementation
+P01210,ais literacy
+P01210,collaboration strategic
+P01210,contribution policy
+P01210,ais development rg support sustainable
+P01210,digital financial inclusion
+P01210,0 5 era public sector society transformation
+P01211,democracy local politic
+P01212,conflict environmental politic
+P01213,gender
+P01213,movement religion social sosial
+P01214,gender policy public
+P01215,gender policy public
+P01216,anthropology political
+P01217,antrhopology international relation
+P01218,local politic
+P01219,local politic
+P01221,communication cultural
+P01222,communication media
+P01229,development sociology
+P01229,conflict development participatory planning social
+P01230,children sociology
+P01230,child protection social welfare
+P01230,social work
+P01231,political public sociology
+P01231,change digital media social
+P01232,horus
+P01232,analysis cutting edge individual tech through
+P01236,conflict resolution
+P01237,cooperation development international
+P01238,conflict disaster sociology sociology
+P01239,good governance paradiplomacy
+P01241,economy global politic political
+P01242,conflict governance post
+P01242,governance public
+P01242,governance policy public
+P01243,politic religious security study
+P01244,psicology social
+P01245,disaster governance
+P01245,policy public
+P01246,agrarian rural sociology
+P01247,asset engineering human infrastructure management security
+P01248,comparative politic
+P01249,comparative democratization
+P01249,collective violence
+P01249,bureaucracy
+P01250,international peace relation study
+P01251,conflict peace resolution
+P01252,administration public
+P01254,peace
+P01254,conflict
+P01254,analyst policy
+P01254,conflict resolution
+P01254,exploring pathway peace sustainable to
+P01254,community empower
+P01254,contribute inclusive to
+P01254,resilient
+P01254,democratic society
+P01255,organization public
+P01255,adaptive capacity
+P01256,policy public
+P01257,organization public
+P01257,communnity development
+P01258,policy public
+P01258,disability study
+P01259,policy public
+P01260,policy public
+P01261,management public
+P01262,organization public
+P01263,policy public
+P01266,policy public
+P01267,organization public
+P01268,policy public
+P01271,government
+P01272,comparative government
+P01273,governance
+P01273,governance local study
+P01275,change gender social
+P01276,civil empowerment society women
+P01277,policy public
+P01277,gender policy public
+P01278,policy social
+P01279,bureaucracy
+P01279,bureaucracy government
+P01281,ecology governmental
+P01282,bureaucracy reform
+P01283,capital formation social
+P01284,anthropology ecology environmental political
+P01285,data environmental informatic
+P01287,anthropology maritim
+P01287,anthropology marine
+P01287,ethnicity
+P01287,culture
+P01288,antropologi budaya organisasi
+P01288,antropology business
+P01289,maritime
+P01289,agriculture
+P01289,environmental
+P01290,anthropology
+P01290,ecology
+P01290,culture
+P01290,community local
+P01291,anthropology marine
+P01291,coastal community
+P01291,culture maritim
+P01292,anthropology
+P01292,media
+P01292,community local
+P01292,identity
+P01293,ecology
+P01293,agribisnis
+P01294,planning regional urban
+P01294,rural study
+P01294,ecology human
+P01295,anthropology
+P01295,empowerment
+P01295,community
+P01296,anthropology
+P01297,anthropologi maritim
+P01299,anthropology
+P01300,community development
+P01301,anthropology
+P01302,anthropology
+P01303,anthropology
+P01304,anthropology business organization
+P01305,anthropology urban
+P01306,anthropologi power
+P01307,indigenous people
+P01308,action collective industrial relation
+P01309,indigenous people
+P01310,anthropology urban
+P01314,planning social
+P01314,capital social
+P01314,community conflict maritime social sociology
+P01315,coastal sociology urban
+P01315,exclusion poverty social
+P01315,community empowerment
+P01316,development study
+P01316,research social
+P01316,education sociology
+P01317,anthropology maritime
+P01317,fisherman poverty
+P01317,culture fisherman social
+P01318,coastal fishery
+P01318,ecological social system
+P01318,habitat restoration
+P01318,food security
+P01318,assessment stock
+P01319,psychology social
+P01321,resilience
+P01321,depletion marine resource
+P01321,economic socio vulnerability
+P01321,bridge core knowledge scientific seek to
+P01321,local wisdom
+P01327,leader
+P01332,drg team
+P01333,political sociology
+P01333,policy social
+P01333,behavior social
+P01338,expressed
+P01342,communication
+P01344,jakarta
+P01347,communication digital program study
+P01349,consumed how information is produced
+P01349,academic challenge inquiry intersecting rigorous through
+P01350,counter terrorism
+P01354,thailand
+P01362,security
+P01362,tourism
+P01363,forced migration refugee
+P01363,human law right
+P01363,community development international
+P01367,development inclusive
+P01368,development
+P01374,cohesion social
+P01374,human security
+P01383,criminologist legal professional
+P01385,criminal health law law
+P01385,criminal law
+P01385,health law
+P01398,constitutional law
+P01398,law party political
+P01398,environmental law
+P01412,real simulation time
+P01412,configuration inverter
+P01412,control fuzzy logic
+P01412,algorithm genetic
+P01412,algorithm evolutionary
+P01412,chao optimization particle swarm theory
+P01413,victimologi
+P01413,criminal law
+P01413,justice restorative
+P01414,criminal law
+P01415,criminal law prosedural
+P01416,penologi
+P01417,anti laundering law law money riminal
+P01418,cyber law tech
+P01418,environmental law
+P01418,human law right
+P01418,law revenue
+P01418,law medical
+P01419,criminal law
+P01419,banking crime
+P01419,laundering money
+P01419,asset recovery
+P01420,criminal law
+P01421,criminal law
+P01422,criminal law
+P01423,criminal law
+P01424,criminal law victimologi
+P01430,criminal law
+P01430,child protection
+P01431,criminal law
+P01432,criminal law
+P01432,social
+P01433,child law
+P01433,development goal sustainable
+P01433,development sustainable
+P01433,family law
+P01433,family islamic law
+P01435,lcpr team
+P01436,environmental international law
+P01444,researcher
+P01445,researcher
+P01447,international law
+P01447,human law right
+P01447,diplomatic law
+P01447,expressed
+P01457,expressed
+P01459,semiotic
+P01459,language
+P01459,linguistic
+P01459,tourism
+P01459,cultural study
+P01460,tourism
+P01462,tourism
+P01462,ethnography
+P01462,communication intercultural
+P01463,archeology
+P01464,planning tourism
+P01464,management
+P01464,cultural heritage tourism
+P01464,conservation marine tourism
+P01465,marine tourism
+P01465,ecotourism
+P01466,french language
+P01466,culture study tourism
+P01467,archeology
+P01469,developing enhance model planning sustainable to tourism
+P01469,management
+P01477,flcrg team
+P01487,psikolinguistik
+P01488,semantik
+P01489,stilistika
+P01490,sosiolinguistik
+P01492,literature
+P01493,stilistika
+P01496,psycholinguistic team
+P01497,philological specialist study
+P01498,linguistic specialist
+P01499,philological specialist study
+P01500,history local south specialist sulawesi
+P01501,archaeology prehistoric specialist
+P01501,analysis mathematical
+P01501,analysis analysis fourier functional
+P01502,oral specialit study tradition
+P01503,cultural specialist study
+P01504,philological specialist study
+P01505,linguistic specialist study
+P01506,asian history southeast specialist
+P01507,asian history southeast specialist
+P01508,history south specialist sulawesi
+P01509,linguistic specialist study theoretical
+P01510,global historical local specialist study
+P01513,interdiscipliner linguistic
+P01514,onomastic
+P01514,onomastic socio
+P01514,sociolinguistic
+P01514,languange psychology social
+P01515,applied linguistic toponymy
+P01515,onomastic
+P01516,culture media study
+P01518,ancient bugis manuscript translation transliteration
+P01518,digitization manuscript
+P01519,archaeology geographic gis information system
+P01520,literary study stylistic
+P01523,literature
+P01528,literature
+P01531,as explore folktale group oral such this tradition
+P01531,pantun
+P01531,expression
+P01531,advice
+P01531,poem
+P01531,proverb
+P01531,ancestral message
+P01531,song
+P01531,as identity mantra meaningful reflection
+P01531,value
+P01531,belief
+P01531,tradition
+P01563,computation material
+P01564,material shielding
+P01565,biocomposite material
+P01566,bioceramic material
+P01567,bioplastic
+P01576,hydrometeorology
+P01576,based climate modeling phenomena
+P01576,a a focus on range topic wide with
+P01579,archeology
+P01582,at disease infectious medicine stanford univ
+P01583,fort manage rotterdam site
+P01583,archaeological leang leang park
+P01583,leang timpuseng
+P01585,computer
+P01585,distributed system
+P01585,data
+P01585,algorithm
+P01585,artificial intelligence
+P01586,fixed point theory
+P01586,b fixed generalized metric point space theory
+P01587,analysis mathematical
+P01587,analysis functional
+P01588,analysis mathematical
+P01589,fixed point theory
+P01590,fixed point theory
+P01590,fixed point
+P01591,fixed point theory
+P01592,fixed point theory
+P01593,fixed point theory
+P01600,chemistry
+P01610,manaprochem team
+P01611,mathematical modelling
+P01612,astuty dewi dr sri
+P01612,s si
+P01612,m si
+P01623,email
+P01623,homepage
+P01627,modeling statistical
+P01627,inference statistical
+P01627,applied statistic
+P01628,control linear non optimal system
+P01644,geophysic
+P01644,geophysic measurement
+P01648,earthquake geomechanic
+P01648,active tectonic
+P01653,data statistical
+P01653,bayesian method
+P01653,method survival
+P01653,analysis spatial
+P01653,analysis sery time
+P01654,management risk
+P01654,actuarial
+P01655,data
+P01656,computer vision
+P01656,learning machine
+P01657,health public
+P01657,epidemiology
+P01657,health information system
+P01657,data health
+P01657,biostatistic
+P01658,bayesian complex modelling modelling statistical system
+P01659,modelling sery time
+P01659,bayesian inference
+P01659,learning machine
+P01659,deep learning
+P01661,data learning machine mining
+P01662,sem
+P01662,komputasi spasial
+P01664,applied statistic
+P01667,data mining
+P01667,operation research
+P01667,deep learning multimodal
+P01668,statistic
+P01668,data
+P01668,education
+P01669,data
+P01670,data
+P01671,data
+P01672,statistic
+P01674,learning machine
+P01675,learning machine
+P01676,analysis functional
+P01677,measure theory
+P01677,function space
+P01677,integration theory
+P01678,analysis mathematic
+P01679,analysis functional
+P01680,analysis fourier
+P01681,analysis analysis fourier functional
+P01682,mathematic
+P01683,analy f team
+P01684,material semiconductor
+P01687,chennai
+P01687,india
+P01692,synthesize
+P01692,characterize material property tailored with
+P01692,integrating material physic
+P01692,nanotech
+P01692,address energy engineering global green to
+P01692,environment
+P01692,challenge smart tech
+P01700,petrology
+P01700,economic geology
+P01700,disaster management
+P01700,exploration geological
+P01701,engineer mining
+P01701,coal petrology
+P01702,geochemistry
+P01702,environment geo
+P01703,metallurgy mineralogy
+P01704,geology
+P01704,petrology
+P01704,vulcanology
+P01705,geology
+P01705,environment geo
+P01705,geo hydrology
+P01706,chemistry solid
+P01707,metallurgy
+P01707,chemistry geo
+P01708,geology petroleum
+P01709,oceanography
+P01710,geohazard
+P01710,modelling tsunami
+P01710,analysis hazard seismic
+P01711,applied seismology
+P01712,exploration mining
+P01712,petrography
+P01712,geochemistry
+P01712,rg smp team
+P01713,applied geophysic
+P01713,geophysic solid
+P01714,exploration geology
+P01714,geochemistry
+P01715,academia sinica taiwan
+P01723,gea geo pt
+P01744,engineering geotechnical
+P01752,ggerg team
+P01753,environmental transportation
+P01754,engineering mobility traffic urban
+P01754,environmental transportation
+P01754,air quality transportation
+P01755,engineering traffic urban
+P01755,environmental noise
+P01756,planning settlement urban
+P01757,modeling transportation
+P01760,analysis traffic urban
+P01761,analysis traffic urban
+P01762,analysis traffic urban
+P01763,analysis traffic urban
+P01767,reproduksi ternak
+P01772,control specialist system
+P01776,engineering software
+P01776,engineering web
+P01776,animation
+P01780,ical
+P01780,arduino implemented mega microcontroller on
+P01781,civil engineering
+P01781,design seismic
+P01781,composite structure
+P01791,amet dolor ipsum lorem sit
+P01793,civil engineering geodesy
+P01795,building
+P01795,construction
+P01795,environment
+P01795,management waste
+P01796,remote sensing
+P01796,geographic gis information system
+P01796,engineering geospatial
+P01796,change climate
+P01797,engineering resource water
+P01797,hydraulic structure
+P01797,model numerical
+P01797,modelling water
+P01798,seismogeodesy
+P01798,remote sensing
+P01798,geodesy
+P01798,geomatic
+P01802,environmental geotechnical
+P01812,management sanitation waste
+P01815,group research
+P01816,leader mrcrg
+P01817,analysis specialist vibration
+P01823,lightweight material
+P01844,conversion energy
+P01844,fluid mechanic
+P01845,conversion energy
+P01846,conversion energy
+P01847,conversion energy
+P01847,fluid mechanic
+P01848,aerodynamic
+P01854,efficiency fuel improving
+P01854,computational
+P01854,analysis method theoretical
+P01854,fast
+P01854,environmentally friendly system transportation
+P01855,distribution programming system web
+P01856,telecomunication
+P01857,analytic data media social
+P01857,informatic social
+P01857,artificial intelligence
+P01858,language processing
+P01858,artificial intelligence
+P01858,data mining
+P01858,analysis multimedia
+P01859,programming web
+P01860,intelligence system
+P01860,analytic data
+P01861,analysis computing intellegent
+P01911,energy management system
+P01912,sensor system
+P01912,distribution electrical power
+P01912,economic electrical engineering installation technology
+P01913,industrial management
+P01914,engineering power system
+P01914,power quality
+P01914,energy sustainable
+P01915,efficiency energy energy technology
+P01916,energy management
+P01916,energy renewable
+P01916,power solar
+P01917,energy storage
+P01921,lightweight manufactur material
+P01921,lightweight manufacture material
+P01928,rg smp team
+P01929,housing planning settlement
+P01930,design planning urban
+P01931,city development planning waterfront
+P01932,housing planning settlement
+P01933,planning regional
+P01933,tourism
+P01933,disaster mitigation
+P01934,infrastructure planning transportation
+P01935,housing planning settlement
+P01944,technical
+P01944,advice driven evidence
+P01946,architecture
+P01959,micropaleontology
+P01959,stratigraphy
+P01959,paleoceanography
+P01960,carbonate sedimentology
+P01960,geology quaternary
+P01960,disaster management
+P01961,geophysic
+P01961,geohydrology
+P01961,oceanography
+P01962,geochemistry organic
+P01962,geology petroleum
+P01962,paleoenvironment
+P01963,sedimentology
+P01963,economic mineral
+P01963,geochemistry
+P01966,geochemistry petroleum
+P01968,bmkg
+P01974,prg team
+P01975,environmental management risk
+P01976,air pollution
+P01977,environmental noise
+P01978,engineering traffic transportation
+P01979,aerosol
+P01980,air control pollution technology
+P01981,ambient exposure particulate personal
+P01982,air pollution
+P01983,noise traffic
+P01988,lightweight material structure
+P01989,ballistic lightweight material
+P01990,engineering material
+P01991,lightweight material structure
+P01992,ballistic light material
+P02000,earthquake engineering geotechnical
+P02000,induced liquefaction seismic
+P02000,landslide mitigation
+P02000,artificial engineering geotechnical inteligence
+P02001,liquefaction soil
+P02001,countermeasure liquefactuion
+P02001,aseismic design
+P02002,earthquake engineering geotechnical
+P02003,earthquake engineering geotechnical
+P02004,earthquake engineering geotechnical
+P02004,engineering foundation
+P02004,improvement soil
+P02005,geotechnic
+P02005,liquefaction
+P02005,dynamic soil
+P02005,earthquake engineering
+P02005,slope stability
+P02006,geotechnic
+P02006,liquefaction
+P02007,exploration geophysic
+P02010,geoteknik
+P02011,geoteknik
+P02012,geoteknik
+P02012,civil engineering
+P02013,earthquake engineering geotechnical
+P02014,artificial energy intelligence renewable
+P02015,generation load management power
+P02016,energy hybrid system
+P02017,electrical engineering technology
+P02018,energy management renewable system
+P02019,energy environment system
+P02020,artificial intelligence load shedding with
+P02021,electric energy management vehicle
+P02022,learning machine tunnel wind with
+P02023,cell material solar
+P02024,axis turbine vertical wind
+P02025,based control pmsg power wind
+P02026,real simulation time
+P02026,configuration inverter
+P02026,control fuzzy logic
+P02026,algorithm genetic
+P02026,algorithm evolutionary
+P02026,chao optimization particle swarm theory
+P02027,design human life
+P02028,biopotential
+P02029,engineering management
+P02030,cognitive ergonomic
+P02031,ergonomic
+P02032,safety
+P02032,being collaborative research through well
+P02032,innovation
+P02032,education
+P02032,develop ergonomic product solution we
+P02032,workspace
+P02032,environment living
+P02032,ability ages all comfort ensuring inclusivity
+P02032,ecology food nutrition
+P02038,damage intact ship stability
+P02038,avoidance based collision design performance ship
+P02038,assessment formal safety ship
+P02039,hydrodynamic ship
+P02040,hydrodynamic marine
+P02041,floating hydrodynamic mooring structure
+P02041,fluid interaction structure
+P02041,energy marine renewable
+P02056,air pollution
+P02057,remote sensing
+P02057,air quality
+P02057,environmental monitoring
+P02058,remote sensing
+P02058,air quality
+P02058,environmental monitoring
+P02059,environmental monitoring remote sensing
+P02060,air pollution
+P02061,air microplastic
+P02062,facility transportation
+P02063,remote sensing
+P02063,air quality
+P02063,environmental monitoring
+P02064,cycle driving vehicle
+P02065,environmental monitoring remote sensing
+P02066,environmental monitoring remote sensing
+P02067,air pollution
+P02068,air pollution
+P02069,emission truck
+P02070,emission light vehicle
+P02071,green open romote sensing space
+P02072,air pollution
+P02073,emission truck
+P02074,air microplastic
+P02075,air microplastic
+P02076,air microplastic
+P02077,air microplastic
+P02078,coastal engineering
+P02079,coastal engineering
+P02080,coastal engineering
+P02081,coastal engineering
+P02082,coastal engineering
+P02083,coastal engineering
+P02084,hydraulic
+P02085,engineering water
+P02086,engineering water
+P02087,engineering water
+P02088,engineering water
+P02089,engineering water
+P02090,material strength
+P02090,composite
+P02090,fiber natural
+P02096,thermal
+P02096,surface treatment
+P02096,scalable technology
+P02096,academia bridge industry naftech rg
+P02096,transportation
+P02096,marine
+P02096,aerospace
+P02096,defense sector
+P02097,communication technology wireless
+P02097,antenna fabrication modeling
+P02097,fiber network optical
+P02097,antenna intelligent system
+P02106,high insulation voltage
+P02120,expert tb tuberculosis
+P02120,microbiology
+P02142,biovax team
+P02145,anatomical pathology
+P02146,spine surgery
+P02146,disorder spinal
+P02146,orthopaedic trauma
+P02146,degenerative disease spine
+P02146,reconstruction spinal
+P02147,biology cell
+P02147,biology molecular
+P02147,protein translocation
+P02147,protein targeting
+P02147,biology endoplasmic reticulum
+P02147,biochemistry protein
+P02148,oncology orthopaedic
+P02148,orthopaedic surgery
+P02148,musculoskeletal tumor
+P02148,orthopaedic trauma
+P02148,bone research soft tissue tumor
+P02149,orthopaedic surgery
+P02149,hip knee surgery
+P02149,adult reconstruction
+P02149,orthopaedic trauma
+P02149,injury sport
+P02149,knee replacement surgery
+P02150,biochemistry
+P02150,engineering tissue
+P02150,medicine regenerative
+P02150,cleft lip palate reconstruction
+P02150,analysis based evidence medicine meta review systematic
+P02151,dokter orthopaedi spesialis traumatology
+P02154,community medicine
+P02154,health management
+P02154,environmental healt
+P02154,hepidemiology
+P02154,biostatistic
+P02154,environmental health
+P02154,epidemiology
+P02159,assistant research
+P02160,assistant research
+P02167,human physiology
+P02167,physiology
+P02168,pharmacology toxicology
+P02168,molecular pharmacology
+P02169,biology cell molecular
+P02170,clinical nutrition
+P02171,clinical pharmacy
+P02171,clinical pharmacology pharmacy
+P02172,physiology sport
+P02172,endocrine physiology
+P02172,health medical professional
+P02173,biochemistry
+P02174,cardiovascular physiology
+P02175,pharmacology physiology
+P02176,chronic disease
+P02179,most rg team
+P02180,insulin resistance
+P02180,obesity
+P02180,biology molecular
+P02180,clinical nutrition
+P02180,immunology
+P02184,clinical nutrition specialist
+P02185,clinical email microbiology specialist
+P02185,homepage
+P02186,mit
+P02187,germany kiel univ
+P02188,germany kiel univ
+P02191,malaya univ
+P02195,clinical nutrition resident
+P02196,clinical nutrition resident
+P02197,clinical nutrition
+P02197,hypertension nephrology
+P02197,internal medicine
+P02198,internal medicine
+P02198,nephrology
+P02198,rheumatology
+P02199,internal medicine
+P02204,consist group nephrologist this
+P02204,clinical nutrition
+P02213,pharmacology
+P02213,pharmacognosy
+P02213,phytochemistry
+P02213,characterization isolation natural product
+P02214,aiming mutation novel to uncover
+P02214,inheritance pattern
+P02214,diagnosis early enhance strive to we
+P02214,strategy treatment
+P02214,affected individual medicine personalized
+P02215,reproduction veterinary
+P02216,microbiology veterinary
+P02217,pharmacology veterinary
+P02218,pathology veterinary
+P02219,biochemistry veterinary
+P02220,biotechnology
+P02221,clinical pathology veterinary
+P02222,pathology veterinary
+P02223,parasitology veterinary
+P02224,parasitology veterinary
+P02225,parasitology veterinary
+P02226,parasitology veterinary
+P02227,reproduction veterinary
+P02228,epidemiology veterinary
+P02229,health public veterinary
+P02230,radiology surgery veterinary
+P02231,internal medicine veterinary
+P02232,parasitology veterinary
+P02233,anatomy veterinary
+P02234,microbiology veterinary
+P02235,radiology surgery veterinary
+P02236,anatomy veterinary
+P02237,neonatology
+P02238,medicine preventive
+P02239,neonatology
+P02240,pediatric
+P02240,allergy immunology
+P02241,child development pediatric social
+P02242,nursing
+P02242,care infant neonatal nursing
+P02243,assistant research
+P02244,neonatology
+P02245,neonatology
+P02248,genetic medicine physiology
+P02258,analysis spatial
+P02258,data health public
+P02258,environmental
+P02258,determinant structural
+P02275,animal health
+P02275,disease how improve spread understanding we
+P02275,animal impact on population their
+P02275,health human interaction their with
+P02276,parasitology
+P02276,immunology
+P02276,vaccinology
+P02276,disease infectious
+P02284,pathology
+P02284,cancer
+P02284,immunology
+P02285,anatomical pathology
+P02286,advance endoscopy expert
+P02286,cancer colorectal
+P02286,disease pancreatic
+P02286,disease fatty liver
+P02286,gastrointestinal motility
+P02287,data genomic scientist
+P02288,bioinformatic
+P02289,digestive surgery
+P02290,epidemiology
+P02290,analysis collection data data
+P02291,anatomical pathology
+P02292,anatomical pathology
+P02294,pathology
+P02295,pathology
+P02296,digestive surgery
+P02297,anak bedah digestif
+P02298,digestive surgery
+P02299,gastroenterohepatology
+P02300,digestive surgery
+P02301,digestive surgery
+P02302,pulmonology
+P02303,pulmonology
+P02304,pulmonology
+P02307,microbiology
+P02314,umc urecht
+P02316,ethical
+P02316,based cardiovascular evidence practice strengthen
+P02316,across burden disease diverse population reduce
+P02317,psychology social
+P02320,accademy rabdan
+P02321,accademy rabdan
+P02338,based evidence
+P02338,approache enhanced strengthen teaching technology we
+P02338,assessment
+P02338,curriculum
+P02338,leadership
+P02338,foster partnership
+P02338,ethical prepare
+P02339,dentistry
+P02341,maxillofacial oral radiology
+P02342,maxillofacial oral surgery
+P02342,immersive reality
+P02342,engineering tissue
+P02342,maxillofacial oral surgeon
+P02343,electrical engineer
+P02343,robotic
+P02343,immersive reality
+P02343,artificial control intelligence robotic
+P02350,biomedicine expert
+P02350,biology molecular
+P02350,immunology
+P02350,food medicine
+P02352,change climate environmental health
+P02355,biomarine dentistry
+P02356,composit material strengthness
+P02361,periodontist
+P02366,biota marine particularly
+P02366,collaboration foster interdisciplinary
+P02366,into practical research translate
+P02367,dentistry pediatric
+P02367,anak kraniofasial
+P02368,gigi konservasi
+P02368,endodontic extraxt herbal microbiology
+P02369,clinical dental dentistry health paediatric
+P02370,biologi oral
+P02371,gigi masyarakat medicine
+P02375,focuse on safety team
+P02375,effectiveness
+P02375,application health improve oral practical to worldwide
+P02381,affordable aims group provide to
+P02382,biology oral
+P02389,biomaterial
+P02404,biomedical
+P02404,health public
+P02404,advance innovation technological to understanding
+P02404,prevention
+P02404,academic collaboration foster
+P02404,care finding improved into patient scientific translate
+P02404,education
+P02404,development policy
+P02407,information technology
+P02407,biomedical
+P02407,safety
+P02414,researcher
+P02415,researcher
+P02416,researcher
+P02417,researcher
+P02426,cohort study
+P02426,assessment factor health population risk
+P02427,a assistant dedicated field group is najwati our research
+P02427,collection contributing data to
+P02427,engagement participant
+P02428,a disease foundation strong surveillance with
+P02428,analysis data
+P02428,factor risk
+P02429,coordination participant
+P02429,field operation
+P02429,contributing epidemiological our study success to
+P02430,ade
+P02430,collection contribute data she to
+P02430,field operation
+P02430,coordination participant
+P02430,initiative our research success supporting
+P02432,coastal environmental expert health
+P02432,drinking quality water
+P02432,assessment ehra environmental health risk
+P02432,coastal domestic water
+P02433,clean supply water
+P02433,assessment ehra environmental health risk
+P02433,amdal
+P02433,environmental health quality
+P02435,technology treatment wastewater water
+P02435,based community management solid waste
+P02436,environmental expert health microbiology
+P02436,environmental health microbiology
+P02437,groundwater quality
+P02437,assessment ehra environmental health risk
+P02438,applied biology ecology environmental
+P02439,hydrobiology
+P02439,fishery
+P02439,aquatic toxicology
+P02440,ecology human
+P02440,environment
+P02442,quality water
+P02442,environmental sanitation
+P02443,envoromental health
+P02447,cdw team
+P02448,eiarg team
+P02453,environmental health
+P02455,herbal medicine traditional
+P02456,health occupational
+P02456,construction health occupational safety
+P02473,deficiency food functional nutritional
+P02474,obesity prevention
+P02474,child health
+P02474,gut microbiome
+P02489,assistance development health system technical
+P02490,health public
+P02491,medicine
+P02492,isoshrg leader
+P02494,disease injury related work
+P02496,collaboration external
+P02497,collaboration external
+P02502,leader
+P02532,particularly population vulnerable
+P02533,child maternal nutrition
+P02534,health intervention nutrition public
+P02561,disease metabolic nutrition
+P02562,nutrition survey
+P02563,anthropology nutritional
+P02565,education nutrition
+P02573,about focus information present research theme we
+P02573,research team
+P02573,as as publication various well
+P02573,book including
+P02574,aviation health occupational safety sector
+P02575,engineering safety
+P02578,epidemiologist
+P02579,epidemiologist
+P02580,epidemiologist
+P02581,biology moleculer
+P02582,epidemiologist
+P02583,epidemiologist
+P02587,homepage
+P02587,scholar
+P02587,sinta
+P02588,homepage
+P02588,scholar
+P02588,sinta
+P02589,scholar
+P02589,researchgate
+P02589,sinta
+P02590,homepage
+P02590,scholar
+P02590,orcid
+P02590,linkedin
+P02590,researchgate
+P02594,epidemiology genetic social
+P02595,epidemiology health public
+P02596,environmental health
+P02596,control rat vector
+P02597,adolescent epidemiology health
+P02598,behavioral health promotion
+P02599,epidemiology
+P02600,epidemiology global health
+P02609,health occupational
+P02610,health health occupational occupational psychology
+P02610,hazard identification
+P02610,assessment control hirarc risk risk
+P02614,epidemiogy
+P02618,health reproductive
+P02622,ambassador global sustainability
+P02633,biological group integrate
+P02633,behavioral
+P02633,development intervention
+P02634,pharmacology
+P02634,pharmacoepidemiology pharmacogenetic
+P02634,applied pharmacoepidemiology pharmacology
+P02635,clinical community pharmacy qualitative research
+P02635,outcome patient reported
+P02635,instrument research validation
+P02635,health life quality related
+P02636,pharmacology toxicology
+P02637,biomaterial pharmaceutical
+P02637,advanced manufacturing
+P02637,diagnosis transdermal
+P02638,clinical pharmacy
+P02639,natural product
+P02640,chemistry medicinal pharmacology
+P02641,biomarker blood
+P02647,herbal medicine
+P02648,administrative behavioral pharmacy social
+P02649,clinical pharmacy
+P02654,a design focus on primary with
+P02654,development
+P02654,compound novel pharmaceutical synthesis
+P02656,phytochemical
+P02657,delivery dermal drug trandermal
+P02657,pharmaceutical technology
+P02657,delivery intradermal system transdermal
+P02657,microneedle
+P02658,pharmacognosy
+P02659,phytochemistry
+P02660,pharmaceutical
+P02661,pharmaceutical
+P02662,immunology
+P02662,biology cancer
+P02663,biology cancer immunology
+P02664,pharmaceutic translational
+P02664,advanced delivery drug
+P02664,formulation pharmaceutical
+P02664,liposome
+P02664,delivery drug transdermal
+P02664,microneedle
+P02664,controlled delivery drug targeted
+P02664,based hydrogen sulphide therapeutic
+P02669,drug nature team
+P02670,pharmacology
+P02670,immunology
+P02670,virology
+P02675,pharmaceutical technology
+P02676,material
+P02676,radiopharmaceutical
+P02676,nanotechnology
+P02680,pharmaceutical technology
+P02681,pharmaceutical technology
+P02682,pharmaceutical technology
+P02683,pharmaceutical technology
+P02684,pharmaceutical technology
+P02685,pharmaceutical technology
+P02686,pharmaceutical technology
+P02687,pharmaceutical technology
+P02688,pharmaceutical technology
+P02689,pharmaceutical technology
+P02690,pharmaceutical technology
+P02691,pharmaceutical technology
+P02692,chemistry medicinal
+P02692,biology chemical
+P02693,pharmacognosy phytochemistry
+P02693,extraction identification natural product
+P02694,phytochemistry
+P02694,chemistry natural product
+P02694,analysis natural product
+P02695,chemistry pharmaceutical
+P02704,metabolomic natural product
+P02705,phytochemistry
+P02705,chemistry natural product
+P02705,metabolomic
+P02706,alkaloid extraction
+P02708,a been bioactive compound has long nature treasure trove
+P02708,agriculture
+P02708,biological decode its significance
+P02708,application discovery into real translate world
+P02709,clinical pharmacy
+P02710,clinical pharmacy phytotherapy
+P02711,hta pharmacoeconomic
+P02712,clinical community disease infectious pharmacy
+P02713,clinical pharmacy
+P02713,pharmacogenomic
+P02713,health pharmacy women
+P02714,pharmacology
+P02714,neuroscience
+P02715,clinical pharmacy
+P02717,cost
+P02717,qol
+P02719,attitude herbal medicine pharmacist project
+P02719,barrier
+P02719,community information pharmacy source
+P02723,attitude
+P02723,perception pharmacogenomic
+P02724,cam project use
+P02724,adherence medication
+P02724,hiv life people quality with
+P02724,aids
+P02730,community evaluation knowledge pharmacist project
+P02730,attitude
+P02730,perception
+P02732,association between complementary medicine project use
+P02732,adherence medication
+P02732,among epilepsy life patient quality with
+P02756,medical nursing surgical
+P02756,cronic disease
+P02756,disease infectious
+P02756,care efficacy management self self
+P02756,management selfcare
+P02757,fisioteraphy
+P02758,community family nursing
+P02759,medical nursing palliative surgical
+P02760,medical nursing surgical
+P02761,chronic community disease
+P02762,endocrinology
+P02762,biomolecular development herbal nursing
+P02763,cardiac instructur rehabilitation renal
+P02764,clinical study trial
+P02765,nursing
+P02766,clinical trial
+P02766,epidemiology
+P02766,pharmacology
+P02767,community nursing
+P02769,adult nursing nursing perioperative
+P02770,basic nursing
+P02770,adult nursing
+P02771,care community health home nursing
+P02772,adult nursing
+P02773,medical nursing surgical urogenital
+P02777,collaboration
+P02777,innovation
+P02778,complementary therapy
+P02778,biomedic
+P02778,nursing pharmacology
+P02779,health mental nursing
+P02780,health mental nursing
+P02781,health mental nursing
+P02782,health mental nursing psychiatric
+P02782,adolescent health mental
+P02783,health mental nursing
+P02785,disparity health
+P02786,health mental
+P02787,health mental nursing
+P02789,health mental nursing
+P02790,health mental nursing
+P02791,care neuroscience palliative
+P02792,care critical nursing
+P02792,cardiovascular critical
+P02792,chronic disease
+P02793,nursing
+P02794,acute care critical nursing
+P02795,leadership nursing
+P02795,health readiness system
+P02796,healthcare patient quality safety
+P02797,nursing
+P02798,neo nurs team
+P02800,child development growth
+P02801,child family health nursing
+P02802,child development growth
+P02803,care critical pediatric
+P02804,information system
+P02805,health mental nursing psychiatric
+P02806,community health nursing
+P02808,development platform technology
+P02809,child development growth
+P02810,child family health nursing
+P02811,child health nursing
+P02812,nursing
+P02813,nursing pediatric
+P02814,nursing pediatric
+P02815,pednrg team
+P02816,especially maternity nursing population vulnerable
+P02817,clinical community expert maternity nursing setting
+P02818,expert health nursing s women
+P02819,expert neonatal nursing
+P02820,community expert medicine nutrition preventive
+P02821,expert maternity nursing
+P02828,clinical community maternity nursing setting
+P02829,anak infeksi nursing pada penyakit transkultural
+P02831,care emergency nursing
+P02832,care intensive neonatal
+P02833,nursing pediatric
+P02834,midwifery nursing
+P02835,nursing
+P02838,leste timor
+P02839,leste timor
+P02846,regency tojo una una
+P02852,psychologically
+P02852,socially
+P02852,consequently spiritually
+P02853,malignant management wound
+P02853,healing theraphy wound
+P02853,diabetic foot ulcre
+P02853,medical nursing surgical
+P02859,cancer center national
+P02861,a cancer global health issue major remain
+P02861,cancer common five globally most type
+P02861,order
+P02861,are cancer lung
+P02861,breast cancer
+P02861,cancer colorectal
+P02861,cancer prostate
+P02861,cancer stomach
+P02876,innovation
+P02876,capacity enhance human resource
+P02876,adaptation change climate
+P02876,eco friendly marine tourism
+P02876,energy ocean renewable
+P02877,resource water
+P02877,coastal engineering
+P02878,architecture
+P02879,coastal resilience settlement
+P02885,forensic medicine medicolegal specialist
+P02886,criminologist
+P02887,forensic medicine medicolegal specialist
+P02888,expert reserach statistic
+P02892,approach complementary
+P02892,epidemiology
+P02892,health women
+P02892,biostatistic
+P02893,economic
+P02893,management marketing service
+P02894,material physicsiibiophysicsiibiomaterial
+P02895,midwifery
+P02896,midwifery
+P02897,chemistry pharmaceutical
+P02898,food nutrition
+P02898,engineering food
+P02898,food safety
+P02898,food industry
+P02899,honeybee
+P02899,bacteria gut
+P02899,analysis bee honey product
+P02899,ecology pollination
+P02900,nursing
+P02900,health women
+P02901,pharmacology
+P02901,pharmacognosy
+P02901,natural pharmacy product
+P02902,midwifery
+P02903,midwifery
+P02904,midwifery
+P02905,midwifery
+P02906,midwifery
+P02907,midwifery
+P02908,midwifery
+P02909,midwifery
+P02910,midwifery

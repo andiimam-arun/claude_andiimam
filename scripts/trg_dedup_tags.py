@@ -74,9 +74,21 @@ for i, p in enumerate(pen):
         v = p[col].strip()
         if v:
             idx[(col, v)].append(i)
-for ids in idx.values():
-    for j in ids[1:]:
-        union(ids[0], j)
+# ID yang sama pada dua orang bernama sama sekali berbeda hampir pasti salah ketik di platform (ID salin-tempel); jangan gabungkan, catat untuk ditinjau.
+_tok = lambda i: {t for t in pen[i]["_key"].split() if len(t) >= 3}
+ID_KONFLIK = []
+for (col, val), ids in idx.items():
+    members = []
+    for j in ids:
+        for k in members:
+            if _tok(k) & _tok(j) or not _tok(k) or not _tok(j):
+                union(k, j); break
+        else:
+            if members:
+                ID_KONFLIK.append((col, val, pen[members[0]]["nama"], pen[members[0]]["trg_slug"], pen[j]["nama"], pen[j]["trg_slug"]))
+        members.append(j)
+with open(f"{D}/id_konflik.csv", "w", newline="", encoding="utf-8") as _fh:
+    _w = csv.writer(_fh); _w.writerow(["kolom_id", "nilai_id", "nama_a", "trg_a", "nama_b", "trg_b"]); _w.writerows(sorted(set(ID_KONFLIK)))
 id_groups = {find(i) for i in range(len(pen))}
 # koreksi manusia: paksa gabung / larang gabung
 _by_key = C.defaultdict(list)

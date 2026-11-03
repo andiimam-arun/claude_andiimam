@@ -36,10 +36,18 @@ FACULTY_CLUSTER = {
 SECTIONS = {  # subhalaman -> nama keluaran
     "articles": "publikasi", "books": "buku", "patens": "paten", "research-project": "proyek",
 }
+# Nama halaman berbeda antar-TRG (mis. /our-team/ bukan /ourteam/). Dicoba berurutan sampai ada isi; hanya dipakai bila nama utama kosong.
+ALT = {
+    "ourteam": ["our-team", "team", "our-teams", "ourteam-2", "our-team-2", "the-team", "people", "members"],
+    "articles": ["article", "our-articles", "publications", "articles-2"],
+    "books": ["book", "books-2"],
+    "patens": ["patents", "paten", "patent", "patens-2"],
+    "research-project": ["projects", "research-projects", "project", "research-project-2"],
+}
 ROLE_WORDS = {"leader", "lecturers", "lecturer", "external collaborators", "external collaborator",
               "researchers", "researcher", "students", "student"}
 
-ROLE_RX = [(re.compile(r"^(group\s+)?leader(\s+group|\s+of\b.*|s)?$|^ketua\b|^head of", re.I), "Leader"),
+ROLE_RX = [(re.compile(r"^(group\s+)?leader(\s+group|\s+of\b.*|s)?$|^ketua\b|^head of|^(research\s+)?(group\s+)?(director|coordinator|chair(person)?|principal investigator)s?$|^(our|the)\s+(group\s+)?leaders?$|^leader\b[\w .&/-]{0,30}$|^(group\s+)?(director|head)\s+of\s+[\w .&-]{2,30}$", re.I), "Leader"),
            (re.compile(r"supervising|lecturer|dosen", re.I), "Lecturer"),
            (re.compile(r"external|partner|collaborator|mitra", re.I), "External collaborator"),
            (re.compile(r"researcher|peneliti", re.I), "Researcher"),
@@ -276,15 +284,108 @@ def leader_from_headings(s):
     return []
 
 
-def fetch_section(f, slug, sub, log, base=None):
+NAME_BAD = re.compile(r"\b(please|select|listing|show|no data|found|specialist|science|sciences|administration|policy|health|research|group|faculty|department|"
+                      r"universit\w*|institute|studies|technology|engineering|education|team|overview|partners?|activities|articles?|books?|patents?|projects?|contact|"
+                      r"home|about|search|menu|none|n/?a|tba|we|work|together|our|meet|who|what|why|contributions?|expertise|email|homepage|scopus|scholar|sinta)\b", re.I)
+BARE = re.compile(r"^(our\s+|the\s+)?(group\s+|research\s+group\s+)?(leaders?|director|coordinator|chair(man|person)?|head|principal investigators?)$", re.I)
+LEADDESC = re.compile(r"^(group\s+|research\s+group\s+|team\s+)?(leader|chair(man|person)?|head|director|coordinator|principal investigator|ketua)\b.*\b(group|team|trg|research)\b", re.I)
+TITLE = re.compile(r"\b(prof|dr|drs?|ir|apt|ph\.?d|m\.?\s?(si|sc|eng|kes|pd|hum|t|a|kom|ed|app\.?ling)|s\.?\s?(si|t|pt|kom|hum|gz|ked|km|farm|e|h|s)|mph|msc|mt)\b\.?", re.I)
+
+
+def looks_like_person(x):
+    """Baris nama orang: bukan pesan sistem/judul/afiliasi; berisi gelar akademik, atau 2-5 kata berhuruf kapital."""
+    x = x.strip()
+    if not x or len(x) > 90 or NAME_BAD.search(x) or AFF.search(x):
+        return False
+    toks = x.replace(",", " ").split()
+    if TITLE.search(x) and len(toks) >= 2:
+        return True
+    return 2 <= len(toks) <= 5 and all(t[:1].isupper() for t in toks if t[:1].isalpha())
+
+
+def leader_from_text(s):
+    """Cadangan terakhir: urutan teks halaman. Setiap judul peran ketua ('Leader', 'Director', 'Our Leader', 'Leader of X') diperiksa;
+    yang pertama diikuti baris nama orang (bukan angka penghitung, pesan sistem, atau afiliasi) dipakai."""
+    s = strip_noise(s)
+    s = re.sub(r"<(script|style)\b.*?</\1>", " ", s, flags=re.S | re.I)
+    lines = [clean(x) for x in re.split(r"<[^>]+>", s)]
+    lines = [x for x in lines if x]
+    mk = lambda n: [dict(role="Leader", fields=[], links=[], name=n, p="", texts=[])]
+    for k, line in enumerate(lines):
+        if role_of(line) != "Leader" and not LEADDESC.match(line):
+            continue
+        counter = k + 1 < len(lines) and bool(re.fullmatch(r"[\d.,]+", lines[k + 1]))
+        prev = lines[k - 1] if k else ""
+        before = None if (counter or not prev or role_of(prev) or not looks_like_person(prev)) else mk(prev)
+        after = None
+        for cand in lines[k + 1:k + 4]:
+            if re.fullmatch(r"[\d.,]+", cand) or role_of(cand):
+                break
+            if looks_like_person(cand):
+                after = mk(cand); break
+        # judul bagian polos ("Leader") -> nama di bawahnya; keterangan ("Leader of X", "Chairman ... Group") -> nama di atasnya
+        found = (after or before) if BARE.match(line) else (before or after)
+        if found:
+            return found
+    return []
+
+
+PROSE_LEAD = re.compile(r"\b(as|is|serves as|acts as)\s+the\s+(team|group|research group|trg)?\s*leader\b|\bleader of (the|this) (team|group|research group)\b", re.I)
+
+
+def leader_from_prose(s):
+    """Nama di baris atas kalimat 'As the team leader, ...' (dugaan; dicatat sebagai INFERRED)."""
+    s = strip_noise(s)
+    s = re.sub(r"<(script|style)\b.*?</\1>", " ", s, flags=re.S | re.I)
+    lines = [clean(x) for x in re.split(r"<[^>]+>", s)]
+    lines = [x for x in lines if x]
+    for k, line in enumerate(lines):
+        if PROSE_LEAD.search(line):
+            for prev in reversed(lines[max(0, k - 6):k]):
+                if looks_like_person(prev) and not role_of(prev):
+                    return [dict(role="Leader", fields=[], links=[], name=prev, p="", texts=[])]
+    return []
+
+
+LEAD_PAGES = ["about", "about-us", "aboutus", "research-group-overview", "overview", "team-member"]
+
+
+def add_leader(slug, rows, lead, how, inferred=False):
+    """Tambahkan/naikkan baris ketua pada rows['peneliti'] (format team_row)."""
+    name = lead[0]["name"]
+    for r in rows["peneliti"]:
+        if r[2].strip().lower() == name.strip().lower():
+            r[1] = "Leader"
+            break
+    else:
+        row, mail = team_row(slug, lead[0]); row[1] = "Leader"; rows["peneliti"].insert(0, row)
+        if mail: rows["kontak"].append([slug, name, mail])
+    if inferred:
+        INFERRED.append((slug, name, how))
+
+
+def fetch_any(f, slug, sub, log, base=None):
+    """fetch_section pada nama utama; bila kosong, coba nama alternatif (ALT) sampai ada isi."""
+    items = fetch_section(f, slug, sub, log, base)
+    for alt in ([] if items else ALT.get(sub, [])):
+        items = fetch_section(f, slug, alt, log, base, team=(sub == "ourteam"))
+        if items:
+            break
+    return items
+
+
+def fetch_section(f, slug, sub, log, base=None, team=None):
     url = f"{base or BASE + '/' + slug}/{sub}/"
     st, body = f.get(url)
     log.append((slug, sub, 1, st))
     if st != 200:
         return []
     items = parse_items(body)
-    if sub == "ourteam" and not any(it["role"] == "Leader" for it in items):
-        lead = leader_from_headings(body)
+    if (sub == "ourteam" if team is None else team) and not any(it["role"] == "Leader" for it in items):
+        lead = leader_from_text(body)
+        if not lead:
+            lead = leader_from_headings(body)
+            lead = lead if lead and looks_like_person(lead[0]["name"]) else []
         if lead:
             same = [it for it in items if it["name"].lower() == lead[0]["name"].lower()]
             if same:
@@ -364,7 +465,7 @@ def crawl_trg(f, t):
         m = re.search(r'(?:property="og:description"|name="description") content="([^"]*)"', main)
         desc = html.unescape(m.group(1)).strip() if m else ""
     t["description"] = desc
-    for it in fetch_section(f, t["slug"], "ourteam", log, site):
+    for it in fetch_any(f, t["slug"], "ourteam", log, site):
         if not it["name"]:
             continue
         row, mail = team_row(t["slug"], it)
@@ -372,7 +473,7 @@ def crawl_trg(f, t):
         if mail:
             rows["kontak"].append([t["slug"], it["name"], mail])
     for sub, key in SECTIONS.items():
-        for it in fetch_section(f, t["slug"], sub, log, site):
+        for it in fetch_any(f, t["slug"], sub, log, site):
             fl = it["fields"] + [""] * 4
             link = next((l for l in it["links"] if l.startswith("http")), "")
             if key == "publikasi":
@@ -382,6 +483,21 @@ def crawl_trg(f, t):
                 rows[key].append([t["slug"], fl[0], fl[1], fl[2], year, link])
             else:
                 rows[key].append([t["slug"], json.dumps(it["fields"], ensure_ascii=False), link])
+    if not any(r[1] == "Leader" for r in rows["peneliti"]):
+        # ketua tidak terbaca di halaman tim: cari di halaman lain (beranda, tentang, tim) lalu di kalimat prosa
+        for sub in [""] + LEAD_PAGES:
+            st2, body2 = f.get(f"{site}/{sub}/" if sub else t["url"])
+            log.append((t["slug"], sub or "home", 1, st2))
+            lead = leader_from_text(body2) if st2 == 200 else []
+            if lead:
+                add_leader(t["slug"], rows, lead, f"label Leader di halaman /{sub}/" if sub else "label Leader di beranda"); break
+        else:
+            st2, body2 = f.get(f"{site}/ourteam/")
+            lead = leader_from_prose(body2) if st2 == 200 else []
+            if not lead:
+                st2, body2 = f.get(f"{site}/our-team/"); lead = leader_from_prose(body2) if st2 == 200 else []
+            if lead:
+                add_leader(t["slug"], rows, lead, "kalimat prosa menyebut 'team leader'", inferred=True)
     infer_leader(t["slug"], rows["peneliti"])
     t["n_peneliti"] = len(rows["peneliti"])
     t["n_publikasi"] = len(rows["publikasi"])
