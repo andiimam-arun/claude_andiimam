@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.05-b">
+<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.05-c">
 </head>
 <body>
 <a class="skip" href="#main" data-i="skip">Lewati ke konten</a>
@@ -55,6 +55,7 @@
     <button class="tab" role="tab" id="tab-trg" data-tab="trg" aria-selected="false" aria-controls="trg" data-i="tabTrg">Daftar TRG</button>
     <button class="tab" role="tab" id="tab-luar" data-tab="luar" aria-selected="false" aria-controls="luar" data-i="tabLuar" hidden>Pakar di luar TRG</button>
     <button class="tab" role="tab" id="tab-dunia" data-tab="dunia" aria-selected="false" aria-controls="dunia" data-i="tabDunia" hidden>Kolaborasi global</button>
+    <button class="tab" role="tab" id="tab-out" data-tab="out" aria-selected="false" aria-controls="out" data-i="tabOut" hidden>Output Unhas</button>
   </div>
 
   <div id="loadmsg" class="notice" role="status" data-i="loading">Memuat data…</div>
@@ -121,6 +122,21 @@
     </div>
     <h2 class="map-h" id="d-top-h"></h2>
     <ol class="map-top" id="d-top"></ol>
+    <div class="two-col" id="d-mitra" hidden>
+      <div><h2 class="map-h" id="d-intl-h"></h2><ol class="map-top" id="d-intl"></ol></div>
+      <div><h2 class="map-h" id="d-dom-h"></h2><ol class="map-top" id="d-dom"></ol></div>
+    </div>
+  </section>
+
+  <section id="out" class="panel" role="tabpanel" aria-labelledby="tab-out" hidden>
+    <p class="notice" id="o-note"></p>
+    <dl class="kpis small" id="o-kpis"></dl>
+    <div class="card-block"><h2 id="o-year-h"></h2><p class="muted" id="o-year-p"></p><svg id="o-year" class="chart" viewBox="0 0 900 300" role="img" aria-labelledby="o-year-t"><title id="o-year-t"></title></svg><div class="legend" id="o-year-lg"></div></div>
+    <div class="card-block"><h2 id="o-q-h"></h2><p class="muted" id="o-q-p"></p><svg id="o-q" class="chart" viewBox="0 0 900 300" role="img" aria-labelledby="o-q-t"><title id="o-q-t"></title></svg><div class="legend" id="o-q-lg"></div><div id="o-q-dom"></div></div>
+    <div class="two-col">
+      <div class="card-block"><h2 id="o-f-h"></h2><p class="muted" id="o-f-p"></p><div class="bars" id="o-f"></div></div>
+      <div class="card-block"><h2 id="o-s-h"></h2><p class="muted" id="o-s-p"></p><div class="bars" id="o-s"></div></div>
+    </div>
   </section>
 
   <section id="luar" class="panel" role="tabpanel" aria-labelledby="tab-luar" hidden>
@@ -153,11 +169,11 @@
     <p id="foot-src"></p>
     <p class="muted" data-i="disclaimer">Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.</p>
     <p class="muted" id="foot-contact"></p>
-    <p class="muted">Versi halaman 2026.11.05-b</p>
+    <p class="muted">Versi halaman 2026.11.05-c</p>
   </div>
 </footer>
-<script src="assets/js/config.js?v=2026.11.05-b"></script>
-<script src="data/peta-data.js?v=2026.11.05-b"></script>
-<script src="assets/js/app.js?v=2026.11.05-b"></script>
+<script src="assets/js/config.js?v=2026.11.05-c"></script>
+<script src="data/peta-data.js?v=2026.11.05-c"></script>
+<script src="assets/js/app.js?v=2026.11.05-c"></script>
 </body>
 </html>

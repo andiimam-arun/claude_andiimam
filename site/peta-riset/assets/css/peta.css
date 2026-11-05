@@ -205,3 +205,33 @@ a.chip:hover { border-color: var(--glori-navy-soft); color: var(--glori-navy); }
 .map-top .bar.on { background: var(--glori-soft); }
 @media (max-width: 820px) { .map-wrap { grid-template-columns: 1fr; } }
 .map-top .fill { background: var(--glori-navy); }
+
+/* detail negara dengan publikasi, mitra, panel output */
+.map-wrap { display: block; }
+.map-detail { margin-top: 14px; }
+.map-detail.two { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px; }
+.seg.small button { padding: 4px 12px; font-size: 13px; }
+.pubs { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 10px; font-size: 14px; }
+.pubs a { font-weight: 500; text-underline-offset: 2px; }
+.pubmeta, .pubwho { margin: 2px 0 0; font-size: 13px; color: var(--glori-muted); }
+.pubwho { font-size: 12.5px; }
+.qb { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 4px; font: 600 11px var(--font-head); color: #fff; vertical-align: 1px; }
+.qb.Q1 { background: #0f1a3c; } .qb.Q2 { background: #2c3f7c; } .qb.Q3 { background: #5a76c4; } .qb.Q4 { background: #93a7dc; color: var(--glori-navy); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.bar.static { cursor: default; } .bar.static:hover { background: none; }
+.bar .cc { color: var(--glori-muted); }
+.kpis.small { margin: 8px 0 16px; }
+.chart { width: 100%; height: auto; }
+.chart .grid { stroke: var(--glori-line); stroke-width: 1; }
+.chart .ax { font: 11px var(--font-body); fill: var(--glori-muted); }
+.chart .val { font: 600 11px var(--font-head); fill: var(--glori-navy); }
+.chart .b-oa, .sw.b-oa { fill: #2c3f7c; background: #2c3f7c; }
+.chart .b-closed, .sw.b-closed { fill: #c9d3ee; background: #c9d3ee; }
+.chart .partial rect { opacity: .55; }
+.chart .q-q1, .sw.q-q1 { fill: #0f1a3c; background: #0f1a3c; } .chart .q-q2, .sw.q-q2 { fill: #2c3f7c; background: #2c3f7c; }
+.chart .q-q3, .sw.q-q3 { fill: #5a76c4; background: #5a76c4; } .chart .q-q4, .sw.q-q4 { fill: #93a7dc; background: #93a7dc; }
+.chart .q-tanpa, .sw.q-tanpa { fill: #e3e7f1; background: #e3e7f1; }
+.legend .lg-item { display: inline-flex; align-items: center; gap: 4px; margin-right: 14px; font-size: 13px; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; }
+@media (max-width: 820px) { .map-detail.two, .two-col { grid-template-columns: 1fr; } }
+.kpis.small dt { color: var(--glori-muted); } .kpis.small dd { color: var(--glori-navy); }

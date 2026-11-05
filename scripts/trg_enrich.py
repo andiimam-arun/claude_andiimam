@@ -16,7 +16,7 @@ Prinsip:
 - Alamat email kontak diambil dari variabel lingkungan BIBLIO_MAILTO (kebijakan "polite pool"); tidak ditulis di kode.
 - Alamat dasar API dapat diganti (OPENALEX_BASE, CROSSREF_BASE, ORCID_BASE) untuk uji dengan server tiruan.
 """
-import argparse, csv, difflib, hashlib, json, os, re, sys, time, urllib.parse, urllib.request, urllib.error
+import argparse, csv, difflib, hashlib, http.client, json, os, re, sys, time, urllib.parse, urllib.request, urllib.error
 
 OA = os.environ.get("OPENALEX_BASE", "https://api.openalex.org").rstrip("/")
 CR = os.environ.get("CROSSREF_BASE", "https://api.crossref.org").rstrip("/")
@@ -73,7 +73,7 @@ def get_json(url, cache, headers=None):
             if e.code in (429, 500, 502, 503, 504):
                 time.sleep(2 ** attempt * 2); continue
             raise
-        except (urllib.error.URLError, TimeoutError):
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException):   # termasuk koneksi diputus di tengah jalan
             time.sleep(2 ** attempt)
     return None
 

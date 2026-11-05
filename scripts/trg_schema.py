@@ -94,8 +94,18 @@ save("kuartil.schema.json", {"$schema": D2020, "title": "Artikel Q1-Q4 per TRG (
     "total": obj({k: INT for k in ("artikel", "tercocok", "bertindeks", "Q1", "Q2", "Q3", "Q4", "Q12", "sejak_Q12")}, ["artikel", "tercocok", "bertindeks", "Q1", "Q2", "Q12"]),
     "trg": {"type": "object", "description": "slug TRG -> hitungan", "additionalProperties": obj({"n": INT, "c": INT, "i": INT, "q1": INT, "q2": INT, "q3": INT, "q4": INT, "rn": INT, "ri": INT, "r1": INT, "r2": INT}, ["n", "c", "i", "q1", "q2", "q3", "q4", "rn", "ri", "r1", "r2"])}},
     ["dibuat", "sumber", "sjr_tahun", "dari", "total", "trg"])})
+karya = obj({"id": STR, "doi": STR, "t": STR, "y": INT, "c": INT, "j": STR, "q": STR, "u": arr(STR), "m": arr(STR)}, ["id", "t", "y", "c"])
 save("kolaborasi.schema.json", {"$schema": D2020, "title": "Kolaborasi internasional menurut negara (opsional)", **obj({
     "dibuat": STR, "sumber": STR, "institusi": STR, "dari": INT, "karya_unhas": INT, "n_negara": INT, "n_negara_semua": INT,
-    "negara": arr(obj({"c": {"type": "string", "pattern": "^[A-Z]{2}$"}, "en": STR, "n": INT, "r": INT, "inst": arr(obj({"id": STR, "nama": STR, "n": INT}, ["id", "nama", "n"]))}, ["c", "en", "n", "r", "inst"]))},
+    "negara": arr(obj({"c": {"type": "string", "pattern": "^[A-Z]{2}$"}, "en": STR, "n": INT, "r": INT, "inst": arr(obj({"id": STR, "nama": STR, "n": INT}, ["id", "nama", "n"])),
+                  "top": arr(karya), "baru": arr(karya)}, ["c", "en", "n", "r", "inst"]))},
     ["dibuat", "sumber", "dari", "karya_unhas", "n_negara", "negara"])})
-print("skema model baca: peneliti, trg, tag, meta, insights, openalex, kuartil, kolaborasi")
+save("luaran.schema.json", {"$schema": D2020, "title": "Luaran Unhas keseluruhan (opsional)", **obj({
+    "dibuat": STR, "sumber": STR, "institusi": STR, "dari": INT, "bidang_dari": INT,
+    "tahun": arr(obj({"y": INT, "semua": INT, "artikel": INT, "oa": INT}, ["y", "semua", "artikel", "oa"])), "jenis": arr(obj({"k": STR, "n": INT}, ["k", "n"])),
+    "bidang": arr(obj({"id": STR, "nama": STR, "n": INT}, ["id", "nama", "n"])), "sdg": arr(obj({"id": INT, "nama": STR, "n": INT}, ["id", "nama", "n"])),
+    "mitra": obj({"intl": arr(obj({"id": STR, "nama": STR, "negara": STR, "n": INT}, ["id", "nama", "n"])), "dalam_negeri": arr(obj({"id": STR, "nama": STR, "negara": STR, "n": INT}, ["id", "nama", "n"]))}, ["intl", "dalam_negeri"]),
+    "kuartil": arr(obj({"y": INT, "q1": INT, "q2": INT, "q3": INT, "q4": INT, "tanpa": INT, "total": INT}, ["y", "q1", "q2", "q3", "q4", "tanpa", "total"])),
+    "jurnal_dominan": arr(obj({"y": INT, "jurnal": STR, "n": INT, "pct": INT}, ["y", "jurnal", "n", "pct"]))},
+    ["dibuat", "sumber", "tahun", "bidang", "sdg", "mitra", "kuartil"])})
+print("skema model baca: peneliti, trg, tag, meta, insights, openalex, kuartil, kolaborasi, luaran")

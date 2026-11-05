@@ -132,3 +132,10 @@ Cadangkan folder `data/overrides/`, `data/forms/`, dan `data/snapshots/`: itu sa
 `scripts/trg_map_geo.py` membuat jalur SVG peta dunia dari TopoJSON `world-atlas` (domain publik Natural Earth; perlu paket `pycountry` hanya saat membangun).
 Hasilnya `site/peta-riset/data/kolaborasi.json` dan `dunia.json`; tab "Kolaborasi global" hanya muncul bila keduanya ada. Karya dengan 50 penulis atau lebih
 dikeluarkan; satu karya dihitung sekali per negara, jadi angka antar-negara tidak boleh dijumlahkan. Dijalankan juga oleh `trg_refresh.py --openalex`.
+
+### Output Unhas dan mitra institusi
+
+`scripts/trg_openalex_luaran.py` menarik luaran Unhas secara keseluruhan dari OpenAlex: artikel per tahun (dengan bagian akses terbuka), komposisi kuartil per tahun
+(dari `kuartil_unhas.csv`), bidang riset, SDG, dan institusi mitra luar dan dalam negeri. Hasil: `site/peta-riset/data/luaran.json` (tab "Output Unhas"; daftar mitra tampil di tab peta).
+`trg_openalex_negara.py` kini juga menyimpan karya terpilih per negara (8 paling banyak dikutip, 5 terbaru) dengan lencana kuartil bila `--sjr TAHUN=BERKAS` diberikan.
+Catatan: "akses terbuka" menurut OpenAlex mencakup salinan di repositori; satu jurnal dominan dalam setahun (mis. suplemen konferensi) dapat memiringkan komposisi kuartil, dan halaman menandainya.

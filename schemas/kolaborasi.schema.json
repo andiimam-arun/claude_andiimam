@@ -88,6 +88,106 @@
                 }
               }
             }
+          },
+          "top": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "t",
+                "y",
+                "c"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "doi": {
+                  "type": "string"
+                },
+                "t": {
+                  "type": "string"
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "j": {
+                  "type": "string"
+                },
+                "q": {
+                  "type": "string"
+                },
+                "u": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "m": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "baru": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "t",
+                "y",
+                "c"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "doi": {
+                  "type": "string"
+                },
+                "t": {
+                  "type": "string"
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "c": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "j": {
+                  "type": "string"
+                },
+                "q": {
+                  "type": "string"
+                },
+                "u": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "m": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       }
