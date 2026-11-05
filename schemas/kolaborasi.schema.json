@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kolaborasi internasional menurut negara (opsional)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dibuat",
+    "sumber",
+    "dari",
+    "karya_unhas",
+    "n_negara",
+    "negara"
+  ],
+  "properties": {
+    "dibuat": {
+      "type": "string"
+    },
+    "sumber": {
+      "type": "string"
+    },
+    "institusi": {
+      "type": "string"
+    },
+    "dari": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "karya_unhas": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_negara": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_negara_semua": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "negara": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "c",
+          "en",
+          "n",
+          "r",
+          "inst"
+        ],
+        "properties": {
+          "c": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "en": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "r": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "inst": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "nama",
+                "n"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nama": {
+                  "type": "string"
+                },
+                "n": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

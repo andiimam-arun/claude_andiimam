@@ -11,6 +11,11 @@
       title: "Peta Riset Unhas", lede: "Temukan peneliti dan kelompok riset tematik (TRG) Universitas Hasanuddin berdasarkan nama, keahlian, dan tema riset.",
       searchLabel: "Cari ahli", searchPh: "Cari nama, keahlian, atau TRG: kakao, malaria, hukum pidana", searchBtn: "Cari",
       kTrg: "TRG", kPeople: "Peneliti", kLead: "TRG dengan ketua terbaca", kPapers: "Artikel tercatat",
+      tabDunia: "Kolaborasi global", dAll: "Semua tahun", dSince: function (y) { return "Sejak " + y; },
+      dNote: function (o) { return "Negara tempat penulis rekan Unhas berafiliasi, dari " + fmt(o.karya_unhas) + " karya berafiliasi Unhas di OpenAlex. Satu karya dihitung sekali per negara tetapi dapat muncul di banyak negara, jadi angka antar-negara tidak boleh dijumlahkan. Karya dengan 50 penulis atau lebih dikeluarkan. Penulis asing yang mencantumkan Unhas sebagai afiliasi kedua ikut terhitung. Sumber: OpenAlex (CC0), " + o.dibuat + "."; },
+      dWorks: function (n) { return fmt(n) + " karya"; }, dTopH: function (o) { return fmt(o.n_negara) + " negara dengan minimal 3 karya bersama (dari " + fmt(o.n_negara_semua) + " negara yang pernah)"; },
+      dPick: "Klik sebuah negara pada peta atau daftar untuk melihat mitra institusinya.", dPartners: "Institusi mitra terbanyak", dHome: "Indonesia (Unhas)", dNone: "Belum ada karya bersama yang tercatat.",
+      dAria: function (o) { return "Peta kolaborasi: " + o.n_negara + " negara dengan minimal 3 karya bersama Unhas."; },
       tabLuar: "Pakar di luar TRG", fLuar: "Cari pakar", fBidang: "Bidang", fSolo: "Hanya yang berafiliasi Unhas saja", otherAff: "Afiliasi lain", allFields: "Semua bidang",
       oaLine: function (m) { return "OpenAlex: h-index " + m.h + " · " + fmt(m.s) + " sitasi · " + fmt(m.k) + " karya"; },
       luarNote: function (o) { return "Penulis berafiliasi Unhas di OpenAlex yang belum tercatat di TRG manapun (" + fmt(o.n_luar_trg) + " dengan minimal 5 karya). Pencocokan memakai ORCID, Scopus ID, lalu nama; profil otomatis OpenAlex dapat keliru atau terpecah, jadi gunakan sebagai petunjuk, bukan data resmi. Sumber: OpenAlex (CC0), " + o.dibuat + "."; },
@@ -43,6 +48,11 @@
       title: "Unhas Research Map", lede: "Find researchers and Thematic Research Groups (TRGs) at Hasanuddin University by name, expertise, and research theme.",
       searchLabel: "Find an expert", searchPh: "Search name, expertise, or TRG: cocoa, malaria, criminal law", searchBtn: "Search",
       kTrg: "TRGs", kPeople: "Researchers", kLead: "TRGs with a leader listed", kPapers: "Recorded articles",
+      tabDunia: "Global collaboration", dAll: "All years", dSince: function (y) { return "Since " + y; },
+      dNote: function (o) { return "Countries where co-authors of Unhas researchers are affiliated, from " + fmt(o.karya_unhas) + " Unhas-affiliated works in OpenAlex. A work counts once per country but can appear in many countries, so figures must not be added across countries. Works with 50 or more authors are excluded. Foreign authors who list Unhas as a second affiliation are included. Source: OpenAlex (CC0), " + o.dibuat + "."; },
+      dWorks: function (n) { return fmt(n) + " works"; }, dTopH: function (o) { return fmt(o.n_negara) + " countries with at least 3 joint works (of " + fmt(o.n_negara_semua) + " ever)"; },
+      dPick: "Click a country on the map or in the list to see its partner institutions.", dPartners: "Top partner institutions", dHome: "Indonesia (Unhas)", dNone: "No joint works recorded yet.",
+      dAria: function (o) { return "Collaboration map: " + o.n_negara + " countries with at least 3 joint works with Unhas."; },
       tabLuar: "Experts outside TRGs", fLuar: "Search experts", fBidang: "Field", fSolo: "Unhas-only affiliation", otherAff: "Other affiliations", allFields: "All fields",
       oaLine: function (m) { return "OpenAlex: h-index " + m.h + " · " + fmt(m.s) + " citations · " + fmt(m.k) + " works"; },
       luarNote: function (o) { return "Unhas-affiliated authors in OpenAlex who are not listed in any TRG (" + fmt(o.n_luar_trg) + " with at least 5 works). Matching uses ORCID, Scopus ID, then name; OpenAlex's automatic profiles can be wrong or split, so treat this as a lead, not an official record. Source: OpenAlex (CC0), " + o.dibuat + "."; },
@@ -97,12 +107,12 @@
     SYN[k] = (SYN[k] || []).concat(SYN_RAW[k]);
     SYN_RAW[k].forEach(function (e) { SYN[e] = (SYN[e] || []).concat([k]); });
   });
-  var TABS = ["cari", "tema", "trg", "luar"];
+  var TABS = ["cari", "tema", "trg", "luar", "dunia"];
   var PAGE = 24;
 
-  var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null, kq: null };
+  var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null, kq: null, kol: null, geo: null };
   var tagById = {}, trgBySlug = {}, haystack = [], kwByTerm = {}, insTema = {};
-  var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", lsolo: true, llimit: PAGE,
+  var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", lsolo: true, llimit: PAGE, dper: "all", dsel: "",
             tq: "", tk: "", tsort: "nama", kw: "", netMin: 3, sel: "" };
   var T = function () { return I18N[S.lang]; };
   var fmt = function (n) { return new Intl.NumberFormat(S.lang === "en" ? "en" : "id-ID").format(n); };
@@ -245,6 +255,50 @@
     $("#count").textContent = rows.length ? t.showing(fmt(shown.length), fmt(rows.length)) : t.none;
     var more = $("#more"); more.hidden = rows.length <= S.limit;
     more.textContent = t.more(Math.min(PAGE, rows.length - S.limit));
+  }
+
+  /* ---------- peta kolaborasi global (OpenAlex) ---------- */
+  var dCache = null;
+  var regionName = function (c, fallback) { try { return new Intl.DisplayNames([S.lang === "en" ? "en" : "id"], { type: "region" }).of(c) || fallback; } catch (e) { return fallback; } };
+  function dLevel(n) { return n >= 500 ? 5 : n >= 200 ? 4 : n >= 50 ? 3 : n >= 10 ? 2 : n > 0 ? 1 : 0; }
+  function dVal(r) { return S.dper === "rec" ? r.r : r.n; }
+  function renderDunia() {
+    var o = D.kol, geo = D.geo, t = T(); if (!o || !geo) return;
+    $("#tab-dunia").hidden = false; $("#d-note").textContent = t.dNote(o);
+    $("#d-all").textContent = t.dAll; $("#d-rec").textContent = t.dSince(o.dari);
+    $("#d-all").setAttribute("aria-pressed", String(S.dper === "all")); $("#d-rec").setAttribute("aria-pressed", String(S.dper === "rec"));
+    $("#d-map").setAttribute("viewBox", "0 0 " + geo.w + " " + geo.h); $("#d-map-title").textContent = t.dAria(o);
+    var byC = {}; o.negara.forEach(function (r) { byC[r.c] = r; });
+    var g = $("#d-countries");
+    if (!dCache) {
+      dCache = {}; geo.negara.forEach(function (c) {
+        var p = document.createElementNS("http://www.w3.org/2000/svg", "path"); p.setAttribute("d", c.d); p.dataset.c = c.c; p.setAttribute("tabindex", c.c && byC[c.c] ? "0" : "-1");
+        p.addEventListener("click", function () { if (byC[c.c]) { S.dsel = c.c; renderDunia(); } });
+        p.addEventListener("keydown", function (e) { if ((e.key === "Enter" || e.key === " ") && byC[c.c]) { e.preventDefault(); S.dsel = c.c; renderDunia(); } });
+        g.appendChild(p); dCache[c.c || c.n] = p;
+      });
+    }
+    geo.negara.forEach(function (c) {
+      var p = dCache[c.c || c.n], r = byC[c.c], lv = c.c === "ID" ? "home" : r ? "l" + dLevel(dVal(r)) : "l0";
+      p.setAttribute("class", lv + (S.dsel === c.c ? " sel" : "") + (r ? " has" : ""));
+      var nm = c.c ? regionName(c.c, c.n) : c.n, ti = p.querySelector("title"); if (!ti) { ti = document.createElementNS("http://www.w3.org/2000/svg", "title"); p.appendChild(ti); }
+      ti.textContent = c.c === "ID" ? t.dHome : r ? nm + ": " + t.dWorks(dVal(r)) : nm; if (r) p.setAttribute("aria-label", nm + ", " + t.dWorks(dVal(r)));
+    });
+    var lg = $("#d-legend"); lg.replaceChildren.apply(lg, [["l1", "1–9"], ["l2", "10–49"], ["l3", "50–199"], ["l4", "200–499"], ["l5", "500+"]].map(function (x) { var s = el("span", "lg " + x[0], x[1]); return s; }));
+    var det = $("#d-detail"), sel = byC[S.dsel];
+    if (!sel) { det.replaceChildren(el("p", "muted", t.dPick)); }
+    else {
+      var kids = [el("h3", null, regionName(sel.c, sel.en)), el("p", "oaline", t.dWorks(sel.n) + " · " + t.dSince(o.dari) + ": " + fmt(sel.r)), el("p", "count", t.dPartners)];
+      var ul = el("ul", "plain"); if (!sel.inst.length) ul.appendChild(el("li", null, t.dNone));
+      sel.inst.forEach(function (i) { var li = el("li"), a = el("a", null, i.nama); a.href = "https://openalex.org/institutions/" + encodeURIComponent(i.id); a.target = "_blank"; a.rel = "noopener"; li.append(a, document.createTextNode(" · " + t.dWorks(i.n))); ul.appendChild(li); });
+      kids.push(ul); det.replaceChildren.apply(det, kids);
+    }
+    var rows = o.negara.slice().sort(function (a, b) { return dVal(b) - dVal(a); }).filter(function (r) { return dVal(r) > 0; }).slice(0, 15), max = rows.length ? dVal(rows[0]) : 1;
+    $("#d-top-h").textContent = t.dTopH(o);
+    var ol = $("#d-top"); ol.replaceChildren.apply(ol, rows.map(function (r) {
+      var li = el("li"), b = el("button", "bar" + (S.dsel === r.c ? " on" : "")); b.type = "button"; b.addEventListener("click", function () { S.dsel = r.c; renderDunia(); });
+      b.appendChild(el("span", "lbl", regionName(r.c, r.en))); var tr = el("span", "track"), f = el("span", "fill"); f.style.width = (100 * dVal(r) / max) + "%"; tr.appendChild(f); b.appendChild(tr); b.appendChild(el("span", "num", fmt(dVal(r)))); li.appendChild(b); return li;
+    }));
   }
 
   /* ---------- pakar di luar TRG (OpenAlex) ---------- */
@@ -447,7 +501,7 @@
     writeUrl();
   }
 
-  function renderAll() { applyI18n(); kpis(); fillSelects(); renderSearch(); renderKwChip(); renderSpot(); renderNet(); renderCloud(); renderTheme(); renderTrg(); renderLuar(); writeUrl(); }
+  function renderAll() { applyI18n(); kpis(); fillSelects(); renderSearch(); renderKwChip(); renderSpot(); renderNet(); renderCloud(); renderTheme(); renderTrg(); renderLuar(); renderDunia(); writeUrl(); }
 
   function bind() {
     var debounce; $("#q").addEventListener("input", function (e) { clearTimeout(debounce); debounce = setTimeout(function () { S.q = e.target.value; S.limit = PAGE; renderSearch(); writeUrl(); }, 150); });
@@ -458,6 +512,8 @@
     $("#f-id").addEventListener("change", function (e) { S.hasId = e.target.checked; S.limit = PAGE; renderSearch(); writeUrl(); });
     $("#f-reset").addEventListener("click", function () { Object.assign(S, { q: "", klaster: "", tema: "", lead: false, hasId: false, kw: "", limit: PAGE }); fillSelects(); renderSearch(); renderKwChip(); writeUrl(); });
     $("#more").addEventListener("click", function () { S.limit += PAGE; renderSearch(); });
+    $("#d-all").addEventListener("click", function () { S.dper = "all"; renderDunia(); });
+    $("#d-rec").addEventListener("click", function () { S.dper = "rec"; renderDunia(); });
     $("#l-q").addEventListener("input", function (e) { S.lq = e.target.value; S.llimit = PAGE; renderLuar(); });
     $("#l-bidang").addEventListener("change", function (e) { S.lf = e.target.value; S.llimit = PAGE; renderLuar(); });
     $("#l-solo").addEventListener("change", function (e) { S.lsolo = e.target.checked; S.llimit = PAGE; renderLuar(); });
@@ -474,14 +530,15 @@
   // Data tertanam (data/peta-data.js) dipakai lebih dulu agar halaman bisa dibuka langsung dari berkas; bila tidak ada, ambil JSON lewat server.
   function loadAll() {
     var B = window.PETA_DATA;
-    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta, B.insights || {}, B.openalex || null, B.kuartil || null]);
-    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta"), load("insights").catch(function () { return {}; }), load("openalex").catch(function () { return null; }), load("kuartil").catch(function () { return null; })]);
+    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta, B.insights || {}, B.openalex || null, B.kuartil || null, B.kolaborasi || null, B.dunia || null]);
+    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta"), load("insights").catch(function () { return {}; }), load("openalex").catch(function () { return null; }), load("kuartil").catch(function () { return null; }), load("kolaborasi").catch(function () { return null; }), load("dunia").catch(function () { return null; })]);
   }
 
   readUrl(); applyI18n(); bind(); show(S.tab);
   loadAll().then(function (r) {
     D.people = r[0]; D.trg = r[1]; D.tag = r[2]; D.meta = r[3]; D.ins = { tema: (r[4] && r[4].tema) || [], edges: (r[4] && r[4].edges) || [], keywords: (r[4] && r[4].keywords) || [] };
     D.oa = r[5] && r[5].metrik ? r[5] : null; if (!D.oa && S.tab === "luar") show("cari");
+    D.kol = r[7] && r[7].negara ? r[7] : null; D.geo = r[8] && r[8].negara ? r[8] : null; if ((!D.kol || !D.geo) && S.tab === "dunia") show("cari");
     D.kq = r[6] && r[6].trg ? r[6] : null; var qo = $("#t-sort-q12"); if (qo) qo.hidden = !D.kq;
     D.tag.forEach(function (g) { tagById[g.tag_id] = g; }); D.trg.forEach(function (g) { trgBySlug[g.slug] = g; });
     D.ins.tema.forEach(function (x) { insTema[x.id] = x; }); D.ins.keywords.forEach(function (k) { kwByTerm[k.t] = k; });

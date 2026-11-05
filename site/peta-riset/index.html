@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.05-a">
+<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.05-b">
 </head>
 <body>
 <a class="skip" href="#main" data-i="skip">Lewati ke konten</a>
@@ -54,6 +54,7 @@
     <button class="tab" role="tab" id="tab-tema" data-tab="tema" aria-selected="false" aria-controls="tema" data-i="tabTheme">Peta tema</button>
     <button class="tab" role="tab" id="tab-trg" data-tab="trg" aria-selected="false" aria-controls="trg" data-i="tabTrg">Daftar TRG</button>
     <button class="tab" role="tab" id="tab-luar" data-tab="luar" aria-selected="false" aria-controls="luar" data-i="tabLuar" hidden>Pakar di luar TRG</button>
+    <button class="tab" role="tab" id="tab-dunia" data-tab="dunia" aria-selected="false" aria-controls="dunia" data-i="tabDunia" hidden>Kolaborasi global</button>
   </div>
 
   <div id="loadmsg" class="notice" role="status" data-i="loading">Memuat data…</div>
@@ -108,6 +109,20 @@
     </div>
   </section>
 
+  <section id="dunia" class="panel" role="tabpanel" aria-labelledby="tab-dunia" hidden>
+    <p class="notice" id="d-note"></p>
+    <div class="map-tools">
+      <div class="seg" role="group" aria-label="Periode"><button type="button" id="d-all" aria-pressed="true" data-i="dAll">Semua tahun</button><button type="button" id="d-rec" aria-pressed="false"></button></div>
+      <div class="map-legend" id="d-legend" aria-hidden="true"></div>
+    </div>
+    <div class="map-wrap">
+      <svg id="d-map" viewBox="0 0 1000 520" role="img" aria-labelledby="d-map-title"><title id="d-map-title">Peta kolaborasi internasional Unhas</title><g id="d-countries"></g></svg>
+      <aside class="map-detail" id="d-detail" aria-live="polite"></aside>
+    </div>
+    <h2 class="map-h" id="d-top-h"></h2>
+    <ol class="map-top" id="d-top"></ol>
+  </section>
+
   <section id="luar" class="panel" role="tabpanel" aria-labelledby="tab-luar" hidden>
     <p class="notice" id="luar-note"></p>
     <div class="filters">
@@ -138,11 +153,11 @@
     <p id="foot-src"></p>
     <p class="muted" data-i="disclaimer">Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.</p>
     <p class="muted" id="foot-contact"></p>
-    <p class="muted">Versi halaman 2026.11.05-a</p>
+    <p class="muted">Versi halaman 2026.11.05-b</p>
   </div>
 </footer>
-<script src="assets/js/config.js?v=2026.11.05-a"></script>
-<script src="data/peta-data.js?v=2026.11.05-a"></script>
-<script src="assets/js/app.js?v=2026.11.05-a"></script>
+<script src="assets/js/config.js?v=2026.11.05-b"></script>
+<script src="data/peta-data.js?v=2026.11.05-b"></script>
+<script src="assets/js/app.js?v=2026.11.05-b"></script>
 </body>
 </html>

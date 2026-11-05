@@ -94,4 +94,8 @@ save("kuartil.schema.json", {"$schema": D2020, "title": "Artikel Q1-Q4 per TRG (
     "total": obj({k: INT for k in ("artikel", "tercocok", "bertindeks", "Q1", "Q2", "Q3", "Q4", "Q12", "sejak_Q12")}, ["artikel", "tercocok", "bertindeks", "Q1", "Q2", "Q12"]),
     "trg": {"type": "object", "description": "slug TRG -> hitungan", "additionalProperties": obj({"n": INT, "c": INT, "i": INT, "q1": INT, "q2": INT, "q3": INT, "q4": INT, "rn": INT, "ri": INT, "r1": INT, "r2": INT}, ["n", "c", "i", "q1", "q2", "q3", "q4", "rn", "ri", "r1", "r2"])}},
     ["dibuat", "sumber", "sjr_tahun", "dari", "total", "trg"])})
-print("skema model baca: peneliti, trg, tag, meta, insights, openalex, kuartil")
+save("kolaborasi.schema.json", {"$schema": D2020, "title": "Kolaborasi internasional menurut negara (opsional)", **obj({
+    "dibuat": STR, "sumber": STR, "institusi": STR, "dari": INT, "karya_unhas": INT, "n_negara": INT, "n_negara_semua": INT,
+    "negara": arr(obj({"c": {"type": "string", "pattern": "^[A-Z]{2}$"}, "en": STR, "n": INT, "r": INT, "inst": arr(obj({"id": STR, "nama": STR, "n": INT}, ["id", "nama", "n"]))}, ["c", "en", "n", "r", "inst"]))},
+    ["dibuat", "sumber", "dari", "karya_unhas", "n_negara", "negara"])})
+print("skema model baca: peneliti, trg, tag, meta, insights, openalex, kuartil, kolaborasi")

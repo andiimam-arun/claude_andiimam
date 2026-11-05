@@ -5,8 +5,8 @@ import json, os, sys, jsonschema
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 D = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "site", "peta-riset", "data")
 bad = 0
-for name in ("peneliti", "trg", "tag", "meta", "insights", "openalex", "kuartil"):
-    if name in ("openalex", "kuartil") and not os.path.exists(os.path.join(D, "openalex.json")):
+for name in ("peneliti", "trg", "tag", "meta", "insights", "openalex", "kuartil", "kolaborasi"):
+    if name in ("openalex", "kuartil", "kolaborasi") and not os.path.exists(os.path.join(D, "openalex.json")):
         print("openalex  (tidak ada; opsional)"); continue
     schema = json.load(open(os.path.join(ROOT, "schemas", f"{name}.schema.json"), encoding="utf-8"))
     data = json.load(open(os.path.join(D, f"{name}.json"), encoding="utf-8"))

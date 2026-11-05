@@ -177,3 +177,31 @@ a.chip:hover { border-color: var(--glori-navy-soft); color: var(--glori-navy); }
 #l-bars .fill { background: var(--glori-navy); border-radius: 0; }
 #l-bars .fill.alt { background: var(--glori-red); }
 .kq { color: var(--glori-navy); font-weight: 600; }
+
+/* peta kolaborasi global */
+.map-tools { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin: 8px 0 12px; }
+.seg { display: inline-flex; border: 1px solid var(--glori-line); border-radius: 999px; overflow: hidden; background: var(--glori-white); }
+.seg button { border: 0; background: none; padding: 7px 16px; font: 500 14px var(--font-head); cursor: pointer; color: var(--glori-navy); }
+.seg button[aria-pressed="true"] { background: var(--glori-navy); color: #fff; }
+.map-legend { display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px; }
+.map-legend .lg { padding: 3px 10px; border-radius: 4px; color: #fff; }
+.map-legend .l1, #d-map .l1 { fill: #c9d3ee; background: #c9d3ee; color: var(--glori-navy); }
+.map-legend .l2, #d-map .l2 { fill: #93a7dc; background: #93a7dc; color: var(--glori-navy); }
+.map-legend .l3, #d-map .l3 { fill: #5a76c4; background: #5a76c4; }
+.map-legend .l4, #d-map .l4 { fill: #2c3f7c; background: #2c3f7c; }
+.map-legend .l5, #d-map .l5 { fill: #0f1a3c; background: #0f1a3c; }
+.map-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 18px; align-items: start; }
+#d-map { width: 100%; height: auto; background: var(--glori-white); border: 1px solid var(--glori-line); border-radius: var(--radius); }
+#d-map path { fill: #eceff6; stroke: #fff; stroke-width: .5; }
+#d-map path.has { cursor: pointer; }
+#d-map path.has:hover, #d-map path.sel { stroke: var(--glori-red); stroke-width: 1.6; }
+#d-map path:focus-visible { outline: none; stroke: var(--glori-red); stroke-width: 2; }
+#d-map path.home { fill: var(--glori-red); }
+.map-detail { background: var(--glori-white); border: 1px solid var(--glori-line); border-radius: var(--radius); padding: 14px 16px; min-height: 120px; }
+.map-detail h3 { font-size: 1.1rem; color: var(--glori-navy); margin: 0 0 4px; }
+.map-detail ul.plain { margin: 6px 0 0; padding-left: 18px; font-size: 14px; }
+.map-h { font-size: 1.05rem; color: var(--glori-navy); margin: 22px 0 8px; }
+.map-top { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.map-top .bar.on { background: var(--glori-soft); }
+@media (max-width: 820px) { .map-wrap { grid-template-columns: 1fr; } }
+.map-top .fill { background: var(--glori-navy); }

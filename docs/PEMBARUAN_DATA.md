@@ -125,3 +125,10 @@ Cadangkan folder `data/overrides/`, `data/forms/`, dan `data/snapshots/`: itu sa
 - SINTA dan Scopus tidak diakses (perlu izin atau kunci); ID mereka hanya dipakai sebagai identitas.
 - API rujukan tidak punya pembatasan laju maupun TLS; versi produksi harus menambahkannya.
 - Pencocokan orang masih berbasis nama dan ID, bukan identitas pasti; `orang_gabung`/`orang_pisah` adalah jalan keluarnya.
+
+### Peta kolaborasi global
+
+`scripts/trg_openalex_negara.py` menarik, dari OpenAlex, negara tempat penulis rekan Unhas berafiliasi (dengan institusi mitra teratas per negara), dan
+`scripts/trg_map_geo.py` membuat jalur SVG peta dunia dari TopoJSON `world-atlas` (domain publik Natural Earth; perlu paket `pycountry` hanya saat membangun).
+Hasilnya `site/peta-riset/data/kolaborasi.json` dan `dunia.json`; tab "Kolaborasi global" hanya muncul bila keduanya ada. Karya dengan 50 penulis atau lebih
+dikeluarkan; satu karya dihitung sekali per negara, jadi angka antar-negara tidak boleh dijumlahkan. Dijalankan juga oleh `trg_refresh.py --openalex`.

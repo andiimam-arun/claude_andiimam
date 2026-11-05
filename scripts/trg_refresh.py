@@ -96,6 +96,7 @@ def main():
         if not (os.environ.get("OPENALEX_API_KEY")):
             sys.exit("--openalex memerlukan OPENALEX_API_KEY (kunci gratis dari openalex.org)")
         run("scripts/trg_openalex_unhas.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"))
+        run("scripts/trg_openalex_negara.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"), "--site", SITE)
     if os.path.exists(os.path.join(ROOT, "data", "openalex", "penulis_unhas.csv")):
         run("scripts/trg_openalex_match.py", "--oa", os.path.join(ROOT, "data", "openalex"), "--data", D, "--site", SITE)
     run("scripts/trg_dashboard_data.py", SITE, "--tanpa-mahasiswa"); run("scripts/trg_insights.py")
