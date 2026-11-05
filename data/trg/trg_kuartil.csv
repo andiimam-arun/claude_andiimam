@@ -12,7 +12,7 @@ respobio,Research Group For Post-Harvest Technology and Biotechnology,27,25,24,2
 eaging,Enhancement Healthy Aging,37,33,27,6,13,5,3,19,70,89,32,25,5,12,17
 bione-rg,Biopesticides and Natural Enemies Research Group,64,56,29,9,9,6,5,18,62,88,53,27,7,9,16
 sesreg,Seagrass Restoration & Ecosystem Services Research Group,36,35,22,12,5,5,0,17,77,97,33,19,10,4,14
-food-crops,Food Crops Value Chain Research Group,38,32,19,10,7,1,1,17,89,84,38,19,10,7,17
+food-crops,Food Crops Value Chain Research Group,56,32,19,10,7,1,1,17,89,57,38,19,10,7,17
 bisa,Biofilm Infection and Superbug Research Group,23,19,17,14,2,1,0,16,94,83,8,6,4,1,5
 ioprg,Industrial and Organizational Psychology Research Group,17,16,16,9,6,1,0,15,94,94,17,16,9,6,15
 mc-nutrition,Mother and Child Nutrition Research Group,65,60,52,4,10,11,27,14,27,92,64,52,4,10,14
@@ -43,7 +43,8 @@ hncd-rg,Holistic Nursing For Chronic Diseases Research Group,15,13,12,5,5,1,1,10
 hortibb,Horticultural Breeding and Biotechnology Research Group,41,27,19,3,6,9,1,9,47,66,39,19,3,6,9
 most-rg,Metabolism and Oxidative Stress Research Group,28,25,19,4,5,6,4,9,47,89,28,19,4,5,9
 nutrifeed,Poultry Nutrition and Feed Research Group,45,34,19,0,9,10,0,9,47,76,38,19,0,9,9
-aisrg,Agricultural Institution Strengthening Research Group,37,32,14,5,4,5,0,9,64,86,37,14,5,4,9
+aisrg,Agricultural Institution Strengthening Research Group,42,32,14,5,4,5,0,9,64,76,37,14,5,4,9
+tropicrab,Tropical Crab Research Group,33,22,14,7,2,2,3,9,64,67,18,12,6,2,8
 float-struc,Floating Structure Research Group,24,16,13,1,8,2,2,9,69,67,24,13,1,8,9
 neuro-onc,Neuro-Oncology Nursing Researh Group,18,17,13,5,4,2,2,9,69,94,18,13,5,4,9
 rice-rg,Rice Research Group,12,10,9,5,4,0,0,9,100,83,12,9,5,4,9
@@ -93,6 +94,7 @@ rene,Renewable Energy Research Group,18,15,7,4,1,2,0,5,71,83,8,3,1,1,2
 socialcap,Social Capital Research Group,10,9,7,4,1,0,2,5,71,90,10,7,4,1,5
 tnaq-rg,Transportation and Air Quality Research Group,34,22,7,1,4,1,1,5,71,65,33,7,1,4,5
 crem,Critical and Rare-Earth Metals Research Group,13,11,6,3,2,1,0,5,83,85,9,3,1,1,2
+indofootcare,Diabetic Foot Care Research Group,6,6,6,2,3,0,1,5,83,100,6,6,2,3,5
 mhsrg,Migration and Human Security,30,25,6,2,3,0,1,5,83,83,30,6,2,3,5
 msm-rg,Multifunctional Semiconductor Materials Research Group,6,6,6,4,1,1,0,5,83,100,6,6,4,1,5
 ohcirg,One Health For Costal and Island Research Group,6,6,6,1,4,1,0,5,83,100,6,6,1,4,5
@@ -109,6 +111,7 @@ sssn,Smart Ship and Safe Navigation,32,28,12,2,2,8,0,4,33,88,6,0,0,0,0
 mnprg,Metabolomics and Natural Products Research Group,14,10,9,3,1,5,0,4,44,71,14,9,3,1,4
 odfrg,Organic Dairy Farming Research Group,17,12,9,1,3,4,1,4,44,71,13,9,1,3,4
 slfs,Smallholder Livestock Farming System Research Group,12,11,9,2,2,3,2,4,44,92,12,9,2,2,4
+coffee-rg,Coffee Research Group,25,17,8,3,1,3,1,4,50,68,22,8,3,1,4
 albiorg,Algal Biotechnology Research Group,16,14,7,3,1,2,1,4,57,88,8,4,2,0,2
 ethnicfood,Ethnic Food Research Group,27,16,7,2,2,3,0,4,57,59,18,6,2,2,4
 nutriepi,Nutritional Epidemiology Research Group,8,7,7,3,1,0,3,4,57,88,8,7,3,1,4
@@ -122,6 +125,7 @@ smes,Small and Medium Enterprise Research Group,9,8,5,0,4,1,0,4,80,89,9,5,0,4,4
 cnrm,Conflict and Natural Resources Management Research Group,9,8,4,1,3,0,0,4,100,89,9,4,1,3,4
 mpr,Medical Physics Research Group,14,14,4,1,3,0,0,4,100,100,14,4,1,3,4
 aerodyn,Applied Aerodynamic Research Group,27,20,14,0,3,9,2,3,21,74,18,10,0,2,2
+fderg,Fluid Dynamics and Energy Research Group,107,58,14,1,2,4,7,3,21,54,60,13,1,2,3
 bite-fish,Biogeography and taxonomy Endemic Fishes Research Group,26,20,11,1,2,6,2,3,27,77,20,7,1,1,2
 coastaldw,Coastal Domestic Water Research Group,13,12,11,0,3,3,5,3,27,92,13,11,0,3,3
 energy-e-conser,Energy Efficiency and Conservation Research Group,22,20,11,0,3,4,4,3,27,91,15,10,0,3,3
@@ -158,6 +162,7 @@ secrg,Forest Hydrology and Watershed Managment Research Group,14,14,12,1,1,10,0,
 milkd,Milk and Diary Products Research Group,24,17,8,0,2,5,1,2,25,71,19,7,0,2,2
 dhrg,Digestive Health Research Group,9,7,7,0,2,5,0,2,29,78,9,7,0,2,2
 pbnp,Biocontrol and Natural Plant Product Research Group,26,18,6,1,1,4,0,2,33,69,25,5,1,0,1
+mprg,Marine Plastic Research Group,17,13,6,2,0,3,1,2,33,76,14,5,1,0,1
 multitrophic,Multitrophic Research Group,18,10,6,2,0,1,3,2,33,56,18,6,2,0,2
 fone-rg,Food Nutritional Enrichment Research Group,10,9,5,2,0,3,0,2,40,90,9,5,2,0,2
 lcpr-rg,Legal Protection of Children's Rights Research Group,18,18,5,0,2,3,0,2,40,100,18,5,0,2,2
@@ -199,6 +204,7 @@ isoshrg,Informal-Sector Occupational Safety and Health Research Group,7,7,5,0,1,
 imppd,Integrated Pest Disease Management,5,5,5,1,0,2,2,1,20,100,5,5,1,0,1
 lightweight-mat,Lightweight Material Research Group,13,10,5,0,1,2,2,1,20,77,11,5,0,1,1
 ait,Applied Intelligent Technologies Research Group,16,15,4,0,1,2,1,1,25,94,16,4,0,1,1
+arabicedtech,Digital Arabic Learning Research Group,29,20,4,0,1,3,0,1,25,69,19,3,0,0,0
 mdrg,Market Dynamics Research Group (MDRG),8,7,4,0,1,0,3,1,25,88,8,4,0,1,1
 nap,Noise and Air Pollution Research Group,11,11,4,0,1,1,2,1,25,100,10,4,0,1,1
 drugsyn,Drug Synthesis Research Group,5,3,3,1,0,1,1,1,33,60,3,2,0,0,0

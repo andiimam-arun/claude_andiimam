@@ -364,6 +364,100 @@ def add_leader(slug, rows, lead, how, inferred=False):
         INFERRED.append((slug, name, how))
 
 
+WP_CAT = re.compile(r"\b(journals?|articles?|publications?|papers?|jurnal|artikel|proceedings?)\b", re.I)
+WP_NOT = re.compile(r"activit|news|event|education|meeting|hope|sport|uncategori", re.I)
+
+
+def wp_articles(f, slug, site, log):
+    """Sebagian TRG menyimpan artikel sebagai pos WordPress berkategori 'Journal'/'Articles' (halaman /publication/ menampilkannya),
+    bukan sebagai daftar JetEngine. Baca lewat REST publik: kategori yang namanya menyebut jurnal/artikel, lalu judul pos-posnya."""
+    st, body = f.get(f"{site}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,count")
+    log.append((slug, "wp-categories", 1, st))
+    if st != 200:
+        return []
+    try:
+        cats = [c for c in json.loads(body) if c.get("count") and WP_CAT.search(c["name"]) and not WP_NOT.search(c["name"])]
+    except ValueError:
+        return []
+    out, seen = [], set()
+    for c in cats:
+        for page in range(1, 11):
+            st, body = f.get(f"{site}/wp-json/wp/v2/posts?categories={c['id']}&per_page=100&page={page}&_fields=id,title,link")
+            log.append((slug, f"wp-posts:{c['name']}", page, st))
+            if st != 200:
+                break
+            try:
+                posts = json.loads(body)
+            except ValueError:
+                break
+            for p in posts:
+                title = clean(html.unescape(re.sub(r"<[^>]+>", "", p.get("title", {}).get("rendered", ""))))
+                if title and p["id"] not in seen:
+                    seen.add(p["id"]); out.append(dict(title=title, cat=c["name"], link=p.get("link", "")))
+            if len(posts) < 100:
+                break
+    return out
+
+
+YEAR_RX = re.compile(r"\b(19[89]\d|20[0-3]\d)\b")
+REF_HINT = re.compile(r"doi\.org|read more|vol\.?\s*\d|journal|jurnal|proceeding|pp\.|issn|\(\d{1,2}\)\s*:", re.I)
+
+
+def parse_reference_list(s):
+    """Sebagian TRG menulis artikel sebagai daftar pustaka biasa (<li> berisi 'Penulis. Tahun. Judul. Jurnal. Read more: tautan').
+    Setiap butir yang memuat tahun dan petunjuk jurnal/DOI dianggap satu artikel; judul = kalimat setelah tahun (heuristik)."""
+    s = strip_noise(s)
+    s = re.sub(r"<(script|style|nav|header|footer)\b.*?</\1>", " ", s, flags=re.S | re.I)
+    out = []
+    for m in re.finditer(r"<li\b[^>]*>(.*?)</li>", s, flags=re.S | re.I):
+        raw = m.group(1)
+        text = clean(html.unescape(re.sub(r"<[^>]+>", " ", raw)))
+        if len(text) < 40 or len(text) > 900 or not YEAR_RX.search(text) or not REF_HINT.search(text):
+            continue
+        links = [html.unescape(x) for x in re.findall(r'href="(https?://[^"#]+)"', raw)]
+        body = re.split(r"read more\s*:?", text, flags=re.I)[0].strip()
+        ym = YEAR_RX.search(body)
+        after = body[ym.end():].lstrip(" .,:;)(") if ym else body
+        q = re.search(r"[“\"]([^”\"]{15,300})[”\"]", body)         # judul dalam tanda kutip
+        title = q.group(1).strip(" .,") if q else (re.split(r"(?<=[a-z0-9\)\]])\.\s+(?=[A-Z0-9])", after, maxsplit=1)[0].strip(" .") if after else "")
+        if len(title) < 15:                                  # format "Judul. Penulis (Tahun)" atau tak terbaca: pakai awal butir
+            title = body[:160].strip(" .")
+        link = next((l for l in links if "doi.org" in l), next((l for l in links if " " not in l and l.count("/") >= 3), ""))
+        if re.match(r"doi\s*:", text, re.I):                  # butir 'DOI: 10.xxx' = tautan milik butir sebelumnya
+            if out and not out[-1]["link"]:
+                out[-1]["link"] = link
+            continue
+        out.append(dict(title=title, year=ym.group(1) if ym else "", link=link, authors=body[:ym.start()].strip(" .,(") if ym else ""))
+    return out
+
+
+def parse_table_articles(s):
+    """Tabel artikel (mis. widget JetEngine Table): kolom judul dikenali dari kepala tabel (Judul/Title/Publikasi),
+    penulis dari 'Penulis/Author', sumber dari 'Penerbit/Jurnal/Journal'; tahun dari sel mana pun di baris itu."""
+    out = []
+    for tb in re.findall(r"<table\b.*?</table>", s, flags=re.S | re.I):
+        txt = lambda h: clean(html.unescape(re.sub(r"<[^>]+>", " ", h)))
+        heads = [txt(h) for h in re.findall(r"<th\b.*?</th>", tb, flags=re.S | re.I)]
+        col = lambda rx: next((i for i, h in enumerate(heads) if re.search(rx, h, re.I)), None)
+        ti, ai, si = col(r"judul|title|artikel|article|publikasi"), col(r"penulis|author|tim\b"), col(r"penerbit|jurnal|journal|publisher|sumber|source")
+        if ti is None:
+            continue
+        for tr in re.findall(r"<tr\b.*?</tr>", tb, flags=re.S | re.I):
+            tds = re.findall(r"<td\b.*?</td>", tr, flags=re.S | re.I)
+            if len(tds) <= ti:
+                continue
+            cells = [txt(c) for c in tds]
+            title = cells[ti].strip(" .")
+            if len(title) < 10:
+                continue
+            rest = " ".join(c for i, c in enumerate(cells) if i not in (ti, ai))
+            ym = YEAR_RX.search(rest)
+            links = [html.unescape(x) for x in re.findall(r'href="(https?://[^"#]+)"', tr)]
+            out.append(dict(title=title, year=ym.group(1) if ym else "", link=next((l for l in links if "doi.org" in l), links[0] if links else ""),
+                            authors=cells[ai] if ai is not None and ai < len(cells) else "", source=cells[si] if si is not None and si < len(cells) else ""))
+    return out
+
+
 def fetch_any(f, slug, sub, log, base=None):
     """fetch_section pada nama utama; bila kosong, coba nama alternatif (ALT) sampai ada isi."""
     items = fetch_section(f, slug, sub, log, base)
@@ -483,6 +577,32 @@ def crawl_trg(f, t):
                 rows[key].append([t["slug"], fl[0], fl[1], fl[2], year, link])
             else:
                 rows[key].append([t["slug"], json.dumps(it["fields"], ensure_ascii=False), link])
+    if not rows["publikasi"]:                                # daftar pustaka biasa di halaman artikel
+        subs = ["articles"] + ALT["articles"] + ["publication"]
+        stp, bp = f.get(f"{site}/wp-json/wp/v2/pages?per_page=100&_fields=slug,title")      # halaman lain bernama mirip (mis. /journal-article/)
+        if stp == 200:
+            try:
+                for pg in json.loads(bp):
+                    nm = pg["slug"] + " " + re.sub(r"<[^>]+>", "", pg.get("title", {}).get("rendered", ""))
+                    if re.search(r"publi|article|journal|paper|jurnal|artikel", nm, re.I) and not re.search(r"project|activit|news|event|volunteer", nm, re.I) and pg["slug"] not in subs:
+                        subs.append(pg["slug"])
+            except ValueError:
+                pass
+        best, how = [], ""
+        for sub in subs:
+            st3, body3 = f.get(f"{site}/{sub}/")
+            if st3 == 200:
+                for fn, label in ((parse_table_articles, "tabel di halaman artikel"), (parse_reference_list, "daftar pustaka di halaman artikel")):
+                    refs = fn(body3)
+                    if len(refs) > len(best):
+                        best, how = refs, label
+        for a in best:
+            rows["publikasi"].append([t["slug"], a["title"], a["authors"], a.get("source") or how, a["year"], a["link"]])
+    have = {re.sub(r"[^a-z0-9]+", " ", r[1].lower()).strip() for r in rows["publikasi"]}
+    for a in wp_articles(f, t["slug"], site, log):
+        k = re.sub(r"[^a-z0-9]+", " ", a["title"].lower()).strip()
+        if k and k not in have:
+            have.add(k); rows["publikasi"].append([t["slug"], a["title"], "", "pos WordPress: " + a["cat"], "", a["link"]])
     if not any(r[1] == "Leader" for r in rows["peneliti"]):
         # ketua tidak terbaca di halaman tim: cari di halaman lain (beranda, tentang, tim) lalu di kalimat prosa
         for sub in [""] + LEAD_PAGES:

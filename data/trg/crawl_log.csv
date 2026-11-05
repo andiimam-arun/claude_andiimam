@@ -10,6 +10,7 @@ agribac,patens,2,200
 agribac,patens,3,200
 agribac,research-project,1,200
 agribac,research-project,2,200
+agribac,wp-categories,1,200
 cocoa-rg,home,1,200
 cocoa-rg,ourteam,1,200
 cocoa-rg,articles,1,200
@@ -28,6 +29,7 @@ cocoa-rg,research-project,2,200
 cocoa-rg,research-project,3,200
 cocoa-rg,research-project,4,200
 cocoa-rg,research-project,5,200
+cocoa-rg,wp-categories,1,200
 futropicrops,home,1,200
 futropicrops,ourteam,1,200
 futropicrops,articles,1,200
@@ -47,12 +49,14 @@ futropicrops,research-project,3,200
 futropicrops,research-project,4,200
 futropicrops,research-project,5,200
 futropicrops,research-project,6,200
+futropicrops,wp-categories,1,200
 geosus,home,1,200
 geosus,ourteam,1,200
 geosus,articles,1,200
 geosus,books,1,200
 geosus,patens,1,200
 geosus,research-project,1,200
+geosus,wp-categories,1,200
 hortibb,home,1,200
 hortibb,ourteam,1,200
 hortibb,articles,1,200
@@ -77,6 +81,7 @@ hortibb,research-project,7,200
 hortibb,research-project,8,200
 hortibb,research-project,9,200
 hortibb,research-project,10,200
+hortibb,wp-categories,1,200
 imppd,home,1,200
 imppd,ourteam,1,200
 imppd,articles,1,200
@@ -84,12 +89,14 @@ imppd,articles,2,200
 imppd,books,1,200
 imppd,patens,1,200
 imppd,research-project,1,200
+imppd,wp-categories,1,200
 oilpalm,home,1,200
 oilpalm,ourteam,1,200
 oilpalm,articles,1,200
 oilpalm,books,1,200
 oilpalm,patens,1,200
 oilpalm,research-project,1,200
+oilpalm,wp-categories,1,200
 csva,home,1,200
 csva,ourteam,1,200
 csva,ourteam,2,200
@@ -107,6 +114,7 @@ csva,patens-2,1,404
 csva,research-project,1,200
 csva,research-project,2,200
 csva,research-project,3,200
+csva,wp-categories,1,200
 safos,home,1,200
 safos,ourteam,1,200
 safos,ourteam,2,200
@@ -125,6 +133,7 @@ safos,research-project,5,200
 safos,research-project,6,200
 safos,research-project,7,200
 safos,research-project,8,200
+safos,wp-categories,1,200
 sophymicro,home,1,200
 sophymicro,ourteam,1,404
 sophymicro,our-team,1,200
@@ -132,6 +141,7 @@ sophymicro,articles,1,200
 sophymicro,books,1,200
 sophymicro,patens,1,200
 sophymicro,research-project,1,200
+sophymicro,wp-categories,1,200
 torcg,home,1,200
 torcg,ourteam,1,200
 torcg,articles,1,200
@@ -145,6 +155,7 @@ torcg,patent,1,404
 torcg,patens-2,1,404
 torcg,research-project,1,200
 torcg,research-project,2,200
+torcg,wp-categories,1,200
 socialcap,home,1,200
 socialcap,ourteam,1,200
 socialcap,articles,1,200
@@ -155,6 +166,7 @@ socialcap,patens,1,200
 socialcap,research-project,1,200
 socialcap,research-project,2,200
 socialcap,research-project,3,200
+socialcap,wp-categories,1,200
 sop-land,home,1,200
 sop-land,ourteam,1,200
 sop-land,articles,1,200
@@ -172,12 +184,14 @@ sop-land,projects,1,200
 sop-land,research-projects,1,404
 sop-land,project,1,200
 sop-land,research-project-2,1,404
+sop-land,wp-categories,1,200
 sqlm-rg,home,1,200
 sqlm-rg,ourteam,1,200
 sqlm-rg,articles,1,200
 sqlm-rg,books,1,200
 sqlm-rg,patens,1,200
 sqlm-rg,research-project,1,200
+sqlm-rg,wp-categories,1,200
 corn-rg,home,1,200
 corn-rg,ourteam,1,200
 corn-rg,articles,1,200
@@ -195,6 +209,7 @@ corn-rg,research-project,5,200
 corn-rg,research-project,6,200
 corn-rg,research-project,7,200
 corn-rg,research-project,8,200
+corn-rg,wp-categories,1,200
 rice-rg,home,1,200
 rice-rg,ourteam,1,200
 rice-rg,articles,1,200
@@ -211,6 +226,7 @@ rice-rg,research-project,2,200
 rice-rg,research-project,3,200
 rice-rg,research-project,4,200
 rice-rg,research-project,5,200
+rice-rg,wp-categories,1,200
 food-crops,home,1,200
 food-crops,ourteam,1,200
 food-crops,articles,1,200
@@ -225,6 +241,8 @@ food-crops,projects,1,404
 food-crops,research-projects,1,404
 food-crops,project,1,404
 food-crops,research-project-2,1,404
+food-crops,wp-categories,1,200
+food-crops,wp-posts:Articles,1,200
 aisrg,home,1,200
 aisrg,ourteam,1,200
 aisrg,articles,1,200
@@ -240,6 +258,8 @@ aisrg,projects,1,200
 aisrg,research-projects,1,404
 aisrg,project,1,200
 aisrg,research-project-2,1,404
+aisrg,wp-categories,1,200
+aisrg,wp-posts:Articles,1,200
 pbnp,home,1,200
 pbnp,ourteam,1,200
 pbnp,articles,1,200
@@ -252,6 +272,7 @@ pbnp,books,1,200
 pbnp,patens,1,200
 pbnp,research-project,1,200
 pbnp,research-project,2,200
+pbnp,wp-categories,1,200
 amrg,home,1,200
 amrg,ourteam,1,200
 amrg,ourteam,2,200
@@ -281,6 +302,7 @@ amrg,research-project,4,200
 amrg,research-project,5,200
 amrg,research-project,6,200
 amrg,research-project,7,200
+amrg,wp-categories,1,200
 p-rg,home,1,200
 p-rg,ourteam,1,200
 p-rg,articles,1,200
@@ -288,6 +310,7 @@ p-rg,books,1,200
 p-rg,patens,1,200
 p-rg,research-project,1,200
 p-rg,research-project,2,200
+p-rg,wp-categories,1,200
 bione-rg,home,1,200
 bione-rg,ourteam,1,200
 bione-rg,articles,1,200
@@ -308,6 +331,7 @@ bione-rg,books,2,200
 bione-rg,patens,1,200
 bione-rg,research-project,1,200
 bione-rg,research-project,2,200
+bione-rg,wp-categories,1,200
 idlfrg,home,1,200
 idlfrg,ourteam,1,200
 idlfrg,articles,1,200
@@ -317,6 +341,7 @@ idlfrg,articles,4,200
 idlfrg,books,1,200
 idlfrg,patens,1,200
 idlfrg,research-project,1,200
+idlfrg,wp-categories,1,200
 milkd,home,1,200
 milkd,ourteam,1,200
 milkd,articles,1,200
@@ -326,6 +351,7 @@ milkd,books,1,200
 milkd,patens,1,200
 milkd,research-project,1,200
 milkd,research-project,2,200
+milkd,wp-categories,1,200
 llgr-rg,home,1,200
 llgr-rg,ourteam,1,200
 llgr-rg,articles,1,200
@@ -334,6 +360,7 @@ llgr-rg,books,1,200
 llgr-rg,patens,1,200
 llgr-rg,research-project,1,200
 llgr-rg,projects,1,200
+llgr-rg,wp-categories,1,200
 slfs,home,1,200
 slfs,ourteam,1,200
 slfs,articles,1,404
@@ -349,12 +376,14 @@ slfs,projects,1,200
 slfs,research-projects,1,404
 slfs,project,1,200
 slfs,research-project-2,1,404
+slfs,wp-categories,1,200
 odfrg,home,1,200
 odfrg,ourteam,1,200
 odfrg,articles,1,200
 odfrg,books,1,200
 odfrg,patens,1,200
 odfrg,research-project,1,200
+odfrg,wp-categories,1,200
 nutrifeed,home,1,200
 nutrifeed,ourteam,1,200
 nutrifeed,articles,1,200
@@ -375,6 +404,7 @@ nutrifeed,research-project,1,200
 nutrifeed,research-project,2,200
 nutrifeed,research-project,3,200
 nutrifeed,research-project,4,200
+nutrifeed,wp-categories,1,200
 livagri,home,1,200
 livagri,ourteam,1,200
 livagri,articles,1,200
@@ -383,6 +413,7 @@ livagri,books,1,200
 livagri,patens,1,200
 livagri,patens,2,200
 livagri,research-project,1,200
+livagri,wp-categories,1,200
 lolw,home,1,200
 lolw,ourteam,1,200
 lolw,articles,1,404
@@ -404,6 +435,7 @@ lolw,research-project,1,200
 lolw,research-project,2,200
 lolw,research-project,3,200
 lolw,research-project,4,200
+lolw,wp-categories,1,200
 abdes,home,1,200
 abdes,ourteam,1,200
 abdes,articles,1,200
@@ -412,6 +444,7 @@ abdes,books,1,200
 abdes,patens,1,200
 abdes,research-project,1,200
 abdes,research-project,2,200
+abdes,wp-categories,1,200
 pored-rg,home,1,200
 pored-rg,ourteam,1,200
 pored-rg,articles,1,200
@@ -428,6 +461,7 @@ pored-rg,paten,1,200
 pored-rg,patent,1,404
 pored-rg,patens-2,1,404
 pored-rg,research-project,1,200
+pored-rg,wp-categories,1,200
 feedtech,home,1,200
 feedtech,ourteam,1,200
 feedtech,articles,1,200
@@ -452,12 +486,14 @@ feedtech,projects,1,200
 feedtech,research-projects,1,404
 feedtech,project,1,200
 feedtech,research-project-2,1,404
+feedtech,wp-categories,1,200
 beefpro,home,1,200
 beefpro,ourteam,1,200
 beefpro,articles,1,200
 beefpro,books,1,200
 beefpro,patens,1,200
 beefpro,research-project,1,200
+beefpro,wp-categories,1,200
 dgrg,home,1,200
 dgrg,ourteam,1,200
 dgrg,articles,1,200
@@ -465,6 +501,7 @@ dgrg,articles,2,200
 dgrg,books,1,200
 dgrg,patens,1,200
 dgrg,research-project,1,200
+dgrg,wp-categories,1,200
 albiorg,home,1,200
 albiorg,ourteam,1,200
 albiorg,ourteam,2,200
@@ -473,6 +510,7 @@ albiorg,articles,2,200
 albiorg,books,1,200
 albiorg,patens,1,200
 albiorg,research-project,1,200
+albiorg,wp-categories,1,200
 acuetox,home,1,200
 acuetox,ourteam,1,200
 acuetox,articles,1,404
@@ -488,6 +526,7 @@ acuetox,research-project,1,200
 acuetox,research-project,2,200
 acuetox,research-project,3,200
 acuetox,research-project,4,200
+acuetox,wp-categories,1,200
 ambioc,home,1,200
 ambioc,ourteam,1,200
 ambioc,ourteam,2,200
@@ -496,6 +535,7 @@ ambioc,articles,2,200
 ambioc,books,1,200
 ambioc,patens,1,200
 ambioc,research-project,1,200
+ambioc,wp-categories,1,200
 c3rg,home,1,200
 c3rg,ourteam,1,200
 c3rg,articles,1,200
@@ -513,6 +553,7 @@ c3rg,projects,1,200
 c3rg,research-projects,1,404
 c3rg,project,1,200
 c3rg,research-project-2,1,404
+c3rg,wp-categories,1,200
 cores,home,1,200
 cores,ourteam,1,200
 cores,articles,1,200
@@ -527,6 +568,7 @@ cores,projects,1,200
 cores,research-projects,1,404
 cores,project,1,200
 cores,research-project-2,1,404
+cores,wp-categories,1,200
 fisher-g,home,1,200
 fisher-g,ourteam,1,200
 fisher-g,articles,1,200
@@ -534,6 +576,7 @@ fisher-g,books,1,200
 fisher-g,patens,1,200
 fisher-g,research-project,1,200
 fisher-g,research-project,2,200
+fisher-g,wp-categories,1,200
 fiterg,home,1,200
 fiterg,ourteam,1,200
 fiterg,articles,1,200
@@ -542,6 +585,7 @@ fiterg,articles,3,200
 fiterg,books,1,200
 fiterg,patens,1,200
 fiterg,research-project,1,200
+fiterg,wp-categories,1,200
 mprg,home,1,200
 mprg,ourteam,1,200
 mprg,articles,1,200
@@ -556,6 +600,7 @@ mprg,paten,1,200
 mprg,patent,1,404
 mprg,patens-2,1,404
 mprg,research-project,1,200
+mprg,wp-categories,1,200
 multitrophic,home,1,200
 multitrophic,ourteam,1,200
 multitrophic,articles,1,200
@@ -567,12 +612,14 @@ multitrophic,patens,1,200
 multitrophic,research-project,1,200
 multitrophic,research-project,2,200
 multitrophic,research-project,3,200
+multitrophic,wp-categories,1,200
 ncprg,home,1,200
 ncprg,ourteam,1,200
 ncprg,articles,1,200
 ncprg,books,1,200
 ncprg,patens,1,200
 ncprg,research-project,1,200
+ncprg,wp-categories,1,200
 sesreg,home,1,200
 sesreg,ourteam,1,200
 sesreg,articles,1,200
@@ -580,6 +627,7 @@ sesreg,books,1,200
 sesreg,patens,1,200
 sesreg,research-project,1,200
 sesreg,research-project,2,200
+sesreg,wp-categories,1,200
 srcrg,home,1,200
 srcrg,ourteam,1,200
 srcrg,articles,1,200
@@ -591,6 +639,7 @@ srcrg,paten,1,200
 srcrg,patent,1,404
 srcrg,patens-2,1,404
 srcrg,research-project,1,200
+srcrg,wp-categories,1,200
 tropicrab,home,1,200
 tropicrab,ourteam,1,200
 tropicrab,articles,1,404
@@ -602,6 +651,9 @@ tropicrab,books,1,200
 tropicrab,patens,1,200
 tropicrab,research-project,1,200
 tropicrab,projects,1,200
+tropicrab,wp-categories,1,200
+tropicrab,wp-posts:Articles,1,200
+tropicrab,wp-posts:Journal,1,200
 tfed,home,1,200
 tfed,ourteam,1,200
 tfed,articles,1,200
@@ -619,6 +671,7 @@ tfed,research-project,2,200
 tfed,research-project,3,200
 tfed,research-project,4,200
 tfed,research-project,5,200
+tfed,wp-categories,1,200
 marsplan,home,1,200
 marsplan,ourteam,1,200
 marsplan,articles,1,200
@@ -626,6 +679,7 @@ marsplan,articles,2,200
 marsplan,books,1,200
 marsplan,patens,1,200
 marsplan,research-project,1,200
+marsplan,wp-categories,1,200
 lsfa-trg,home,1,200
 lsfa-trg,ourteam,1,200
 lsfa-trg,articles,1,200
@@ -640,12 +694,14 @@ lsfa-trg,books,1,200
 lsfa-trg,patens,1,200
 lsfa-trg,research-project,1,200
 lsfa-trg,research-project,2,200
+lsfa-trg,wp-categories,1,200
 shrimpfarming,home,1,200
 shrimpfarming,ourteam,1,200
 shrimpfarming,articles,1,200
 shrimpfarming,books,1,200
 shrimpfarming,patens,1,200
 shrimpfarming,research-project,1,200
+shrimpfarming,wp-categories,1,200
 bite-fish,home,1,200
 bite-fish,ourteam,1,200
 bite-fish,articles,1,200
@@ -656,6 +712,7 @@ bite-fish,articles,5,200
 bite-fish,books,1,200
 bite-fish,patens,1,200
 bite-fish,research-project,1,200
+bite-fish,wp-categories,1,200
 invaquatic,home,1,200
 invaquatic,ourteam,1,200
 invaquatic,articles,1,200
@@ -670,6 +727,7 @@ invaquatic,projects,1,200
 invaquatic,research-projects,1,404
 invaquatic,project,1,200
 invaquatic,research-project-2,1,404
+invaquatic,wp-categories,1,200
 tila-techrg,home,1,200
 tila-techrg,ourteam,1,200
 tila-techrg,articles,1,200
@@ -682,6 +740,7 @@ tila-techrg,paten,1,200
 tila-techrg,patent,1,404
 tila-techrg,patens-2,1,404
 tila-techrg,research-project,1,200
+tila-techrg,wp-categories,1,200
 forestsociety,home,1,200
 forestsociety,ourteam,1,200
 forestsociety,articles,1,200
@@ -698,6 +757,7 @@ forestsociety,projects,1,404
 forestsociety,research-projects,1,404
 forestsociety,project,1,404
 forestsociety,research-project-2,1,404
+forestsociety,wp-categories,1,200
 forestsociety,home,1,200
 forestsociety,about,1,404
 forestsociety,about-us,1,404
@@ -711,6 +771,7 @@ secrg,articles,1,200
 secrg,books,1,200
 secrg,patens,1,200
 secrg,research-project,1,200
+secrg,wp-categories,1,200
 karstbios,home,1,200
 karstbios,ourteam,1,200
 karstbios,articles,1,200
@@ -722,6 +783,7 @@ karstbios,patens,1,200
 karstbios,research-project,1,200
 karstbios,research-project,2,200
 karstbios,research-project,3,200
+karstbios,wp-categories,1,200
 multifor,home,1,200
 multifor,ourteam,1,200
 multifor,articles,1,200
@@ -736,6 +798,7 @@ multifor,patent,1,404
 multifor,patens-2,1,404
 multifor,research-project,1,200
 multifor,research-project,2,200
+multifor,wp-categories,1,200
 nifodi,home,1,200
 nifodi,ourteam,1,200
 nifodi,ourteam,2,200
@@ -748,6 +811,7 @@ nifodi,paten,1,200
 nifodi,patent,1,404
 nifodi,patens-2,1,404
 nifodi,research-project,1,200
+nifodi,wp-categories,1,200
 wildev,home,1,200
 wildev,ourteam,1,200
 wildev,articles,1,200
@@ -756,6 +820,7 @@ wildev,books,1,200
 wildev,patens,1,200
 wildev,research-project,1,200
 wildev,research-project,2,200
+wildev,wp-categories,1,200
 termite,home,1,200
 termite,ourteam,1,200
 termite,articles,1,200
@@ -767,6 +832,7 @@ termite,research-project,2,200
 termite,research-project,3,200
 termite,research-project,4,200
 termite,research-project,5,200
+termite,wp-categories,1,200
 ddrg,home,1,200
 ddrg,ourteam,1,200
 ddrg,articles,1,200
@@ -777,6 +843,7 @@ ddrg,articles,5,200
 ddrg,books,1,200
 ddrg,patens,1,200
 ddrg,research-project,1,200
+ddrg,wp-categories,1,200
 biomass,home,1,200
 biomass,ourteam,1,200
 biomass,articles,1,404
@@ -791,6 +858,7 @@ biomass,patent,1,404
 biomass,patens-2,1,404
 biomass,research-project,1,200
 biomass,research-project,2,200
+biomass,wp-categories,1,200
 ecofor,home,1,200
 ecofor,ourteam,1,200
 ecofor,articles,1,200
@@ -798,6 +866,7 @@ ecofor,articles,2,200
 ecofor,books,1,200
 ecofor,patens,1,200
 ecofor,research-project,1,200
+ecofor,wp-categories,1,200
 tredic,home,1,200
 tredic,ourteam,1,200
 tredic,ourteam,2,200
@@ -815,12 +884,14 @@ tredic,paten,1,200
 tredic,patent,1,404
 tredic,patens-2,1,404
 tredic,research-project,1,200
+tredic,wp-categories,1,200
 advfood,home,1,200
 advfood,ourteam,1,200
 advfood,articles,1,200
 advfood,books,1,200
 advfood,patens,1,200
 advfood,research-project,1,200
+advfood,wp-categories,1,200
 coffee-rg,home,1,200
 coffee-rg,ourteam,1,404
 coffee-rg,our-team,1,404
@@ -843,6 +914,7 @@ coffee-rg,projects,1,404
 coffee-rg,research-projects,1,404
 coffee-rg,project,1,404
 coffee-rg,research-project-2,1,404
+coffee-rg,wp-categories,1,200
 ethnicfood,home,1,200
 ethnicfood,ourteam,1,200
 ethnicfood,articles,1,200
@@ -856,6 +928,7 @@ ethnicfood,paten,1,404
 ethnicfood,patent,1,404
 ethnicfood,patens-2,1,404
 ethnicfood,research-project,1,200
+ethnicfood,wp-categories,1,200
 fone-rg,home,1,200
 fone-rg,ourteam,1,200
 fone-rg,articles,1,200
@@ -864,6 +937,7 @@ fone-rg,books,1,200
 fone-rg,patens,1,200
 fone-rg,research-project,1,200
 fone-rg,research-project,2,200
+fone-rg,wp-categories,1,200
 respobio,home,1,200
 respobio,ourteam,1,200
 respobio,articles,1,200
@@ -875,6 +949,7 @@ respobio,research-project,1,200
 respobio,research-project,2,200
 respobio,research-project,3,200
 respobio,research-project,4,200
+respobio,wp-categories,1,200
 postharvest-me,home,1,200
 postharvest-me,ourteam,1,404
 postharvest-me,our-team,1,404
@@ -892,6 +967,7 @@ postharvest-me,books,1,200
 postharvest-me,patens,1,404
 postharvest-me,patents,1,200
 postharvest-me,research-project,1,200
+postharvest-me,wp-categories,1,200
 postharvest-me,home,1,200
 postharvest-me,about,1,200
 ffbi,home,1,200
@@ -904,6 +980,7 @@ ffbi,books,1,200
 ffbi,patens,1,200
 ffbi,research-project,1,200
 ffbi,research-project,2,200
+ffbi,wp-categories,1,200
 ffoodtech,home,1,200
 ffoodtech,ourteam,1,200
 ffoodtech,ourteam,2,200
@@ -923,6 +1000,7 @@ ffoodtech,projects,1,200
 ffoodtech,research-projects,1,404
 ffoodtech,project,1,200
 ffoodtech,research-project-2,1,404
+ffoodtech,wp-categories,1,200
 proagritech,home,1,200
 proagritech,ourteam,1,200
 proagritech,articles,1,200
@@ -931,12 +1009,14 @@ proagritech,books,1,200
 proagritech,patens,1,200
 proagritech,patens,2,200
 proagritech,research-project,1,200
+proagritech,wp-categories,1,200
 swcerg,home,1,200
 swcerg,ourteam,1,200
 swcerg,articles,1,200
 swcerg,books,1,200
 swcerg,patens,1,200
 swcerg,research-project,1,200
+swcerg,wp-categories,1,200
 biofoodpack,home,1,200
 biofoodpack,ourteam,1,200
 biofoodpack,articles,1,404
@@ -954,6 +1034,7 @@ biofoodpack,projects,1,200
 biofoodpack,research-projects,1,404
 biofoodpack,project,1,200
 biofoodpack,research-project-2,1,404
+biofoodpack,wp-categories,1,200
 islamicfrg,home,1,200
 islamicfrg,ourteam,1,200
 islamicfrg,articles,1,200
@@ -970,6 +1051,7 @@ islamicfrg,research-project,1,200
 islamicfrg,research-project,2,200
 islamicfrg,research-project,3,200
 islamicfrg,research-project,4,200
+islamicfrg,wp-categories,1,200
 marketingbhvr,home,1,200
 marketingbhvr,ourteam,1,200
 marketingbhvr,articles,1,200
@@ -977,6 +1059,7 @@ marketingbhvr,articles,2,200
 marketingbhvr,books,1,200
 marketingbhvr,patens,1,200
 marketingbhvr,research-project,1,200
+marketingbhvr,wp-categories,1,200
 marketingbhvr,home,1,200
 fsarg,home,1,200
 fsarg,ourteam,1,200
@@ -987,6 +1070,7 @@ fsarg,patens,1,200
 fsarg,research-project,1,200
 fsarg,research-project,2,200
 fsarg,research-project,3,200
+fsarg,wp-categories,1,200
 ppm,home,1,200
 ppm,ourteam,1,200
 ppm,articles,1,404
@@ -1001,6 +1085,7 @@ ppm,research-project,1,200
 ppm,research-project,2,200
 ppm,research-project,3,200
 ppm,research-project,4,200
+ppm,wp-categories,1,200
 apm,home,1,200
 apm,ourteam,1,200
 apm,articles,1,200
@@ -1023,6 +1108,7 @@ apm,research-project,2,200
 apm,research-project,3,200
 apm,research-project,4,200
 apm,research-project,5,200
+apm,wp-categories,1,200
 apm,home,1,200
 apm,about,1,200
 apm,about-us,1,404
@@ -1041,6 +1127,7 @@ sbm,paten,1,404
 sbm,patent,1,404
 sbm,patens-2,1,404
 sbm,research-project,1,200
+sbm,wp-categories,1,200
 supplychain-m,home,1,200
 supplychain-m,ourteam,1,200
 supplychain-m,articles,1,404
@@ -1053,6 +1140,7 @@ supplychain-m,patent,1,404
 supplychain-m,patens-2,1,404
 supplychain-m,research-project,1,200
 supplychain-m,research-project,2,200
+supplychain-m,wp-categories,1,200
 mdrg,home,1,200
 mdrg,ourteam,1,200
 mdrg,articles,1,404
@@ -1066,6 +1154,7 @@ mdrg,patent,1,404
 mdrg,patens-2,1,404
 mdrg,research-project,1,200
 mdrg,research-project,2,200
+mdrg,wp-categories,1,200
 sca,home,1,200
 sca,ourteam,1,200
 sca,articles,1,200
@@ -1075,6 +1164,7 @@ sca,books,1,200
 sca,patens,1,200
 sca,research-project,1,200
 sca,research-project,2,200
+sca,wp-categories,1,200
 sca,home,1,200
 hrm,home,1,200
 hrm,ourteam,1,200
@@ -1091,6 +1181,7 @@ hrm,research-project,2,200
 hrm,research-project,3,200
 hrm,research-project,4,200
 hrm,research-project,5,200
+hrm,wp-categories,1,200
 res-economics,home,1,200
 res-economics,ourteam,1,200
 res-economics,ourteam,2,200
@@ -1101,6 +1192,7 @@ res-economics,books,1,200
 res-economics,patens,1,200
 res-economics,research-project,1,200
 res-economics,research-project,2,200
+res-economics,wp-categories,1,200
 pbudget,home,1,200
 pbudget,ourteam,1,200
 pbudget,articles,1,404
@@ -1116,6 +1208,7 @@ pbudget,projects,1,200
 pbudget,research-projects,1,404
 pbudget,project,1,200
 pbudget,research-project-2,1,404
+pbudget,wp-categories,1,200
 straac,home,1,200
 straac,ourteam,1,200
 straac,articles,1,404
@@ -1131,12 +1224,14 @@ straac,patens-2,1,404
 straac,research-project,1,200
 straac,research-project,2,200
 straac,research-project,3,200
+straac,wp-categories,1,200
 emccrg,home,1,200
 emccrg,ourteam,1,200
 emccrg,articles,1,200
 emccrg,books,1,200
 emccrg,patens,1,200
 emccrg,research-project,1,200
+emccrg,wp-categories,1,200
 corporate-gover,home,1,200
 corporate-gover,ourteam,1,200
 corporate-gover,articles,1,200
@@ -1159,6 +1254,7 @@ corporate-gover,research-project,4,200
 corporate-gover,research-project,5,200
 corporate-gover,research-project,6,200
 corporate-gover,research-project,7,200
+corporate-gover,wp-categories,1,200
 finra,home,1,200
 finra,ourteam,1,200
 finra,ourteam,2,200
@@ -1172,6 +1268,7 @@ finra,patens,3,200
 finra,research-project,1,200
 finra,research-project,2,200
 finra,research-project,3,200
+finra,wp-categories,1,200
 smes,home,1,200
 smes,ourteam,1,200
 smes,articles,1,200
@@ -1181,6 +1278,7 @@ smes,books,2,200
 smes,patens,1,200
 smes,research-project,1,200
 smes,research-project,2,200
+smes,wp-categories,1,200
 dege-rg,home,1,200
 dege-rg,ourteam,1,200
 dege-rg,articles,1,200
@@ -1191,6 +1289,7 @@ dege-rg,patens,1,200
 dege-rg,research-project,1,200
 dege-rg,research-project,2,200
 dege-rg,research-project,3,200
+dege-rg,wp-categories,1,200
 bus-trans,home,1,200
 bus-trans,ourteam,1,200
 bus-trans,articles,1,200
@@ -1202,6 +1301,7 @@ bus-trans,patens,1,200
 bus-trans,research-project,1,200
 bus-trans,research-project,2,200
 bus-trans,research-project,3,200
+bus-trans,wp-categories,1,200
 farg,home,1,200
 farg,ourteam,1,200
 farg,articles,1,200
@@ -1210,6 +1310,7 @@ farg,books,1,200
 farg,patens,1,200
 farg,research-project,1,200
 farg,research-project,2,200
+farg,wp-categories,1,200
 corpaudit,home,1,200
 corpaudit,ourteam,1,200
 corpaudit,articles,1,404
@@ -1221,18 +1322,21 @@ corpaudit,paten,1,404
 corpaudit,patent,1,404
 corpaudit,patens-2,1,404
 corpaudit,research-project,1,200
+corpaudit,wp-categories,1,200
 msbd,home,1,200
 msbd,ourteam,1,200
 msbd,articles,1,200
 msbd,books,1,200
 msbd,patens,1,200
 msbd,research-project,1,200
+msbd,wp-categories,1,200
 nms-rg,home,1,200
 nms-rg,ourteam,1,200
 nms-rg,articles,1,200
 nms-rg,books,1,200
 nms-rg,patens,1,200
 nms-rg,research-project,1,200
+nms-rg,wp-categories,1,200
 ais-rg,home,1,200
 ais-rg,ourteam,1,200
 ais-rg,articles,1,200
@@ -1249,6 +1353,7 @@ ais-rg,projects,1,200
 ais-rg,research-projects,1,404
 ais-rg,project,1,200
 ais-rg,research-project-2,1,404
+ais-rg,wp-categories,1,200
 depadis,home,1,200
 depadis,ourteam,1,200
 depadis,articles,1,200
@@ -1263,12 +1368,14 @@ depadis,research-project,1,200
 depadis,research-project,2,200
 depadis,research-project,3,200
 depadis,research-project,4,200
+depadis,wp-categories,1,200
 mediacom,home,1,200
 mediacom,ourteam,1,200
 mediacom,articles,1,200
 mediacom,books,1,200
 mediacom,patens,1,200
 mediacom,research-project,1,200
+mediacom,wp-categories,1,200
 cnrm,home,1,200
 cnrm,ourteam,1,200
 cnrm,articles,1,200
@@ -1281,6 +1388,7 @@ cnrm,patent,1,404
 cnrm,patens-2,1,404
 cnrm,research-project,1,200
 cnrm,research-project,2,200
+cnrm,wp-categories,1,200
 cpcd,home,1,200
 cpcd,ourteam,1,200
 cpcd,articles,1,200
@@ -1294,6 +1402,7 @@ cpcd,projects,1,404
 cpcd,research-projects,1,404
 cpcd,project,1,404
 cpcd,research-project-2,1,404
+cpcd,wp-categories,1,200
 adaptivepublic-orga,home,1,200
 adaptivepublic-orga,ourteam,1,200
 adaptivepublic-orga,articles,1,200
@@ -1306,6 +1415,7 @@ adaptivepublic-orga,paten,1,200
 adaptivepublic-orga,patent,1,404
 adaptivepublic-orga,patens-2,1,404
 adaptivepublic-orga,research-project,1,200
+adaptivepublic-orga,wp-categories,1,200
 mgsd,home,1,200
 mgsd,ourteam,1,200
 mgsd,articles,1,404
@@ -1317,6 +1427,7 @@ mgsd,paten,1,404
 mgsd,patent,1,404
 mgsd,patens-2,1,404
 mgsd,research-project,1,200
+mgsd,wp-categories,1,200
 govmo-soc,home,1,200
 govmo-soc,ourteam,1,200
 govmo-soc,articles,1,200
@@ -1324,6 +1435,7 @@ govmo-soc,articles,2,200
 govmo-soc,books,1,200
 govmo-soc,patens,1,200
 govmo-soc,research-project,1,200
+govmo-soc,wp-categories,1,200
 empogo,home,1,200
 empogo,ourteam,1,200
 empogo,articles,1,404
@@ -1341,6 +1453,7 @@ empogo,projects,1,200
 empogo,research-projects,1,404
 empogo,project,1,200
 empogo,research-project-2,1,404
+empogo,wp-categories,1,200
 marg,home,1,200
 marg,ourteam,1,200
 marg,articles,1,200
@@ -1352,6 +1465,7 @@ marg,books,1,200
 marg,patens,1,200
 marg,research-project,1,200
 marg,research-project,2,200
+marg,wp-categories,1,200
 busan,home,1,200
 busan,ourteam,1,200
 busan,articles,1,404
@@ -1369,12 +1483,14 @@ busan,projects,1,200
 busan,research-projects,1,404
 busan,project,1,200
 busan,research-project-2,1,404
+busan,wp-categories,1,200
 core,home,1,200
 core,ourteam,1,200
 core,articles,1,200
 core,books,1,200
 core,patens,1,200
 core,research-project,1,200
+core,wp-categories,1,200
 drg,home,1,200
 drg,ourteam,1,200
 drg,articles,1,200
@@ -1385,6 +1501,7 @@ drg,paten,1,200
 drg,patent,1,404
 drg,patens-2,1,404
 drg,research-project,1,200
+drg,wp-categories,1,200
 posbrg,home,1,200
 posbrg,ourteam,1,200
 posbrg,articles,1,200
@@ -1397,6 +1514,7 @@ posbrg,paten,1,200
 posbrg,patent,1,404
 posbrg,patens-2,1,404
 posbrg,research-project,1,200
+posbrg,wp-categories,1,200
 dims-rg,home,1,200
 dims-rg,ourteam,1,200
 dims-rg,articles,1,200
@@ -1408,6 +1526,7 @@ dims-rg,projects,1,200
 dims-rg,research-projects,1,404
 dims-rg,project,1,200
 dims-rg,research-project-2,1,404
+dims-rg,wp-categories,1,200
 ctrg,home,1,200
 ctrg,ourteam,1,200
 ctrg,articles,1,200
@@ -1417,6 +1536,7 @@ ctrg,articles,4,200
 ctrg,books,1,200
 ctrg,patens,1,200
 ctrg,research-project,1,200
+ctrg,wp-categories,1,200
 mhsrg,home,1,200
 mhsrg,ourteam,1,200
 mhsrg,articles,1,200
@@ -1434,6 +1554,7 @@ mhsrg,projects,1,200
 mhsrg,research-projects,1,404
 mhsrg,project,1,200
 mhsrg,research-project-2,1,404
+mhsrg,wp-categories,1,200
 coastallaw,home,1,200
 coastallaw,ourteam,1,200
 coastallaw,articles,1,404
@@ -1454,6 +1575,7 @@ coastallaw,projects,1,200
 coastallaw,research-projects,1,404
 coastallaw,project,1,200
 coastallaw,research-project-2,1,404
+coastallaw,wp-categories,1,200
 criminological,home,1,200
 criminological,ourteam,1,200
 criminological,articles,1,200
@@ -1465,18 +1587,21 @@ criminological,patent,1,404
 criminological,patens-2,1,404
 criminological,research-project,1,200
 criminological,projects,1,200
+criminological,wp-categories,1,200
 rg2,home,1,200
 rg2,ourteam,1,200
 rg2,articles,1,200
 rg2,books,1,200
 rg2,patens,1,200
 rg2,research-project,1,200
+rg2,wp-categories,1,200
 wasmalaw,home,1,200
 wasmalaw,ourteam,1,200
 wasmalaw,articles,1,200
 wasmalaw,books,1,200
 wasmalaw,patens,1,200
 wasmalaw,research-project,1,200
+wasmalaw,wp-categories,1,200
 seaj,home,1,200
 seaj,ourteam,1,200
 seaj,articles,1,200
@@ -1487,6 +1612,7 @@ seaj,paten,1,404
 seaj,patent,1,404
 seaj,patens-2,1,404
 seaj,research-project,1,200
+seaj,wp-categories,1,200
 victory,home,1,200
 victory,ourteam,1,200
 victory,articles,1,200
@@ -1503,6 +1629,7 @@ victory,patent,1,404
 victory,patens-2,1,404
 victory,research-project,1,200
 victory,research-project,2,200
+victory,wp-categories,1,200
 constitution,home,1,200
 constitution,ourteam,1,200
 constitution,articles,1,200
@@ -1517,6 +1644,7 @@ constitution,projects,1,200
 constitution,research-projects,1,404
 constitution,project,1,200
 constitution,research-project-2,1,404
+constitution,wp-categories,1,200
 lcpr-rg,home,1,200
 lcpr-rg,ourteam,1,200
 lcpr-rg,articles,1,200
@@ -1531,6 +1659,7 @@ lcpr-rg,patent,1,404
 lcpr-rg,patens-2,1,404
 lcpr-rg,research-project,1,200
 lcpr-rg,research-project,2,200
+lcpr-rg,wp-categories,1,200
 bl-rg,home,1,200
 bl-rg,ourteam,1,200
 bl-rg,articles,1,200
@@ -1542,6 +1671,7 @@ bl-rg,paten,1,200
 bl-rg,patent,1,404
 bl-rg,patens-2,1,404
 bl-rg,research-project,1,200
+bl-rg,wp-categories,1,200
 dlp-rg,home,1,200
 dlp-rg,ourteam,1,200
 dlp-rg,ourteam,2,200
@@ -1559,6 +1689,7 @@ dlp-rg,projects,1,200
 dlp-rg,research-projects,1,404
 dlp-rg,project,1,200
 dlp-rg,research-project-2,1,404
+dlp-rg,wp-categories,1,200
 cul-tor,home,1,200
 cul-tor,ourteam,1,200
 cul-tor,articles,1,200
@@ -1582,6 +1713,7 @@ cul-tor,research-project,6,200
 cul-tor,research-project,7,200
 cul-tor,research-project,8,200
 cul-tor,research-project,9,200
+cul-tor,wp-categories,1,200
 arabicedtech,home,1,200
 arabicedtech,ourteam,1,404
 arabicedtech,our-team,1,200
@@ -1603,6 +1735,7 @@ arabicedtech,projects,1,404
 arabicedtech,research-projects,1,404
 arabicedtech,project,1,404
 arabicedtech,research-project-2,1,404
+arabicedtech,wp-categories,1,200
 flcrg,home,1,200
 flcrg,ourteam,1,200
 flcrg,articles,1,200
@@ -1613,6 +1746,7 @@ flcrg,paten,1,200
 flcrg,patent,1,404
 flcrg,patens-2,1,404
 flcrg,research-project,1,200
+flcrg,wp-categories,1,200
 locwis,home,1,200
 locwis,ourteam,1,200
 locwis,articles,1,200
@@ -1626,6 +1760,7 @@ locwis,books,7,200
 locwis,books,8,200
 locwis,patens,1,200
 locwis,research-project,1,200
+locwis,wp-categories,1,200
 prepodyreg,home,1,200
 prepodyreg,ourteam,1,200
 prepodyreg,articles,1,404
@@ -1639,6 +1774,7 @@ prepodyreg,paten,1,404
 prepodyreg,patent,1,404
 prepodyreg,patens-2,1,404
 prepodyreg,research-project,1,200
+prepodyreg,wp-categories,1,200
 prepodyreg,home,1,200
 prepodyreg,about,1,200
 prepodyreg,about-us,1,404
@@ -1659,6 +1795,7 @@ psyling,patens,1,200
 psyling,patens,2,200
 psyling,patens,3,200
 psyling,research-project,1,200
+psyling,wp-categories,1,200
 mcrg,home,1,200
 mcrg,ourteam,1,200
 mcrg,ourteam,2,200
@@ -1674,12 +1811,14 @@ mcrg,research-project,2,200
 mcrg,research-project,3,200
 mcrg,research-project,4,200
 mcrg,research-project,5,200
+mcrg,wp-categories,1,200
 ethno,home,1,200
 ethno,ourteam,1,200
 ethno,articles,1,200
 ethno,books,1,200
 ethno,patens,1,200
 ethno,research-project,1,200
+ethno,wp-categories,1,200
 englishlanguage-rg,home,1,200
 englishlanguage-rg,ourteam,1,200
 englishlanguage-rg,our-team,1,404
@@ -1697,13 +1836,14 @@ englishlanguage-rg,publications,1,404
 englishlanguage-rg,articles-2,1,404
 englishlanguage-rg,books,1,200
 englishlanguage-rg,book,1,200
-englishlanguage-rg,books-2,1,-1
+englishlanguage-rg,books-2,1,404
 englishlanguage-rg,patens,1,200
-englishlanguage-rg,patents,1,-1
+englishlanguage-rg,patents,1,404
 englishlanguage-rg,paten,1,200
 englishlanguage-rg,patent,1,404
 englishlanguage-rg,patens-2,1,404
 englishlanguage-rg,research-project,1,200
+englishlanguage-rg,wp-categories,1,200
 englishlanguage-rg,home,1,200
 englishlanguage-rg,about,1,200
 englishlanguage-rg,about-us,1,404
@@ -1721,6 +1861,7 @@ algebra,paten,1,200
 algebra,patent,1,404
 algebra,patens-2,1,404
 algebra,research-project,1,200
+algebra,wp-categories,1,200
 biochar,home,1,200
 biochar,ourteam,1,404
 biochar,our-team,1,200
@@ -1735,12 +1876,14 @@ biochar,research-project,2,200
 biochar,research-project,3,200
 biochar,research-project,4,200
 biochar,research-project,5,200
+biochar,wp-categories,1,200
 bionanocomposite,home,1,200
 bionanocomposite,ourteam,1,200
 bionanocomposite,articles,1,200
 bionanocomposite,books,1,200
 bionanocomposite,patens,1,200
 bionanocomposite,research-project,1,200
+bionanocomposite,wp-categories,1,200
 climatebmd,home,1,200
 climatebmd,ourteam,1,200
 climatebmd,articles,1,200
@@ -1749,8 +1892,9 @@ climatebmd,patens,1,200
 climatebmd,patents,1,404
 climatebmd,paten,1,200
 climatebmd,patent,1,404
-climatebmd,patens-2,1,-1
+climatebmd,patens-2,1,404
 climatebmd,research-project,1,200
+climatebmd,wp-categories,1,200
 datascienceai,home,1,200
 datascienceai,ourteam,1,200
 datascienceai,articles,1,200
@@ -1762,13 +1906,14 @@ datascienceai,articles,6,200
 datascienceai,articles,7,200
 datascienceai,books,1,200
 datascienceai,patens,1,200
-datascienceai,patents,1,-1
+datascienceai,patents,1,404
 datascienceai,paten,1,200
 datascienceai,patent,1,404
 datascienceai,patens-2,1,404
 datascienceai,research-project,1,200
 datascienceai,research-project,2,200
 datascienceai,research-project,3,200
+datascienceai,wp-categories,1,200
 fprg,home,1,200
 fprg,ourteam,1,200
 fprg,articles,1,200
@@ -1782,6 +1927,7 @@ fprg,patent,1,404
 fprg,patens-2,1,404
 fprg,research-project,1,200
 fprg,research-project,2,200
+fprg,wp-categories,1,200
 functionallygm,home,1,200
 functionallygm,ourteam,1,200
 functionallygm,articles,1,200
@@ -1793,6 +1939,7 @@ functionallygm,articles,6,200
 functionallygm,books,1,200
 functionallygm,patens,1,200
 functionallygm,research-project,1,200
+functionallygm,wp-categories,1,200
 graphtheory,home,1,200
 graphtheory,ourteam,1,200
 graphtheory,articles,1,200
@@ -1802,6 +1949,7 @@ graphtheory,books,1,200
 graphtheory,patens,1,200
 graphtheory,research-project,1,200
 graphtheory,research-project,2,200
+graphtheory,wp-categories,1,200
 marine-natural,home,1,200
 marine-natural,ourteam,1,200
 marine-natural,articles,1,200
@@ -1809,6 +1957,7 @@ marine-natural,articles,2,200
 marine-natural,books,1,200
 marine-natural,patens,1,200
 marine-natural,research-project,1,200
+marine-natural,wp-categories,1,200
 dynapop-maths,home,1,200
 dynapop-maths,ourteam,1,200
 dynapop-maths,articles,1,200
@@ -1828,6 +1977,7 @@ dynapop-maths,patens-2,1,404
 dynapop-maths,research-project,1,200
 dynapop-maths,research-project,2,200
 dynapop-maths,research-project,3,200
+dynapop-maths,wp-categories,1,200
 mpr,home,1,200
 mpr,ourteam,1,200
 mpr,articles,1,200
@@ -1839,6 +1989,7 @@ mpr,paten,1,200
 mpr,patent,1,404
 mpr,patens-2,1,404
 mpr,research-project,1,200
+mpr,wp-categories,1,200
 ngenergy,home,1,200
 ngenergy,ourteam,1,200
 ngenergy,articles,1,200
@@ -1851,6 +2002,7 @@ ngenergy,patens-2,1,404
 ngenergy,research-project,1,200
 ngenergy,research-project,2,200
 ngenergy,research-project,3,200
+ngenergy,wp-categories,1,200
 polychem,home,1,200
 polychem,ourteam,1,200
 polychem,articles,1,404
@@ -1868,6 +2020,7 @@ polychem,patent,1,404
 polychem,patens-2,1,404
 polychem,research-project,1,200
 polychem,research-project,2,200
+polychem,wp-categories,1,200
 qft-rg,home,1,200
 qft-rg,ourteam,1,200
 qft-rg,articles,1,200
@@ -1878,6 +2031,7 @@ qft-rg,articles,5,200
 qft-rg,books,1,200
 qft-rg,patens,1,200
 qft-rg,research-project,1,200
+qft-rg,wp-categories,1,200
 stochastic,home,1,200
 stochastic,ourteam,1,200
 stochastic,articles,1,200
@@ -1894,6 +2048,7 @@ stochastic,research-project,1,200
 stochastic,research-project,2,200
 stochastic,research-project,3,200
 stochastic,research-project,4,200
+stochastic,wp-categories,1,200
 glohamod,home,1,200
 glohamod,ourteam,1,200
 glohamod,ourteam,2,200
@@ -1906,6 +2061,7 @@ glohamod,paten,1,200
 glohamod,patent,1,404
 glohamod,patens-2,1,404
 glohamod,research-project,1,200
+glohamod,wp-categories,1,200
 asds,home,1,200
 asds,ourteam,1,200
 asds,articles,1,200
@@ -1918,6 +2074,7 @@ asds,research-project,3,200
 asds,research-project,4,200
 asds,research-project,5,200
 asds,research-project,6,200
+asds,wp-categories,1,200
 f-analysis,home,1,200
 f-analysis,ourteam,1,200
 f-analysis,articles,1,200
@@ -1931,6 +2088,7 @@ f-analysis,patent,1,404
 f-analysis,patens-2,1,404
 f-analysis,research-project,1,200
 f-analysis,research-project,2,200
+f-analysis,wp-categories,1,200
 msm-rg,home,1,200
 msm-rg,ourteam,1,200
 msm-rg,articles,1,200
@@ -1941,6 +2099,7 @@ msm-rg,paten,1,200
 msm-rg,patent,1,404
 msm-rg,patens-2,1,404
 msm-rg,research-project,1,200
+msm-rg,wp-categories,1,200
 afdays,home,1,200
 afdays,ourteam,1,200
 afdays,articles,1,200
@@ -1957,6 +2116,7 @@ afdays,patens-2,1,404
 afdays,research-project,1,200
 afdays,research-project,2,200
 afdays,research-project,3,200
+afdays,wp-categories,1,200
 afmrg,home,1,200
 afmrg,ourteam,1,200
 afmrg,articles,1,200
@@ -1972,6 +2132,7 @@ afmrg,patens,1,200
 afmrg,patens,2,200
 afmrg,research-project,1,200
 afmrg,research-project,2,200
+afmrg,wp-categories,1,200
 airporteng,home,1,-1
 airporteng,ourteam,1,-1
 airporteng,our-team,1,-1
@@ -2000,6 +2161,7 @@ airporteng,projects,1,-1
 airporteng,research-projects,1,-1
 airporteng,project,1,-1
 airporteng,research-project-2,1,-1
+airporteng,wp-categories,1,-1
 airporteng,home,1,-1
 airporteng,about,1,-1
 airporteng,about-us,1,-1
@@ -2035,6 +2197,7 @@ aimp,projects,1,404
 aimp,research-projects,1,404
 aimp,project,1,404
 aimp,research-project-2,1,200
+aimp,wp-categories,1,200
 aimp,home,1,200
 aimp,about,1,404
 aimp,about-us,1,404
@@ -2053,6 +2216,7 @@ ermrg,patent,1,404
 ermrg,patens-2,1,404
 ermrg,research-project,1,200
 ermrg,research-project,2,200
+ermrg,wp-categories,1,200
 fderg,home,1,200
 fderg,ourteam,1,200
 fderg,articles,1,200
@@ -2069,12 +2233,14 @@ fderg,projects,1,200
 fderg,research-projects,1,404
 fderg,project,1,200
 fderg,research-project-2,1,404
+fderg,wp-categories,1,200
 ggerg,home,1,200
 ggerg,ourteam,1,200
 ggerg,articles,1,200
 ggerg,books,1,200
 ggerg,patens,1,200
 ggerg,research-project,1,200
+ggerg,wp-categories,1,200
 tanpa-halaman-green-hydrogen-energy-technology-researc,home,0,tanpa_halaman
 ropt,home,1,200
 ropt,ourteam,1,200
@@ -2083,6 +2249,7 @@ ropt,articles,2,200
 ropt,books,1,200
 ropt,patens,1,200
 ropt,research-project,1,200
+ropt,wp-categories,1,200
 sssn,home,1,200
 sssn,ourteam,1,200
 sssn,articles,1,404
@@ -2103,12 +2270,14 @@ sssn,projects,1,200
 sssn,research-projects,1,404
 sssn,project,1,200
 sssn,research-project-2,1,404
+sssn,wp-categories,1,200
 se-engineering,home,1,200
 se-engineering,ourteam,1,200
 se-engineering,articles,1,200
 se-engineering,books,1,200
 se-engineering,patens,1,200
 se-engineering,research-project,1,200
+se-engineering,wp-categories,1,200
 smsrg,home,1,200
 smsrg,ourteam,1,200
 smsrg,articles,1,200
@@ -2123,6 +2292,7 @@ smsrg,patens,1,200
 smsrg,research-project,1,200
 smsrg,research-project,2,200
 smsrg,research-project,3,200
+smsrg,wp-categories,1,200
 sri,home,1,200
 sri,ourteam,1,200
 sri,articles,1,200
@@ -2139,6 +2309,7 @@ sri,paten,1,200
 sri,patent,1,404
 sri,patens-2,1,404
 sri,research-project,1,200
+sri,wp-categories,1,200
 swm-rg,home,1,200
 swm-rg,ourteam,1,200
 swm-rg,articles,1,404
@@ -2146,6 +2317,7 @@ swm-rg,article,1,200
 swm-rg,books,1,200
 swm-rg,patens,1,200
 swm-rg,research-project,1,200
+swm-rg,wp-categories,1,200
 mrcrg,home,1,200
 mrcrg,ourteam,1,200
 mrcrg,articles,1,200
@@ -2154,6 +2326,7 @@ mrcrg,book,1,200
 mrcrg,books-2,1,404
 mrcrg,patens,1,200
 mrcrg,research-project,1,200
+mrcrg,wp-categories,1,200
 rene,home,1,200
 rene,ourteam,1,200
 rene,articles,1,200
@@ -2161,6 +2334,7 @@ rene,books,1,200
 rene,patens,1,200
 rene,research-project,1,200
 rene,research-project,2,200
+rene,wp-categories,1,200
 aerodyn,home,1,200
 aerodyn,ourteam,1,200
 aerodyn,articles,1,404
@@ -2174,6 +2348,7 @@ aerodyn,paten,1,404
 aerodyn,patent,1,404
 aerodyn,patens-2,1,404
 aerodyn,research-project,1,200
+aerodyn,wp-categories,1,200
 dis-intel,home,1,200
 dis-intel,ourteam,1,200
 dis-intel,articles,1,200
@@ -2182,6 +2357,7 @@ dis-intel,book,1,200
 dis-intel,books-2,1,404
 dis-intel,patens,1,200
 dis-intel,research-project,1,200
+dis-intel,wp-categories,1,200
 wte,home,1,200
 wte,ourteam,1,200
 wte,articles,1,200
@@ -2194,6 +2370,7 @@ wte,patent,1,404
 wte,patens-2,1,404
 wte,research-project,1,200
 wte,research-project,2,200
+wte,wp-categories,1,200
 cyberiot,home,1,200
 cyberiot,ourteam,1,200
 cyberiot,articles,1,200
@@ -2211,6 +2388,7 @@ cyberiot,books,1,200
 cyberiot,patens,1,200
 cyberiot,research-project,1,200
 cyberiot,research-project,2,200
+cyberiot,wp-categories,1,200
 energy-e-conser,home,1,200
 energy-e-conser,ourteam,1,200
 energy-e-conser,articles,1,200
@@ -2221,6 +2399,7 @@ energy-e-conser,paten,1,200
 energy-e-conser,patent,1,404
 energy-e-conser,patens-2,1,404
 energy-e-conser,research-project,1,200
+energy-e-conser,wp-categories,1,200
 smprg,home,1,200
 smprg,ourteam,1,200
 smprg,articles,1,200
@@ -2229,6 +2408,7 @@ smprg,book,1,200
 smprg,books-2,1,404
 smprg,patens,1,200
 smprg,research-project,1,200
+smprg,wp-categories,1,200
 house-sett,home,1,200
 house-sett,ourteam,1,200
 house-sett,articles,1,404
@@ -2246,6 +2426,7 @@ house-sett,projects,1,200
 house-sett,research-projects,1,404
 house-sett,project,1,200
 house-sett,research-project-2,1,404
+house-sett,wp-categories,1,200
 build-acoustics,home,1,200
 build-acoustics,ourteam,1,200
 build-acoustics,articles,1,200
@@ -2256,6 +2437,7 @@ build-acoustics,paten,1,200
 build-acoustics,patent,1,404
 build-acoustics,patens-2,1,404
 build-acoustics,research-project,1,200
+build-acoustics,wp-categories,1,200
 prg,home,1,200
 prg,ourteam,1,200
 prg,articles,1,200
@@ -2271,6 +2453,7 @@ prg,patent,1,404
 prg,patens-2,1,404
 prg,research-project,1,200
 prg,research-project,2,200
+prg,wp-categories,1,200
 cdm,home,1,200
 cdm,ourteam,1,404
 cdm,our-team,1,404
@@ -2296,6 +2479,7 @@ cdm,patent,1,200
 cdm,patens-2,1,404
 cdm,research-project,1,200
 cdm,research-project,2,200
+cdm,wp-categories,1,200
 cdm,home,1,200
 cdm,about,1,200
 tanpa-halaman-ai-robotics-research-group,home,0,tanpa_halaman
@@ -2306,6 +2490,7 @@ nap,articles,2,200
 nap,books,1,200
 nap,patens,1,200
 nap,research-project,1,200
+nap,wp-categories,1,200
 ammd,home,1,200
 ammd,ourteam,1,200
 ammd,articles,1,200
@@ -2318,6 +2503,7 @@ ammd,research-project,3,200
 ammd,research-project,4,200
 ammd,research-project,5,200
 ammd,research-project,6,200
+ammd,wp-categories,1,200
 lightweight-mat,home,1,200
 lightweight-mat,ourteam,1,200
 lightweight-mat,articles,1,200
@@ -2332,6 +2518,7 @@ lightweight-mat,projects,1,200
 lightweight-mat,research-projects,1,404
 lightweight-mat,project,1,200
 lightweight-mat,research-project-2,1,404
+lightweight-mat,wp-categories,1,200
 coastal-sr,home,1,200
 coastal-sr,ourteam,1,200
 coastal-sr,articles,1,200
@@ -2361,6 +2548,7 @@ coastal-sr,research-project,6,200
 coastal-sr,research-project,7,200
 coastal-sr,research-project,8,200
 coastal-sr,research-project,9,200
+coastal-sr,wp-categories,1,200
 flowliqtion,home,1,200
 flowliqtion,ourteam,1,200
 flowliqtion,ourteam,2,200
@@ -2374,6 +2562,7 @@ flowliqtion,paten,1,200
 flowliqtion,patent,1,404
 flowliqtion,patens-2,1,404
 flowliqtion,research-project,1,200
+flowliqtion,wp-categories,1,200
 flowliqtion,home,1,200
 powersystems,home,1,200
 powersystems,ourteam,1,200
@@ -2391,6 +2580,7 @@ powersystems,books,1,200
 powersystems,patens,1,200
 powersystems,research-project,1,200
 powersystems,research-project,2,200
+powersystems,wp-categories,1,200
 hes,home,1,200
 hes,ourteam,1,200
 hes,articles,1,200
@@ -2400,6 +2590,7 @@ hes,book,1,200
 hes,books-2,1,404
 hes,patens,1,200
 hes,research-project,1,200
+hes,wp-categories,1,200
 fdmrg,home,1,200
 fdmrg,ourteam,1,200
 fdmrg,articles,1,200
@@ -2414,6 +2605,7 @@ fdmrg,patent,1,404
 fdmrg,patens-2,1,404
 fdmrg,research-project,1,200
 fdmrg,projects,1,200
+fdmrg,wp-categories,1,200
 float-struc,home,1,200
 float-struc,ourteam,1,200
 float-struc,articles,1,200
@@ -2421,6 +2613,7 @@ float-struc,articles,2,200
 float-struc,books,1,200
 float-struc,patens,1,200
 float-struc,research-project,1,200
+float-struc,wp-categories,1,200
 psrg,home,1,200
 psrg,ourteam,1,200
 psrg,our-team,1,404
@@ -2449,6 +2642,7 @@ psrg,projects,1,200
 psrg,research-projects,1,404
 psrg,project,1,200
 psrg,research-project-2,1,404
+psrg,wp-categories,1,200
 psrg,home,1,200
 psrg,about,1,200
 psrg,about-us,1,404
@@ -2464,12 +2658,14 @@ tnaq-rg,books,1,200
 tnaq-rg,patens,1,200
 tnaq-rg,research-project,1,200
 tnaq-rg,research-project,2,200
+tnaq-rg,wp-categories,1,200
 oeceng,home,1,200
 oeceng,ourteam,1,200
 oeceng,articles,1,200
 oeceng,books,1,200
 oeceng,patens,1,200
 oeceng,research-project,1,200
+oeceng,wp-categories,1,200
 naftech,home,1,200
 naftech,ourteam,1,200
 naftech,articles,1,200
@@ -2479,6 +2675,7 @@ naftech,articles,4,200
 naftech,books,1,200
 naftech,patens,1,200
 naftech,research-project,1,200
+naftech,wp-categories,1,200
 ait,home,1,200
 ait,ourteam,1,200
 ait,articles,1,200
@@ -2496,6 +2693,7 @@ ait,projects,1,200
 ait,research-projects,1,404
 ait,project,1,200
 ait,research-project-2,1,404
+ait,wp-categories,1,200
 hvit-rg,home,1,200
 hvit-rg,ourteam,1,200
 hvit-rg,articles,1,200
@@ -2508,6 +2706,7 @@ hvit-rg,paten,1,200
 hvit-rg,patent,1,404
 hvit-rg,patens-2,1,404
 hvit-rg,research-project,1,200
+hvit-rg,wp-categories,1,200
 cegorg,home,1,200
 cegorg,ourteam,1,200
 cegorg,articles,1,200
@@ -2516,6 +2715,7 @@ cegorg,patens,1,200
 cegorg,patents,1,404
 cegorg,paten,1,200
 cegorg,research-project,1,200
+cegorg,wp-categories,1,200
 eletrans,home,1,200
 eletrans,ourteam,1,200
 eletrans,articles,1,200
@@ -2536,12 +2736,14 @@ eletrans,projects,1,200
 eletrans,research-projects,1,404
 eletrans,project,1,200
 eletrans,research-project-2,1,404
+eletrans,wp-categories,1,200
 crem,home,1,200
 crem,ourteam,1,200
 crem,articles,1,200
 crem,books,1,200
 crem,patens,1,200
 crem,research-project,1,200
+crem,wp-categories,1,200
 bisa,home,1,200
 bisa,ourteam,1,200
 bisa,articles,1,200
@@ -2553,6 +2755,7 @@ bisa,articles,6,200
 bisa,books,1,200
 bisa,patens,1,200
 bisa,research-project,1,200
+bisa,wp-categories,1,200
 biovax,home,1,200
 biovax,ourteam,1,200
 biovax,articles,1,200
@@ -2566,6 +2769,7 @@ biovax,books,2,200
 biovax,patens,1,200
 biovax,research-project,1,200
 biovax,research-project,2,200
+biovax,wp-categories,1,200
 bstt-rg,home,1,200
 bstt-rg,ourteam,1,200
 bstt-rg,articles,1,200
@@ -2578,12 +2782,14 @@ bstt-rg,paten,1,200
 bstt-rg,patent,1,404
 bstt-rg,patens-2,1,404
 bstt-rg,research-project,1,200
+bstt-rg,wp-categories,1,200
 boneregeneration,home,1,200
 boneregeneration,ourteam,1,200
 boneregeneration,articles,1,200
 boneregeneration,books,1,200
 boneregeneration,patens,1,200
 boneregeneration,research-project,1,200
+boneregeneration,wp-categories,1,200
 malvecsis,home,1,200
 malvecsis,ourteam,1,200
 malvecsis,articles,1,200
@@ -2597,6 +2803,7 @@ malvecsis,patens,1,200
 malvecsis,research-project,1,200
 malvecsis,research-project,2,200
 malvecsis,research-project,3,200
+malvecsis,wp-categories,1,200
 most-rg,home,1,200
 most-rg,ourteam,1,200
 most-rg,articles,1,200
@@ -2611,12 +2818,14 @@ most-rg,patens,1,200
 most-rg,research-project,1,200
 most-rg,research-project,2,200
 most-rg,research-project,3,200
+most-rg,wp-categories,1,200
 thecore,home,1,200
 thecore,ourteam,1,200
 thecore,articles,1,200
 thecore,books,1,200
 thecore,patens,1,200
 thecore,research-project,1,200
+thecore,wp-categories,1,200
 renalnutrition,home,1,200
 renalnutrition,ourteam,1,200
 renalnutrition,articles,1,200
@@ -2627,6 +2836,7 @@ renalnutrition,articles,5,200
 renalnutrition,books,1,200
 renalnutrition,patens,1,200
 renalnutrition,research-project,1,200
+renalnutrition,wp-categories,1,200
 neurogenetics,home,1,200
 neurogenetics,ourteam,1,200
 neurogenetics,articles,1,200
@@ -2639,6 +2849,7 @@ neurogenetics,paten,1,404
 neurogenetics,patent,1,404
 neurogenetics,patens-2,1,404
 neurogenetics,research-project,1,200
+neurogenetics,wp-categories,1,200
 addis,home,1,200
 addis,ourteam,1,200
 addis,articles,1,200
@@ -2649,6 +2860,7 @@ addis,books,1,200
 addis,patens,1,200
 addis,research-project,1,200
 addis,research-project,2,200
+addis,wp-categories,1,200
 neocare,home,1,200
 neocare,ourteam,1,200
 neocare,articles,1,200
@@ -2662,6 +2874,7 @@ neocare,paten,1,200
 neocare,patent,1,404
 neocare,patens-2,1,404
 neocare,research-project,1,200
+neocare,wp-categories,1,200
 stepmic,home,1,200
 stepmic,ourteam,1,200
 stepmic,articles,1,200
@@ -2672,6 +2885,7 @@ stepmic,books-2,1,404
 stepmic,patens,1,200
 stepmic,research-project,1,200
 stepmic,research-project,2,200
+stepmic,wp-categories,1,200
 aphreg,home,1,200
 aphreg,ourteam,1,200
 aphreg,articles,1,200
@@ -2684,6 +2898,7 @@ aphreg,patens,1,200
 aphreg,research-project,1,200
 aphreg,research-project,2,200
 aphreg,research-project,3,200
+aphreg,wp-categories,1,200
 mvrg,home,1,200
 mvrg,ourteam,1,200
 mvrg,articles,1,200
@@ -2696,6 +2911,7 @@ mvrg,paten,1,200
 mvrg,patent,1,404
 mvrg,patens-2,1,404
 mvrg,research-project,1,200
+mvrg,wp-categories,1,200
 iorg,home,1,200
 iorg,ourteam,1,200
 iorg,articles,1,200
@@ -2703,6 +2919,7 @@ iorg,articles,2,200
 iorg,books,1,200
 iorg,patens,1,200
 iorg,research-project,1,200
+iorg,wp-categories,1,200
 dhrg,home,1,200
 dhrg,ourteam,1,200
 dhrg,articles,1,200
@@ -2710,6 +2927,7 @@ dhrg,articles,2,200
 dhrg,books,1,200
 dhrg,patens,1,200
 dhrg,research-project,1,200
+dhrg,wp-categories,1,200
 pneumonia,home,1,200
 pneumonia,ourteam,1,200
 pneumonia,articles,1,200
@@ -2717,12 +2935,14 @@ pneumonia,articles,2,200
 pneumonia,books,1,200
 pneumonia,patens,1,200
 pneumonia,research-project,1,200
+pneumonia,wp-categories,1,200
 cava-rg,home,1,200
 cava-rg,ourteam,1,200
 cava-rg,articles,1,200
 cava-rg,books,1,200
 cava-rg,patens,1,200
 cava-rg,research-project,1,200
+cava-rg,wp-categories,1,200
 ioprg,home,1,200
 ioprg,ourteam,1,200
 ioprg,articles,1,200
@@ -2735,6 +2955,7 @@ ioprg,paten,1,200
 ioprg,patent,1,404
 ioprg,patens-2,1,404
 ioprg,research-project,1,200
+ioprg,wp-categories,1,200
 medi-edu,home,1,200
 medi-edu,ourteam,1,200
 medi-edu,articles,1,200
@@ -2748,6 +2969,7 @@ medi-edu,paten,1,200
 medi-edu,patent,1,404
 medi-edu,patens-2,1,404
 medi-edu,research-project,1,200
+medi-edu,wp-categories,1,200
 aio-rg,home,1,200
 aio-rg,ourteam,1,200
 aio-rg,articles,1,200
@@ -2763,6 +2985,7 @@ aio-rg,paten,1,200
 aio-rg,patent,1,404
 aio-rg,patens-2,1,404
 aio-rg,research-project,1,200
+aio-rg,wp-categories,1,200
 idea,home,1,200
 idea,ourteam,1,200
 idea,articles,1,404
@@ -2776,12 +2999,14 @@ idea,paten,1,200
 idea,patent,1,404
 idea,patens-2,1,404
 idea,research-project,1,200
+idea,wp-categories,1,200
 ohcirg,home,1,200
 ohcirg,ourteam,1,200
 ohcirg,articles,1,200
 ohcirg,books,1,200
 ohcirg,patens,1,200
 ohcirg,research-project,1,200
+ohcirg,wp-categories,1,200
 biodental-engineering,home,1,200
 biodental-engineering,ourteam,1,200
 biodental-engineering,articles,1,200
@@ -2796,6 +3021,7 @@ biodental-engineering,books,1,200
 biodental-engineering,patens,1,200
 biodental-engineering,research-project,1,200
 biodental-engineering,research-project,2,200
+biodental-engineering,wp-categories,1,200
 adhentisrg,home,1,200
 adhentisrg,ourteam,1,200
 adhentisrg,articles,1,200
@@ -2806,6 +3032,7 @@ adhentisrg,patens,1,200
 adhentisrg,research-project,1,200
 adhentisrg,research-project,2,200
 adhentisrg,research-project,3,200
+adhentisrg,wp-categories,1,200
 periodontal,home,1,200
 periodontal,ourteam,1,200
 periodontal,articles,1,200
@@ -2815,12 +3042,14 @@ periodontal,books,1,200
 periodontal,patens,1,200
 periodontal,research-project,1,200
 periodontal,research-project,2,200
+periodontal,wp-categories,1,200
 rdrg,home,1,200
 rdrg,ourteam,1,200
 rdrg,articles,1,200
 rdrg,books,1,200
 rdrg,patens,1,200
 rdrg,research-project,1,200
+rdrg,wp-categories,1,200
 oraclefrg,home,1,200
 oraclefrg,ourteam,1,200
 oraclefrg,articles,1,200
@@ -2833,6 +3062,7 @@ oraclefrg,paten,1,200
 oraclefrg,patent,1,404
 oraclefrg,patens-2,1,404
 oraclefrg,research-project,1,200
+oraclefrg,wp-categories,1,200
 geriatricdentistry,home,1,200
 geriatricdentistry,ourteam,1,200
 geriatricdentistry,our-team,1,404
@@ -2853,6 +3083,7 @@ geriatricdentistry,paten,1,200
 geriatricdentistry,patent,1,404
 geriatricdentistry,patens-2,1,404
 geriatricdentistry,research-project,1,200
+geriatricdentistry,wp-categories,1,200
 geriatricdentistry,home,1,200
 geriatricdentistry,about,1,200
 geriatricdentistry,about-us,1,404
@@ -2868,6 +3099,7 @@ dfd-rg,articles,3,200
 dfd-rg,books,1,200
 dfd-rg,patens,1,200
 dfd-rg,research-project,1,200
+dfd-rg,wp-categories,1,200
 oralmicrobiome-rg,home,1,200
 oralmicrobiome-rg,ourteam,1,200
 oralmicrobiome-rg,articles,1,200
@@ -2880,12 +3112,14 @@ oralmicrobiome-rg,paten,1,200
 oralmicrobiome-rg,patent,1,404
 oralmicrobiome-rg,patens-2,1,404
 oralmicrobiome-rg,research-project,1,200
+oralmicrobiome-rg,wp-categories,1,200
 bcqlrg,home,1,200
 bcqlrg,ourteam,1,200
 bcqlrg,articles,1,200
 bcqlrg,books,1,200
 bcqlrg,patens,1,200
 bcqlrg,research-project,1,200
+bcqlrg,wp-categories,1,200
 coastaldw,home,1,200
 coastaldw,ourteam,1,200
 coastaldw,articles,1,200
@@ -2898,6 +3132,7 @@ coastaldw,research-project,1,200
 coastaldw,research-project,2,200
 coastaldw,research-project,3,200
 coastaldw,research-project,4,200
+coastaldw,wp-categories,1,200
 eiarg,home,1,200
 eiarg,ourteam,1,200
 eiarg,articles,1,200
@@ -2906,6 +3141,7 @@ eiarg,articles,3,200
 eiarg,books,1,200
 eiarg,patens,1,200
 eiarg,research-project,1,200
+eiarg,wp-categories,1,200
 etoxh,home,1,200
 etoxh,ourteam,1,200
 etoxh,articles,1,200
@@ -2918,6 +3154,7 @@ etoxh,paten,1,200
 etoxh,patent,1,404
 etoxh,patens-2,1,404
 etoxh,research-project,1,200
+etoxh,wp-categories,1,200
 food4nd,home,1,200
 food4nd,ourteam,1,200
 food4nd,articles,1,404
@@ -2929,6 +3166,7 @@ food4nd,patens,1,200
 food4nd,research-project,1,200
 food4nd,research-project,2,200
 food4nd,research-project,3,200
+food4nd,wp-categories,1,200
 hospbiz,home,1,200
 hospbiz,ourteam,1,200
 hospbiz,articles,1,200
@@ -2938,12 +3176,14 @@ hospbiz,book,1,200
 hospbiz,books-2,1,404
 hospbiz,patens,1,200
 hospbiz,research-project,1,200
+hospbiz,wp-categories,1,200
 isoshrg,home,1,200
 isoshrg,ourteam,1,200
 isoshrg,articles,1,200
 isoshrg,books,1,200
 isoshrg,patens,1,200
 isoshrg,research-project,1,200
+isoshrg,wp-categories,1,200
 ihmrg,home,1,200
 ihmrg,ourteam,1,200
 ihmrg,articles,1,200
@@ -2963,6 +3203,7 @@ ihmrg,patens,1,200
 ihmrg,research-project,1,200
 ihmrg,research-project,2,200
 ihmrg,research-project,3,200
+ihmrg,wp-categories,1,200
 icchealth,home,1,200
 icchealth,ourteam,1,200
 icchealth,articles,1,200
@@ -2973,6 +3214,7 @@ icchealth,paten,1,200
 icchealth,patent,1,404
 icchealth,patens-2,1,404
 icchealth,research-project,1,200
+icchealth,wp-categories,1,200
 mc-nutrition,home,1,200
 mc-nutrition,ourteam,1,200
 mc-nutrition,articles,1,404
@@ -2985,6 +3227,7 @@ mc-nutrition,paten,1,404
 mc-nutrition,patent,1,404
 mc-nutrition,patens-2,1,404
 mc-nutrition,research-project,1,200
+mc-nutrition,wp-categories,1,200
 nutritionmdp,home,1,200
 nutritionmdp,ourteam,1,200
 nutritionmdp,articles,1,404
@@ -2998,6 +3241,7 @@ nutritionmdp,patens-2,1,404
 nutritionmdp,research-project,1,200
 nutritionmdp,research-project,2,200
 nutritionmdp,research-project,3,200
+nutritionmdp,wp-categories,1,200
 ohsav,home,1,200
 ohsav,ourteam,1,200
 ohsav,articles,1,404
@@ -3015,6 +3259,7 @@ ohsav,patens-2,1,404
 ohsav,research-project,1,200
 ohsav,research-project,2,200
 ohsav,research-project,3,200
+ohsav,wp-categories,1,200
 press-ncd,home,1,200
 press-ncd,ourteam,1,200
 press-ncd,articles,1,200
@@ -3029,18 +3274,21 @@ press-ncd,patent,1,404
 press-ncd,patens-2,1,404
 press-ncd,research-project,1,200
 press-ncd,research-project,2,200
+press-ncd,wp-categories,1,200
 ph-entomology,home,1,200
 ph-entomology,ourteam,1,200
 ph-entomology,articles,1,200
 ph-entomology,books,1,200
 ph-entomology,patens,1,200
 ph-entomology,research-project,1,200
+ph-entomology,wp-categories,1,200
 se-ncd,home,1,200
 se-ncd,ourteam,1,200
 se-ncd,articles,1,200
 se-ncd,books,1,200
 se-ncd,patens,1,200
 se-ncd,research-project,1,200
+se-ncd,wp-categories,1,200
 urbhealth,home,1,200
 urbhealth,ourteam,1,200
 urbhealth,articles,1,200
@@ -3050,6 +3298,7 @@ urbhealth,patens,1,200
 urbhealth,patens,2,200
 urbhealth,research-project,1,200
 urbhealth,research-project,2,200
+urbhealth,wp-categories,1,200
 workfasma,home,1,200
 workfasma,ourteam,1,200
 workfasma,articles,1,200
@@ -3060,6 +3309,7 @@ workfasma,paten,1,404
 workfasma,patent,1,404
 workfasma,patens-2,1,404
 workfasma,research-project,1,200
+workfasma,wp-categories,1,200
 nutriepi,home,1,200
 nutriepi,ourteam,1,200
 nutriepi,articles,1,200
@@ -3070,12 +3320,14 @@ nutriepi,paten,1,200
 nutriepi,patent,1,404
 nutriepi,patens-2,1,404
 nutriepi,research-project,1,200
+nutriepi,wp-categories,1,200
 ecohealth,home,1,200
 ecohealth,ourteam,1,200
 ecohealth,articles,1,200
 ecohealth,books,1,200
 ecohealth,patens,1,200
 ecohealth,research-project,1,200
+ecohealth,wp-categories,1,200
 ffoodtech-2,home,0,tanpa_halaman
 ocnrg,home,1,200
 ocnrg,ourteam,1,200
@@ -3084,6 +3336,7 @@ ocnrg,articles,2,200
 ocnrg,books,1,200
 ocnrg,patens,1,200
 ocnrg,research-project,1,200
+ocnrg,wp-categories,1,200
 dreams,home,1,200
 dreams,ourteam,1,200
 dreams,ourteam,2,200
@@ -3095,6 +3348,7 @@ dreams,books,1,200
 dreams,patens,1,200
 dreams,research-project,1,200
 dreams,research-project,2,200
+dreams,wp-categories,1,200
 drugsyn,home,1,200
 drugsyn,ourteam,1,200
 drugsyn,articles,1,404
@@ -3102,6 +3356,7 @@ drugsyn,article,1,200
 drugsyn,books,1,200
 drugsyn,patens,1,200
 drugsyn,research-project,1,200
+drugsyn,wp-categories,1,200
 marinenutraceutical,home,1,200
 marinenutraceutical,ourteam,1,200
 marinenutraceutical,articles,1,200
@@ -3112,6 +3367,7 @@ marinenutraceutical,projects,1,200
 marinenutraceutical,research-projects,1,404
 marinenutraceutical,project,1,200
 marinenutraceutical,research-project-2,1,404
+marinenutraceutical,wp-categories,1,200
 natural-drug,home,1,200
 natural-drug,ourteam,1,200
 natural-drug,articles,1,200
@@ -3121,6 +3377,7 @@ natural-drug,articles,4,200
 natural-drug,books,1,200
 natural-drug,patens,1,200
 natural-drug,research-project,1,200
+natural-drug,wp-categories,1,200
 ufrg,home,1,200
 ufrg,ourteam,1,200
 ufrg,ourteam,2,200
@@ -3135,6 +3392,7 @@ ufrg,research-project,1,200
 ufrg,research-project,2,200
 ufrg,research-project,3,200
 ufrg,research-project,4,200
+ufrg,wp-categories,1,200
 dtdds,home,1,200
 dtdds,ourteam,1,200
 dtdds,articles,1,200
@@ -3152,6 +3410,7 @@ dtdds,paten,1,200
 dtdds,patent,1,404
 dtdds,patens-2,1,404
 dtdds,research-project,1,200
+dtdds,wp-categories,1,200
 cbmc,home,1,200
 cbmc,ourteam,1,200
 cbmc,articles,1,200
@@ -3169,6 +3428,7 @@ cbmc,projects,1,200
 cbmc,research-projects,1,404
 cbmc,project,1,200
 cbmc,research-project-2,1,404
+cbmc,wp-categories,1,200
 mnprg,home,1,200
 mnprg,ourteam,1,200
 mnprg,articles,1,200
@@ -3176,6 +3436,7 @@ mnprg,articles,2,200
 mnprg,books,1,200
 mnprg,patens,1,200
 mnprg,research-project,1,200
+mnprg,wp-categories,1,200
 mnprg,home,1,200
 PharmaEpid,home,1,200
 PharmaEpid,ourteam,1,200
@@ -3200,6 +3461,7 @@ PharmaEpid,projects,1,200
 PharmaEpid,research-projects,1,404
 PharmaEpid,project,1,200
 PharmaEpid,research-project-2,1,404
+PharmaEpid,wp-categories,1,200
 indofootcare,home,1,200
 indofootcare,ourteam,1,200
 indofootcare,articles,1,404
@@ -3213,6 +3475,8 @@ indofootcare,books-2,1,404
 indofootcare,patens,1,200
 indofootcare,research-project,1,200
 indofootcare,research-project,2,200
+indofootcare,wp-categories,1,200
+indofootcare,wp-posts:Articles,1,200
 eaging,home,1,200
 eaging,ourteam,1,200
 eaging,articles,1,200
@@ -3231,6 +3495,7 @@ eaging,projects,1,404
 eaging,research-projects,1,404
 eaging,project,1,404
 eaging,research-project-2,1,404
+eaging,wp-categories,1,200
 hncd-rg,home,1,200
 hncd-rg,ourteam,1,200
 hncd-rg,ourteam,2,200
@@ -3242,6 +3507,7 @@ hncd-rg,patens,1,200
 hncd-rg,patens,2,200
 hncd-rg,research-project,1,200
 hncd-rg,research-project,2,200
+hncd-rg,wp-categories,1,200
 mhvp,home,1,200
 mhvp,ourteam,1,200
 mhvp,articles,1,200
@@ -3254,6 +3520,7 @@ mhvp,patent,1,404
 mhvp,patens-2,1,404
 mhvp,research-project,1,200
 mhvp,research-project,2,200
+mhvp,wp-categories,1,200
 neuro-onc,home,1,200
 neuro-onc,ourteam,1,200
 neuro-onc,articles,1,200
@@ -3263,6 +3530,7 @@ neuro-onc,articles,4,200
 neuro-onc,books,1,200
 neuro-onc,patens,1,200
 neuro-onc,research-project,1,200
+neuro-onc,wp-categories,1,200
 nmhealthcare,home,1,200
 nmhealthcare,ourteam,1,200
 nmhealthcare,articles,1,200
@@ -3278,6 +3546,7 @@ nmhealthcare,patens,1,200
 nmhealthcare,patens,2,200
 nmhealthcare,patens,3,200
 nmhealthcare,research-project,1,200
+nmhealthcare,wp-categories,1,200
 pednrg,home,1,200
 pednrg,ourteam,1,200
 pednrg,articles,1,200
@@ -3292,6 +3561,7 @@ pednrg,books,2,200
 pednrg,patens,1,200
 pednrg,patens,2,200
 pednrg,research-project,1,200
+pednrg,wp-categories,1,200
 v-mat,home,1,200
 v-mat,ourteam,1,200
 v-mat,articles,1,200
@@ -3307,6 +3577,7 @@ v-mat,projects,1,404
 v-mat,research-projects,1,404
 v-mat,project,1,404
 v-mat,research-project-2,1,404
+v-mat,wp-categories,1,200
 nnrg,home,1,200
 nnrg,ourteam,1,200
 nnrg,articles,1,200
@@ -3318,6 +3589,7 @@ nnrg,patens,1,200
 nnrg,patens,2,200
 nnrg,research-project,1,200
 nnrg,research-project,2,200
+nnrg,wp-categories,1,200
 pmn-rg,home,1,200
 pmn-rg,ourteam,1,200
 pmn-rg,articles,1,200
@@ -3331,12 +3603,14 @@ pmn-rg,paten,1,200
 pmn-rg,patent,1,404
 pmn-rg,patens-2,1,404
 pmn-rg,research-project,1,200
+pmn-rg,wp-categories,1,200
 mwm-rg,home,1,200
 mwm-rg,ourteam,1,200
 mwm-rg,articles,1,200
 mwm-rg,books,1,200
 mwm-rg,patens,1,200
 mwm-rg,research-project,1,200
+mwm-rg,wp-categories,1,200
 fortrebgen,home,1,200
 fortrebgen,ourteam,1,200
 fortrebgen,articles,1,200
@@ -3350,6 +3624,7 @@ fortrebgen,research-project,2,200
 fortrebgen,research-project,3,200
 fortrebgen,research-project,4,200
 fortrebgen,research-project,5,200
+fortrebgen,wp-categories,1,200
 blu-eco,home,1,200
 blu-eco,ourteam,1,200
 blu-eco,articles,1,200
@@ -3373,6 +3648,7 @@ blu-eco,research-project,2,200
 blu-eco,research-project,3,200
 blu-eco,research-project,4,200
 blu-eco,research-project,5,200
+blu-eco,wp-categories,1,200
 urbinfrastructur-r,home,1,200
 urbinfrastructur-r,ourteam,1,200
 urbinfrastructur-r,articles,1,200
@@ -3385,6 +3661,7 @@ urbinfrastructur-r,articles,7,200
 urbinfrastructur-r,books,1,200
 urbinfrastructur-r,patens,1,200
 urbinfrastructur-r,research-project,1,200
+urbinfrastructur-r,wp-categories,1,200
 fis-rg,home,1,200
 fis-rg,ourteam,1,200
 fis-rg,articles,1,200
@@ -3407,6 +3684,7 @@ fis-rg,books,1,200
 fis-rg,patens,1,200
 fis-rg,research-project,1,200
 fis-rg,research-project,2,200
+fis-rg,wp-categories,1,200
 womenhealth-con,home,1,200
 womenhealth-con,ourteam,1,200
 womenhealth-con,articles,1,200
@@ -3445,3 +3723,4 @@ womenhealth-con,research-project,1,200
 womenhealth-con,research-project,2,200
 womenhealth-con,research-project,3,200
 womenhealth-con,research-project,4,200
+womenhealth-con,wp-categories,1,200
