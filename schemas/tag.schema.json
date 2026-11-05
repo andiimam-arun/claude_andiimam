@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tema Tingkat 1",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "tag_id",
+      "nama",
+      "name_en",
+      "klaster",
+      "n_trg",
+      "n_peneliti"
+    ],
+    "properties": {
+      "tag_id": {
+        "type": "string",
+        "pattern": "^[A-D]\\d{2}$"
+      },
+      "nama": {
+        "type": "string"
+      },
+      "name_en": {
+        "type": "string"
+      },
+      "klaster": {
+        "type": "string"
+      },
+      "n_trg": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "n_peneliti": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "n_publikasi": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  }
+}

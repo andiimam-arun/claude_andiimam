@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Luaran Unhas keseluruhan (opsional)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dibuat",
+    "sumber",
+    "tahun",
+    "bidang",
+    "sdg",
+    "mitra",
+    "kuartil"
+  ],
+  "properties": {
+    "dibuat": {
+      "type": "string"
+    },
+    "sumber": {
+      "type": "string"
+    },
+    "institusi": {
+      "type": "string"
+    },
+    "dari": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "bidang_dari": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tahun": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "y",
+          "semua",
+          "artikel",
+          "oa"
+        ],
+        "properties": {
+          "y": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "semua": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "artikel": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "oa": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "jenis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "k",
+          "n"
+        ],
+        "properties": {
+          "k": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "bidang": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "nama",
+          "n"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nama": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "sdg": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "nama",
+          "n"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nama": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "mitra": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intl",
+        "dalam_negeri"
+      ],
+      "properties": {
+        "intl": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "nama",
+              "n"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nama": {
+                "type": "string"
+              },
+              "negara": {
+                "type": "string"
+              },
+              "n": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "dalam_negeri": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "nama",
+              "n"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nama": {
+                "type": "string"
+              },
+              "negara": {
+                "type": "string"
+              },
+              "n": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "kuartil": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "y",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "tanpa",
+          "total"
+        ],
+        "properties": {
+          "y": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q1": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q2": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q3": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "q4": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "tanpa": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "jurnal_dominan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "y",
+          "jurnal",
+          "n",
+          "pct"
+        ],
+        "properties": {
+          "y": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "jurnal": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pct": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

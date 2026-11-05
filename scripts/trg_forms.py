@@ -23,11 +23,10 @@ by = C.defaultdict(list)
 for p in pen:
     by[p["trg_slug"]].append(p)
 
-JENIS_MITRA = ["Pemerintah pusat", "Pemerintah daerah", "Industri/swasta", "LSM/komunitas", "Perguruan tinggi dalam negeri",
-               "Perguruan tinggi/lembaga luar negeri", "Lembaga riset (BRIN dll.)", "Rumah sakit/fasilitas kesehatan", "Lainnya"]
-STATUS = ["Aktif", "Tidak aktif lagi"]
-TKT = [str(i) for i in range(1, 10)]
-LUARAN = ["Artikel jurnal", "Buku/bab buku", "HKI/paten", "Produk/prototipe", "Kebijakan/rekomendasi", "Pelatihan/pendampingan", "Lainnya"]
+import importlib.util as _iu, os as _os
+_sp = _iu.spec_from_file_location("trg_formspec", _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "trg_formspec.py"))
+FS = _iu.module_from_spec(_sp); _sp.loader.exec_module(FS)
+JENIS_MITRA, STATUS, TKT, LUARAN, PERAN_DANA, KONSORSIUM = FS.JENIS_MITRA, FS.STATUS, FS.TKT, FS.LUARAN, FS.PERAN_DANA, FS.KONSORSIUM
 EXTRA_ROWS = 12
 
 F = "Arial"
@@ -70,7 +69,7 @@ def build(t, path):
 
     # ---- Daftar ----
     wd = wb.active; wd.title = "Daftar"
-    lists = [("Tema", tag_names), ("Jenis mitra", JENIS_MITRA), ("Status", STATUS), ("TKT", TKT), ("Luaran", LUARAN)]
+    lists = [("Tema", tag_names), ("Jenis mitra", JENIS_MITRA), ("Status", STATUS), ("TKT", TKT), ("Luaran", LUARAN), ("Peran dana", PERAN_DANA), ("Konsorsium", KONSORSIUM)]
     for j, (h, vals) in enumerate(lists, 1):
         wd.cell(row=1, column=j, value=h).font = f_bold
         wd.column_dimensions[get_column_letter(j)].width = 44 if j in (1, 2) else 22
@@ -155,11 +154,25 @@ def build(t, path):
     dv_l = DataValidation(type="list", formula1=rng("E", len(LUARAN)), allow_blank=True); dv_l.add("F22:F24"); wt.add_data_validation(dv_l)
     put(wt, "A26", "TKT = Tingkat Kesiapterapan Teknologi. Isi bila riset menghasilkan produk atau teknologi, kosongkan untuk riset dasar.", f_note, border=False)
 
+    put(wt, "A28", "Pendanaan riset 5 tahun terakhir (maks. 10; dasar penilaian kelayakan konsorsium)", f_bold, border=False)
+    for j, h in enumerate(["Sumber atau skema pendanaan", "Tahun", "Jumlah (Rp)", "Peran (pilih)"], 1):
+        c = wt.cell(row=29, column=j, value=h); c.font, c.fill, c.border, c.alignment = f_head, fill_head, box, wrap
+    for r in range(30, 40):
+        for j in range(1, 5):
+            c = wt.cell(row=r, column=j); c.fill, c.border, c.font, c.alignment = fill_fill, box, f_norm, wrap
+        wt.cell(row=r, column=3).number_format = "#,##0"
+    dv_p = DataValidation(type="list", formula1=rng("F", len(PERAN_DANA)), allow_blank=True); dv_p.add("D30:D39"); wt.add_data_validation(dv_p)
+    put(wt, "A41", "Bersedia bergabung konsorsium TRG sejenis?", f_bold); put(wt, "B41", None, f_norm, fill_fill)
+    dv_c = DataValidation(type="list", formula1=rng("G", len(KONSORSIUM)), allow_blank=True); dv_c.add("B41"); wt.add_data_validation(dv_c)
+    put(wt, "A42", "Catatan untuk tim GloRI", f_bold); put(wt, "B42", None, f_norm, fill_fill); wt.merge_cells("B42:G42"); wt.row_dimensions[42].height = 48
+    put(wt, "A44", "Nama pengisi formulir (wajib)", f_bold); put(wt, "B44", None, f_norm, fill_fill)
+
     # ---- Petunjuk ----
     wp = wb.create_sheet("Petunjuk", 0)
     wp.column_dimensions["A"].width = 42; wp.column_dimensions["B"].width = 70
     wp["A1"].value = f"Formulir kelengkapan data: {name}"; wp["A1"].font = f_title
     wp["A2"].value = "Peta Riset Unhas, Thematic Research Group"; wp["A2"].font = f_note
+    wp["D1"].value = FS.VERSI; wp["D1"].font = Font(name=F, size=8, color="BFBFBF")   # penanda versi formulir untuk pembaca
     rows = [
         ("Tujuan", "Melengkapi data agar peneliti TRG ini dapat ditemukan di dashboard Peta Riset Unhas (siapa ahli tentang apa)."),
         ("Lama pengisian", "Sekitar 15 menit."),

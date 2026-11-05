@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pengayaan OpenAlex (opsional)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dibuat",
+    "sumber",
+    "n_penulis",
+    "n_cocok",
+    "n_luar_trg",
+    "metrik",
+    "luar_trg",
+    "bidang"
+  ],
+  "properties": {
+    "dibuat": {
+      "type": "string"
+    },
+    "sumber": {
+      "type": "string"
+    },
+    "institusi": {
+      "type": "string"
+    },
+    "n_penulis": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_peneliti_trg": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_cocok": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_tinjau": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_luar_trg": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "metrik": {
+      "type": "object",
+      "description": "id peneliti situs -> metrik OpenAlex",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "oa",
+          "h",
+          "s",
+          "k",
+          "d"
+        ],
+        "properties": {
+          "oa": {
+            "type": "string"
+          },
+          "h": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "k": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "b": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "d": {
+            "enum": [
+              "orcid",
+              "scopus",
+              "nama"
+            ]
+          }
+        }
+      }
+    },
+    "luar_trg": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "oa",
+          "nama",
+          "h",
+          "s",
+          "k"
+        ],
+        "properties": {
+          "oa": {
+            "type": "string"
+          },
+          "nama": {
+            "type": "string"
+          },
+          "orcid": {
+            "type": "string"
+          },
+          "h": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "s": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "k": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "b": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "t": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "x": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "u": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "bidang": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "nama",
+          "n_penulis",
+          "sitasi",
+          "di_trg",
+          "luar_trg"
+        ],
+        "properties": {
+          "nama": {
+            "type": "string"
+          },
+          "n_penulis": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sitasi": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "di_trg": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "luar_trg": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
