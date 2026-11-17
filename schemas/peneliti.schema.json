@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Peneliti unik",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "nama",
+      "peran",
+      "ketua_di",
+      "trg_slugs",
+      "klaster",
+      "tag_ids",
+      "keahlian",
+      "orcid",
+      "sinta_id",
+      "scopus_id"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^P\\d{5}$"
+      },
+      "nama": {
+        "type": "string"
+      },
+      "peran": {
+        "type": "string"
+      },
+      "ketua_di": {
+        "type": "string",
+        "description": "Nama TRG yang dipimpin, dipisah ' · '"
+      },
+      "trg_slugs": {
+        "type": "string",
+        "description": "Slug TRG dipisah ';' (kunci ke trg.json)"
+      },
+      "trg": {
+        "type": "string"
+      },
+      "trg_n": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "klaster": {
+        "type": "string"
+      },
+      "tag_ids": {
+        "type": "string",
+        "description": "Kode tema dipisah ';'"
+      },
+      "tag": {
+        "type": "string"
+      },
+      "keahlian": {
+        "type": "string"
+      },
+      "id_peneliti": {
+        "type": "string"
+      },
+      "orcid": {
+        "type": "string"
+      },
+      "sinta_id": {
+        "type": "string"
+      },
+      "scopus_id": {
+        "type": "string"
+      }
+    }
+  }
+}

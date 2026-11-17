@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/peta.css">
+<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.05-c">
 </head>
 <body>
 <a class="skip" href="#main" data-i="skip">Lewati ke konten</a>
@@ -42,7 +42,7 @@
     <dl class="kpis" id="kpis" aria-live="polite">
       <div><dt data-i="kTrg">TRG</dt><dd id="k-trg">—</dd></div>
       <div><dt data-i="kPeople">Peneliti</dt><dd id="k-people">—</dd></div>
-      <div><dt data-i="kLead">Ketua TRG</dt><dd id="k-lead">—</dd></div>
+      <div><dt data-i="kLead">TRG dengan ketua terbaca</dt><dd id="k-lead">—</dd></div>
       <div><dt data-i="kPapers">Artikel tercatat</dt><dd id="k-papers">—</dd></div>
     </dl>
   </div>
@@ -53,6 +53,9 @@
     <button class="tab" role="tab" id="tab-cari" data-tab="cari" aria-selected="true" aria-controls="cari" data-i="tabSearch">Cari ahli</button>
     <button class="tab" role="tab" id="tab-tema" data-tab="tema" aria-selected="false" aria-controls="tema" data-i="tabTheme">Peta tema</button>
     <button class="tab" role="tab" id="tab-trg" data-tab="trg" aria-selected="false" aria-controls="trg" data-i="tabTrg">Daftar TRG</button>
+    <button class="tab" role="tab" id="tab-luar" data-tab="luar" aria-selected="false" aria-controls="luar" data-i="tabLuar" hidden>Pakar di luar TRG</button>
+    <button class="tab" role="tab" id="tab-dunia" data-tab="dunia" aria-selected="false" aria-controls="dunia" data-i="tabDunia" hidden>Kolaborasi global</button>
+    <button class="tab" role="tab" id="tab-out" data-tab="out" aria-selected="false" aria-controls="out" data-i="tabOut" hidden>Output Unhas</button>
   </div>
 
   <div id="loadmsg" class="notice" role="status" data-i="loading">Memuat data…</div>
@@ -66,12 +69,39 @@
       <label class="check"><input type="checkbox" id="f-id"> <span data-i="fId">Punya ID peneliti</span></label>
       <button type="button" class="ghost" id="f-reset" data-i="reset">Atur ulang</button>
     </div>
+    <p class="kwchip" id="kwchip" hidden></p>
     <p class="count" id="count" aria-live="polite"></p>
     <ul class="cards" id="cards"></ul>
     <button type="button" class="more" id="more" hidden></button>
   </section>
 
   <section id="tema" class="panel" role="tabpanel" aria-labelledby="tab-tema" hidden>
+    <div class="card-block">
+      <h2 data-i="spotHead">Bidang riset terbanyak</h2>
+      <p class="muted" data-i="spotNote">Lima tema dengan artikel terbanyak yang tercatat di halaman TRG. Ini ukuran aktivitas riset yang tercatat, bukan mutu atau dampak.</p>
+      <ol class="spot" id="spot"></ol>
+    </div>
+
+    <div class="card-block">
+      <h2 data-i="netHead">Jaringan tema</h2>
+      <p class="muted" data-i="netNote">Setiap bulatan adalah satu tema; makin besar berarti makin banyak artikel. Garis menghubungkan tema yang dikerjakan oleh peneliti yang sama; makin tebal berarti makin banyak peneliti bersama. Klik bulatan untuk melihat detail.</p>
+      <div class="net-tools">
+        <label class="field"><span data-i="netMin">Tampilkan hubungan dari</span>
+          <select id="net-min"><option value="3">≥ 3</option><option value="5">≥ 5</option><option value="8">≥ 8</option><option value="12">≥ 12</option></select></label>
+        <div class="legend" id="legend-net"></div>
+      </div>
+      <div class="net-wrap">
+        <svg id="net" viewBox="0 0 1000 640" role="img" aria-labelledby="net-title"><title id="net-title">Jaringan tema riset</title></svg>
+        <aside class="net-detail" id="net-detail" aria-live="polite"></aside>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <h2 data-i="cloudHead">Kata kunci riset</h2>
+      <p class="muted" data-i="cloudNote">Kata yang sering muncul pada judul artikel TRG, sudah disaring dari kata umum. Ukuran menunjukkan jumlah artikel yang memuat kata itu. Klik sebuah kata untuk melihat TRG dan penelitinya.</p>
+      <div class="cloud" id="cloud" role="list"></div>
+    </div>
+
     <div class="card-block">
       <h2 data-i="themeHead">Peneliti menurut tema</h2>
       <p class="muted" data-i="themeNote">Klik sebuah tema untuk melihat para penelitinya. Satu peneliti bisa masuk beberapa tema, jadi totalnya melebihi jumlah peneliti unik.</p>
@@ -80,12 +110,54 @@
     </div>
   </section>
 
+  <section id="dunia" class="panel" role="tabpanel" aria-labelledby="tab-dunia" hidden>
+    <p class="notice" id="d-note"></p>
+    <div class="map-tools">
+      <div class="seg" role="group" aria-label="Periode"><button type="button" id="d-all" aria-pressed="true" data-i="dAll">Semua tahun</button><button type="button" id="d-rec" aria-pressed="false"></button></div>
+      <div class="map-legend" id="d-legend" aria-hidden="true"></div>
+    </div>
+    <div class="map-wrap">
+      <svg id="d-map" viewBox="0 0 1000 520" role="img" aria-labelledby="d-map-title"><title id="d-map-title">Peta kolaborasi internasional Unhas</title><g id="d-countries"></g></svg>
+      <aside class="map-detail" id="d-detail" aria-live="polite"></aside>
+    </div>
+    <h2 class="map-h" id="d-top-h"></h2>
+    <ol class="map-top" id="d-top"></ol>
+    <div class="two-col" id="d-mitra" hidden>
+      <div><h2 class="map-h" id="d-intl-h"></h2><ol class="map-top" id="d-intl"></ol></div>
+      <div><h2 class="map-h" id="d-dom-h"></h2><ol class="map-top" id="d-dom"></ol></div>
+    </div>
+  </section>
+
+  <section id="out" class="panel" role="tabpanel" aria-labelledby="tab-out" hidden>
+    <p class="notice" id="o-note"></p>
+    <dl class="kpis small" id="o-kpis"></dl>
+    <div class="card-block"><h2 id="o-year-h"></h2><p class="muted" id="o-year-p"></p><svg id="o-year" class="chart" viewBox="0 0 900 300" role="img" aria-labelledby="o-year-t"><title id="o-year-t"></title></svg><div class="legend" id="o-year-lg"></div></div>
+    <div class="card-block"><h2 id="o-q-h"></h2><p class="muted" id="o-q-p"></p><svg id="o-q" class="chart" viewBox="0 0 900 300" role="img" aria-labelledby="o-q-t"><title id="o-q-t"></title></svg><div class="legend" id="o-q-lg"></div><div id="o-q-dom"></div></div>
+    <div class="two-col">
+      <div class="card-block"><h2 id="o-f-h"></h2><p class="muted" id="o-f-p"></p><div class="bars" id="o-f"></div></div>
+      <div class="card-block"><h2 id="o-s-h"></h2><p class="muted" id="o-s-p"></p><div class="bars" id="o-s"></div></div>
+    </div>
+  </section>
+
+  <section id="luar" class="panel" role="tabpanel" aria-labelledby="tab-luar" hidden>
+    <p class="notice" id="luar-note"></p>
+    <div class="filters">
+      <label class="field grow"><span data-i="fLuar">Cari pakar</span><input id="l-q" type="search" autocomplete="off"></label>
+      <label class="field"><span data-i="fBidang">Bidang</span><select id="l-bidang"></select></label>
+      <label class="check"><input type="checkbox" id="l-solo" checked> <span data-i="fSolo">Hanya yang berafiliasi Unhas saja</span></label>
+    </div>
+    <div class="bars" id="l-bars"></div>
+    <p class="count" id="l-count" aria-live="polite"></p>
+    <ul class="cards" id="l-cards"></ul>
+    <button type="button" class="more" id="l-more" hidden></button>
+  </section>
+
   <section id="trg" class="panel" role="tabpanel" aria-labelledby="tab-trg" hidden>
     <div class="filters">
       <label class="field grow"><span data-i="fTrg">Cari TRG</span><input id="t-q" type="search" autocomplete="off"></label>
       <label class="field"><span data-i="fKlaster">Klaster</span><select id="t-klaster"></select></label>
       <label class="field"><span data-i="fSort">Urutkan</span>
-        <select id="t-sort"><option value="nama" data-i="sName">Nama</option><option value="n_peneliti" data-i="sPeople">Jumlah peneliti</option><option value="n_publikasi" data-i="sPapers">Jumlah artikel</option></select></label>
+        <select id="t-sort"><option value="nama" data-i="sName">Nama</option><option value="n_peneliti" data-i="sPeople">Jumlah peneliti</option><option value="q12" id="t-sort-q12" data-i="sQ12" hidden>Artikel Q1+Q2</option><option value="n_publikasi" data-i="sPapers">Jumlah artikel</option></select></label>
     </div>
     <p class="count" id="t-count" aria-live="polite"></p>
     <ul class="trg-list" id="trg-list"></ul>
@@ -97,9 +169,11 @@
     <p id="foot-src"></p>
     <p class="muted" data-i="disclaimer">Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.</p>
     <p class="muted" id="foot-contact"></p>
+    <p class="muted">Versi halaman 2026.11.05-c</p>
   </div>
 </footer>
-<script src="assets/js/config.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/config.js?v=2026.11.05-c"></script>
+<script src="data/peta-data.js?v=2026.11.05-c"></script>
+<script src="assets/js/app.js?v=2026.11.05-c"></script>
 </body>
 </html>

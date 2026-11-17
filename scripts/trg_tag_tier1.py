@@ -8,9 +8,15 @@ Ini DRAF otomatis berbasis aturan kata kunci; wajib disunting manusia.
 """
 import csv, re, collections as C
 
-D = "data/trg"
+import os
+D = os.environ.get("TRG_DATA", "data/trg")
 R = lambda f: list(csv.DictReader(open(f"{D}/{f}.csv", encoding="utf-8")))
 trg, kw = R("trg"), {r["slug"]: r for r in R("trg_kata_kunci")}
+import importlib.util, os
+def _load_overrides():
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trg_overrides.py")
+    spec = importlib.util.spec_from_file_location("trg_overrides", p); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
+OVR = _load_overrides(); REP = OVR.Report()
 
 # id, nama_id, name_en, klaster, definisi, pola regex (nama TRG berbobot 3, kata kunci judul bobot 1)
 TAGS = [
@@ -100,6 +106,7 @@ FACULTY_DEFAULT = {
 }
 
 pat = {t[0]: re.compile(t[5], re.I) for t in TAGS}
+TEMA_OVR = OVR.tema({t[0] for t in TAGS}, {t["slug"] for t in trg}, REP)   # koreksi manusia atas tema TRG
 rows, cnt = [], C.Counter()
 for t in trg:
     name = t["nama"]
@@ -123,6 +130,8 @@ for t in trg:
         review = "tag_dari_fakultas_saja"
     elif top[0][1] < 3:
         review = "hanya_dari_kata_kunci"
+    if t["slug"] in TEMA_OVR:
+        top = [(x, 99) for x in TEMA_OVR[t["slug"]]]; review = "override"
     for tid, _ in top:
         cnt[tid] += 1
     rows.append([t["slug"], t["nama"], t["fakultas"], ";".join(tid for tid, _ in top),
@@ -139,3 +148,4 @@ with open(f"{D}/tag_tier1.csv", "w", newline="", encoding="utf-8") as fh:
 print("TRG:", len(rows), "| perlu_review:", C.Counter(r[5] for r in rows))
 for t in TAGS:
     print(f"  {t[0]} {t[1]}: {cnt[t[0]]}")
+REP.write(f"{D}/override_laporan_tema.txt")

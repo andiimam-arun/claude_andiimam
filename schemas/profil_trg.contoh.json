@@ -1,0 +1,64 @@
+{
+  "versi": 2,
+  "trg_slug": "ocnrg",
+  "dikirim_pada": "2026-11-02T09:30:00+08:00",
+  "dikirim_oleh": {
+    "nama": "Nama Ketua TRG",
+    "akun": "u-001"
+  },
+  "anggota": [
+    {
+      "nama": "Dr. Contoh Nama, S.Gz., MPH",
+      "peran": "Leader",
+      "afiliasi": "Fakultas Kesehatan Masyarakat, Unhas",
+      "keahlian_tema": [
+        "D03",
+        "D04"
+      ],
+      "kata_kunci": [
+        "obesitas anak",
+        "mikrobioma usus"
+      ],
+      "orcid": "0000-0002-1825-0097",
+      "sinta_id": "6012345",
+      "status": "Aktif"
+    }
+  ],
+  "trg": {
+    "tema": [
+      "D03"
+    ],
+    "kata_kunci": [
+      "gizi anak",
+      "obesitas"
+    ],
+    "deskripsi": "Riset pencegahan obesitas anak berbasis komunitas."
+  },
+  "mitra": [
+    {
+      "nama": "Contoh University",
+      "jenis": "Perguruan tinggi/lembaga luar negeri",
+      "bentuk": "riset bersama",
+      "tahun_mulai": 2023
+    }
+  ],
+  "riset_unggulan": [
+    {
+      "judul": "Contoh judul riset",
+      "tahun": 2025,
+      "sumber_dana": "Hibah contoh",
+      "tkt": 4,
+      "luaran": "Artikel jurnal"
+    }
+  ],
+  "pendanaan": [
+    {
+      "sumber": "Hibah contoh",
+      "tahun": 2025,
+      "jumlah_rupiah": 250000000,
+      "peran": "Ketua"
+    }
+  ],
+  "kesediaan_konsorsium": "Ya",
+  "catatan": "Contoh pengisian; hapus sebelum dipakai."
+}

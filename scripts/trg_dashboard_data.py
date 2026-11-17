@@ -3,7 +3,7 @@
 Pemakaian: python3 scripts/trg_dashboard_data.py OUT_DIR [--tanpa-mahasiswa]
 --tanpa-mahasiswa: untuk situs publik, buang orang yang hanya berperan Student (bukan ahli) dan hitung ulang jumlah per TRG."""
 import csv, json, os, sys
-D = "data/trg"; O = sys.argv[1]; os.makedirs(O, exist_ok=True)
+D = os.environ.get("TRG_DATA", "data/trg"); O = sys.argv[1]; os.makedirs(O, exist_ok=True)
 R = lambda f: list(csv.DictReader(open(f"{D}/{f}.csv", encoding="utf-8")))
 trg, unik, tt, tags, lap = R("trg"), R("peneliti_unik"), R("trg_tag_tier1"), R("tag_tier1"), R("laporan_kelengkapan")
 tname = {t["tag_id"]: t["nama_id"] for t in tags}
@@ -43,6 +43,7 @@ for u in unik:
         tag_ids=";".join(tids), tag=" · ".join(tname[t] for t in tids),
         keahlian="; ".join(dedupe(u["keahlian_bersih"].split(" | "))), id_peneliti=" · ".join(ids),
         orcid=u["orcid"], sinta_id=u["sinta_id"], scopus_id=u["scopus_id"]))
+_ver = {r["trg_slug"]: r["tanggal"] for r in R("verifikasi_trg")} if os.path.exists(f"{D}/verifikasi_trg.csv") else {}
 lead = {}
 for u in unik:
     for sl in [x for x in u["ketua_slugs"].split(";") if x]:
@@ -55,7 +56,7 @@ for t in trg:
         n_peneliti=int(t["n_peneliti"]), pct_keahlian=int(l["pct_keahlian"]), pct_id=int(l["pct_punya_ID"]),
         n_publikasi=int(t["n_publikasi"]), n_buku=int(t["n_buku"]), n_paten=int(t["n_paten"]), n_proyek=int(t["n_proyek"]),
         masalah=" · ".join(MASALAH[m] for m in l["masalah"].split(";") if m), url=t["url"],
-        ketua=" · ".join(lead.get(t["slug"], []))))
+        ketua=" · ".join(lead.get(t["slug"], [])), terverifikasi=_ver.get(t["slug"], "")))
 tg = []
 for t in tags:
     tid = t["tag_id"]; slugs = [s for s, v in tmap.items() if tid in v]
@@ -78,8 +79,17 @@ else:
     meta_extra = {}
 import datetime
 json.dump({"dibuat": datetime.date.today().isoformat(), "sumber": "Halaman publik trg.unhas.ac.id", "n_trg": len(tr), "n_peneliti": len(pen),
-           "n_ketua": sum(1 for p in pen if p["ketua_di"]), "n_artikel": sum(t["n_publikasi"] for t in tr), **meta_extra},
+           "n_ketua": sum(1 for p in pen if p["ketua_di"]), "n_trg_ketua": sum(1 for t in tr if t["ketua"]), "n_artikel": sum(t["n_publikasi"] for t in tr), **meta_extra},
           open(f"{O}/meta.json", "w", encoding="utf-8"), ensure_ascii=False)
 for name, rows in (("peneliti", pen), ("trg", tr), ("tag", tg)):
     json.dump(rows, open(f"{O}/{name}.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print(name, len(rows), os.path.getsize(f"{O}/{name}.json"))
+
+# versi satu berkas JS agar halaman dapat dibuka langsung dari berkas (file://) tanpa server web
+if "--tanpa-mahasiswa" in sys.argv:
+    bundle = {n: json.load(open(f"{O}/{n}.json", encoding="utf-8")) for n in ("peneliti", "trg", "tag", "meta")}
+    with open(f"{O}/peta-data.js", "w", encoding="utf-8") as fh:
+        fh.write("/* dibuat oleh scripts/trg_dashboard_data.py; jangan disunting manual */\nwindow.PETA_DATA = ")
+        json.dump(bundle, fh, ensure_ascii=False, separators=(",", ":"))
+        fh.write(";\n")
+    print("peta-data.js", os.path.getsize(f"{O}/peta-data.js"))
