@@ -139,10 +139,3 @@ dikeluarkan; satu karya dihitung sekali per negara, jadi angka antar-negara tida
 (dari `kuartil_unhas.csv`), bidang riset, SDG, dan institusi mitra luar dan dalam negeri. Hasil: `site/peta-riset/data/luaran.json` (tab "Output Unhas"; daftar mitra tampil di tab peta).
 `trg_openalex_negara.py` kini juga menyimpan karya terpilih per negara (8 paling banyak dikutip, 5 terbaru) dengan lencana kuartil bila `--sjr TAHUN=BERKAS` diberikan.
 Catatan: "akses terbuka" menurut OpenAlex mencakup salinan di repositori; satu jurnal dominan dalam setahun (mis. suplemen konferensi) dapat memiringkan komposisi kuartil, dan halaman menandainya.
-
-### Tab "Cari publikasi"
-
-Pencarian publikasi berjalan langsung dari peramban ke OpenAlex (lihat `docs/PROXY_OPENALEX.md` untuk proxy dan batas kuota). `scripts/trg_publikasi_awal.py` hanya membuat
-`site/peta-riset/data/publikasi.json`: 40 karya paling banyak dikutip sejak 2020, 25 karya terbaru (cadangan bila OpenAlex tak terjangkau), dan peta ISSN ke kuartil untuk lencana.
-Tanpa berkas SJR (`--sjr 2025=berkas.csv`), kuartil diambil dari `data/trg/artikel_kuartil.csv`, jadi hanya jurnal tempat artikel TRG terbit yang berlencana.
-Uji: `NODE_PATH=$(npm root -g) node scripts/tests/test_pub_tab.js` (server OpenAlex tiruan).

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.17-a">
+<link rel="stylesheet" href="assets/css/peta.css?v=2026.11.05-c">
 </head>
 <body>
 <a class="skip" href="#main" data-i="skip">Lewati ke konten</a>
@@ -56,7 +56,6 @@
     <button class="tab" role="tab" id="tab-luar" data-tab="luar" aria-selected="false" aria-controls="luar" data-i="tabLuar" hidden>Pakar di luar TRG</button>
     <button class="tab" role="tab" id="tab-dunia" data-tab="dunia" aria-selected="false" aria-controls="dunia" data-i="tabDunia" hidden>Kolaborasi global</button>
     <button class="tab" role="tab" id="tab-out" data-tab="out" aria-selected="false" aria-controls="out" data-i="tabOut" hidden>Output Unhas</button>
-    <button class="tab" role="tab" id="tab-pub" data-tab="pub" aria-selected="false" aria-controls="pub" data-i="tabPub">Cari publikasi</button>
   </div>
 
   <div id="loadmsg" class="notice" role="status" data-i="loading">Memuat data…</div>
@@ -129,24 +128,6 @@
     </div>
   </section>
 
-  <section id="pub" class="panel" role="tabpanel" aria-labelledby="tab-pub" hidden>
-    <p class="notice" id="p-note"></p>
-    <form class="filters pub-form" id="p-form">
-      <label class="field grow"><span data-i="pQ">Kata kunci (judul dan abstrak)</span><input id="p-q" type="search" autocomplete="off" data-i-ph="pQph" placeholder='mis. malaria vector, "coral reef"'></label>
-      <label class="field"><span data-i="pA">Penulis</span><input id="p-a" type="search" autocomplete="off" data-i-ph="pAph" placeholder="mis. Jompa"></label>
-      <label class="field sm"><span data-i="pY1">Dari tahun</span><input id="p-y1" type="number" min="1950" max="2100" inputmode="numeric"></label>
-      <label class="field sm"><span data-i="pY2">Sampai tahun</span><input id="p-y2" type="number" min="1950" max="2100" inputmode="numeric"></label>
-      <label class="field"><span data-i="pT">Jenis</span><select id="p-t"></select></label>
-      <label class="field"><span data-i="pS">Urutkan</span><select id="p-s"></select></label>
-      <label class="check"><input type="checkbox" id="p-o"> <span data-i="pO">Hanya akses terbuka</span></label>
-      <button type="submit" class="go" data-i="pGo">Cari</button>
-      <button type="button" class="ghost" id="p-reset" data-i="reset">Atur ulang</button>
-    </form>
-    <div class="pub-head"><p class="count" id="p-status" role="status" aria-live="polite"></p><div class="seg small" id="p-mode" role="group" hidden></div><button type="button" class="ghost" id="p-csv" hidden data-i="pCsv">Unduh CSV</button></div>
-    <ol class="pubs big" id="p-list"></ol>
-    <button type="button" class="more" id="p-more" hidden></button>
-  </section>
-
   <section id="out" class="panel" role="tabpanel" aria-labelledby="tab-out" hidden>
     <p class="notice" id="o-note"></p>
     <dl class="kpis small" id="o-kpis"></dl>
@@ -188,11 +169,11 @@
     <p id="foot-src"></p>
     <p class="muted" data-i="disclaimer">Data dikumpulkan otomatis dari halaman publik TRG dan dapat memuat kekeliruan atau ketinggalan. Peneliti dengan nama yang sama dapat tergabung secara keliru, dan keahlian yang kosong berarti belum dicantumkan di halaman TRG. Daftar ini memuat ketua, dosen, peneliti, dan kolaborator eksternal; mahasiswa tidak ditampilkan.</p>
     <p class="muted" id="foot-contact"></p>
-    <p class="muted">Versi halaman 2026.11.17-a</p>
+    <p class="muted">Versi halaman 2026.11.05-c</p>
   </div>
 </footer>
-<script src="assets/js/config.js?v=2026.11.17-a"></script>
-<script src="data/peta-data.js?v=2026.11.17-a"></script>
-<script src="assets/js/app.js?v=2026.11.17-a"></script>
+<script src="assets/js/config.js?v=2026.11.05-c"></script>
+<script src="data/peta-data.js?v=2026.11.05-c"></script>
+<script src="assets/js/app.js?v=2026.11.05-c"></script>
 </body>
 </html>

@@ -11,14 +11,6 @@
       title: "Peta Riset Unhas", lede: "Temukan peneliti dan kelompok riset tematik (TRG) Universitas Hasanuddin berdasarkan nama, keahlian, dan tema riset.",
       searchLabel: "Cari ahli", searchPh: "Cari nama, keahlian, atau TRG: kakao, malaria, hukum pidana", searchBtn: "Cari",
       kTrg: "TRG", kPeople: "Peneliti", kLead: "TRG dengan ketua terbaca", kPapers: "Artikel tercatat",
-      tabPub: "Cari publikasi", pQ: "Kata kunci (judul dan abstrak)", pQph: "mis. malaria vector, \"coral reef\"", pA: "Penulis", pAph: "mis. Jompa", pY1: "Dari tahun", pY2: "Sampai tahun", pT: "Jenis", pS: "Urutkan", pO: "Hanya akses terbuka", pGo: "Cari", pCsv: "Unduh CSV",
-      pTypeAll: "Semua jenis", pArticle: "Artikel jurnal", pReview: "Review", pConf: "Makalah konferensi", pChapter: "Bab buku", pBook: "Buku", pDiss: "Disertasi", pPre: "Pracetak",
-      pSortRel: "Paling relevan", pSortCited: "Paling banyak dikutip", pSortNew: "Terbaru",
-      pNote: function (o) { return "Mencari karya berafiliasi Unhas di OpenAlex (CC0) langsung dari peramban Anda; hasil mengikuti pangkalan OpenAlex pada saat pencarian. Penulis asing yang mencantumkan Unhas sebagai afiliasi kedua ikut muncul, dan profil penulis OpenAlex dapat keliru. Lencana kuartil (SJR) hanya tersedia untuk jurnal yang kita kenal (cakupan sebagian). Daftar awal di bawah adalah salinan tersimpan per " + (o ? o.dibuat : "") + "."; },
-      pFeatTop: "Paling banyak dikutip sejak 2020", pFeatNew: "Terbaru", pStatusFeat: "Daftar unggulan tersimpan. Ketik kata kunci atau penulis, lalu tekan Cari, untuk mencari seluruh karya Unhas di OpenAlex.",
-      pLoading: "Mencari…", pFound: function (n, shown) { return fmt(n) + " karya ditemukan; menampilkan " + fmt(shown) + "."; }, pNone: "Tidak ada karya yang cocok. Coba kata kunci lain atau longgarkan filter.",
-      pErr429: "OpenAlex membatasi permintaan dari jaringan ini (kuota gratis habis). Coba lagi nanti; pengelola halaman dapat memasang proxy dengan kunci. Menampilkan daftar tersimpan.", pErrNet: "OpenAlex tidak dapat dijangkau dari peramban ini. Menampilkan daftar tersimpan.", pMore: function (n) { return "Muat " + n + " lagi"; },
-      pAuthors: function (n) { return "dan " + n + " penulis lain"; }, pCites: function (n) { return fmt(n) + " sitasi"; },
       tabOut: "Output Unhas", pubTop: "Paling banyak dikutip", pubNew: "Terbaru", pubHead: "Publikasi bersama", cites: function (n) { return fmt(n) + " sitasi"; }, uhAu: "Unhas", partnerAu: "Mitra",
       intlH: "Institusi mitra luar negeri terbanyak", domH: "Institusi mitra dalam negeri terbanyak",
       oNote: function (o) { return "Karya berafiliasi Unhas di OpenAlex. Artikel = jenis article atau review; disertasi repositori dan pracetak tidak dihitung. Kuartil dari SCImago SJR 2025 untuk semua tahun. 'Akses terbuka' menurut OpenAlex mencakup salinan di repositori, termasuk repositori Unhas. Sumber: OpenAlex (CC0), " + o.dibuat + "."; },
@@ -65,14 +57,6 @@
       title: "Unhas Research Map", lede: "Find researchers and Thematic Research Groups (TRGs) at Hasanuddin University by name, expertise, and research theme.",
       searchLabel: "Find an expert", searchPh: "Search name, expertise, or TRG: cocoa, malaria, criminal law", searchBtn: "Search",
       kTrg: "TRGs", kPeople: "Researchers", kLead: "TRGs with a leader listed", kPapers: "Recorded articles",
-      tabPub: "Search publications", pQ: "Keywords (title and abstract)", pQph: "e.g. malaria vector, \"coral reef\"", pA: "Author", pAph: "e.g. Jompa", pY1: "From year", pY2: "To year", pT: "Type", pS: "Sort by", pO: "Open access only", pGo: "Search", pCsv: "Download CSV",
-      pTypeAll: "All types", pArticle: "Journal article", pReview: "Review", pConf: "Conference paper", pChapter: "Book chapter", pBook: "Book", pDiss: "Dissertation", pPre: "Preprint",
-      pSortRel: "Most relevant", pSortCited: "Most cited", pSortNew: "Newest",
-      pNote: function (o) { return "Searches Unhas-affiliated works in OpenAlex (CC0) directly from your browser; results follow OpenAlex at the time of the search. Foreign authors who list Unhas as a second affiliation also appear, and OpenAlex author profiles can be wrong. Quartile badges (SJR) exist only for journals we know (partial coverage). The starting list below is a saved copy from " + (o ? o.dibuat : "") + "."; },
-      pFeatTop: "Most cited since 2020", pFeatNew: "Most recent", pStatusFeat: "Saved featured list. Type keywords or an author and press Search to search all Unhas works in OpenAlex.",
-      pLoading: "Searching…", pFound: function (n, shown) { return fmt(n) + " works found; showing " + fmt(shown) + "."; }, pNone: "No matching works. Try other keywords or loosen the filters.",
-      pErr429: "OpenAlex is limiting requests from this network (free quota used up). Try again later; the site administrator can set up a proxy with a key. Showing the saved list.", pErrNet: "OpenAlex cannot be reached from this browser. Showing the saved list.", pMore: function (n) { return "Load " + n + " more"; },
-      pAuthors: function (n) { return "and " + n + " more authors"; }, pCites: function (n) { return fmt(n) + " citations"; },
       tabOut: "Unhas output", pubTop: "Most cited", pubNew: "Most recent", pubHead: "Joint publications", cites: function (n) { return fmt(n) + " citations"; }, uhAu: "Unhas", partnerAu: "Partner",
       intlH: "Top partner institutions abroad", domH: "Top partner institutions in Indonesia",
       oNote: function (o) { return "Unhas-affiliated works in OpenAlex. Articles = type article or review; repository dissertations and preprints are not counted. Quartiles use SCImago SJR 2025 for every year. OpenAlex 'open access' includes repository copies, among them Unhas's own repository. Source: OpenAlex (CC0), " + o.dibuat + "."; },
@@ -141,12 +125,12 @@
     SYN[k] = (SYN[k] || []).concat(SYN_RAW[k]);
     SYN_RAW[k].forEach(function (e) { SYN[e] = (SYN[e] || []).concat([k]); });
   });
-  var TABS = ["cari", "tema", "trg", "luar", "dunia", "out", "pub"];
+  var TABS = ["cari", "tema", "trg", "luar", "dunia", "out"];
   var PAGE = 24;
 
-  var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null, kq: null, kol: null, geo: null, out: null, pub: null };
+  var D = { people: [], trg: [], tag: [], meta: {}, ins: { tema: [], edges: [], keywords: [] }, oa: null, kq: null, kol: null, geo: null, out: null };
   var tagById = {}, trgBySlug = {}, haystack = [], kwByTerm = {}, insTema = {};
-  var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", lsolo: true, llimit: PAGE, dper: "all", dsel: "", dpub: "top", pq: "", pa: "", py1: "", py2: "", pt: "", po: false, ps: "", pfeat: "top",
+  var S = { lang: CFG.defaultLang === "en" ? "en" : "id", tab: "cari", q: "", klaster: "", tema: "", lead: false, hasId: false, limit: PAGE, lq: "", lf: "", lsolo: true, llimit: PAGE, dper: "all", dsel: "", dpub: "top",
             tq: "", tk: "", tsort: "nama", kw: "", netMin: 3, sel: "" };
   var T = function () { return I18N[S.lang]; };
   var fmt = function (n) { return new Intl.NumberFormat(S.lang === "en" ? "en" : "id-ID").format(n); };
@@ -162,7 +146,6 @@
     if (TABS.indexOf(p.get("tab")) >= 0) S.tab = p.get("tab");
     S.q = p.get("q") || ""; S.klaster = p.get("k") || ""; S.tema = p.get("t") || "";
     S.lead = p.get("l") === "1"; S.hasId = p.get("i") === "1"; S.kw = p.get("kw") || "";
-    S.pq = p.get("pq") || ""; S.pa = p.get("pa") || ""; S.py1 = p.get("py1") || ""; S.py2 = p.get("py2") || ""; S.pt = p.get("pt") || ""; S.po = p.get("po") === "1"; S.ps = p.get("ps") || "";
     if (p.get("embed") === "1") document.body.classList.add("embed");
   }
   function writeUrl() {
@@ -172,7 +155,6 @@
     if (S.tab !== "cari") p.set("tab", S.tab);
     if (S.q) p.set("q", S.q); if (S.klaster) p.set("k", S.klaster); if (S.tema) p.set("t", S.tema);
     if (S.lead) p.set("l", "1"); if (S.hasId) p.set("i", "1"); if (S.kw) p.set("kw", S.kw); if (keep) p.set("embed", keep);
-    if (S.pq) p.set("pq", S.pq); if (S.pa) p.set("pa", S.pa); if (S.py1) p.set("py1", S.py1); if (S.py2) p.set("py2", S.py2); if (S.pt) p.set("pt", S.pt); if (S.po) p.set("po", "1"); if (S.ps) p.set("ps", S.ps);
     var qs = p.toString();
     try { history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "")); } catch (e) { /* diabaikan */ }
   }
@@ -394,81 +376,6 @@
     $("#o-s-h").textContent = t.oSH; $("#o-s-p").textContent = t.oSP(o); mk("#o-s", o.sdg.slice().sort(function (a, b) { return b.n - a.n; }), function (r) { return "SDG " + r.id + " · " + r.nama; });
   }
 
-  /* ---------- cari publikasi (OpenAlex langsung dari peramban) ---------- */
-  var INST_ID = "I98301867", PUB_PER = 25, P = { rows: [], count: 0, page: 0, live: false, err: "", busy: false, ctl: null };
-  var stripTags = function (s) { return String(s || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(); };
-  var OA_CLS = { gold: "gold", diamond: "gold", hybrid: "hybrid", green: "green", bronze: "bronze", closed: "closed" };
-  var OA_LABEL = { gold: "Gold", diamond: "Diamond", hybrid: "Hybrid", green: "Green", bronze: "Bronze", closed: "" };
-  function pubTypes() { var t = T(); return [["", t.pTypeAll], ["article", t.pArticle], ["review", t.pReview], ["conference-paper", t.pConf], ["book-chapter", t.pChapter], ["book", t.pBook], ["dissertation", t.pDiss], ["preprint", t.pPre]]; }
-  function pubSorts() { var t = T(); return [["", t.pSortRel], ["cited", t.pSortCited], ["new", t.pSortNew]]; }
-  function pubUrl(page) {
-    var f = ["authorships.institutions.id:" + INST_ID], y1 = S.py1.trim(), y2 = S.py2.trim(), pr = {};
-    if (y1 && y2) f.push("publication_year:" + y1 + "-" + y2); else if (y1) f.push("publication_year:>" + (+y1 - 1)); else if (y2) f.push("publication_year:<" + (+y2 + 1));
-    if (S.pt) f.push("type:" + S.pt); if (S.po) f.push("is_oa:true"); if (S.pa.trim()) f.push("raw_author_name.search:" + S.pa.trim().replace(/[,|]/g, " "));
-    var hasQ = !!S.pq.trim(), sort = S.ps === "new" ? "publication_date:desc" : S.ps === "cited" || !hasQ ? "cited_by_count:desc" : "relevance_score:desc";
-    pr.filter = f.join(","); if (hasQ) pr.search = S.pq.trim(); pr.sort = sort; pr["per-page"] = PUB_PER; pr.page = page;
-    pr.select = "id,doi,title,publication_year,cited_by_count,type,open_access,primary_location,authorships"; if (CFG.openalexMailto) pr.mailto = CFG.openalexMailto;
-    var qs = Object.keys(pr).map(function (k) { return encodeURIComponent(k) + "=" + encodeURIComponent(pr[k]).replace(/%3A/g, ":").replace(/%2C/g, ",").replace(/%7C/g, "|"); }).join("&");
-    return (CFG.openalexBase || "https://api.openalex.org").replace(/\/$/, "") + "/works?" + qs;
-  }
-  function pubNorm(w) {
-    var src = (w.primary_location && w.primary_location.source) || {}, issn = String(src.issn_l || "").replace(/[^0-9X]/gi, "").toUpperCase(), au = (w.authorships || []).filter(function (x) { return x.author; });
-    var kq = (D.pub && D.pub.kuartil) || {};
-    return { id: String(w.id || "").split("/").pop(), doi: String(w.doi || "").replace("https://doi.org/", ""), t: stripTags(w.title), y: w.publication_year || 0, c: w.cited_by_count || 0, j: stripTags(src.display_name), ty: w.type || "",
-      oa: (w.open_access && w.open_access.oa_status) || "", q: (w.type === "article" || w.type === "review") ? (kq[issn] || "") : "",
-      a: au.slice(0, 6).map(function (x) { return [x.author.display_name, (x.institutions || []).some(function (i) { return String(i.id || "").slice(-INST_ID.length) === INST_ID; }) ? 1 : 0]; }), na: au.length };
-  }
-  function pubItem(w) {
-    var t = T(), li = el("li"), a = el("a", null, w.t || "(tanpa judul)"); a.href = w.doi ? "https://doi.org/" + encodeURIComponent(w.doi).replace(/%2F/g, "/") : "https://openalex.org/" + w.id; a.target = "_blank"; a.rel = "noopener"; li.appendChild(a);
-    var m = el("p", "pubmeta"); m.appendChild(document.createTextNode([w.y || "", w.j].filter(Boolean).join(" · ")));
-    if (w.q) m.appendChild(el("span", "qb " + w.q, w.q));
-    m.appendChild(document.createTextNode(" · " + t.pCites(w.c)));
-    var ty = pubTypes().filter(function (x) { return x[0] === w.ty; })[0]; if (ty && ty[0]) m.appendChild(document.createTextNode(" · " + ty[1]));
-    if (OA_LABEL[w.oa]) m.appendChild(el("span", "oab " + OA_CLS[w.oa], "OA " + OA_LABEL[w.oa])); li.appendChild(m);
-    if (w.a && w.a.length) { var p = el("p", "pubwho"); w.a.forEach(function (x, i) { if (i) p.appendChild(document.createTextNode(", ")); var s = el(x[1] ? "strong" : "span", null, x[0]); p.appendChild(s); }); if (w.na > w.a.length) p.appendChild(document.createTextNode(" " + t.pAuthors(w.na - w.a.length))); li.appendChild(p); }
-    return li;
-  }
-  function renderPub() {
-    var t = T(); $("#p-note").textContent = t.pNote(D.pub);
-    var fill = function (sel, rows) { var s = $(sel), cur = s.value; s.replaceChildren.apply(s, rows.map(function (r) { return new Option(r[1], r[0]); })); s.value = cur; };
-    fill("#p-t", pubTypes()); fill("#p-s", pubSorts()); $("#p-t").value = S.pt; $("#p-s").value = S.ps;
-    var q = $("#p-q"); if (document.activeElement !== q) q.value = S.pq; if (document.activeElement !== $("#p-a")) $("#p-a").value = S.pa; $("#p-y1").value = S.py1; $("#p-y2").value = S.py2; $("#p-o").checked = S.po;
-    var feat = !P.live, rows = P.rows;
-    if (feat && D.pub) rows = S.pfeat === "new" ? D.pub.terbaru : D.pub.terbanyak;
-    var mode = $("#p-mode"); mode.hidden = !feat || !D.pub;
-    if (!mode.hidden) { mode.replaceChildren.apply(mode, [["top", t.pFeatTop], ["new", t.pFeatNew]].map(function (x) { var b = el("button", null, x[1]); b.type = "button"; b.setAttribute("aria-pressed", String(S.pfeat === x[0])); b.addEventListener("click", function () { S.pfeat = x[0]; renderPub(); }); return b; })); }
-    var st = $("#p-status");
-    st.textContent = P.busy ? t.pLoading : P.err ? P.err : feat ? t.pStatusFeat : P.count ? t.pFound(P.count, P.rows.length) : t.pNone;
-    var ol = $("#p-list"); ol.replaceChildren.apply(ol, (rows || []).map(pubItem));
-    var more = $("#p-more"); more.hidden = !(P.live && P.rows.length < P.count && P.rows.length < 10000); more.textContent = t.pMore(Math.min(PUB_PER, P.count - P.rows.length)); more.disabled = P.busy;
-    $("#p-csv").hidden = !(rows && rows.length);
-  }
-  function pubSearch(page) {
-    var t = T(); if (P.ctl) P.ctl.abort(); var ctl = typeof AbortController === "function" ? new AbortController() : null; P.ctl = ctl; P.busy = true; P.err = ""; if (page === 1) { P.rows = []; P.count = 0; } renderPub();
-    var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 25000);
-    return fetch(pubUrl(page), ctl ? { signal: ctl.signal, headers: { Accept: "application/json" } } : { headers: { Accept: "application/json" } }).then(function (r) {
-      if (r.status === 429) { var e = new Error("429"); e.code = 429; throw e; } if (!r.ok) throw new Error("http " + r.status); return r.json();
-    }).then(function (d) {
-      clearTimeout(timer); P.live = true; P.page = page; P.count = (d.meta && d.meta.count) || 0; P.rows = (page === 1 ? [] : P.rows).concat((d.results || []).map(pubNorm)); P.busy = false; renderPub();
-    }).catch(function (e) {
-      clearTimeout(timer); if (e && e.name === "AbortError" && P.ctl !== ctl) return; P.busy = false;
-      if (page === 1) { P.live = false; P.rows = []; } P.err = e && e.code === 429 ? t.pErr429 : t.pErrNet; renderPub();
-    });
-  }
-  function pubSubmit() {
-    S.pq = $("#p-q").value; S.pa = $("#p-a").value; S.py1 = $("#p-y1").value; S.py2 = $("#p-y2").value; S.pt = $("#p-t").value; S.ps = $("#p-s").value; S.po = $("#p-o").checked; writeUrl();
-    if (!S.pq.trim() && !S.pa.trim() && !S.py1 && !S.py2 && !S.pt && !S.po) { P.live = false; P.err = ""; P.rows = []; renderPub(); return; }
-    pubSearch(1);
-  }
-  function csvCell(v) { v = String(v == null ? "" : v); return /[",\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
-  function pubCsv() {
-    var rows = P.live ? P.rows : (D.pub ? (S.pfeat === "new" ? D.pub.terbaru : D.pub.terbanyak) : []); if (!rows.length) return;
-    var head = ["title", "year", "journal", "type", "citations", "open_access", "quartile", "doi", "openalex_id", "authors"];
-    var lines = [head.join(",")].concat(rows.map(function (w) { return [w.t, w.y, w.j, w.ty, w.c, w.oa, w.q, w.doi, w.id, (w.a || []).map(function (x) { return x[0]; }).join("; ") + (w.na > (w.a || []).length ? "; …" : "")].map(csvCell).join(","); }));
-    var blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" }), url = URL.createObjectURL(blob), a = document.createElement("a");
-    a.href = url; a.download = "publikasi-unhas.csv"; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
-  }
-
   /* ---------- pakar di luar TRG (OpenAlex) ---------- */
   function renderLuar() {
     var o = D.oa, t = T(); if (!o) return;
@@ -669,7 +576,7 @@
     writeUrl();
   }
 
-  function renderAll() { applyI18n(); kpis(); fillSelects(); renderSearch(); renderKwChip(); renderSpot(); renderNet(); renderCloud(); renderTheme(); renderTrg(); renderLuar(); renderDunia(); renderOut(); renderPub(); writeUrl(); }
+  function renderAll() { applyI18n(); kpis(); fillSelects(); renderSearch(); renderKwChip(); renderSpot(); renderNet(); renderCloud(); renderTheme(); renderTrg(); renderLuar(); renderDunia(); renderOut(); writeUrl(); }
 
   function bind() {
     var debounce; $("#q").addEventListener("input", function (e) { clearTimeout(debounce); debounce = setTimeout(function () { S.q = e.target.value; S.limit = PAGE; renderSearch(); writeUrl(); }, 150); });
@@ -680,10 +587,6 @@
     $("#f-id").addEventListener("change", function (e) { S.hasId = e.target.checked; S.limit = PAGE; renderSearch(); writeUrl(); });
     $("#f-reset").addEventListener("click", function () { Object.assign(S, { q: "", klaster: "", tema: "", lead: false, hasId: false, kw: "", limit: PAGE }); fillSelects(); renderSearch(); renderKwChip(); writeUrl(); });
     $("#more").addEventListener("click", function () { S.limit += PAGE; renderSearch(); });
-    $("#p-form").addEventListener("submit", function (e) { e.preventDefault(); pubSubmit(); });
-    $("#p-reset").addEventListener("click", function () { Object.assign(S, { pq: "", pa: "", py1: "", py2: "", pt: "", po: false, ps: "" }); P.live = false; P.err = ""; P.rows = []; writeUrl(); renderPub(); });
-    $("#p-more").addEventListener("click", function () { pubSearch(P.page + 1); });
-    $("#p-csv").addEventListener("click", pubCsv);
     $("#d-all").addEventListener("click", function () { S.dper = "all"; renderDunia(); });
     $("#d-rec").addEventListener("click", function () { S.dper = "rec"; renderDunia(); });
     $("#l-q").addEventListener("input", function (e) { S.lq = e.target.value; S.llimit = PAGE; renderLuar(); });
@@ -702,15 +605,14 @@
   // Data tertanam (data/peta-data.js) dipakai lebih dulu agar halaman bisa dibuka langsung dari berkas; bila tidak ada, ambil JSON lewat server.
   function loadAll() {
     var B = window.PETA_DATA;
-    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta, B.insights || {}, B.openalex || null, B.kuartil || null, B.kolaborasi || null, B.dunia || null, B.luaran || null, B.publikasi || null]);
-    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta"), load("insights").catch(function () { return {}; }), load("openalex").catch(function () { return null; }), load("kuartil").catch(function () { return null; }), load("kolaborasi").catch(function () { return null; }), load("dunia").catch(function () { return null; }), load("luaran").catch(function () { return null; }), load("publikasi").catch(function () { return null; })]);
+    if (B && B.peneliti) return Promise.resolve([B.peneliti, B.trg, B.tag, B.meta, B.insights || {}, B.openalex || null, B.kuartil || null, B.kolaborasi || null, B.dunia || null, B.luaran || null]);
+    return Promise.all([load("peneliti"), load("trg"), load("tag"), load("meta"), load("insights").catch(function () { return {}; }), load("openalex").catch(function () { return null; }), load("kuartil").catch(function () { return null; }), load("kolaborasi").catch(function () { return null; }), load("dunia").catch(function () { return null; }), load("luaran").catch(function () { return null; })]);
   }
 
   readUrl(); applyI18n(); bind(); show(S.tab);
   loadAll().then(function (r) {
     D.people = r[0]; D.trg = r[1]; D.tag = r[2]; D.meta = r[3]; D.ins = { tema: (r[4] && r[4].tema) || [], edges: (r[4] && r[4].edges) || [], keywords: (r[4] && r[4].keywords) || [] };
     D.oa = r[5] && r[5].metrik ? r[5] : null; if (!D.oa && S.tab === "luar") show("cari");
-    D.pub = r[10] && r[10].terbanyak ? r[10] : null;
     D.out = r[9] && r[9].tahun ? r[9] : null; if (!D.out && S.tab === "out") show("cari");
     D.kol = r[7] && r[7].negara ? r[7] : null; D.geo = r[8] && r[8].negara ? r[8] : null; if ((!D.kol || !D.geo) && S.tab === "dunia") show("cari");
     D.kq = r[6] && r[6].trg ? r[6] : null; var qo = $("#t-sort-q12"); if (qo) qo.hidden = !D.kq;
