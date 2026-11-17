@@ -4,7 +4,7 @@
 Pemakaian:
   OPENALEX_API_KEY=... python3 scripts/trg_publikasi_awal.py --cache CACHE_DIR --sjr 2025=scimagojr_2025.csv [--out data/openalex] [--site site/peta-riset/data] [--dari 2020]
 Keluaran: <out>/publikasi_awal.json dan <site>/publikasi.json
-  terbanyak: 40 karya (artikel/review, kurang dari 50 penulis) paling banyak dikutip sejak --dari; terbaru: 25 karya terbaru
+  terbanyak: 40 karya (artikel/review) paling banyak dikutip sejak --dari; terbaru: 25 karya terbaru
   kuartil:   {issn: 'Q1'..'Q4'} hanya untuk jurnal tempat Unhas menerbitkan (dari <out>/jurnal_unhas.csv); dipakai tab untuk lencana kuartil pada hasil pencarian langsung.
 Tab pencarian sendiri memanggil API OpenAlex dari peramban pengunjung (lihat docs/PROXY_OPENALEX.md untuk memakai proxy peladen).
 """
@@ -44,7 +44,7 @@ def main():
         for r in csv.DictReader(open("data/trg/artikel_kuartil.csv", encoding="utf-8")):
             for i in r["issn"].split(";"):
                 if i and r["kuartil"] in ("Q1", "Q2", "Q3", "Q4"): sjr[i] = r["kuartil"]
-    flt = f"authorships.institutions.id:{INST},publication_year:{a.dari}-{now},type:article|review,authors_count:<50"      # tanpa konsorsium besar (mis. studi beban penyakit global)
+    flt = f"authorships.institutions.id:{INST},publication_year:{a.dari}-{now},type:article|review"
     terbanyak, terbaru = pull(a.cache, flt, "cited_by_count:desc", 40, sjr), pull(a.cache, flt, "publication_date:desc", 25, sjr)
     kq = {}
     p = os.path.join(a.out, "jurnal_unhas.csv")
