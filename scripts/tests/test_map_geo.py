@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Uji pembuat jalur peta dunia: dekode TopoJSON, kode negara, Antartika dibuang, cincin melintasi bujur 180 dipecah. Pemakaian: python3 scripts/tests/test_map_geo.py"""
 import json, os, subprocess, sys, tempfile
+try:
+    import pycountry  # noqa: F401  (hanya dibutuhkan saat membangun peta)
+except ImportError:
+    print("DILEWATI | paket pycountry belum terpasang (pip install pycountry)"); sys.exit(0)
 HERE = os.path.dirname(os.path.abspath(__file__)); tmp = tempfile.mkdtemp()
 # koordinat kuantisasi 1 derajat: translate (-180,-90), scale 1. Fiji-like: kotak dari lon 178..-178 (melintasi 180); Jepang-like: kotak biasa; Antartika id 010.
 def ring(pts):

@@ -177,6 +177,8 @@ if os.path.exists(f"{O}/kolaborasi.json") and os.path.exists(f"{O}/dunia.json"):
     bundle["kolaborasi"] = J("kolaborasi"); bundle["dunia"] = J("dunia")
 if os.path.exists(f"{O}/luaran.json"):
     bundle["luaran"] = J("luaran")
+if os.path.exists(f"{O}/publikasi.json"):
+    bundle["publikasi"] = J("publikasi")
 with open(f"{O}/peta-data.js", "w", encoding="utf-8") as fh:
     fh.write("/* dibuat oleh scripts/trg_dashboard_data.py dan scripts/trg_insights.py; jangan disunting manual */\nwindow.PETA_DATA = ")
     json.dump(bundle, fh, ensure_ascii=False, separators=(",", ":"))

@@ -75,6 +75,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache"); ap.add_argument("--skip-crawl", action="store_true"); ap.add_argument("--enrich", action="store_true")
     ap.add_argument("--openalex", action="store_true", help="tarik ulang penulis Unhas dari OpenAlex (perlu OPENALEX_API_KEY)")
+    ap.add_argument("--sjr", default="", metavar="TAHUN=BERKAS", help="berkas SCImago untuk lencana kuartil (peta dan tab pencarian)")
     ap.add_argument("--forms-xlsx", action="store_true", help="buat ulang formulir xlsx berisi data terbaru"); ap.add_argument("--no-snapshot", action="store_true")
     a = ap.parse_args()
     if not a.skip_crawl and not a.cache:
@@ -98,6 +99,7 @@ def main():
         run("scripts/trg_openalex_unhas.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"))
         run("scripts/trg_openalex_negara.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"), "--site", SITE)
         run("scripts/trg_openalex_luaran.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"), "--site", SITE)
+        run("scripts/trg_publikasi_awal.py", "--cache", os.path.join(a.cache or ROOT, "openalex"), "--out", os.path.join(ROOT, "data", "openalex"), "--site", SITE, *(["--sjr", a.sjr] if a.sjr else []))
     if os.path.exists(os.path.join(ROOT, "data", "openalex", "penulis_unhas.csv")):
         run("scripts/trg_openalex_match.py", "--oa", os.path.join(ROOT, "data", "openalex"), "--data", D, "--site", SITE)
     run("scripts/trg_dashboard_data.py", SITE, "--tanpa-mahasiswa"); run("scripts/trg_insights.py")
