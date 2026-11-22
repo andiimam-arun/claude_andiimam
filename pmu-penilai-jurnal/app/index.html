@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penilai Jurnal PMU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Arah: lembar kerja penilai. Dua kolom, input di kiri, hasil menempel di kanan. Warna semantik terpisah dari aksen. */
+:root{
+  --bg:#eef1f4; --surface:#ffffff; --ink:#14202b; --muted:#5a6b7b; --line:#d6dde4;
+  --accent:#0f5c6e; --accent-ink:#ffffff; --field:#f7f9fb;
+  --good:#17703f; --good-bg:#e3f3ea; --warn:#8a5a00; --warn-bg:#fcf0d4; --bad:#a82016; --bad-bg:#fbe5e2; --idle:#5a6b7b; --idle-bg:#e8edf1;
+  --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10181f; --surface:#17222b; --ink:#e6edf3; --muted:#93a4b3; --line:#2b3a47; --accent:#58b5c8; --accent-ink:#06222a; --field:#1d2a35;
+  --good:#58c785; --good-bg:#16352a; --warn:#e5b34d; --warn-bg:#3a2e12; --bad:#ff8a7d; --bad-bg:#3b1b19; --idle:#93a4b3; --idle-bg:#22303b; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#10181f; --surface:#17222b; --ink:#e6edf3; --muted:#93a4b3; --line:#2b3a47; --accent:#58b5c8; --accent-ink:#06222a; --field:#1d2a35;
+  --good:#58c785; --good-bg:#16352a; --warn:#e5b34d; --warn-bg:#3a2e12; --bad:#ff8a7d; --bad-bg:#3b1b19; --idle:#93a4b3; --idle-bg:#22303b; color-scheme:dark;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5}
+body{padding:0 0 48px}
+h1,h2,h3{text-wrap:balance;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header{padding:22px 0 14px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:end;justify-content:space-between}
+header h1{font-size:22px;font-weight:600;letter-spacing:-.01em}
+header p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.listtag{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px;background:var(--surface)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:18px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.result{position:static!important}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.card+.card{margin-top:14px}
+.step{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.step b{font-family:var(--mono);font-size:12px;background:var(--accent);color:var(--accent-ink);border-radius:5px;padding:1px 7px}
+.step h2{font-size:16px;font-weight:600}
+.hint{color:var(--muted);font-size:13px;margin:0 0 10px}
+label{display:block;font-size:13px;font-weight:500;margin-bottom:4px}
+input[type=text],input[type=number],select{width:100%;font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:7px;padding:8px 10px;min-height:38px}
+input[type=number]{font-family:var(--mono)}
+textarea{width:100%;font:inherit;font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:7px;padding:8px 10px;resize:vertical}
+.st-ok{color:var(--good)!important}.st-bad{color:var(--bad)!important}.st-warn{color:var(--warn)!important}
+.row{display:grid;gap:10px 12px}
+.r4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.r3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.r2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:560px){.r4{grid-template-columns:repeat(2,minmax(0,1fr))}.r3{grid-template-columns:1fr 1fr}}
+.field small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.sub{margin:14px 0 6px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.list{margin-top:6px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.opt{display:flex;width:100%;text-align:left;gap:10px;align-items:center;justify-content:space-between;background:none;border:0;border-bottom:1px solid var(--line);padding:9px 12px;font:inherit;color:var(--ink);cursor:pointer}
+.opt:last-child{border-bottom:0}
+.opt:hover,.opt:focus-visible{background:var(--field)}
+.opt .t{font-weight:500}
+.opt .m{display:block;font-size:12px;color:var(--muted);font-family:var(--mono)}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.p-good{background:var(--good-bg);color:var(--good)}.p-warn{background:var(--warn-bg);color:var(--warn)}.p-bad{background:var(--bad-bg);color:var(--bad)}.p-idle{background:var(--idle-bg);color:var(--idle)}
+.jcard{margin-top:12px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:12px 14px;background:var(--field)}
+.jcard h3{font-size:16px;font-weight:600}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:8px 0 0;font-size:13px}
+.kv dt{color:var(--muted)}.kv dd{margin:0;font-family:var(--mono);font-size:12.5px;word-break:break-word}
+.btn{font:inherit;font-weight:500;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 12px;cursor:pointer;min-height:36px;text-decoration:none;display:inline-flex;align-items:center}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.banner{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:8px 12px;font-size:13px;margin-bottom:14px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+details{margin-top:12px}summary{cursor:pointer;font-weight:500;color:var(--accent)}
+details p,details li{font-size:13px;color:var(--muted)}
+details ul{margin:6px 0 0;padding-left:18px}
+.check{display:flex;gap:8px;align-items:center;font-size:13px;margin-top:8px}
+.check input{width:auto;min-height:0}
+.result{position:sticky;top:12px}
+.verdict{border-radius:10px;padding:14px 16px;border:1px solid var(--line);border-left:8px solid var(--idle);background:var(--surface)}
+.verdict.hijau{border-left-color:var(--good);background:var(--good-bg)}
+.verdict.kuning{border-left-color:var(--warn);background:var(--warn-bg)}
+.verdict.merah{border-left-color:var(--bad);background:var(--bad-bg)}
+.verdict .lab{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.verdict .big{display:flex;align-items:baseline;gap:10px;margin-top:2px}
+.verdict .big strong{font-size:44px;line-height:1;font-variant-numeric:tabular-nums;font-weight:600}
+.verdict .big span{font-size:18px;font-weight:600}
+.hijau .big span{color:var(--good)}.kuning .big span{color:var(--warn)}.merah .big span{color:var(--bad)}
+.verdict p{margin:6px 0 0;font-size:13px;color:var(--ink)}
+.cov{margin-top:10px;height:6px;border-radius:4px;background:var(--line);overflow:hidden}
+.cov i{display:block;height:100%;background:var(--accent)}
+.flags{display:flex;flex-direction:column;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+.flags li{font-size:13px;padding:6px 10px;border-radius:7px}
+.flags .r{background:var(--bad-bg);color:var(--bad)}.flags .y{background:var(--warn-bg);color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-weight:600;color:var(--muted);font-size:12px;padding:4px 6px;border-bottom:1px solid var(--line)}
+td{padding:6px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+td .note{display:block;color:var(--muted);font-size:12px}
+tr.na td{color:var(--muted)}
+.bar{display:block;height:4px;background:var(--line);border-radius:3px;margin-top:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent)}
+.tablewrap{overflow-x:auto}
+.steps{margin:6px 0 0;padding-left:18px;font-size:13px}
+.steps li{margin:3px 0}
+.hist td button{font:inherit;color:var(--accent);background:none;border:0;cursor:pointer;padding:0;text-decoration:underline}
+.small{font-size:12px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Penilai Jurnal PMU</h1>
+    <p>Cek risiko diskontinyu Scopus, volume tidak wajar, dan kloning sebelum submit. FKM Unhas.</p>
+  </div>
+  <span class="listtag" id="listtag">Scopus Source List Oktober 2026 · memuat…</span>
+</header>
+
+<div class="grid">
+<main>
+  <div id="banner" class="banner" hidden>
+    <span>Contoh data: Current Topics in Nutraceutical Research (jurnal #10 di laporan).</span>
+    <button class="btn" id="btnNew" type="button">Mulai jurnal baru</button>
+  </div>
+
+  <section class="card" aria-labelledby="h1">
+    <div class="step"><b>1</b><h2 id="h1">Cari jurnal</h2></div>
+    <p class="hint">Ketik nama jurnal atau ISSN. Status, penerbit, dan coverage diambil otomatis dari Scopus Source List.</p>
+    <label for="q">Nama jurnal atau ISSN</label>
+    <input type="text" id="q" autocomplete="off" placeholder="mis. Frontiers in Public Health atau 2296-2565" disabled>
+    <div id="results" class="list" hidden></div>
+    <div id="jcard"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h2">
+    <div class="step"><b>2</b><h2 id="h2">Data Scimago</h2></div>
+    <p class="hint">Scimago tidak bisa dibaca otomatis oleh halaman ini (ada proteksi bot). Cukup satu kali salin: buka halaman jurnalnya lewat tombol di langkah 1, tekan Ctrl+A lalu Ctrl+C (Cmd di Mac), dan tempel di sini. Semua kolom di bawah terisi sendiri.</p>
+    <label for="paste">Tempel isi halaman Scimago</label>
+    <textarea id="paste" rows="3" placeholder="Tempel di sini setelah Ctrl+A, Ctrl+C di halaman jurnal Scimago"></textarea>
+    <p id="pasteStatus" class="small" style="margin:6px 0 0"></p>
+    <div class="sub">Atau isi manual</div>
+    <div class="row r2">
+      <div class="field"><label for="quartile">Kuartil terbaru</label>
+        <select id="quartile"><option value="">Belum diisi</option><option>Q1</option><option>Q2</option><option>Q3</option><option>Q4</option><option value="NONE">Tidak ada di Scimago</option></select></div>
+      <div class="field"><label for="base">Tahun data terakhir di Scimago</label>
+        <select id="base"><option>2025</option><option>2026</option><option>2024</option></select></div>
+    </div>
+    <div class="sub">Total Documents, 4 tahun terakhir</div>
+    <div class="row r4" id="docsrow"></div>
+    <div class="field" style="margin-top:10px"><label for="ytd" id="ytdLabel">Dokumen tahun berjalan di Scopus.com, sampai hari ini</label><input type="number" id="ytd" min="0" inputmode="numeric"><small>Scopus.com, Sources, pilih jurnal, Documents by year. Tidak ada di Scimago. Lonjakan atau kemerosotan di sini adalah sinyal paling awal.</small></div>
+    <div class="row r3" style="margin-top:10px">
+      <div class="field"><label for="self">Self cites</label><input type="number" id="self" min="0" inputmode="numeric"><small>Tahun terakhir</small></div>
+      <div class="field"><label for="total">Total cites</label><input type="number" id="total" min="0" inputmode="numeric"><small>Tahun terakhir</small></div>
+      <div class="field"><label for="peak">Puncak dokumen (opsional)</label><input type="number" id="peak" min="0" inputmode="numeric"><small>Tertinggi dalam 5 tahun sebelum tahun terakhir</small></div>
+    </div>
+    <details><summary>Di mana angkanya di halaman Scimago?</summary>
+      <ul>
+        <li>Kuartil: baris di bawah judul, mis. "(Q4, 2025)", atau kotak SJR.</li>
+        <li>Documents: grafik "Total Documents", tabel Year / Documents.</li>
+        <li>Self cites dan total cites: grafik "Total Cites / Self-Cites", baca baris tahun terakhir.</li>
+        <li>Data Scimago bersumber dari Scopus tetapi tertinggal beberapa bulan, jadi tahun berjalan tidak terlihat.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="card" aria-labelledby="h3">
+    <div class="step"><b>3</b><h2 id="h3">Verifikasi manual</h2></div>
+    <p class="hint">Kosongkan yang belum ada datanya. Poin yang kosong tidak dihitung, tetapi hasil baru dianggap cukup bila minimal 70 dari 100 poin bisa dinilai.</p>
+    <div class="field"><label for="a4">Cek kloning / hijack</label>
+      <select id="a4">
+        <option value="8">Belum diverifikasi: hanya ISSN dan penerbit konsisten (8)</option>
+        <option value="12">Situs resmi dan ISSN terkonfirmasi, URL submit belum dicek (12)</option>
+        <option value="15">Domain submit cocok dengan homepage Scimago atau penerbit (15)</option>
+        <option value="0">Terindikasi kloning atau ada di daftar hijacked (0)</option>
+      </select></div>
+    <div class="sub">Website vs Scopus, tahun yang sudah lengkap</div>
+    <p class="hint">Hitung artikel di Archive atau Issues situs jurnal untuk tahun di label. Kolom Scopus terisi otomatis dari data Scimago yang ditempel.</p>
+    <div class="row r2">
+      <div class="field"><label for="web" id="lblWeb">Dokumen di website</label><input type="number" id="web" min="0" inputmode="numeric"></div>
+      <div class="field"><label for="scopus" id="lblScopus">Dokumen di Scopus</label><input type="number" id="scopus" min="0" inputmode="numeric"></div>
+    </div>
+    <div class="sub">Proses dan rekam jejak</div>
+    <div class="row r2">
+      <div class="field"><label for="days">Hari dari submit sampai accepted</label><input type="number" id="days" min="0" inputmode="numeric"></div>
+      <div class="field"><label for="c2">Artikel mahasiswa/dosen FKM di jurnal ini</label>
+        <select id="c2"><option value="">Belum ada data</option><option value="ge2">Dua kasus atau lebih sudah terbit</option><option value="one">Satu kasus sudah terbit</option><option value="wait">Sudah submit, belum terbit (kurang dari 6 bulan)</option><option value="zero6">Tiga kasus atau lebih belum terbit setelah 6 bulan</option></select></div>
+    </div>
+    <label class="check"><input type="checkbox" id="loa7"> LOA terbit 7 hari atau kurang setelah hasil review</label>
+  </section>
+
+  <section class="card" aria-labelledby="h4">
+    <div class="step"><b>4</b><h2 id="h4">Riwayat penilaian</h2></div>
+    <p class="hint">Tersimpan di browser ini saja. Untuk dibagikan, salin ringkasan atau unduh CSV.</p>
+    <div id="hist"></div>
+    <div class="btns"><button class="btn" id="btnCsv" type="button" hidden>Unduh CSV</button><button class="btn" id="btnClear" type="button" hidden>Hapus riwayat</button></div>
+  </section>
+</main>
+
+<aside class="result" aria-live="polite">
+  <div id="verdict"></div>
+  <div class="card" style="margin-top:14px">
+    <h3 style="font-size:15px">Rincian poin</h3>
+    <div class="tablewrap"><table id="rows"><thead><tr><th>Indikator</th><th style="text-align:right">Poin</th></tr></thead><tbody></tbody></table></div>
+    <div id="steps"></div>
+    <div class="btns"><button class="btn primary" id="btnSave" type="button">Simpan ke riwayat</button><button class="btn" id="btnCopy" type="button">Salin ringkasan</button></div>
+    <details><summary>Ambang keputusan</summary>
+      <ul>
+        <li>Hijau: skor 80 atau lebih, status Active, URL terverifikasi (poin kloning 12 atau lebih), tanpa flag.</li>
+        <li>Kuning: skor 60–79, atau ada flag kuning (volume ekstrem, self-cite di atas 50%, coverage melewati tahun berjalan, URL belum diverifikasi, accepted terlalu cepat).</li>
+        <li>Merah: skor di bawah 60, atau tidak Active, terindikasi kloning, dokumen runtuh lebih dari 80% dalam setahun, atau 3 kasus mahasiswa tanpa terbit setelah 6 bulan.</li>
+        <li>Pita rasio dokumen tahunan: normal 0,7–1,5; sedang 0,5–0,7 atau 1,5–2,0; ekstrem di luar itu. Ambang ini usulan, belum dikalibrasi dengan data PMU.</li>
+      </ul>
+    </details>
+  </div>
+</aside>
+</div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="logic.js"></script>
+<script>
+(function(){
+'use strict';
+var L = window.PMULogic;
+var $ = function(id){return document.getElementById(id)};
+var DB = null, IDX = null;
+var EXAMPLE = {rec:{id:30053,t:'Current Topics in Nutraceutical Research',issn:'15407535',eissn:'',s:'A',d:0,cov:'2018-2026; 2004-2016',pub:'New Century Health Publishers',fin:''},
+  quartile:'Q4',base:'2025',docs:['86','78','170','9'],self:'3',total:'104',peak:'',ytd:'2',a4:'12',web:'',scopus:'',days:'',loa7:false,c2:''};
+var S = clone(EXAMPLE), isExample = true, lastEval = null;
+
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function blank(){return {rec:null,quartile:'',base:'2025',docs:['','','',''],self:'',total:'',peak:'',ytd:'',a4:'8',web:'',scopus:'',days:'',loa7:false,c2:''}}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fmtIssn(x){x=String(x||'');return x.length===8?x.slice(0,4)+'-'+x.slice(4):x}
+function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
+function toast(m){var t=$('toast');t.textContent=m;t.className='toast on';setTimeout(function(){t.className='toast'},2200)}
+function toRec(r){return {id:r[0],t:r[1],issn:r[2],eissn:r[3],s:r[4],d:r[5],cov:r[6],pub:r[7],fin:r[8]}}
+
+/* ---------- data ---------- */
+fetch('journals.json').then(function(r){return r.json()}).then(function(a){
+  DB = a; IDX = new Array(a.length);
+  for (var i=0;i<a.length;i++) IDX[i] = norm(a[i][1]);
+  $('listtag').textContent = 'Scopus Source List ' + L.LIST_LABEL + ' · ' + a.length.toLocaleString('id-ID') + ' judul';
+  $('q').disabled = false; $('q').focus && 0;
+}).catch(function(){ $('listtag').textContent = 'Daftar Scopus gagal dimuat. Muat ulang halaman.' });
+
+function search(q){
+  var raw = q.trim(); if (raw.length < 2 || !DB) return [];
+  var out = [], digits = raw.replace(/[-\s]/g,'').toUpperCase();
+  if (/^\d{7}[\dX]$/.test(digits)) {
+    for (var i=0;i<DB.length;i++) if (DB[i][2].toUpperCase()===digits || DB[i][3].toUpperCase()===digits) out.push([100,i]);
+  } else {
+    var nq = norm(raw), toks = nq.split(' ');
+    for (var j=0;j<DB.length;j++){
+      var t = IDX[j], sc = 0;
+      if (t === nq) sc = 100;
+      else if (t.indexOf(nq) === 0) sc = 80;
+      else if (t.indexOf(nq) > -1) sc = 60;
+      else { var ok = true; for (var k=0;k<toks.length;k++){ if (t.indexOf(toks[k])<0){ok=false;break} } if (ok) sc = 40; }
+      if (sc) { if (DB[j][4]==='A') sc += 3; else if (DB[j][4]==='P') sc += 1; out.push([sc - Math.min(t.length,80)/100, j]); }
+    }
+  }
+  out.sort(function(a,b){return b[0]-a[0]});
+  return out.slice(0,8).map(function(x){return DB[x[1]]});
+}
+function statusPill(r){
+  if (r.s==='P') return '<span class="pill p-warn">Baru diterima</span>';
+  if (r.d) return '<span class="pill p-bad">Discontinued</span>';
+  if (r.s==='I') return '<span class="pill p-bad">Inactive</span>';
+  return '<span class="pill p-good">Active</span>';
+}
+
+/* ---------- ui: step 1 ---------- */
+var tmr;
+$('q').addEventListener('input', function(){
+  clearTimeout(tmr); var v = this.value;
+  tmr = setTimeout(function(){
+    var box = $('results'), res = search(v);
+    if (v.trim().length < 2) { box.hidden = true; return; }
+    var h = res.map(function(r,i){ var rec=toRec(r);
+      return '<button type="button" class="opt" data-i="'+i+'"><span><span class="t">'+esc(rec.t)+'</span><span class="m">'+esc(fmtIssn(rec.issn)||fmtIssn(rec.eissn)||'tanpa ISSN')+' · '+esc(rec.pub||'penerbit tidak tercatat')+'</span></span>'+statusPill(rec)+'</button>'; }).join('');
+    h += '<button type="button" class="opt" data-i="none"><span><span class="t">Tidak ada yang cocok, nilai sebagai "tidak ditemukan"</span><span class="m">'+esc(v.trim())+'</span></span><span class="pill p-idle">Manual</span></button>';
+    box.innerHTML = h; box.hidden = false; box._res = res;
+  }, 120);
+});
+$('q').addEventListener('keydown', function(e){ if (e.key==='Enter'){ var b = $('results').querySelector('.opt'); if (b) b.click(); } });
+$('results').addEventListener('click', function(e){
+  var b = e.target.closest('.opt'); if (!b) return;
+  var i = b.getAttribute('data-i');
+  if (i === 'none') { S.rec = null; S.manualName = $('q').value.trim(); }
+  else { S.rec = toRec(this._res[+i]); S.manualName = ''; }
+  touched(); $('results').hidden = true; $('q').value = ''; render();
+});
+
+function jcardHtml(){
+  var r = S.rec;
+  if (!r) {
+    if (!S.manualName) return '<p class="hint" style="margin-top:12px">Belum ada jurnal dipilih.</p>';
+    return '<div class="jcard"><h3>'+esc(S.manualName)+' <span class="pill p-bad">Tidak ditemukan</span></h3><p class="hint" style="margin:6px 0 0">Tidak ada di Source List. Jurnal ini tidak bisa dianggap terindeks Scopus.</p>'+
+      '<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.scimagojr.com/journalsearch.php?q='+encodeURIComponent(S.manualName)+'">Cari di Scimago</a></div></div>';
+  }
+  var sc = r.id ? 'https://www.scimagojr.com/journalsearch.php?q='+r.id+'&tip=sid&clean=0' : 'https://www.scimagojr.com/journalsearch.php?q='+encodeURIComponent(r.t);
+  return '<div class="jcard"><h3>'+esc(r.t)+' '+statusPill(r)+'</h3><dl class="kv">'+
+    '<dt>ISSN</dt><dd>'+esc(fmtIssn(r.issn)||'-')+(r.eissn?' · e-'+esc(fmtIssn(r.eissn)):'')+'</dd>'+
+    '<dt>Penerbit</dt><dd>'+esc(r.pub||'-')+'</dd>'+
+    '<dt>Coverage Scopus</dt><dd>'+esc(r.cov||(r.s==='P'?'belum ada':'-'))+'</dd>'+
+    (r.fin?'<dt>'+(r.s==='P'?'Diterima':'Coverage akhir')+'</dt><dd>'+esc(r.fin)+'</dd>':'')+
+    '</dl><div class="btns"><a class="btn primary" target="_blank" rel="noopener" href="'+sc+'">Buka di Scimago</a></div></div>';
+}
+
+/* ---------- ui: inputs ---------- */
+function buildDocs(){
+  var base = Number(S.base) || 2025, h = '';
+  $('ytdLabel').textContent = 'Dokumen ' + (base+1) + ' di Scopus.com, sampai hari ini'; $('lblWeb').textContent = 'Dokumen di website, tahun ' + base; $('lblScopus').textContent = 'Dokumen di Scopus, tahun ' + base;
+  for (var i=0;i<4;i++){ var y = base-3+i;
+    h += '<div class="field"><label for="d'+i+'">'+y+'</label><input type="number" id="d'+i+'" min="0" inputmode="numeric" data-d="'+i+'" value="'+esc(S.docs[i])+'"></div>'; }
+  $('docsrow').innerHTML = h;
+}
+function ensureBase(){ var sel=$('base'), ok=false; for (var i=0;i<sel.options.length;i++) if (sel.options[i].value===String(S.base)) ok=true; if(!ok){ var o=document.createElement('option'); o.textContent=S.base; sel.appendChild(o); } }
+function syncInputs(){
+  ensureBase(); $('quartile').value = S.quartile; $('base').value = S.base; buildDocs();
+  ['self','total','peak','ytd','web','scopus','days'].forEach(function(k){ $(k).value = S[k] || ''; });
+  $('a4').value = S.a4; $('c2').value = S.c2; $('loa7').checked = !!S.loa7;
+}
+function touched(){ if (isExample){ isExample = false; $('banner').hidden = true; } }
+['quartile','base','self','total','peak','ytd','a4','web','scopus','days','c2'].forEach(function(k){
+  $(k).addEventListener('input', function(){ S[k] = this.value; touched(); if (k==='base'){ buildDocs(); } render(); });
+});
+$('loa7').addEventListener('change', function(){ S.loa7 = this.checked; touched(); render(); });
+$('docsrow').addEventListener('input', function(e){ var i = e.target.getAttribute('data-d'); if (i===null) return; S.docs[+i] = e.target.value; touched(); render(); });
+var ptmr;
+function applyPaste(txt){
+  var st = $('pasteStatus'); txt = txt.trim();
+  if (!txt){ st.textContent = ''; st.className = 'small'; return; }
+  var p = L.parseScimago(txt);
+  if (!p.found){ st.className = 'small st-bad'; st.textContent = 'Teks ini tidak berisi data Scimago yang dikenali. Salin seluruh halaman jurnal (Ctrl+A, Ctrl+C), bukan hanya sebagian.'; return; }
+  touched();
+  if (p.quartile) S.quartile = p.quartile;
+  if (p.base){ S.base = String(p.base); S.docs = p.docs; S.peak = p.peak; S.self = p.self; S.total = p.total; if (p.docs[3] !== '') S.scopus = p.docs[3]; }
+  syncInputs(); render();
+  var bits = [];
+  if (p.quartile) bits.push('kuartil '+p.quartile);
+  if (p.base) bits.push('dokumen '+(p.base-3)+'–'+p.base+' = '+p.docs.map(function(d){return d===''?'-':d}).join(', '));
+  if (p.base && p.self!=='' && p.total!=='') bits.push('self cites '+p.self+' dari '+p.total);
+  var msg = 'Terbaca dari Scimago: '+bits.join('; ')+'.', cls = 'st-ok';
+  if (p.notes.length){ msg += ' '+p.notes.join(' '); cls = 'st-warn'; }
+  if (S.rec && p.issns.length){
+    var mine = [S.rec.issn, S.rec.eissn].filter(Boolean).map(function(x){return x.toUpperCase()});
+    if (!p.issns.some(function(x){return mine.indexOf(x)>-1})){ msg += ' Peringatan: ISSN di halaman ini ('+p.issns.map(fmtIssn).join(', ')+') tidak cocok dengan jurnal yang dipilih di langkah 1. Pastikan halaman Scimago-nya benar.'; cls = 'st-bad'; }
+  }
+  st.className = 'small '+cls; st.textContent = msg; $('paste').value = '';
+}
+$('paste').addEventListener('input', function(){ var el = this; clearTimeout(ptmr); ptmr = setTimeout(function(){ if (el.value.length > 150) applyPaste(el.value); }, 200); });
+$('btnNew').addEventListener('click', function(){ S = blank(); isExample = false; $('banner').hidden = true; syncInputs(); render(); $('q').focus(); });
+
+/* ---------- ui: result ---------- */
+var LABEL = {hijau:['Tidak ada sinyal risiko dari data ini','HIJAU'],kuning:['Verifikasi dulu','KUNING'],merah:['Tunda atau hindari','MERAH']};
+function render(){
+  var ev = L.evaluate(S); lastEval = ev;
+  $('jcard').innerHTML = jcardHtml();
+  var lab = LABEL[ev.key];
+  var head = ev.inconclusive ? 'Belum dapat disimpulkan' : lab[1];
+  var sub = ev.inconclusive ? 'Sementara '+lab[1].toLowerCase()+'. Baru '+ev.avail+' dari 100 poin yang bisa dinilai; lengkapi sampai minimal 70.' : lab[0]+'.';
+  var title = S.rec ? S.rec.t : (S.manualName || 'Belum ada jurnal');
+  var v = '<div class="verdict '+(ev.inconclusive?'':ev.key)+'"><div class="lab">'+esc(title)+'</div>'+
+    '<div class="big"><strong>'+ev.score+'</strong><span>'+head+'</span></div><p>'+esc(sub)+'</p>'+
+    '<div class="cov" title="Poin yang bisa dinilai"><i style="width:'+ev.avail+'%"></i></div>'+
+    '<p class="small" style="margin-top:4px">Dinilai dari '+ev.avail+' dari 100 poin. Skor = poin diperoleh ÷ poin yang dinilai.</p>'+
+    ((ev.red.length||ev.yellow.length)?'<ul class="flags">'+ev.red.map(function(f){return '<li class="r">'+esc(f)+'</li>'}).join('')+ev.yellow.map(function(f){return '<li class="y">'+esc(f)+'</li>'}).join('')+'</ul>':'')+
+    (ev.key==='hijau'&&!ev.inconclusive?'<p class="small" style="margin-top:6px">HIJAU bukan jaminan aman: pada kalibrasi, 3 dari 10 jurnal yang akhirnya dicoret Scopus masih HIJAU karena volume dan self-citation tampak normal. Cek status Source List terbaru dan verifikasi situs resmi sebelum submit.</p>':'')+
+    '</div>';
+  $('verdict').innerHTML = v;
+  $('rows').querySelector('tbody').innerHTML = ev.rows.map(function(r){
+    var pct = r.pts===null?0:Math.round(r.pts/r.max*100);
+    return '<tr'+(r.na?' class="na"':'')+'><td><b>'+r.code+'</b> '+esc(r.name)+'<span class="note">'+esc(r.note)+'</span>'+(r.na?'':'<span class="bar"><i style="width:'+pct+'%"></i></span>')+'</td><td class="n">'+(r.pts===null?'-':r.pts)+' / '+r.max+'</td></tr>'; }).join('');
+  $('steps').innerHTML = ev.steps.length ? '<div class="sub">Langkah berikutnya</div><ul class="steps">'+ev.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul>' : '';
+}
+
+/* ---------- summary / history ---------- */
+function summary(ev, st){
+  var t = (st.rec?st.rec.t:(st.manualName||'-'));
+  var lines = ['Penilaian jurnal PMU FKM Unhas', t + (st.rec?' (ISSN '+fmtIssn(st.rec.issn||st.rec.eissn)+')':''),
+    'Hasil: '+(ev.inconclusive?'BELUM DAPAT DISIMPULKAN (sementara '+LABEL[ev.key][1]+')':LABEL[ev.key][1])+' · skor '+ev.score+' (dinilai dari '+ev.avail+' poin)'];
+  ev.red.concat(ev.yellow).forEach(function(f){ lines.push('- '+f) });
+  lines.push('Rincian: '+ev.rows.map(function(r){return r.code+' '+(r.pts===null?'-':r.pts)+'/'+r.max}).join(', '));
+  lines.push('Sumber: Scopus Source List '+L.LIST_LABEL+'; Scimago.');
+  return lines.join('\n');
+}
+function loadHist(){ try { return JSON.parse(localStorage.getItem('pmu_riwayat')||'[]') } catch(e){ return [] } }
+function saveHist(a){ try { localStorage.setItem('pmu_riwayat', JSON.stringify(a)); return true } catch(e){ return false } }
+function renderHist(){
+  var a = loadHist(), box = $('hist');
+  $('btnCsv').hidden = !a.length; $('btnClear').hidden = !a.length;
+  if (!a.length){ box.innerHTML = '<p class="small">Belum ada penilaian tersimpan.</p>'; return; }
+  box.innerHTML = '<div class="tablewrap hist"><table><thead><tr><th>Tanggal</th><th>Jurnal</th><th style="text-align:right">Skor</th><th>Hasil</th><th></th></tr></thead><tbody>'+
+    a.map(function(x,i){ var cls = {hijau:'p-good',kuning:'p-warn',merah:'p-bad'}[x.key];
+      return '<tr><td class="small">'+esc(x.date)+'</td><td><button type="button" data-open="'+i+'">'+esc(x.name)+'</button></td><td class="n">'+x.score+'</td><td><span class="pill '+(x.inc?'p-idle':cls)+'">'+(x.inc?'Sementara':'')+' '+x.key.toUpperCase()+'</span></td><td><button type="button" data-del="'+i+'" aria-label="Hapus">hapus</button></td></tr>'; }).join('')+'</tbody></table></div>';
+}
+$('hist').addEventListener('click', function(e){
+  var o = e.target.getAttribute('data-open'), d = e.target.getAttribute('data-del'), a = loadHist();
+  if (o !== null){ S = clone(a[+o].state); isExample = false; $('banner').hidden = true; syncInputs(); render(); window.scrollTo({top:0}); }
+  if (d !== null){ a.splice(+d,1); saveHist(a); renderHist(); }
+});
+$('btnSave').addEventListener('click', function(){
+  var ev = lastEval; if (!ev) return;
+  var a = loadHist(), now = new Date();
+  a.unshift({date: now.toISOString().slice(0,10), name: S.rec?S.rec.t:(S.manualName||'(tanpa nama)'), score: ev.score, key: ev.key, inc: ev.inconclusive, red: ev.red, yellow: ev.yellow, issn: S.rec?fmtIssn(S.rec.issn||S.rec.eissn):'', avail: ev.avail, state: clone(S)});
+  toast(saveHist(a.slice(0,200)) ? 'Tersimpan di riwayat browser ini.' : 'Penyimpanan browser tidak tersedia. Gunakan Salin ringkasan.'); renderHist();
+});
+$('btnCopy').addEventListener('click', function(){
+  var txt = summary(lastEval, S);
+  (navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function(){ toast('Ringkasan disalin.') }, function(){
+    var ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('Ringkasan disalin.') } catch(e){ toast('Salin gagal. Pilih teks secara manual.') } document.body.removeChild(ta); });
+});
+$('btnClear').addEventListener('click', function(){ if (this.getAttribute('data-sure')){ saveHist([]); this.removeAttribute('data-sure'); this.textContent='Hapus riwayat'; renderHist(); } else { this.setAttribute('data-sure','1'); this.textContent='Klik lagi untuk menghapus semua'; setTimeout(function(b){ b.removeAttribute('data-sure'); b.textContent='Hapus riwayat'; }, 3000, this); } });
+$('btnCsv').addEventListener('click', function(){
+  var a = loadHist(); if (!a.length) return;
+  var q = function(s){ return '"'+String(s==null?'':s).replace(/"/g,'""')+'"' };
+  var csv = 'tanggal,jurnal,issn,skor,dinilai_dari,hasil,sementara,flag_merah,flag_kuning\n' + a.map(function(x){ return [x.date,q(x.name),x.issn,x.score,x.avail,x.key,x.inc?'ya':'tidak',q((x.red||[]).join(' | ')),q((x.yellow||[]).join(' | '))].join(',') }).join('\n');
+  var cl = window.claude && window.claude.use ? window.claude.use('downloads') : Promise.resolve(null);
+  cl.then(function(dl){ if (!dl) throw 0; return dl.save({filename:'riwayat_penilaian_jurnal.csv', data:csv}) }).then(function(){ toast('CSV disimpan.') }, function(err){
+    if (err && err.code === 'declined') return;
+    (navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(csv) : Promise.reject()).then(function(){ toast('Unduhan tidak tersedia. Isi CSV disalin ke clipboard.') }, function(){ toast('Unduhan dan salin tidak tersedia di tampilan ini.') }); });
+});
+
+syncInputs(); $('banner').hidden = false; render(); renderHist();
+})();
+</script>
+</body>
+</html>
