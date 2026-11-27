@@ -11,3 +11,4 @@ next-env.d.ts
 backups/
 smoke-report-*.json
 .env.pilot
+akun-tim-*.csv
