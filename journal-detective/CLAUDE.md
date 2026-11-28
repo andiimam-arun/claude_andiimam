@@ -42,7 +42,9 @@ tests/unit|e2e      vitest / playwright
 
 19. **Database referensi Scopus** (`ScopusImport`/`ScopusSource`) terpisah dari Journal Passport; impor lewat pratinjau → konfirmasi; riwayat dipertahankan; Passport hanya dibuat saat jurnal diperiksa. Header dideteksi dari nama kolom (`engine/scopusImport.ts`, murni). Jangan memakai pembaca streaming ExcelJS (tidak deterministik). Jangan menyamakan Inactive dengan penghentian karena kualitas; Accepted ≠ aktif; tidak ditemukan ≠ tidak terindeks.
 
+20. **Pembaruan database otomatis** (`services/dbUpdate.ts`, `npm run db:update`, `scripts/schedule-mac.sh`): DOAJ CSV diunduh otomatis (host tetap doaj.org → bucket S3 DOAJ), Scopus dari `data/inbox/scopus/` (versi dari nama berkas). Berkas identik dilewati; penurunan baris > 20% atau berkas lebih lama ditolak (data lama tetap aktif). Impor DOAJ hanya cadangan bila DOAJ langsung UNAVAILABLE dan selalu `IMPORTED_DATA`. SCImago tidak diotomatisasi (anti-bot; jangan dilewati). Persetujuan sekaligus (`batchApproveClean`) hanya HEAD, hanya bila penilaian ulang sepenuhnya HIJAU (`requireGreen`), tidak pernah override; tiap persetujuan diaudit.
+
 ## Perintah
-`npm run dev | build | typecheck | lint | test | test:e2e | db:seed | db:reset | pilot:init | pilot:check | pilot:smoke | pilot:backup | pilot:restore | pilot:retention | scopus:import | doaj:import`.
+`npm run dev | build | typecheck | lint | test | test:e2e | db:seed | db:reset | pilot:init | pilot:check | pilot:smoke | pilot:backup | pilot:restore | pilot:retention | scopus:import | doaj:import | db:update`.
 Tes layanan memakai `prisma/test.db` yang dibuat dari migrasi (globalSetup). Seed memakai `tsx --conditions=react-server` karena paket `server-only`.
 Skema SQLite memakai String untuk enum dan JSON; saat pindah ke PostgreSQL ubah provider dan kolom `*Json` ke `Json` (lihat DEPLOYMENT).

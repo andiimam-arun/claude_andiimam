@@ -3,6 +3,8 @@ import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth/session";
 import { importDataset, DATASET_KINDS, type DatasetKind } from "@/lib/services/reference";
+import { runDatabaseUpdate } from "@/lib/services/dbUpdate";
+import { batchApproveClean } from "@/lib/services/approval";
 import { publishPolicy, getActivePolicy } from "@/lib/services/policyService";
 import { saveSetting } from "@/lib/services/settings";
 import { audit } from "@/lib/services/audit";
@@ -129,4 +131,28 @@ export async function cancelScopusImportAction(form: FormData) {
   const { cancelImport } = await import("@/lib/services/scopusReference");
   try { await cancelImport(str(form, "importId"), user); } catch (e) { go("/sources/scopus", { error: errMsg(e) }); }
   go("/sources/scopus", { notice: "Pratinjau dibatalkan. Tidak ada data yang diimpor." });
+}
+
+/** Tombol "Perbarui sekarang": DOAJ diunduh otomatis; Scopus dari folder inbox. Tanpa formulir. */
+export async function runDbUpdateAction() {
+  const user = await requireRole("ADMIN", "HEAD");
+  let msg = "";
+  try {
+    const res = await runDatabaseUpdate({ actor: user });
+    msg = res.map((r) => `${r.source}: ${r.outcome} — ${r.detail}`).join(" | ");
+    if (res.some((r) => r.outcome === "FAILED" || r.outcome === "REJECTED")) go("/sources", { error: msg.slice(0, 600) });
+  } catch (e) { go("/sources", { error: errMsg(e) }); }
+  go("/sources", { notice: msg.slice(0, 600) });
+}
+
+/** Persetujuan sekaligus (HANYA Kepala Unit) untuk kasus bersih yang dicentang; tiap kasus dinilai ulang dan diaudit sendiri. */
+export async function batchApproveAction(form: FormData) {
+  const user = await requireRole("HEAD");
+  const ids = form.getAll("id").map(String).filter(Boolean);
+  if (!ids.length) go("/approvals", { error: "Tidak ada permohonan yang dipilih." });
+  try {
+    const r = await batchApproveClean(ids, user);
+    const skip = r.skipped.length ? ` Dilewati ${r.skipped.length}: ${r.skipped.map((x) => `${x.ref} (${x.reason})`).join("; ")}` : "";
+    go("/approvals", { notice: `Disetujui ${r.approved.length} permohonan.${skip}`.slice(0, 700) });
+  } catch (e) { go("/approvals", { error: errMsg(e) }); }
 }

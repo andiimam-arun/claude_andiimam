@@ -157,53 +157,63 @@ Logo UNHAS ada di `public/branding/logo-unhas.png`. Untuk mengganti, timpa berka
 
 ---
 
-## Bab 6. Melengkapi database rujukan
+## Bab 6. Menjaga database rujukan tetap terkini
 
-Aplikasi memeriksa jurnal terhadap beberapa **sumber rujukan**. Halaman **Sumber Rujukan** menampilkan status tiap sumber. Status **"Belum pernah terbukti hidup"** berarti uji koneksi belum pernah berhasil, bukan berarti sumber itu kosong.
+**Prinsip:** database diperbarui berkala secara otomatis, dan Peninjau tidak mengisi bukti per jurnal kecuali kasusnya benar-benar meragukan.
 
-### 6.1 Cara kerja tiap sumber
+### 6.1 Pembaruan otomatis
 
-| Sumber | Cara masuk | Keadaan saat ini |
+| Sumber | Cara | Batas "kedaluwarsa" |
 |---|---|---|
-| **Scopus (daftar sumber, Excel)** | Impor berkas (menu **Database Scopus**) | Siap. Perlu Anda unggah berkas resmi |
-| **DOAJ** | Pencarian langsung per ISSN lewat API DOAJ; cadangan: impor CSV DOAJ (`npm run doaj:import`) | **Teruji hidup 28 Nov 2026** (`pilot:smoke`, HTTP 200); lihat 6.2 |
-| **Crossref** | Pencarian langsung per ISSN lewat API Crossref | **Teruji hidup 28 Nov 2026** (HTTP 200) |
-| **SCImago (CSV)** | Impor CSV (kuartil, SJR) | Tersedia di menu impor rujukan |
-| **Daftar Beall / jurnal dibajak (hijacked)** | Impor CSV | Tersedia; **Anda yang menyediakan dan bertanggung jawab atas daftarnya** |
-| **SINTA** | Bukti manual (dicatat oleh Peninjau) | Tidak ada integrasi otomatis |
-| **Bukti manual** | Peninjau menambahkan lewat halaman jurnal | Selalu tersedia |
+| **DOAJ (CSV)** | Diunduh otomatis dari `doaj.org/csv` | 30 hari |
+| **Scopus Source List** | Letakkan berkas `.xlsx` baru di folder `data/inbox/scopus/`. Versi dan tanggal dibaca dari nama berkas, mis. `ext_list_Dec_2026.xlsx` → "Desember 2026" | 120 hari |
+| **DOAJ & Crossref (langsung)** | Dicek per ISSN setiap investigasi; tidak perlu pembaruan | – |
+| **SCImago, Beall, jurnal dibajak** | Tidak otomatis (SCImago memakai perlindungan anti-bot dan tidak kami lewati). Impor manual tetap ada di lipatan "Impor manual (lanjutan)" pada Sumber Rujukan | – |
 
-### 6.2 DOAJ: yang benar-benar terjadi
-
-**Penting:** DOAJ diperiksa **satu per satu jurnal, langsung ke API DOAJ, berdasarkan ISSN**, saat investigasi dijalankan. Salinan seluruh daftar DOAJ bersifat opsional dan hanya menjadi cadangan (lihat di bawah).
-
-Langkah di Mac Anda (yang punya internet):
+Pembaruan dijalankan dengan tombol **Perbarui sekarang** (Sumber Rujukan) atau lewat jadwal mingguan:
 
 ```bash
-cd ~/claude_andiimam/journal-detective      # sesuaikan lokasi
-git pull
-grep DISABLE_EXTERNAL_LOOKUPS .env          # harus kosong atau tidak ada
+npm run db:update
+```
+
+**Menjadwalkan di Mac (sekali saja):**
+
+```bash
+bash scripts/schedule-mac.sh install
+```
+
+Berjalan setiap Senin 06:30 (bila Mac tidur, dijalankan saat bangun). Perintah lain: `status`, `run-now`, `remove`. Log ada di `data/logs/db-update.log`. Mac harus menyala dan terhubung internet; di server kampus nanti cukup memakai `cron` untuk perintah `npm run db:update` yang sama.
+
+**Pengaman otomatis** (supaya berkas rusak tidak merusak data):
+- Berkas identik dilewati ("tidak berubah").
+- Jumlah baris turun lebih dari 20% dibanding data aktif → **ditolak**, data lama tetap dipakai. Berkas Scopus yang ditolak dipindahkan ke `rejected/`.
+- Berkas Scopus yang lebih lama daripada data aktif ditolak.
+- Berkas Scopus yang namanya tidak memuat bulan dan tahun tidak ditebak; dibiarkan di folder dan dilaporkan.
+- Hasil terakhir dan umur data tampil di **Sumber Rujukan**. Di **Ikhtisar** muncul peringatan bila ada sumber kedaluwarsa atau belum ada. Peringatan ini tidak mengubah keputusan, hanya mengingatkan Anda.
+
+**Mengambil berkas Scopus baru.** Unduh daftar sumber resmi dari situs Scopus (halaman Source Title List), simpan ke `data/inbox/scopus/`, lalu tunggu jadwal berikutnya atau tekan **Perbarui sekarang**. Pembaruan otomatis tidak menampilkan pratinjau, jadi periksa angka konflik pada hasilnya.
+
+### 6.2 Kapan Peninjau benar-benar perlu bekerja
+
+Halaman **Persetujuan Tertunda** kini terbagi dua:
+- **Perlu perhatian:** ada penilaian yang tidak HIJAU, sumber bertentangan, domain tidak cocok, sinyal jurnal dibajak, atau penilaian perlu diperbarui. Ditinjau satu per satu, bukti manual ditambahkan bila perlu.
+- **Bersih:** jurnal, tujuan, dan administratif semuanya HIJAU. Kepala Unit dapat mencentang dan menekan **Setujui yang dicentang**. Setiap permohonan dinilai ulang saat disetujui; yang sudah tidak sepenuhnya HIJAU dilewati (tidak pernah di-override), dan tiap persetujuan tercatat atas nama Kepala.
+
+Jurnal lokal yang tidak ada di Scopus maupun DOAJ tidak akan "bersih" secara otomatis; itu memang tidak dianggap buruk, tetapi perlu mata manusia.
+
+### 6.3 Pengujian koneksi langsung
+
+```bash
 npm run pilot:smoke
 ```
 
-`pilot:smoke` mencoba DOAJ dan Crossref dengan ISSN uji. Jika berhasil, status di halaman **Sumber Rujukan** berubah dari "Belum pernah terbukti hidup" menjadi hidup, dengan waktu uji. Jika gagal, pesan kegagalan (jaringan, diblokir, dsb.) ditampilkan; kirimkan pesan itu untuk dianalisis.
+Hasil `LIVE_OK` untuk DOAJ dan Crossref menghapus tulisan "Belum pernah terbukti hidup" di Sumber Rujukan. Uji ini perlu dijalankan di mesin tempat aplikasi berjalan.
 
-Hasil uji pada 28 Nov 2026 dari lingkungan pengembangan: `pilot:smoke` berhasil untuk DOAJ dan Crossref (HTTP 200). Titik akhir `https://doaj.org/api/search/journals/issn:XXXX-XXXX` dan versi `/api/v4/search/journals/...` sama-sama menjawab; dokumentasi DOAJ v4 masih menyebut jalur tanpa versi. Crossref: `https://api.crossref.org/journals/{ISSN}` menjawab 404 untuk ISSN yang tidak ada. Anda tetap perlu menjalankan `pilot:smoke` di jaringan Anda sendiri, karena jaringan kampus bisa berbeda.
+### 6.4 DOAJ sebagai cadangan
 
-**Impor CSV DOAJ (tersedia).** DOAJ menyediakan CSV seluruh jurnal di `https://doaj.org/csv` (±26 MB, ±23.600 jurnal). Berkas ini terlalu besar untuk menu unggah (batas 12 MB), jadi diimpor lewat Terminal:
+Bila pencarian langsung ke DOAJ gagal, investigasi memakai CSV DOAJ yang diunduh otomatis, ditandai **data impor bertanggal**, bukan "langsung". "Tidak ada pada impor" hanya berarti tidak konklusif.
 
-```bash
-curl -L -o ~/doaj.csv https://doaj.org/csv
-npm run doaj:import -- ~/doaj.csv --version "DOAJ CSV Nov 2026" --date 2026-11-28
-```
-
-Gunakan tanggal unduh sebagai `--date`. Cara kerjanya:
-- Pencarian langsung ke API DOAJ tetap yang utama. **Impor hanya dipakai bila pencarian langsung tidak tersedia** (jaringan mati, dibatasi, atau dinonaktifkan).
-- Hasil dari impor ditandai **IMPORTED_DATA** beserta versi dan tanggal datanya, tidak pernah ditulis sebagai "langsung".
-- **Ada pada impor** → terdaftar di DOAJ menurut data bertanggal itu. **Tidak ada pada impor** → hanya "tidak konklusif", bukan bukti negatif.
-- Impor DOAJ lengkap yang baru menggantikan yang lama (yang lama dinonaktifkan, riwayat tetap tersimpan). Ulangi tiap beberapa bulan.
-
-### 6.3 Scopus: langkah impor
+### 6.5 Scopus: impor manual dengan pratinjau (opsional)
 
 1. Unduh daftar sumber Scopus resmi (Excel) dari situs Elsevier.
 2. Masuk sebagai Administrator atau Kepala Unit → **Database Scopus**.
@@ -213,16 +223,16 @@ Gunakan tanggal unduh sebagai `--date`. Cara kerjanya:
 
 Uji sederhana setelah impor: cari "Scientific Reports". Hasil yang benar: Source ID 21100200805, E-ISSN 2045-2322, Active, 2011–2026, Nature Research / Springer Nature.
 
-### 6.4 Urutan yang disarankan
+### 6.6 Urutan yang disarankan
 
 1. Jalankan `npm run pilot:smoke` → DOAJ dan Crossref hidup.
-2. Impor daftar Scopus.
-3. (Opsional) Impor SCImago bila butuh kuartil.
+2. Letakkan berkas Scopus di `data/inbox/scopus/`, lalu `npm run db:update` (DOAJ ikut diunduh).
+3. (Opsional) Impor manual SCImago bila butuh kuartil.
 4. (Opsional) Impor daftar Beall/hijacked yang **Anda** pilih dan dokumentasikan sumbernya.
 5. Jalankan beberapa jurnal yang sudah Anda kenal (satu terkenal, satu meragukan) dan bandingkan hasilnya secara manual.
 6. Catat hasilnya di **Validasi Dunia Nyata**.
 
-### 6.5 Cakupan dan batasan
+### 6.7 Cakupan dan batasan
 
 - Tidak ada satu sumber pun yang lengkap. Hasil "tidak ditemukan" harus dibaca sebagai **belum terverifikasi**.
 - Daftar jurnal predator/dibajak sering berubah dan diperdebatkan. Aplikasi memperlakukannya sebagai **sinyal**, bukan putusan.

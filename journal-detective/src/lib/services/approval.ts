@@ -20,7 +20,7 @@ const ERR: Record<string, string> = {
 export class ActionError extends Error {}
 
 /** Setiap tindakan mencatat pelaku, waktu, alasan, dan versi kebijakan. Hanya pejabat manusia yang dapat APPROVE/REJECT. */
-export async function performReviewAction(opts: { applicationId: string; actor: ActingUser; action: ReviewActionType; rationale: string }) {
+export async function performReviewAction(opts: { applicationId: string; actor: ActingUser; action: ReviewActionType; rationale: string; requireGreen?: boolean }) {
   const { applicationId, actor, action } = opts;
   const rationale = opts.rationale.trim();
   if (!canPerform(actor.role, action)) throw new ActionError(ERR.ROLE_NOT_ALLOWED);
@@ -40,6 +40,10 @@ export async function performReviewAction(opts: { applicationId: string; actor: 
   const data: Record<string, unknown> = {};
 
   if (action === "APPROVE") {
+    // Persetujuan sekaligus: hanya bila penilaian ulang saat ini sepenuhnya HIJAU (tidak pernah override).
+    if (opts.requireGreen && !(evaln.final && evaln.final.status === "GREEN" && evaln.final.journalStatus === "GREEN" && evaln.final.destinationStatus === "GREEN" && evaln.final.administrativeStatus === "GREEN" && !evaln.final.hardBlock && !evaln.final.clearanceBlocked)) {
+      throw new ActionError("Tidak lagi bersih pada penilaian ulang; tinjau satu per satu.");
+    }
     const c = checkApproval({ role: actor.role, state: from, final: evaln.final, justification: rationale, officialPolicyConfigured: !officialPolicyBlockReason(policy) });
     if (!c.ok) throw new ActionError(ERR[c.error!] ?? "Persetujuan ditolak");
     if (c.isOverride) {
@@ -62,4 +66,27 @@ export async function performReviewAction(opts: { applicationId: string; actor: 
   });
   await audit(actor, `REVIEW_${action}`, "Application", applicationId, { from, to, rationale, override: !!overrideJson }, policy.version);
   return row;
+}
+
+const BATCH_STATES: WorkflowState[] = ["PENDING_REVIEW", "IN_REVIEW", "RECOMMENDED"];
+
+/**
+ * Persetujuan sekaligus oleh Kepala Unit untuk kasus BERSIH. Setiap permohonan tetap melewati performReviewAction
+ * (peran, kebijakan resmi, penilaian ulang, audit per permohonan); yang tidak lagi bersih dilewati dengan alasan.
+ */
+export async function batchApproveClean(ids: string[], actor: ActingUser) {
+  if (!canPerform(actor.role, "APPROVE")) throw new ActionError(ERR.ROLE_NOT_ALLOWED);
+  const approved: string[] = [];
+  const skipped: Array<{ ref: string; reason: string }> = [];
+  for (const id of [...new Set(ids)].slice(0, 100)) {
+    const app = await prisma.application.findUnique({ where: { id } });
+    if (!app) continue;
+    if (!BATCH_STATES.includes(app.workflow as WorkflowState)) { skipped.push({ ref: app.refNumber, reason: `status alur ${app.workflow} tidak termasuk persetujuan sekaligus` }); continue; }
+    try {
+      await performReviewAction({ applicationId: id, actor, action: "APPROVE", requireGreen: true, rationale: "Persetujuan sekaligus: hasil akhir HIJAU (jurnal, tujuan, administratif) pada penilaian ulang; tanpa konflik atau catatan perhatian." });
+      approved.push(app.refNumber);
+    } catch (e: any) { skipped.push({ ref: app.refNumber, reason: String(e?.message ?? e).slice(0, 140) }); }
+  }
+  await audit(actor, "REVIEW_BATCH_APPROVE", "Application", null, { approved, skipped });
+  return { approved, skipped };
 }

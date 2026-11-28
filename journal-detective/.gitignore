@@ -12,3 +12,5 @@ backups/
 smoke-report-*.json
 .env.pilot
 akun-tim-*.csv
+data/inbox/
+data/logs/

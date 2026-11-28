@@ -94,6 +94,8 @@ export interface ImportInput {
   sourceDate?: Date | null;
   isComplete: boolean; // apakah daftar lengkap dari sumber resmi
   isDemo?: boolean;
+  /** Pembaruan otomatis: tolak bila baris turun lebih dari rasio ini dibanding dataset aktif jenis yang sama (mis. 0.2). */
+  maxDropRatio?: number;
   actor: Actor;
 }
 
@@ -172,6 +174,10 @@ export async function importDataset(i: ImportInput) {
     })
     .filter(Boolean) as Array<{ kind: string; title: string; normTitle: string; issn: string | null; eissn: string | null; sourceId: string | null; publisher: string | null; domain: string | null; url: string | null; status: string | null; dataJson: string }>;
   if (!recs.length) throw new Error("Tidak ada baris valid (kolom judul tidak ditemukan?)");
+  if (i.maxDropRatio !== undefined) {
+    const prev = await prisma.referenceDataset.findFirst({ where: { kind: i.kind, active: true }, orderBy: { importedAt: "desc" } });
+    if (prev && recs.length < prev.rowCount * (1 - i.maxDropRatio)) throw new Error(`Ditolak: jumlah baris turun dari ${prev.rowCount} menjadi ${recs.length} (> ${Math.round(i.maxDropRatio * 100)}%). Data lama tetap aktif.`);
+  }
 
   const ds = await prisma.referenceDataset.create({
     data: {

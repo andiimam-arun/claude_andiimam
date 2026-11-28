@@ -2,7 +2,8 @@ import Link from "next/link";
 import { requireRole } from "@/lib/auth/session";
 import { getT } from "@/lib/i18n/server";
 import { listDatasets, DATASET_KINDS } from "@/lib/services/reference";
-import { importDatasetAction, toggleDatasetAction } from "@/app/actions/admin";
+import { importDatasetAction, toggleDatasetAction, runDbUpdateAction } from "@/app/actions/admin";
+import { updateStatus, scopusInbox } from "@/lib/services/dbUpdate";
 import { Card, CardBody, CardHeader, PageHeader, Notice } from "@/components/ui/card";
 import { Pill } from "@/components/StatusBadge";
 import { fmtDate } from "@/lib/utils";
@@ -30,17 +31,29 @@ export default async function Sources({ searchParams }: { searchParams: Promise<
   const smoke: Record<string, any> = {};
   for (const k of ["DOAJ", "Crossref"]) { const r = await prisma.setting.findUnique({ where: { key: `smoke:${k}` } }); if (r) smoke[k] = parseJson(r.valueJson, null); }
   const canImport = user.role === "ADMIN" || user.role === "HEAD";
+  const fresh = await updateStatus();
   return (
     <>
       {sp.notice && <Notice kind="ok">{sp.notice}</Notice>}{sp.error && <Notice kind="error">{sp.error}</Notice>}
       <PageHeader title={t("nav.sources")} subtitle={L ? "Status integrasi eksternal ditampilkan apa adanya. Sumber yang tidak tersedia tidak pernah diganti data demonstrasi." : "External-integration states are shown as they are. Unavailable sources are never replaced with demonstration data."} />
       <Notice kind="info">{L ? "Untuk Scopus, gunakan menu " : "For Scopus, use the "}<Link className="font-semibold underline" href="/sources/scopus">{L ? "Database Scopus" : "Scopus Database"}</Link>{L ? ": impor workbook Source List asli (3 sheet) sekali, lalu cari dan periksa jurnal tanpa memasukkan bukti satu per satu." : " menu: import the original Source List workbook (3 sheets) once, then search and investigate journals without entering evidence one by one."}</Notice>
+      <Card className="mb-6"><CardHeader title={L ? "Pembaruan database otomatis" : "Automatic database update"} subtitle={L ? "Tanpa formulir: DOAJ diunduh sendiri; Scopus diambil dari folder inbox. Dijadwalkan mingguan (lihat Panduan Pengguna, Bab 6)." : "No forms: DOAJ is downloaded automatically; Scopus is read from the inbox folder. Scheduled weekly (see User Guide, chapter 6)."} />
+        <CardBody>
+          <ul className="divide-y divide-slate-100">{fresh.map((f) => (
+            <li key={f.source} className="flex flex-wrap items-start gap-3 py-2.5"><div className="min-w-[200px] flex-1"><div className="text-sm font-semibold">{f.label}</div>
+              <div className="text-xs text-slate-600">{f.version ? `${f.version} · ${L ? "data" : "data"} ${fmtDate(f.dataDate)} (${f.ageDays} ${L ? "hari" : "days"})` : (L ? "Belum ada data" : "No data yet")}</div>
+              {f.checkedAt && <div className="text-xs text-slate-500">{L ? "Pemeriksaan terakhir" : "Last check"}: {fmtDate(f.checkedAt, true)} — {f.lastOutcome}: {String(f.lastDetail).slice(0, 160)}</div>}</div>
+            <Pill tone={f.state === "OK" ? "green" : "amber"}>{f.state === "OK" ? (L ? "Terkini" : "Current") : f.state === "STALE" ? (L ? `Kedaluwarsa (> ${f.thresholdDays} hari)` : `Stale (> ${f.thresholdDays} days)`) : (L ? "Belum ada" : "Missing")}</Pill></li>))}</ul>
+          {canImport && <form action={runDbUpdateAction} className="mt-3 flex flex-wrap items-center gap-3"><button className="btn-primary" type="submit">{L ? "Perbarui sekarang" : "Update now"}</button>
+            <span className="text-xs text-slate-500">{L ? "Scopus: letakkan berkas .xlsx baru (mis. ext_list_Dec_2026.xlsx) di " : "Scopus: drop the new .xlsx (e.g. ext_list_Dec_2026.xlsx) in "}<code>{scopusInbox()}</code>{L ? ". Mengunduh DOAJ ±26 MB; dapat memakan satu menit." : ". Downloads DOAJ (~26 MB); may take a minute."}</span></form>}
+        </CardBody></Card>
       <Card className="mb-6"><CardHeader title={L ? "Status integrasi" : "Integration status"} /><ul className="divide-y divide-slate-100">{SOURCES.map((s) => (
         <li key={s.name} className="flex flex-wrap items-start gap-3 px-5 py-3"><div className="min-w-[220px] flex-1"><div className="text-sm font-semibold">{s.name}</div><div className="text-xs text-slate-600">{L ? s.id : s.en}</div>
           {(s.name === "DOAJ API" || s.name === "Crossref REST API") && (() => { const r = smoke[s.name.startsWith("DOAJ") ? "DOAJ" : "Crossref"]; return r ? <div className={`mt-1 text-xs font-semibold ${r.outcome === "LIVE_OK" ? "text-ok" : "text-bad"}`}>{L ? "Smoke test operator terakhir" : "Last operator smoke test"}: {r.outcome} · {fmtDate(r.at, true)} — {String(r.detail).slice(0, 140)}</div> : <div className="mt-1 text-xs font-semibold text-warn">{L ? "Belum pernah terbukti hidup (jalankan `npm run pilot:smoke` di server target)" : "Never proven live (run `npm run pilot:smoke` on the target server)"}</div>; })()}</div>
           <Pill tone={(s.name === "DOAJ API" || s.name === "Crossref REST API") ? (smoke[s.name.startsWith("DOAJ") ? "DOAJ" : "Crossref"]?.outcome === "LIVE_OK" ? "green" : "slate") : s.tone}>{(s.name === "DOAJ API" || s.name === "Crossref REST API") ? (smoke[s.name.startsWith("DOAJ") ? "DOAJ" : "Crossref"]?.outcome === "LIVE_OK" ? t("integ.LIVE_VERIFIED") : t("integ.UNAVAILABLE")) : t(`integ.${s.state}`)}</Pill></li>))}</ul></Card>
       {canImport && (
-        <Card className="mb-6"><CardHeader title={L ? "Impor dataset rujukan" : "Import reference dataset"} subtitle={L ? "CSV atau XLSX yang diperoleh secara sah. Tanggal, versi, dan asal-usul dicatat." : "Lawfully obtained CSV or XLSX. Date, version and provenance are recorded."} />
+        <details className="mb-6"><summary className="cursor-pointer text-sm font-semibold text-navy-800">{L ? "Impor manual (lanjutan): SCImago, Beall, jurnal dibajak, dsb." : "Manual import (advanced): SCImago, Beall, hijacked journals, etc."}</summary>
+        <Card className="mt-3"><CardHeader title={L ? "Impor dataset rujukan" : "Import reference dataset"} subtitle={L ? "CSV atau XLSX yang diperoleh secara sah. Tanggal, versi, dan asal-usul dicatat." : "Lawfully obtained CSV or XLSX. Date, version and provenance are recorded."} />
           <CardBody><form action={importDatasetAction} encType="multipart/form-data" className="grid gap-3 md:grid-cols-2">
             <label><span className="label">{L ? "Jenis" : "Kind"}</span><select className="input" name="kind">{DATASET_KINDS.map((k) => <option key={k} value={k}>{k}</option>)}</select></label>
             <label><span className="label">{L ? "Berkas (CSV/XLSX)" : "File (CSV/XLSX)"}</span><input className="input" type="file" name="file" accept=".csv,.xlsx,.tsv,.txt" required /></label>
@@ -51,7 +64,7 @@ export default async function Sources({ searchParams }: { searchParams: Promise<
             <label className="flex items-center gap-2 text-sm"><input type="checkbox" name="legal" /> {L ? "Saya menyatakan data diperoleh secara sah sesuai lisensi/ketentuan sumber" : "I confirm the data was obtained lawfully under the source's licence/terms"}</label>
             <div className="md:col-span-2"><button className="btn-primary" type="submit">{L ? "Impor" : "Import"}</button>
               <span className="ml-3 text-xs text-slate-500">{L ? "Kolom dikenali otomatis: Source Title, Print-ISSN, E-ISSN, Active or Inactive, Publisher, Sourceid, SJR Best Quartile, Authentic URL, Hijacked URL, …" : "Columns auto-detected: Source Title, Print-ISSN, E-ISSN, Active or Inactive, Publisher, Sourceid, SJR Best Quartile, Authentic URL, Hijacked URL, …"}</span></div>
-          </form></CardBody></Card>
+          </form></CardBody></Card></details>
       )}
       <Card><CardHeader title={L ? "Dataset terimpor" : "Imported datasets"} /><div className="overflow-x-auto"><table className="w-full">
         <thead><tr><th className="th">{L ? "Jenis" : "Kind"}</th><th className="th">{L ? "Versi / berkas" : "Version / file"}</th><th className="th">{L ? "Asal-usul" : "Provenance"}</th><th className="th">{L ? "Tgl data" : "Data date"}</th><th className="th">{L ? "Baris" : "Rows"}</th><th className="th">{L ? "Diimpor" : "Imported"}</th><th className="th" /></tr></thead>

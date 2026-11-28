@@ -128,5 +128,7 @@ test("Sumber Rujukan: DOAJ/Crossref tidak ditampilkan LIVE tanpa smoke test suks
   await login(page, "kepala@jd.example");
   await page.goto("/sources");
   await expect(page.getByText(/Belum pernah terbukti hidup/).first()).toBeVisible();
+  await page.getByText(/Impor manual \(lanjutan\)/).click(); // impor manual kini dilipat; pembaruan otomatis ada di atas
   await expect(page.getByText("Tanggal pengamatan data sumber * (wajib)")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Perbarui sekarang" })).toBeVisible();
 });
