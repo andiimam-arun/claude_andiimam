@@ -101,7 +101,8 @@ export async function renderLetterPdf(i: LetterPdfInput): Promise<Uint8Array> {
   const logo = logoForPdf();
   if (logo) {
     const img = logo.kind === "png" ? await doc.embedPng(logo.bytes) : await doc.embedJpg(logo.bytes);
-    w.page.drawImage(img, { x: 56, y: 841.89 - 56 - 58, width: 58, height: 58 });
+    const d = img.scale(58 / img.height); // tinggi 58 pt, rasio asli dipertahankan
+    w.page.drawImage(img, { x: 56, y: 841.89 - 56 - 58, width: d.width, height: d.height });
   }
   w.text(s.branding.institution.toUpperCase(), { size: 14, bold: true, align: "center", gap: 0, color: NAVY });
   w.text(s.branding.faculty, { size: 12, bold: true, align: "center", gap: 0 });
@@ -186,7 +187,8 @@ export async function renderAssessmentReport(r: ReportInput): Promise<Uint8Array
   const rlogo = logoForPdf();
   if (rlogo) {
     const img = rlogo.kind === "png" ? await doc.embedPng(rlogo.bytes) : await doc.embedJpg(rlogo.bytes);
-    w.page.drawImage(img, { x: 595.28 - 48 - 44, y: 841.89 - 48 - 40, width: 44, height: 44 });
+    const d = img.scale(46 / img.height);
+    w.page.drawImage(img, { x: 595.28 - 48 - d.width, y: 841.89 - 48 - 40, width: d.width, height: d.height });
   }
   w.text("JOURNAL ASSESSMENT - FACULTY OF PUBLIC HEALTH, UNIVERSITAS HASANUDDIN", { size: 9, bold: true, color: GREY, gap: 0 });
   w.text(L === "id" ? "Laporan Penilaian Integritas Jurnal" : "Journal Integrity Assessment Report", { size: 18, bold: true, color: NAVY, gap: 4 });

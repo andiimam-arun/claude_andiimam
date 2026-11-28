@@ -1,15 +1,17 @@
 import { afterAll, describe, expect, it } from "vitest";
-import { mkdirSync, rmSync, writeFileSync, existsSync } from "node:fs";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync, existsSync } from "node:fs";
+import { tmpdir } from "node:os";
 import path from "node:path";
 import { findLogo, logoForPdf, APP_NAME, FACULTY_EN } from "@/lib/brand";
 import { renderLetterPdf } from "@/lib/services/pdf";
 import { DEFAULT_BRANDING } from "@/lib/services/settings";
 
-const dir = path.join(process.cwd(), "public", "branding");
+const dir = mkdtempSync(path.join(tmpdir(), "brand-")); // folder sementara: TIDAK menyentuh public/branding
+process.env.BRAND_DIR = dir;
 const logo = path.join(dir, "logo-unhas.png");
 // PNG 1×1 piksel (hanya untuk menguji penyematan; BUKAN logo UNHAS)
 const PNG = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==", "base64");
-afterAll(() => { if (existsSync(logo)) rmSync(logo); });
+afterAll(() => { delete process.env.BRAND_DIR; rmSync(dir, { recursive: true, force: true }); });
 
 describe("merek aplikasi & logo", () => {
   it("nama aplikasi, fakultas, dan kop surat bawaan", () => {

@@ -7,7 +7,7 @@ export const FACULTY_ID = "Fakultas Kesehatan Masyarakat";
 export const UNIVERSITY = "Universitas Hasanuddin";
 
 const EXT = ["png", "jpg", "jpeg", "svg"] as const;
-const dir = () => path.join(process.cwd(), "public", "branding");
+const dir = () => process.env.BRAND_DIR ?? path.join(process.cwd(), "public", "branding"); // BRAND_DIR hanya untuk pengujian
 
 /** Logo UNHAS resmi: letakkan berkas `public/branding/logo-unhas.png` (atau .jpg/.svg). Aplikasi tidak membuat/menggambar logo sendiri. */
 export function findLogo(): { url: string; file: string; ext: (typeof EXT)[number] } | null {
