@@ -1,6 +1,9 @@
-# Journal Detective
+# Journal Assessment
 
 **Verifikasi Jurnal. Lindungi Riset. Dukung Integritas Akademik.**
+Faculty of Public Health (Fakultas Kesehatan Masyarakat), Universitas Hasanuddin. *(Nama folder/paket teknis tetap `journal-detective`; nama aplikasi yang tampil adalah **Journal Assessment**.)*
+
+**Logo:** letakkan logo resmi UNHAS sebagai `public/branding/logo-unhas.png` (lihat `public/branding/README.md`); aplikasi tidak membuat logo sendiri.
 Platform pendukung keputusan integritas jurnal dan klirens publikasi untuk Unit Publikasi fakultas (Universitas Hasanuddin).
 Sistem ini **penasihat**, bukan pembuat tuduhan otomatis atau daftar hitam. Keputusan institusional hanya oleh pejabat manusia.
 

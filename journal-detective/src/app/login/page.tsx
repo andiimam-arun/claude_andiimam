@@ -1,4 +1,5 @@
-import { ShieldCheck } from "lucide-react";
+import { BrandLogo } from "@/components/BrandLogo";
+import { APP_NAME, FACULTY_EN, UNIVERSITY } from "@/lib/brand";
 import { loginAction } from "@/app/actions/auth";
 import { getLang } from "@/lib/i18n/server";
 import { t } from "@/lib/i18n";
@@ -13,11 +14,12 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="flex flex-col justify-center bg-navy-900 px-8 py-12 text-white sm:px-16">
-        <ShieldCheck className="mb-5 h-12 w-12" aria-hidden />
-        <h1 className="text-4xl font-extrabold tracking-tight">Journal Detective</h1>
+        <BrandLogo size={72} className="mb-5" />
+        <h1 className="text-4xl font-extrabold tracking-tight">{APP_NAME}</h1>
+        <p className="mt-1 text-lg font-semibold text-navy-100">{FACULTY_EN} · {UNIVERSITY}</p>
         <p className="mt-3 max-w-md text-lg text-navy-100">{t(lang, "app.tagline")}</p>
         <p className="mt-8 max-w-md text-sm text-navy-200">
-          Platform pendukung keputusan integritas jurnal dan klirens publikasi — Unit Publikasi Fakultas, Universitas Hasanuddin. Sistem ini bersifat penasihat; keputusan resmi hanya oleh pejabat berwenang.
+          Platform pendukung keputusan penilaian jurnal dan klirens publikasi — Unit Publikasi Fakultas Kesehatan Masyarakat (Faculty of Public Health), Universitas Hasanuddin. Sistem ini bersifat penasihat; keputusan resmi hanya oleh pejabat berwenang.
         </p>
       </div>
       <div className="flex items-center justify-center px-6 py-12">

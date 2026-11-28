@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { LayoutDashboard, Search, Database, History, ClipboardCheck, GraduationCap, FileSearch, Stamp, Mail, BarChart3, Library, BookMarked, Settings, ShieldCheck, LogOut } from "lucide-react";
+import { BrandLogo } from "@/components/BrandLogo";
+import { APP_NAME, FACULTY_EN, UNIVERSITY } from "@/lib/brand";
+import { LayoutDashboard, Search, Database, History, ClipboardCheck, GraduationCap, FileSearch, Stamp, Mail, BarChart3, Library, BookMarked, Settings, LogOut } from "lucide-react";
 import { NAV_ACCESS, type NavKey } from "@/lib/auth/permissions";
 import type { SessionUser } from "@/lib/auth/session";
 import { t, type Lang } from "@/lib/i18n";
@@ -27,10 +29,11 @@ export function AppShell({ user, lang, demoPolicy, mode, children }: { user: Ses
     <div className="min-h-screen lg:flex">
       <aside className="no-print bg-navy-900 text-navy-100 lg:sticky lg:top-0 lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-y-auto">
         <div className="flex items-center gap-2.5 px-5 py-4">
-          <ShieldCheck className="h-7 w-7 text-white" aria-hidden />
+          <BrandLogo size={44} />
           <div>
-            <div className="text-base font-bold leading-tight text-white">Journal Detective</div>
-            <div className="text-[10px] leading-tight text-navy-200">Universitas Hasanuddin</div>
+            <div className="text-base font-bold leading-tight text-white">{APP_NAME}</div>
+            <div className="text-[10px] leading-tight text-navy-200">{FACULTY_EN}</div>
+            <div className="text-[10px] leading-tight text-navy-200">{UNIVERSITY}</div>
           </div>
         </div>
         <nav aria-label="Navigasi utama" className="flex gap-1 overflow-x-auto px-3 pb-3 lg:block lg:space-y-0.5 lg:overflow-visible">

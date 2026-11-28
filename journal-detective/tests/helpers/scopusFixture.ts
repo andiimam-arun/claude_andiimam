@@ -10,7 +10,7 @@ export const SR = { sourceId: "21100200805", eissn: "20452322", title: "Scientif
 export async function writeScopusFixture(path: string, opts: { reorderColumns?: boolean; extraRows?: number } = {}) {
   const wb = new ExcelJS.Workbook();
   const about = wb.addWorksheet("About");
-  about.addRow(["Sintetis: fixture uji Journal Detective (bukan workbook asli)"]);
+  about.addRow(["Sintetis: fixture uji Journal Assessment (bukan workbook asli)"]);
 
   const srcHeaders = ["Sourcerecord ID", "Source Title", "Print-ISSN", "E-ISSN", "Active or Inactive", "Titles Discontinued by Scopus due to quality issues", "Coverage", "Source Type", "Publisher's Name", "Publisher imprints grouped to main Publisher", "Publisher Country", "Open Access status", "All Science Journal Classification Codes (ASJC)", "Kolom Tambahan Tak Dikenal"];
   const order = opts.reorderColumns ? [...srcHeaders.keys()].reverse() : [...srcHeaders.keys()];

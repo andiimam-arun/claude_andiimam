@@ -4,7 +4,7 @@ export type Lang = "id" | "en";
 type Dict = Record<string, string>;
 
 export const id: Dict = {
-  "app.name": "Journal Detective",
+  "app.name": "Journal Assessment",
   "app.tagline": "Verifikasi Jurnal. Lindungi Riset. Dukung Integritas Akademik.",
   "app.demoPolicyBanner": "KEBIJAKAN DEMONSTRASI — bukan peraturan resmi fakultas. Pejabat berwenang harus memasukkan aturan resmi di Pengaturan.",
   "app.advisory": "Rekomendasi bersifat penasihat. Hanya pejabat manusia berwenang yang dapat menerbitkan persetujuan institusional.",
@@ -153,7 +153,7 @@ export const id: Dict = {
 };
 
 export const en: Dict = {
-  "app.name": "Journal Detective",
+  "app.name": "Journal Assessment",
   "app.tagline": "Verify Journals. Protect Research. Support Academic Integrity.",
   "app.demoPolicyBanner": "DEMONSTRATION POLICY — not an official faculty regulation. An authorized officer must enter the official rules in Settings.",
   "app.advisory": "Recommendations are advisory. Only authorized human officers can issue institutional approval.",

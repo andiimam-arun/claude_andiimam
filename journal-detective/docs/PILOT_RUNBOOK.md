@@ -1,6 +1,6 @@
 # Runbook Pilot Terkendali (Unit Publikasi Fakultas)
 
-Tujuan: membandingkan rekomendasi Journal Detective dengan penilaian manual independen atas **jurnal dan situs nyata**.
+Tujuan: membandingkan rekomendasi Journal Assessment dengan penilaian manual independen atas **jurnal dan situs nyata**.
 Lulus uji perangkat lunak **tidak** membuktikan akurasi penilaian; validasi dunia nyata dicatat terpisah (lihat `REAL_WORLD_VALIDATION.md`).
 Semua perintah dijalankan di folder `journal-detective/`. Tidak ada langkah di sini yang menerbitkan surat resmi, mengirim pesan, membayar, atau mengirim naskah.
 

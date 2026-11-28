@@ -1,4 +1,4 @@
-# CLAUDE.md — Journal Detective
+# CLAUDE.md — Journal Assessment
 
 ## Arsitektur
 Next.js 15 (App Router) + TypeScript + Tailwind 3 + Prisma 6 (SQLite dev / PostgreSQL prod) + Recharts + pdf-lib. Semua kode di `journal-detective/` (repositori induk berisi proyek lain, jangan diubah).

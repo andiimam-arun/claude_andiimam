@@ -13,7 +13,7 @@ export interface Branding {
 
 export const DEFAULT_BRANDING: Branding = {
   institution: "Universitas Hasanuddin",
-  faculty: "[Nama Fakultas — isi oleh administrator]",
+  faculty: "Fakultas Kesehatan Masyarakat (Faculty of Public Health)",
   unit: "Unit Publikasi Fakultas",
   address: "[Alamat resmi fakultas — isi oleh administrator]",
   approverName: "",

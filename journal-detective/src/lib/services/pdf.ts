@@ -3,6 +3,7 @@ import QRCode from "qrcode";
 import type { LetterSnapshot } from "./letters";
 import type { EvidenceRecord, JournalDecision } from "../engine/types";
 import { reasonText, actionText, t } from "../i18n";
+import { logoForPdf } from "../brand";
 
 const NAVY = rgb(0.07, 0.125, 0.24);
 const GREY = rgb(0.35, 0.38, 0.45);
@@ -89,7 +90,7 @@ export async function renderLetterPdf(i: LetterPdfInput): Promise<Uint8Array> {
   const s = i.snapshot;
   const doc = await PDFDocument.create();
   doc.setTitle(safe(s.title));
-  doc.setProducer("Journal Detective");
+  doc.setProducer("Journal Assessment");
   const font = await doc.embedFont(StandardFonts.TimesRoman);
   const bold = await doc.embedFont(StandardFonts.TimesRomanBold);
   const isDraft = i.status !== "ISSUED";
@@ -97,6 +98,11 @@ export async function renderLetterPdf(i: LetterPdfInput): Promise<Uint8Array> {
     if (isDraft) watermark(p, bold, i.status === "REVOKED" ? "DICABUT" : "DRAF - BELUM DISETUJUI");
     p.drawText(safe(`${s.branding.institution} - ${s.branding.faculty}`), { x: 56, y: 30, size: 8, font, color: GREY });
   });
+  const logo = logoForPdf();
+  if (logo) {
+    const img = logo.kind === "png" ? await doc.embedPng(logo.bytes) : await doc.embedJpg(logo.bytes);
+    w.page.drawImage(img, { x: 56, y: 841.89 - 56 - 58, width: 58, height: 58 });
+  }
   w.text(s.branding.institution.toUpperCase(), { size: 14, bold: true, align: "center", gap: 0, color: NAVY });
   w.text(s.branding.faculty, { size: 12, bold: true, align: "center", gap: 0 });
   w.text(s.branding.unit, { size: 11, align: "center", gap: 0 });
@@ -175,9 +181,14 @@ export async function renderAssessmentReport(r: ReportInput): Promise<Uint8Array
   const font = await doc.embedFont(StandardFonts.Helvetica);
   const bold = await doc.embedFont(StandardFonts.HelveticaBold);
   const w = new Writer(doc, font, bold, (p) => {
-    p.drawText(safe(`Journal Detective - ${r.refNumber} - hanya bersifat penasihat / advisory only`), { x: 56, y: 30, size: 8, font, color: GREY });
+    p.drawText(safe(`Journal Assessment - ${r.refNumber} - hanya bersifat penasihat / advisory only`), { x: 56, y: 30, size: 8, font, color: GREY });
   }, 48);
-  w.text("JOURNAL DETECTIVE", { size: 9, bold: true, color: GREY, gap: 0 });
+  const rlogo = logoForPdf();
+  if (rlogo) {
+    const img = rlogo.kind === "png" ? await doc.embedPng(rlogo.bytes) : await doc.embedJpg(rlogo.bytes);
+    w.page.drawImage(img, { x: 595.28 - 48 - 44, y: 841.89 - 48 - 40, width: 44, height: 44 });
+  }
+  w.text("JOURNAL ASSESSMENT - FACULTY OF PUBLIC HEALTH, UNIVERSITAS HASANUDDIN", { size: 9, bold: true, color: GREY, gap: 0 });
   w.text(L === "id" ? "Laporan Penilaian Integritas Jurnal" : "Journal Integrity Assessment Report", { size: 18, bold: true, color: NAVY, gap: 4 });
   w.text(r.journalTitle, { size: 13, bold: true, gap: 6 });
   w.rule();
