@@ -1,3 +1,4 @@
+import { lookupReference } from "./reference";
 import { makeEvidence } from "../engine/evidence";
 import type { EvidenceRecord } from "../engine/types";
 import { normalizeIssn } from "../engine/issn";
@@ -14,7 +15,15 @@ export interface ExternalJournalInfo {
   crossref?: { found: boolean; title?: string; publisher?: string; issns: string[]; totalDois?: number; currentDois?: number; backfileDois?: number };
 }
 
-const DISABLED = () => process.env.DISABLE_EXTERNAL_LOOKUPS === "1" || process.env.NODE_ENV === "test";
+const DISABLED = () => process.env.DISABLE_EXTERNAL_LOOKUPS === "1";
+
+/** Pesan galat HTTP yang dapat dibedakan (batas laju, galat server, dsb.). */
+export function httpFailure(status: number, retryAfter?: string | null): string {
+  if (status === 429) return `dibatasi laju oleh layanan (HTTP 429${retryAfter ? `, Retry-After ${retryAfter}` : ""})`;
+  if (status === 403 || status === 401) return `akses ditolak (HTTP ${status})`;
+  if (status >= 500) return `galat server layanan (HTTP ${status})`;
+  return `HTTP ${status}`;
+}
 
 function unavailable(source: string, key: string, check: "METADATA", url: string, reason: string, state: "UNAVAILABLE" | "ERROR" = "UNAVAILABLE"): EvidenceRecord {
   return makeEvidence({
@@ -32,8 +41,10 @@ export async function lookupDoaj(issn: string | null, claimsDoaj: boolean): Prom
   if (DISABLED()) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, "pencarian eksternal dinonaktifkan")] };
   try {
     const r = await safeFetch(url, { timeoutMs: 8000, maxBytes: 400_000, allowPrivate: false });
-    if (!r.ok) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, `HTTP ${r.status}`, "ERROR")] };
-    const j = JSON.parse(r.text);
+    if (!r.ok) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, httpFailure(r.status, r.retryAfter), "ERROR")] };
+    let j: any;
+    try { j = JSON.parse(r.text); } catch { return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, "respons bukan JSON yang valid", "ERROR")] }; }
+    if (!j || !Array.isArray(j.results)) return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, "bentuk respons tidak dikenali", "ERROR")] };
     const hit = j?.results?.[0];
     const now = new Date().toISOString();
     if (!hit) {
@@ -68,8 +79,52 @@ export async function lookupDoaj(issn: string | null, claimsDoaj: boolean): Prom
     }
     return { evidence: ev, info };
   } catch (e: any) {
-    return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.message ?? e).slice(0, 80), "ERROR")] };
+    return { evidence: [unavailable("DOAJ API", "metadata.doaj", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e).slice(0, 100), "ERROR")] };
   }
+}
+
+/**
+ * Cadangan bila DOAJ langsung tidak terjangkau: gunakan impor CSV DOAJ (bila ada). Ini DATA IMPOR bertanggal,
+ * bukan verifikasi langsung; "tidak ada pada impor" bukan bukti negatif (impor bisa usang).
+ */
+export async function lookupDoajImported(issn: string | null, eissn: string | null, claimsDoaj: boolean): Promise<{ evidence: EvidenceRecord[]; info?: ExternalJournalInfo["doaj"] } | null> {
+  const ref = await lookupReference("DOAJ_LIST", { issn, eissn, title: null });
+  if (!ref.datasets.length) return null;
+  const ds = ref.datasets[0];
+  const sourceName = `Impor CSV DOAJ — ${ds.versionLabel}`;
+  const dataDate = ds.sourceDate?.toISOString() ?? null;
+  const n = normalizeIssn(issn) ?? normalizeIssn(eissn) ?? "";
+  if (!ref.matches.length) {
+    return {
+      info: { found: false, issns: [] },
+      evidence: [makeEvidence({
+        check: "METADATA", key: "metadata.doaj", finding: `ISSN ${n} tidak ada pada impor CSV DOAJ (${ds.versionLabel}); pencarian langsung DOAJ tidak tersedia.`, status: "NOT_FOUND", integration: "IMPORTED_DATA",
+        sourceName, sourceRef: ds.filename, sourceDataDate: dataDate,
+        explanation: "Tidak ditemukan pada impor ≠ tidak terdaftar di DOAJ: impor dapat usang dan DOAJ hanya mendaftar jurnal akses terbuka yang mengajukan diri. Bukan bukti negatif.",
+        severity: "INFO", strength: "WEAK", data: { found: false }, fingerprintSeed: `doaj-imp-nf|${ds.id}|${n}`,
+      })],
+    };
+  }
+  const m = ref.matches[0];
+  const d = JSON.parse(m.dataJson || "{}") as Record<string, string>;
+  const issns = [m.issn, m.eissn].filter(Boolean) as string[];
+  const info = { found: true, title: m.title, publisher: m.publisher ?? undefined, homepage: m.url ?? undefined, issns, apc: d.apc ? /^yes$/i.test(d.apc) : null, seal: null };
+  const ev: EvidenceRecord[] = [makeEvidence({
+    check: "METADATA", key: "metadata.doaj", finding: `Terdaftar di DOAJ menurut impor ${ds.versionLabel}: "${m.title}" (${m.publisher ?? "penerbit tidak dicantumkan"}).`, status: "VERIFIED", integration: "IMPORTED_DATA",
+    sourceName, sourceRef: ds.filename, sourceUrl: d.doajUrl || undefined, sourceDataDate: dataDate,
+    extracted: JSON.stringify({ title: m.title, publisher: m.publisher, issns, homepage: m.url }),
+    explanation: "Data impor bertanggal; pencarian langsung DOAJ tidak tersedia saat ini. Partisipasi DOAJ bersifat pendukung, bukan jaminan kualitas.", severity: "INFO", strength: "MODERATE",
+    data: info, fingerprintSeed: `doaj-imp|${ds.id}|${m.id}`,
+  })];
+  if (m.url) {
+    ev.push(makeEvidence({
+      check: "IDENTITY", key: "identity.official_domain", finding: `Beranda jurnal menurut impor DOAJ: ${m.url}`, status: "VERIFIED", integration: "IMPORTED_DATA",
+      sourceName, sourceRef: ds.filename, sourceDataDate: dataDate, extracted: m.url,
+      explanation: "Beranda pada impor DOAJ bertanggal; dapat berubah. Dipakai sebagai pembanding domain, bukan bukti tunggal.", severity: "INFO", strength: "WEAK",
+      data: { domains: [m.url], via: "DOAJ (impor)" }, fingerprintSeed: `doaj-imp-home|${ds.id}|${m.url}`,
+    }));
+  }
+  return { evidence: ev, info };
 }
 
 export async function lookupCrossref(issn: string | null, title: string): Promise<{ evidence: EvidenceRecord[]; info?: ExternalJournalInfo["crossref"] }> {
@@ -85,8 +140,10 @@ export async function lookupCrossref(issn: string | null, title: string): Promis
         explanation: "Tidak adanya registrasi DOI Crossref bukan bukti penipuan; tidak semua penerbit memakai Crossref.", severity: "INFO", strength: "WEAK", fingerprintSeed: `cr-nf|${n}`,
       })] };
     }
-    if (!r.ok) return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, `HTTP ${r.status}`, "ERROR")] };
-    const m = JSON.parse(r.text)?.message;
+    if (!r.ok) return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, httpFailure(r.status, r.retryAfter), "ERROR")] };
+    let m: any;
+    try { m = JSON.parse(r.text)?.message; } catch { return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, "respons bukan JSON yang valid", "ERROR")] }; }
+    if (!m || typeof m !== "object") return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, "bentuk respons tidak dikenali", "ERROR")] };
     const issns = (m?.ISSN ?? []).map((x: string) => normalizeIssn(x)).filter(Boolean) as string[];
     const info = { found: true, title: m?.title, publisher: m?.publisher, issns, totalDois: m?.counts?.["total-dois"], currentDois: m?.counts?.["current-dois"], backfileDois: m?.counts?.["backfile-dois"] };
     const sim = m?.title ? titleSimilarity(m.title, title) : 0;
@@ -104,6 +161,6 @@ export async function lookupCrossref(issn: string | null, title: string): Promis
     }
     return { evidence: ev, info };
   } catch (e: any) {
-    return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.message ?? e).slice(0, 80), "ERROR")] };
+    return { evidence: [unavailable("Crossref REST API", "metadata.crossref", "METADATA", url, e?.name === "AbortError" ? "waktu habis" : String(e?.cause?.code ?? e?.cause?.message ?? e?.message ?? e).slice(0, 100), "ERROR")] };
   }
 }

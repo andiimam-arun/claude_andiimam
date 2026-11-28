@@ -60,7 +60,8 @@ export function decideFinal(journal: JournalDecision, admin: AdministrativeDecis
   const hardBlock = journal.identityFraudBlock;
   const criticalJournal = journal.journalStatus === "RED" && journal.redCategory === "CRITICAL_INTEGRITY";
   const policyRed = journal.journalStatus === "RED" && journal.redCategory === "POLICY_INELIGIBLE";
-  const blocked = journal.journalStatus === "RED" || admin.status === "RED";
+  const destRed = journal.destinationStatus === "RED";
+  const blocked = journal.journalStatus === "RED" || destRed || admin.status === "RED";
 
   if (hardBlock) reasons.push({ code: "final_identity_override", level: "RED" });
   else if (criticalJournal) reasons.push({ code: "final_journal_critical", level: "RED" });
@@ -69,8 +70,9 @@ export function decideFinal(journal: JournalDecision, admin: AdministrativeDecis
 
   let status: TrafficLight = "GREEN";
   if (blocked) status = "RED";
-  else if (journal.journalStatus === "YELLOW" || admin.status === "YELLOW") {
+  else if (journal.journalStatus === "YELLOW" || journal.destinationStatus === "YELLOW" || admin.status === "YELLOW") {
     status = "YELLOW";
+    if (journal.destinationStatus === "YELLOW") reasons.push({ code: "final_destination_yellow", level: "YELLOW" });
     if (journal.journalStatus === "YELLOW") reasons.push({ code: "final_journal_yellow", level: "YELLOW" });
     if (admin.status === "YELLOW") reasons.push({ code: "final_admin_yellow", level: "YELLOW" });
   } else reasons.push({ code: "final_all_green", level: "GREEN" });
@@ -78,7 +80,7 @@ export function decideFinal(journal: JournalDecision, admin: AdministrativeDecis
   const overridableByHead = !hardBlock && !criticalJournal && admin.status !== "RED" && (!policyRed || policy.headMayOverridePolicyIneligible);
 
   return {
-    status, journalStatus: journal.journalStatus, administrativeStatus: admin.status,
+    status, journalStatus: journal.journalStatus, destinationStatus: journal.destinationStatus, administrativeStatus: admin.status,
     clearanceBlocked: blocked, hardBlock, overridableByHead, reasons,
   };
 }

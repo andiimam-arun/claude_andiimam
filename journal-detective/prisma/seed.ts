@@ -11,11 +11,14 @@ import { uploadDocument } from "../src/lib/services/documents";
 import { reviewEvidence } from "../src/lib/services/investigation";
 import { performReviewAction } from "../src/lib/services/approval";
 import { audit } from "../src/lib/services/audit";
+import { getMode, writeMarker } from "../src/lib/mode";
+import { createCase, recordReference, runCase } from "../src/lib/services/validation";
 
 const fx = (f: string) => readFileSync(path.join(__dirname, "..", "fixtures", f));
 const daysAgo = (n: number) => new Date(Date.now() - n * 86_400_000);
 
 async function main() {
+  if (getMode() !== "DEMO") { console.error("Seed demonstrasi hanya untuk APP_MODE=DEMO. DITOLAK pada PILOT."); process.exit(2); }
   if ((await prisma.user.count()) > 0) {
     console.log("Basis data sudah berisi pengguna; seed dilewati. Gunakan `npm run db:reset` untuk mengulang.");
     return;
@@ -75,11 +78,42 @@ async function main() {
   // 6. Jurnal tanpa data rujukan apa pun → Scopus UNVERIFIED (Case F)
   await createApplication({ ...base, manuscriptTitle: "Evaluasi Program Posyandu di Wilayah Fiktif", stage: "PRE_SUBMISSION", journalName: "Jurnal Tanpa Data Rujukan (FIKTIF)", journalIssn: "9900-0040", journalPublisher: "Penerbit Tidak Dikenal (FIKTIF)", claimedIndexing: "Scopus", journalUrl: "https://tanpa-data.example" } as any, S, student.id);
 
+  // 7. Diterima TANPA putaran revisi, bukti koheren → HIJAU/HIJAU (Case G)
+  const a7 = await createApplication({ ...base, manuscriptTitle: "Faktor Risiko Stunting pada Anak Usia Dini di Wilayah Fiktif", stage: "ACCEPTED", submissionDate: "2026-06-01", trackingId: "JRKN-2026-0042", journalName: "Jurnal Riset Kesehatan Nusantara (FIKTIF)", journalIssn: "9900-0016", journalPublisher: "Penerbit Fiktif Nusantara", claimedIndexing: "Scopus", journalUrl: "https://jurnal-riset-kesehatan.example" } as any, S, student.id);
+  await addEvent(a7.id, { type: "SUBMITTED", occurredAt: "2026-06-01", note: "Dikirim" }, S);
+  await addEvent(a7.id, { type: "UNDER_REVIEW", occurredAt: "2026-06-10" }, S);
+  await addEvent(a7.id, { type: "ACCEPTED", occurredAt: "2026-09-12", note: "Diterima tanpa revisi — sah" }, S);
+  await uploadDocument({ applicationId: a7.id, docType: "ACCEPTANCE_LETTER", filename: "surat_penerimaan_fiktif.txt", data: fx("surat_penerimaan_fiktif.txt"), actor: S });
+  await setChecklist(a7.id, "SUBMISSION_ACK", "MET", "Tanda terima diverifikasi (demo)", R);
+  await setChecklist(a7.id, "ACCEPTANCE_LETTER", "MET", "Koheren dengan riwayat editorial (demo)", R);
+
+  // 8. Domain mirip domain resmi (satu huruf berbeda) → KUNING, perlu konfirmasi peninjau
+  await createApplication({ ...base, manuscriptTitle: "Studi Kualitas Air Minum di Wilayah Fiktif", stage: "PRE_SUBMISSION", journalName: "Jurnal Riset Kesehatan Nusantara (FIKTIF)", journalIssn: "9900-0016", journalPublisher: "Penerbit Fiktif Nusantara", claimedIndexing: "Scopus", journalUrl: "https://jurnal-riset-kesehatam.example" } as any, S, student.id);
+
+  // 9. Faktur APC mengarah ke domain di luar domain resmi → tanda HIGH, administratif KUNING
+  const a9 = await createApplication({ ...base, manuscriptTitle: "Faktor Risiko Stunting pada Anak Usia Dini di Wilayah Fiktif", stage: "PAYMENT_REQUESTED", submissionDate: "2026-06-01", trackingId: "JRKN-2026-0042", journalName: "Jurnal Riset Kesehatan Nusantara (FIKTIF)", journalIssn: "9900-0016", journalPublisher: "Penerbit Fiktif Nusantara", claimedIndexing: "Scopus", journalUrl: "https://jurnal-riset-kesehatan.example" } as any, S, student.id);
+  await uploadDocument({ applicationId: a9.id, docType: "APC_INVOICE", filename: "faktur_fiktif.txt", data: Buffer.from("[FIKTIF] Invoice APC\nManuscript ID: JRKN-2026-0042\nBayar di https://bayar-apc-cepat.example/pay\nUSD 300"), actor: S });
+
+  // Fixture validasi FIKTIF (bukan validasi nyata; tidak dihitung pada cakupan nyata)
+  const fx4: Array<[string, string, string, string, string, string, [string, string, string, string]]> = [
+    ["GENUINE_VERIFIED", "Jurnal Riset Kesehatan Nusantara (FIKTIF)", "9900-0016", "https://jurnal-riset-kesehatan.example", "https://jurnal-riset-kesehatan.example", "Fixture: jurnal sah, situs otentik.", ["GREEN", "GREEN", "GREEN", "GREEN"]],
+    ["CONFIRMED_CLONE", "Jurnal Riset Kesehatan Nusantara (FIKTIF)", "9900-0016", "https://jurnal-riset-kesehatan-online.example", "https://jurnal-riset-kesehatan.example", "Fixture: tujuan klon terkonfirmasi; jurnal asli sah.", ["GREEN", "RED", "GREEN", "RED"]],
+    ["DISCONTINUED_INDEXING", "Jurnal Teknologi Maritim Lama (FIKTIF)", "9900-0024", "https://teknologi-maritim.example", "https://teknologi-maritim.example", "Fixture: Scopus dihentikan pada kebijakan yang mewajibkan aktif.", ["RED", "GREEN", "GREEN", "RED"]],
+    ["HISTORICAL_BEALL", "Journal of Fictional Clinical Studies", "9900-0032", "https://fictional-clinical.example", "https://fictional-clinical.example", "Fixture: referensi SENGAJA berbeda (GREEN) untuk mendemonstrasikan alur klasifikasi perbedaan.", ["GREEN", "GREEN", "GREEN", "GREEN"]],
+  ];
+  for (const [category, title, issn, url, authentic, note, st] of fx4) {
+    const c = await createCase({ category, title, issn, submittedUrl: url, authenticUrl: authentic, stage: "PRE_SUBMISSION", pseudonym: "S-FIKTIF", notes: note, isFictionalFixture: true, sources: [{ label: "fixtures/*.csv (data FIKTIF)", ref: "fixtures/README.md" }] } as any, R);
+    await recordReference(c.id, { journalStatus: st[0] as any, destinationStatus: st[1] as any, adminStatus: st[2] as any, finalStatus: st[3] as any, rationale: "FIXTURE FIKTIF: referensi ditulis otomatis oleh seed untuk demonstrasi alur. BUKAN penilaian manusia dan BUKAN validasi nyata.", uncertainty: null, assessedAt: new Date().toISOString().slice(0, 10), sources: [{ label: "Seed demonstrasi", ref: "prisma/seed.ts" }] }, R);
+    await runCase(c.id, R);
+  }
+
   // Sebaran waktu agar grafik bulanan bermakna
   const apps = await prisma.application.findMany({ orderBy: { createdAt: "asc" } });
-  const offs = [75, 55, 40, 20, 8, 1];
+  const offs = [75, 60, 50, 40, 30, 20, 12, 5, 1];
   for (let i = 0; i < apps.length; i++) await prisma.application.update({ where: { id: apps[i].id }, data: { createdAt: daysAgo(offs[i] ?? 1) } });
 
+  await prisma.journal.updateMany({ data: { isDemo: true } }); // seluruh jurnal seed FIKTIF
+  await writeMarker("DEMO", "Data demonstrasi FIKTIF");
   await audit(A, "SEED_DEMO", "System", null, { note: "Data demonstrasi FIKTIF dimuat" });
   console.log(`Seed selesai. Pengguna demo (kata sandi dari DEMO_PASSWORD):\n  ${head.email} (Kepala Unit)\n  ${reviewer.email} (Peninjau)\n  ${admin.email} (Administrator)\n  ${student.email} (Mahasiswa)`);
 }

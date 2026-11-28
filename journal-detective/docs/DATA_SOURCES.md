@@ -7,7 +7,7 @@ Status integrasi dalam aplikasi: `LIVE_VERIFIED`, `IMPORTED_DATA`, `MANUAL_EVIDE
 | Scopus Source List | Impor CSV/XLSX oleh Admin/Kepala (tanggal, versi, asal-usul, sha256 dicatat) | Berfungsi (data impor, *historis*) | Gunakan hanya berkas yang diperoleh sah sesuai lisensi Elsevier. Tidak pernah disebut verifikasi langsung. "Tidak ditemukan" = tidak konklusif. |
 | Scopus Serial Title API | `scopusApi.ts`, aktif bila `SCOPUS_API_KEY` | Titik ekstensi, **belum diuji langsung** | Butuh kunci berlisensi/entitlement; status diturunkan dari tahun cakupan → wajib konfirmasi manusia. |
 | SCImago | Impor CSV (`;` didukung) atau bukti manual | Berfungsi (impor/manual) | Tanpa scraping/akses terproteksi. Bukti historis pelengkap, bukan status Scopus saat ini. |
-| DOAJ | API publik `doaj.org/api/search/journals/issn:` | Kode ada; **tidak diverifikasi hidup di lingkungan pembangunan** (jaringan terbatas). Gagal → UNAVAILABLE/ERROR | Patuhi batas laju & ketentuan DOAJ. Absen dari DOAJ bukan bukti penipuan. |
+| DOAJ | API publik `doaj.org/api/search/journals/issn:` | Terbukti hidup 2026-11-28 (`pilot:smoke`, HTTP 200, sandbox pengembangan; ulangi di server target). Gagal → UNAVAILABLE/ERROR; cadangan: impor CSV DOAJ (`npm run doaj:import`, IMPORTED_DATA, tidak konklusif bila tidak ditemukan) | Patuhi batas laju & ketentuan DOAJ. Absen dari DOAJ bukan bukti penipuan. |
 | Crossref | REST API `api.crossref.org/journals/{issn}` | Idem | DOI ≠ kualitas. Cantumkan `mailto` kontak bila memakai pool sopan (rekomendasi produksi). |
 | Retraction Watch Hijacked Journal Checker | Tidak ada API terautorisasi dipakai | Pemeriksaan **manual** terdokumentasi atau impor daftar bila diizinkan | Tanpa scraping. Kecocokan impor tetap butuh konfirmasi manusia. |
 | Beall's List (historis) | Tidak dibundel; impor mandiri | Opsional | Historis, tidak dipelihara; hanya pemicu tinjauan. |
@@ -19,3 +19,23 @@ Status integrasi dalam aplikasi: `LIVE_VERIFIED`, `IMPORTED_DATA`, `MANUAL_EVIDE
 Format impor dikenali otomatis (nama kolom tidak peka huruf): `Source Title/Title`, `Print-ISSN/ISSN`, `E-ISSN`, `Active or Inactive`, `Publisher's Name`, `Sourceid`, `SJR Best Quartile`, `Year`, `Authentic URL`, `Hijacked URL`, `Note`. ISSN yang kehilangan nol depan dipulihkan hanya bila checksum sah.
 
 Data pada `fixtures/` **fiktif** (ISSN 9900-xxxx, domain `.example`) dan berlabel demonstrasi.
+
+
+## Matriks status integrasi (Fase 1B — jujur)
+Empat keadaan dibedakan: **Diimplementasikan** (kode ada) · **Teruji dengan fixture terkendali** (tes otomatis, BUKAN layanan sungguhan) · **Terbukti hidup** (permintaan nyata berhasil dan hasil diperiksa) · **Tidak tersedia di lingkungan ini**.
+
+| Sumber | Diimplementasikan | Fixture terkendali | Terbukti hidup | Catatan lingkungan pembangunan |
+|---|---|---|---|---|
+| Scopus Source List — **workbook 3 sheet** (Database Scopus, `docs/SCOPUS_IMPORT.md`) dan impor generik CSV/XLSX (tanpa kunci API) | Ya | Ya: workbook sintetis (header baris 1/2/3, kolom dibalik, nol depan/X, Discontinued, Accepted, konflik, duplikat, pratinjau/konfirmasi/batal, riwayat), CSV/XLSX generik, impor lama vs baru, usang; **belum diuji pada workbook asli** | Tidak berlaku (berkas) — **belum ada berkas Scopus nyata yang diimpor** | Operator mengimpor berkas sah (runbook §3) |
+| Scopus Serial Title API | Ya (kode) | **Tidak** | **Tidak** | Tanpa kunci; tidak dibutuhkan pilot |
+| DOAJ API | Ya | Ya: sukses, kosong, timeout, 429, 403, 5xx, respons rusak, bentuk tak dikenal, dinonaktifkan | **Tidak** | Egress menolak `doaj.org` (CONNECT 403); `pilot:smoke` mencatat FAILED |
+| Crossref REST API | Ya | Ya (sama) | **Tidak** | Egress menolak `api.crossref.org` (CONNECT 403) |
+| SCImago | Impor CSV/manual (tanpa integrasi langsung, tanpa scraping) | Ya (fixture fiktif) | Tidak berlaku | — |
+| Retraction Watch Hijacked Journal Checker | Impor daftar (bila diizinkan) / temuan manual | Ya (fixture fiktif) | Tidak ada integrasi | Pemeriksaan manual terdokumentasi |
+| Beall (historis) | Impor (tidak dibundel) | Ya (fixture fiktif) | Tidak berlaku | — |
+| Pengambilan beranda situs (safeFetch) | Ya (aksi eksplisit peninjau) | Hanya pagar SSRF (unit) | **Tidak** | Egress dibatasi |
+| LLM eksternal | Ya, terkunci (butuh 3 variabel operator) | Tidak | Tidak | Nonaktif secara bawaan |
+
+Bukti kegagalan hidup (2026-11-02, sandbox; kemudian egress diizinkan dan `pilot:smoke` 2026-11-28 berhasil untuk DOAJ & Crossref): `curl https://doaj.org/api/search/journals/issn:1932-6203` → `CONNECT tunnel failed, response 403`; idem Crossref. `npm run pilot:smoke` → `FAILED DOAJ/Crossref: tidak dapat diakses`. Kebijakan egress menolak host tersebut; tidak ada upaya melewati kontrol akses dan tidak ada hasil pengganti.
+Klasifikasi galat adapter: batas laju (HTTP 429 + Retry-After), akses ditolak (401/403), galat server (5xx), waktu habis, respons bukan JSON, bentuk respons tak dikenal → seluruhnya `UNAVAILABLE`/`ERROR`. Hasil kosong (DOAJ `results: []`, Crossref 404) → `NOT_FOUND` **tanpa** implikasi penipuan.
+Smoke test operator: `npm run pilot:smoke` (runbook §9).

@@ -13,7 +13,7 @@ export default async function Verify({ params }: { params: Promise<{ token: stri
   return (
     <main className="mx-auto flex min-h-screen max-w-lg items-center px-4">
       <div className="card w-full p-6">
-        <div className="mb-4 flex items-center gap-2 text-navy-900"><span className="font-bold">Journal Detective</span><span className="text-xs text-slate-500">— verifikasi surat</span></div>
+        <div className="mb-4 flex items-center gap-2 text-navy-900"><span className="font-bold">Journal Assessment</span><span className="text-xs text-slate-500">— verifikasi surat</span></div>
         {!v ? (
           <div role="alert"><ShieldX className="h-10 w-10 text-bad" aria-hidden /><h1 className="mt-2 text-xl font-bold text-bad-ink">Surat tidak ditemukan / not found</h1><p className="mt-1 text-sm text-slate-600">Kode verifikasi tidak dikenal atau surat belum diterbitkan secara resmi. / The code is unknown or the letter has not been officially issued.</p></div>
         ) : (

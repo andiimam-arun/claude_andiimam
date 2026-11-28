@@ -20,3 +20,7 @@ Autentikasi (bcrypt, JWT httpOnly + validasi pengguna aktif di DB), otorisasi pe
 - Pencadangan terjadwal basis data & berkas, pemantauan/alert, rotasi rahasia, SIEM untuk audit log.
 - Mode proxy keluar: bila `HTTPS_PROXY` diset, `safeFetch` memakai proxy sehingga pin DNS saat koneksi tidak berlaku (validasi pra-koneksi tetap berjalan); kendalikan egress di firewall.
 - Pertimbangkan data pribadi (UU PDP): minimalkan, atur akses, dan tetapkan retensi.
+
+
+## Pilot terkendali
+Untuk satu instance pilot di belakang HTTPS, cadangan/pemulihan, retensi, dan smoke test ikuti **docs/PILOT_RUNBOOK.md**. Pisahkan `APP_MODE`, `DATABASE_URL`, dan `STORAGE_DIR` antara DEMO dan PILOT.

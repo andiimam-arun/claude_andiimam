@@ -95,3 +95,60 @@ export function compareDomains(submitted: string | null | undefined, officials: 
   if (os.length === 0) return "NO_OFFICIAL";
   return os.includes(s) ? "MATCH" : "DIFFERENT";
 }
+
+// ---------- Normalisasi tujuan & perbandingan HOST persis (Fase 1B) ----------
+
+export interface NormalizedDestination {
+  ok: boolean;
+  host: string | null; // host persis, huruf kecil, tanpa titik akhir dan tanpa awalan "www."
+  registrable: string | null;
+  isIp: boolean;
+  isPunycode: boolean;
+  hasCredentials: boolean;
+  nonStandardPort: boolean;
+  scheme: "http" | "https" | null;
+  problems: string[];
+}
+
+/** Normalisasi aman URL tujuan. Tidak melakukan jaringan. Menolak skema selain http(s); menandai kredensial/port aneh/IP/punycode. */
+export function normalizeDestination(input: string | null | undefined): NormalizedDestination {
+  const out: NormalizedDestination = { ok: false, host: null, registrable: null, isIp: false, isPunycode: false, hasCredentials: false, nonStandardPort: false, scheme: null, problems: [] };
+  if (!input || !input.trim()) { out.problems.push("EMPTY"); return out; }
+  let s = input.trim();
+  if (/^[a-z][a-z0-9+.-]*:/i.test(s) && !/^https?:\/\//i.test(s)) { out.problems.push("SCHEME_NOT_ALLOWED"); return out; }
+  if (!/^https?:\/\//i.test(s)) s = "https://" + s;
+  let u: URL;
+  try { u = new URL(s); } catch { out.problems.push("INVALID_URL"); return out; }
+  out.scheme = u.protocol === "http:" ? "http" : "https";
+  let h = u.hostname.toLowerCase().replace(/\.$/, "");
+  if (!h) { out.problems.push("NO_HOST"); return out; }
+  if (h.startsWith("www.")) h = h.slice(4);
+  out.host = h;
+  out.isIp = /^\d+\.\d+\.\d+\.\d+$/.test(h) || h.includes(":");
+  out.isPunycode = h.split(".").some((l) => l.startsWith("xn--"));
+  out.hasCredentials = !!(u.username || u.password);
+  out.nonStandardPort = !!u.port && u.port !== "80" && u.port !== "443";
+  out.registrable = out.isIp ? h : registrableDomain(h);
+  if (out.hasCredentials) out.problems.push("CREDENTIALS_IN_URL");
+  if (out.nonStandardPort) out.problems.push("NON_STANDARD_PORT");
+  if (out.isIp) out.problems.push("IP_HOST");
+  if (out.isPunycode) out.problems.push("PUNYCODE");
+  out.ok = true;
+  return out;
+}
+
+export type HostRelation = "EXACT" | "OFFICIAL_SUBDOMAIN" | "SAME_REGISTRABLE_OTHER_HOST" | "DIFFERENT" | "NO_SUBMITTED" | "NO_OFFICIAL";
+
+export interface OfficialHost { host: string; includeSubdomains?: boolean }
+
+/** Perbandingan HOST persis. Subdomain hanya cocok bila daftar resmi menyatakan includeSubdomains; selain itu 'SAME_REGISTRABLE_OTHER_HOST' (belum terverifikasi). */
+export function compareHosts(submittedUrl: string | null | undefined, officials: OfficialHost[]): HostRelation {
+  const sub = normalizeDestination(submittedUrl);
+  if (!sub.ok || !sub.host) return "NO_SUBMITTED";
+  if (officials.length === 0) return "NO_OFFICIAL";
+  for (const o of officials) if (o.host === sub.host) return "EXACT";
+  for (const o of officials) if (o.includeSubdomains && sub.host.endsWith("." + o.host)) return "OFFICIAL_SUBDOMAIN";
+  const sr = sub.registrable;
+  for (const o of officials) if (registrableDomain(o.host) === sr) return "SAME_REGISTRABLE_OTHER_HOST";
+  return "DIFFERENT";
+}

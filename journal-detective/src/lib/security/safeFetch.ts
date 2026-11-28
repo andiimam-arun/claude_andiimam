@@ -30,7 +30,7 @@ export function isPrivateIp(ip: string): boolean {
 
 export class UnsafeUrlError extends Error {}
 
-export async function assertSafeUrl(raw: string): Promise<URL> {
+export async function assertSafeUrl(raw: string, opts: { skipDns?: boolean } = {}): Promise<URL> {
   let u: URL;
   try {
     u = new URL(raw);
@@ -47,6 +47,8 @@ export async function assertSafeUrl(raw: string): Promise<URL> {
     if (isPrivateIp(host)) throw new UnsafeUrlError("Alamat IP privat ditolak");
     return u;
   }
+  // Bila lewat proxy keluar, proxy yang me-resolve nama; pra-cek DNS lokal dilewati (kendalikan egress di proxy/firewall).
+  if (opts.skipDns) return u;
   const addrs = await dns.lookup(host, { all: true }).catch(() => []);
   if (!addrs.length) throw new UnsafeUrlError("Host tidak dapat di-resolve");
   if (addrs.some((a) => isPrivateIp(a.address))) throw new UnsafeUrlError("Host me-resolve ke alamat privat");
@@ -60,6 +62,7 @@ export interface SafeFetchResult {
   contentType: string;
   text: string;
   truncated: boolean;
+  retryAfter?: string | null;
 }
 
 const ALLOWED_TYPES = ["text/html", "application/json", "text/plain", "application/xhtml+xml", "application/xml", "text/xml"];
@@ -69,8 +72,8 @@ export async function safeFetch(
   opts: { timeoutMs?: number; maxBytes?: number; maxRedirects?: number; headers?: Record<string, string>; allowPrivate?: boolean } = {},
 ): Promise<SafeFetchResult> {
   const { timeoutMs = 8000, maxBytes = 512 * 1024, maxRedirects = 3 } = opts;
-  let url = opts.allowPrivate ? new URL(rawUrl) : await assertSafeUrl(rawUrl);
   const proxied = !!(process.env.HTTPS_PROXY || process.env.https_proxy);
+  let url = opts.allowPrivate ? new URL(rawUrl) : await assertSafeUrl(rawUrl, { skipDns: proxied });
   const dispatcher = proxied
     ? new EnvHttpProxyAgent()
     : new Agent({
@@ -107,7 +110,7 @@ export async function safeFetch(
       if (res.status >= 300 && res.status < 400 && res.headers.get("location")) {
         if (hop === maxRedirects) throw new UnsafeUrlError("Terlalu banyak pengalihan");
         const next = new URL(res.headers.get("location")!, url);
-        url = opts.allowPrivate ? next : await assertSafeUrl(next.toString());
+        url = opts.allowPrivate ? next : await assertSafeUrl(next.toString(), { skipDns: proxied });
         await res.body?.cancel();
         continue;
       }
@@ -132,7 +135,7 @@ export async function safeFetch(
         }
         chunks.push(value);
       }
-      return { ok: res.ok, status: res.status, finalUrl: url.toString(), contentType: ct, text: Buffer.concat(chunks).toString("utf8"), truncated };
+      return { ok: res.ok, status: res.status, finalUrl: url.toString(), contentType: ct, text: Buffer.concat(chunks).toString("utf8"), truncated, retryAfter: res.headers.get("retry-after") };
     }
     throw new UnsafeUrlError("Terlalu banyak pengalihan");
   } finally {

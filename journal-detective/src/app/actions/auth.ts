@@ -5,6 +5,8 @@ import { prisma } from "@/lib/db";
 import { createSession, destroySession, getSession } from "@/lib/auth/session";
 import { audit } from "@/lib/services/audit";
 import { go, str } from "./util";
+import { environmentProblems, isPilot } from "@/lib/mode";
+import { isDemoAccountEmail } from "@/lib/ops/pilot";
 
 // Pembatasan laju sederhana dalam memori (per email) untuk mencegah tebak kata sandi. Produksi: gunakan penyimpanan bersama.
 const attempts = new Map<string, { n: number; until: number }>();
@@ -12,6 +14,8 @@ const attempts = new Map<string, { n: number; until: number }>();
 export async function loginAction(form: FormData) {
   const email = str(form, "email").toLowerCase();
   const password = String(form.get("password") ?? "");
+  if ((await environmentProblems()).length) go("/login", { error: "Lingkungan tidak konsisten; login diblokir. Hubungi operator." });
+  if (isPilot() && isDemoAccountEmail(email)) go("/login", { error: "Akun demonstrasi tidak diizinkan pada mode PILOT." });
   const a = attempts.get(email);
   if (a && a.until > Date.now() && a.n >= 5) go("/login", { error: "Terlalu banyak percobaan. Coba lagi beberapa menit lagi." });
   const u = await prisma.user.findUnique({ where: { email } });

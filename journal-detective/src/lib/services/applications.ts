@@ -12,6 +12,8 @@ import { audit, type Actor } from "./audit";
 import { getActivePolicy } from "./policyService";
 import { runInvestigation } from "./investigation";
 import { requiredDocsFor } from "../engine/checklist";
+import { normalizeDestination } from "../engine/domain";
+import { normalizeTitle, sha256 } from "../engine/util";
 
 export const applicationSchema = z.object({
   studentName: z.string().trim().min(3).max(120),
@@ -34,6 +36,13 @@ export const applicationSchema = z.object({
   claimedQuartile: z.string().trim().max(10).optional().nullable(),
 });
 export type ApplicationForm = z.infer<typeof applicationSchema>;
+
+/** Sidik jari identitas jurnal + tujuan persis yang dinilai. Berubah → rekomendasi lama tidak berlaku. */
+export function assessmentFingerprint(a: { journalName: string; journalIssn?: string | null; journalUrl?: string | null; claimedIndexing?: string | null }): string {
+  const issns = (a.journalIssn ?? "").split(/[\s,;/]+/).map((x) => normalizeIssn(x)).filter(Boolean).sort().join(",");
+  const host = normalizeDestination(a.journalUrl).host ?? "";
+  return sha256(`${normalizeTitle(a.journalName)}|${issns}|${host}|${(a.claimedIndexing ?? "").toLowerCase().replace(/\s+/g, "")}`).slice(0, 24);
+}
 
 function splitIssns(raw?: string | null) {
   const parts = (raw ?? "").split(/[\s,;/]+/).map((s) => normalizeIssn(s)).filter(Boolean) as string[];
@@ -58,7 +67,8 @@ export async function createApplication(form: ApplicationForm, actor: Actor & { 
       studyProgram: form.studyProgram, supervisor: form.supervisor, studentEmail: form.studentEmail, manuscriptTitle: form.manuscriptTitle, researchField: form.researchField,
       stage: form.stage, submissionDate: form.submissionDate ? new Date(form.submissionDate) : null, trackingId: form.trackingId || null, journalUrl: form.journalUrl || null,
       articleDoi: form.articleDoi || null, articleUrl: form.articleUrl || null, journalName: form.journalName, journalIssn: form.journalIssn || null, journalPublisher: form.journalPublisher || null,
-      claimedIndexing: form.claimedIndexing || null, claimedQuartile: form.claimedQuartile || null, journalId: inv.journalId, assessmentId: inv.assessmentId,
+      claimedIndexing: form.claimedIndexing || null, claimedQuartile: form.claimedQuartile || null, journalId: inv.journalId, assessmentId: inv.assessmentId, destinationHost: normalizeDestination(form.journalUrl).host,
+      assessedFingerprint: assessmentFingerprint({ journalName: form.journalName, journalIssn: form.journalIssn, journalUrl: form.journalUrl, claimedIndexing: form.claimedIndexing }),
     },
   });
   if (form.submissionDate && form.stage !== "PRE_SUBMISSION") {
@@ -127,6 +137,8 @@ export async function refreshFlags(applicationId: string) {
 }
 
 export interface ApplicationEvaluation {
+  /** True bila jurnal/tujuan pada permohonan berubah setelah penilaian terakhir: rekomendasi lama TIDAK berlaku sampai dinilai ulang. */
+  invalidated: boolean;
   journal: JournalDecision | null;
   administrative: AdministrativeDecision;
   final: FinalDecision | null;
@@ -140,12 +152,13 @@ export async function evaluateApplication(app: Application): Promise<Application
     prisma.checklistItem.findMany({ where: { applicationId: app.id } }),
     prisma.consistencyFlag.findMany({ where: { applicationId: app.id } }),
   ]);
-  const journal = assessment ? parseJson<JournalDecision | null>(assessment.decisionJson, null) : null;
+  const invalidated = !!(assessment && app.assessedFingerprint && app.assessedFingerprint !== assessmentFingerprint(app));
+  const journal = assessment && !invalidated ? parseJson<JournalDecision | null>(assessment.decisionJson, null) : null;
   const administrative = decideAdministrative(
     { stage: app.stage as Stage, checklist: checklist.map((c) => ({ docType: c.docType as DocType, status: c.status as any })), flags: flags.map((f) => ({ code: f.code, severity: f.severity as any, state: f.state as any })), adminRejected: app.adminRejected },
     policy.config,
   );
-  return { journal, administrative, final: journal ? decideFinal(journal, administrative, policy.config) : null, policyVersion: policy.version };
+  return { invalidated, journal, administrative, final: journal ? decideFinal(journal, administrative, policy.config) : null, policyVersion: policy.version };
 }
 
 export async function reassessApplicationJournal(applicationId: string, actor: Actor) {
@@ -158,9 +171,48 @@ export async function reassessApplicationJournal(applicationId: string, actor: A
       claimedIndexing: (app.claimedIndexing ?? "").split(/[,;\n]+/).map((s) => s.trim()).filter(Boolean), claimedQuartile: app.claimedQuartile, submittedWebsite: app.journalUrl,
     },
   });
-  await prisma.application.update({ where: { id: applicationId }, data: { assessmentId: inv.assessmentId, journalId: inv.journalId } });
+  await prisma.application.update({
+    where: { id: applicationId },
+    data: { assessmentId: inv.assessmentId, journalId: inv.journalId, destinationHost: normalizeDestination(app.journalUrl).host, assessedFingerprint: assessmentFingerprint(app), invalidatedAt: null },
+  });
   await refreshFlags(applicationId);
   return inv;
+}
+
+export const journalChangeSchema = z.object({
+  journalName: z.string().trim().min(3).max(300),
+  journalIssn: z.string().trim().max(40).optional().nullable(),
+  journalPublisher: z.string().trim().max(200).optional().nullable(),
+  journalUrl: z.string().trim().url().max(400).optional().or(z.literal("")),
+  claimedIndexing: z.string().trim().max(300).optional().nullable(),
+  claimedQuartile: z.string().trim().max(10).optional().nullable(),
+});
+
+/**
+ * Mengubah jurnal/tujuan pada permohonan: rekomendasi lama DIBATALKAN (workflow kembali ke PENDING_REVIEW, rekomendasi peninjau dihapus,
+ * riwayat dicatat), lalu penilaian baru dijalankan otomatis. Persetujuan harus diulang. Permohonan final tidak dapat diubah.
+ */
+export async function changeApplicationJournal(applicationId: string, input: z.infer<typeof journalChangeSchema>, actor: Actor & { id: string }) {
+  const before = await prisma.application.findUniqueOrThrow({ where: { id: applicationId } });
+  if (["APPROVED", "REJECTED"].includes(before.workflow)) throw new Error("Permohonan sudah final dan dikunci; tidak dapat diubah.");
+  const v = journalChangeSchema.parse(input);
+  const changed = assessmentFingerprint({ ...before }) !== assessmentFingerprint({ journalName: v.journalName, journalIssn: v.journalIssn, journalUrl: v.journalUrl, claimedIndexing: v.claimedIndexing });
+  await prisma.application.update({
+    where: { id: applicationId },
+    data: { journalName: v.journalName, journalIssn: v.journalIssn || null, journalPublisher: v.journalPublisher || null, journalUrl: v.journalUrl || null, claimedIndexing: v.claimedIndexing || null, claimedQuartile: v.claimedQuartile || null },
+  });
+  if (!changed) return { changed: false };
+  const policy = await getActivePolicy();
+  await prisma.application.update({ where: { id: applicationId }, data: { recommendation: null, workflow: "PENDING_REVIEW", invalidatedAt: new Date() } });
+  await prisma.reviewAction.create({
+    data: {
+      applicationId, action: "RECOMMENDATION_INVALIDATED", actorId: actor.id, policyVersion: policy.version, fromState: before.workflow, toState: "PENDING_REVIEW",
+      rationale: `Jurnal/tujuan diubah: "${before.journalName}" ${before.journalUrl ?? "-"} → "${v.journalName}" ${v.journalUrl || "-"}. Rekomendasi dan persetujuan sebelumnya tidak berlaku; penilaian ulang dijalankan.`,
+    },
+  });
+  await audit(actor, "APPLICATION_JOURNAL_CHANGED", "Application", applicationId, { from: { name: before.journalName, url: before.journalUrl, issn: before.journalIssn }, to: { name: v.journalName, url: v.journalUrl, issn: v.journalIssn } }, policy.version);
+  await reassessApplicationJournal(applicationId, actor);
+  return { changed: true };
 }
 
 export { registrableDomain };

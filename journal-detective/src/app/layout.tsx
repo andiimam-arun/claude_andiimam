@@ -4,7 +4,7 @@ import "./globals.css";
 import { getLang } from "@/lib/i18n/server";
 
 export const metadata: Metadata = {
-  title: "Journal Detective",
+  title: "Journal Assessment — Faculty of Public Health, Universitas Hasanuddin",
   description: "Verifikasi Jurnal. Lindungi Riset. Dukung Integritas Akademik.",
 };
 

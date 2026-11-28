@@ -40,5 +40,7 @@ class AnthropicProvider implements AiProvider {
 
 export function getAiProvider(): AiProvider {
   const k = process.env.ANTHROPIC_API_KEY;
-  return k ? new AnthropicProvider(k, process.env.AI_MODEL || "claude-sonnet-5-5") : new NoopProvider();
+  // Data tidak dikirim ke layanan eksternal kecuali operator mengaktifkan EKSPLISIT dan mengakui penanganan datanya.
+  const explicit = process.env.AI_EXTERNAL_ENABLED === "1" && !!process.env.AI_DATA_HANDLING_ACK?.trim();
+  return k && explicit ? new AnthropicProvider(k, process.env.AI_MODEL || "claude-sonnet-5-5") : new NoopProvider();
 }

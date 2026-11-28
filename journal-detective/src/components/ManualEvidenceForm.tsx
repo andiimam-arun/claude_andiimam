@@ -46,14 +46,15 @@ export function ManualEvidenceForm({ journalId, back, lang, submittedDomain }: {
         <label><span className="label">{id ? "Peringkat (mis. SINTA 2)" : "Level (e.g., SINTA 2)"}</span><input className="input" name="level" /></label>
       </>)}
       {kind === "identity.official_domain" && (
-        <label className="md:col-span-2"><span className="label">{id ? "Domain/URL resmi (pisahkan koma)" : "Official domains/URLs (comma separated)"}</span><input className="input" name="domains" placeholder="https://jurnal-resmi.example" required /></label>
+        <><label className="md:col-span-2"><span className="label">{id ? "Host/URL resmi (pisahkan koma; dibandingkan sebagai HOST persis)" : "Official hosts/URLs (comma separated; compared as exact HOST)"}</span><input className="input" name="domains" placeholder="https://jurnal-resmi.example" required /></label>
+        <label className="flex items-center gap-2 text-sm md:col-span-2"><input type="checkbox" name="includeSubdomains" /> {id ? "Termasuk subdomain (mis. penerbit dengan banyak subdomain jurnal)" : "Include subdomains (e.g., publisher with many journal subdomains)"}</label></>
       )}
       {kind === "hijack.website" && (<>
         <label><span className="label">{id ? "Hasil" : "Result"}</span><select className="input" name="relation">
           <option value="CONFIRMED_CLONE">{id ? "Klon/dibajak — TERKONFIRMASI" : "Cloned/hijacked — CONFIRMED"}</option>
           <option value="AUTHORIZED_MIGRATION">{id ? "Migrasi domain sah" : "Authorized domain migration"}</option>
-          <option value="MATCHES_OFFICIAL">{id ? "Cocok dengan situs resmi" : "Matches official site"}</option></select></label>
-        <label><span className="label">{id ? "Domain yang diajukan" : "Submitted domain"}</span><input className="input" name="submittedDomain" defaultValue={submittedDomain ?? ""} required /></label>
+          <option value="MATCHES_OFFICIAL">{id ? "Cocok dengan situs resmi" : "Matches official site"}</option><option value="PLATFORM_VERIFIED">{id ? "Platform pengiriman eksternal terverifikasi" : "External submission platform verified"}</option></select></label>
+        <label><span className="label">{id ? "Host yang diajukan (persis)" : "Submitted host (exact)"}</span><input className="input" name="submittedDomain" defaultValue={submittedDomain ?? ""} required /></label>
       </>)}
       {kind === "predatory.indicator" && (
         <label className="md:col-span-2"><span className="label">{id ? "Indikator" : "Indicator"}</span><select className="input" name="indicator">

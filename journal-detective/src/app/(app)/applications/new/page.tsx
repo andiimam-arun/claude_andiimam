@@ -5,6 +5,7 @@ import { STAGES, DOC_TYPES } from "@/lib/engine/types";
 import { createApplicationAction } from "@/app/actions/applications";
 import { Card, CardBody, CardHeader, PageHeader, Notice } from "@/components/ui/card";
 import { Field, Input, Select } from "@/components/ui/form";
+import { JournalIdentityFields } from "@/components/JournalAutocomplete";
 
 export default async function NewApplication({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const user = await requireUser();
@@ -34,9 +35,7 @@ export default async function NewApplication({ searchParams }: { searchParams: P
           <Field label="DOI / URL artikel (bila ada)"><Input name="articleDoi" /></Field>
         </CardBody></Card>
         <Card><CardHeader title={L ? "Data jurnal" : "Journal information"} /><CardBody className="grid gap-4 md:grid-cols-2">
-          <Field label={L ? "Nama jurnal *" : "Journal name *"} className="md:col-span-2"><Input name="journalName" required /></Field>
-          <Field label="ISSN / E-ISSN" hint={L ? "Pisahkan dengan spasi atau koma" : "Separate with space or comma"}><Input name="journalIssn" /></Field>
-          <Field label={L ? "Penerbit" : "Publisher"}><Input name="journalPublisher" /></Field>
+          <JournalIdentityFields lang={lang} mode="application" names={{ title: "journalName", issn: "journalIssn", publisher: "journalPublisher" }} />
           <Field label={L ? "Klaim indeksasi" : "Claimed indexing"} hint="Scopus, DOAJ, SINTA 2…"><Input name="claimedIndexing" /></Field>
           <Field label={L ? "Klaim kuartil" : "Claimed quartile"}><Input name="claimedQuartile" placeholder="Q2" maxLength={4} /></Field>
         </CardBody></Card>

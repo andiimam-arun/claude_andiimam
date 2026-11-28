@@ -9,6 +9,7 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { HBarChart, MonthlyChart, StatusDonut } from "@/components/charts";
 import { fmtDate } from "@/lib/utils";
 import { evaluateApplication } from "@/lib/services/applications";
+import { DbFreshnessNotice } from "@/components/DbFreshness";
 
 function Stat({ icon: Icon, label, value, tone, href }: { icon: any; label: string; value: React.ReactNode; tone: string; href?: string }) {
   const inner = (
@@ -56,6 +57,7 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
   return (
     <>
       {flash}
+      <DbFreshnessNotice lang={lang} />
       <PageHeader title={t("nav.dashboard")} subtitle={t("app.tagline")} actions={<Link className="btn-primary" href="/investigations/new">{t("nav.investigate")}</Link>} />
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Stat icon={Database} label={lang === "id" ? "Total jurnal diinvestigasi" : "Total journals investigated"} value={s.totalJournals} tone="bg-navy-100 text-navy-800" href="/journals" />

@@ -6,6 +6,6 @@ export default defineConfig({
   test: {
     include: ["tests/unit/**/*.test.ts"], environment: "node", testTimeout: 30000, fileParallelism: false,
     globalSetup: ["tests/unit/globalSetup.ts"],
-    env: { DATABASE_URL: "file:./test.db", DISABLE_EXTERNAL_LOOKUPS: "1", STORAGE_DIR: "./storage-test", NODE_ENV: "test" },
+    env: { DATABASE_URL: "file:./test.db", DISABLE_EXTERNAL_LOOKUPS: "1", STORAGE_DIR: "./storage-test", NODE_ENV: "test", APP_MODE: "DEMO" },
   },
 });

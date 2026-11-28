@@ -8,6 +8,7 @@ import { audit } from "@/lib/services/audit";
 import { reasonText, actionText } from "@/lib/i18n";
 import { go, str, optStr, errMsg } from "./util";
 import { snapshotSubmittedSite } from "@/lib/services/siteSnapshot";
+import { recordFinding, retractFinding, type FindingStatus } from "@/lib/services/destinationFindings";
 
 const list = (s: string) => s.split(/[,;\n]+/).map((x) => x.trim()).filter(Boolean);
 
@@ -65,7 +66,7 @@ export async function addEvidenceAction(form: FormData) {
       }
       case "scimago.entry": data.found = true; data.quartile = str(form, "quartile"); data.year = Number(str(form, "year")) || undefined; data.sjr = optStr(form, "sjr"); break;
       case "national.accreditation": data.accredited = str(form, "accredited") === "yes"; data.level = str(form, "level"); break;
-      case "identity.official_domain": data.domains = list(str(form, "domains")); if (!data.domains.length) throw new Error("Isi minimal satu domain/URL resmi"); break;
+      case "identity.official_domain": data.includeSubdomains = form.get("includeSubdomains") === "on"; data.domains = list(str(form, "domains")); if (!data.domains.length) throw new Error("Isi minimal satu domain/URL resmi"); break;
       case "hijack.website": data.relation = str(form, "relation"); data.submittedDomain = str(form, "submittedDomain"); if (!data.submittedDomain) throw new Error("Domain yang diajukan wajib diisi"); break;
       case "predatory.indicator": data.indicator = str(form, "indicator"); break;
       case "beall.match": data.year = Number(str(form, "year")) || undefined; data.listName = "Beall (historis)"; break;
@@ -125,7 +126,7 @@ export async function aiSummaryAction(form: FormData) {
   const id = str(form, "assessmentId");
   const back = `/investigations/${id}`;
   const ai = getAiProvider();
-  if (!ai.enabled) go(back, { error: "Ringkasan AI nonaktif: ANTHROPIC_API_KEY belum dikonfigurasi. Seluruh keputusan tetap berbasis aturan." });
+  if (!ai.enabled) go(back, { error: "Ringkasan AI nonaktif: layanan AI eksternal nonaktif (butuh ANTHROPIC_API_KEY + AI_EXTERNAL_ENABLED=1 + AI_DATA_HANDLING_ACK oleh operator). Seluruh keputusan tetap berbasis aturan." });
   try {
     const a = await loadAssessment(id);
     if (!a) go(back, { error: "Penilaian tidak ditemukan" });
@@ -140,4 +141,23 @@ export async function aiSummaryAction(form: FormData) {
     go(back, { error: errMsg(e) });
   }
   go(back, { notice: "Ringkasan AI (penasihat) dibuat." });
+}
+
+export async function recordFindingAction(form: FormData) {
+  const user = await requireRole("REVIEWER", "HEAD");
+  const back = str(form, "back") || "/journals";
+  try {
+    await recordFinding({
+      journalId: str(form, "journalId"), urlOrHost: str(form, "host"), status: str(form, "status") as FindingStatus, basis: str(form, "basis"), sourceName: str(form, "sourceName"),
+      sourceUrl: optStr(form, "sourceUrl"), sourceRef: optStr(form, "sourceRef"), sourceDataDate: optStr(form, "sourceDataDate"), includeSubdomains: form.get("includeSubdomains") === "on", actor: user,
+    });
+  } catch (e) { go(back, { error: errMsg(e) }); }
+  go(back, { notice: "Temuan tujuan dicatat (permanen per host). Jalankan penilaian ulang." });
+}
+
+export async function retractFindingAction(form: FormData) {
+  const user = await requireRole("REVIEWER", "HEAD");
+  const back = str(form, "back") || "/journals";
+  try { await retractFinding({ findingId: str(form, "findingId"), rationale: str(form, "rationale"), sourceUrl: optStr(form, "sourceUrl"), sourceRef: optStr(form, "sourceRef"), actor: user }); } catch (e) { go(back, { error: errMsg(e) }); }
+  go(back, { notice: "Temuan dikoreksi. Riwayat temuan asli dipertahankan. Jalankan penilaian ulang." });
 }

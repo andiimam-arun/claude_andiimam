@@ -3,9 +3,12 @@ import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth/session";
 import { importDataset, DATASET_KINDS, type DatasetKind } from "@/lib/services/reference";
+import { runDatabaseUpdate } from "@/lib/services/dbUpdate";
+import { batchApproveClean } from "@/lib/services/approval";
 import { publishPolicy, getActivePolicy } from "@/lib/services/policyService";
 import { saveSetting } from "@/lib/services/settings";
 import { audit } from "@/lib/services/audit";
+import { setRetention } from "@/lib/ops/retention";
 import { DOC_TYPES, STAGES, type DocType } from "@/lib/engine/types";
 import { ROLES } from "@/lib/engine/approval";
 import { go, str, errMsg } from "./util";
@@ -15,7 +18,7 @@ export async function importDatasetAction(form: FormData) {
   try {
     const f = form.get("file");
     if (!(f instanceof File) || f.size === 0) throw new Error("Pilih berkas CSV/XLSX");
-    if (f.size > 25 * 1024 * 1024) throw new Error("Berkas terlalu besar (maks 25 MB)");
+    if (f.size > 12 * 1024 * 1024) throw new Error("Berkas terlalu besar (maks 12 MB lewat menu). CSV DOAJ (±26 MB) diimpor lewat Terminal: npm run doaj:import -- <berkas.csv> --version ... --date ...");
     const kind = str(form, "kind") as DatasetKind;
     if (!DATASET_KINDS.includes(kind)) throw new Error("Jenis dataset tidak valid");
     if (str(form, "legal") !== "on") throw new Error("Konfirmasi bahwa data diperoleh secara sah dan sesuai lisensi sumber");
@@ -108,4 +111,48 @@ export async function toggleUserAction(form: FormData) {
   await prisma.user.update({ where: { id: u.id }, data: { active: !u.active } });
   await audit(user, u.active ? "USER_DEACTIVATED" : "USER_ACTIVATED", "User", u.id);
   go("/settings#pengguna", { notice: "Status pengguna diubah." });
+}
+
+export async function saveRetentionAction(form: FormData) {
+  const user = await requireRole("ADMIN", "HEAD");
+  try { const v = str(form, "days"); await setRetention(v ? Number(v) : null, user); } catch (e) { go("/settings", { error: errMsg(e) }); }
+  go("/settings", { notice: "Masa retensi disimpan. Tidak ada penghapusan otomatis; gunakan `npm run pilot:retention` (dry-run) lalu --execute." });
+}
+
+export async function confirmScopusImportAction(form: FormData) {
+  const user = await requireRole("ADMIN", "HEAD");
+  const { confirmImport } = await import("@/lib/services/scopusReference");
+  try { await confirmImport(str(form, "importId"), user); } catch (e) { go(`/sources/scopus?preview=${str(form, "importId")}`, { error: errMsg(e) }); }
+  go("/sources/scopus", { notice: "Impor dikonfirmasi. Database referensi Scopus terkini sudah dapat dicari; impor sebelumnya dipertahankan sebagai riwayat." });
+}
+
+export async function cancelScopusImportAction(form: FormData) {
+  const user = await requireRole("ADMIN", "HEAD");
+  const { cancelImport } = await import("@/lib/services/scopusReference");
+  try { await cancelImport(str(form, "importId"), user); } catch (e) { go("/sources/scopus", { error: errMsg(e) }); }
+  go("/sources/scopus", { notice: "Pratinjau dibatalkan. Tidak ada data yang diimpor." });
+}
+
+/** Tombol "Perbarui sekarang": DOAJ diunduh otomatis; Scopus dari folder inbox. Tanpa formulir. */
+export async function runDbUpdateAction() {
+  const user = await requireRole("ADMIN", "HEAD");
+  let msg = "";
+  try {
+    const res = await runDatabaseUpdate({ actor: user });
+    msg = res.map((r) => `${r.source}: ${r.outcome} — ${r.detail}`).join(" | ");
+    if (res.some((r) => r.outcome === "FAILED" || r.outcome === "REJECTED")) go("/sources", { error: msg.slice(0, 600) });
+  } catch (e) { go("/sources", { error: errMsg(e) }); }
+  go("/sources", { notice: msg.slice(0, 600) });
+}
+
+/** Persetujuan sekaligus (HANYA Kepala Unit) untuk kasus bersih yang dicentang; tiap kasus dinilai ulang dan diaudit sendiri. */
+export async function batchApproveAction(form: FormData) {
+  const user = await requireRole("HEAD");
+  const ids = form.getAll("id").map(String).filter(Boolean);
+  if (!ids.length) go("/approvals", { error: "Tidak ada permohonan yang dipilih." });
+  try {
+    const r = await batchApproveClean(ids, user);
+    const skip = r.skipped.length ? ` Dilewati ${r.skipped.length}: ${r.skipped.map((x) => `${x.ref} (${x.reason})`).join("; ")}` : "";
+    go("/approvals", { notice: `Disetujui ${r.approved.length} permohonan.${skip}`.slice(0, 700) });
+  } catch (e) { go("/approvals", { error: errMsg(e) }); }
 }
