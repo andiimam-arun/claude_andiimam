@@ -30,6 +30,7 @@ const EXACT: Partial<Record<Field, string[]>> = {
 export function mapHeader(raw: string): Field | null {
   const h = hn(raw);
   if (!h) return null;
+  if (h.startsWith("sourcetitle")) return "title"; // "Source Title (newly added titles are highlighted in red)"
   if (h.includes("indexation") || h.includes("indexingchange")) return "indexationChange";
   if (h.includes("final") && h.includes("year")) return "finalYear";
   if (h.includes("final") && h.includes("volume")) return "finalVolume";

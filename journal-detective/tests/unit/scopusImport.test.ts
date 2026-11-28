@@ -35,6 +35,7 @@ describe("deteksi header & peran sheet berdasarkan nama kolom (murni)", () => {
     expect(mapHeader("Final Coverage Year")).toBe("finalYear");
     expect(mapHeader("Final Coverage Pages")).toBe("finalPages");
     expect(mapHeader("Indexation Change")).toBe("indexationChange");
+    expect(mapHeader("Source Title (newly added titles are highlighted in red)")).toBe("title");
     expect(mapHeader("Kolom Aneh")).toBeNull();
   });
   it("peran sheet: dari nama (pembaruan bulan lain tetap dikenali) atau dari kolom", () => {
