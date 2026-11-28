@@ -22,6 +22,7 @@
     "pilot:restore": "tsx --conditions=react-server scripts/pilot-restore.ts",
     "pilot:retention": "tsx --conditions=react-server scripts/pilot-retention.ts",
     "scopus:import": "tsx --conditions=react-server scripts/scopus-import.ts",
+    "doaj:import": "tsx --conditions=react-server scripts/doaj-import.ts",
     "users:bulk": "tsx --conditions=react-server scripts/users-bulk.ts"
   },
   "dependencies": {

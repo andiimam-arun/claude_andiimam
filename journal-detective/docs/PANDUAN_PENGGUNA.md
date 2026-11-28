@@ -166,7 +166,7 @@ Aplikasi memeriksa jurnal terhadap beberapa **sumber rujukan**. Halaman **Sumber
 | Sumber | Cara masuk | Keadaan saat ini |
 |---|---|---|
 | **Scopus (daftar sumber, Excel)** | Impor berkas (menu **Database Scopus**) | Siap. Perlu Anda unggah berkas resmi |
-| **DOAJ** | Pencarian langsung per ISSN lewat API DOAJ | **Teruji hidup 28 Nov 2026** (`pilot:smoke`, HTTP 200); lihat 6.2 |
+| **DOAJ** | Pencarian langsung per ISSN lewat API DOAJ; cadangan: impor CSV DOAJ (`npm run doaj:import`) | **Teruji hidup 28 Nov 2026** (`pilot:smoke`, HTTP 200); lihat 6.2 |
 | **Crossref** | Pencarian langsung per ISSN lewat API Crossref | **Teruji hidup 28 Nov 2026** (HTTP 200) |
 | **SCImago (CSV)** | Impor CSV (kuartil, SJR) | Tersedia di menu impor rujukan |
 | **Daftar Beall / jurnal dibajak (hijacked)** | Impor CSV | Tersedia; **Anda yang menyediakan dan bertanggung jawab atas daftarnya** |
@@ -175,9 +175,7 @@ Aplikasi memeriksa jurnal terhadap beberapa **sumber rujukan**. Halaman **Sumber
 
 ### 6.2 DOAJ: yang benar-benar terjadi
 
-**Penting:** DOAJ diperiksa **satu per satu jurnal, langsung ke API DOAJ, berdasarkan ISSN**, saat investigasi dijalankan. Aplikasi **tidak** menyimpan salinan seluruh daftar DOAJ. Jadi "melengkapi database" dari DOAJ **tidak** berarti mengimpor berkas; artinya memastikan koneksi langsung berfungsi.
-
-Jenis impor `DOAJ_LIST` ada di kode, tetapi **belum dipakai** oleh mesin investigasi. Jangan mengunggah berkas DOAJ dan mengira hasilnya otomatis dipakai.
+**Penting:** DOAJ diperiksa **satu per satu jurnal, langsung ke API DOAJ, berdasarkan ISSN**, saat investigasi dijalankan. Salinan seluruh daftar DOAJ bersifat opsional dan hanya menjadi cadangan (lihat di bawah).
 
 Langkah di Mac Anda (yang punya internet):
 
@@ -192,7 +190,18 @@ npm run pilot:smoke
 
 Hasil uji pada 28 Nov 2026 dari lingkungan pengembangan: `pilot:smoke` berhasil untuk DOAJ dan Crossref (HTTP 200). Titik akhir `https://doaj.org/api/search/journals/issn:XXXX-XXXX` dan versi `/api/v4/search/journals/...` sama-sama menjawab; dokumentasi DOAJ v4 masih menyebut jalur tanpa versi. Crossref: `https://api.crossref.org/journals/{ISSN}` menjawab 404 untuk ISSN yang tidak ada. Anda tetap perlu menjalankan `pilot:smoke` di jaringan Anda sendiri, karena jaringan kampus bisa berbeda.
 
-**Daftar lengkap DOAJ (opsional, belum dibangun).** DOAJ menyediakan berkas CSV seluruh jurnal (`https://doaj.org/csv`, ±26 MB) dan *public data dump*. Pengimpor untuk berkas ini belum ada. Manfaatnya: pemeriksaan DOAJ tanpa internet dan pencarian massal. Biayanya: data bisa usang dan perlu dicatat "berdasarkan impor tanggal X". Bila Anda menginginkannya, itu pekerjaan terpisah.
+**Impor CSV DOAJ (tersedia).** DOAJ menyediakan CSV seluruh jurnal di `https://doaj.org/csv` (±26 MB, ±23.600 jurnal). Berkas ini terlalu besar untuk menu unggah (batas 12 MB), jadi diimpor lewat Terminal:
+
+```bash
+curl -L -o ~/doaj.csv https://doaj.org/csv
+npm run doaj:import -- ~/doaj.csv --version "DOAJ CSV Nov 2026" --date 2026-11-28
+```
+
+Gunakan tanggal unduh sebagai `--date`. Cara kerjanya:
+- Pencarian langsung ke API DOAJ tetap yang utama. **Impor hanya dipakai bila pencarian langsung tidak tersedia** (jaringan mati, dibatasi, atau dinonaktifkan).
+- Hasil dari impor ditandai **IMPORTED_DATA** beserta versi dan tanggal datanya, tidak pernah ditulis sebagai "langsung".
+- **Ada pada impor** → terdaftar di DOAJ menurut data bertanggal itu. **Tidak ada pada impor** → hanya "tidak konklusif", bukan bukti negatif.
+- Impor DOAJ lengkap yang baru menggantikan yang lama (yang lama dinonaktifkan, riwayat tetap tersimpan). Ulangi tiap beberapa bulan.
 
 ### 6.3 Scopus: langkah impor
 

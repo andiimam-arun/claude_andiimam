@@ -16,7 +16,7 @@ export async function importDatasetAction(form: FormData) {
   try {
     const f = form.get("file");
     if (!(f instanceof File) || f.size === 0) throw new Error("Pilih berkas CSV/XLSX");
-    if (f.size > 25 * 1024 * 1024) throw new Error("Berkas terlalu besar (maks 25 MB)");
+    if (f.size > 12 * 1024 * 1024) throw new Error("Berkas terlalu besar (maks 12 MB lewat menu). CSV DOAJ (±26 MB) diimpor lewat Terminal: npm run doaj:import -- <berkas.csv> --version ... --date ...");
     const kind = str(form, "kind") as DatasetKind;
     if (!DATASET_KINDS.includes(kind)) throw new Error("Jenis dataset tidak valid");
     if (str(form, "legal") !== "on") throw new Error("Konfirmasi bahwa data diperoleh secara sah dan sesuai lisensi sumber");

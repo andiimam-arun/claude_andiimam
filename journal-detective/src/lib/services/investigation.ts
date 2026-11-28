@@ -11,7 +11,7 @@ import { audit, type Actor } from "./audit";
 import { getActivePolicy, type ActivePolicy } from "./policyService";
 import { lookupReference } from "./reference";
 import { searchRegistry, upsertJournal } from "./journalRegistry";
-import { lookupCrossref, lookupDoaj } from "./externalSources";
+import { lookupCrossref, lookupDoaj, lookupDoajImported } from "./externalSources";
 import { lookupScopusApi } from "./scopusApi";
 import { buildHijackEvidence, type HijackRef } from "./hijack";
 import { activeFindings, recordFinding, type FindingStatus } from "./destinationFindings";
@@ -202,7 +202,12 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
   }
 
   // --- Metadata publik (DOAJ & Crossref) ---
-  const [doaj, cr] = await Promise.all([lookupDoaj(issn ?? eissn, claimsDoaj), lookupCrossref(issn ?? eissn, identity.title)]);
+  let [doaj, cr] = await Promise.all([lookupDoaj(issn ?? eissn, claimsDoaj), lookupCrossref(issn ?? eissn, identity.title)]);
+  // DOAJ langsung tidak terjangkau → pakai impor CSV DOAJ (bila ada) sebagai data bertanggal, tidak pernah dilabeli LIVE.
+  if (doaj.evidence.length && doaj.evidence.every((e) => e.status === "UNAVAILABLE")) {
+    const imp = await lookupDoajImported(issn, eissn, claimsDoaj);
+    if (imp) doaj = imp;
+  }
   out.push(...doaj.evidence, ...cr.evidence);
   for (const [src, info] of [["DOAJ", doaj.info], ["Crossref", cr.info]] as const) {
     if (info?.found && info.title && titleSimilarity(info.title, identity.title) >= 0.6 && !out.some((e) => e.key === "identity.corroboration" && e.data.via === src)) {

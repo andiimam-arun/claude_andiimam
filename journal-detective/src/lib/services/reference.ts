@@ -13,21 +13,29 @@ export const DATASET_KINDS: DatasetKind[] = ["SCOPUS_SOURCE_LIST", "SCIMAGO", "B
 
 const ALIASES: Record<string, string[]> = {
   title: ["sourcetitle", "title", "journaltitle", "journalname", "journal", "name", "judul", "namajurnal"],
-  issn: ["issn", "printissn", "pissn", "issnprint", "issnp"],
-  eissn: ["eissn", "eissn", "onlineissn", "issnonline", "issne"],
+  issn: ["issn", "printissn", "pissn", "issnprint", "issnp", "journalissnprintversion"],
+  eissn: ["eissn", "eissn", "onlineissn", "issnonline", "issne", "journaleissnonlineversion"],
   sourceId: ["sourceid", "scopussourceid", "scopusid", "sourcerecordid"],
   publisher: ["publishersname", "publisher", "publishername", "penerbit"],
   status: ["activeorinactive", "status", "coveragestatus", "activeinactive"],
   quartile: ["sjrbestquartile", "bestquartile", "quartile", "kuartil"],
   sjr: ["sjr"],
   categories: ["categories", "subjectareas", "subjectarea", "subject", "areas"],
-  country: ["publishercountry", "country", "negara"],
+  country: ["publishercountry", "country", "negara", "countryofpublisher"],
   url: ["url", "website", "homepage", "journalurl", "authenticurl", "officialurl"],
   hijackedUrl: ["hijackedurl", "fakeurl", "cloneurl", "clonedurl", "hijackedwebsite", "fakewebsite", "hijackedsite"],
   discontinuedQuality: ["titlesdiscontinuedbyscopusduetoqualityissues", "discontinuedduetoquality", "discontinuedforquality"],
   coverage: ["coverage", "scopuscoverageyears", "coverageyears"],
   year: ["year", "tahun", "reportyear"],
   note: ["note", "notes", "catatan", "reason"],
+  // Kolom khusus CSV DOAJ (https://doaj.org/csv)
+  doajUrl: ["urlindoaj"],
+  apc: ["apc"],
+  apcAmount: ["apcamount"],
+  license: ["journallicense"],
+  addedOn: ["addedondate"],
+  lastUpdated: ["lastupdateddate"],
+  lastFullReview: ["lastfullreviewdate"],
 };
 
 const hn = (h: string) => h.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -108,6 +116,11 @@ export function validateImport(kind: DatasetKind, rows: Record<string, string>[]
     if (!opts.sourceDate) v.errors.push("Tanggal pengamatan data sumber wajib diisi untuk impor Scopus.");
     else if (opts.sourceDate.getTime() > Date.now() + 86_400_000) v.errors.push("Tanggal pengamatan tidak boleh di masa depan.");
   }
+  if (kind === "DOAJ_LIST") {
+    if (!columns.issn && !columns.eissn) v.errors.push("Kolom ISSN tidak ditemukan ('Journal ISSN (print version)' / 'Journal EISSN (online version)'). Ini bukan CSV DOAJ yang dikenali (unduh dari https://doaj.org/csv).");
+    if (!opts.sourceDate) v.errors.push("Tanggal pengamatan data sumber wajib diisi untuk impor DOAJ.");
+    else if (opts.sourceDate.getTime() > Date.now() + 86_400_000) v.errors.push("Tanggal pengamatan tidak boleh di masa depan.");
+  }
   const seen = new Set<string>();
   for (const r of rows) {
     const issn = pick(r, "issn"), eissn = pick(r, "eissn"), sid = pick(r, "sourceId");
@@ -119,6 +132,8 @@ export function validateImport(kind: DatasetKind, rows: Record<string, string>[]
   if (kind === "SCOPUS_SOURCE_LIST") {
     const unknown = Object.keys(v.statusValues).filter((k) => !k.startsWith("active") && !k.startsWith("inactive") && !k.includes("discontinued"));
     if (unknown.length) v.warnings.push(`Nilai status tidak dikenal (diperlakukan tidak terverifikasi): ${unknown.join(", ")}`);
+  }
+  if (kind === "SCOPUS_SOURCE_LIST" || kind === "DOAJ_LIST") {
     if (v.invalidIssnRows / rows.length > 0.05) v.errors.push(`Terlalu banyak ISSN tidak valid (${v.invalidIssnRows} baris; > 5%). Periksa format/encoding berkas.`);
     else if (v.invalidIssnRows) v.warnings.push(`${v.invalidIssnRows} nilai ISSN tidak valid dilewati.`);
     if (v.rowsWithoutIdentifier) v.warnings.push(`${v.rowsWithoutIdentifier} baris tanpa identifier.`);
@@ -143,7 +158,7 @@ export async function importDataset(i: ImportInput) {
       const url = pick(r, "url");
       const hij = pick(r, "hijackedUrl");
       const data: Record<string, unknown> = {};
-      for (const f of ["quartile", "sjr", "categories", "country", "coverage", "year", "note", "discontinuedQuality", "hijackedUrl"] as const) {
+      for (const f of ["quartile", "sjr", "categories", "country", "coverage", "year", "note", "discontinuedQuality", "hijackedUrl", "doajUrl", "apc", "apcAmount", "license", "addedOn", "lastUpdated", "lastFullReview"] as const) {
         const v = pick(r, f);
         if (v) data[f] = v;
       }
@@ -167,6 +182,11 @@ export async function importDataset(i: ImportInput) {
   });
   for (let k = 0; k < recs.length; k += 500) {
     await prisma.referenceRecord.createMany({ data: recs.slice(k, k + 500).map((r) => ({ ...r, datasetId: ds.id })) });
+  }
+  // Daftar DOAJ lengkap yang baru menggantikan yang lama (riwayat dipertahankan, hanya dinonaktifkan).
+  if (i.kind === "DOAJ_LIST" && i.isComplete) {
+    const old = await prisma.referenceDataset.updateMany({ where: { kind: "DOAJ_LIST", active: true, id: { not: ds.id } }, data: { active: false } });
+    if (old.count) await audit(i.actor, "DATASET_SUPERSEDED", "ReferenceDataset", ds.id, { kind: "DOAJ_LIST", deactivated: old.count });
   }
   await audit(i.actor, "DATASET_IMPORTED", "ReferenceDataset", ds.id, { kind: i.kind, filename: i.filename, rows: recs.length, version: i.versionLabel, demo: !!i.isDemo, sourceDate: i.sourceDate?.toISOString() ?? null, warnings: validation.warnings, sha256: ds.sha256 });
   return ds;
