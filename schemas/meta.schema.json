@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Meta",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dibuat",
+    "n_trg",
+    "n_peneliti",
+    "n_artikel"
+  ],
+  "properties": {
+    "dibuat": {
+      "type": "string"
+    },
+    "sumber": {
+      "type": "string"
+    },
+    "n_trg": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_peneliti": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_ketua": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_trg_ketua": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_artikel": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

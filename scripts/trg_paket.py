@@ -71,11 +71,13 @@ lead = {}
 for u in R("peneliti_unik"):
     for sl in [x for x in u["ketua_slugs"].split(";") if x]:
         lead.setdefault(sl, []).append(u)
+dugaan = {(r["trg_slug"], r["nama"]) for r in csv.DictReader(open(f"{D}/ketua_diduga.csv", encoding="utf-8"))} if os.path.exists(f"{D}/ketua_diduga.csv") else set()
 rows = []
 for t in R("trg"):
     ls = lead.get(t["slug"], [])
     rows.append({"slug": t["slug"], "TRG": t["nama"], "fakultas": t["fakultas"],
                  "ketua": " | ".join(u["nama"] for u in ls) or "(belum terbaca dari situs)",
+                 "dasar": ("diduga (periksa)" if any((t["slug"], u["nama"]) in dugaan or any((t["slug"], x) in dugaan for x in [u["nama"]]) for u in ls) else "berlabel Leader di situs") if ls else "",
                  "peneliti_id": " | ".join(u["peneliti_id"] for u in ls),
                  "juga_anggota_di": " | ".join(x for u in ls for x in u["trg_slugs"].split(";") if x and x != t["slug"]),
                  "sinta_id": " | ".join(u["sinta_id"] for u in ls if u["sinta_id"]), "scopus_id": " | ".join(u["scopus_id"] for u in ls if u["scopus_id"])})

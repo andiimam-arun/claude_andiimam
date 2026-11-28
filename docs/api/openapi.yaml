@@ -1,0 +1,173 @@
+openapi: 3.1.0
+info:
+  title: API Peta Riset Unhas
+  version: 1.0.0
+  summary: Direktori peneliti dan TRG Universitas Hasanuddin (baca) dan isian profil TRG berkelanjutan (tulis).
+  description: |
+    Kontrak antara situs GloRI (Laravel) dan data Peta Riset.
+
+    **Mode statis.** Selama belum ada backend, berkas `/peta-riset/data/{peneliti,trg,tag,meta,insights}.json` memiliki bentuk yang sama
+    dengan badan respons di bawah (tanpa pembungkus `data`/`meta` halaman). Endpoint dinamis cukup mengembalikan bentuk yang sama,
+    sehingga antarmuka tidak perlu diubah.
+
+    **Privasi.** Data hanya memuat informasi yang sudah tampil publik di situs TRG. Email tidak pernah disertakan. Mahasiswa tidak dimuat.
+
+    **Pengujian kontrak.** `python3 scripts/trg_api_check.py` memeriksa berkas data terhadap skema di `schemas/`.
+    Implementasi rujukan: `scripts/trg_api_server.py`.
+servers:
+  - url: https://glori.unhas.ac.id/api/v1
+  - url: http://127.0.0.1:8780/api/v1
+    description: Server rujukan lokal
+security: []
+tags:
+  - name: Baca
+    description: Publik, tanpa autentikasi
+  - name: Isian
+    description: Memerlukan token; dipakai portal web ketua TRG
+paths:
+  /meta:
+    get:
+      tags: [Baca]
+      summary: Ringkasan dan tanggal pembuatan data
+      responses:
+        "200": {description: OK, content: {application/json: {schema: {$ref: "../../schemas/meta.schema.json"}}}}
+  /peneliti:
+    get:
+      tags: [Baca]
+      summary: Cari peneliti
+      description: Pencarian kata utuh pada nama, keahlian, TRG, dan tema (semua kata harus ada). Pengurutan dan sinonim ID/EN dilakukan di antarmuka atau mesin pencari produksi.
+      parameters:
+        - {name: q, in: query, schema: {type: string}, description: Kata kunci dipisah spasi}
+        - {name: klaster, in: query, schema: {type: string, enum: [Agro, Sosial, Sains-Teknik, Kesehatan, Vokasi, Multidisiplin]}}
+        - {name: tema, in: query, schema: {type: string, pattern: "^[A-D]\\d{2}$"}, description: Kode tema Tingkat 1}
+        - {name: trg, in: query, schema: {type: string}, description: Slug TRG}
+        - {name: ketua, in: query, schema: {type: string, enum: ["1"]}, description: Hanya ketua TRG}
+        - {name: punya_id, in: query, schema: {type: string, enum: ["1"]}, description: Hanya yang punya SINTA/Scopus/ORCID}
+        - {name: halaman, in: query, schema: {type: integer, minimum: 1, default: 1}}
+        - {name: per_halaman, in: query, schema: {type: integer, minimum: 1, maximum: 100, default: 20}}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data, meta]
+                properties:
+                  data: {type: array, items: {$ref: "../../schemas/peneliti.schema.json#/items"}}
+                  meta: {$ref: "#/components/schemas/Halaman"}
+        "400": {$ref: "#/components/responses/Galat"}
+  /peneliti/{id}:
+    get:
+      tags: [Baca]
+      summary: Satu peneliti
+      parameters: [{name: id, in: path, required: true, schema: {type: string, pattern: "^P\\d{5}$"}}]
+      responses:
+        "200": {description: OK, content: {application/json: {schema: {$ref: "../../schemas/peneliti.schema.json#/items"}}}}
+        "404": {$ref: "#/components/responses/Galat"}
+  /trg:
+    get:
+      tags: [Baca]
+      summary: Daftar TRG
+      parameters:
+        - {name: q, in: query, schema: {type: string}}
+        - {name: klaster, in: query, schema: {type: string}}
+        - {name: terverifikasi, in: query, schema: {type: string, enum: ["0", "1"]}, description: "1 = sudah dikonfirmasi ketua, 0 = belum"}
+        - {name: halaman, in: query, schema: {type: integer, minimum: 1, default: 1}}
+        - {name: per_halaman, in: query, schema: {type: integer, minimum: 1, maximum: 100, default: 20}}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data, meta]
+                properties:
+                  data: {type: array, items: {$ref: "../../schemas/trg.schema.json#/items"}}
+                  meta: {$ref: "#/components/schemas/Halaman"}
+  /trg/{slug}:
+    get:
+      tags: [Baca]
+      summary: Satu TRG beserta anggotanya
+      parameters: [{name: slug, in: path, required: true, schema: {type: string}}]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - {$ref: "../../schemas/trg.schema.json#/items"}
+                  - type: object
+                    properties: {anggota: {type: array, items: {$ref: "../../schemas/peneliti.schema.json#/items"}}}
+        "404": {$ref: "#/components/responses/Galat"}
+  /tema:
+    get:
+      tags: [Baca]
+      summary: 38 tema Tingkat 1 (draf taksonomi)
+      responses:
+        "200": {description: OK, content: {application/json: {schema: {$ref: "../../schemas/tag.schema.json"}}}}
+  /wawasan:
+    get:
+      tags: [Baca]
+      summary: Statistik tema, jaringan tema, kata kunci, dan (bila ada) metrik kualitas artikel
+      responses:
+        "200": {description: OK, content: {application/json: {schema: {$ref: "../../schemas/insights.schema.json"}}}}
+  /skema/profil-trg:
+    get:
+      tags: [Baca]
+      summary: Skema JSON isian profil TRG
+      responses:
+        "200": {description: OK, content: {application/json: {schema: {type: object}}}}
+  /trg/{slug}/profil:
+    parameters: [{name: slug, in: path, required: true, schema: {type: string}}]
+    get:
+      tags: [Isian]
+      summary: Profil awal untuk mengisi formulir web
+      description: Isian terbaru TRG bila ada; jika belum, profil yang dibentuk dari data situs (anggota, ID, tema) agar ketua cukup memeriksa dan melengkapi.
+      security: [{bearer: []}]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [sumber, profil]
+                properties:
+                  sumber: {type: string, enum: [isian_terbaru, data_situs]}
+                  profil: {$ref: "../../schemas/profil_trg.schema.json"}
+        "401": {$ref: "#/components/responses/Galat"}
+        "404": {$ref: "#/components/responses/Galat"}
+    post:
+      tags: [Isian]
+      summary: Kirim profil TRG
+      description: Satu pengiriman = profil lengkap. Isian terbaru menggantikan yang lama dan riwayat disimpan. Diolah oleh `scripts/trg_forms_ingest.py` menjadi koreksi (override), tabel mitra/pendanaan, dan penanda "terverifikasi".
+      security: [{bearer: []}]
+      requestBody:
+        required: true
+        content: {application/json: {schema: {$ref: "../../schemas/profil_trg.schema.json"}}}
+      responses:
+        "202":
+          description: Diterima untuk diolah
+          content: {application/json: {schema: {type: object, properties: {diterima: {type: boolean}, berkas: {type: string}}}}}
+        "401": {$ref: "#/components/responses/Galat"}
+        "404": {$ref: "#/components/responses/Galat"}
+        "413": {$ref: "#/components/responses/Galat"}
+        "415": {$ref: "#/components/responses/Galat"}
+        "422":
+          description: Isian tidak memenuhi skema
+          content: {application/json: {schema: {type: object, properties: {galat: {type: array, items: {type: object, properties: {jalur: {type: string}, pesan: {type: string}}}}}}}}
+components:
+  securitySchemes:
+    bearer: {type: http, scheme: bearer, description: "Token akun ketua TRG dari portal (/portal/login). Jangan pernah menaruhnya di halaman publik."}
+  schemas:
+    Halaman:
+      type: object
+      required: [halaman, per_halaman, total]
+      properties: {halaman: {type: integer}, per_halaman: {type: integer}, total: {type: integer}}
+  responses:
+    Galat:
+      description: Galat
+      content: {application/json: {schema: {type: object, properties: {galat: {}}}}}

@@ -1,0 +1,591 @@
+openalex_author,nama_openalex,karya,sitasi,kandidat_id,kandidat_nama,kandidat_trg
+A5012529212,Muhammad Nasrum Massi,381,3146,P02120,"Prof. dr. Muh. Nasrum Massi, Ph.D., Sp.MK(K).",biovax;neocare
+A5060795602,Abdul Salam,378,1158,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5066608699,Dahlang Tahir,375,5441,P01562,Dahlang Tahir,bionanocomposite
+A5070370814,Sukri Palutturi,320,859,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5079371224,Muhammad Basri,286,912,P01819,"Ir. Muhammad Basri, MT",mrcrg
+A5079371224,Muhammad Basri,286,912,P01827,Muh. Basri K.,rene
+A5006904855,Veni Hadju,285,1147,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5011945170,Agussalim Bukhari,246,2209,P02180,"Prof. Agussalim Bukhari, MD. M.Clin.Med, Ph.D.,Sp.GK,Subsp.KM",thecore;renalnutrition;stepmic
+A5009057862,Khairil Anwar,232,476,P01516,"Khairil Anwar, S.S., M.A.",mcrg
+A5038326653,Muhammad Nur,232,296,P01501,"Dr. Muh. Nur., S.Si., M.Si",f-analysis;fprg;mcrg;qft-rg
+A5078470415,Tuti Bahfiarti,227,234,P01220,"Prof. Dr. Tuti Bahfiarti, S.Sos. M.Si.",mediacom
+A5048490167,Firdaus Hamid,219,1400,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5073049256,Andi Nilawati Usman,211,961,P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",womenhealth-con
+A5074394598,Mardiana Ahmad,211,551,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5038301998,Muhammad Ruslin,209,1546,P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",idea;biodental-engineering
+A5090732768,Muhammad Akbar,199,1459,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5007138557,Ahyar Ahmad,197,879,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5065502561,Syamsu Alam,189,493,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5033444718,Darmawan Salman,186,819,P00157,Prof. Darmawan Salman,socialcap;blu-eco;safos
+A5103118615,Syamsu Alam,180,358,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5069229218,Siti Halimah Larekeng,177,721,P00771,"Prof. Dr. Ir. Siti Halimah Larekeng, SP.MP",karstbios
+A5061731693,Yunus Musa,160,641,P00146,Prof. Dr. Yunus Musa,rice-rg;csva
+A5039550047,Syafruddin Syarif,155,567,P01774,"Prof. Dr. Ir. Syafruddin Syarif, MT (Teknik Elektro)",sssn
+A5069361379,Gemini Alam,150,526,P00285,"Prof. Dr. Gemini Alam, M.Si., Apt",mnprg;nutrifeed;ohcirg;pbnp
+A5034535606,Amil Ahmad Ilham,143,500,P01894,"Prof. Dr. Ir. Amil Ahmad Ilham, S.T., M.IT",cdm;cyberiot
+A5079273583,Fridawaty Rivai,140,249,P02488,"Dr. Fridawaty Rivai, SKM., M.Kes",hospbiz
+A5047190186,Mukti Zainuddin,136,1132,P00578,Prof. Mukti Zainuddin,tfed;fiterg
+A5064410921,Andani Achmad,136,372,P02344,"Prof. Dr. Ir. Andani Achmad., S.T., M.T.",idea
+A5038515093,Aini Indrijawati,134,128,P01124,"Dr. Aini Indrijawati, S.E., M.Si., Ak., CA., CWM., Asean CPA.",finra
+A5056714439,Sri Sundari,129,128,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5073969750,Yahya Thamrin,129,386,P02492,"Prof. Yahya Thamrin, SKM., M.Kes., MOHS., Ph.D.",isoshrg
+A5063221478,Mursalim Nohong,128,222,P01144,"Prof. Dr. Mursalim Nohong, S.E., M.Si., CWM®.",bus-trans
+A5112564031,Muhammad Ridwan,128,503,P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",aisrg
+A5112564031,Muhammad Ridwan,128,503,P01240,"Muhammad Ridwan, SS., MA",cpcd
+A5112890036,Abdul Salam,127,581,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5083354849,Miswar Tumpu,110,473,P01782,Dr. Miswar Tumpu,se-engineering
+A5006966211,Jeanny Maria Fatimah,106,98,P01221,"Prof. Dr. Jeanny Maria Fatimah, M.Si.",mediacom
+A5047064958,Asri Usman,101,115,P01100,"Prof. Dr. Asri Usman, SE., M.Si., Ak.CA., CRA., CRP",corporate-gover
+A5058440545,Abigail Mary Moore,101,872,P00539,Dr. Abigail Mary Moore,ambioc
+A5101659516,Muhammad Nur,99,265,P01501,"Dr. Muh. Nur., S.Si., M.Si",f-analysis;fprg;mcrg;qft-rg
+A5008105617,Gita Vita Soraya,97,1420,P02206,"dr. Gita Vita Soraya, Ph.D, Sp.N",neurogenetics
+A5044593913,Ansar Suyuti,97,315,P01912,"Prof. Dr. Ir. H. Ansar Suyuti, M.T., IPU",energy-e-conser
+A5019126795,Ida Leida Maria,94,204,P02594,"Prof. Ida Leida Maria, S.KM., M.KM., MSc.PH.",se-ncd
+A5015262735,Adi Maulana,92,521,P02117,Prof. Adi Maulana,crem
+A5071746080,Dwia Aries Tina Pulubuhu,91,341,P01236,"Prof. Dr. Dwia Aries Tina Pulubuhu, MA",cpcd
+A5079498576,Muhammad Altin Massinai,89,115,P01641,"Dr. Muh. Altin Massinai, M.T.Surv.",glohamod
+A5069070887,Akin Duli,88,369,P01483,Prof. Dr. Akin Duli,prepodyreg
+A5077007352,Baharuddin Hamzah,87,357,P01946,"Prof. Baharuddin Hamzah, ST., M.Arch, PhD",build-acoustics;urbinfrastructur-r
+A5031587605,Elly Wahyudin,86,851,P02671,Elly Wahyudin,ufrg
+A5050015382,Ilham Alimuddin,85,298,P01577,Dr. Ilham Alimuddin,climatebmd;icchealth
+A5078198232,Idayanti Nursyamsi,84,200,P01096,"Prof.Dr. Idayanti Nursyamsi,SE,M.Si",emccrg
+A5103114951,Muhammad Basri,82,76,P01819,"Ir. Muhammad Basri, MT",mrcrg
+A5103114951,Muhammad Basri,82,76,P01827,Muh. Basri K.,rene
+A5054596655,Shinta Werorilangi,81,2000,P00526,"Dr. Ir. Shinta Werorilangi, M.Sc",acuetox
+A5054596655,Shinta Werorilangi,81,2000,P00580,"Dr. Ir. Shinta Werorilangi, M.Sc",mprg
+A5054596655,Shinta Werorilangi,81,2000,P00679,Dr. Shinta Werorilangi,marsplan
+A5032795951,Muhammad Ridwan,79,289,P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",aisrg
+A5032795951,Muhammad Ridwan,79,289,P01240,"Muhammad Ridwan, SS., MA",cpcd
+A5008591816,Asmita Ahmad,78,182,P00089,"Dr. Ir. Asmita Ahmad, ST., M.Si",sophymicro;geosus
+A5010032247,Muhammad Yunus,77,135,P02009,Muhammad Yunus,flowliqtion
+A5085221444,Idawarni J. Asmal,75,119,P01996,"Prof. Dr. Ir. Idawarni Asmal, MT (NIP. 196507011994032001)",coastal-sr
+A5085221444,Idawarni J. Asmal,75,119,P02879,Dr. Hj. Idawarni . J. Asmal,urbinfrastructur-r
+A5089924426,Muhammad Raihan,75,265,P02694,Muhammad Raihan,mnprg;cbmc
+A5044779091,Muhammad Idrus Taba,74,137,P00991,"Prof.Dr. Muhammad Idrus Taba, SE,M.Si",emccrg;ppm
+A5065445623,Ahmad Faizal,74,230,P00581,Prof. Ahmad Faizal,marsplan;mprg
+A5001011895,Roland Barkey,72,250,P00847,"Dr. Ir. Roland A. Barkey, M.Sc",ddrg
+A5009890439,Andriany Qanitha,72,232,P02315,"dr. Andriany Qanitha, MSc, PhD, Sp.JP",cava-rg
+A5090547597,Muzakkir Amir,70,280,P02309,"Prof. Dr. Muzakkir Amir, Sp.JP(K)",cava-rg
+A5034589644,Sitti Nur Faridah,66,57,P00945,"Prof.Dr.Ir. Sitti Nur Faridah, MP.",swcerg
+A5042749336,Andi Tajrin,66,163,P02390,"Dr. drg. Andi Tajrin, M.kes., Sp.B.M.M., SubSp. C.O.M.(K)",oraclefrg
+A5081097968,Muhammad Syahid,66,118,P01823,"Dr. Muhammad Syahid, S.T.,M.T.",lightweight-mat;rene
+A5103006496,Veni Hadju,66,119,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5050040921,Andi Kurnia Bintang,63,98,P02207,"Prof. Dr. dr. Andi Kurnia Bintang, Sp.S(K), MARS",neurogenetics
+A5082428321,Anas Iswanto Anwar,63,97,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5075122638,Irda Handayani,62,100,P02122,"dr. Irda Handayani, Sp.PK, M.Kes",biovax
+A5003535970,Muhammad Restu,60,240,P02862,"Prof. Dr. Ir. Muh Restu, M.P",fortrebgen
+A5085485639,Muhammad Tamar,60,373,P02317,"Prof. Dr. Muhammad Tamar, M.Psi.",ioprg
+A5113207538,Sri Ramadhani,60,44,P02535,"Dr. dr. Sri Ramadhani, MSc",mc-nutrition
+A5050767189,Rachmat Hidayat,59,266,P00577,"Dr. Ir. Rachmat Hidayat, S.Pi.",fiterg;marsplan;tfed;tropicrab
+A5077124341,Retno Fitrianti,59,26,P01164,"Dr. Retno Fitrianti, SE., M.Si",msbd
+A5056193592,Samsu Arif,58,217,P01639,"Dr. Samsu Arif, M.Si.",glohamod
+A5063529735,Halmar Halide,58,356,P01576,"Halmar Halide, PhD",climatebmd
+A5045532214,Ema Alasiry,57,150,P02239,"Dr. dr. Ema Alasiry, Sp.A (K)",neocare;nnrg
+A5101159680,Andi Haris Muhammad,55,91,P02039,"Prof. Ir. Andi Haris Muhammad, ST., MT., PhD",float-struc
+A5035378330,Ahsan Yunus,54,95,P01410,"Ahsan Yunus, S.H., M.H.",constitution;seaj
+A5059635222,Novaty Eny Dungga,53,84,P00063,"Dr. Ir. Novaty Eny Dungga, MP.",futropicrops;safos
+A5108815280,Hamzah Halim,53,73,P01388,"Prof. Dr. Hamzah Halim, S.H., M.H., M.A.P",rg2
+A5004689087,Muhammad Aswad,52,262,P02692,"Prof. Muhammad Aswad, S.Si., M.Si., Ph.D., Apt.",cbmc
+A5033268118,Fuad Mahfud Assidiq,50,68,P02041,"Ir. Fuad Mahfud Assidiq, ST., MT., IPM",float-struc
+A5114068895,Amir Ilyas,50,115,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5101967356,Faisal Amir,49,114,P00639,Dr. Faisal Amir,tropicrab
+A5013661924,Syamsu Rijal,48,110,P00845,"Prof. Dr. Ir. Syamsu Rijal, S.Hut., M.Si., IPU",ddrg
+A5104265760,Mahmud Achmad,46,90,P00207,"Dr. Ir. Mahmud Achmad, MSc",sqlm-rg
+A5053097289,Joko Hendarto,45,381,P02303,Joko Hendarto,pneumonia
+A5058698072,Ria Mardiana Yusuf,45,160,P01092,"Prof.Dr. Ria Mardiana Yusuf,SE,M.Si",emccrg
+A5063487648,Cepi Pahlevi,45,82,P00981,"Prof. Dr. Cepi Pahlevi, SE., MSi., CWM",fsarg;emccrg
+A5088498391,Sanusi Fattah,45,84,P01063,Sanusi Fattah,res-economics
+A5037371408,Abdullah Sanusi,44,90,P01176,"Abdullah Sanusi, S.E., M.B.A., Ph.D.",nms-rg
+A5103083243,Muhammad Hatta,44,51,P00493,"Dr. Muhammad Hatta, S.Pt., M.Si.",beefpro
+A5021223519,Sri Asriyani,40,18,P02329,Sri Asriyani,medi-edu
+A5041160547,Nurmala Sari,39,37,P02522,Nurmala Sari,icchealth
+A5046122686,Nasrum Massi,39,34,P02185,"Prof. Nasrum Massi, MD, Ph.D, Sp.MK(K)",thecore
+A5153483105,Yahya Thamrin,39,0,P02492,"Prof. Yahya Thamrin, SKM., M.Kes., MOHS., Ph.D.",isoshrg
+A5072471033,Irfan Sugianto,37,92,P02339,Irfan Sugianto,aio-rg;biodental-engineering
+A5114037360,Sri Suryani,36,418,P01624,"Prof. Dr. Sri Suryani, DEA",ngenergy;msm-rg
+A5078625359,Najdah Hidayah,35,59,P02121,Dr. dr. Najdah Hidayah,biovax;malvecsis
+A5114037830,Achmad Bakri Muhiddin,35,57,P01741,"Prof. Achmad Bakri Muhiddin, Ph.D.",ggerg
+A5007123253,Sawedi Muhammad,33,34,P00160,"Dr. Sawedi Muhammad, M.Sc",cnrm;ermrg;safos
+A5007123253,Sawedi Muhammad,33,34,P02034,"Dr. Sawedi Muhammad S.Sos., M.Sc.",fdmrg
+A5079518550,Sartika Laban,33,70,P00208,"Sartika Laban, S.P., M.P., PhD",sqlm-rg
+A5080002878,Irwandi Rachman,33,37,P02601,Irwandi Rachman,se-ncd
+A5101426169,Muhammad Akbar,32,76,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5101762402,Abdul Salam,32,98,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5110704078,Muhammad Ikbal,32,24,P00827,Muhammad Ikbal,wildev
+A5110704078,Muhammad Ikbal,32,24,P01033,"A. Muhammad Ikbal, S.M.",mdrg
+A5057423262,Dian Ekawaty,31,32,P01212,"Dian Ekawaty, S.IP., M.A",depadis
+A5057587921,Andi Nurlela,31,7,P01230,"Andi Nurlela, S.Sos., M.Si",cnrm;drg
+A5027067792,Evi Aprianti,30,1187,P01795,"Evi Aprianti, PhD",urbinfrastructur-r;sri
+A5036404339,Gemini Alam,29,95,P00285,"Prof. Dr. Gemini Alam, M.Si., Apt",mnprg;nutrifeed;ohcirg;pbnp
+A5077862267,Sri Nur Aminah,27,23,P00116,Sri Nur Aminah,imppd
+A5068526610,Ahmad Fauzan Adzima,26,38,P00059,"Ahmad Fauzan Adzima, S.P., M.Sc.",futropicrops;safos;sop-land;sophymicro
+A5109463221,Sutinah Made,26,18,P00637,Prof. Dr. Sutinah Made,tropicrab
+A5021111195,Muhammad Yunus,24,14,P02009,Muhammad Yunus,flowliqtion
+A5084199383,Nurul Mutmainnah,24,136,P02374,Nurul Mutmainnah,adhentisrg
+A5087906722,Ahyar Ahmad,23,22,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5112384533,Dahlang Tahir,23,61,P01562,Dahlang Tahir,bionanocomposite
+A5121971980,Sri Sundari,23,1,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5020823892,M. Fadhlirrahman Latief,22,25,P00480,"Dr. M. Fadhlirrahman Latief, S.Pt., M.Si.",feedtech
+A5034755720,Hardianti Alimuddin,22,28,P01806,"Ir. Hardianti Alimuddin, S.T., M.Eng.",swm-rg
+A5101843614,Abdul Majid,22,87,P02773,Abdul Majid,hncd-rg
+A5114120390,Abdul Salam,22,355,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5137908147,Gita Vita Soraya,22,1,P02206,"dr. Gita Vita Soraya, Ph.D, Sp.N",neurogenetics
+A5086699353,Isnawati Osman,21,23,P01048,"Isnawati Osman, SE., M.Buss",hrm
+A5068875680,Grace Theresia Pontoh,20,4,P01182,"Prof. Dr. Grace Theresia Pontoh, S.E., Ak., M.Si., CA",ais-rg
+A5104189160,Abdul Azis,20,45,P00930,"Dr. Abdul Azis, STP, M.Si",proagritech
+A5014455927,Salman Samir,19,17,P00094,"Salman Samir, SE, M.Sc​",geosus;icchealth;islamicfrg
+A5067319618,Nobu Sutra,19,69,P00547,Sutra Nobu,ambioc
+A5111143188,Irfan Saputra,19,33,P00740,"Irfan Saputra, S.Hut, M.Hut",forestsociety
+A5005079550,Muhammad Ikbal,18,14,P00827,Muhammad Ikbal,wildev
+A5005079550,Muhammad Ikbal,18,14,P01033,"A. Muhammad Ikbal, S.M.",mdrg
+A5041250730,Abdul Salam,18,25,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5036651110,Nurmala Sari,17,3,P02522,Nurmala Sari,icchealth
+A5047035957,Alfian Zainuddin,17,5,P02201,"Dr. dr. Alfian Alfian Zainuddin, MKM",renalnutrition
+A5103911056,Palutturi Sukri,17,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5114464866,Vicram Setiawan,16,94,P01690,"Vicram Setiawan, S.Si.",msm-rg
+A5002813678,Ainun Mawaddah Abdal,15,14,P01654,"Ainun Mawaddah Abdal, S.Si, M.Si",asds
+A5064385892,Ismail Iskandar,15,29,P01420,"Ismail Iskandar, S.H., M.H.",victory
+A5074083558,Ria Renita Abbas,15,10,P01246,"Dr. Ria Renita Abbas, S.Sos.,M.Si",cpcd
+A5111114380,A. Arsunan Arsin,15,9,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5112249587,Ni Made Viantika,15,48,P00260,"Ni Made Viantika, M.Agb",food-crops
+A5102732184,Rina Agustina,14,81,P02704,Rina Agustina,mnprg
+A5153267575,Yunus Musa,14,0,P00146,Prof. Dr. Yunus Musa,rice-rg;csva
+A5038916041,Nurlindah Hamrun,13,16,P02355,Nurlindah Hamrun,biodental-engineering
+A5115635892,Irfan Sugianto,13,1,P02339,Irfan Sugianto,aio-rg;biodental-engineering
+A5118119996,Akin Duli,13,0,P01483,Prof. Dr. Akin Duli,prepodyreg
+A5126947967,Baharuddin Hamzah,13,1,P01946,"Prof. Baharuddin Hamzah, ST., M.Arch, PhD",build-acoustics;urbinfrastructur-r
+A5018761735,Lukman Kasim,12,3,P01845,"Ir. Lukman Kasim, ST., MT.",aerodyn
+A5048810127,Ahyar Ahmad,12,7,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5093036598,Andani Achmad,12,1,P02344,"Prof. Dr. Ir. Andani Achmad., S.T., M.T.",idea
+A5101720560,Mukti Zainuddin,12,67,P00578,Prof. Mukti Zainuddin,tfed;fiterg
+A5113370700,Muhammad Akbar,12,15,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5121362092,Sukri Palutturi,12,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5122198367,Andi Nilawati Usman,12,11,P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",womenhealth-con
+A5136875201,Miswar Tumpu,12,0,P01782,Dr. Miswar Tumpu,se-engineering
+A5138950283,Cepi Pahlevi,12,0,P00981,"Prof. Dr. Cepi Pahlevi, SE., MSi., CWM",fsarg;emccrg
+A5004104439,Jeriko Gormantara,11,13,P01536,"Jeriko Gormantara, S.Si, M.Si",algebra
+A5015134991,Ahmad Munir,11,7,P00946,"Prof.Dr.Ir. Ahmad Munir, M.Eng",swcerg
+A5052079467,Nur Alamzah,11,31,P01146,Nur Alamzah,bus-trans
+A5110617160,Abdul Salam,11,2,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5113356660,Irwan Ade Saputra,11,4,P01279,"Dr. Irwan Ade Saputra, S.IP., M.Si",empogo;govmo-soc
+A5116533540,Ulfah Najamuddin,11,38,P02475,"Ulfah Najamuddin, S.Si., M.Kes",food4nd
+A5121440910,Firdaus Hamid,11,0,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5128261569,Wadzibah Nas,11,23,P02863,Dr. Wadzibah Nas,blu-eco
+A5136328920,Muhammad Aswad,11,4,P02692,"Prof. Muhammad Aswad, S.Si., M.Si., Ph.D., Apt.",cbmc
+A5155088343,- Hasan Basri,11,0,P02534,"Dr. Hasan Basri, SKM",mc-nutrition
+A5005541143,Sulaeha Thamrin,10,23,P00284,"Dr. Ir. Sulaeha Thamrin, S.P., M.Si",pbnp
+A5015164675,Ade Ikhlas Amal Alam,10,3,P01127,"Ade Ikhlas Amal Alam, SE., MSA",smes
+A5021672833,Rijal Idrus,10,45,P02514,Rijal Idrus,icchealth
+A5050057428,Elly Wahyudin,10,9,P02671,Elly Wahyudin,ufrg
+A5059142946,Muhammad Akbar,10,31,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5083814880,Muhammad Nasrum Massi,10,3,P02120,"Prof. dr. Muh. Nasrum Massi, Ph.D., Sp.MK(K).",biovax;neocare
+A5088719137,Nurjannah Abdullah,10,2,P01237,"Nurjannah Abdullah, S.IP., M.A",cpcd
+A5124065675,Siti Halimah Larekeng,10,3,P00771,"Prof. Dr. Ir. Siti Halimah Larekeng, SP.MP",karstbios
+A5153562610,Andi Kurnia Bintang,10,0,P02207,"Prof. Dr. dr. Andi Kurnia Bintang, Sp.S(K), MARS",neurogenetics
+A5005775632,Nurul Mutmainnah,9,2,P02374,Nurul Mutmainnah,adhentisrg
+A5038472782,Andi Tajrin,9,5,P02390,"Dr. drg. Andi Tajrin, M.kes., Sp.B.M.M., SubSp. C.O.M.(K)",oraclefrg
+A5111301179,Muhammad Fadil Hidayat,9,1,P02341,"Muhammad Fadil Hidayat, drg., Sp.RKG",aio-rg;biodental-engineering;rdrg
+A5137559317,Sri Sundari,9,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5138088823,Muhammad Ruslin,9,0,P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",idea;biodental-engineering
+A5153567685,Muhammad Akbar,9,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5012271137,Abdul Majid,8,3,P02773,Abdul Majid,hncd-rg
+A5024004334,Muhammad Syahid,8,7,P01823,"Dr. Muhammad Syahid, S.T.,M.T.",lightweight-mat;rene
+A5038213751,Muhammad Ruslin,8,6,P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",idea;biodental-engineering
+A5040209345,Wahyu Chandra,8,28,P01311,"Wahyu Chandra, S.IP., M.Si",busan
+A5109667679,Samsu Arif,8,5,P01639,"Dr. Samsu Arif, M.Si.",glohamod
+A5110686197,Syamsu Rijal,8,41,P00845,"Prof. Dr. Ir. Syamsu Rijal, S.Hut., M.Si., IPU",ddrg
+A5112197464,Ahmad Munir,8,0,P00946,"Prof.Dr.Ir. Ahmad Munir, M.Eng",swcerg
+A5113943281,Rizky Utami,8,10,P00096,"Rizky Utami, SE., M.Acc.Fin., Ak​",corpaudit;geosus;islamicfrg;sca
+A5134961340,Veni Hadju,8,2,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5138878917,Mursalim Nohong,8,0,P01144,"Prof. Dr. Mursalim Nohong, S.E., M.Si., CWM®.",bus-trans
+A5155533898,Veni Hadju,8,2,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5155936435,Muhammad Ridwan,8,0,P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",aisrg
+A5155936435,Muhammad Ridwan,8,0,P01240,"Muhammad Ridwan, SS., MA",cpcd
+A5156002886,Muhammad Ikbal,8,0,P00827,Muhammad Ikbal,wildev
+A5156002886,Muhammad Ikbal,8,0,P01033,"A. Muhammad Ikbal, S.M.",mdrg
+A5017526510,Syamsul Alam,7,0,P02737,Syamsul Alam,indofootcare
+A5020872165,Mukti Zainuddin,7,30,P00578,Prof. Mukti Zainuddin,tfed;fiterg
+A5030811065,Abdul Haris,7,1,P00626,"Prof. Dr. Ir. Abdul Haris, M.Si.",bite-fish;srcrg
+A5037573386,Muhammad Fauzan Garantjang,7,6,P01125,"Muhammad Fauzan Garantjang, S.E., M.Ak., Ak., ACPA",corpaudit;smes
+A5043882019,Nurul Azizah,7,3,P01885,Nurul Azizah R.,wte
+A5103911032,Hadju Veni,7,13,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5113354103,Abdul Azis,7,0,P00930,"Dr. Abdul Azis, STP, M.Si",proagritech
+A5119721565,Andi Nurlela,7,0,P01230,"Andi Nurlela, S.Sos., M.Si",cnrm;drg
+A5138960510,Baginda Hamzah,7,0,P00788,"Baginda Hamzah, S.T., M.B.A.",finra;multifor;nms-rg
+A5153612203,Muzakkir Amir,7,0,P02309,"Prof. Dr. Muzakkir Amir, Sp.JP(K)",cava-rg
+A5026850431,Adi Maulana,6,6,P02117,Prof. Adi Maulana,crem
+A5040267593,Muhammad Febriansyah,6,8,P01248,Dr. Muhammad Febriansyah,cpcd
+A5113351908,Rizky Utami,6,1,P00096,"Rizky Utami, SE., M.Acc.Fin., Ak​",corpaudit;geosus;islamicfrg;sca
+A5117329029,Syamsu Alam,6,0,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5117545311,Balqis Shintarahayu,6,1,P01737,Balqis Shintarahayu,fderg
+A5124354330,Muhammad Akbar,6,1,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5139528745,Muhammad Zakir,6,0,P01587,"Dr. Muhammad Zakir, M.Si",f-analysis;fprg
+A5092526990,Sanusi Fattah,5,1,P01063,Sanusi Fattah,res-economics
+A5101243631,Muhammad Alwi Akbar,5,0,P00341,Muhammad Alwi Akbar,idlfrg
+A5106972526,Hardiyanti Syarif,5,0,P02709,"apt. Hardiyanti Syarif, M.Farm",PharmaEpid
+A5109465664,Ahmad Mardiana,5,9,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5113916177,Muhammad Nasrum Massi,5,2,P02120,"Prof. dr. Muh. Nasrum Massi, Ph.D., Sp.MK(K).",biovax;neocare
+A5114473273,Abdul Azis,5,32,P00930,"Dr. Abdul Azis, STP, M.Si",proagritech
+A5115499234,Evi Aprianti,5,5,P01795,"Evi Aprianti, PhD",urbinfrastructur-r;sri
+A5119163359,Baginda Hamzah,5,0,P00788,"Baginda Hamzah, S.T., M.B.A.",finra;multifor;nms-rg
+A5119584909,Ade Ikhlas Amal Alam,5,1,P01127,"Ade Ikhlas Amal Alam, SE., MSA",smes
+A5121407159,Sultan Suhab,5,1,P01136,"Dr. Sultan Suhab, S.E., M.Si.",dege-rg
+A5121451094,Mahmud Achmad,5,0,P00207,"Dr. Ir. Mahmud Achmad, MSc",sqlm-rg
+A5122307450,Muhammad Ridwan,5,0,P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",aisrg
+A5122307450,Muhammad Ridwan,5,0,P01240,"Muhammad Ridwan, SS., MA",cpcd
+A5123832780,Muhammad I. BASRI,5,0,P01819,"Ir. Muhammad Basri, MT",mrcrg
+A5123832780,Muhammad I. BASRI,5,0,P01827,Muh. Basri K.,rene
+A5130748658,Ahyar Ahmad,5,2,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5134798979,Muhammad Yunus,5,0,P02009,Muhammad Yunus,flowliqtion
+A5137111581,Muhammad Altin Massinai,5,0,P01641,"Dr. Muh. Altin Massinai, M.T.Surv.",glohamod
+A5147816555,Joko Hendarto,5,1,P02303,Joko Hendarto,pneumonia
+A5001943796,Muhammad Raihan,4,17,P02694,Muhammad Raihan,mnprg;cbmc
+A5035196414,Ilham Alimuddin,4,1,P01577,Dr. Ilham Alimuddin,climatebmd;icchealth
+A5047630375,Bahrul Hidayah,4,3,P01714,"Bahrul Hidayah, ST., M.T",ermrg
+A5109599644,M. Rijal Idrus,4,2,P02514,Rijal Idrus,icchealth
+A5111012084,Amrullah Amir,4,5,P01500,"Amrullah Amir, S.S., M.A., Ph.D",mcrg
+A5116930466,Fuad‐Mahfud Assidiq,4,0,P02041,"Ir. Fuad Mahfud Assidiq, ST., MT., IPM",float-struc
+A5117732763,Andi Faisal,4,0,P01472,"Dr. Andi Faisal., S.S., M. Hum",flcrg
+A5118458628,Sulaeha Thamrin,4,0,P00284,"Dr. Ir. Sulaeha Thamrin, S.P., M.Si",pbnp
+A5121454862,Syamsu Alam,4,0,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5123819750,Ahmad Faizal,4,0,P00581,Prof. Ahmad Faizal,marsplan;mprg
+A5124352604,M Z Muzakkir Amir,4,0,P02309,"Prof. Dr. Muzakkir Amir, Sp.JP(K)",cava-rg
+A5126868775,Sri ASRIYANI,4,0,P02329,Sri Asriyani,medi-edu
+A5128726291,Irwan Ade Saputra,4,1,P01279,"Dr. Irwan Ade Saputra, S.IP., M.Si",empogo;govmo-soc
+A5133885674,Firdaus HAMID,4,0,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5147884287,Muhammad Akbar,4,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5153798671,Achmad Bakri Muhiddin,4,0,P01741,"Prof. Achmad Bakri Muhiddin, Ph.D.",ggerg
+A5154723840,Sukri Palutturi,4,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5155188764,- Muhammad Ikbal,4,0,P00827,Muhammad Ikbal,wildev
+A5155188764,- Muhammad Ikbal,4,0,P01033,"A. Muhammad Ikbal, S.M.",mdrg
+A5156432965,Agussalim Bukhari,4,0,P02180,"Prof. Agussalim Bukhari, MD. M.Clin.Med, Ph.D.,Sp.GK,Subsp.KM",thecore;renalnutrition;stepmic
+A5158154029,Anas Iswanto Anwar,4,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5012379579,Dahlang Tahir,3,15,P01562,Dahlang Tahir,bionanocomposite
+A5017782979,Sartika Laban,3,0,P00208,"Sartika Laban, S.P., M.P., PhD",sqlm-rg
+A5032319865,Nurmala Sari,3,2,P02522,Nurmala Sari,icchealth
+A5033386521,Sutinah Made,3,7,P00637,Prof. Dr. Sutinah Made,tropicrab
+A5042841496,Sundari Sri,3,1,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5088796937,Usman Andi Nilawati,3,58,P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",womenhealth-con
+A5101040554,Abdul Azis,3,0,P00930,"Dr. Abdul Azis, STP, M.Si",proagritech
+A5103953317,Ahyar Ahmad,3,16,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5104025304,Syarif Syafruddin,3,57,P01774,"Prof. Dr. Ir. Syafruddin Syarif, MT (Teknik Elektro)",sssn
+A5117210410,Asmita Ahmad,3,0,P00089,"Dr. Ir. Asmita Ahmad, ST., M.Si",sophymicro;geosus
+A5117325012,Ahmad Fauzan,3,0,P00842,Ahmad Fauzan,termite
+A5119006525,Sri Suryani,3,0,P01624,"Prof. Dr. Sri Suryani, DEA",ngenergy;msm-rg
+A5119408212,SUTRA NOBU,3,0,P00547,Sutra Nobu,ambioc
+A5121081422,Najdah Hidayah,3,0,P02121,Dr. dr. Najdah Hidayah,biovax;malvecsis
+A5122739645,Rina Agustina,3,1,P02704,Rina Agustina,mnprg
+A5127956946,Muhammad Zakir,3,2,P01587,"Dr. Muhammad Zakir, M.Si",f-analysis;fprg
+A5128342467,Syafruddin Syarif,3,0,P01774,"Prof. Dr. Ir. Syafruddin Syarif, MT (Teknik Elektro)",sssn
+A5130987186,Khairil Anwar,3,0,P01516,"Khairil Anwar, S.S., M.A.",mcrg
+A5132604860,Ridwan Mochtar Thaha,3,0,P02598,"Dr. Ridwan Mochtar Thaha, M.Sc",se-ncd
+A5134965956,Abdul Salam,3,2,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5138842973,Abdullah Sanusi,3,0,P01176,"Abdullah Sanusi, S.E., M.B.A., Ph.D.",nms-rg
+A5139032895,A.Hermina Julyaningsih,3,0,P00894,"A. Hermina Julyaningsih, STP., M.Si",fone-rg
+A5140462301,- Nur Alamzah,3,0,P01146,Nur Alamzah,bus-trans
+A5154595975,Syamsu Alam,3,0,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5154679941,Muhammad Ridwan,3,0,P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",aisrg
+A5154679941,Muhammad Ridwan,3,0,P01240,"Muhammad Ridwan, SS., MA",cpcd
+A5155214160,Ahsan Yunus,3,0,P01410,"Ahsan Yunus, S.H., M.H.",constitution;seaj
+A5155909423,Halmar Halide,3,0,P01576,"Halmar Halide, PhD",climatebmd
+A5156249898,Lukman Kasim,3,4,P01845,"Ir. Lukman Kasim, ST., MT.",aerodyn
+A5156743311,Abdul Majid,3,0,P02773,Abdul Majid,hncd-rg
+A5158152595,Asri Usman,3,0,P01100,"Prof. Dr. Asri Usman, SE., M.Si., Ak.CA., CRA., CRP",corporate-gover
+A5026773927,Nurjannah Abdullah,2,0,P01237,"Nurjannah Abdullah, S.IP., M.A",cpcd
+A5050834589,Nurjannah Abdullah,2,0,P01237,"Nurjannah Abdullah, S.IP., M.A",cpcd
+A5053417550,Sri Suryani,2,0,P01624,"Prof. Dr. Sri Suryani, DEA",ngenergy;msm-rg
+A5082091990,Suryani Sri,2,1,P01624,"Prof. Dr. Sri Suryani, DEA",ngenergy;msm-rg
+A5093822619,Ahmad Munir,2,0,P00946,"Prof.Dr.Ir. Ahmad Munir, M.Eng",swcerg
+A5094132880,Amrullah Amir,2,0,P01500,"Amrullah Amir, S.S., M.A., Ph.D",mcrg
+A5096147535,Asri Usman,2,0,P01100,"Prof. Dr. Asri Usman, SE., M.Si., Ak.CA., CRA., CRP",corporate-gover
+A5097083175,Nurul Ilmi,2,0,P01359,Nurul Ilmi,ctrg
+A5098578742,A. Roland Barkey,2,0,P00847,"Dr. Ir. Roland A. Barkey, M.Sc",ddrg
+A5104945507,Wahyu Chandra,2,0,P01311,"Wahyu Chandra, S.IP., M.Si",busan
+A5106606343,Sultan Suhab,2,3,P01136,"Dr. Sultan Suhab, S.E., M.Si.",dege-rg
+A5111344801,Irfan Saputra,2,10,P00740,"Irfan Saputra, S.Hut, M.Hut",forestsociety
+A5115401044,Salman Darmawan,2,2,P00157,Prof. Darmawan Salman,socialcap;blu-eco;safos
+A5116449422,Ulfah Najamuddin,2,1,P02475,"Ulfah Najamuddin, S.Si., M.Kes",food4nd
+A5116614244,Balqis Shintarahayu,2,0,P01737,Balqis Shintarahayu,fderg
+A5119772902,Muhammad Raihan,2,0,P02694,Muhammad Raihan,mnprg;cbmc
+A5122327927,Hasan Basri,2,1,P02534,"Dr. Hasan Basri, SKM",mc-nutrition
+A5122359383,Adi Maulana,2,0,P02117,Prof. Adi Maulana,crem
+A5122747852,Nurlindah Hamrun,2,0,P02355,Nurlindah Hamrun,biodental-engineering
+A5122984111,Jeriko - Gormantara,2,0,P01536,"Jeriko Gormantara, S.Si, M.Si",algebra
+A5123858418,Muhammad RAIHAN,2,0,P02694,Muhammad Raihan,mnprg;cbmc
+A5128703677,Wahyu Chandra,2,0,P01311,"Wahyu Chandra, S.IP., M.Si",busan
+A5128727360,Tuti Bahfiarti,2,0,P01220,"Prof. Dr. Tuti Bahfiarti, S.Sos. M.Si.",mediacom
+A5132855698,Muhammad Yunus,2,0,P02009,Muhammad Yunus,flowliqtion
+A5135456955,M. Nasrum MASSI,2,0,P02185,"Prof. Nasrum Massi, MD, Ph.D, Sp.MK(K)",thecore
+A5136425484,Muhammad Basri,2,0,P01819,"Ir. Muhammad Basri, MT",mrcrg
+A5136425484,Muhammad Basri,2,0,P01827,Muh. Basri K.,rene
+A5136647474,Muhammad Ruslin,2,0,P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",idea;biodental-engineering
+A5141703266,Mardiana Ahmad,2,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5143954223,Muhammad Nasrum Massi,2,0,P02120,"Prof. dr. Muh. Nasrum Massi, Ph.D., Sp.MK(K).",biovax;neocare
+A5146034789,Ansar Suyuti,2,0,P01912,"Prof. Dr. Ir. H. Ansar Suyuti, M.T., IPU",energy-e-conser
+A5149380446,Lukman Kasim,2,0,P01845,"Ir. Lukman Kasim, ST., MT.",aerodyn
+A5153230381,Restu Muhammad,2,0,P02862,"Prof. Dr. Ir. Muh Restu, M.P",fortrebgen
+A5153457805,Veni Hadju,2,0,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5153559682,Firdaus Hamid,2,0,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5153612448,Muhammad Ikbal,2,0,P00827,Muhammad Ikbal,wildev
+A5153612448,Muhammad Ikbal,2,0,P01033,"A. Muhammad Ikbal, S.M.",mdrg
+A5153681423,Muhammad Nasrum Massi,2,0,P02120,"Prof. dr. Muh. Nasrum Massi, Ph.D., Sp.MK(K).",biovax;neocare
+A5153976979,Achmad Bakri Muhiddin,2,0,P01741,"Prof. Achmad Bakri Muhiddin, Ph.D.",ggerg
+A5154376383,Hardiyanti Syarif,2,0,P02709,"apt. Hardiyanti Syarif, M.Farm",PharmaEpid
+A5154472208,Muhammad Yunus,2,0,P02009,Muhammad Yunus,flowliqtion
+A5154803424,Muhammad Yunus,2,0,P02009,Muhammad Yunus,flowliqtion
+A5155048817,Ainun Jariah,2,0,P02570,Ainun Jariah,nutritionmdp
+A5155095384,SUKRI PALUTTURI,2,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5155167776,Asri Usman,2,0,P01100,"Prof. Dr. Asri Usman, SE., M.Si., Ak.CA., CRA., CRP",corporate-gover
+A5155633845,Amil Ahmad Ilham,2,0,P01894,"Prof. Dr. Ir. Amil Ahmad Ilham, S.T., M.IT",cdm;cyberiot
+A5155762565,Muhammad Akbar,2,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5156158619,Rakhmat Nurul Prima Nugraha,2,0,P01139,"Rakhmat Nurul Prima Nugraha, SE., M.Sc",dege-rg
+A5156329227,Ida Leida Maria,2,0,P02594,"Prof. Ida Leida Maria, S.KM., M.KM., MSc.PH.",se-ncd
+A5156514753,Nur Fadilah,2,0,P02801,"Nur Fadilah, S.Kep., Ns., MN.",pednrg
+A5156566992,A. Arsunan Arsin,2,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5156603049,Muhammad Akbar,2,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5157010619,Jeriko Gormantara,2,0,P01536,"Jeriko Gormantara, S.Si, M.Si",algebra
+A5157377770,Muhammad Akbar,2,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5157832145,Sri Sundari,2,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5158036348,Ahmad Faizal,2,0,P00581,Prof. Ahmad Faizal,marsplan;mprg
+A5158615855,Fridawaty RIVAI,2,0,P02488,"Dr. Fridawaty Rivai, SKM., M.Kes",hospbiz
+A5159200837,Abdul Haris,2,0,P00626,"Prof. Dr. Ir. Abdul Haris, M.Si.",bite-fish;srcrg
+A5001060894,Jeanny Fatimah Maria,1,1,P01221,"Prof. Dr. Jeanny Maria Fatimah, M.Si.",mediacom
+A5005179933,Syamsiar R Russeng,1,0,P02609,"Prof. Dr.dr.Syamsiar S. Russeng, MS",workfasma
+A5008798779,A. Bahrul Hidayah,1,1,P01714,"Bahrul Hidayah, ST., M.T",ermrg
+A5013124519,Tina Pulubuhu Dwia Aries,1,4,P01236,"Prof. Dr. Dwia Aries Tina Pulubuhu, MA",cpcd
+A5033705279,Alfian Zainuddin A.A,1,6,P02201,"Dr. dr. Alfian Alfian Zainuddin, MKM",renalnutrition
+A5044486526,S. Russeng Syamsiar,1,4,P02609,"Prof. Dr.dr.Syamsiar S. Russeng, MS",workfasma
+A5052006233,Soraya Gita Vita,1,0,P02206,"dr. Gita Vita Soraya, Ph.D, Sp.N",neurogenetics
+A5064294493,Syamsu Alam H,1,0,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5087337451,Mardiana Yusuf Ria,1,2,P01092,"Prof.Dr. Ria Mardiana Yusuf,SE,M.Si",emccrg
+A5091783264,Idrus Taba Muhammad,1,1,P00991,"Prof.Dr. Muhammad Idrus Taba, SE,M.Si",emccrg;ppm
+A5092014041,S. Ni Made Viantika,1,1,P00260,"Ni Made Viantika, M.Agb",food-crops
+A5093787987,Salman Samir,1,2,P00094,"Salman Samir, SE, M.Sc​",geosus;icchealth;islamicfrg
+A5094297740,Ainun Jariah,1,1,P02570,Ainun Jariah,nutritionmdp
+A5095871181,Abdal Ainun Mawaddah,1,0,P01654,"Ainun Mawaddah Abdal, S.Si, M.Si",asds
+A5097421786,Handayani Irda,1,3,P02122,"dr. Irda Handayani, Sp.PK, M.Kes",biovax
+A5099106688,Hardianti Alimuddin,1,1,P01806,"Ir. Hardianti Alimuddin, S.T., M.Eng.",swm-rg
+A5100499261,Muhammad Febriansyah,1,0,P01248,Dr. Muhammad Febriansyah,cpcd
+A5102701932,Nurjannah Abdullah,1,0,P01237,"Nurjannah Abdullah, S.IP., M.A",cpcd
+A5107127007,Evi Aprianti,1,0,P01795,"Evi Aprianti, PhD",urbinfrastructur-r;sri
+A5107509477,Wadzibah Nas,1,0,P02863,Dr. Wadzibah Nas,blu-eco
+A5108781766,Veni Hadju,1,1,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5112971918,Maria Leida Ida,1,1,P02594,"Prof. Ida Leida Maria, S.KM., M.KM., MSc.PH.",se-ncd
+A5115444652,Sri Nur Aminah,1,0,P00116,Sri Nur Aminah,imppd
+A5116001115,Ahmad Azhari Arif,1,0,P00955,Ahmad Azhari Arif,biofoodpack
+A5116152319,Muhammad Narya Febrian,1,0,P01446,Muhammad Narya Febrian,bl-rg
+A5116282636,Syamsul Alam,1,0,P02737,Syamsul Alam,indofootcare
+A5116744713,Azis Abdul,1,0,P00930,"Dr. Abdul Azis, STP, M.Si",proagritech
+A5116744887,Nur Faridah Sitti,1,2,P00945,"Prof.Dr.Ir. Sitti Nur Faridah, MP.",swcerg
+A5116840504,Ismail Iskandar,1,0,P01420,"Ismail Iskandar, S.H., M.H.",victory
+A5117210437,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5117238892,Rakhmat Nurul Prima Nugraha,1,0,P01139,"Rakhmat Nurul Prima Nugraha, SE., M.Sc",dege-rg
+A5117504215,FAISAL AMIR,1,0,P00639,Dr. Faisal Amir,tropicrab
+A5118874449,Rina Agustina,1,0,P02704,Rina Agustina,mnprg
+A5119104864,M. Retno Fitrianti,1,0,P01164,"Dr. Retno Fitrianti, SE., M.Si",msbd
+A5119977769,Sri Rahayu,1,0,P00515,"Sri Rahayu, S.Kel.",albiorg
+A5120089777,Taufik Hidayat,1,0,P01170,"Taufik Hidayat, SE., M.Si",msbd
+A5120173495,Ema Alasiry,1,0,P02239,"Dr. dr. Ema Alasiry, Sp.A (K)",neocare;nnrg
+A5121117539,DIAN EKAWATY,1,0,P01212,"Dian Ekawaty, S.IP., M.A",depadis
+A5121125962,Syamsu Alam,1,0,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5122353197,Abdul Haris S,1,0,P00626,"Prof. Dr. Ir. Abdul Haris, M.Si.",bite-fish;srcrg
+A5123822493,Arsunan A. ARSIN,1,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5124795249,M. Iqbal Djawad,1,0,P00524,"Prof. Ir. Iqbal Djawad, M.Sc, PhD",acuetox
+A5124795249,M. Iqbal Djawad,1,0,P00714,"Prof. Ir. M. Iqbal Djawad, M.Sc., Ph.D",tila-techrg
+A5125346766,Gemini Alam,1,0,P00285,"Prof. Dr. Gemini Alam, M.Si., Apt",mnprg;nutrifeed;ohcirg;pbnp
+A5125349730,Asmita Ahmad,1,0,P00089,"Dr. Ir. Asmita Ahmad, ST., M.Si",sophymicro;geosus
+A5127782709,Asmita Ahmad,1,0,P00089,"Dr. Ir. Asmita Ahmad, ST., M.Si",sophymicro;geosus
+A5127844154,Mukti Zainuddin,1,1,P00578,Prof. Mukti Zainuddin,tfed;fiterg
+A5128732593,Nurul Ilmi,1,0,P01359,Nurul Ilmi,ctrg
+A5128794724,Dian Ekawaty,1,0,P01212,"Dian Ekawaty, S.IP., M.A",depadis
+A5130059170,Muhammad Nur Nasyrah R,1,1,P01573,Muhammad Nur Nasyrah,bionanocomposite
+A5133867310,A. Alfian ZAINUDDIN,1,0,P02201,"Dr. dr. Alfian Alfian Zainuddin, MKM",renalnutrition
+A5133914883,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5135099608,Hermina Julyaningsih,1,0,P00894,"A. Hermina Julyaningsih, STP., M.Si",fone-rg
+A5135370774,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5135427573,Mardiana AHMAD,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5135886057,Muhammad Ruslin,1,0,P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",idea;biodental-engineering
+A5136348385,Isnawati Osman,1,0,P01048,"Isnawati Osman, SE., M.Buss",hrm
+A5136476715,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5136847484,Hamzah Halim,1,0,P01388,"Prof. Dr. Hamzah Halim, S.H., M.H., M.A.P",rg2
+A5137538150,Muhammad Ridwan,1,0,P00276,"Muhammad Ridwan, S.TP., M.Sc, Ph.D",aisrg
+A5137538150,Muhammad Ridwan,1,0,P01240,"Muhammad Ridwan, SS., MA",cpcd
+A5138601813,Rachmat Hidayat,1,0,P00577,"Dr. Ir. Rachmat Hidayat, S.Pi.",fiterg;marsplan;tfed;tropicrab
+A5138658128,Sri N. RAMADHANI,1,0,P02535,"Dr. dr. Sri Ramadhani, MSc",mc-nutrition
+A5138887296,Retno Fitrianti,1,0,P01164,"Dr. Retno Fitrianti, SE., M.Si",msbd
+A5139987422,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5140710347,Ahmad Azhari Arif,1,0,P00955,Ahmad Azhari Arif,biofoodpack
+A5140780998,Muhammad Hatta,1,0,P00493,"Dr. Muhammad Hatta, S.Pt., M.Si.",beefpro
+A5141384505,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5141550718,Siti Halimah Larekeng,1,0,P00771,"Prof. Dr. Ir. Siti Halimah Larekeng, SP.MP",karstbios
+A5144146831,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5144183787,Munir Ahmad,1,0,P00946,"Prof.Dr.Ir. Ahmad Munir, M.Eng",swcerg
+A5144434583,R. Muhammad Nur Nasyrah.,1,1,P01573,Muhammad Nur Nasyrah,bionanocomposite
+A5146698482,Hasan Basri,1,0,P02534,"Dr. Hasan Basri, SKM",mc-nutrition
+A5147339593,Syamsu Alam,1,0,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5148815850,Andani Achmad,1,0,P02344,"Prof. Dr. Ir. Andani Achmad., S.T., M.T.",idea
+A5150032096,Sukri PALUTTURI,1,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5150800228,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5150859426,Firdaus Hamid,1,0,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5152336998,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5152376142,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5152414321,Adi Maulana,1,0,P02117,Prof. Adi Maulana,crem
+A5152736693,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5152820005,Irfan Saputra,1,0,P00740,"Irfan Saputra, S.Hut, M.Hut",forestsociety
+A5152829539,Nurjannah Abdullah,1,0,P01237,"Nurjannah Abdullah, S.IP., M.A",cpcd
+A5152929061,Dahlang Tahir,1,0,P01562,Dahlang Tahir,bionanocomposite
+A5152961703,Muhammad Raihan,1,0,P02694,Muhammad Raihan,mnprg;cbmc
+A5152963124,Muhammad Akbar,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5153281846,Nur Fadilah,1,0,P02801,"Nur Fadilah, S.Kep., Ns., MN.",pednrg
+A5153293661,Nur Fadilah,1,0,P02801,"Nur Fadilah, S.Kep., Ns., MN.",pednrg
+A5153596911,Adi Maulana,1,0,P02117,Prof. Adi Maulana,crem
+A5153660792,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5153682296,Firdaus Hamid,1,0,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5154033722,Gemini Alam,1,0,P00285,"Prof. Dr. Gemini Alam, M.Si., Apt",mnprg;nutrifeed;ohcirg;pbnp
+A5154261427,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5154278694,Muhammad Nur,1,0,P01501,"Dr. Muh. Nur., S.Si., M.Si",f-analysis;fprg;mcrg;qft-rg
+A5154308303,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5154350076,Rina Agustina,1,0,P02704,Rina Agustina,mnprg
+A5154355289,Sri Sundari,1,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5154398356,WADZIBAH NAS,1,0,P02863,Dr. Wadzibah Nas,blu-eco
+A5154478883,Veni Hadju,1,0,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5154481389,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5154505842,Asri Usman,1,0,P01100,"Prof. Dr. Asri Usman, SE., M.Si., Ak.CA., CRA., CRP",corporate-gover
+A5154507911,Amir Ilyas,1,0,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5154539646,Nurmala Sari,1,0,P02522,Nurmala Sari,icchealth
+A5154543520,Hasan Basri,1,0,P02534,"Dr. Hasan Basri, SKM",mc-nutrition
+A5154569498,Ishaq Rahman,1,0,P01239,"Ishaq Rahman, , M.Si",cpcd
+A5154570859,Arsunan A. Arsin,1,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5154591301,Sukri Palutturi,1,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5154609411,Hamzah Halim,1,0,P01388,"Prof. Dr. Hamzah Halim, S.H., M.H., M.A.P",rg2
+A5154622438,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5154641539,Amir Ilyas,1,0,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5154701789,Amir Ilyas,1,0,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5154705688,Hamzah Halim,1,0,P01388,"Prof. Dr. Hamzah Halim, S.H., M.H., M.A.P",rg2
+A5154721885,Andi Nilawati Usman,1,0,P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",womenhealth-con
+A5154748031,Irfan Sugianto,1,0,P02339,Irfan Sugianto,aio-rg;biodental-engineering
+A5154757967,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5154760672,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5154797292,Veni Hadju,1,0,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5154822271,Hamzah Halim,1,0,P01388,"Prof. Dr. Hamzah Halim, S.H., M.H., M.A.P",rg2
+A5154862883,Andi Nilawati Usman,1,0,P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",womenhealth-con
+A5154900869,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5154903243,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5154910496,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5154988140,Khairil Anwar,1,0,P01516,"Khairil Anwar, S.S., M.A.",mcrg
+A5155057241,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5155078787,Abdul Majid,1,0,P02773,Abdul Majid,hncd-rg
+A5155085411,S. Nurul Azizah,1,0,P01885,Nurul Azizah R.,wte
+A5155109068,Muhammad Alwi Akbar,1,0,P00341,Muhammad Alwi Akbar,idlfrg
+A5155116511,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5155185370,Muhammad Akbar,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5155198179,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5155231959,Sri Ramadhani,1,0,P02535,"Dr. dr. Sri Ramadhani, MSc",mc-nutrition
+A5155232033,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5155261278,Amir Ilyas,1,0,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5155324831,Sri Sundari,1,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5155413222,Nurlindah Hamrun,1,0,P02355,Nurlindah Hamrun,biodental-engineering
+A5155455917,IRWANDI RACHMAN,1,0,P02601,Irwandi Rachman,se-ncd
+A5155484787,ABDUL SALAM,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5155488830,Nurmala Sari,1,0,P02522,Nurmala Sari,icchealth
+A5155517722,Taufik Hidayat,1,0,P01170,"Taufik Hidayat, SE., M.Si",msbd
+A5155532412,Nurmala Sari,1,0,P02522,Nurmala Sari,icchealth
+A5155623871,Syamsu Alam,1,1,P00778,"Prof. Dr. Syamsu Alam, SE., M.Si",smes;multifor
+A5155648185,VICRAM SETIAWAN,1,0,P01690,"Vicram Setiawan, S.Si.",msm-rg
+A5155652465,Hasan Basri,1,0,P02534,"Dr. Hasan Basri, SKM",mc-nutrition
+A5155657166,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5155692366,Amir Ilyas,1,0,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5155701012,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5155704935,Sri Rahayu,1,0,P00515,"Sri Rahayu, S.Kel.",albiorg
+A5155722734,Sukri Palutturi,1,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5155726078,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5155739648,Sukri Palutturi,1,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5155798509,A. Arsunan Arsin,1,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5155887075,Irwan Ade Saputra,1,0,P01279,"Dr. Irwan Ade Saputra, S.IP., M.Si",empogo;govmo-soc
+A5155934066,Abigail Mary Moore,1,0,P00539,Dr. Abigail Mary Moore,ambioc
+A5155947532,ASRI USMAN,1,0,P01100,"Prof. Dr. Asri Usman, SE., M.Si., Ak.CA., CRA., CRP",corporate-gover
+A5155972018,A. Arsunan Arsin,1,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5155977065,TUTI BAHFIARTI,1,0,P01220,"Prof. Dr. Tuti Bahfiarti, S.Sos. M.Si.",mediacom
+A5155989116,Sri Sundari,1,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5156047816,Ahsan Yunus,1,0,P01410,"Ahsan Yunus, S.H., M.H.",constitution;seaj
+A5156110244,Sutinah Made,1,0,P00637,Prof. Dr. Sutinah Made,tropicrab
+A5156142907,Agussalim Bukhari,1,0,P02180,"Prof. Agussalim Bukhari, MD. M.Clin.Med, Ph.D.,Sp.GK,Subsp.KM",thecore;renalnutrition;stepmic
+A5156156112,Veni Hadju,1,0,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5156165378,Sukri Palutturi,1,0,P02503,"Prof. Sukri Palutturi, SKM, M.Kes., MSc.PH, Ph.D.",urbhealth;ihmrg
+A5156212955,Veni Hadju,1,0,P02533,"Prof. dr. Veni Hadju, MSc, PhD",mc-nutrition
+A5156216453,Ilham Alimuddin,1,0,P01577,Dr. Ilham Alimuddin,climatebmd;icchealth
+A5156241658,Andi NilawatI Usman,1,0,P02892,"Dr.Andi Nilawati Usman, S.K.M., M.Kes.",womenhealth-con
+A5156257096,Muhammad Akbar,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5156258916,Sri Rahayu,1,6,P00515,"Sri Rahayu, S.Kel.",albiorg
+A5156258923,Muhammad Fadil Hidayat,1,0,P02341,"Muhammad Fadil Hidayat, drg., Sp.RKG",aio-rg;biodental-engineering;rdrg
+A5156302295,Syamsiar Russeng,1,0,P02609,"Prof. Dr.dr.Syamsiar S. Russeng, MS",workfasma
+A5156320139,Sartika Laban,1,0,P00208,"Sartika Laban, S.P., M.P., PhD",sqlm-rg
+A5156344972,Ilham Alimuddin,1,0,P01577,Dr. Ilham Alimuddin,climatebmd;icchealth
+A5156355249,Andani Achmad,1,0,P02344,"Prof. Dr. Ir. Andani Achmad., S.T., M.T.",idea
+A5156377923,Ishaq Rahman,1,0,P01239,"Ishaq Rahman, , M.Si",cpcd
+A5156433398,Muhammad Aswad,1,0,P02692,"Prof. Muhammad Aswad, S.Si., M.Si., Ph.D., Apt.",cbmc
+A5156462436,Ria Renita Abbas,1,0,P01246,"Dr. Ria Renita Abbas, S.Sos.,M.Si",cpcd
+A5156573554,Syamsiar S. Russeng,1,0,P02609,"Prof. Dr.dr.Syamsiar S. Russeng, MS",workfasma
+A5156576580,Ridwan Mochtar Thaha,1,0,P02598,"Dr. Ridwan Mochtar Thaha, M.Sc",se-ncd
+A5156654873,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5156662152,Novaty Eny Dungga,1,0,P00063,"Dr. Ir. Novaty Eny Dungga, MP.",futropicrops;safos
+A5156767956,Sri Sundari,1,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5156772451,Agussalim Bukhari,1,0,P02180,"Prof. Agussalim Bukhari, MD. M.Clin.Med, Ph.D.,Sp.GK,Subsp.KM",thecore;renalnutrition;stepmic
+A5156845465,Ahmad Fauzan,1,0,P00842,Ahmad Fauzan,termite
+A5156879745,ANDI FAISAL,1,0,P01472,"Dr. Andi Faisal., S.S., M. Hum",flcrg
+A5157109900,Muhammad Raihan,1,0,P02694,Muhammad Raihan,mnprg;cbmc
+A5157240634,A. Arsunan Arsin,1,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5157270245,Irfan Sugianto,1,0,P02339,Irfan Sugianto,aio-rg;biodental-engineering
+A5157385025,Muhammad Raihan,1,0,P02694,Muhammad Raihan,mnprg;cbmc
+A5157424942,Sri Rahayu,1,0,P00515,"Sri Rahayu, S.Kel.",albiorg
+A5157462299,Ahmad Munir,1,0,P00946,"Prof.Dr.Ir. Ahmad Munir, M.Eng",swcerg
+A5157717796,Amir Ilyas,1,0,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5157731615,Idayanti Nursyamsi S.,1,0,P01096,"Prof.Dr. Idayanti Nursyamsi,SE,M.Si",emccrg
+A5157784503,Agussalim Bukhari,1,0,P02180,"Prof. Agussalim Bukhari, MD. M.Clin.Med, Ph.D.,Sp.GK,Subsp.KM",thecore;renalnutrition;stepmic
+A5157867431,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5157992328,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5157998924,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5158045453,Sri Sundari,1,0,P01102,"Dr. Sri Sundari, SE, AK, M.Si., CA",corporate-gover
+A5158072421,Ade Ikhlas Amal Alam,1,0,P01127,"Ade Ikhlas Amal Alam, SE., MSA",smes
+A5158085222,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5158095418,M. Nasrum Massi,1,0,P02185,"Prof. Nasrum Massi, MD, Ph.D, Sp.MK(K)",thecore
+A5158099511,Aini Indrijawati,1,0,P01124,"Dr. Aini Indrijawati, S.E., M.Si., Ak., CA., CWM., Asean CPA.",finra
+A5158212828,Ahsan Yunus,1,0,P01410,"Ahsan Yunus, S.H., M.H.",constitution;seaj
+A5158215893,Sri Rahayu,1,0,P00515,"Sri Rahayu, S.Kel.",albiorg
+A5158217928,Rizky Utami,1,0,P00096,"Rizky Utami, SE., M.Acc.Fin., Ak​",corpaudit;geosus;islamicfrg;sca
+A5158224448,Ade Ikhlas Amal Alam,1,0,P01127,"Ade Ikhlas Amal Alam, SE., MSA",smes
+A5158413611,Baharuddin Hamzah,1,0,P01946,"Prof. Baharuddin Hamzah, ST., M.Arch, PhD",build-acoustics;urbinfrastructur-r
+A5158543052,Muhammad Akbar,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5158631479,Siti Halimah Larekeng,1,0,P00771,"Prof. Dr. Ir. Siti Halimah Larekeng, SP.MP",karstbios
+A5158656240,Ansar Suyuti,1,0,P01912,"Prof. Dr. Ir. H. Ansar Suyuti, M.T., IPU",energy-e-conser
+A5158676957,Muhammad Ruslin,1,0,P02342,"Prof. Muhammad Ruslin, drg., M.Kes., Ph.D., Sp.BMMf., Subsp.Ortognat.D.",idea;biodental-engineering
+A5158688291,Muhammad Narya Febrian A,1,0,P01446,Muhammad Narya Febrian,bl-rg
+A5158694475,Andani Achmad,1,0,P02344,"Prof. Dr. Ir. Andani Achmad., S.T., M.T.",idea
+A5158707548,Muhammad Fauzan Garantjang,1,0,P01125,"Muhammad Fauzan Garantjang, S.E., M.Ak., Ak., ACPA",corpaudit;smes
+A5158764335,Ade Ikhlas Amal Alam,1,0,P01127,"Ade Ikhlas Amal Alam, SE., MSA",smes
+A5158810252,Nur Fadilah,1,0,P02801,"Nur Fadilah, S.Kep., Ns., MN.",pednrg
+A5158813988,Muhammad Akbar,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5158928270,Andi Haris Muhammad,1,0,P02039,"Prof. Ir. Andi Haris Muhammad, ST., MT., PhD",float-struc
+A5159008174,Muhammad Tamar,1,0,P02317,"Prof. Dr. Muhammad Tamar, M.Psi.",ioprg
+A5159206379,A. Arsunan Arsin,1,0,P02587,"Prof. Dr. drg. A. Arsunan Arsin, M.Kes",ph-entomology
+A5159246825,M. Fadhlirrahman Latief,1,0,P00480,"Dr. M. Fadhlirrahman Latief, S.Pt., M.Si.",feedtech
+A5159442999,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5159688638,Amir Ilyas,1,1,P01383,"Prof. Dr. Amir Ilyas, S.H., M.H",criminological;fis-rg
+A5159768590,Muhammad AKBAR,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5159768829,Muhammad AKBAR,1,0,P01341,"Prof. dr. Muhammad Akbar, Ph.D. DFM, Sp.S(K)",neurogenetics;dims-rg
+A5159862492,Mardiana Ahmad,1,0,P02895,"Dr. Mardiana Ahmad, S.Si.T., M. Keb",womenhealth-con
+A5159913637,Khairil Anwar,1,1,P01516,"Khairil Anwar, S.S., M.A.",mcrg
+A5159950043,Abdul Salam,1,0,P02032,"Dr. Abdul Salam, SKM, M.Kes",hes;mc-nutrition
+A5159963551,Syamsu RIJAL,1,0,P00845,"Prof. Dr. Ir. Syamsu Rijal, S.Hut., M.Si., IPU",ddrg
+A5159969007,Firdaus HAMID,1,0,P02119,"Prof. Firdaus Hamid, M.D., Ph.D., Sp.MK (K)",bisa;stepmic
+A5160038865,Hamzah Halim,1,0,P01388,"Prof. Dr. Hamzah Halim, S.H., M.H., M.A.P",rg2
+A5160057227,Muhammad Yunus,1,0,P02009,Muhammad Yunus,flowliqtion
+A5160066283,Ahmad Fauzan Adzima,1,0,P00059,"Ahmad Fauzan Adzima, S.P., M.Sc.",futropicrops;safos;sop-land;sophymicro
+A5160123676,Ahyar Ahmad,1,0,P02123,"Prof. Dr. Ahyar Ahmad, M.Si",biovax
+A5160171353,Sanusi Fattah,1,0,P01063,Sanusi Fattah,res-economics
+A5160211728,Anas Iswanto Anwar,1,0,P01082,"Prof. Dr. Anas Iswanto Anwar, SE., MA., CWM., CRBC.",msbd;res-economics
+A5160229671,NOVATY ENY DUNGGA,1,0,P00063,"Dr. Ir. Novaty Eny Dungga, MP.",futropicrops;safos
+A5160271608,Andriany Qanitha,1,0,P02315,"dr. Andriany Qanitha, MSc, PhD, Sp.JP",cava-rg
+A5160278384,Ainun Jariah,1,0,P02570,Ainun Jariah,nutritionmdp
+A5160322233,Evi Aprianti,1,0,P01795,"Evi Aprianti, PhD",urbinfrastructur-r;sri

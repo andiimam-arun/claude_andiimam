@@ -25,17 +25,17 @@ coastal engineering,Coastal Engineering,7,2,Coastal Engineering
 nursing,Nursing Science,7,7,Nursing Science | Nursing
 health mental nursing,Mental health nursing,7,1,Mental health nursing | Mental Health Nursing
 biotechnology,Biotechnology,6,10,Biotechnology
-biology molecular,Molecular Biology,6,8,Molecular Biology
+biology molecular,Molecular Biology,6,9,Molecular Biology
 engineering water,Water Engineering,6,2,Water Engineering | Water Science Engineering
 management marketing,Marketing Management,6,8,Marketing Management
 accounting sustainability,Sustainability Accounting,6,8,Sustainability Accounting | and Sustainability Accounting
-development economic,Economic Development,6,6,Economic Development | Development economics | Development Economics
+development economic,Economic Development,6,5,Economic Development | Development economics | Development Economics
 researcher,Researchers,6,2,Researchers
+data,Data Science,6,2,Data Science
 fixed point theory,Fixed point theory,6,2,Fixed point theory
-data,Data Science,6,1,Data Science
 epidemiology,Epidemiology,6,13,Epidemiology | epidemiology
 clinical pharmacy,Clinical Pharmacy,6,5,Clinical Pharmacy | Clinical pharmacy
-immunology,Immunology,6,8,Immunology | immunology
+immunology,Immunology,6,9,Immunology | immunology
 pharmacology,Pharmacology,6,8,Pharmacology
 biological control,Biological Control,5,8,Biological Control | biological control
 pathology plant,Plant Pathology,5,5,Plant Pathology | Plant pathology
@@ -60,19 +60,20 @@ ecophysiology plant,Plant Ecophysiology,4,6,Plant Ecophysiology
 breeding rice,Rice Breeding,4,1,Rice Breeding
 chemistry natural product,Natural Product Chemistry,4,6,Natural Product Chemistry
 ecology forest,Forest Ecology,4,5,Forest Ecology
-anatomical pathology,Anatomical Pathology,4,4,Anatomical Pathology
 education,education,4,5,education | Education | and education
 innovation,innovation,4,5,innovation | and innovation
 behaviour organizational,Organizational Behaviour,4,2,Organizational Behaviour
 accounting public sector,Public Sector Accounting,4,3,Public Sector Accounting
 organization public,Public Organization,4,2,Public Organization
-scholar,Scholar,4,2,Scholar
 learning machine,Machine Learning,4,2,Machine Learning
 geochemistry,Geochemistry,4,3,Geochemistry
 analysis traffic urban,Urban Traffic Analysis,4,1,Urban Traffic Analysis
 conversion energy,Energy Conversion,4,1,Energy Conversion
-clinical nutrition,Clinical Nutrition,4,3,Clinical Nutrition | clinical nutrition
+anatomical pathology,Anatomical Pathology,4,2,Anatomical Pathology
+clinical nutrition,Clinical Nutrition,4,4,Clinical Nutrition | clinical nutrition
 neonatology,Neonatology,4,2,Neonatology
+scholar,Scholar,4,1,Scholar
+soil,Soil Science,3,7,Soil Science
 biotechnology breeding plant,Plant Breeding and Biotechnology,3,7,Plant Breeding and Biotechnology
 physiology plant,Plant Physiology,3,4,Plant Physiology
 engineering food,Food Engineering,3,3,Food Engineering | food engineering | Food engineering
@@ -82,6 +83,7 @@ agrotecnology,Agrotecnology,3,1,Agrotecnology
 integrated management pest,Integrated Pest Management,3,2,Integrated Pest Management
 agribusiness,Agribusiness,3,4,Agribusiness
 environmental,‪Environmental Science‬,3,4,‪Environmental Science‬ | Environmental science | environmental
+geotechnic,Geotechnics,3,2,Geotechnics
 animal breeding,Animal Breeding,3,1,Animal Breeding
 development,development,3,3,development | Development
 pharmaceutical,pharmaceutical science,3,2,pharmaceutical science | pharmaceuticals
@@ -93,21 +95,21 @@ fishery,Fisheries,3,3,Fisheries | Fisheries science
 forestry social,Social Forestry,3,1,Social Forestry
 conflict resolution,Conflict Resolution,3,2,Conflict Resolution | conflict resolution
 forest non product timber utilization,Utilization of Non-Timber Forest Products,3,1,Utilization of Non-Timber Forest Products
+chemistry food,Food Chemistry,3,3,Food Chemistry
 technical,technical,3,3,technical
 advice driven evidence,and evidence-driven advice,3,3,and evidence-driven advice
 management,Management,3,3,Management | management
 gender policy public,Gender and Public Policy,3,3,Gender and Public Policy | Public Policy and Gender
 expressed,expressed,3,2,expressed
 human law right,Human Right Law,3,4,Human Right Law | HUMAN RIGHTS LAW | Human Rights Law
-sinta,SINTA,3,2,SINTA
 archeology,Archeology,3,3,Archeology
 literature,Literature,3,2,Literature | literature
 philological specialist study,Specialist in Philological Studies,3,1,Specialist in Philological Studies
 analysis mathematical,Mathematical analysis,3,4,Mathematical analysis
+artificial intelligence,Artificial Intelligence,3,3,Artificial Intelligence | and Artificial Intelligence
 analysis functional,Functional Analysis,3,2,Functional Analysis
 health public,Public health,3,5,Public health | public health | Public Health
 biostatistic,Biostatistic,3,10,Biostatistic | Biostatistics
-artificial intelligence,Artificial Intelligence,3,2,Artificial Intelligence | and Artificial Intelligence
 environment,Environment,3,4,Environment | environment
 housing planning settlement,Housing and Settlement Planning,3,1,Housing and Settlement Planning
 geoteknik,Geoteknik,3,1,Geoteknik
@@ -121,23 +123,23 @@ internal medicine,Internal Medicine,3,2,Internal Medicine | Internal medicine
 pharmacognosy,Pharmacognosy,3,5,Pharmacognosy
 pulmonology,Pulmonology,3,1,Pulmonology
 assessment ehra environmental health risk,Environmental Health Risk Assessment (EHRA),3,2,Environmental Health Risk Assessment (EHRA) | and environmental health risk assessment (EHRA)
-medical nursing surgical,Medical Surgical Nursing,3,5,Medical Surgical Nursing
+sinta,SINTA,3,1,SINTA
+medical nursing surgical,Medical Surgical Nursing,3,4,Medical Surgical Nursing
 child development growth,Child Growth and Development,3,1,Child Growth and Development
 nursing pediatric,Pediatric Nursing,3,2,Pediatric Nursing
-soil,Soil Science,2,6,Soil Science
 agricultural,Agricultural Sciences,2,6,Agricultural Sciences | Agricultural science
 cocoa,cocoa,2,3,cocoa
 engineering food process,Food Process Engineering,2,2,Food Process Engineering
 disease epidemiology plant,Plant disease epidemiology,2,2,Plant disease epidemiology | Plant Disease Epidemiology
 agriculture economic socio,Socio Economic of agriculture,2,2,Socio Economic of agriculture | Socio-economics of agriculture
-harvest post technology,Post Harvest technology,2,8,Post Harvest technology | Post-harvest Technology
+harvest post technology,Post Harvest technology,2,5,Post Harvest technology | Post-harvest Technology
 culture plant tissue,Plant Tissue Culture,2,2,Plant Tissue Culture
 metabolite plant secondary,Plant Secondary Metabolites,2,2,Plant Secondary Metabolites | Plant Secondary Metabolite
 biology biotechnology molecular plant,Molecular Biology and Plant Biotechnology,2,2,Molecular Biology and Plant Biotechnology | Plant Molecular Biology and Biotechnology
 double fertilization,Double fertilization,2,2,Double fertilization
 crop physiology,Crops Physiology,2,4,Crops Physiology | Crop Physiology
 chemistry,Chemistry,2,3,Chemistry
-genesis landslide mineralogy soil,Soil Mineralogy for Genesis and Landslide,2,2,Soil Mineralogy for Genesis and Landslide
+genesis landslide mineralogy soil,Soil Mineralogy for Genesis and Landslide,2,3,Soil Mineralogy for Genesis and Landslide
 conservation soil water,Soil and Water Conservation,2,3,Soil and Water Conservation
 agroclimatology,Agroclimatology,2,4,Agroclimatology
 agronomy oil palm,Oil Palm Agronomy,2,1,Oil Palm Agronomy
@@ -147,7 +149,7 @@ biodiversity soil,Soil Biodiversity,2,1,Soil Biodiversity
 agriculture commodity economic socio value,Socio Economic Value of Agriculture Commodities,2,3,Socio Economic Value of Agriculture Commodities
 development sociology,Sociology of Development,2,4,Sociology of Development
 sociology,Sociology,2,5,Sociology
-food packaging,Food Packaging,2,5,Food Packaging
+paleoenvironment,Paleoenvironment,2,2,Paleoenvironment
 evaluation land survey,Survey and Land Evaluation,2,1,Survey and Land Evaluation
 pest product stored,Stored-Product Pest,2,2,Stored-Product Pest | Stored-Product Pests
 plant production,Plant Production,2,2,Plant Production | Plant production
@@ -161,7 +163,7 @@ conservation genetic,Conservation Genetics,2,3,Conservation Genetics
 forest pathology,Forest Pathology,2,1,Forest Pathology
 biology evolutionary,Evolutionary Biology,2,1,Evolutionary Biology
 taxonomy,Taxonomy,2,1,Taxonomy
-feed technology,Feed Science and Technology,2,3,Feed Science and Technology | feed technology
+feed technology,Feed Science and Technology,2,4,Feed Science and Technology | feed technology
 animal breeding genetic molecular,Animal Breeding and Molecular Genetic,2,4,Animal Breeding and Molecular Genetic
 breeding livestock,Livestock Breeding,2,2,Livestock Breeding
 genetic quantitative,Quantitative Genetics,2,2,Quantitative Genetics
@@ -184,7 +186,7 @@ food functional,Functional Food,2,1,Functional Food
 food processing,Food processing,2,3,Food processing | Food Processing
 sustainability,Sustainability,2,2,Sustainability
 interdisciplinary,Interdisciplinary Science,2,2,Interdisciplinary Science | interdisciplinary
-coral ecology reef,Coral Reef Ecology,2,5,Coral Reef Ecology
+coral ecology reef,Coral Reef Ecology,2,6,Coral Reef Ecology
 change climate,Climate change,2,3,Climate change | Climate Change
 ggerg team,GGERG Team,2,2,GGERG Team
 biology marine,Marine Biology,2,3,Marine Biology | Marine biology
@@ -208,11 +210,11 @@ collaboration,and collaboration,2,2,and collaboration | collaboration
 control food monitoring quality,Food Quality Control and Monitoring,2,3,Food Quality Control and Monitoring
 harvest post processing technology,Post Harvest Processing Technology,2,2,Post Harvest Processing Technology | Post-Harvest Processing Technology
 energy renewable,Renewable energy,2,2,Renewable energy | Renewable Energy
-chemistry food,Food Chemistry,2,2,Food Chemistry
 food nutrition,Food Science & Nutrition,2,2,Food Science & Nutrition | Food and Nutrition
 engineering food processing,Food Processing and Engineering,2,2,Food Processing and Engineering | Food Processing Engineering
 agroindustrial process technology,Agroindustrial Process Technology,2,1,Agroindustrial Process Technology
 engineering management resource water,Water Resources Engineering and Management,2,1,Water Resources Engineering and Management | Water Resources Engineering & Management
+food packaging,Food Packaging,2,1,Food Packaging
 m si,M.Si,2,2,M.Si
 human management resourch,Human resourch Management,2,3,Human resourch Management
 management risk,Risk Management,2,2,Risk Management
@@ -242,7 +244,6 @@ anthropology urban,Urban Anthropology,2,1,Urban Anthropology
 indigenous people,Indigenous People,2,1,Indigenous People
 psychology social,Social Psychology,2,2,Social Psychology
 leader,Leader,2,3,Leader
-researchgate,researchgate,2,2,researchgate
 environmental law,Environmental Law,2,2,Environmental Law | ENVIRONMENTAL LAW
 real simulation time,real-time simulation,2,2,real-time simulation
 configuration inverter,inverter configuration,2,2,inverter configuration
@@ -270,9 +271,8 @@ environmental transportation,Environmental Transportation,2,4,Environmental Tran
 environmental noise,Environmental Noise,2,3,Environmental Noise
 civil engineering,Civil Engineering,2,2,Civil Engineering | Teknik Sipil
 fluid mechanic,Fluid Mechanics,2,1,Fluid Mechanics
-architecture,Architecture,2,5,Architecture
+architecture,Architecture,2,2,Architecture
 lightweight material structure,Lightweight Material Structure,2,1,Lightweight Material Structure
-geotechnic,Geotechnics,2,1,Geotechnics
 liquefaction,Liquefaction,2,1,Liquefaction
 safety,safety,2,3,safety
 emission truck,Truck Emission,2,1,Truck Emission | Truck Emissions
@@ -294,8 +294,9 @@ immersive reality,Immersive Reality,2,3,Immersive Reality | Immersive reality
 biomedical,biomedical science,2,2,biomedical science
 coordination participant,participant coordination,2,1,participant coordination | and participant coordination
 field operation,and field operations,2,1,and field operations | field operations
-health occupational,Occupational Health,2,4,Occupational Health
+health occupational,Occupational Health,2,3,Occupational Health
 collaboration external,External Collaboration,2,1,External Collaboration
+researchgate,researchgate,2,1,researchgate
 microneedle,Microneedles,2,2,Microneedles
 chemistry pharmaceutical,Pharmaceutical Chemistry,2,2,Pharmaceutical Chemistry
 attitude,Attitudes,2,1,Attitudes
@@ -307,8 +308,8 @@ leste timor,Timor Leste,2,1,Timor Leste
 forensic medicine medicolegal specialist,Forensic Medicine and Medicolegal Specialist,2,1,Forensic Medicine and Medicolegal Specialist
 health women,Women Health,2,1,Women Health
 forest non product timber,Non-Timber Forest Products,1,3,Non-Timber Forest Products
-fertility soil,Soil Fertility,1,5,Soil Fertility | Soil fertility
-fertility sciencesoil soil,soil scienceSoil Fertility,1,5,soil scienceSoil Fertility
+fertility soil,Soil Fertility,1,6,Soil Fertility | Soil fertility
+fertility sciencesoil soil,soil scienceSoil Fertility,1,6,soil scienceSoil Fertility
 interaction microbe plant,plant-microbe interactions,1,5,plant-microbe interactions
 iot plant protection,IoT for plant protection,1,5,IoT for plant protection
 patology plant,Plant patology,1,5,Plant patology
@@ -317,13 +318,7 @@ pest plant,Plant Pest Science,1,5,Plant Pest Science
 biological control disease plant,Biological Control of Plant Diseases,1,5,Biological Control of Plant Diseases
 agricultural mycology,Agricultural Mycology,1,5,Agricultural Mycology
 biologi,Biologi,1,2,Biologi
-geomorphology,Geomorphology,1,4,Geomorphology
-classification soil,Soil Classification,1,4,Soil Classification
-characteristic gis soil,Soil Characteristics and GIS,1,4,Soil Characteristics and GIS
-geography,Geography,1,4,Geography
-conservation soil,Soil Conservation,1,4,Soil Conservation
-evaluation land planning use,Land Use Planning and Evaluation,1,4,Land Use Planning and Evaluation
-environmental land resource,Land Resources and Environmental,1,4,Land Resources and Environmental
+evaluation land planning use,Land Use Planning and Evaluation,1,2,Land Use Planning and Evaluation
 biological pathology plant,Plant Pathology and Biological Sciences,1,1,Plant Pathology and Biological Sciences
 microbiology molecular,Molecular Microbiology,1,1,Molecular Microbiology
 agroindustry,Agroindustry,1,1,Agroindustry
@@ -348,12 +343,16 @@ culture physiology plant tissue,Tissue Culture and Plant Physiology,1,1,Tissue C
 phisyc soil,Soil Phisycs,1,1,Soil Phisycs
 agronomy breeding plant,Agronomy and Plant Breeding,1,2,Agronomy and Plant Breeding
 crop ecology plant production,Plant Ecology and Crop Production,1,1,Plant Ecology and Crop Production
+geomorphology,Geomorphology,1,4,Geomorphology
+classification soil,Soil Classification,1,4,Soil Classification
+characteristic gis soil,Soil Characteristics and GIS,1,4,Soil Characteristics and GIS
+geography,Geography,1,4,Geography
+conservation soil,Soil Conservation,1,4,Soil Conservation
+environmental land resource,Land Resources and Environmental,1,4,Land Resources and Environmental
 agoclimatology,Agoclimatology,1,1,Agoclimatology
 abiotic stress,Abiotic Stress,1,1,Abiotic Stress
-food packaging product,Food Product and Packaging,1,8,Food Product and Packaging
-active packaging smart,Active and Smart Packaging,1,8,Active and Smart Packaging
-biotechnology food microbiology,Food Microbiology and Biotechnology,1,8,Food Microbiology and Biotechnology
-programming web,Web Programming,1,8,Web Programming
+food packaging product,Food Product and Packaging,1,5,Food Product and Packaging
+active packaging smart,Active and Smart Packaging,1,5,Active and Smart Packaging
 food,Food Science,1,1,Food Science
 postharvest technology,postharvest technology,1,1,postharvest technology
 palm sago,Sago Palm,1,2,Sago Palm
@@ -432,16 +431,24 @@ darmawan dr ir prof salman,Prof. Dr. Ir. Darmawan Salman,1,3,Prof. Dr. Ir. Darma
 adaptation based change climate community,community-based climate change adaptation,1,3,community-based climate change adaptation
 children food need special technology,Food Technology for Special Needs Children,1,1,Food Technology for Special Needs Children
 community conflict development sociology,Sociology of Conflict and Community Development,1,3,Sociology of Conflict and Community Development
+evaluation land,Land Evaluation,1,1,Land Evaluation
+genesis soil,and Soil Genesis,1,1,and Soil Genesis
+analyse data gis rs,RS & GIS data Analyses,1,1,RS & GIS data Analyses
+engineering geology,Engineering Geology,1,1,Engineering Geology
+disaster engineering geohazard management risk,Engineering Geohazards & Disaster Risk Management,1,1,Engineering Geohazards & Disaster Risk Management
+hydrology,Hydrology,1,1,Hydrology
+consultant individual,individual consultant,1,1,individual consultant
+lahan mitigasi sumberdaya,Mitigasi Sumberdaya Lahan,1,1,Mitigasi Sumberdaya Lahan
+land reclamation,Land Reclamation,1,1,Land Reclamation
 propagation vitro,In Vitro Propagation,1,1,In Vitro Propagation
 olericulture,Olericulture,1,1,Olericulture
 horticulture microbe,Horticulture Microbes,1,1,Horticulture Microbes
 team trophort,Trophort Team,1,1,Trophort Team
-focus food research security,Research Focus: Food Security,1,5,Research Focus: Food Security
-agriculture capital development social,Social Capital and Agriculture Development,1,5,Social Capital and Agriculture Development
-farming focus integrated research system,Research Focus: Integrated Farming System,1,5,Research Focus: Integrated Farming System
-co creation knowledge livestock production scale small,Knowledge Co-Creation and Small Scale Livestock Production,1,5,Knowledge Co-Creation and Small Scale Livestock Production
-development focus food research rural sociology,Research Focus : Food Sociology and Rural Development,1,5,Research Focus : Food Sociology and Rural Development
-coating edible film,Edible Film & Coating,1,5,Edible Film & Coating
+focus food research security,Research Focus: Food Security,1,1,Research Focus: Food Security
+agriculture capital development social,Social Capital and Agriculture Development,1,1,Social Capital and Agriculture Development
+farming focus integrated research system,Research Focus: Integrated Farming System,1,1,Research Focus: Integrated Farming System
+co creation knowledge livestock production scale small,Knowledge Co-Creation and Small Scale Livestock Production,1,1,Knowledge Co-Creation and Small Scale Livestock Production
+development focus food research rural sociology,Research Focus : Food Sociology and Rural Development,1,1,Research Focus : Food Sociology and Rural Development
 entrepreneurship,Entrepreneurship,1,2,Entrepreneurship
 agribusiness food management security,Agribusiness Management and Food Security,1,2,Agribusiness Management and Food Security
 agriculture development land planning rural use,Land Use Planning in Agriculture and Rural Development,1,1,Land Use Planning in Agriculture and Rural Development
@@ -510,7 +517,7 @@ cacao disease pod rot,Cacao Pod Rot Disease,1,1,Cacao Pod Rot Disease
 disease pest,Pests and Diseases,1,1,Pests and Diseases
 agricultural entomology,Agricultural Entomology,1,1,Agricultural Entomology
 bione team,BIONE Team,1,1,BIONE Team
-feed industry,Feed Industry,1,2,Feed Industry
+feed industry,Feed Industry,1,3,Feed Industry
 crop forage,Forage Crops,1,1,Forage Crops
 animal animal nutrition,Animal Science - Animal Nutrition,1,3,Animal Science - Animal Nutrition
 cattle consultant integrated oil palm system,Consultant (Integrated Cattle-Oil Palm System),1,1,Consultant (Integrated Cattle-Oil Palm System)
@@ -593,7 +600,7 @@ aquaculture fish nutrition,Fish Nutrition and Aquaculture,1,1,Fish Nutrition and
 fish nutritionfish,fish nutritionfish,1,1,fish nutritionfish
 aquaculturechemical,aquaculturechemical,1,1,aquaculturechemical
 biochemia,biochemia,1,1,biochemia
-aquaculture biotechnology,Biotechnology and Aquaculture,1,3,Biotechnology and Aquaculture
+aquaculture biotechnology,Biotechnology and Aquaculture,1,2,Biotechnology and Aquaculture
 bioprocessing,Bioprocessing,1,1,Bioprocessing
 biorefinery,Biorefinery,1,1,Biorefinery
 microalgae technology,Microalgae technology,1,1,Microalgae technology
@@ -606,6 +613,7 @@ aquatic product technology,Aquatic Product Technology,1,2,Aquatic Product Techno
 fishery material,Fisheries Materials,1,2,Fisheries Materials
 cultivation macro microalgae,Macro and Microalgae cultivation,1,2,Macro and Microalgae cultivation
 aquaculture quality water,Water Quality of Aquaculture,1,2,Water Quality of Aquaculture
+aquatic ecotoxicology specialist,Specialist in Aquatic Ecotoxicology,1,2,Specialist in Aquatic Ecotoxicology
 aquetox,AquEtox,1,1,AquEtox
 biodiversity marine,Marine Biodiversity,1,2,Marine Biodiversity
 bio ecology seagrass specialist,Specialist in Seagrass Bio-Ecology,1,1,Specialist in Seagrass Bio-Ecology
@@ -618,12 +626,11 @@ fishery management,Fisheries Management,1,1,Fisheries Management
 governance marine,Marine Governance,1,1,Marine Governance
 ecological modelling network social,Social-Ecological Network Modelling,1,1,Social-Ecological Network Modelling
 expert genetic,Expert in Genetics,1,3,Expert in Genetics
-ecology marine,Marine Ecology,1,5,Marine Ecology
-coral ecology marine reef,Marine ecology and coral reef,1,5,Marine ecology and coral reef
+ecology marine,Marine Ecology,1,6,Marine Ecology
+coral ecology marine reef,Marine ecology and coral reef,1,6,Marine ecology and coral reef
 fishery marine,Marine Fisheries,1,2,Marine Fisheries
 dynamic fishery population,Fisheries Population Dynamics,1,1,Fisheries Population Dynamics
 fishery remote sensing,Fisheries Remote Sensing,1,4,Fisheries Remote Sensing | Remote Sensing for Fisheries
-ecotoxicology marine,Marine ecotoxicology,1,4,Marine ecotoxicology
 capture fishery information management system,Capture Fisheries Management Information System,1,2,Capture Fisheries Management Information System
 fishery marine oceanography satellite,Satellite oceanography and marine fisheries …,1,2,Satellite oceanography and marine fisheries …
 ecotoxicology marine pollution,Marine Pollution and Ecotoxicology,1,1,Marine Pollution and Ecotoxicology
@@ -678,6 +685,7 @@ aim enhance productivity research to we,we aim to enhance productivity in resear
 teaching,teaching,1,1,teaching
 market sustainability,market sustainability,1,1,market sustainability
 marine remote sensing,Marine Remote Sensing,1,1,Marine Remote Sensing
+ecotoxicology marine,Marine ecotoxicology,1,1,Marine ecotoxicology
 earth,Earth Science,1,1,Earth Science
 fishery marine remote sensing,Marine Fisheries Remote Sensing,1,1,Marine Fisheries Remote Sensing
 economic fishery socio,Fisheries Socio-Economics,1,2,Fisheries Socio-Economics
@@ -749,7 +757,7 @@ phytophatology,Phytophatology,1,1,Phytophatology
 karstbiosociety team,KARSTBIOSOCIETY Team,1,1,KARSTBIOSOCIETY Team
 forest management,Forest Management,1,1,Forest Management
 economic forestry,Economic Forestry,1,2,Economic Forestry
-forest policy,Forest Policy,1,2,Forest Policy
+forest policy,Forest Policy,1,1,Forest Policy
 biology conservation ecology forest,Forest Ecology and Conservation Biology,1,3,Forest Ecology and Conservation Biology
 agroforestry,Agroforestry,1,1,Agroforestry
 entrepreneurship forestry,Forestry Entrepreneurship,1,1,Forestry Entrepreneurship
@@ -832,6 +840,7 @@ processing thermal,thermal processing,1,1,thermal processing
 fruit processing vegetable,Fruits and Vegetables Processing,1,1,Fruits and Vegetables Processing
 packaging smart,Smart Packaging,1,1,Smart Packaging
 analysis food processing,Food Analysis and Processing,1,2,Food Analysis and Processing
+biotechnology food microbiology,Food Microbiology and Biotechnology,1,1,Food Microbiology and Biotechnology
 environment sustainability,Environment & Sustainability,1,1,Environment & Sustainability
 biotechnology genomic,Biotechnology & Genomics,1,1,Biotechnology & Genomics
 engineering system,Engineering Systems,1,1,Engineering Systems
@@ -840,7 +849,7 @@ are interest main metabolism plant research secondary,Main research interests ar
 enzyme function relationship structure,structure-function relationships of enzymes,1,1,structure-function relationships of enzymes
 biochemistry food,Food Biochemistry,1,1,Food Biochemistry
 chemistry food microbiology,Food Chemistry and Microbiology,1,1,Food Chemistry and Microbiology
-analysis food technology,Food Technology and Analysis,1,2,Food Technology and Analysis
+analysis food technology,Food Technology and Analysis,1,1,Food Technology and Analysis
 agricultural engineering mechanical,Agricultural Mechanical Engineering,1,1,Agricultural Mechanical Engineering
 control instrumentation,Instrumentation and Control,1,2,Instrumentation and Control
 e lorosa orental timor universidade,Universidade Orental Timor Lorosa'e,1,1,Universidade Orental Timor Lorosa'e
@@ -849,6 +858,7 @@ industry partner,industry partners,1,1,industry partners
 engineering soil water,Soil and Water Engineering,1,1,Soil and Water Engineering
 agricultural management water,Agricultural Water Management,1,1,Agricultural Water Management
 irrigation smart,Smart Irrigation,1,1,Smart Irrigation
+coating edible film,Edible Film & Coating,1,1,Edible Film & Coating
 engineering food packaging packaging,Food Packaging & Packaging Engineering,1,1,Food Packaging & Packaging Engineering
 abdul dr habbe hamid prof,Prof. Dr. Abdul Hamid Habbe,1,1,Prof. Dr. Abdul Hamid Habbe
 finance islamic social,Islamic Social Finance,1,2,Islamic Social Finance
@@ -861,7 +871,6 @@ economic ethical finance practice,and ethical practices in economics and finance
 aligning ash maqasid shariah with,aligning with the maqasid ash-shariah,1,2,aligning with the maqasid ash-shariah
 smsrg team,SMSRG Team,1,2,SMSRG Team
 behavioral economic,Behavioral Economics,1,2,Behavioral Economics
-medical nursing palliative surgical,Medical Surgical Nursing: Palliative,1,4,Medical Surgical Nursing: Palliative
 development sustainable tourism,Sustainable Tourism Development,1,1,Sustainable Tourism Development
 marketing,Marketing,1,6,Marketing
 digital management marketing,Management and Digital Marketing,1,6,Management and Digital Marketing
@@ -876,9 +885,9 @@ accounting management public,Public Management Accounting,1,1,Public Management 
 accounting assurance sustainability sustainability,Sustainability Accounting and Sustainability Assurance,1,3,Sustainability Accounting and Sustainability Assurance
 accounting blue,Blue Accounting,1,1,Blue Accounting
 accounting corporate governance,Accounting and Corporate Governance,1,1,Accounting and Corporate Governance
-economic pembangunan perencanaan,Ekonomi Pembangunan dan Perencanaan,1,3,Ekonomi Pembangunan dan Perencanaan
 management strategic wealth,Strategic & Wealth Management,1,1,Strategic & Wealth Management
 management publik sektor strategic,Management Strategic Sektor Publik,1,1,Management Strategic Sektor Publik
+economic pembangunan perencanaan,Ekonomi Pembangunan dan Perencanaan,1,2,Ekonomi Pembangunan dan Perencanaan
 manajemen sain,Sains Manajemen,1,2,Sains Manajemen
 management operational,Operational Management,1,1,Operational Management
 chain management supply,Supply Chain Management,1,2,Supply Chain Management
@@ -1070,6 +1079,7 @@ community development international,and International Community Development,1,2,
 development inclusive,Inclusive Development,1,1,Inclusive Development
 cohesion social,social cohesion,1,1,social cohesion
 human security,and human security,1,1,and human security
+criminologist legal professional,Legal Professional and Criminologist,1,2,Legal Professional and Criminologist
 criminal health law law,Health Law and Criminal Law,1,3,Health Law and Criminal Law
 health law,Health Law,1,3,Health Law
 constitutional law,Constitutional Law,1,2,Constitutional Law
@@ -1116,7 +1126,6 @@ semantik,Semantik,1,1,Semantik
 sosiolinguistik,Sosiolinguistik,1,1,Sosiolinguistik
 psycholinguistic team,PSYCHOLINGUISTICS Team,1,1,PSYCHOLINGUISTICS Team
 linguistic specialist,Specialist in Linguistics,1,1,Specialist in Linguistics
-aquatic ecotoxicology specialist,Specialist in Aquatic Ecotoxicology,1,1,Specialist in Aquatic Ecotoxicology
 history local south specialist sulawesi,Specialist in Local History of South Sulawesi,1,1,Specialist in Local History of South Sulawesi
 archaeology prehistoric specialist,Specialist in Prehistoric Archaeology,1,4,Specialist in Prehistoric Archaeology
 oral specialit study tradition,Specialits in Oral Tradition Studies,1,1,Specialits in Oral Tradition Studies
@@ -1159,6 +1168,9 @@ at disease infectious medicine stanford univ,Medicine (Infectious Disease) at St
 fort manage rotterdam site,manage the Fort Rotterdam Site,1,1,manage the Fort Rotterdam Site
 archaeological leang leang park,Leang-Leang Archaeological Park,1,1,Leang-Leang Archaeological Park
 leang timpuseng,and Leang Timpuseng,1,1,and Leang Timpuseng
+computer,Computer Science,1,2,Computer Science
+distributed system,Distributed Systems,1,2,Distributed Systems
+algorithm,Algorithms,1,2,Algorithms
 b fixed generalized metric point space theory,Fixed Point Theory in Generalized b-metric Spaces,1,2,Fixed Point Theory in Generalized b-metric Spaces
 fixed point,Fixed Point,1,2,Fixed Point
 manaprochem team,MANAPROCHEM Team,1,1,MANAPROCHEM Team
@@ -1180,9 +1192,6 @@ actuarial,Actuarial Science,1,1,Actuarial Science
 computer vision,Computer Vision,1,1,Computer Vision
 health information system,Health Information System,1,3,Health Information System
 data health,Health Data Science,1,3,Health Data Science
-computer,Computer Science,1,1,Computer Science
-distributed system,Distributed Systems,1,1,Distributed Systems
-algorithm,Algorithms,1,1,Algorithms
 bayesian complex modelling modelling statistical system,complex systems modelling Bayesian statistical modelling,1,1,complex systems modelling Bayesian statistical modelling
 modelling sery time,Time Series Modelling,1,1,Time Series Modelling
 bayesian inference,Bayesian Inference,1,1,Bayesian Inference
@@ -1275,9 +1284,11 @@ analytic data media social,Social media and Data Analytics,1,1,Social media and 
 informatic social,Social Informatics,1,1,Social Informatics
 language processing,Language Processing,1,1,Language Processing
 analysis multimedia,Multimedia Analysis,1,1,Multimedia Analysis
+programming web,Web Programming,1,2,Web Programming
 intelligence system,Intelligence System,1,1,Intelligence System
 analytic data,Data Analytics,1,1,Data Analytics
 analysis computing intellegent,Intellegent Computing and Analysis,1,1,Intellegent Computing and Analysis
+energy management system,Energy Management Systems,1,2,Energy Management Systems
 sensor system,Sensor System,1,1,Sensor System
 distribution electrical power,Electrical Power Distribution,1,1,Electrical Power Distribution
 economic electrical engineering installation technology,Electrical Installation Technology and Engineering Economics,1,1,Electrical Installation Technology and Engineering Economics
@@ -1289,8 +1300,8 @@ efficiency energy energy technology,Energy Technology and Energy Efficiency,1,1,
 energy management,Energy Management,1,1,Energy Management
 power solar,and Solar Power,1,1,and Solar Power
 energy storage,Energy Storage,1,1,Energy Storage
-lightweight manufactur material,Lightweight Material Manufactur,1,5,Lightweight Material Manufactur
-lightweight manufacture material,Lightweight Material Manufacture,1,5,Lightweight Material Manufacture
+lightweight manufactur material,Lightweight Material Manufactur,1,2,Lightweight Material Manufactur
+lightweight manufacture material,Lightweight Material Manufacture,1,2,Lightweight Material Manufacture
 design planning urban,Urban Planning and Design,1,1,Urban Planning and Design
 city development planning waterfront,Waterfront City Planning and Development,1,1,Waterfront City Planning and Development
 disaster mitigation,and Disaster Mitigation,1,1,and Disaster Mitigation
@@ -1302,7 +1313,6 @@ carbonate sedimentology,Carbonate Sedimentology,1,1,Carbonate Sedimentology
 geology quaternary,Quaternary Geology,1,1,Quaternary Geology
 geohydrology,Geohydrology,1,1,Geohydrology
 geochemistry organic,Organic Geochemistry,1,1,Organic Geochemistry
-paleoenvironment,Paleoenvironment,1,1,Paleoenvironment
 sedimentology,Sedimentology,1,1,Sedimentology
 economic mineral,Economic Mineral,1,1,Economic Mineral
 geochemistry petroleum,Petroleum Geochemistry,1,1,Petroleum Geochemistry
@@ -1331,7 +1341,6 @@ slope stability,Slope Stability,1,1,Slope Stability
 exploration geophysic,Exploration of Geophysics,1,1,Exploration of Geophysics
 artificial energy intelligence renewable,Renewable Energy and Artificial Intelligence,1,1,Renewable Energy and Artificial Intelligence
 generation load management power,Power Generation and Load Management,1,1,Power Generation and Load Management
-energy management system,Energy Management Systems,1,1,Energy Management Systems
 energy hybrid system,Hybrid Energy Systems,1,1,Hybrid Energy Systems
 electrical engineering technology,Electrical Engineering Technology,1,1,Electrical Engineering Technology
 energy management renewable system,Renewable Energy Management Systems,1,1,Renewable Energy Management Systems
@@ -1418,6 +1427,8 @@ health medical professional,Medical and Health Professional,1,2,Medical and Heal
 cardiovascular physiology,Physiology (Cardiovascular),1,1,Physiology (Cardiovascular)
 pharmacology physiology,Physiology and Pharmacology,1,1,Physiology and Pharmacology
 most rg team,MOST-RG Team,1,1,MOST-RG Team
+insulin resistance,Insulin Resistance,1,3,Insulin Resistance
+obesity,Obesity,1,3,Obesity
 clinical nutrition specialist,Specialist of Clinical Nutrition Science,1,1,Specialist of Clinical Nutrition Science
 clinical email microbiology specialist,Specialist of Clinical Microbiology Email,1,1,Specialist of Clinical Microbiology Email
 mit,(MIT,1,1,(MIT
@@ -1425,8 +1436,6 @@ malaya univ,(Univ. of Malaya,1,1,(Univ. of Malaya
 hypertension nephrology,Nephrology-Hypertension,1,2,Nephrology-Hypertension
 nephrology,Nephrology,1,1,Nephrology
 rheumatology,Rheumatology,1,1,Rheumatology
-insulin resistance,Insulin Resistance,1,2,Insulin Resistance
-obesity,Obesity,1,2,Obesity
 consist group nephrologist this,this group consists of nephrologist,1,1,this group consists of nephrologist
 characterization isolation natural product,Natural Product Isolation and Characterization,1,3,Natural Product Isolation and Characterization
 aiming mutation novel to uncover,aiming to uncover novel mutations,1,1,aiming to uncover novel mutations
@@ -1558,6 +1567,7 @@ about focus information present research theme we,we present information about t
 research team,research teams,1,1,research teams
 as as publication various well,as well as various publications,1,1,as well as various publications
 book including,including books,1,1,including books
+aviation health occupational safety sector,Aviation Sector Occupational Health and Safety,1,2,Aviation Sector Occupational Health and Safety
 engineering safety,Safety Engineering,1,1,Safety Engineering
 biology moleculer,Moleculer Biology,1,1,Moleculer Biology
 orcid,ORCID,1,1,ORCID
@@ -1568,7 +1578,6 @@ control rat vector,Vector and Rat Control,1,1,Vector and Rat Control
 adolescent epidemiology health,Adolescent Health Epidemiology,1,1,Adolescent Health Epidemiology
 behavioral health promotion,Health Promotion and Behavioral Science,1,1,Health Promotion and Behavioral Science
 epidemiology global health,Epidemiology and Global Health,1,1,Epidemiology and Global Health
-aviation health occupational safety sector,Aviation Sector Occupational Health and Safety,1,1,Aviation Sector Occupational Health and Safety
 health health occupational occupational psychology,Occupational Health (Occupational Health & Psychology,1,1,Occupational Health (Occupational Health & Psychology
 hazard identification,Hazard Identification,1,1,Hazard Identification
 assessment control hirarc risk risk,Risk Assessment & Risk Control (HIRARC),1,1,Risk Assessment & Risk Control (HIRARC)
@@ -1637,15 +1646,12 @@ community evaluation knowledge pharmacist project,"Project: ""Evaluation of Comm
 perception,Perceptions,1,1,Perceptions
 association between complementary medicine project use,"Project: ""Association Between Complementary Medicine Use",1,1,"Project: ""Association Between Complementary Medicine Use"
 among epilepsy life patient quality with,"and Quality of Life Among Patients with Epilepsy""",1,1,"and Quality of Life Among Patients with Epilepsy"""
-malignant management wound,Malignant Wound Management,1,2,Malignant Wound Management
-healing theraphy wound,Wound Healing and Theraphy,1,2,Wound Healing and Theraphy
-diabetic foot ulcre,Diabetic Foot Ulcres,1,2,Diabetic Foot Ulcres
-care neuroscience palliative,Neuroscience and palliative care,1,2,Neuroscience and palliative care
 cronic disease,Cronic Disease,1,3,Cronic Disease | Cronic disease
 care efficacy management self self,Self Care Management and Self-Efficacy,1,3,Self Care Management and Self-Efficacy
 management selfcare,and Selfcare management,1,3,and Selfcare management
 fisioteraphy,Fisioteraphy,1,1,Fisioteraphy
 community family nursing,Community dan Family Nursing,1,2,Community dan Family Nursing
+medical nursing palliative surgical,Medical Surgical Nursing: Palliative,1,2,Medical Surgical Nursing: Palliative
 chronic community disease,chronic diseases in community,1,1,chronic diseases in community
 endocrinology,Endocrinology,1,1,Endocrinology
 biomolecular development herbal nursing,herbal development and biomolecular in nursing,1,1,herbal development and biomolecular in nursing
@@ -1663,6 +1669,7 @@ nursing pharmacology,and Pharmacology in Nursing,1,2,and Pharmacology in Nursing
 adolescent health mental,Mental Health in Adolescent,1,2,Mental Health in Adolescent
 disparity health,health disparities,1,1,health disparities
 health mental,Mental health,1,1,Mental health
+care neuroscience palliative,Neuroscience and palliative care,1,1,Neuroscience and palliative care
 care critical nursing,Critical Care Nursing,1,1,Critical Care Nursing
 cardiovascular critical,Cardiovascular Critical,1,1,Cardiovascular Critical
 acute care critical nursing,Acute and critical care nursing,1,1,Acute and critical care nursing
@@ -1691,6 +1698,9 @@ regency tojo una una,Tojo Una-Una Regency,1,1,Tojo Una-Una Regency
 psychologically,psychologically,1,1,psychologically
 socially,socially,1,1,socially
 consequently spiritually,and spiritually. Consequently,1,1,and spiritually. Consequently
+malignant management wound,Malignant Wound Management,1,1,Malignant Wound Management
+healing theraphy wound,Wound Healing and Theraphy,1,1,Wound Healing and Theraphy
+diabetic foot ulcre,Diabetic Foot Ulcres,1,1,Diabetic Foot Ulcres
 cancer center national,National Cancer Center,1,1,National Cancer Center
 a cancer global health issue major remain,Cancer remains a major global health issue,1,1,Cancer remains a major global health issue
 cancer common five globally most type,the five most common types of cancer globally,1,1,the five most common types of cancer globally
@@ -1705,7 +1715,6 @@ eco friendly marine tourism,eco-friendly marine tourism,1,1,eco-friendly marine 
 energy ocean renewable,renewable ocean energy,1,1,renewable ocean energy
 resource water,Water Resources,1,1,Water Resources
 coastal resilience settlement,Coastal Settlement Resilience,1,1,Coastal Settlement Resilience
-criminologist legal professional,Legal Professional and Criminologist,1,1,Legal Professional and Criminologist
 criminologist,Criminologist,1,1,Criminologist
 expert reserach statistic,Expert Reserach Statistic,1,1,Expert Reserach Statistic
 approach complementary,Complementary Approach,1,1,Complementary Approach

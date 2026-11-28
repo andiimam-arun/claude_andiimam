@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daftar TRG",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "slug",
+      "nama",
+      "fakultas",
+      "klaster",
+      "tag_ids",
+      "n_peneliti",
+      "n_publikasi",
+      "url",
+      "ketua",
+      "terverifikasi"
+    ],
+    "properties": {
+      "slug": {
+        "type": "string"
+      },
+      "nama": {
+        "type": "string"
+      },
+      "fakultas": {
+        "type": "string"
+      },
+      "klaster": {
+        "type": "string"
+      },
+      "tag": {
+        "type": "string"
+      },
+      "tag_ids": {
+        "type": "string"
+      },
+      "n_peneliti": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "pct_keahlian": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "pct_id": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "n_publikasi": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "n_buku": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "n_paten": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "n_proyek": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "masalah": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "ketua": {
+        "type": "string"
+      },
+      "terverifikasi": {
+        "type": "string",
+        "description": "Tanggal isian terakhir yang dikonfirmasi ketua (AAAA-BB-HH), kosong bila belum"
+      }
+    }
+  }
+}

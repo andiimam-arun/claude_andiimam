@@ -36,10 +36,18 @@ FACULTY_CLUSTER = {
 SECTIONS = {  # subhalaman -> nama keluaran
     "articles": "publikasi", "books": "buku", "patens": "paten", "research-project": "proyek",
 }
+# Nama halaman berbeda antar-TRG (mis. /our-team/ bukan /ourteam/). Dicoba berurutan sampai ada isi; hanya dipakai bila nama utama kosong.
+ALT = {
+    "ourteam": ["our-team", "team", "our-teams", "ourteam-2", "our-team-2", "the-team", "people", "members"],
+    "articles": ["article", "our-articles", "publications", "articles-2"],
+    "books": ["book", "books-2"],
+    "patens": ["patents", "paten", "patent", "patens-2"],
+    "research-project": ["projects", "research-projects", "project", "research-project-2"],
+}
 ROLE_WORDS = {"leader", "lecturers", "lecturer", "external collaborators", "external collaborator",
               "researchers", "researcher", "students", "student"}
 
-ROLE_RX = [(re.compile(r"^(group\s+)?leader(\s+group|\s+of\b.*|s)?$|^ketua\b|^head of", re.I), "Leader"),
+ROLE_RX = [(re.compile(r"^(group\s+)?leader(\s+group|\s+of\b.*|s)?$|^ketua\b|^head of|^(research\s+)?(group\s+)?(director|coordinator|chair(person)?|principal investigator)s?$|^(our|the)\s+(group\s+)?leaders?$|^leader\b[\w .&/-]{0,30}$|^(group\s+)?(director|head)\s+of\s+[\w .&-]{2,30}$", re.I), "Leader"),
            (re.compile(r"supervising|lecturer|dosen", re.I), "Lecturer"),
            (re.compile(r"external|partner|collaborator|mitra", re.I), "External collaborator"),
            (re.compile(r"researcher|peneliti", re.I), "Researcher"),
@@ -276,15 +284,202 @@ def leader_from_headings(s):
     return []
 
 
-def fetch_section(f, slug, sub, log, base=None):
+NAME_BAD = re.compile(r"\b(please|select|listing|show|no data|found|specialist|science|sciences|administration|policy|health|research|group|faculty|department|"
+                      r"universit\w*|institute|studies|technology|engineering|education|team|overview|partners?|activities|articles?|books?|patents?|projects?|contact|"
+                      r"home|about|search|menu|none|n/?a|tba|we|work|together|our|meet|who|what|why|contributions?|expertise|email|homepage|scopus|scholar|sinta)\b", re.I)
+BARE = re.compile(r"^(our\s+|the\s+)?(group\s+|research\s+group\s+)?(leaders?|director|coordinator|chair(man|person)?|head|principal investigators?)$", re.I)
+LEADDESC = re.compile(r"^(group\s+|research\s+group\s+|team\s+)?(leader|chair(man|person)?|head|director|coordinator|principal investigator|ketua)\b.*\b(group|team|trg|research)\b", re.I)
+TITLE = re.compile(r"\b(prof|dr|drs?|ir|apt|ph\.?d|m\.?\s?(si|sc|eng|kes|pd|hum|t|a|kom|ed|app\.?ling)|s\.?\s?(si|t|pt|kom|hum|gz|ked|km|farm|e|h|s)|mph|msc|mt)\b\.?", re.I)
+
+
+def looks_like_person(x):
+    """Baris nama orang: bukan pesan sistem/judul/afiliasi; berisi gelar akademik, atau 2-5 kata berhuruf kapital."""
+    x = x.strip()
+    if not x or len(x) > 90 or NAME_BAD.search(x) or AFF.search(x):
+        return False
+    toks = x.replace(",", " ").split()
+    if TITLE.search(x) and len(toks) >= 2:
+        return True
+    return 2 <= len(toks) <= 5 and all(t[:1].isupper() for t in toks if t[:1].isalpha())
+
+
+def leader_from_text(s):
+    """Cadangan terakhir: urutan teks halaman. Setiap judul peran ketua ('Leader', 'Director', 'Our Leader', 'Leader of X') diperiksa;
+    yang pertama diikuti baris nama orang (bukan angka penghitung, pesan sistem, atau afiliasi) dipakai."""
+    s = strip_noise(s)
+    s = re.sub(r"<(script|style)\b.*?</\1>", " ", s, flags=re.S | re.I)
+    lines = [clean(x) for x in re.split(r"<[^>]+>", s)]
+    lines = [x for x in lines if x]
+    mk = lambda n: [dict(role="Leader", fields=[], links=[], name=n, p="", texts=[])]
+    for k, line in enumerate(lines):
+        if role_of(line) != "Leader" and not LEADDESC.match(line):
+            continue
+        counter = k + 1 < len(lines) and bool(re.fullmatch(r"[\d.,]+", lines[k + 1]))
+        prev = lines[k - 1] if k else ""
+        before = None if (counter or not prev or role_of(prev) or not looks_like_person(prev)) else mk(prev)
+        after = None
+        for cand in lines[k + 1:k + 4]:
+            if re.fullmatch(r"[\d.,]+", cand) or role_of(cand):
+                break
+            if looks_like_person(cand):
+                after = mk(cand); break
+        # judul bagian polos ("Leader") -> nama di bawahnya; keterangan ("Leader of X", "Chairman ... Group") -> nama di atasnya
+        found = (after or before) if BARE.match(line) else (before or after)
+        if found:
+            return found
+    return []
+
+
+PROSE_LEAD = re.compile(r"\b(as|is|serves as|acts as)\s+the\s+(team|group|research group|trg)?\s*leader\b|\bleader of (the|this) (team|group|research group)\b", re.I)
+
+
+def leader_from_prose(s):
+    """Nama di baris atas kalimat 'As the team leader, ...' (dugaan; dicatat sebagai INFERRED)."""
+    s = strip_noise(s)
+    s = re.sub(r"<(script|style)\b.*?</\1>", " ", s, flags=re.S | re.I)
+    lines = [clean(x) for x in re.split(r"<[^>]+>", s)]
+    lines = [x for x in lines if x]
+    for k, line in enumerate(lines):
+        if PROSE_LEAD.search(line):
+            for prev in reversed(lines[max(0, k - 6):k]):
+                if looks_like_person(prev) and not role_of(prev):
+                    return [dict(role="Leader", fields=[], links=[], name=prev, p="", texts=[])]
+    return []
+
+
+LEAD_PAGES = ["about", "about-us", "aboutus", "research-group-overview", "overview", "team-member"]
+
+
+def add_leader(slug, rows, lead, how, inferred=False):
+    """Tambahkan/naikkan baris ketua pada rows['peneliti'] (format team_row)."""
+    name = lead[0]["name"]
+    for r in rows["peneliti"]:
+        if r[2].strip().lower() == name.strip().lower():
+            r[1] = "Leader"
+            break
+    else:
+        row, mail = team_row(slug, lead[0]); row[1] = "Leader"; rows["peneliti"].insert(0, row)
+        if mail: rows["kontak"].append([slug, name, mail])
+    if inferred:
+        INFERRED.append((slug, name, how))
+
+
+WP_CAT = re.compile(r"\b(journals?|articles?|publications?|papers?|jurnal|artikel|proceedings?)\b", re.I)
+WP_NOT = re.compile(r"activit|news|event|education|meeting|hope|sport|uncategori", re.I)
+
+
+def wp_articles(f, slug, site, log):
+    """Sebagian TRG menyimpan artikel sebagai pos WordPress berkategori 'Journal'/'Articles' (halaman /publication/ menampilkannya),
+    bukan sebagai daftar JetEngine. Baca lewat REST publik: kategori yang namanya menyebut jurnal/artikel, lalu judul pos-posnya."""
+    st, body = f.get(f"{site}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,count")
+    log.append((slug, "wp-categories", 1, st))
+    if st != 200:
+        return []
+    try:
+        cats = [c for c in json.loads(body) if c.get("count") and WP_CAT.search(c["name"]) and not WP_NOT.search(c["name"])]
+    except ValueError:
+        return []
+    out, seen = [], set()
+    for c in cats:
+        for page in range(1, 11):
+            st, body = f.get(f"{site}/wp-json/wp/v2/posts?categories={c['id']}&per_page=100&page={page}&_fields=id,title,link")
+            log.append((slug, f"wp-posts:{c['name']}", page, st))
+            if st != 200:
+                break
+            try:
+                posts = json.loads(body)
+            except ValueError:
+                break
+            for p in posts:
+                title = clean(html.unescape(re.sub(r"<[^>]+>", "", p.get("title", {}).get("rendered", ""))))
+                if title and p["id"] not in seen:
+                    seen.add(p["id"]); out.append(dict(title=title, cat=c["name"], link=p.get("link", "")))
+            if len(posts) < 100:
+                break
+    return out
+
+
+YEAR_RX = re.compile(r"\b(19[89]\d|20[0-3]\d)\b")
+REF_HINT = re.compile(r"doi\.org|read more|vol\.?\s*\d|journal|jurnal|proceeding|pp\.|issn|\(\d{1,2}\)\s*:", re.I)
+
+
+def parse_reference_list(s):
+    """Sebagian TRG menulis artikel sebagai daftar pustaka biasa (<li> berisi 'Penulis. Tahun. Judul. Jurnal. Read more: tautan').
+    Setiap butir yang memuat tahun dan petunjuk jurnal/DOI dianggap satu artikel; judul = kalimat setelah tahun (heuristik)."""
+    s = strip_noise(s)
+    s = re.sub(r"<(script|style|nav|header|footer)\b.*?</\1>", " ", s, flags=re.S | re.I)
+    out = []
+    for m in re.finditer(r"<li\b[^>]*>(.*?)</li>", s, flags=re.S | re.I):
+        raw = m.group(1)
+        text = clean(html.unescape(re.sub(r"<[^>]+>", " ", raw)))
+        if len(text) < 40 or len(text) > 900 or not YEAR_RX.search(text) or not REF_HINT.search(text):
+            continue
+        links = [html.unescape(x) for x in re.findall(r'href="(https?://[^"#]+)"', raw)]
+        body = re.split(r"read more\s*:?", text, flags=re.I)[0].strip()
+        ym = YEAR_RX.search(body)
+        after = body[ym.end():].lstrip(" .,:;)(") if ym else body
+        q = re.search(r"[“\"]([^”\"]{15,300})[”\"]", body)         # judul dalam tanda kutip
+        title = q.group(1).strip(" .,") if q else (re.split(r"(?<=[a-z0-9\)\]])\.\s+(?=[A-Z0-9])", after, maxsplit=1)[0].strip(" .") if after else "")
+        if len(title) < 15:                                  # format "Judul. Penulis (Tahun)" atau tak terbaca: pakai awal butir
+            title = body[:160].strip(" .")
+        link = next((l for l in links if "doi.org" in l), next((l for l in links if " " not in l and l.count("/") >= 3), ""))
+        if re.match(r"doi\s*:", text, re.I):                  # butir 'DOI: 10.xxx' = tautan milik butir sebelumnya
+            if out and not out[-1]["link"]:
+                out[-1]["link"] = link
+            continue
+        out.append(dict(title=title, year=ym.group(1) if ym else "", link=link, authors=body[:ym.start()].strip(" .,(") if ym else ""))
+    return out
+
+
+def parse_table_articles(s):
+    """Tabel artikel (mis. widget JetEngine Table): kolom judul dikenali dari kepala tabel (Judul/Title/Publikasi),
+    penulis dari 'Penulis/Author', sumber dari 'Penerbit/Jurnal/Journal'; tahun dari sel mana pun di baris itu."""
+    out = []
+    for tb in re.findall(r"<table\b.*?</table>", s, flags=re.S | re.I):
+        txt = lambda h: clean(html.unescape(re.sub(r"<[^>]+>", " ", h)))
+        heads = [txt(h) for h in re.findall(r"<th\b.*?</th>", tb, flags=re.S | re.I)]
+        col = lambda rx: next((i for i, h in enumerate(heads) if re.search(rx, h, re.I)), None)
+        ti, ai, si = col(r"judul|title|artikel|article|publikasi"), col(r"penulis|author|tim\b"), col(r"penerbit|jurnal|journal|publisher|sumber|source")
+        if ti is None:
+            continue
+        for tr in re.findall(r"<tr\b.*?</tr>", tb, flags=re.S | re.I):
+            tds = re.findall(r"<td\b.*?</td>", tr, flags=re.S | re.I)
+            if len(tds) <= ti:
+                continue
+            cells = [txt(c) for c in tds]
+            title = cells[ti].strip(" .")
+            if len(title) < 10:
+                continue
+            rest = " ".join(c for i, c in enumerate(cells) if i not in (ti, ai))
+            ym = YEAR_RX.search(rest)
+            links = [html.unescape(x) for x in re.findall(r'href="(https?://[^"#]+)"', tr)]
+            out.append(dict(title=title, year=ym.group(1) if ym else "", link=next((l for l in links if "doi.org" in l), links[0] if links else ""),
+                            authors=cells[ai] if ai is not None and ai < len(cells) else "", source=cells[si] if si is not None and si < len(cells) else ""))
+    return out
+
+
+def fetch_any(f, slug, sub, log, base=None):
+    """fetch_section pada nama utama; bila kosong, coba nama alternatif (ALT) sampai ada isi."""
+    items = fetch_section(f, slug, sub, log, base)
+    for alt in ([] if items else ALT.get(sub, [])):
+        items = fetch_section(f, slug, alt, log, base, team=(sub == "ourteam"))
+        if items:
+            break
+    return items
+
+
+def fetch_section(f, slug, sub, log, base=None, team=None):
     url = f"{base or BASE + '/' + slug}/{sub}/"
     st, body = f.get(url)
     log.append((slug, sub, 1, st))
     if st != 200:
         return []
     items = parse_items(body)
-    if sub == "ourteam" and not any(it["role"] == "Leader" for it in items):
-        lead = leader_from_headings(body)
+    if (sub == "ourteam" if team is None else team) and not any(it["role"] == "Leader" for it in items):
+        lead = leader_from_text(body)
+        if not lead:
+            lead = leader_from_headings(body)
+            lead = lead if lead and looks_like_person(lead[0]["name"]) else []
         if lead:
             same = [it for it in items if it["name"].lower() == lead[0]["name"].lower()]
             if same:
@@ -331,6 +526,23 @@ def team_row(slug, it):
              ids["sinta"], ids["scholar"]], ids["email"])
 
 
+LEAD_DESC = re.compile(r"^\s*(team\s+|group\s+)?(leader|ketua|chair(man|person)?)\b", re.I)
+INFERRED = []   # (slug, nama, dasar): ketua yang disimpulkan, bukan berlabel "Leader" di halaman TRG
+
+
+def infer_leader(slug, rows):
+    """Bila tidak ada baris 'Leader': (1) keterangan keahlian/afiliasi berbunyi 'Leader/Ketua/Chairman ...';
+    (2) tepat satu baris tanpa peran dan paling awal di daftar (blok ketua sebelum judul peran pertama)."""
+    if not rows or any(r[1] == "Leader" for r in rows):
+        return
+    for r in rows:
+        if r[1] in ("", "Lecturer", "Researcher", "Member") and (LEAD_DESC.search(r[3] or "") or LEAD_DESC.search(r[4] or "")):
+            r[1] = "Leader"; INFERRED.append((slug, r[2], "keterangan menyebut ketua")); return
+    blank = [r for r in rows if not r[1]]
+    if len(blank) == 1 and rows[0] is blank[0] and len(rows) >= 3:
+        blank[0][1] = "Leader"; INFERRED.append((slug, blank[0][2], "satu-satunya anggota tanpa peran, paling atas di daftar"))
+
+
 def crawl_trg(f, t):
     log, rows = [], {"peneliti": [], "kontak": [], "publikasi": [], "buku": [], "paten": [], "proyek": []}
     if not t["url"]:  # TRG tanpa halaman: tidak ada yang bisa dibaca
@@ -347,7 +559,7 @@ def crawl_trg(f, t):
         m = re.search(r'(?:property="og:description"|name="description") content="([^"]*)"', main)
         desc = html.unescape(m.group(1)).strip() if m else ""
     t["description"] = desc
-    for it in fetch_section(f, t["slug"], "ourteam", log, site):
+    for it in fetch_any(f, t["slug"], "ourteam", log, site):
         if not it["name"]:
             continue
         row, mail = team_row(t["slug"], it)
@@ -355,7 +567,7 @@ def crawl_trg(f, t):
         if mail:
             rows["kontak"].append([t["slug"], it["name"], mail])
     for sub, key in SECTIONS.items():
-        for it in fetch_section(f, t["slug"], sub, log, site):
+        for it in fetch_any(f, t["slug"], sub, log, site):
             fl = it["fields"] + [""] * 4
             link = next((l for l in it["links"] if l.startswith("http")), "")
             if key == "publikasi":
@@ -365,6 +577,48 @@ def crawl_trg(f, t):
                 rows[key].append([t["slug"], fl[0], fl[1], fl[2], year, link])
             else:
                 rows[key].append([t["slug"], json.dumps(it["fields"], ensure_ascii=False), link])
+    if not rows["publikasi"]:                                # daftar pustaka biasa di halaman artikel
+        subs = ["articles"] + ALT["articles"] + ["publication"]
+        stp, bp = f.get(f"{site}/wp-json/wp/v2/pages?per_page=100&_fields=slug,title")      # halaman lain bernama mirip (mis. /journal-article/)
+        if stp == 200:
+            try:
+                for pg in json.loads(bp):
+                    nm = pg["slug"] + " " + re.sub(r"<[^>]+>", "", pg.get("title", {}).get("rendered", ""))
+                    if re.search(r"publi|article|journal|paper|jurnal|artikel", nm, re.I) and not re.search(r"project|activit|news|event|volunteer", nm, re.I) and pg["slug"] not in subs:
+                        subs.append(pg["slug"])
+            except ValueError:
+                pass
+        best, how = [], ""
+        for sub in subs:
+            st3, body3 = f.get(f"{site}/{sub}/")
+            if st3 == 200:
+                for fn, label in ((parse_table_articles, "tabel di halaman artikel"), (parse_reference_list, "daftar pustaka di halaman artikel")):
+                    refs = fn(body3)
+                    if len(refs) > len(best):
+                        best, how = refs, label
+        for a in best:
+            rows["publikasi"].append([t["slug"], a["title"], a["authors"], a.get("source") or how, a["year"], a["link"]])
+    have = {re.sub(r"[^a-z0-9]+", " ", r[1].lower()).strip() for r in rows["publikasi"]}
+    for a in wp_articles(f, t["slug"], site, log):
+        k = re.sub(r"[^a-z0-9]+", " ", a["title"].lower()).strip()
+        if k and k not in have:
+            have.add(k); rows["publikasi"].append([t["slug"], a["title"], "", "pos WordPress: " + a["cat"], "", a["link"]])
+    if not any(r[1] == "Leader" for r in rows["peneliti"]):
+        # ketua tidak terbaca di halaman tim: cari di halaman lain (beranda, tentang, tim) lalu di kalimat prosa
+        for sub in [""] + LEAD_PAGES:
+            st2, body2 = f.get(f"{site}/{sub}/" if sub else t["url"])
+            log.append((t["slug"], sub or "home", 1, st2))
+            lead = leader_from_text(body2) if st2 == 200 else []
+            if lead:
+                add_leader(t["slug"], rows, lead, f"label Leader di halaman /{sub}/" if sub else "label Leader di beranda"); break
+        else:
+            st2, body2 = f.get(f"{site}/ourteam/")
+            lead = leader_from_prose(body2) if st2 == 200 else []
+            if not lead:
+                st2, body2 = f.get(f"{site}/our-team/"); lead = leader_from_prose(body2) if st2 == 200 else []
+            if lead:
+                add_leader(t["slug"], rows, lead, "kalimat prosa menyebut 'team leader'", inferred=True)
+    infer_leader(t["slug"], rows["peneliti"])
     t["n_peneliti"] = len(rows["peneliti"])
     t["n_publikasi"] = len(rows["publikasi"])
     t["n_buku"] = len(rows["buku"])
@@ -424,6 +678,7 @@ def main():
     write(f"{a.out}/publikasi.csv", ["trg_slug", "judul", "penulis", "sumber", "tahun", "url"], allrows["publikasi"])
     for k in ("buku", "paten", "proyek"):
         write(f"{a.out}/{k}.csv", ["trg_slug", "fields_json", "url"], allrows[k])
+    write(f"{a.out}/ketua_diduga.csv", ["trg_slug", "nama", "dasar_dugaan"], sorted(INFERRED))
     write(f"{a.out}/crawl_log.csv", ["trg_slug", "bagian", "halaman", "status_http"], alllog)
     print("selesai:", {k: len(v) for k, v in allrows.items()})
 
