@@ -202,7 +202,8 @@ export async function collectAutoEvidence(identity: JournalIdentityInput, journa
   }
 
   // --- Metadata publik (DOAJ & Crossref) ---
-  let [doaj, cr] = await Promise.all([lookupDoaj(issn ?? eissn, claimsDoaj), lookupCrossref(issn ?? eissn, identity.title)]);
+  const [liveDoaj, cr] = await Promise.all([lookupDoaj(issn ?? eissn, claimsDoaj), lookupCrossref(issn ?? eissn, identity.title)]);
+  let doaj = liveDoaj;
   // DOAJ langsung tidak terjangkau → pakai impor CSV DOAJ (bila ada) sebagai data bertanggal, tidak pernah dilabeli LIVE.
   if (doaj.evidence.length && doaj.evidence.every((e) => e.status === "UNAVAILABLE")) {
     const imp = await lookupDoajImported(issn, eissn, claimsDoaj);
